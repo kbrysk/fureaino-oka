@@ -1,6 +1,6 @@
 /**
  * サイトブランド（生前整理支援センター ふれあいの丘）
- * タイトルは「生前整理」を最左に。実家じまい・遺品整理の無料相談を訴求。
+ * トップ: サイト名＋キャッチ。下層: ページ名を文頭、文末にサイト名（SEO）。
  */
 export const SITE_NAME_FULL = "生前整理支援センター - ふれあいの丘";
 /** ロゴ・表示用（スペース区切り） */
@@ -11,9 +11,9 @@ export const SITE_TAGLINE = "実家じまい・遺品整理の無料相談";
 /** トップページの title（SEO用） */
 export const SITE_TITLE_TOP = "生前整理支援センター - ふれあいの丘 | 実家じまい・遺品整理の無料相談";
 
-/** 下層ページの title テンプレート（生前整理を左に） */
+/** 下層ページの title テンプレート（SEO: ページ名を文頭、文末にサイト名） */
 export function pageTitle(pageName: string): string {
-  return `${SITE_NAME_FULL} | ${pageName}`;
+  return `${pageName}｜${SITE_NAME_FULL}`;
 }
 
 /** 公式LINE登録URL（未設定時はガイドページへ） */
