@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { pageTitle, SITE_NAME_FULL } from "../lib/site-brand";
 
@@ -20,12 +21,37 @@ export default function AboutPage() {
         モノを捨てるのではなく、家族の心を整えるために
       </h1>
 
-      {/* 運営者画像（後ほど差し替え） */}
-      <div className="mb-10 rounded-2xl overflow-hidden border border-border bg-muted/50 aspect-[4/3] flex items-center justify-center">
-        {/* 画像を追加する場合は、この中を <Image src="/images/operator.jpg" alt="運営者" width={800} height={600} className="w-full h-full object-cover" /> などに差し替えてください */}
-        <span className="text-sm text-foreground/40" aria-hidden>
-          運営者写真
-        </span>
+      {/* 運営者写真＋肩書き・プロフィール：横並びで人間味を */}
+      <div className="mb-10 flex flex-col sm:flex-row sm:items-end gap-6 sm:gap-8">
+        <div className="relative w-[200px] sm:w-[220px] md:w-[180px] flex-shrink-0 flex items-end">
+          <Image
+            src="/images/operator.png"
+            alt="運営者（ふれあいの丘 センター長）"
+            width={400}
+            height={400}
+            className="w-full h-auto object-contain object-bottom drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+            sizes="(max-width: 640px) 220px, 180px"
+            priority
+          />
+        </div>
+        <div className="flex-1 min-w-0">
+          <p className="text-primary font-bold text-lg">
+            生前整理支援センター ふれあいの丘 センター長
+          </p>
+          <dl className="mt-3 space-y-1 text-sm text-foreground/80 leading-relaxed">
+            <div>
+              <dt className="inline font-medium text-foreground">趣味：</dt>
+              <dd className="inline">町中華の食べ歩き、読書、休日の家族でのお出かけ、スポーツ観戦。</dd>
+            </div>
+            <div>
+              <dt className="inline font-medium text-foreground">好きなもの：</dt>
+              <dd className="inline">コーヒー、落ち着いて食べるごはん、子どもと過ごす時間。</dd>
+            </div>
+          </dl>
+          <p className="mt-3 text-sm text-foreground/70 italic">
+            穏やかめのお父さんです。相談は堅苦しくなく、お気軽に。
+          </p>
+        </div>
       </div>
 
       <article className="space-y-10 text-foreground/85 leading-relaxed">
