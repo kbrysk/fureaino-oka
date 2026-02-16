@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f6f3;
+  --foreground: #2d2d2d;
+  --primary: #5b8a72;
+  --primary-light: #e8f0ec;
+  --accent: #e85d04;
+  --danger: #c75c5c;
+  --card: #ffffff;
+  --border: #e0dcd7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* フッター下の重複表示を防ぐ：レイアウト根を単一のスクロールコンテナに */
+html,
+body {
+  min-height: 100%;
+}
+
+/* 記事ページ：見出しを大きく明確に（prose より優先させるため .prose も付与） */
+.article-prose.prose h1,
+.article-prose.prose h2,
+.article-prose.prose h3,
+.article-prose.prose h4 {
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--foreground);
+}
+
+/* H2：大見出し（本文の約1.75倍・左ラインでブロック化） */
+.article-prose.prose h2 {
+  font-size: 1.75rem !important;   /* 28px */
+  margin-top: 2.75rem !important;
+  margin-bottom: 1rem !important;
+  padding: 0.75rem 0 0.5rem 1rem !important;
+  border-bottom: none !important;
+  border-left: 4px solid var(--primary) !important;
+  background: var(--primary-light);
+  border-radius: 0 4px 4px 0;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .article-prose.prose h2 {
+    font-size: 1.875rem !important; /* 30px */
+  }
+}
+
+/* H3：中見出し（本文の約1.35倍） */
+.article-prose.prose h3 {
+  font-size: 1.375rem !important;  /* 22px */
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem !important;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--primary);
+  font-weight: 600 !important;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 768px) {
+  .article-prose.prose h3 {
+    font-size: 1.5rem !important;   /* 24px */
+  }
+}
+
+.article-prose.prose h4 {
+  font-size: 1.25rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+}
+
+/* 見出し直後の段落は余白をやや詰める */
+.article-prose.prose h2 + p,
+.article-prose.prose h3 + p {
+  margin-top: 0;
+}
+
+/* ========== ガイドブック（/guidebook） ========== */
+.guidebook-h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 0 0.4rem 0.75rem;
+  border-left: 4px solid var(--primary);
+  background: var(--primary-light);
+  border-radius: 0 4px 4px 0;
+}
+.guidebook-h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--primary);
+}
+.guidebook-section {
+  margin-bottom: 1.5rem;
+}
+.guidebook-paragraphs p {
+  margin-bottom: 0.5rem;
+}
+
+/* 印刷時：ナビ・フッターを非表示（PDF保存しやすくする） */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  main {
+    padding-bottom: 0 !important;
+  }
+}
+
+/* 印刷時：ガイドブック用 */
+@media print {
+  .guidebook .print\:hidden {
+    display: none !important;
+  }
+  .guidebook-article,
+  .jikka-jimai-guide {
+    max-width: 100%;
+  }
+  .guidebook-h2,
+  .jikka-jimai-prose h2 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .guidebook-h3,
+  .jikka-jimai-prose h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .guidebook-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .jikka-jimai-prose table {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .jikka-jimai-prose pre {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .break-before-page {
+    break-before: page;
+    page-break-before: always;
+  }
+}

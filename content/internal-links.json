@@ -1,0 +1,22 @@
+{
+  "categories": {
+    "進め方": {
+      "toolLinks": [
+        { "label": "チェックリストで進捗管理", "href": "/checklist" },
+        { "label": "空き家の維持費をシミュレーション", "href": "/tools/empty-house-tax" }
+      ],
+      "relatedSlugs": []
+    },
+    "資産・家": {
+      "toolLinks": [
+        { "label": "空き家税金シミュレーター", "href": "/tools/empty-house-tax" },
+        { "label": "査定の目安を見る", "href": "/tools/appraisal" }
+      ],
+      "relatedSlugs": []
+    }
+  },
+  "defaultToolLinks": [
+    { "label": "はじめかたガイド", "href": "/guide" },
+    { "label": "チェックリスト", "href": "/checklist" }
+  ]
+}

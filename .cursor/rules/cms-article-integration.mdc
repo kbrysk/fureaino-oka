@@ -1,0 +1,27 @@
+---
+description: 記事×CMS連携の方針（LINE誘導・フクロウの相槌）
+alwaysApply: true
+---
+
+# 記事コンテンツ × CMS 連携の方針
+
+Gemini 等で記事を作成し CMS に直接入れる場合のルール。
+
+## LINE誘導（上部・下部）
+
+- **CMS の本文（body）には含めない。** 記事テンプレート側で固定表示している。
+- 上部: アイキャッチ直後の「LINEで今すぐ受け取る」（ArticleLineCTATop）
+- 下部: 本文下・フッター内の「LINEで友だち追加して特典をもらう」等（ArticleFooterCTA）
+- Gemini には「記事本文のみ出力。LINE・友だち追加・バナー誘導は含めない」と指示する。
+
+## フクロウの相槌
+
+- **パターンA（省略可）**: CMS に body だけ渡す。相槌はサイト側でデフォルト（「うんうん」「なるほど」等）を段落ごとに自動表示。
+- **パターンB（指定する）**: CMS に `owlMessages`（文字列配列）を用意。段落の順番と1対1で表示。数が足りない分はデフォルトで補う。
+
+## CMS に持たせる主なフィールド
+
+- 必須: slug, title, description, category, date, body
+- 任意: eyecatch, images, **owlMessages**（相槌配列）, tags
+
+詳細は `docs/CMS-ARTICLE-INTEGRATION.md` を参照。
