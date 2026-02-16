@@ -16,7 +16,7 @@ export function pageTitle(pageName: string): string {
   return `${pageName}｜${SITE_NAME_FULL}`;
 }
 
-/** 公式LINE登録URL（未設定時はガイドページへ） */
+/** 公式LINE登録URL（環境変数未設定時は lin.ee のURLを使用） */
 export const LINE_ADD_URL =
   (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_LINE_ADD_URL) ||
-  "/guide?intent=line";
+  "https://lin.ee/XBvI8cD";

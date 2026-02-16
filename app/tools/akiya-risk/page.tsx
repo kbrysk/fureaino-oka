@@ -12,6 +12,7 @@ import {
 import DiagnosisAnimeIllustration from "../../components/DiagnosisAnimeIllustration";
 import OwlCharacter from "../../components/OwlCharacter";
 import DiagnosisResultLineCTA from "../../components/DiagnosisResultLineCTA";
+import { LINE_ADD_URL } from "../../lib/site-brand";
 
 const RANK_STYLES: Record<AkiyaRiskRank, { bg: string; text: string; border: string }> = {
   S: { bg: "bg-red-100", text: "text-red-800", border: "border-red-300" },
@@ -73,7 +74,7 @@ export default function AkiyaRiskPage() {
                   詳細な診断レポートと対策PDFをLINEで受け取る（自分用に保存）
                 </p>
                 <a
-                  href="/guide?intent=line_report"
+                  href={LINE_ADD_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setUnlocked(true)}
