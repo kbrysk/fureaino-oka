@@ -21,7 +21,7 @@ const DEFAULT_DESCRIPTION =
 
 const GTM_ID = "GTM-5HKD4MVB";
 const baseUrl = getBaseUrl();
-const ogImageUrl = baseUrl ? `${baseUrl}/opengraph-image.png` : "/opengraph-image.png";
+const ogImageUrl = baseUrl ? `${baseUrl}/opengraph-image` : "/opengraph-image";
 
 const gtmScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   title: SITE_TITLE_TOP,
   description: DEFAULT_DESCRIPTION,
   icons: {
-    icon: "/icon.png",
-    apple: "/icon.png",
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/icon.png", type: "image/png", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
