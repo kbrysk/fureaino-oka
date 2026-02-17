@@ -23,8 +23,11 @@ const GTM_ID = "GTM-5HKD4MVB";
 const baseUrl = getBaseUrl();
 /** メタ・OGP・ファビコンは必ず本番絶対URLで出す（ツール・SNSが相対URLを解決しないため） */
 const siteOrigin = baseUrl || "https://www.fureaino-oka.com";
-const ogImageUrl = `${siteOrigin}/opengraph-image`;
-const faviconUrl = `${siteOrigin}/icon`;
+/** 静的ファイル（scripts/generate-ogp-image.mjs で生成）。動的ルートはサーバーレスで失敗するため使用しない */
+const ogImageUrl = `${siteOrigin}/opengraph-image.png`;
+/** 静的ファイルのみ参照（app/icon ルートと競合しない） */
+const faviconUrl = `${siteOrigin}/icon.png`;
+const appleTouchIconUrl = `${siteOrigin}/apple-icon.png`;
 
 const gtmScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -60,7 +63,7 @@ export default function RootLayout({
       <head>
         {/* ファビコン・OGPを明示（Next.js metadata に加え絶対URLで確実に出力） */}
         <link rel="icon" href={faviconUrl} type="image/png" />
-        <link rel="apple-touch-icon" href={`${siteOrigin}/apple-icon`} />
+        <link rel="apple-touch-icon" href={appleTouchIconUrl} sizes="180x180" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteOrigin} />
         <meta property="og:title" content={SITE_TITLE_TOP} />

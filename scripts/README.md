@@ -1,5 +1,19 @@
 # スクリプト
 
+## OGP画像の静的生成
+
+サイト全体のOGP画像（1200×630）を静的PNGとして生成します。本番（Vercel 等）では動的ルートの `readFile` が失敗することがあるため、静的ファイル方式にしています。
+
+```bash
+node scripts/generate-ogp-image.mjs
+```
+
+- **入力**: `public/images/owl-character.png`（フクロウ画像）
+- **出力**: `public/opengraph-image.png`
+- 文言やレイアウトを変えたときは再実行してからコミットする。
+
+---
+
 ## ユーザーテスト用 Googleフォーム自動作成
 
 `create-user-test-form.gs` を Google Apps Script で実行すると、クラウドワークス募集用のアンケートフォームが一括で作成されます。

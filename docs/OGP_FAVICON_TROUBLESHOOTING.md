@@ -15,8 +15,8 @@
    - **対策**: `<head>` 内に `<meta property="og:image">` や `<link rel="icon">` を明示的に記述する。
 
 4. **動的 OGP 画像ルートの失敗**
-   - `/opengraph-image` がサーバー側で `readFile` に失敗すると 500 になり、画像が取れない。
-   - **対策**: 画像読み込みを try/catch し、失敗時は簡易なフォールバック画像を返して 500 を防ぐ。
+   - Vercel 等のサーバーレスでは `public/` への `readFile` が ENOENT になることがあり、`/opengraph-image` が 500 や空になる。
+   - **対策**: 動的ルートを使わず、**静的画像**を使う。`scripts/generate-ogp-image.mjs` で `public/opengraph-image.png` を生成し、`og:image` の URL を `/opengraph-image.png` にしている。
 
 5. **ファビコンがファイル規約だけに依存**
    - `app/icon.png` は Next.js が `/icon` として提供するが、キャッシュや環境で効かないことがある。
