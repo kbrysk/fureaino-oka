@@ -115,36 +115,41 @@ export default function Home() {
 
   return (
     <div className="space-y-8">
-      {/* Hero：フクロウ＋トータルサポート訴求＋3ステップカード＋CTA */}
-      <section className="w-full rounded-2xl bg-gradient-to-b from-primary-light/15 to-primary-light/5 border border-primary/10 p-6 sm:p-8 md:p-10">
-        <div className="max-w-4xl mx-auto flex flex-col items-center gap-6 text-center">
-          {/* ファーストビューで最初に表示するフクロウ */}
-          <OwlCharacter
-            size={100}
-            message="まずは「考える」からで大丈夫。一歩ずつ、ふれあいの丘がサポートするホー！"
-            tone="calm"
-          />
-          <p className="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-bold tracking-wide text-primary bg-primary/10 border border-primary/20" aria-hidden>
+      {/* Hero：フクロウ＋トータルサポート訴求＋3ステップカード＋CTA（スマホでコンパクトに） */}
+      <section className="w-full rounded-2xl bg-gradient-to-b from-primary-light/15 to-primary-light/5 border border-primary/10 p-4 sm:p-6 md:p-8 lg:p-10">
+        <div className="max-w-4xl mx-auto flex flex-col items-center gap-4 sm:gap-6 text-center">
+          <p className="inline-flex items-center rounded-full px-3.5 py-1 text-xs sm:text-sm font-bold tracking-wide text-amber-800 bg-amber-100 border border-amber-300/80" aria-hidden>
             完全無料
           </p>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary leading-tight">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary leading-tight">
             モノの整理だけでなく、心の整理も。<br className="hidden sm:inline" />
             エンディングノートから始まる生前整理。
           </h1>
-          <p className="text-foreground/80 text-base sm:text-lg max-w-2xl">
+          <p className="text-foreground/80 text-sm sm:text-base md:text-lg max-w-2xl">
             『何から始める？』の計画作りから、実家の片付け、不動産売却まで。あなたのペースで進めるトータルサポート。
           </p>
 
+          {/* フクロウと吹き出し：横並び（スマホでは小さめでフローが見切れないように） */}
+          <div className="w-full flex flex-row flex-nowrap justify-center items-center gap-0 sm:gap-3">
+            <OwlCharacter
+              size={72}
+              message="まずは「考える」からで大丈夫。一歩ずつ、ふれあいの丘がサポートするホー！"
+              tone="calm"
+              bubblePosition="right"
+              className="shrink-0"
+            />
+          </div>
+
           {/* 3つのサービス領域（Stepカード＋矢印） */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-3 w-full mt-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-3 w-full mt-2 sm:mt-4">
             {/* Step 1 */}
-            <div className="relative flex-1 flex flex-col bg-card rounded-2xl border-2 border-primary/20 p-5 sm:p-6 text-left shadow-sm hover:shadow-md hover:border-primary/30 transition-all min-w-0">
-              <span className="absolute -top-3 left-5 px-2.5 py-0.5 rounded-full bg-primary text-white text-xs font-bold">Step 1</span>
-              <div className="flex items-center gap-3 mb-3 mt-1">
-                <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/15 text-primary shrink-0" aria-hidden>
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+            <div className="relative flex-1 flex flex-col bg-card rounded-xl sm:rounded-2xl border-2 border-primary/20 p-4 sm:p-5 md:p-6 text-left shadow-sm hover:shadow-md hover:border-primary/30 transition-all min-w-0">
+              <span className="absolute -top-2.5 sm:-top-3 left-4 sm:left-5 px-2 py-0.5 rounded-full bg-primary text-white text-[10px] sm:text-xs font-bold">Step 1</span>
+              <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3 mt-0.5 sm:mt-1">
+                <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/15 text-primary shrink-0" aria-hidden>
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
                 </span>
-                <h2 className="font-bold text-primary text-base sm:text-lg">【考える】エンディングノート</h2>
+                <h2 className="font-bold text-primary text-sm sm:text-base md:text-lg">【考える】エンディングノート</h2>
               </div>
               <p className="text-sm text-foreground/80 leading-relaxed flex-1">
                 自分の想いや資産を整理。デジタル版ノートや書き方ガイドで、将来の不安を解消します。
@@ -159,13 +164,13 @@ export default function Home() {
             </div>
 
             {/* Step 2 */}
-            <div className="relative flex-1 flex flex-col bg-card rounded-2xl border-2 border-primary/20 p-5 sm:p-6 text-left shadow-sm hover:shadow-md hover:border-primary/30 transition-all min-w-0">
-              <span className="absolute -top-3 left-5 px-2.5 py-0.5 rounded-full bg-primary text-white text-xs font-bold">Step 2</span>
-              <div className="flex items-center gap-3 mb-3 mt-1">
-                <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/15 text-primary shrink-0" aria-hidden>
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+            <div className="relative flex-1 flex flex-col bg-card rounded-xl sm:rounded-2xl border-2 border-primary/20 p-4 sm:p-5 md:p-6 text-left shadow-sm hover:shadow-md hover:border-primary/30 transition-all min-w-0">
+              <span className="absolute -top-2.5 sm:-top-3 left-4 sm:left-5 px-2 py-0.5 rounded-full bg-primary text-white text-[10px] sm:text-xs font-bold">Step 2</span>
+              <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3 mt-0.5 sm:mt-1">
+                <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/15 text-primary shrink-0" aria-hidden>
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
                 </span>
-                <h2 className="font-bold text-primary text-base sm:text-lg">【片付ける】生前整理・遺品整理</h2>
+                <h2 className="font-bold text-primary text-sm sm:text-base md:text-lg">【片付ける】生前整理・遺品整理</h2>
               </div>
               <p className="text-sm text-foreground/80 leading-relaxed flex-1">
                 体力があるうちの整理も、親族の遺品整理も。プロの選別で大切な思い出を守ります。
@@ -180,13 +185,13 @@ export default function Home() {
             </div>
 
             {/* Step 3 */}
-            <div className="relative flex-1 flex flex-col bg-card rounded-2xl border-2 border-primary/20 p-5 sm:p-6 text-left shadow-sm hover:shadow-md hover:border-primary/30 transition-all min-w-0">
-              <span className="absolute -top-3 left-5 px-2.5 py-0.5 rounded-full bg-primary text-white text-xs font-bold">Step 3</span>
-              <div className="flex items-center gap-3 mb-3 mt-1">
-                <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/15 text-primary shrink-0" aria-hidden>
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+            <div className="relative flex-1 flex flex-col bg-card rounded-xl sm:rounded-2xl border-2 border-primary/20 p-4 sm:p-5 md:p-6 text-left shadow-sm hover:shadow-md hover:border-primary/30 transition-all min-w-0">
+              <span className="absolute -top-2.5 sm:-top-3 left-4 sm:left-5 px-2 py-0.5 rounded-full bg-primary text-white text-[10px] sm:text-xs font-bold">Step 3</span>
+              <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3 mt-0.5 sm:mt-1">
+                <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/15 text-primary shrink-0" aria-hidden>
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
                 </span>
-                <h2 className="font-bold text-primary text-base sm:text-lg">【解決する】実家じまい・空き家活用</h2>
+                <h2 className="font-bold text-primary text-sm sm:text-base md:text-lg">【解決する】実家じまい・空き家活用</h2>
               </div>
               <p className="text-sm text-foreground/80 leading-relaxed flex-1">
                 補助金の活用から売却査定まで。損をしない家のしまい方を専門家がサポート。
@@ -198,10 +203,10 @@ export default function Home() {
           </div>
 
           {/* CTA */}
-          <div className="flex flex-col items-center gap-2 w-full mt-6">
+          <div className="flex flex-col items-center gap-2 w-full mt-4 sm:mt-6">
             <Link
               href="/tools"
-              className="inline-block bg-accent text-white px-8 py-4 rounded-xl text-lg font-bold hover:opacity-90 transition shadow-lg"
+              className="inline-block bg-accent text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-bold hover:opacity-90 transition shadow-lg"
             >
               今のあなたに必要なサポートを無料診断
             </Link>
