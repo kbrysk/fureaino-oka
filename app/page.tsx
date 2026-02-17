@@ -115,42 +115,102 @@ export default function Home() {
 
   return (
     <div className="space-y-8">
-      {/* Hero：中心線を1本に揃える（吹き出し・フクロウ・完全無料・タイトル・CTA） */}
-      <div className="flex flex-col items-center w-full">
-        <div className="w-full max-w-lg mx-auto flex flex-col items-center gap-4 text-center">
+      {/* Hero：フクロウ＋トータルサポート訴求＋3ステップカード＋CTA */}
+      <section className="w-full rounded-2xl bg-gradient-to-b from-primary-light/15 to-primary-light/5 border border-primary/10 p-6 sm:p-8 md:p-10">
+        <div className="max-w-4xl mx-auto flex flex-col items-center gap-6 text-center">
+          {/* ファーストビューで最初に表示するフクロウ */}
           <OwlCharacter
             size={100}
-            message="実家を放置すると、10年で170万円の損だホー！今すぐ無料診断で対策を立てるホー！"
-            tone="warning"
+            message="まずは「考える」からで大丈夫。一歩ずつ、ふれあいの丘がサポートするホー！"
+            tone="calm"
           />
-          <p className="w-full flex justify-center" aria-hidden>
-            <span
-              className="inline-flex items-center rounded-full px-4 py-1.5 text-base font-bold tracking-wide sm:text-lg"
-              style={{
-                color: "#b8860b",
-                backgroundColor: "rgba(218, 165, 32, 0.12)",
-                border: "1px solid rgba(184, 134, 11, 0.35)",
-                boxShadow: "0 1px 2px rgba(0,0,0,0.06)",
-              }}
+          <p className="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-bold tracking-wide text-primary bg-primary/10 border border-primary/20" aria-hidden>
+            完全無料
+          </p>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary leading-tight">
+            モノの整理だけでなく、心の整理も。<br className="hidden sm:inline" />
+            エンディングノートから始まる生前整理。
+          </h1>
+          <p className="text-foreground/80 text-base sm:text-lg max-w-2xl">
+            『何から始める？』の計画作りから、実家の片付け、不動産売却まで。あなたのペースで進めるトータルサポート。
+          </p>
+
+          {/* 3つのサービス領域（Stepカード＋矢印） */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-3 w-full mt-4">
+            {/* Step 1 */}
+            <div className="relative flex-1 flex flex-col bg-card rounded-2xl border-2 border-primary/20 p-5 sm:p-6 text-left shadow-sm hover:shadow-md hover:border-primary/30 transition-all min-w-0">
+              <span className="absolute -top-3 left-5 px-2.5 py-0.5 rounded-full bg-primary text-white text-xs font-bold">Step 1</span>
+              <div className="flex items-center gap-3 mb-3 mt-1">
+                <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/15 text-primary shrink-0" aria-hidden>
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                </span>
+                <h2 className="font-bold text-primary text-base sm:text-lg">【考える】エンディングノート</h2>
+              </div>
+              <p className="text-sm text-foreground/80 leading-relaxed flex-1">
+                自分の想いや資産を整理。デジタル版ノートや書き方ガイドで、将来の不安を解消します。
+              </p>
+              <Link href="/ending-note" className="mt-3 text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
+                エンディングノートを書く <span aria-hidden>→</span>
+              </Link>
+            </div>
+
+            <div className="hidden sm:flex items-center justify-center shrink-0 text-primary/40" aria-hidden>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </div>
+
+            {/* Step 2 */}
+            <div className="relative flex-1 flex flex-col bg-card rounded-2xl border-2 border-primary/20 p-5 sm:p-6 text-left shadow-sm hover:shadow-md hover:border-primary/30 transition-all min-w-0">
+              <span className="absolute -top-3 left-5 px-2.5 py-0.5 rounded-full bg-primary text-white text-xs font-bold">Step 2</span>
+              <div className="flex items-center gap-3 mb-3 mt-1">
+                <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/15 text-primary shrink-0" aria-hidden>
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                </span>
+                <h2 className="font-bold text-primary text-base sm:text-lg">【片付ける】生前整理・遺品整理</h2>
+              </div>
+              <p className="text-sm text-foreground/80 leading-relaxed flex-1">
+                体力があるうちの整理も、親族の遺品整理も。プロの選別で大切な思い出を守ります。
+              </p>
+              <Link href="/area" className="mt-3 text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
+                地域別の案内を見る <span aria-hidden>→</span>
+              </Link>
+            </div>
+
+            <div className="hidden sm:flex items-center justify-center shrink-0 text-primary/40" aria-hidden>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </div>
+
+            {/* Step 3 */}
+            <div className="relative flex-1 flex flex-col bg-card rounded-2xl border-2 border-primary/20 p-5 sm:p-6 text-left shadow-sm hover:shadow-md hover:border-primary/30 transition-all min-w-0">
+              <span className="absolute -top-3 left-5 px-2.5 py-0.5 rounded-full bg-primary text-white text-xs font-bold">Step 3</span>
+              <div className="flex items-center gap-3 mb-3 mt-1">
+                <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/15 text-primary shrink-0" aria-hidden>
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                </span>
+                <h2 className="font-bold text-primary text-base sm:text-lg">【解決する】実家じまい・空き家活用</h2>
+              </div>
+              <p className="text-sm text-foreground/80 leading-relaxed flex-1">
+                補助金の活用から売却査定まで。損をしない家のしまい方を専門家がサポート。
+              </p>
+              <Link href="/guide" className="mt-3 text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
+                専門家に相談する <span aria-hidden>→</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="flex flex-col items-center gap-2 w-full mt-6">
+            <Link
+              href="/tools"
+              className="inline-block bg-accent text-white px-8 py-4 rounded-xl text-lg font-bold hover:opacity-90 transition shadow-lg"
             >
-              完全無料
-            </span>
-          </p>
-          <h1 className="text-3xl font-bold text-primary w-full">生前整理支援センター ふれあいの丘</h1>
-          <p className="text-foreground/80 text-lg font-medium w-full">
-            実家じまい・遺品整理の無料相談
-          </p>
-          <p className="text-foreground/70 text-base w-full">
-            生前整理の進め方から業者選びまで。まずは3分で無料診断
-          </p>
-          <Link
-            href="/tools/empty-house-tax"
-            className="inline-block bg-accent text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition"
-          >
-            空き家の維持費を無料でシミュレーション
-          </Link>
+              今のあなたに必要なサポートを無料診断
+            </Link>
+            <p className="text-sm text-foreground/60">
+              エンディングノート / 生前整理 / 空き家相談 対応
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* FV：ログインなしで触れるシミュレーター簡易版 */}
       <EmptyHouseTaxSimulator compact />

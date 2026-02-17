@@ -20,6 +20,7 @@ const FOOTER_TOOLS: { href: string; label: string }[] = [
 ];
 
 const FOOTER_GUIDE_AND_CONTENT: { href: string; label: string }[] = [
+  { href: "/about-site", label: "ふれあいの丘とは" },
   { href: "/guide", label: "生前整理のはじめかた" },
   { href: "/guidebook", label: "ガイドブック（無料PDF）" },
   { href: "/about", label: "運営者の想い" },
