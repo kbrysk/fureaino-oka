@@ -21,7 +21,9 @@ const DEFAULT_DESCRIPTION =
 
 const GTM_ID = "GTM-5HKD4MVB";
 const baseUrl = getBaseUrl();
-const ogImageUrl = baseUrl ? `${baseUrl}/opengraph-image` : "/opengraph-image";
+/** OGP画像は絶対URL必須（SNSクローラーが相対URLを解決しないため） */
+const siteOrigin = baseUrl || "https://www.fureaino-oka.com";
+const ogImageUrl = `${siteOrigin}/opengraph-image`;
 
 const gtmScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -30,13 +32,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','${GTM_ID}');`;
 
 export const metadata: Metadata = {
-  metadataBase: baseUrl ? new URL(baseUrl) : undefined,
+  metadataBase: new URL(siteOrigin),
   title: SITE_TITLE_TOP,
   description: DEFAULT_DESCRIPTION,
-  icons: {
-    icon: [{ url: "/icon.png", type: "image/png" }],
-    apple: [{ url: "/icon.png", type: "image/png", sizes: "180x180" }],
-  },
   openGraph: {
     type: "website",
     title: SITE_TITLE_TOP,
