@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
@@ -62,10 +61,10 @@ export default function RootLayout({
       <head>
         {/* Google Tag Manager - head 内のなるべく上 */}
         <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
-        {/* Google AdSense 審査コード（パブリッシャーID） */}
-        <Script
+        {/* Google AdSense 審査コード（初期HTMLに含めクローラーに確実に読ませる） */}
+        <script
+          async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GOOGLE_ADSENSE_PUBLISHER_ID}`}
-          strategy="afterInteractive"
           crossOrigin="anonymous"
         />
       </head>
