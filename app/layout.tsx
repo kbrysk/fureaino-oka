@@ -21,9 +21,10 @@ const DEFAULT_DESCRIPTION =
 
 const GTM_ID = "GTM-5HKD4MVB";
 const baseUrl = getBaseUrl();
-/** OGP画像は絶対URL必須（SNSクローラーが相対URLを解決しないため） */
+/** メタ・OGP・ファビコンは必ず本番絶対URLで出す（ツール・SNSが相対URLを解決しないため） */
 const siteOrigin = baseUrl || "https://www.fureaino-oka.com";
 const ogImageUrl = `${siteOrigin}/opengraph-image`;
+const faviconUrl = `${siteOrigin}/icon`;
 
 const gtmScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -57,6 +58,20 @@ export default function RootLayout({
   return (
     <html lang="ja" className="overflow-x-hidden">
       <head>
+        {/* ファビコン・OGPを明示（Next.js metadata に加え絶対URLで確実に出力） */}
+        <link rel="icon" href={faviconUrl} type="image/png" />
+        <link rel="apple-touch-icon" href={`${siteOrigin}/apple-icon`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={siteOrigin} />
+        <meta property="og:title" content={SITE_TITLE_TOP} />
+        <meta property="og:description" content={DEFAULT_DESCRIPTION} />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={SITE_TITLE_TOP} />
+        <meta name="twitter:description" content={DEFAULT_DESCRIPTION} />
+        <meta name="twitter:image" content={ogImageUrl} />
         {/* Google Tag Manager - head 内のなるべく上 */}
         <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
         {/* Google AdSense 審査コード（初期HTMLに含めクローラーに確実に読ませる） */}

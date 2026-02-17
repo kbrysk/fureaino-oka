@@ -18,10 +18,14 @@ export const alt = "生前整理支援センター ふれあいの丘 - 実家�
 export const size = { width: WIDTH, height: HEIGHT };
 export const contentType = "image/png" as const;
 
-async function getOwlDataUrl(): Promise<string> {
-  const path = join(process.cwd(), "public", "images", "owl-character.png");
-  const data = await readFile(path, "base64");
-  return `data:image/png;base64,${data}`;
+async function getOwlDataUrl(): Promise<string | null> {
+  try {
+    const path = join(process.cwd(), "public", "images", "owl-character.png");
+    const data = await readFile(path, "base64");
+    return `data:image/png;base64,${data}`;
+  } catch {
+    return null;
+  }
 }
 
 export default async function Image() {
@@ -40,26 +44,28 @@ export default async function Image() {
           fontFamily: "Hiragino Sans, Noto Sans JP, sans-serif",
         }}
       >
-        {/* 左: フクロウ（余白付き） */}
-        <div
-          style={{
-            display: "flex",
-            flex: "0 0 380px",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 48,
-            backgroundColor: "#e8f0ec",
-          }}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={owlSrc}
-            alt=""
-            width={280}
-            height={280}
-            style={{ objectFit: "contain" }}
-          />
-        </div>
+        {/* 左: フクロウ（読み込み失敗時は非表示） */}
+        {owlSrc && (
+          <div
+            style={{
+              display: "flex",
+              flex: "0 0 380px",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: 48,
+              backgroundColor: "#e8f0ec",
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={owlSrc}
+              alt=""
+              width={280}
+              height={280}
+              style={{ objectFit: "contain" }}
+            />
+          </div>
+        )}
         {/* 右: サイト名・完全無料・メインコピー・サブコピー */}
         <div
           style={{
@@ -67,7 +73,7 @@ export default async function Image() {
             flex: 1,
             flexDirection: "column",
             justifyContent: "center",
-            paddingLeft: 48,
+            paddingLeft: owlSrc ? 48 : 56,
             paddingRight: 56,
           }}
         >
