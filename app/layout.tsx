@@ -21,8 +21,10 @@ const DEFAULT_DESCRIPTION =
 
 const GTM_ID = "GTM-5HKD4MVB";
 const baseUrl = getBaseUrl();
-/** メタ・OGP・ファビコンは必ず本番絶対URLで出す（ツール・SNSが相対URLを解決しないため） */
-const siteOrigin = baseUrl || "https://www.fureaino-oka.com";
+/** 本番ドメイン（*.vercel.app との重複コンテンツ回避のため Canonical は常にここに統一） */
+const CANONICAL_ORIGIN = "https://www.fureaino-oka.com";
+/** メタ・OGP・ファビコンは必ず絶対URLで出す（ツール・SNSが相対URLを解決しないため） */
+const siteOrigin = baseUrl || CANONICAL_ORIGIN;
 /** 静的ファイル（scripts/generate-ogp-image.mjs で生成）。動的ルートはサーバーレスで失敗するため使用しない */
 const ogImageUrl = `${siteOrigin}/opengraph-image.png`;
 /** 静的ファイルのみ参照（app/icon ルートと競合しない） */
@@ -36,9 +38,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','${GTM_ID}');`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteOrigin),
+  metadataBase: new URL(CANONICAL_ORIGIN),
   title: SITE_TITLE_TOP,
   description: DEFAULT_DESCRIPTION,
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     type: "website",
     title: SITE_TITLE_TOP,
