@@ -36,7 +36,7 @@ export default function Navigation() {
     <header className="bg-card border-b border-border shadow-sm sticky top-0 z-40">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex items-center justify-between h-14 sm:h-16">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Link href="/" className="flex items-center gap-2 shrink-0 md:mr-6">
             <OwlCharacter size={36} className="!gap-0" />
             <span className="text-lg sm:text-xl font-bold text-primary">生前整理支援センター ふれあいの丘</span>
           </Link>
