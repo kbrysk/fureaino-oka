@@ -31,11 +31,11 @@ export default function OwlCharacter({
 }: OwlCharacterProps) {
   const bubbleClasses =
     tone === "warning"
-      ? "bg-accent/25 text-foreground border border-accent/50"
+      ? "bg-orange-100 text-foreground border border-orange-300"
       : "bg-primary-light text-primary border border-primary/30";
-  /* しっぽは吹き出し本体と同じ塗り色にして重ねて表示し、線の重なりをなくす */
-  const tailColor = tone === "warning" ? "border-t-accent/25" : "border-t-primary-light";
-  const tailColorLeft = tone === "warning" ? "border-r-accent/25" : "border-r-primary-light";
+  /* しっぽは吹き出し本体と同じ塗り色（継ぎ目なし） */
+  const tailColor = tone === "warning" ? "border-t-orange-100" : "border-t-primary-light";
+  const tailColorLeft = tone === "warning" ? "border-r-orange-100" : "border-r-primary-light";
 
   return (
     <div
@@ -46,11 +46,6 @@ export default function OwlCharacter({
       {message && bubblePosition === "above" && (
         <div className={`relative rounded-2xl px-4 py-3 text-sm font-medium max-w-[280px] text-center ${bubbleClasses}`}>
           <span className="relative z-10">{message}</span>
-          {/* しっぽ：本体と同色で根元を吹き出し内に重ね、枠線との二重線を防ぐ */}
-          <div
-            className={`absolute left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-r-[10px] border-t-[10px] border-l-transparent border-r-transparent ${tailColor}`}
-            style={{ bottom: "4px" }}
-          />
         </div>
       )}
       <div className="relative shrink-0 overflow-hidden rounded-2xl" style={{ width: size, height: size }}>
