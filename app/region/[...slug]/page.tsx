@@ -5,6 +5,7 @@ import {
   getRegionSlugs,
   getNeighborRegions,
 } from "../../lib/regions";
+import { getAreaIds } from "../../lib/area-data";
 import { pageTitle } from "../../lib/site-brand";
 
 interface Props {
@@ -29,6 +30,7 @@ export default async function RegionPage({ params }: Props) {
   const { slug } = await params;
   const region = getRegionBySlug(slug);
   if (!region) notFound();
+  const areaIds = getAreaIds(region.prefecture, region.city);
 
   const neighbors = getNeighborRegions(region, 12);
   const hasSubsidy = region.subsidy_amount === "あり";
@@ -55,7 +57,7 @@ export default async function RegionPage({ params }: Props) {
             空き家の解体や除却時に自治体の補助制度を利用できる場合があります。窓口で要件をご確認ください。
           </p>
           <Link
-            href={`/area/${encodeURIComponent(region.prefecture)}/${encodeURIComponent(region.city)}/subsidy`}
+            href={areaIds ? `/area/${areaIds.prefectureId}/${areaIds.cityId}/subsidy` : `/area/${encodeURIComponent(region.prefecture)}/${encodeURIComponent(region.city)}/subsidy`}
             className="mt-3 inline-block text-green-700 font-medium underline hover:no-underline"
           >
             {region.city}の補助金詳細を見る
@@ -166,7 +168,7 @@ export default async function RegionPage({ params }: Props) {
           ← 地域一覧（全国）へ
         </Link>
         <Link
-          href={`/area/${encodeURIComponent(region.prefecture)}/${encodeURIComponent(region.city)}`}
+          href={areaIds ? `/area/${areaIds.prefectureId}/${areaIds.cityId}` : `/area/${encodeURIComponent(region.prefecture)}/${encodeURIComponent(region.city)}`}
           className="text-primary font-medium hover:underline"
         >
           {region.city}の粗大ゴミ・遺品整理（詳細）

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAreaData } from "../lib/area-data";
+import { getAreaData, getAreaIds } from "../lib/area-data";
 import JapanMapNav from "../components/JapanMapNav";
 import { pageTitle } from "../lib/site-brand";
 
@@ -33,30 +33,33 @@ export default function AreaIndexPage() {
           <div key={prefecture} id={prefecture}>
             <h2 className="font-bold text-lg text-foreground/80 mb-3">{prefecture}</h2>
             <ul className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
-              {rows.map((r) => (
+              {rows.map((r) => {
+                const ids = getAreaIds(r.prefecture, r.city);
+                if (!ids) return null;
+                return (
                 <li key={r.city} className="flex flex-col gap-2 bg-card rounded-xl border border-border p-4">
                   <Link
-                    href={`/area/${encodeURIComponent(r.prefecture)}/${encodeURIComponent(r.city)}`}
+                    href={`/area/${ids.prefectureId}/${ids.cityId}`}
                     className="font-bold text-foreground hover:text-primary transition"
                   >
                     {r.city}
                   </Link>
                   <div className="flex flex-col gap-2">
                     <Link
-                      href={`/area/${encodeURIComponent(r.prefecture)}/${encodeURIComponent(r.city)}/subsidy`}
+                      href={`/area/${ids.prefectureId}/${ids.cityId}/subsidy`}
                       className="block w-full text-center bg-primary text-white rounded-lg px-4 py-2.5 text-sm font-medium hover:opacity-90 transition"
                     >
                       {r.city}の補助金・助成金を調べる
                     </Link>
                     <Link
-                      href={`/area/${encodeURIComponent(r.prefecture)}/${encodeURIComponent(r.city)}/cleanup`}
+                      href={`/area/${ids.prefectureId}/${ids.cityId}/cleanup`}
                       className="block w-full text-center bg-primary-light text-primary border border-primary/30 rounded-lg px-4 py-2.5 text-sm font-medium hover:bg-primary/10 transition"
                     >
                       {r.city}の片付け相場を見る
                     </Link>
                   </div>
                 </li>
-              ))}
+              );})}
             </ul>
           </div>
         ))}

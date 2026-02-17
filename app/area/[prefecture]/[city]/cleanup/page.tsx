@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getAreaBySlug, getAreaSlugs } from "../../../../lib/area-data";
+import { getAreaById, getAreaIdSlugs, getAreaIds } from "../../../../lib/area-data";
 import { getAreaSeizenseiriColumn, getAreaOwlColumn } from "../../../../lib/area-column";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
 import AreaOwlBlock from "../../../../components/AreaOwlBlock";
@@ -11,12 +11,15 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getAreaSlugs().map(({ prefecture, city }) => ({ prefecture, city }));
+  return getAreaIdSlugs().map(({ prefectureId, cityId }) => ({
+    prefecture: prefectureId,
+    city: cityId,
+  }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { prefecture, city } = await params;
-  const area = getAreaBySlug(prefecture, city);
+  const area = getAreaById(prefecture, city);
   if (!area) return { title: pageTitle("遺品整理・片付け相場") };
   return {
     title: pageTitle(`${area.city}（${area.prefecture}）遺品整理 相場・実家 片付け 業者 おすすめ`),
@@ -26,14 +29,15 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function AreaCleanupPage({ params }: Props) {
   const { prefecture, city } = await params;
-  const area = getAreaBySlug(prefecture, city);
+  const area = getAreaById(prefecture, city);
   if (!area) notFound();
+  const ids = getAreaIds(area.prefecture, area.city)!;
 
   const cleanupText = area.cleanupPriceNote || `${area.city}では、遺品整理・実家の片付けは、部屋数・荷物量・立地により相場が異なります。1Kで十数万円〜、2LDKで20〜40万円程度、3LDK以上で40万円〜が目安となることが多いです。複数社の無料見積もりで比較することをおすすめします。`;
 
   return (
     <div className="space-y-8">
-      <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} page="cleanup" />
+      <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="cleanup" />
       <div>
         <h1 className="text-2xl font-bold text-primary">
           {area.city}（{area.prefecture}）の遺品整理・片付け相場
@@ -106,7 +110,7 @@ export default async function AreaCleanupPage({ params }: Props) {
         <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
           ← 地域一覧（全国）へ
         </Link>
-        <Link href={`/area/${encodeURIComponent(area.prefecture)}/${encodeURIComponent(area.city)}`} className="inline-block text-primary font-medium hover:underline">
+        <Link href={`/area/${ids.prefectureId}/${ids.cityId}`} className="inline-block text-primary font-medium hover:underline">
           ← {area.city}の粗大ゴミ・遺品整理ページへ
         </Link>
       </div>

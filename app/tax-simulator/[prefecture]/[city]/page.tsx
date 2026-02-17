@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getAreaBySlug, getAreaSlugs } from "../../../lib/area-data";
+import { getAreaById, getAreaIdSlugs, getAreaIds } from "../../../lib/area-data";
 import EmptyHouseTaxSimulator from "../../../components/EmptyHouseTaxSimulator";
 import { pageTitle } from "../../../lib/site-brand";
 
@@ -9,12 +9,15 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getAreaSlugs().map(({ prefecture, city }) => ({ prefecture, city }));
+  return getAreaIdSlugs().map(({ prefectureId, cityId }) => ({
+    prefecture: prefectureId,
+    city: cityId,
+  }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { prefecture, city } = await params;
-  const area = getAreaBySlug(prefecture, city);
+  const area = getAreaById(prefecture, city);
   if (!area) return { title: pageTitle("空き家税金シミュレーション") };
   return {
     title: pageTitle(`${area.city}の空き家税金シミュレーション | 固定資産税はいくら?`),
@@ -24,8 +27,9 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function TaxSimulatorAreaPage({ params }: Props) {
   const { prefecture, city } = await params;
-  const area = getAreaBySlug(prefecture, city);
+  const area = getAreaById(prefecture, city);
   if (!area) notFound();
+  const ids = getAreaIds(area.prefecture, area.city)!;
 
   return (
     <div className="space-y-8">
@@ -54,7 +58,7 @@ export default async function TaxSimulatorAreaPage({ params }: Props) {
 
       <div className="flex flex-wrap gap-3">
         <Link
-          href={`/area/${encodeURIComponent(area.prefecture)}/${encodeURIComponent(area.city)}`}
+          href={`/area/${ids.prefectureId}/${ids.cityId}`}
           className="inline-block text-primary font-medium hover:underline"
         >
           ← {area.city}の粗大ゴミ・遺品整理ページへ

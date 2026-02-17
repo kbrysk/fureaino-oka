@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getAreaBySlug, getAreaSlugs } from "../../../../lib/area-data";
+import { getAreaById, getAreaIdSlugs, getAreaIds } from "../../../../lib/area-data";
 import { getAreaSeizenseiriColumn, getAreaOwlColumn } from "../../../../lib/area-column";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
 import AreaOwlBlock from "../../../../components/AreaOwlBlock";
@@ -12,12 +12,15 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getAreaSlugs().map(({ prefecture, city }) => ({ prefecture, city }));
+  return getAreaIdSlugs().map(({ prefectureId, cityId }) => ({
+    prefecture: prefectureId,
+    city: cityId,
+  }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { prefecture, city } = await params;
-  const area = getAreaBySlug(prefecture, city);
+  const area = getAreaById(prefecture, city);
   if (!area) return { title: pageTitle("空き家・補助金") };
   return {
     title: pageTitle(`${area.city}（${area.prefecture}）空き家 解体 補助金・3000万円控除`),
@@ -27,8 +30,9 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function AreaSubsidyPage({ params }: Props) {
   const { prefecture, city } = await params;
-  const area = getAreaBySlug(prefecture, city);
+  const area = getAreaById(prefecture, city);
   if (!area) notFound();
+  const ids = getAreaIds(area.prefecture, area.city)!;
 
   const subsidyText = area.subsidyNote || `${area.city}では、空き家の解体に際して自治体の補助金や、相続した空き家の譲渡所得から3000万円まで控除できる特例（相続空き家の3000万円特別控除）の対象になるかどうか、市区町村の窓口や税理士にご確認ください。`;
 
@@ -43,7 +47,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
 
   return (
     <div className="space-y-8">
-      <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} page="subsidy" />
+      <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="subsidy" />
       <div>
         <h1 className="text-2xl font-bold text-primary">
           {area.city}（{area.prefecture}）の空き家 解体補助金・3000万円控除
@@ -118,7 +122,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
         <div className="p-6 space-y-4">
           <p className="text-sm text-foreground/70 leading-relaxed">{cleanupPriceText}</p>
           <Link
-            href={`/area/${encodeURIComponent(area.prefecture)}/${encodeURIComponent(area.city)}/cleanup`}
+            href={`/area/${ids.prefectureId}/${ids.cityId}/cleanup`}
             className="inline-block text-primary font-medium hover:underline"
           >
             {area.city}の片付け相場・詳細を見る →
@@ -151,7 +155,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
         <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
           ← 地域一覧（全国）へ
         </Link>
-        <Link href={`/area/${encodeURIComponent(area.prefecture)}/${encodeURIComponent(area.city)}`} className="inline-block text-primary font-medium hover:underline">
+        <Link href={`/area/${ids.prefectureId}/${ids.cityId}`} className="inline-block text-primary font-medium hover:underline">
           ← {area.city}の粗大ゴミ・遺品整理ページへ
         </Link>
       </div>

@@ -1,5 +1,6 @@
 import path from "path";
 import fs from "fs";
+import { AREA_ID_MAP } from "./area-id-map.generated";
 
 export interface AreaRow {
   prefecture: string;
@@ -70,4 +71,24 @@ export function getAreaBySlug(prefecture: string, city: string): AreaRow | null 
 
 export function getAreaSlugs(): { prefecture: string; city: string }[] {
   return getAreaData().map((r) => ({ prefecture: r.prefecture, city: r.city }));
+}
+
+/** URL用ローマ字IDのスラッグ一覧（/area/{prefectureId}/{cityId} 用） */
+export function getAreaIdSlugs(): { prefectureId: string; cityId: string }[] {
+  return AREA_ID_MAP.map((e) => ({ prefectureId: e.prefectureId, cityId: e.cityId }));
+}
+
+/** 日本語名からURL用IDを取得 */
+export function getAreaIds(prefecture: string, city: string): { prefectureId: string; cityId: string } | null {
+  const entry = AREA_ID_MAP.find((e) => e.prefecture === prefecture && e.city === city);
+  return entry ? { prefectureId: entry.prefectureId, cityId: entry.cityId } : null;
+}
+
+/** URL用IDから地域データを取得（ローマ字URL用） */
+export function getAreaById(prefectureId: string, cityId: string): AreaRow | null {
+  const entry = AREA_ID_MAP.find(
+    (e) => e.prefectureId === prefectureId && e.cityId === cityId
+  );
+  if (!entry) return null;
+  return getAreaBySlug(entry.prefecture, entry.city);
 }

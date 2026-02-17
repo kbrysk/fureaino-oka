@@ -10,6 +10,9 @@ export type AreaBreadcrumbPage = "main" | "subsidy" | "cleanup";
 interface AreaBreadcrumbsProps {
   prefecture: string;
   city: string;
+  /** URL用ローマ字ID（指定時はパスに使用） */
+  prefectureId?: string;
+  cityId?: string;
   page: AreaBreadcrumbPage;
 }
 
@@ -22,21 +25,21 @@ const PAGE_LABELS: Record<AreaBreadcrumbPage, string> = {
 /**
  * 地域L3ページ用パンくず＋BreadcrumbList JSON-LD（SEO: 階層の明示・検索結果のパンくず表示）
  */
-export default function AreaBreadcrumbs({ prefecture, city, page }: AreaBreadcrumbsProps) {
-  const prefectureEnc = encodeURIComponent(prefecture);
-  const cityEnc = encodeURIComponent(city);
+export default function AreaBreadcrumbs({ prefecture, city, prefectureId, cityId, page }: AreaBreadcrumbsProps) {
+  const p = prefectureId ?? encodeURIComponent(prefecture);
+  const c = cityId ?? encodeURIComponent(city);
 
   const items: { name: string; path: string }[] = [
     { name: "ホーム", path: "/" },
     { name: "地域一覧", path: "/area" },
     { name: prefecture, path: `/area#${encodeURIComponent(prefecture)}` },
-    { name: city, path: `/area/${prefectureEnc}/${cityEnc}` },
+    { name: city, path: `/area/${p}/${c}` },
   ];
   if (page !== "main") {
     const label = PAGE_LABELS[page];
     items.push({
       name: label,
-      path: page === "subsidy" ? `/area/${prefectureEnc}/${cityEnc}/subsidy` : `/area/${prefectureEnc}/${cityEnc}/cleanup`,
+      path: page === "subsidy" ? `/area/${p}/${c}/subsidy` : `/area/${p}/${c}/cleanup`,
     });
   }
 

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getAreaBySlug, getAreaSlugs } from "../../../lib/area-data";
+import { getAreaById, getAreaIdSlugs, getAreaIds } from "../../../lib/area-data";
 import { getRegionBySlug } from "../../../lib/regions";
 import { getAreaSeizenseiriColumn, getAreaOwlColumn } from "../../../lib/area-column";
 import AreaBreadcrumbs from "../../../components/AreaBreadcrumbs";
@@ -13,12 +13,15 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getAreaSlugs().map(({ prefecture, city }) => ({ prefecture, city }));
+  return getAreaIdSlugs().map(({ prefectureId, cityId }) => ({
+    prefecture: prefectureId,
+    city: cityId,
+  }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { prefecture, city } = await params;
-  const area = getAreaBySlug(prefecture, city);
+  const area = getAreaById(prefecture, city);
   if (!area) return { title: pageTitle("地域情報") };
   return {
     title: pageTitle(`${area.city}（${area.prefecture}）の粗大ゴミ・遺品整理`),
@@ -28,13 +31,14 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function AreaPage({ params }: Props) {
   const { prefecture, city } = await params;
-  const area = getAreaBySlug(prefecture, city);
+  const area = getAreaById(prefecture, city);
   if (!area) notFound();
+  const ids = getAreaIds(area.prefecture, area.city)!;
   const region = getRegionBySlug([area.prefecture, area.city]);
 
   return (
     <div className="space-y-8">
-      <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} page="main" />
+      <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="main" />
       <div>
         <h1 className="text-2xl font-bold text-primary">
           {area.city}（{area.prefecture}）の粗大ゴミ・遺品整理
@@ -132,19 +136,19 @@ export default async function AreaPage({ params }: Props) {
           </Link>
         )}
         <Link
-          href={`/area/${encodeURIComponent(area.prefecture)}/${encodeURIComponent(area.city)}/subsidy`}
+          href={`/area/${ids.prefectureId}/${ids.cityId}/subsidy`}
           className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition"
         >
           {area.city}の空き家・補助金
         </Link>
         <Link
-          href={`/area/${encodeURIComponent(area.prefecture)}/${encodeURIComponent(area.city)}/cleanup`}
+          href={`/area/${ids.prefectureId}/${ids.cityId}/cleanup`}
           className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition"
         >
           {area.city}の遺品整理・相場
         </Link>
         <Link
-          href={`/tax-simulator/${encodeURIComponent(area.prefecture)}/${encodeURIComponent(area.city)}`}
+          href={`/tax-simulator/${ids.prefectureId}/${ids.cityId}`}
           className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition"
         >
           {area.city}の空き家税金シミュレーション

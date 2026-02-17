@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAreaSlugs } from "./lib/area-data";
+import { getAreaIdSlugs } from "./lib/area-data";
 import { getRegionSlugs } from "./lib/regions";
 import { getArticleSlugs } from "./lib/articles";
 import { getLayoutSlugs } from "./lib/cost-by-layout";
@@ -72,16 +72,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const areaSlugs = getAreaSlugs();
+  const areaSlugs = getAreaIdSlugs();
   const areaRoutes: MetadataRoute.Sitemap = [];
-  for (const { prefecture, city } of areaSlugs) {
-    const p = encodeURIComponent(prefecture);
-    const c = encodeURIComponent(city);
+  for (const { prefectureId, cityId } of areaSlugs) {
     areaRoutes.push(
-      { url: `${base}/area/${p}/${c}`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 },
-      { url: `${base}/area/${p}/${c}/subsidy`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.6 },
-      { url: `${base}/area/${p}/${c}/cleanup`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.6 },
-      { url: `${base}/tax-simulator/${p}/${c}`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 },
+      { url: `${base}/area/${prefectureId}/${cityId}`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 },
+      { url: `${base}/area/${prefectureId}/${cityId}/subsidy`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.6 },
+      { url: `${base}/area/${prefectureId}/${cityId}/cleanup`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.6 },
+      { url: `${base}/tax-simulator/${prefectureId}/${cityId}`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 },
     );
   }
 
