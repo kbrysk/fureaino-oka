@@ -1,14 +1,16 @@
 import type { MetadataRoute } from "next";
 import { getBaseUrl } from "./lib/site-url";
 
+/** 本番ドメイン（sitemap URL は常にここで明示） */
+const ROBOTS_BASE = getBaseUrl() || "https://www.fureaino-oka.com";
+
 /**
  * robots.txt（SEO: クローラーへの案内・sitemapの明示）
- * 本番では NEXT_PUBLIC_SITE_URL を設定すると sitemap の絶対URLを出力。
+ * User-agent: * に Allow、sitemap.xml の絶対URLを必ず出力。
  */
 export default function robots(): MetadataRoute.Robots {
-  const base = getBaseUrl();
   return {
     rules: { userAgent: "*", allow: "/", disallow: ["/api/"] },
-    ...(base && { sitemap: `${base}/sitemap.xml` }),
+    sitemap: `${ROBOTS_BASE}/sitemap.xml`,
   };
 }

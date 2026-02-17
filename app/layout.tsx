@@ -4,7 +4,8 @@ import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import MobileFooterBar from "./components/MobileFooterBar";
-import { SITE_TITLE_TOP } from "./lib/site-brand";
+import JsonLdBreadcrumb from "./components/JsonLdBreadcrumb";
+import { SITE_TITLE_TOP, SITE_NAME_LOGO } from "./lib/site-brand";
 import { getBaseUrl } from "./lib/site-url";
 
 /** Google AdSense 審査用パブリッシャーID（next/third-parties に GoogleAdSense はないため next/script で同等の読み込み） */
@@ -41,11 +42,18 @@ export const metadata: Metadata = {
   metadataBase: new URL(CANONICAL_ORIGIN),
   title: SITE_TITLE_TOP,
   description: DEFAULT_DESCRIPTION,
+  icons: {
+    icon: [{ url: "/favicon.ico", type: "image/x-icon", sizes: "32x32" }],
+    apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
+  },
   alternates: {
     canonical: "./",
   },
   openGraph: {
     type: "website",
+    locale: "ja_JP",
+    url: CANONICAL_ORIGIN,
+    siteName: SITE_NAME_LOGO,
     title: SITE_TITLE_TOP,
     description: DEFAULT_DESCRIPTION,
     images: [{ url: ogImageUrl, width: 1200, height: 630, alt: "生前整理支援センター ふれあいの丘" }],
@@ -80,6 +88,19 @@ export default function RootLayout({
         <meta name="twitter:title" content={SITE_TITLE_TOP} />
         <meta name="twitter:description" content={DEFAULT_DESCRIPTION} />
         <meta name="twitter:image" content={ogImageUrl} />
+        {/* JSON-LD: Organization（Google推奨の構造化データ） */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: SITE_NAME_LOGO,
+              url: CANONICAL_ORIGIN,
+              logo: `${CANONICAL_ORIGIN}/icon.png`,
+            }),
+          }}
+        />
         {/* Google Tag Manager - head 内のなるべく上 */}
         <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
         {/* Google AdSense 審査コード（初期HTMLに含めクローラーに確実に読ませる） */}
@@ -90,6 +111,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${geistSans.variable} antialiased overflow-x-hidden`}>
+        <JsonLdBreadcrumb baseUrl={CANONICAL_ORIGIN} />
         {/* Google Tag Manager (noscript) - body 開始直後 */}
         <noscript>
           <iframe

@@ -7,15 +7,18 @@ import { getDisposeSlugs } from "./lib/dispose-items";
 import { DISPOSE_CATEGORIES } from "./lib/dispose-categories";
 import { getBaseUrl } from "./lib/site-url";
 
+/** 本番ドメイン（sitemap は常にここで出力し、*.vercel.app との重複を避ける） */
+const SITEMAP_BASE = getBaseUrl() || "https://www.fureaino-oka.com";
+
 /**
  * XML Sitemap（SEO: クロール効率・インデックス促進）
  * 静的ページ＋地域・費用・捨て方・記事の全URLを出力。クローラーが全ページを確実に発見できるようにする。
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = getBaseUrl() || "http://localhost:3000";
+  const base = SITEMAP_BASE;
 
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: base, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
+    { url: base, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 1.0 },
     { url: `${base}/area`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/cost`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/dispose`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
@@ -24,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/guidebook`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/guidebook/jikka-jimai`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.75 },
     { url: `${base}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/about-site`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.65 },
     { url: `${base}/senryu`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.6 },
     { url: `${base}/senryu/submit`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/checklist`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
