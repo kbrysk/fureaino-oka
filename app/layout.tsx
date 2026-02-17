@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
@@ -6,6 +7,9 @@ import Footer from "./components/Footer";
 import MobileFooterBar from "./components/MobileFooterBar";
 import { SITE_TITLE_TOP } from "./lib/site-brand";
 import { getBaseUrl } from "./lib/site-url";
+
+/** Google AdSense 審査用パブリッシャーID（next/third-parties に GoogleAdSense はないため next/script で同等の読み込み） */
+const GOOGLE_ADSENSE_PUBLISHER_ID = "ca-pub-8324936850324481";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,6 +62,12 @@ export default function RootLayout({
       <head>
         {/* Google Tag Manager - head 内のなるべく上 */}
         <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
+        {/* Google AdSense 審査コード（パブリッシャーID） */}
+        <Script
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GOOGLE_ADSENSE_PUBLISHER_ID}`}
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={`${geistSans.variable} antialiased overflow-x-hidden`}>
         {/* Google Tag Manager (noscript) - body 開始直後 */}
