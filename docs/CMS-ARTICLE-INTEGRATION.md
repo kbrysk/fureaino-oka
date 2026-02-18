@@ -103,3 +103,38 @@ Gemini で記事を作成し CMS に直接入れる場合の、**フクロウの
   - **指定する場合**は `owlMessages` を段落順の配列で CMS に格納。
 
 この設計にしておけば、Gemini は「本文＋必要なら owlMessages」だけを CMS 用に出力し、LINE やレイアウトはすべてサイト側で一貫して制御できます。
+
+---
+
+## 4. Sanity（および他 Headless CMS）で「フクロウ・LINE」を残すには
+
+**結論：Sanity でも問題なく残せます。** データの持ち方と表示の役割を分けておけば、どの Headless CMS でも同じ設計でいけます。
+
+### フクロウの相槌（owlMessages）
+
+| 項目 | 内容 |
+|------|------|
+| **CMS での持ち方** | 記事ドキュメントに **「文字列の配列」** フィールドを1つ持つ。 |
+| **Sanity の場合** | スキーマで `name: 'owlMessages'`, `type: 'array'`, `of: [{ type: 'string' }]` を定義する。管理画面で「段落1の相槌」「段落2の相槌」… と追加できる。省略可能（空ならサイト側でデフォルト相槌を使用）。 |
+| **表示** | Next.js の記事ページで、CMS から取得した `article.owlMessages` をそのまま `ArticleBodyWithOwl` に渡す。現在の JSON 記事と同じ使い方。 |
+
+→ **現状の「段落ごとの相槌」を Sanity の array フィールドで再現できる**ので、フクロウの相槌はそのまま残せます。
+
+### LINE誘導（文頭・文末）
+
+| 項目 | 内容 |
+|------|------|
+| **CMS に持たせるか** | **持たせない**。LINE の文言・バナーは「記事テンプレートのレイアウト」なので、CMS の body や別フィールドには入れない。 |
+| **表示** | 記事を CMS（Sanity）から取得したあと、**同じレイアウト**で表示する。つまり「アイキャッチ → ArticleLineCTATop（文頭）→ 本文＋フクロウ → ArticleFooterCTA（文末）」の順は、現在の `app/articles/[slug]/page.tsx` と同じ。データ取得先が JSON から Sanity API に変わるだけ。 |
+| **Sanity でやること** | 特になし。記事の slug / title / body / owlMessages などを返す API を用意し、Next 側でそのデータを使って既存の `ArticleLineCTATop`・`ArticleBodyWithOwl`・`ArticleFooterCTA` をそのまま使う。 |
+
+→ **LINE誘導は CMS にデータを持たせず、テンプレートで固定表示する設計のまま**なので、Sanity に移行しても文頭・文末の LINE はそのまま残ります。
+
+### まとめ（Sanity でいけるか）
+
+| 機能 | CMS に持つデータ | 表示 |
+|------|------------------|------|
+| **フクロウの相槌** | `owlMessages`（文字列の配列。任意） | 既存の `ArticleBodyWithOwl` に渡すだけ。 |
+| **LINE誘導（文頭・文末）** | 持たない | 既存の `ArticleLineCTATop`・`ArticleFooterCTA` をテンプレートでそのまま表示。 |
+
+**Sanity の記事スキーマに `owlMessages`（array of string）を追加し、記事ページでは「Sanity から取得したデータ」を今と同じコンポーネントに渡せば、フクロウの相槌も LINE 誘導も現状どおり残せます。**

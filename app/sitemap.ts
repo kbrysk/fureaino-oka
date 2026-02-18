@@ -5,10 +5,10 @@ import { getArticleSlugs } from "./lib/articles";
 import { getLayoutSlugs } from "./lib/cost-by-layout";
 import { getDisposeSlugs } from "./lib/dispose-items";
 import { DISPOSE_CATEGORIES } from "./lib/dispose-categories";
-import { getBaseUrl } from "./lib/site-url";
+import { getCanonicalBase } from "./lib/site-url";
 
-/** 本番ドメイン（sitemap は常にここで出力し、*.vercel.app との重複を避ける） */
-const SITEMAP_BASE = getBaseUrl() || "https://www.fureaino-oka.com";
+/** 正規ドメインで sitemap を出力し、Search Console の重複・評価を https://www.fureaino-oka.com に統合 */
+const SITEMAP_BASE = getCanonicalBase();
 
 /**
  * XML Sitemap（SEO: クロール効率・インデックス促進）

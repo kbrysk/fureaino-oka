@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
-import { getBaseUrl } from "./lib/site-url";
+import { getCanonicalBase } from "./lib/site-url";
 
-/** 本番ドメイン（sitemap URL は常にここで明示） */
-const ROBOTS_BASE = getBaseUrl() || "https://www.fureaino-oka.com";
+/** 正規ドメインで sitemap の場所を案内（Search Console の評価統合） */
+const ROBOTS_BASE = getCanonicalBase();
 
 /**
  * robots.txt（SEO: クローラーへの案内・sitemapの明示）

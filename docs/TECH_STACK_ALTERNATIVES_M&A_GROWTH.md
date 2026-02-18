@@ -19,7 +19,9 @@
 
 ### CMS（記事管理）
 
-**※記事は Gemini で作成し CMS に追加する前提のため、Cursor/リポジトリ内で編集する「JSON」「Tina/Decap（Gitベース）」は向かない。CMS は管理画面 or API で追加できる **microCMS または Sanity が必須**。**
+**※「1年後にバイアウト」「地道にコンテンツ追加」前提での CMS 選定結論は → `docs/CMS_RECOMMENDATION_BIZ_EXIT.md` を参照。**
+
+※記事は Gemini で作成し CMS に追加する前提のため、Cursor/リポジトリ内で編集する「JSON」「Tina/Decap（Gitベース）」は向かない。CMS は管理画面 or API で追加できる **microCMS または Sanity が必須**。
 
 | 選択肢 | 直近1年コスト | 無料枠の目安 | M&A・譲渡 | グロース向き | 備考 |
 |--------|----------------|--------------|-----------|--------------|------|
@@ -185,7 +187,7 @@
 | # | ツール | 用途 | プラン | 目安コスト（年） | 備考 |
 |---|--------|------|--------|------------------|------|
 | 1 | **Vercel** | ホスティング・デプロイ | Pro | 約36,000円 | 商用利用のため必須。 |
-| 2 | **microCMS** または **Sanity** | CMS（記事管理） | Hobby / Free | 0円（Sanity Free 推奨） | **Gemini→CMS のため必須**。管理画面 or API に Gemini の出力を追加。500記事以上なら Sanity Free 推奨。 |
+| 2 | **microCMS** または **Sanity** | CMS（記事管理） | Hobby / Free | 0円 | **Gemini→CMS のため必須**。**第一推奨は Sanity（Free）**（バイアウト・規模拡大前提）。国産・日本語UI優先なら microCMS。詳細は **`docs/CMS_RECOMMENDATION_BIZ_EXIT.md`** を参照。 |
 | 3 | **Supabase** | DB・Auth（リード・イベント） | Free | 0円 | リード・イベント保存に必須。 |
 | 4 | **Resend** | メール・PDF送付 | Free | 0円 | ガイドブック送付・リード返信。月3,000通まで無料。 |
 

@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import MobileFooterBar from "./components/MobileFooterBar";
 import JsonLdBreadcrumb from "./components/JsonLdBreadcrumb";
 import { SITE_TITLE_TOP, SITE_NAME_LOGO } from "./lib/site-brand";
-import { getBaseUrl } from "./lib/site-url";
+import { getBaseUrl, getCanonicalBase } from "./lib/site-url";
 
 /** Google AdSense 審査用パブリッシャーID（next/third-parties に GoogleAdSense はないため next/script で同等の読み込み） */
 const GOOGLE_ADSENSE_PUBLISHER_ID = "ca-pub-8324936850324481";
@@ -21,11 +21,11 @@ const DEFAULT_DESCRIPTION =
   "生前整理の進め方から業者選びまで。「ふれあいの丘」が運営。実家じまい・遺品整理の無料相談・無料ツールをご利用ください。";
 
 const GTM_ID = "GTM-5HKD4MVB";
-const baseUrl = getBaseUrl();
-/** 本番ドメイン（*.vercel.app との重複コンテンツ回避のため Canonical は常にここに統一） */
-const CANONICAL_ORIGIN = "https://www.fureaino-oka.com";
+/** 正規ドメイン（Canonical・OG の基準）。NEXT_PUBLIC_BASE_URL 未設定時は https://www.fureaino-oka.com */
+const canonicalOrigin = getCanonicalBase();
 /** メタ・OGP・ファビコンは必ず絶対URLで出す（ツール・SNSが相対URLを解決しないため） */
-const siteOrigin = baseUrl || CANONICAL_ORIGIN;
+const baseUrl = getBaseUrl();
+const siteOrigin = baseUrl || canonicalOrigin;
 /** 静的ファイル（scripts/generate-ogp-image.mjs で生成）。動的ルートはサーバーレスで失敗するため使用しない */
 const ogImageUrl = `${siteOrigin}/opengraph-image.png`;
 /** 静的ファイルのみ参照（app/icon ルートと競合しない） */
@@ -39,7 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','${GTM_ID}');`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(CANONICAL_ORIGIN),
+  metadataBase: new URL(canonicalOrigin),
   title: SITE_TITLE_TOP,
   description: DEFAULT_DESCRIPTION,
   icons: {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    url: CANONICAL_ORIGIN,
+    url: canonicalOrigin,
     siteName: SITE_NAME_LOGO,
     title: SITE_TITLE_TOP,
     description: DEFAULT_DESCRIPTION,
@@ -96,8 +96,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: SITE_NAME_LOGO,
-              url: CANONICAL_ORIGIN,
-              logo: `${CANONICAL_ORIGIN}/icon.png`,
+              url: canonicalOrigin,
+              logo: `${canonicalOrigin}/icon.png`,
             }),
           }}
         />
@@ -111,7 +111,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${geistSans.variable} antialiased overflow-x-hidden`}>
-        <JsonLdBreadcrumb baseUrl={CANONICAL_ORIGIN} />
+        <JsonLdBreadcrumb baseUrl={canonicalOrigin} />
         {/* Google Tag Manager (noscript) - body 開始直後 */}
         <noscript>
           <iframe
