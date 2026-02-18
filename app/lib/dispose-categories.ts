@@ -53,6 +53,41 @@ export const DISPOSE_CATEGORIES: DisposeCategory[] = [
     shortName: "日用品・大量",
     description: "まとめて処分したいニーズに応える品目。",
   },
+  {
+    id: "outdoor-garage",
+    slug: "outdoor-garage",
+    name: "屋外・庭・ガレージの捨て方",
+    shortName: "屋外・庭・ガレージ",
+    description: "物置・庭石・農機具など、解体や重量物の処分ニーズに応える品目。",
+  },
+  {
+    id: "study-documents",
+    slug: "study-documents",
+    name: "書斎・金庫・重要書類の捨て方",
+    shortName: "書斎・金庫・重要書類",
+    description: "切手・古銭・権利書など、価値ある「紙モノ」や権利関係の整理。",
+  },
+  {
+    id: "retro-misc",
+    slug: "retro-misc",
+    name: "納戸・レトロ雑貨の捨て方",
+    shortName: "納戸・レトロ雑貨",
+    description: "昭和レトロで価値が出る不用品。買取需要がある品目を解説。",
+  },
+  {
+    id: "audio-precision",
+    slug: "audio-precision",
+    name: "オーディオ・精密機器の捨て方",
+    shortName: "オーディオ・精密機器",
+    description: "アンプ・スピーカー・レコードプレーヤーなど、マニア向け高価買取の品目。",
+  },
+  {
+    id: "materials-difficult",
+    slug: "materials-difficult",
+    name: "素材・資源・処理困難物の捨て方",
+    shortName: "素材・資源・処理困難物",
+    description: "鉄くず・土砂・畳など、自治体で捨てられない「困ったモノ」の解決。",
+  },
 ];
 
 export function getCategoryBySlug(slug: string): DisposeCategory | undefined {

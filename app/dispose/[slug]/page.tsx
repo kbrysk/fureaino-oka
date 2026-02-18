@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getDisposeItemBySlug, getDisposeSlugs } from "../../lib/dispose-items";
 import { getCategoryById } from "../../lib/dispose-categories";
+import { getBuybackExamples } from "../../lib/dispose-buyback-examples";
 import { pageTitle } from "../../lib/site-brand";
 import DisposeItemLineCTA from "../../components/DisposeItemLineCTA";
 import DisposeToCostCrossLink from "../../components/DisposeToCostCrossLink";
@@ -35,6 +36,16 @@ function ConclusionBadge({ conclusion }: { conclusion: string }) {
   );
 }
 
+/** 買取推奨時の「捨てるのはもったいない」注意バッジ */
+function SellRecommendBadge() {
+  return (
+    <span className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl font-bold text-sm bg-danger/10 text-danger border border-danger/30">
+      <span aria-hidden className="text-base leading-none">⚠</span>
+      ※捨てるのはもったいない！まずは査定を推奨
+    </span>
+  );
+}
+
 export default async function DisposeItemPage({ params }: Props) {
   const { slug } = await params;
   const item = getDisposeItemBySlug(slug);
@@ -62,8 +73,9 @@ export default async function DisposeItemPage({ params }: Props) {
       {/* 結論: 自治体で捨てられるか？ */}
       <section className="bg-card rounded-2xl border border-border p-6">
         <h2 className="font-bold text-primary mb-3">結論：自治体で捨てられる？</h2>
-        <div className="mb-4">
+        <div className="flex flex-wrap items-center gap-2 mb-4">
           <ConclusionBadge conclusion={item.gomiConclusion} />
+          {item.canSell && <SellRecommendBadge />}
         </div>
         <p className="text-sm text-foreground/70">{item.costNote}</p>
         {item.canSell && item.sellNote && (
@@ -91,6 +103,51 @@ export default async function DisposeItemPage({ params }: Props) {
           </li>
         </ul>
       </section>
+
+      {/* 買取相場例テーブル */}
+      {(() => {
+        const examples = getBuybackExamples(item.slug, item.categoryId);
+        if (examples.length === 0) return null;
+        return (
+          <section className="bg-card rounded-2xl border border-border overflow-hidden">
+            <div className="px-6 py-4 border-b border-border bg-accent/10">
+              <h2 className="font-bold text-accent">
+                実はこんなに高く売れる？買取実績例
+              </h2>
+              <p className="text-xs text-foreground/60 mt-1">
+                相場は状態・時期により変動します。まずは査定がおすすめです。
+              </p>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[280px] text-sm">
+                <thead>
+                  <tr className="bg-muted/50 border-b border-border">
+                    <th className="text-left py-3 px-4 font-semibold text-foreground">
+                      品目名
+                    </th>
+                    <th className="text-left py-3 px-4 font-semibold text-foreground">
+                      買取相場例（概算）
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {examples.map((ex, i) => (
+                    <tr
+                      key={i}
+                      className="border-b border-border/80 hover:bg-primary-light/20 transition"
+                    >
+                      <td className="py-3 px-4">{ex.itemName}</td>
+                      <td className="py-3 px-4 font-medium text-primary">
+                        {ex.priceRange}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* ふれあいの丘からのアドバイス */}
       <section className="bg-primary-light/50 rounded-2xl border border-primary/20 p-6">

@@ -1,24 +1,27 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getCategoryBySlug } from "../../../lib/dispose-categories";
+import { DISPOSE_CATEGORIES, getCategoryBySlug } from "../../../lib/dispose-categories";
 import { getItemsByCategoryId } from "../../../lib/dispose-items";
+import { getDisposalCategoryById } from "../../../../data/disposalItems";
+import { getCategoryDetail } from "../../../../data/disposalCategoryDetails";
 import { pageTitle } from "../../../lib/site-brand";
 
 type Props = { params: Promise<{ categorySlug: string }> };
 
-const CATEGORY_SLUGS = ["memorial", "furniture", "appliance", "difficult", "hobby", "daily"];
-
 export async function generateStaticParams() {
-  return CATEGORY_SLUGS.map((categorySlug) => ({ categorySlug }));
+  return DISPOSE_CATEGORIES.map((cat) => ({ categorySlug: cat.slug }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { categorySlug } = await params;
   const category = getCategoryBySlug(categorySlug);
   if (!category) return { title: pageTitle("捨て方辞典") };
+  const detail = getCategoryDetail(category.id);
+  const title = detail?.title ?? category.name + "一覧";
+  const description = detail?.lead ?? `${category.description} ${category.name}の品目一覧。各品目の捨て方・費用相場・買取・供養を解説。`;
   return {
-    title: pageTitle(category.name + "一覧"),
-    description: `${category.description} ${category.name}の品目一覧。各品目の捨て方・費用相場・買取・供養を解説。`,
+    title: pageTitle(title),
+    description,
   };
 }
 
@@ -27,6 +30,9 @@ export default async function DisposeCategoryPage({ params }: Props) {
   const category = getCategoryBySlug(categorySlug);
   if (!category) notFound();
   const items = getItemsByCategoryId(category.id);
+  const masterCategory = getDisposalCategoryById(category.id);
+  const masterItemNames = masterCategory?.items ?? [];
+  const detail = getCategoryDetail(category.id);
 
   return (
     <div className="space-y-8">
@@ -36,11 +42,66 @@ export default async function DisposeCategoryPage({ params }: Props) {
         <span>{category.shortName}</span>
       </p>
 
-      <div>
-        <h1 className="text-2xl font-bold text-primary">{category.name}一覧</h1>
-        <p className="text-foreground/60 mt-1">{category.description}</p>
-      </div>
+      {/* 解説コンテンツ（SEO・訴求用）：データがあるカテゴリのみ表示 */}
+      {detail ? (
+        <article className="space-y-6">
+          <header>
+            <h1 className="text-2xl font-bold text-primary md:text-3xl">{detail.title}</h1>
+            <p className="mt-3 text-foreground/80 leading-relaxed">{detail.lead}</p>
+          </header>
 
+          {detail.points.length > 0 && (
+            <section className="bg-card rounded-2xl border border-border p-6">
+              <h2 className="font-bold text-primary mb-4">処分の鉄則3選</h2>
+              <ul className="space-y-4">
+                {detail.points.map((point, i) => (
+                  <li key={i}>
+                    <h3 className="font-medium text-foreground">{point.title}</h3>
+                    <p className="text-sm text-foreground/70 mt-0.5">{point.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {detail.priceTable.length > 0 && (
+            <section className="bg-card rounded-2xl border border-border overflow-hidden">
+              <h2 className="font-bold text-primary p-6 pb-0">費用相場・買取相場の目安</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[320px] text-sm border-collapse">
+                  <thead>
+                    <tr className="border-b border-border bg-muted/30">
+                      <th className="text-left py-3 px-4 font-medium text-foreground">品目・内容</th>
+                      <th className="text-left py-3 px-4 font-medium text-foreground">目安</th>
+                      <th className="text-left py-3 px-4 font-medium text-foreground">備考</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {detail.priceTable.map((row, i) => (
+                      <tr key={i} className="border-b border-border last:border-0">
+                        <td className="py-3 px-4 text-foreground/90">{row.item}</td>
+                        <td className="py-3 px-4 text-foreground/90">{row.price}</td>
+                        <td className="py-3 px-4 text-foreground/60">{row.note}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          )}
+
+          <p className="text-sm text-foreground/60">
+            以下に、このカテゴリの品目一覧を掲載しています。各品目の捨て方・費用・買取は個別ページで詳しく解説しています。
+          </p>
+        </article>
+      ) : (
+        <div>
+          <h1 className="text-2xl font-bold text-primary">{category.name}一覧</h1>
+          <p className="text-foreground/60 mt-1">{category.description}</p>
+        </div>
+      )}
+
+      {items.length > 0 && (
       <ul className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         {items.map((item) => (
           <li key={item.slug}>
@@ -59,6 +120,23 @@ export default async function DisposeCategoryPage({ params }: Props) {
           </li>
         ))}
       </ul>
+      )}
+
+      {items.length === 0 && masterItemNames.length > 0 && (
+        <div className="bg-card rounded-2xl border border-border p-6">
+          <h2 className="font-bold text-primary mb-3">このカテゴリの品目一覧</h2>
+          <p className="text-sm text-foreground/60 mb-4">
+            以下の品目について、捨て方・費用・買取の詳細ページを順次追加していきます。まとめて処分したい方は「実家の整理をまるごと相談」からご相談ください。
+          </p>
+          <ul className="grid gap-2 sm:grid-cols-2 md:grid-cols-3">
+            {masterItemNames.map((name) => (
+              <li key={name} className="py-2 px-3 rounded-lg bg-muted/40 text-sm text-foreground/90">
+                {name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* 部屋ごと片付けるなら：費用・診断へのクロスリンク（トピッククラスター） */}
       <section className="bg-primary-light/40 rounded-2xl border border-primary/20 p-6">

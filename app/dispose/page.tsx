@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { DISPOSE_CATEGORIES } from "../lib/dispose-categories";
 import { getItemsByCategoryId } from "../lib/dispose-items";
+import { getDisposalCategoryById } from "../../data/disposalItems";
 import { pageTitle } from "../lib/site-brand";
 
 export const metadata = {
@@ -25,7 +26,11 @@ export default function DisposeIndexPage() {
         <ul className="space-y-6">
           {DISPOSE_CATEGORIES.map((cat) => {
             const items = getItemsByCategoryId(cat.id);
-            if (items.length === 0) return null;
+            const masterCat = getDisposalCategoryById(cat.id);
+            const masterItems = masterCat?.items ?? [];
+            const hasDetailPages = items.length > 0;
+            const hasMasterOnly = !hasDetailPages && masterItems.length > 0;
+            if (!hasDetailPages && !hasMasterOnly) return null;
             return (
               <li key={cat.id} className="bg-card rounded-2xl border border-border overflow-hidden">
                 <div className="px-6 py-4 border-b border-border bg-primary-light/20">
@@ -35,23 +40,33 @@ export default function DisposeIndexPage() {
                   <p className="text-sm text-foreground/60 mt-0.5">{cat.description}</p>
                 </div>
                 <ul className="p-4 grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                  {items.slice(0, 8).map((item) => (
-                    <li key={item.slug}>
-                      <Link
-                        href={`/dispose/${item.slug}`}
-                        className="block py-2 px-3 rounded-lg text-sm font-medium text-foreground/90 hover:bg-primary-light/40 hover:text-primary transition"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                  {items.length > 8 && (
+                  {hasDetailPages
+                    ? items.slice(0, 8).map((item) => (
+                        <li key={item.slug}>
+                          <Link
+                            href={`/dispose/${item.slug}`}
+                            className="block py-2 px-3 rounded-lg text-sm font-medium text-foreground/90 hover:bg-primary-light/40 hover:text-primary transition"
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))
+                    : masterItems.slice(0, 8).map((name) => (
+                        <li key={name}>
+                          <span className="block py-2 px-3 rounded-lg text-sm font-medium text-foreground/80">
+                            {name}
+                          </span>
+                        </li>
+                      ))}
+                  {(hasDetailPages ? items.length > 8 : masterItems.length > 8) && (
                     <li className="sm:col-span-2 md:col-span-3 lg:col-span-4 flex items-center">
                       <Link
                         href={`/dispose/category/${cat.slug}`}
                         className="text-sm text-primary font-medium hover:underline"
                       >
-                        このカテゴリの全{items.length}品目を見る →
+                        {hasDetailPages
+                          ? `このカテゴリの全${items.length}品目を見る →`
+                          : `このカテゴリの全${masterItems.length}品目を見る →`}
                       </Link>
                     </li>
                   )}

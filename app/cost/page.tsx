@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { COST_BREAKDOWN_DATA } from "../../data/costBreakdown";
 import { LAYOUT_COST_LIST } from "../lib/cost-by-layout";
 import { pageTitle } from "../lib/site-brand";
 
@@ -37,6 +38,29 @@ export default function CostIndexPage() {
       <p className="text-sm text-foreground/50">
         業者・荷物量・立地により変動します。詳しい見積もりは無料診断や複数社の見積もりでご確認ください。
       </p>
+
+      {/* 状況別・建物別・オプション別の料金相場（ロングテールSEO） */}
+      <div className="space-y-8">
+        {COST_BREAKDOWN_DATA.map((category) => (
+          <section key={category.id} className="bg-card rounded-2xl border border-border p-6">
+            <h2 className="font-bold text-primary text-lg mb-2">{category.title}</h2>
+            <p className="text-sm text-foreground/70 mb-4">{category.description}</p>
+            <ul className="space-y-2">
+              {category.items.map((item, i) => (
+                <li key={i}>
+                  <Link
+                    href={item.url}
+                    className="flex flex-wrap items-center justify-between gap-2 py-3 px-4 rounded-xl border border-border hover:border-primary/50 hover:bg-primary-light/30 transition"
+                  >
+                    <span className="font-medium text-foreground/90">{item.label}</span>
+                    <span className="text-sm text-primary whitespace-nowrap">{item.priceRange}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
 
       {/* 実家じまいクラスター（Hub-Spoke）：費用とあわせて進め方・診断へ */}
       <section className="bg-primary-light/30 rounded-2xl border border-primary/20 p-6">
