@@ -5,7 +5,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import MobileFooterBar from "./components/MobileFooterBar";
 import JsonLdBreadcrumb from "./components/JsonLdBreadcrumb";
-import { SITE_TITLE_TOP, SITE_NAME_LOGO } from "./lib/site-brand";
+import { SITE_TITLE_TOP, SITE_NAME_LOGO, SITE_NAME_SHORT } from "./lib/site-brand";
 import { getBaseUrl, getCanonicalBase } from "./lib/site-url";
 
 /** Google AdSense 審査用パブリッシャーID（next/third-parties に GoogleAdSense はないため next/script で同等の読み込み） */
@@ -24,13 +24,12 @@ const GTM_ID = "GTM-5HKD4MVB";
 /** 正規ドメイン（Canonical・OG の基準）。NEXT_PUBLIC_BASE_URL 未設定時は https://www.fureaino-oka.com */
 const canonicalOrigin = getCanonicalBase();
 /** メタ・OGP・ファビコンは必ず絶対URLで出す（ツール・SNSが相対URLを解決しないため） */
-const baseUrl = getBaseUrl();
-const siteOrigin = baseUrl || canonicalOrigin;
-/** 静的ファイル（scripts/generate-ogp-image.mjs で生成）。動的ルートはサーバーレスで失敗するため使用しない */
-const ogImageUrl = `${siteOrigin}/opengraph-image.png`;
-/** 静的ファイルのみ参照（app/icon ルートと競合しない） */
-const faviconUrl = `${siteOrigin}/icon.png`;
-const appleTouchIconUrl = `${siteOrigin}/apple-icon.png`;
+const siteOrigin = getBaseUrl() || canonicalOrigin;
+
+/** メタデータ画像（public/ 直下・Config-based 単一管理）。Cache Busting 用 ?v=1 */
+const FAVICON_PATH = "/favicon.png?v=1";
+const APPLE_TOUCH_ICON_PATH = "/apple-touch-icon.png?v=1";
+const OG_IMAGE_PATH = "/og-image.jpg?v=1";
 
 const gtmScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -43,8 +42,8 @@ export const metadata: Metadata = {
   title: SITE_TITLE_TOP,
   description: DEFAULT_DESCRIPTION,
   icons: {
-    icon: [{ url: "/favicon.ico", type: "image/x-icon", sizes: "32x32" }],
-    apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
+    icon: FAVICON_PATH,
+    apple: APPLE_TOUCH_ICON_PATH,
   },
   alternates: {
     canonical: "./",
@@ -52,17 +51,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    url: canonicalOrigin,
-    siteName: SITE_NAME_LOGO,
+    url: "./",
+    siteName: SITE_NAME_SHORT,
     title: SITE_TITLE_TOP,
     description: DEFAULT_DESCRIPTION,
-    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: "生前整理支援センター ふれあいの丘" }],
+    images: [
+      {
+        url: OG_IMAGE_PATH,
+        width: 1200,
+        height: 630,
+        alt: "生前整理支援センター ふれあいの丘",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE_TOP,
     description: DEFAULT_DESCRIPTION,
-    images: [ogImageUrl],
+    images: OG_IMAGE_PATH,
   },
 };
 
@@ -74,20 +80,21 @@ export default function RootLayout({
   return (
     <html lang="ja" className="overflow-x-hidden">
       <head>
-        {/* ファビコン・OGPを明示（Next.js metadata に加え絶対URLで確実に出力） */}
-        <link rel="icon" href={faviconUrl} type="image/png" />
-        <link rel="apple-touch-icon" href={appleTouchIconUrl} sizes="180x180" />
+        {/* ファビコン・Apple Touch Icon・OGP（public/ 直下・絶対URLで SNS/ツールに確実に読ませる） */}
+        <link rel="icon" href={`${canonicalOrigin}${FAVICON_PATH}`} type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href={`${canonicalOrigin}${APPLE_TOUCH_ICON_PATH}`} sizes="180x180" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteOrigin} />
         <meta property="og:title" content={SITE_TITLE_TOP} />
         <meta property="og:description" content={DEFAULT_DESCRIPTION} />
-        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:image" content={`${canonicalOrigin}${OG_IMAGE_PATH}`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="生前整理支援センター ふれあいの丘" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={SITE_TITLE_TOP} />
         <meta name="twitter:description" content={DEFAULT_DESCRIPTION} />
-        <meta name="twitter:image" content={ogImageUrl} />
+        <meta name="twitter:image" content={`${canonicalOrigin}${OG_IMAGE_PATH}`} />
         {/* JSON-LD: Organization（Google推奨の構造化データ） */}
         <script
           type="application/ld+json"
@@ -97,7 +104,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: SITE_NAME_LOGO,
               url: canonicalOrigin,
-              logo: `${canonicalOrigin}/icon.png`,
+              logo: `${canonicalOrigin}${APPLE_TOUCH_ICON_PATH}`,
             }),
           }}
         />
