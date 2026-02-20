@@ -26,8 +26,8 @@ const canonicalOrigin = getCanonicalBase();
 /** メタ・OGP・ファビコンは必ず絶対URLで出す（ツール・SNSが相対URLを解決しないため） */
 const siteOrigin = getBaseUrl() || canonicalOrigin;
 
-/** メタデータ画像（public/ 直下・Config-based 単一管理）。Cache Busting 用 ?v=1 */
-const FAVICON_PATH = "/favicon.png?v=1";
+/** メタデータ画像（public/ 直下・Config-based 単一管理）。Cache Busting 用 ?v=2 */
+const FAVICON_PATH = "/favicon.png?v=2";
 const APPLE_TOUCH_ICON_PATH = "/apple-touch-icon.png?v=1";
 const OG_IMAGE_PATH = "/og-image.jpg?v=1";
 
