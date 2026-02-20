@@ -29,7 +29,7 @@ const siteOrigin = getBaseUrl() || canonicalOrigin;
 /** メタデータ画像（public/ 直下・Config-based 単一管理）。Cache Busting 用 ?v=2 */
 const FAVICON_PATH = "/favicon.png?v=2";
 const APPLE_TOUCH_ICON_PATH = "/apple-touch-icon.png?v=1";
-const OG_IMAGE_PATH = "/og-image.jpg?v=1";
+const OG_IMAGE_PATH = "/og-image.png?v=2";
 
 const gtmScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
