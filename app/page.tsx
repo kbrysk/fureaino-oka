@@ -115,42 +115,67 @@ export default function Home() {
 
   return (
     <div className="space-y-8">
-      {/* Hero：フクロウ＋トータルサポート訴求＋3ステップカード＋CTA（スマホでコンパクトに） */}
-      <section className="w-full rounded-2xl bg-gradient-to-b from-primary-light/15 to-primary-light/5 border border-primary/10 p-4 sm:p-6 md:p-8 lg:p-10">
-        <div className="max-w-4xl mx-auto flex flex-col items-center gap-4 sm:gap-6 text-center">
-          <p className="inline-flex items-center rounded-full px-3.5 py-1 text-xs sm:text-sm font-bold tracking-wide text-amber-800 bg-amber-100 border border-amber-300/80" aria-hidden>
-            完全無料
-          </p>
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary leading-tight">
-            モノの整理だけでなく、心の整理も。<br className="hidden sm:inline" />
-            エンディングノートから始まる生前整理。
-          </h1>
-          <p className="text-foreground/80 text-sm sm:text-base md:text-lg max-w-2xl">
-            『何から始める？』の計画作りから、実家の片付け、不動産売却まで。あなたのペースで進めるトータルサポート。
-          </p>
+      {/* Hero：The Ideal Grid＝max-w-7xl・左寄せの情報の塊・右40%は聖域（余白） */}
+      <section className="relative w-full min-h-[420px] md:min-h-[520px] overflow-hidden" style={{ background: "var(--background)" }}>
+        <div
+          className="hero-panorama-bg absolute inset-0"
+          style={{ backgroundImage: "url(/images/hero-couple.png)" }}
+          aria-hidden
+        />
+        <div className="hero-panorama-gradient absolute inset-0 pointer-events-none" aria-hidden />
 
-          {/* フクロウと吹き出し：横並び（スマホでは小さめでフローが見切れないように） */}
-          <div className="w-full flex flex-row flex-nowrap justify-center items-center gap-0 sm:gap-3">
-            <OwlCharacter
-              size={72}
-              message="まずは「考える」からで大丈夫。一歩ずつ、ふれあいの丘がサポートするホー！"
-              tone="calm"
-              bubblePosition="right"
-              className="shrink-0"
-            />
-          </div>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:justify-end md:items-center min-h-[420px] md:min-h-[520px] pt-10 md:pt-12 pb-12">
+          {/* 右側にコンテンツ：左端はご夫婦のための聖域（テキストは重ならない） */}
+          <div className="w-full md:max-w-[58%] lg:max-w-[56%] flex flex-col items-center md:items-end">
+            <div className="hero-glass-panorama-v2 w-full bg-white/5 py-8 px-6 sm:px-8 md:py-10 md:pl-12 md:pr-0 flex flex-col items-center md:items-end text-center md:text-right">
+              {/* 1. 完全無料バッジ */}
+              <p className="inline-flex items-center rounded-full px-3 py-1 text-xs font-bold tracking-wide text-amber-800 bg-amber-100/90 border border-amber-300/80 mb-3" aria-hidden>
+                完全無料
+              </p>
 
-          {/* CTA */}
-          <div className="flex flex-col items-center gap-2 w-full mt-4 sm:mt-6">
-            <Link
-              href="/tools"
-              className="inline-block bg-accent text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-bold hover:opacity-90 transition shadow-lg"
-            >
-              今のあなたに必要なサポートを無料診断
-            </Link>
-            <p className="text-base text-foreground/80">
-              エンディングノート / 生前整理 / 空き家相談 対応
-            </p>
+              {/* 2. フクロウ：見出しの上に添え物・吹き出しが見出しを指し示す */}
+              <div className="flex flex-col items-center md:items-start w-full mb-3">
+                <OwlCharacter
+                  size={42}
+                  message="今のあなたに必要なサポートを無料診断"
+                  tone="calm"
+                  bubblePosition="above"
+                  softShadow
+                />
+              </div>
+
+              {/* 3. メインコピー：「生前整理のすべてを」は改行せず1行で */}
+              <h1 className="w-full min-w-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight tracking-tighter [filter:drop-shadow(0_1px_1px_rgba(255,255,255,0.9))]">
+                <span className="whitespace-nowrap">生前整理のすべてを</span>
+                <br />
+                これひとつで
+              </h1>
+
+              {/* 4. サブコピー：h1のすぐ下・leading-relaxed */}
+              <p className="mt-4 md:mt-5 text-slate-700 text-sm md:text-base w-full max-w-md font-normal leading-relaxed">
+                実家の片付けから不動産・相続まで。AIと専門家が丸ごと一括サポート。
+              </p>
+
+              {/* 5. サービスチップ：テキストとボタンの間・境界線なし・gap-4 */}
+              <ul className="flex flex-row flex-wrap gap-4 justify-center md:justify-start mt-6 md:mt-8" aria-label="対応範囲">
+                <li><span className="inline-block px-3 py-1.5 rounded-lg text-xs font-medium text-slate-700 bg-white/60 md:bg-white/90 md:border md:border-slate-300 md:shadow-sm whitespace-nowrap">遺品・家財整理</span></li>
+                <li><span className="inline-block px-3 py-1.5 rounded-lg text-xs font-medium text-slate-700 bg-white/60 md:bg-white/90 md:border md:border-slate-300 md:shadow-sm whitespace-nowrap">不動産売却・査定</span></li>
+                <li><span className="inline-block px-3 py-1.5 rounded-lg text-xs font-medium text-slate-700 bg-white/60 md:bg-white/90 md:border md:border-slate-300 md:shadow-sm whitespace-nowrap">相続・士業相談</span></li>
+              </ul>
+
+              {/* 6. CTA：左セクション最下部・py-10以上の余白・リボンは左肩に absolute */}
+              <div className="w-full pt-10 pb-2 flex flex-col items-center md:items-start">
+                <div className="relative inline-block w-full md:w-auto md:min-w-[300px]">
+                  <span className="hero-cta-ribbon absolute -top-0.5 left-2 -rotate-12 z-10 px-1.5 py-0.5 text-[9px] font-bold tracking-wide text-white bg-orange-500 shadow-md rounded" aria-hidden>100%完全無料</span>
+                  <Link
+                    href="/tools"
+                    className="hero-cta-button animate-soft-pulse relative inline-block w-full overflow-hidden text-center bg-gradient-to-r from-[#f26601] to-[#ff8c3a] text-white px-6 py-3.5 sm:py-4 rounded-xl text-base sm:text-lg font-bold transition-all duration-300 shadow-[0_20px_40px_-15px_rgba(242,102,1,0.4)] hover:shadow-[0_24px_48px_-12px_rgba(242,102,1,0.5)] hover:brightness-105"
+                  >
+                    【無料】3分でリスクを診断する
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

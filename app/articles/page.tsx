@@ -32,11 +32,13 @@ function buildGridItems(contents: MicroCmsBlogPost[]): GridItem[] {
 }
 
 export default async function ArticlesPage() {
-  const [{ contents }, categories, tags] = await Promise.all([
-    getBlogList(24, 0),
+  const [listRes, categories, tags] = await Promise.all([
+    getBlogList(100, 0),
     getCategories(),
     getTags(),
   ]);
+  const contents = listRes.contents ?? [];
+  console.log("取得された記事数:", contents.length, "totalCount:", listRes.totalCount);
   const gridItems = buildGridItems(contents);
 
   return (
@@ -100,7 +102,7 @@ export default async function ArticlesPage() {
           )
         )}
       </ul>
-      {contents.length === 0 && gridItems.length === 0 && (
+      {contents.length === 0 && (
         <p className="text-foreground/50">記事は準備中です。</p>
       )}
 

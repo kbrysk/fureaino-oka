@@ -26,8 +26,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: pageTitle("記事が見つかりません") };
 
   const title = post.title;
+  const bodyText = post.content ?? post.body ?? "";
   const description =
-    post.description ?? (post.body ? post.body.replace(/<[^>]+>/g, "").slice(0, 160) + "…" : undefined);
+    post.description ?? (bodyText ? bodyText.replace(/<[^>]+>/g, "").slice(0, 160) + "…" : undefined);
   const base = getCanonicalBase();
   const ogImage = post.ogpImage?.url ?? post.thumbnail?.url;
   const url = `${base}/articles/${id}`;
@@ -145,10 +146,8 @@ export default async function ArticleDetailPage({ params }: Props) {
         </figure>
       )}
 
-      <ArticleLineCTABanner />
-
       <div className="mt-8">
-        <ArticleBodyContentMicroCms body={post.body ?? ""} />
+        <ArticleBodyContentMicroCms body={post.content ?? post.body ?? ""} />
       </div>
 
       <ArticleLineCTABanner />

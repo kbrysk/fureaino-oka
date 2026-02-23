@@ -31,6 +31,126 @@ body {
   overflow-x: hidden;
 }
 
+/* ヒーロー背景：人物を左端に（10%）、右半分を光の空間に */
+.hero-bg-layer {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 10% center;
+}
+@media (max-width: 767px) {
+  .hero-bg-layer {
+    /* モバイル：顔出しを維持 */
+    background-position: 15% center;
+  }
+}
+
+/* ご夫婦は左端に配置（15% center）・右側はマスクでフェード */
+.hero-panorama-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 15% center;
+  mask-image: linear-gradient(to right, black 0%, black 55%, transparent 85%),
+    linear-gradient(to bottom, black 0%, black 92%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-image: linear-gradient(to right, black 0%, black 55%, transparent 85%),
+    linear-gradient(to bottom, black 0%, black 92%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+/* 右半分を「光のキャンバス」に：左は透過・右へ白の広大なグラデーション */
+.hero-panorama-gradient {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.7) 55%,
+    #fff 75%,
+    #fff 100%
+  );
+}
+
+/* 境界線のないガラス：モバイルは blur-xl で可読性確保、PC は強めのブラー */
+.hero-glass-panorama-v2 {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+@media (min-width: 768px) {
+  .hero-glass-panorama-v2 {
+    backdrop-filter: blur(48px);
+    -webkit-backdrop-filter: blur(48px);
+  }
+}
+/* 見出しの複数行をバランス表示（Tailwind にない場合のフォールバック） */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* ヒーロー・テキストエリア：光が透けるグラスモルフィズム */
+.hero-glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* スプリット・パノラマ右側：薄いガラス（光が可読性を高める） */
+.hero-glass-panorama {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* CTA：微かに呼吸するパルス（1,000万円級UX） */
+@keyframes soft-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+.animate-soft-pulse {
+  animation: soft-pulse 3s ease-in-out infinite;
+}
+
+/* CTAリボン：斜めバッジ（オレンジで無料を強調） */
+.hero-cta-ribbon {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* CTAボタン：ホバー時に光が走る（サイト背景 #f8f6f3 に馴染む） */
+.hero-cta-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.35) 45%,
+    rgba(248, 246, 243, 0.5) 50%,
+    rgba(255, 255, 255, 0.35) 55%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  background-position: 150% 0;
+  border-radius: inherit;
+  pointer-events: none;
+  transition: background-position 0.6s ease;
+}
+.hero-cta-button:hover::after {
+  background-position: -50% 0;
+}
+
+/* 右端・下端をサイト背景へシームレスにフェード */
+.hero-bg-mask {
+  mask-image: linear-gradient(to right, black 80%, transparent 100%),
+    linear-gradient(to bottom, black 88%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%),
+    linear-gradient(to bottom, black 88%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
 /* フッター下の重複表示を防ぐ：レイアウト根を単一のスクロールコンテナに */
 html,
 body {

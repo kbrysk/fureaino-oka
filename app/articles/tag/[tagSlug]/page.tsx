@@ -49,10 +49,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ArticlesTagPage({ params }: Props) {
   const { tagSlug } = await params;
-  const [tags, { contents }] = await Promise.all([
+  const [tags, listRes] = await Promise.all([
     getTags(),
-    getBlogList(24, 0, { tagId: tagSlug }),
+    getBlogList(100, 0, { tagId: tagSlug }),
   ]);
+  const contents = listRes.contents ?? [];
   const tag = tags.find((t) => t.id === tagSlug);
   if (!tag) notFound();
   const gridItems = buildGridItems(contents);

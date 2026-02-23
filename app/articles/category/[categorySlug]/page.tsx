@@ -48,10 +48,11 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function ArticlesCategoryPage({ params }: Props) {
   const { categorySlug } = await params;
-  const [categories, { contents }] = await Promise.all([
+  const [categories, listRes] = await Promise.all([
     getCategories(),
-    getBlogList(24, 0, { categoryId: categorySlug }),
+    getBlogList(100, 0, { categoryId: categorySlug }),
   ]);
+  const contents = listRes.contents ?? [];
   const category = categories.find((c) => c.id === categorySlug);
   if (!category) notFound();
   const gridItems = buildGridItems(contents);

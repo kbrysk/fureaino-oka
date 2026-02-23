@@ -18,6 +18,8 @@ interface OwlCharacterProps {
   sweat?: boolean;
   /** 吹き出しの位置: above＝キャラの上（しっぽ下向き） / right＝キャラの右（しっぽ左向き・フクロウを指す） */
   bubblePosition?: "above" | "right";
+  /** 背景の光に馴染むよう影を約10%に抑える（ヒーロー等で使用） */
+  softShadow?: boolean;
   className?: string;
 }
 
@@ -27,6 +29,7 @@ export default function OwlCharacter({
   tone = "calm",
   sweat = false,
   bubblePosition = "above",
+  softShadow = false,
   className = "",
 }: OwlCharacterProps) {
   const bubbleClasses =
@@ -48,7 +51,10 @@ export default function OwlCharacter({
           <span className="relative z-10">{message}</span>
         </div>
       )}
-      <div className="relative shrink-0 overflow-hidden rounded-2xl" style={{ width: size, height: size }}>
+      <div
+        className={`relative shrink-0 overflow-hidden rounded-2xl ${softShadow ? "shadow-[0_2px_12px_rgba(0,0,0,0.1)]" : ""}`}
+        style={{ width: size, height: size }}
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={OWL_IMAGE}

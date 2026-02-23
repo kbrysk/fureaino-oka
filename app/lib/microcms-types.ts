@@ -17,7 +17,10 @@ export interface MicroCmsBlogPost {
   id: string;
   title: string;
   description?: string;
-  body: string;
+  /** 本文（microCMS のフィールド名は "content"） */
+  content?: string;
+  /** @deprecated microCMS で "content" に変更した場合は未使用 */
+  body?: string;
   publishedAt: string;
   revisedAt?: string;
   thumbnail?: { url: string; width?: number; height?: number };
