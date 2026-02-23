@@ -39,10 +39,10 @@ export const microCmsClient =
     : null;
 
 /** ブログ一覧取得用エンドポイント名（microCMS 管理画面の API 名に合わせて変更可） */
-export const BLOG_LIST_ENDPOINT = "blog";
+export const BLOG_LIST_ENDPOINT = "blogs";
 
 /** ブログ1件取得用（同上） */
-export const BLOG_CONTENT_ENDPOINT = "blog";
+export const BLOG_CONTENT_ENDPOINT = "blogs";
 
 /** カテゴリ一覧用エンドポイント */
 export const CATEGORIES_ENDPOINT = "categories";
@@ -55,17 +55,20 @@ export interface GetBlogListFilters {
   tagId?: string;
 }
 
-/** 一覧取得（公開済みのみ・日付降順）。categoryId / tagId で絞り込み可能 */
+/** 一覧取得（公開済みのみ・日付降順）。フィルタは categoryId / tagId のみ（下書き条件等は含めない） */
 export async function getBlogList(
-  limit = 20,
+  limit = 100,
   offset = 0,
   filters?: GetBlogListFilters
 ): Promise<MicroCmsListResponse<MicroCmsBlogPost>> {
-  if (!microCmsClient) {
-    return { contents: [], totalCount: 0, offset, limit };
-  }
+  const empty = { contents: [], totalCount: 0, offset, limit };
+  if (!microCmsClient) return empty;
   try {
-    const queries: Record<string, string | number> = { limit, offset, orders: "-publishedAt" };
+    const queries: Record<string, string | number> = {
+      limit: Math.min(limit, 100),
+      offset,
+      orders: "-publishedAt",
+    };
     if (filters?.categoryId) {
       queries.filters = `category[equals]${filters.categoryId}`;
     }
@@ -78,10 +81,26 @@ export async function getBlogList(
       endpoint: BLOG_LIST_ENDPOINT,
       queries,
     });
-    return res;
+    const contents = Array.isArray(res?.contents) ? res.contents : [];
+    const totalCount = typeof res?.totalCount === "number" ? res.totalCount : contents.length;
+    if (typeof process !== "undefined" && process.env?.NODE_ENV !== "test") {
+      console.log(
+        "[microCMS] getBlogList:",
+        "totalCount=" + totalCount,
+        "contents.length=" + contents.length,
+        "offset=" + (res?.offset ?? offset),
+        "limit=" + (res?.limit ?? limit)
+      );
+    }
+    return {
+      contents,
+      totalCount,
+      offset: res?.offset ?? offset,
+      limit: res?.limit ?? limit,
+    };
   } catch (e) {
     logMicroCmsError(`getBlogList (${BLOG_LIST_ENDPOINT})`, e);
-    return { contents: [], totalCount: 0, offset, limit };
+    return empty;
   }
 }
 
