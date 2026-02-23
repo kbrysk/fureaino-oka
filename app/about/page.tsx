@@ -21,39 +21,7 @@ export default function AboutPage() {
 
       <h1 className="text-2xl font-bold text-primary mb-8">運営者情報</h1>
 
-      {/* 運営会社・法的情報 */}
-      <section className="mb-10 p-6 bg-card rounded-2xl border border-border">
-        <h2 className="text-lg font-bold text-primary mb-4">運営会社</h2>
-        <dl className="space-y-3 text-sm text-foreground/90">
-          <div>
-            <dt className="font-medium text-foreground/70">会社名</dt>
-            <dd>株式会社Kogera</dd>
-          </div>
-          <div>
-            <dt className="font-medium text-foreground/70">住所</dt>
-            <dd className="whitespace-pre-line">
-              〒104-0061
-              {"\n"}
-              東京都中央区銀座１丁目１２番４号Ｎ＆ＥＢＬＤ．６Ｆ
-            </dd>
-          </div>
-          <div>
-            <dt className="font-medium text-foreground/70">お問い合わせ</dt>
-            <dd>
-              <a
-                href={INQUIRY_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary underline hover:no-underline"
-              >
-                お問い合わせフォーム（Googleフォーム）
-              </a>
-            </dd>
-          </div>
-        </dl>
-      </section>
-
-      {/* センター長メッセージ（運営者の想い） */}
+      {/* 1. 運営者の思い（センター長メッセージ） */}
       <h2 className="text-xl font-bold text-primary mb-6">モノを捨てるのではなく、家族の心を整えるために</h2>
 
       {/* 運営者写真＋肩書き・プロフィール：横並びで人間味を */}
@@ -165,6 +133,38 @@ export default function AboutPage() {
           生前整理支援センター ふれあいの丘 センター長
         </p>
       </article>
+
+      {/* 2. 運営者情報（運営会社） */}
+      <section className="mt-10 pt-10 border-t border-border p-6 bg-card rounded-2xl border border-border">
+        <h2 className="text-lg font-bold text-primary mb-4">運営会社</h2>
+        <dl className="space-y-3 text-sm text-foreground/90">
+          <div>
+            <dt className="font-medium text-foreground/70">会社名</dt>
+            <dd>株式会社Kogera</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-foreground/70">住所</dt>
+            <dd className="whitespace-pre-line">
+              〒104-0061
+              {"\n"}
+              東京都中央区銀座１丁目１２番４号Ｎ＆ＥＢＬＤ．６Ｆ
+            </dd>
+          </div>
+          <div>
+            <dt className="font-medium text-foreground/70">お問い合わせ</dt>
+            <dd>
+              <a
+                href={INQUIRY_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline hover:no-underline"
+              >
+                お問い合わせフォーム（Googleフォーム）
+              </a>
+            </dd>
+          </div>
+        </dl>
+      </section>
 
       <div className="mt-10 pt-8 border-t border-border">
         <Link
