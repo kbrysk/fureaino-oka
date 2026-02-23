@@ -44,37 +44,57 @@ body {
   }
 }
 
-/* ご夫婦は左端に配置（15% center）・右側はマスクでフェード */
+/* 引きの画角：ご夫婦を中央寄りに（画像を左にずらす＝低い％で右側を表示） */
 .hero-panorama-bg {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 15% center;
-  mask-image: linear-gradient(to right, black 0%, black 55%, transparent 85%),
-    linear-gradient(to bottom, black 0%, black 92%, transparent 100%);
-  mask-composite: intersect;
-  -webkit-mask-image: linear-gradient(to right, black 0%, black 55%, transparent 85%),
-    linear-gradient(to bottom, black 0%, black 92%, transparent 100%);
-  -webkit-mask-composite: source-in;
-  mask-size: 100% 100%;
-  -webkit-mask-size: 100% 100%;
+  background-position: 8% center;
 }
 
-/* 右半分を「光のキャンバス」に：左は透過・右へ白の広大なグラデーション */
+/* スマホのみ：老夫婦がなんとなく映るように背景を少し左寄せ */
+@media (max-width: 767px) {
+  .hero-panorama-bg {
+    background-position: 3% center;
+  }
+}
+
+/* 画像右端（max-w 境界付近）で完全に白に溶かす・シームレス結合 */
 .hero-panorama-gradient {
   background: linear-gradient(
     to right,
     transparent 0%,
-    rgba(255, 255, 255, 0.2) 30%,
-    rgba(255, 255, 255, 0.7) 55%,
-    #fff 75%,
+    rgba(255, 255, 255, 0.25) 25%,
+    rgba(255, 255, 255, 0.55) 45%,
+    rgba(255, 255, 255, 0.85) 58%,
+    #fff 68%,
     #fff 100%
   );
 }
 
-/* 境界線のないガラス：モバイルは blur-xl で可読性確保、PC は強めのブラー */
+/* スマホのみ：左側を弱くして老夫婦が少し見えるように、右側は文字が隠れない強さで */
+@media (max-width: 767px) {
+  .hero-panorama-gradient {
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.08) 20%,
+      rgba(255, 255, 255, 0.35) 45%,
+      rgba(255, 255, 255, 0.75) 62%,
+      #fff 72%,
+      #fff 100%
+    );
+  }
+}
+
+/* 境界線のないガラス：モバイルは blur-xl＋半透明で老夫婦がなんとなく映りつつ文字は隠れない、PC は強めのブラー */
 .hero-glass-panorama-v2 {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
+}
+@media (max-width: 767px) {
+  .hero-glass-panorama-v2 {
+    background: rgba(255, 253, 249, 0.88) !important; /* スマホ：文字が隠れない程度の不透明、背後に老夫婦がほんのり */
+  }
 }
 @media (min-width: 768px) {
   .hero-glass-panorama-v2 {

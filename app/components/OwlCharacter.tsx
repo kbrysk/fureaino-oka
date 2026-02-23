@@ -10,8 +10,8 @@ const OWL_IMAGE = "/images/owl-character.png?v=4";
 interface OwlCharacterProps {
   /** 表示サイズ（一辺の目安px） */
   size?: number;
-  /** 吹き出しの文言（省略時はキャラのみ） */
-  message?: string;
+  /** 吹き出しの文言（省略時はキャラのみ）・string または ReactNode で改行を制御可能 */
+  message?: React.ReactNode;
   /** 吹き出しのトーン: 警告＝もったいない / 安心＝計算しました */
   tone?: "warning" | "calm";
   /** 冷や汗をかいている（危機感の演出） */

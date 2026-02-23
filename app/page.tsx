@@ -115,58 +115,58 @@ export default function Home() {
 
   return (
     <div className="space-y-8">
-      {/* Hero：The Ideal Grid＝max-w-7xl・左寄せの情報の塊・右40%は聖域（余白） */}
-      <section className="relative w-full min-h-[420px] md:min-h-[520px] overflow-hidden" style={{ background: "var(--background)" }}>
-        <div
-          className="hero-panorama-bg absolute inset-0"
-          style={{ backgroundImage: "url(/images/hero-couple.png)" }}
-          aria-hidden
-        />
-        <div className="hero-panorama-gradient absolute inset-0 pointer-events-none" aria-hidden />
+      {/* Hero：引きの画角（画像は左側 max-w で制限）・右は白背景へグラデで溶かす */}
+      <div className="relative left-1/2 -ml-[50vw] w-screen overflow-hidden max-h-[600px] md:max-h-[650px] lg:max-h-[700px] xl:max-h-[800px] bg-[#FFFDF9]">
+        <section className="relative w-full min-h-[420px] md:min-h-[520px] overflow-hidden bg-[#FFFDF9]">
+          {/* 背景画像：左アンカー・最大幅 1400px で過剰ズーム防止 */}
+          <div
+            className="hero-panorama-bg absolute left-0 top-0 bottom-0 w-full max-w-[1400px] h-full bg-cover bg-[position:8%_center]"
+            style={{ backgroundImage: "url(/images/hero-couple.png)" }}
+            aria-hidden
+          />
+          <div className="hero-panorama-gradient absolute inset-0 w-full h-full pointer-events-none" aria-hidden />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:justify-end md:items-center min-h-[420px] md:min-h-[520px] pt-10 md:pt-12 pb-12">
-          {/* 右側にコンテンツ：左端はご夫婦のための聖域（テキストは重ならない） */}
-          <div className="w-full md:max-w-[58%] lg:max-w-[56%] flex flex-col items-center md:items-end">
-            <div className="hero-glass-panorama-v2 w-full bg-white/5 py-8 px-6 sm:px-8 md:py-10 md:pl-12 md:pr-0 flex flex-col items-center md:items-end text-center md:text-right">
-              {/* 1. 完全無料バッジ */}
-              <p className="inline-flex items-center rounded-full px-3 py-1 text-xs font-bold tracking-wide text-amber-800 bg-amber-100/90 border border-amber-300/80 mb-3" aria-hidden>
-                完全無料
-              </p>
-
-              {/* 2. フクロウ：見出しの上に添え物・吹き出しが見出しを指し示す */}
-              <div className="flex flex-col items-center md:items-start w-full mb-3">
+          {/* コンテンツ：max-w-7xl で保護・右ブロックは厳格な左揃え（見えない縦軸） */}
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row md:justify-end md:items-center min-h-[420px] md:min-h-[520px] pt-10 md:pt-12 pb-12">
+          <div className="w-full md:max-w-[58%] lg:max-w-[56%] flex flex-col items-start text-left">
+            <div className="hero-glass-panorama-v2 w-full max-w-[90%] mx-auto md:max-w-full md:mx-0 bg-white/5 py-8 px-6 sm:px-8 md:py-10 md:pl-12 md:pr-10 flex flex-col items-start text-left">
+              {/* 1. フクロウ：左揃え */}
+              <div className="flex flex-row items-center gap-3 w-full mb-3">
                 <OwlCharacter
                   size={42}
-                  message="今のあなたに必要なサポートを無料診断"
+                  message={<>今のあなたに必要なサポートを<span className="whitespace-nowrap">無料診断</span></>}
                   tone="calm"
                   bubblePosition="above"
                   softShadow
                 />
               </div>
 
-              {/* 3. メインコピー：「生前整理のすべてを」は改行せず1行で */}
-              <h1 className="w-full min-w-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight tracking-tighter [filter:drop-shadow(0_1px_1px_rgba(255,255,255,0.9))]">
+              {/* 2. メインコピー：左揃え・text-balance で右端を整える */}
+              <h1 className="w-full max-w-[18em] min-w-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight tracking-tighter text-balance [filter:drop-shadow(0_1px_1px_rgba(255,255,255,0.9))]">
                 <span className="whitespace-nowrap">生前整理のすべてを</span>
                 <br />
                 これひとつで
               </h1>
 
-              {/* 4. サブコピー：h1のすぐ下・leading-relaxed */}
-              <p className="mt-4 md:mt-5 text-slate-700 text-sm md:text-base w-full max-w-md font-normal leading-relaxed">
+              {/* 3. サブコピー：左揃え */}
+              <p className="mt-4 md:mt-5 text-slate-700 text-sm md:text-base w-full max-w-md font-normal leading-relaxed text-left">
                 実家の片付けから不動産・相続まで。AIと専門家が丸ごと一括サポート。
               </p>
 
-              {/* 5. サービスチップ：テキストとボタンの間・境界線なし・gap-4 */}
-              <ul className="flex flex-row flex-wrap gap-4 justify-center md:justify-start mt-6 md:mt-8" aria-label="対応範囲">
-                <li><span className="inline-block px-3 py-1.5 rounded-lg text-xs font-medium text-slate-700 bg-white/60 md:bg-white/90 md:border md:border-slate-300 md:shadow-sm whitespace-nowrap">遺品・家財整理</span></li>
-                <li><span className="inline-block px-3 py-1.5 rounded-lg text-xs font-medium text-slate-700 bg-white/60 md:bg-white/90 md:border md:border-slate-300 md:shadow-sm whitespace-nowrap">不動産売却・査定</span></li>
-                <li><span className="inline-block px-3 py-1.5 rounded-lg text-xs font-medium text-slate-700 bg-white/60 md:bg-white/90 md:border md:border-slate-300 md:shadow-sm whitespace-nowrap">相続・士業相談</span></li>
+              {/* 4. サービスチップ：マイクロカプセルUI・2行で軽やかに */}
+              <ul className="flex flex-wrap gap-2 md:gap-3 justify-start mt-6 md:mt-8" aria-label="対応範囲">
+                <li><span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap">実家の片付け・実家じまい</span></li>
+                <li><span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap">空き家の売却・解体</span></li>
+                <li><span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap">遺品・生前整理</span></li>
+                <li><span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap">相続手続き・税金</span></li>
+                <li><span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap">不動産査定・買取</span></li>
+                <li><span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap">エンディングノート</span></li>
               </ul>
 
-              {/* 6. CTA：左セクション最下部・py-10以上の余白・リボンは左肩に absolute */}
-              <div className="w-full pt-10 pb-2 flex flex-col items-center md:items-start">
+              {/* 5. CTA：左揃え・リボンはボタン左上に absolute */}
+              <div className="w-full pt-10 pb-2 flex flex-col items-start">
                 <div className="relative inline-block w-full md:w-auto md:min-w-[300px]">
-                  <span className="hero-cta-ribbon absolute -top-0.5 left-2 -rotate-12 z-10 px-1.5 py-0.5 text-[9px] font-bold tracking-wide text-white bg-orange-500 shadow-md rounded" aria-hidden>100%完全無料</span>
+                  <span className="hero-cta-ribbon absolute -top-0.5 left-2 -rotate-12 z-10 px-1.5 py-0.5 text-[9px] font-bold tracking-wide text-primary bg-primary-light border border-primary/40 shadow-md rounded" aria-hidden>100%完全無料</span>
                   <Link
                     href="/tools"
                     className="hero-cta-button animate-soft-pulse relative inline-block w-full overflow-hidden text-center bg-gradient-to-r from-[#f26601] to-[#ff8c3a] text-white px-6 py-3.5 sm:py-4 rounded-xl text-base sm:text-lg font-bold transition-all duration-300 shadow-[0_20px_40px_-15px_rgba(242,102,1,0.4)] hover:shadow-[0_24px_48px_-12px_rgba(242,102,1,0.5)] hover:brightness-105"
@@ -179,6 +179,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </div>
 
       {/* ファーストビュー直下：3つのメガボタン（どこを押せばいいか明確に） */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6" aria-label="今の悩みに合わせて選ぶ">

@@ -130,11 +130,11 @@ export default function RootLayout({
             title="Google Tag Manager"
           />
         </noscript>
-        <div className="min-h-screen flex flex-col overflow-x-hidden" data-layout="root">
+        <div className="min-h-screen flex flex-col" data-layout="root">
           <div className="no-print shrink-0">
             <Navigation />
           </div>
-          <main className="flex-1 shrink-0 max-w-5xl mx-auto w-full px-4 py-8 pb-24" id="main-content">
+          <main className="flex-1 shrink-0 max-w-5xl mx-auto w-full px-4 py-8 pb-24 overflow-x-visible" id="main-content">
             {children}
           </main>
           <div className="no-print shrink-0">
