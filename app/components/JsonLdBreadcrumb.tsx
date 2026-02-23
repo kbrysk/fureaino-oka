@@ -11,7 +11,7 @@ const SEGMENT_LABELS: Record<string, string> = {
   guide: "生前整理のはじめかた",
   guidebook: "ガイドブック",
   "jikka-jimai": "実家じまい",
-  about: "運営者の想い",
+  about: "運営者情報",
   "about-site": "ふれあいの丘とは",
   articles: "記事一覧",
   checklist: "チェックリスト",

@@ -3,9 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { pageTitle, SITE_NAME_FULL } from "../lib/site-brand";
 
+const INQUIRY_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSctWFnHJC-Q6TWSbWzfmx4QU2Ct9VjNfkQrW_TXAh5ZfKZIog/viewform?usp=dialog";
+
 export const metadata: Metadata = {
-  title: pageTitle("運営者の想い"),
-  description: `「モノを捨てるのではなく、家族の心を整えるために」。${SITE_NAME_FULL}を運営する私たちの想いと、このサービスを立ち上げた背景をご紹介します。`,
+  title: pageTitle("運営者情報"),
+  description: `${SITE_NAME_FULL}の運営者情報。運営会社・所在地・お問い合わせ先をご案内します。`,
 };
 
 export default function AboutPage() {
@@ -14,12 +16,45 @@ export default function AboutPage() {
       <p className="text-sm text-foreground/60 mb-6">
         <Link href="/" className="hover:text-primary transition">トップ</Link>
         <span className="mx-2">/</span>
-        <span>運営者の想い</span>
+        <span>運営者情報</span>
       </p>
 
-      <h1 className="text-2xl font-bold text-primary mb-8">
-        モノを捨てるのではなく、家族の心を整えるために
-      </h1>
+      <h1 className="text-2xl font-bold text-primary mb-8">運営者情報</h1>
+
+      {/* 運営会社・法的情報 */}
+      <section className="mb-10 p-6 bg-card rounded-2xl border border-border">
+        <h2 className="text-lg font-bold text-primary mb-4">運営会社</h2>
+        <dl className="space-y-3 text-sm text-foreground/90">
+          <div>
+            <dt className="font-medium text-foreground/70">会社名</dt>
+            <dd>株式会社Kogera</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-foreground/70">住所</dt>
+            <dd className="whitespace-pre-line">
+              〒104-0061
+              {"\n"}
+              東京都中央区銀座１丁目１２番４号Ｎ＆ＥＢＬＤ．６Ｆ
+            </dd>
+          </div>
+          <div>
+            <dt className="font-medium text-foreground/70">お問い合わせ</dt>
+            <dd>
+              <a
+                href={INQUIRY_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline hover:no-underline"
+              >
+                お問い合わせフォーム（Googleフォーム）
+              </a>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      {/* センター長メッセージ（運営者の想い） */}
+      <h2 className="text-xl font-bold text-primary mb-6">モノを捨てるのではなく、家族の心を整えるために</h2>
 
       {/* 運営者写真＋肩書き・プロフィール：横並びで人間味を */}
       <div className="mb-10 flex flex-col sm:flex-row sm:items-end gap-6 sm:gap-8">

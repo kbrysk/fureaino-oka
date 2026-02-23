@@ -487,18 +487,17 @@ export default function Home() {
         </ol>
       </div>
 
-      {/* 運営者の想い（信頼・差別化）→ 専用ページへ */}
+      {/* 運営者情報（信頼・法的表記）→ 専用ページへ */}
       <div className="bg-primary-light rounded-2xl p-6 sm:p-8 border border-primary/20">
-        <h2 className="text-xl font-bold mb-4 text-primary">モノを捨てるのではなく、家族の心を整えるために</h2>
+        <h2 className="text-xl font-bold mb-4 text-primary">運営者情報</h2>
         <p className="text-foreground/80 leading-relaxed mb-4">
-          「ふれあいの丘」という名前には、地域と家族とのふれあいを大切にしたいという想いを込めています。
-          生前整理は、モノを捨てることが目的ではありません。残される家族が迷わず、心を整えて次の一歩を踏み出せるよう、情報とツールを無料でお届けしています。
+          「ふれあいの丘」は株式会社Kogeraが運営しています。運営会社の所在地・お問い合わせ先のほか、センター長からのメッセージをご覧いただけます。
         </p>
         <Link
           href="/about"
           className="inline-block bg-primary text-white px-5 py-2.5 rounded-lg font-medium text-sm hover:opacity-90 transition"
         >
-          運営者の想いを読む
+          運営者情報を見る
         </Link>
       </div>
 

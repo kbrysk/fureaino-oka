@@ -95,7 +95,7 @@ export default function AboutSitePage() {
           href="/about"
           className="inline-block text-foreground/70 hover:text-primary text-sm font-medium transition"
         >
-          運営者の想いを読む →
+          運営者情報を見る →
         </Link>
       </div>
     </div>
