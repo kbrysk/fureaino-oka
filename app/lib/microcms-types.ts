@@ -8,6 +8,11 @@ export interface MicroCmsCategory {
   name: string;
 }
 
+export interface MicroCmsTag {
+  id: string;
+  name: string;
+}
+
 export interface MicroCmsBlogPost {
   id: string;
   title: string;
@@ -17,6 +22,8 @@ export interface MicroCmsBlogPost {
   revisedAt?: string;
   thumbnail?: { url: string; width?: number; height?: number };
   category?: MicroCmsCategory;
+  /** タグ（複数参照） */
+  tags?: MicroCmsTag[];
   /** OGP用（未設定時は thumbnail を使用） */
   ogpImage?: { url: string; width?: number; height?: number };
 }

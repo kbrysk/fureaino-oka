@@ -76,7 +76,7 @@ export default function Footer() {
           <FooterLinkList title="進捗・管理" links={FOOTER_PROGRESS} />
           <FooterLinkList title="法的情報" links={FOOTER_LEGAL} />
         </div>
-        <div className="text-center pt-6 border-t border-border text-sm text-foreground/50">
+        <div className="text-center pt-6 border-t border-border text-base text-foreground/75">
           <OwlCharacter size={48} className="mb-2" />
           <p>生前整理支援センター ふれあいの丘 &copy; 2026 株式会社Kogera | 実家じまい・遺品整理の無料相談</p>
         </div>

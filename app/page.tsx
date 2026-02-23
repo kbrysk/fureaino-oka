@@ -47,9 +47,9 @@ function ToolCard({
           {children}
         </span>
       </div>
-      <p className="text-sm text-white/80 mb-0.5">{lead}</p>
+      <p className="text-base text-white/90 mb-0.5">{lead}</p>
       <p className="font-bold">{title}</p>
-      <p className="text-xs text-white/80 mt-1">{sub}</p>
+      <p className="text-sm text-white/90 mt-1">{sub}</p>
       <span className="mt-4 inline-flex items-center justify-center gap-1 rounded-full bg-accent px-5 py-2.5 text-sm font-bold text-white group-hover:bg-accent/90 transition">
         {ctaLabel}
         <span className="inline-block transition group-hover:translate-x-0.5" aria-hidden>→</span>
@@ -140,8 +140,59 @@ export default function Home() {
             />
           </div>
 
-          {/* 3つのサービス領域（Stepカード＋矢印） */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-3 w-full mt-2 sm:mt-4">
+          {/* CTA */}
+          <div className="flex flex-col items-center gap-2 w-full mt-4 sm:mt-6">
+            <Link
+              href="/tools"
+              className="inline-block bg-accent text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-bold hover:opacity-90 transition shadow-lg"
+            >
+              今のあなたに必要なサポートを無料診断
+            </Link>
+            <p className="text-base text-foreground/80">
+              エンディングノート / 生前整理 / 空き家相談 対応
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ファーストビュー直下：3つのメガボタン（どこを押せばいいか明確に） */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6" aria-label="今の悩みに合わせて選ぶ">
+        <Link
+          href="/area"
+          className="group flex flex-col items-center justify-center min-h-[120px] md:min-h-[160px] rounded-2xl border-2 border-primary/30 bg-card p-6 text-center hover:-translate-y-1 hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        >
+          <span className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-primary/15 text-primary mb-3 group-hover:bg-primary/25 transition" aria-hidden>
+            <svg className="w-7 h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+          </span>
+          <span className="font-bold text-base md:text-lg text-foreground">実家を片付けたい</span>
+          <span className="text-base text-foreground/85 mt-1 block">生前整理・遺品整理</span>
+        </Link>
+        <Link
+          href="/tools/empty-house-tax"
+          className="group flex flex-col items-center justify-center min-h-[120px] md:min-h-[160px] rounded-2xl border-2 border-primary/30 bg-card p-6 text-center hover:-translate-y-1 hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        >
+          <span className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-primary/15 text-primary mb-3 group-hover:bg-primary/25 transition" aria-hidden>
+            <svg className="w-7 h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+          </span>
+          <span className="font-bold text-base md:text-lg text-foreground">空き家・不動産をなんとかしたい</span>
+          <span className="text-base text-foreground/85 mt-1 block">売却・税金・維持費</span>
+        </Link>
+        <Link
+          href="/ending-note"
+          className="group flex flex-col items-center justify-center min-h-[120px] md:min-h-[160px] rounded-2xl border-2 border-primary/30 bg-card p-6 text-center hover:-translate-y-1 hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        >
+          <span className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-primary/15 text-primary mb-3 group-hover:bg-primary/25 transition" aria-hidden>
+            <svg className="w-7 h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+          </span>
+          <span className="font-bold text-base md:text-lg text-foreground">自分の財産や想いを整理したい</span>
+          <span className="text-base text-foreground/85 mt-1 block">エンディングノート</span>
+        </Link>
+      </section>
+
+      {/* 3つのサービス領域（Stepカード）：メガボタンの下部に配置 */}
+      <section className="w-full rounded-2xl bg-gradient-to-b from-primary-light/10 to-transparent border border-primary/10 p-4 sm:p-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-3 w-full">
             {/* Step 1 */}
             <div className="relative flex-1 flex flex-col bg-card rounded-xl sm:rounded-2xl border-2 border-primary/20 p-4 sm:p-5 md:p-6 text-left shadow-sm hover:shadow-md hover:border-primary/30 transition-all min-w-0">
               <span className="absolute -top-2.5 sm:-top-3 left-4 sm:left-5 px-2 py-0.5 rounded-full bg-primary text-white text-[10px] sm:text-xs font-bold">Step 1</span>
@@ -151,7 +202,7 @@ export default function Home() {
                 </span>
                 <h2 className="font-bold text-primary text-sm sm:text-base md:text-lg">【考える】エンディングノート</h2>
               </div>
-              <p className="text-sm text-foreground/80 leading-relaxed flex-1">
+              <p className="text-base text-foreground/85 leading-relaxed flex-1">
                 自分の想いや資産を整理。デジタル版ノートや書き方ガイドで、将来の不安を解消します。
               </p>
               <Link href="/ending-note" className="mt-3 text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
@@ -172,7 +223,7 @@ export default function Home() {
                 </span>
                 <h2 className="font-bold text-primary text-sm sm:text-base md:text-lg">【片付ける】生前整理・遺品整理</h2>
               </div>
-              <p className="text-sm text-foreground/80 leading-relaxed flex-1">
+              <p className="text-base text-foreground/85 leading-relaxed flex-1">
                 体力があるうちの整理も、親族の遺品整理も。プロの選別で大切な思い出を守ります。
               </p>
               <Link href="/area" className="mt-3 text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
@@ -193,26 +244,13 @@ export default function Home() {
                 </span>
                 <h2 className="font-bold text-primary text-sm sm:text-base md:text-lg">【解決する】実家じまい・空き家活用</h2>
               </div>
-              <p className="text-sm text-foreground/80 leading-relaxed flex-1">
+              <p className="text-base text-foreground/85 leading-relaxed flex-1">
                 補助金の活用から売却査定まで。損をしない家のしまい方を専門家がサポート。
               </p>
               <Link href="/guide" className="mt-3 text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
                 専門家に相談する <span aria-hidden>→</span>
               </Link>
             </div>
-          </div>
-
-          {/* CTA */}
-          <div className="flex flex-col items-center gap-2 w-full mt-4 sm:mt-6">
-            <Link
-              href="/tools"
-              className="inline-block bg-accent text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-bold hover:opacity-90 transition shadow-lg"
-            >
-              今のあなたに必要なサポートを無料診断
-            </Link>
-            <p className="text-sm text-foreground/60">
-              エンディングノート / 生前整理 / 空き家相談 対応
-            </p>
           </div>
         </div>
       </section>
@@ -234,7 +272,7 @@ export default function Home() {
           </span>
           <h2 className="font-bold text-lg text-primary">無料ではじめて、必要なときだけ専門家へ</h2>
         </div>
-        <p className="text-sm text-foreground/60">実家・生前整理の診断やシミュレーターなど、<strong className="text-foreground/80">無料で使えるツール</strong>がたくさんあります。</p>
+        <p className="text-base text-foreground/80">実家・生前整理の診断やシミュレーターなど、<strong className="text-foreground/90">無料で使えるツール</strong>がたくさんあります。</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <ToolCard slug="/assets" lead="持ち物を登録すると総額がわかる" title="資産・査定の見える化" sub="無料査定・買取相場へそのまま導線" ctaLabel="見える化してみる">
             <svg viewBox="0 0 140 140" className="w-12 h-12" fill="none"><path d="M30 90 L50 50 L70 70 L90 30 L110 50" stroke="currentColor" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" /><circle cx="70" cy="75" r="25" fill="currentColor" opacity="0.3" /></svg>
@@ -255,7 +293,7 @@ export default function Home() {
             <svg viewBox="0 0 140 140" className="w-12 h-12" fill="none"><circle cx="70" cy="70" r="55" stroke="currentColor" strokeWidth="4" fill="none" /><path d="M70 70 L70 15 L120 70 Z" fill="currentColor" opacity="0.6" /><path d="M70 70 L70 125 L20 70 Z" fill="currentColor" opacity="0.4" /></svg>
           </ToolCard>
         </div>
-        <p className="text-sm text-foreground/50 text-center">
+        <p className="text-base text-foreground/75 text-center">
           <Link href="/tools" className="text-primary font-medium hover:underline inline-flex items-center gap-1">
             ほかにも無料ツールがたくさん → ツール一覧
           </Link>
@@ -270,7 +308,7 @@ export default function Home() {
         <div className="bg-accent/10 border border-accent/30 rounded-2xl p-5 flex items-center justify-between gap-4">
           <div>
             <p className="font-bold text-accent">棚卸しの時期です</p>
-            <p className="text-sm text-foreground/60 mt-0.5">
+            <p className="text-base text-foreground/80 mt-0.5">
               資産状況や気持ちに変化はありませんか？定期的な見直しで情報を最新に保ちましょう。
               {stats.lastReviewDate && (
                 <span className="ml-1">
@@ -295,11 +333,11 @@ export default function Home() {
             <div className="text-2xl font-bold text-primary">
               {stats.totalValue > 0 ? formatAmount(stats.totalValue) : "---"}
             </div>
-            <div className="text-xs text-foreground/50 mt-1">資産総額（推計）</div>
+            <div className="text-sm text-foreground/75 mt-1">資産総額（推計）</div>
           </div>
           <div className="bg-card rounded-xl p-5 border border-border text-center">
             <div className="text-2xl font-bold">{stats.completionRate}%</div>
-            <div className="text-xs text-foreground/50 mt-1">整理完了率</div>
+            <div className="text-sm text-foreground/75 mt-1">整理完了率</div>
             <div className="w-full bg-border rounded-full h-2 mt-2">
               <div
                 className="bg-primary h-2 rounded-full transition-all"
@@ -309,7 +347,7 @@ export default function Home() {
           </div>
           <div className="bg-card rounded-xl p-5 border border-border text-center">
             <div className="text-2xl font-bold">{checkPercent}%</div>
-            <div className="text-xs text-foreground/50 mt-1">チェックリスト</div>
+            <div className="text-sm text-foreground/75 mt-1">チェックリスト</div>
             <div className="w-full bg-border rounded-full h-2 mt-2">
               <div
                 className="bg-primary h-2 rounded-full transition-all"
@@ -319,7 +357,7 @@ export default function Home() {
           </div>
           <div className="bg-card rounded-xl p-5 border border-border text-center">
             <div className="text-2xl font-bold">{stats.noteProgress}%</div>
-            <div className="text-xs text-foreground/50 mt-1">エンディングノート</div>
+            <div className="text-sm text-foreground/75 mt-1">エンディングノート</div>
             <div className="w-full bg-border rounded-full h-2 mt-2">
               <div
                 className="bg-accent h-2 rounded-full transition-all"
@@ -342,7 +380,7 @@ export default function Home() {
             </span>
             <div>
               <p className="font-medium text-sm">気持ちの整理</p>
-              <p className="text-xs text-foreground/50">
+              <p className="text-sm text-foreground/75">
                 これからどう暮らしたいか考える
               </p>
             </div>
@@ -353,7 +391,7 @@ export default function Home() {
             </span>
             <div>
               <p className="font-medium text-sm">財産の把握</p>
-              <p className="text-xs text-foreground/50">
+              <p className="text-sm text-foreground/75">
                 お金・書類の全体像を整理
               </p>
             </div>
@@ -364,7 +402,7 @@ export default function Home() {
             </span>
             <div>
               <p className="font-medium text-sm">持ち物の整理</p>
-              <p className="text-xs text-foreground/50">
+              <p className="text-sm text-foreground/75">
                 残す・譲る・処分に分類
               </p>
             </div>
@@ -383,7 +421,7 @@ export default function Home() {
       {/* 無料ツール・進捗管理（ツール一覧と同様のイラスト＋フクロウ） */}
       <div>
         <h2 className="font-bold text-lg mb-4">無料ツール</h2>
-        <p className="text-sm text-foreground/60 mb-4">生前整理の進捗や資産の目安を可視化するツールです。</p>
+        <p className="text-base text-foreground/80 mb-4">生前整理の進捗や資産の目安を可視化するツールです。</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <DashboardCard
             href="/tools/empty-house-tax"
@@ -434,7 +472,7 @@ export default function Home() {
             iconSlug="checklist"
           />
         </div>
-        <p className="text-sm text-foreground/50 mt-4 text-center">
+        <p className="text-base text-foreground/75 mt-4 text-center">
           <Link href="/tools" className="text-primary font-medium hover:underline">すべての無料ツールを見る →</Link>
         </p>
       </div>
@@ -443,7 +481,7 @@ export default function Home() {
       <div className="bg-card rounded-2xl p-6 border border-border flex flex-wrap items-center justify-between gap-4">
         <div>
           <h3 className="font-bold text-primary">家族を招待すると有料級ガイドをプレゼント</h3>
-          <p className="text-sm text-foreground/60 mt-0.5">
+          <p className="text-base text-foreground/80 mt-0.5">
             招待した家族も進捗を共有できると、生前整理がスムーズに。
           </p>
         </div>
@@ -457,35 +495,6 @@ export default function Home() {
 
       {/* LINE登録CTA（リスト取り・ガイドブック特典） */}
       <LineCTA />
-
-      {/* ご利用の流れ（問い合わせハードル除去） */}
-      <div className="bg-card rounded-2xl p-6 sm:p-8 border border-border">
-        <h2 className="text-xl font-bold mb-6 text-primary">ご利用の流れ</h2>
-        <p className="text-sm text-foreground/60 mb-6">匿名OK・電話勧誘なし。必要な時だけ専門家につなぎます。</p>
-        <ol className="space-y-6">
-          <li className="flex gap-4">
-            <span className="flex shrink-0 w-10 h-10 rounded-full bg-primary text-white font-bold text-lg flex items-center justify-center">1</span>
-            <div>
-              <h3 className="font-bold text-primary">スマホで3分診断</h3>
-              <p className="text-sm text-foreground/70 mt-0.5">匿名OK・電話勧誘なし。今の実家のリスクがわかります。</p>
-            </div>
-          </li>
-          <li className="flex gap-4">
-            <span className="flex shrink-0 w-10 h-10 rounded-full bg-primary text-white font-bold text-lg flex items-center justify-center">2</span>
-            <div>
-              <h3 className="font-bold text-primary">結果・アドバイスを確認</h3>
-              <p className="text-sm text-foreground/70 mt-0.5">今の実家のリスクと、取るべき対策がひと目でわかります。</p>
-            </div>
-          </li>
-          <li className="flex gap-4">
-            <span className="flex shrink-0 w-10 h-10 rounded-full bg-primary text-white font-bold text-lg flex items-center justify-center">3</span>
-            <div>
-              <h3 className="font-bold text-primary">必要な時だけ専門家に相談</h3>
-              <p className="text-sm text-foreground/70 mt-0.5">希望者のみマッチング。業者への紹介はご希望の方だけです。</p>
-            </div>
-          </li>
-        </ol>
-      </div>
 
       {/* 運営者情報（信頼・法的表記）→ 専用ページへ */}
       <div className="bg-primary-light rounded-2xl p-6 sm:p-8 border border-primary/20">
@@ -512,7 +521,7 @@ export default function Home() {
         />
         <div className="min-w-0 flex-1">
           <h3 className="font-bold text-primary">実家じまい川柳</h3>
-          <p className="text-sm text-foreground/60 mt-0.5">
+          <p className="text-base text-foreground/80 mt-0.5">
             ふれあいの丘のフクロウが詠む、あるある・哀愁。共感したら「わかる！」「座布団一枚！」を。
           </p>
         </div>
@@ -537,19 +546,19 @@ export default function Home() {
         <dl className="space-y-6">
           <div>
             <dt className="font-bold text-foreground mb-1">本当に無料ですか？後から請求されませんか？</dt>
-            <dd className="text-sm text-foreground/70 pl-0">
+            <dd className="text-base text-foreground/80 pl-0">
               完全無料です。当センターは提携事業者からの紹介料で運営されているため、ご利用者様から費用を頂くことはありません。
             </dd>
           </div>
           <div>
             <dt className="font-bold text-foreground mb-1">まだ整理するか決めていませんが、利用できますか？</dt>
-            <dd className="text-sm text-foreground/70 pl-0">
+            <dd className="text-base text-foreground/80 pl-0">
               もちろんです。むしろ「判断するため」にご利用ください。診断やシミュレーターで現状を把握してから、ご自身のペースで検討できます。
             </dd>
           </div>
           <div>
             <dt className="font-bold text-foreground mb-1">個人情報は守られますか？</dt>
-            <dd className="text-sm text-foreground/70 pl-0">
+            <dd className="text-base text-foreground/80 pl-0">
               はい。プライバシーポリシーに基づき厳重に管理し、同意なく業者に渡すことはありません。
             </dd>
           </div>
@@ -609,14 +618,14 @@ function DashboardCard({
       )}
       <div className="min-w-0 flex-1 flex flex-col justify-center">
         <h3 className="font-bold text-base text-primary leading-tight">{title}</h3>
-        <p className="text-sm text-foreground/60 mt-0.5 sm:mt-1 break-words">{description}</p>
+        <p className="text-base text-foreground/80 mt-0.5 sm:mt-1 break-words">{description}</p>
         <div className="w-full bg-border rounded-full h-2.5 mt-2 sm:mt-3 mb-1.5 min-w-0">
           <div
             className={`${color} h-2.5 rounded-full transition-all duration-500`}
             style={{ width: `${progress}%` }}
           />
         </div>
-        <p className="text-sm text-foreground/50 break-words">{detail}</p>
+        <p className="text-base text-foreground/75 break-words">{detail}</p>
       </div>
       {iconSlug && (
         <div className="hidden sm:flex shrink-0 self-center w-10 h-10 rounded-xl overflow-hidden bg-primary-light/30 border border-primary/20 items-center justify-center">

@@ -3,7 +3,12 @@
  * 未設定時はビルド・実行時にエラーにせず、取得処理側でハンドリングする
  */
 import { createClient } from "microcms-js-sdk";
-import type { MicroCmsBlogPost, MicroCmsListResponse } from "./microcms-types";
+import type {
+  MicroCmsBlogPost,
+  MicroCmsCategory,
+  MicroCmsListResponse,
+  MicroCmsTag,
+} from "./microcms-types";
 
 const DOMAIN = process.env.MICROCMS_SERVICE_DOMAIN ?? "";
 const API_KEY = process.env.MICROCMS_API_KEY ?? "";
@@ -22,16 +27,68 @@ export const BLOG_LIST_ENDPOINT = "blog";
 /** ブログ1件取得用（同上） */
 export const BLOG_CONTENT_ENDPOINT = "blog";
 
-/** 一覧取得（公開済みのみ・日付降順） */
-export async function getBlogList(limit = 20, offset = 0): Promise<MicroCmsListResponse<MicroCmsBlogPost>> {
+/** カテゴリ一覧用エンドポイント */
+export const CATEGORIES_ENDPOINT = "categories";
+
+/** タグ一覧用エンドポイント */
+export const TAGS_ENDPOINT = "tags";
+
+export interface GetBlogListFilters {
+  categoryId?: string;
+  tagId?: string;
+}
+
+/** 一覧取得（公開済みのみ・日付降順）。categoryId / tagId で絞り込み可能 */
+export async function getBlogList(
+  limit = 20,
+  offset = 0,
+  filters?: GetBlogListFilters
+): Promise<MicroCmsListResponse<MicroCmsBlogPost>> {
   if (!microCmsClient) {
     return { contents: [], totalCount: 0, offset, limit };
   }
+  const queries: Record<string, string | number> = { limit, offset, orders: "-publishedAt" };
+  if (filters?.categoryId) {
+    queries.filters = `category[equals]${filters.categoryId}`;
+  }
+  if (filters?.tagId) {
+    queries.filters = queries.filters
+      ? `${queries.filters}[and]tags[contains]${filters.tagId}`
+      : `tags[contains]${filters.tagId}`;
+  }
   const res = await microCmsClient.get<MicroCmsListResponse<MicroCmsBlogPost>>({
     endpoint: BLOG_LIST_ENDPOINT,
-    queries: { limit, offset, orders: "-publishedAt" },
+    queries,
   });
   return res;
+}
+
+/** カテゴリ一覧取得（記事一覧の「カテゴリから探す」用） */
+export async function getCategories(): Promise<MicroCmsCategory[]> {
+  if (!microCmsClient) return [];
+  try {
+    const res = await microCmsClient.get<MicroCmsListResponse<MicroCmsCategory>>({
+      endpoint: CATEGORIES_ENDPOINT,
+      queries: { limit: 100 },
+    });
+    return res.contents ?? [];
+  } catch {
+    return [];
+  }
+}
+
+/** タグ一覧取得（記事一覧の「今のあなたの状況に近いものは？」用） */
+export async function getTags(): Promise<MicroCmsTag[]> {
+  if (!microCmsClient) return [];
+  try {
+    const res = await microCmsClient.get<MicroCmsListResponse<MicroCmsTag>>({
+      endpoint: TAGS_ENDPOINT,
+      queries: { limit: 100 },
+    });
+    return res.contents ?? [];
+  } catch {
+    return [];
+  }
 }
 
 /** 1件取得（存在しない場合は null） */

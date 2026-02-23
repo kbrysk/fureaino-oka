@@ -21,8 +21,8 @@ MICROCMS_API_KEY=あなたのAPIキー（閲覧用で可）
 
 ## 3. microCMS 側の API 設計
 
-- **API 名**: `blog`（変更する場合は `app/lib/microcms.ts` の `BLOG_LIST_ENDPOINT` / `BLOG_CONTENT_ENDPOINT` を変更）
-- **推奨フィールド**:
+- **ブログ API 名**: `blog`（変更する場合は `app/lib/microcms.ts` の `BLOG_LIST_ENDPOINT` / `BLOG_CONTENT_ENDPOINT` を変更）
+- **ブログ推奨フィールド**:
   - `id`（自動）
   - `title`（テキスト）
   - `description`（テキスト・任意・SEO用）
@@ -31,9 +31,16 @@ MICROCMS_API_KEY=あなたのAPIキー（閲覧用で可）
   - `revisedAt`（日付・任意）
   - `thumbnail`（画像・任意）
   - `ogpImage`（画像・任意・OGP用。未設定時は thumbnail を使用）
-  - `category`（リレーション or テキスト・任意）
+  - `category`（コンテンツ参照・単一・`categories` API を参照）
+  - `tags`（コンテンツ参照・複数・`tags` API を参照・任意）
 
-型は `app/lib/microcms-types.ts` で定義しています。フィールド名が異なる場合は型と `app/lib/microcms.ts` の取得ロジックを合わせて変更してください。
+- **カテゴリ API 名**: `categories`（`CATEGORIES_ENDPOINT`）
+  - フィールド: `id`, `name`
+
+- **タグ API 名**: `tags`（`TAGS_ENDPOINT`）
+  - フィールド: `id`, `name`
+
+一覧・カテゴリ・タグページでは `getBlogList` の `filters` で `category[equals]${categoryId}` や `tags[contains]${tagId}` により絞り込みます。型は `app/lib/microcms-types.ts` で定義しています。
 
 ## 4. 本文の「フクロウ」記法
 

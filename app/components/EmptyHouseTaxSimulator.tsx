@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import OwlCharacter from "./OwlCharacter";
 import { trackLeadEvent } from "../lib/lead-score";
+import { LINE_ADD_URL } from "../lib/site-brand";
 
 /**
  * 都道府県別・建物種別の年間維持費目安（万円）
@@ -98,7 +99,7 @@ export default function EmptyHouseTaxSimulator({
       <h3 className={`font-bold text-primary ${compact ? "text-base" : "text-lg"} mb-3`}>
         空き家の維持費、年間いくら？
       </h3>
-      <p className="text-sm text-foreground/60 mb-4">
+      <p className="text-base text-foreground/80 mb-4">
         都道府県と建物種別を選ぶと、<strong>固定資産税・都市計画税</strong>を中心とした年間維持費の目安がわかります。空き家は住宅用地特例の対象外となり、税額が高くなる場合があります。
       </p>
       <div className="flex flex-wrap gap-3 mb-4">
@@ -144,7 +145,7 @@ export default function EmptyHouseTaxSimulator({
               bubblePosition="right"
             />
             <div className="flex-1 w-full bg-primary-light rounded-xl p-4 border border-primary/20 space-y-2">
-              <p className="text-sm text-foreground/70">
+              <p className="text-base text-foreground/80">
                 推定 <strong className="text-primary text-lg">年間約{total}万円</strong> 程度
                 {key && (
                   <span>
@@ -153,11 +154,11 @@ export default function EmptyHouseTaxSimulator({
                 )}
               </p>
               {!compact && (
-                <p className="text-xs text-foreground/60">
+                <p className="text-sm text-foreground/75">
                   内訳の目安：税金（固定資産税・都市計画税）約{taxEstimate}万円 ＋ 管理・保険・その他約{extra}万円。実際は評価額・市区町村により異なります。
                 </p>
               )}
-              <p className="text-xs text-foreground/50">
+              <p className="text-sm text-foreground/75">
                 あくまで目安です。
                 {compact ? (
                   <Link href="/tools/empty-house-tax" className="text-primary underline ml-1">
@@ -170,13 +171,15 @@ export default function EmptyHouseTaxSimulator({
             </div>
           </div>
 
-          {/* 危機感の醸成：10年損失を赤字でデカデカ＋特大査定ボタン（バックエンド収益の要） */}
+          {/* 10年損失のメッセージ */}
           <div className="rounded-2xl border-2 border-red-300 bg-red-50 p-5 text-center">
-            <p className="text-xl sm:text-2xl font-bold text-red-600 mb-3">
+            <p className="text-xl sm:text-2xl font-bold text-red-700 mb-4">
               10年放置すると合計で{total * 10}万円（推定）の損失です！
             </p>
+
+            {/* Primary CTA：不動産の一括査定（アフィリエイト導線） */}
             <Link
-              href="/guide"
+              href="/tools/appraisal"
               onClick={() => {
                 if (total * 10 >= 100) {
                   trackLeadEvent("empty_house_sim_10y_loss_100_plus", {
@@ -185,10 +188,21 @@ export default function EmptyHouseTaxSimulator({
                 }
                 trackLeadEvent("appraisal_button_click", { source: "empty_house_sim" });
               }}
-              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg hover:opacity-90 transition"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-accent text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg hover:opacity-90 transition shadow-lg mb-4"
             >
-              実家の資産価値を今すぐ無料で調べる（不動産査定）
+              不動産の一括査定はこちら（無料）
             </Link>
+
+            {/* Secondary CTA：LINEで対策ガイドを受け取る */}
+            <p className="text-base text-foreground/80 mb-2">詳しい対策ガイドをLINEで受け取る（無料）</p>
+            <a
+              href={LINE_ADD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#06C755] text-white px-6 py-3 rounded-xl font-bold text-base hover:opacity-90 transition border-2 border-[#06C755]/80"
+            >
+              LINEで今すぐ受け取る
+            </a>
           </div>
 
           {/* SEO内部リンク：選択した都道府県の補助金情報へ */}
@@ -200,7 +214,7 @@ export default function EmptyHouseTaxSimulator({
               <p className="font-bold text-primary">
                 {key}の空き家補助金情報はこちら
               </p>
-              <p className="text-sm text-foreground/60 mt-1">
+              <p className="text-base text-foreground/80 mt-1">
                 地域を選ぶと補助金・片付け相場の案内へ
               </p>
             </Link>
@@ -210,7 +224,7 @@ export default function EmptyHouseTaxSimulator({
       {!compact && (
         <Link
           href="/tools/empty-house-tax"
-          className="inline-block text-primary text-sm font-medium hover:underline"
+          className="inline-block text-primary text-base font-medium hover:underline"
         >
           さらに詳しく計算する →
         </Link>

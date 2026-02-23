@@ -1,8 +1,6 @@
 import Link from "next/link";
-import { getBlogList } from "../lib/microcms";
+import { getBlogList, getCategories, getTags } from "../lib/microcms";
 import type { MicroCmsBlogPost } from "../lib/microcms-types";
-import { ARTICLE_CATEGORIES } from "../lib/article-categories";
-import { ARTICLE_TAGS } from "../lib/article-tags";
 import { pageTitle } from "../lib/site-brand";
 import ArticleCardMicroCms from "../components/articles/ArticleCardMicroCms";
 import AdSlotInfeed from "../components/articles/AdSlotInfeed";
@@ -34,7 +32,11 @@ function buildGridItems(contents: MicroCmsBlogPost[]): GridItem[] {
 }
 
 export default async function ArticlesPage() {
-  const { contents } = await getBlogList(24, 0);
+  const [{ contents }, categories, tags] = await Promise.all([
+    getBlogList(24, 0),
+    getCategories(),
+    getTags(),
+  ]);
   const gridItems = buildGridItems(contents);
 
   return (
@@ -46,42 +48,46 @@ export default async function ArticlesPage() {
         </p>
       </div>
 
-      {/* カテゴリ（縦軸）ナビ：6カテゴリでディレクトリ分け */}
-      <section className="bg-card rounded-2xl border border-border p-4 sm:p-6">
-        <h2 className="text-sm font-bold text-foreground/70 mb-3">カテゴリから探す</h2>
-        <ul className="flex flex-wrap gap-2">
-          {ARTICLE_CATEGORIES.map((c) => (
-            <li key={c.slug}>
-              <Link
-                href={`/articles/category/${c.slug}`}
-                className="inline-block px-4 py-2 rounded-xl bg-primary-light/20 border border-primary/20 hover:bg-primary hover:text-white hover:border-primary transition text-sm font-medium text-foreground/90"
-              >
-                {c.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {/* カテゴリ（縦軸）ナビ：microCMS の categories API */}
+      {categories.length > 0 && (
+        <section className="bg-card rounded-2xl border border-border p-4 sm:p-6">
+          <h2 className="text-sm font-bold text-foreground/70 mb-3">カテゴリから探す</h2>
+          <ul className="flex flex-wrap gap-2">
+            {categories.map((c) => (
+              <li key={c.id}>
+                <Link
+                  href={`/articles/category/${c.id}`}
+                  className="inline-block px-4 py-2 rounded-xl bg-primary-light/20 border border-primary/20 hover:bg-primary hover:text-white hover:border-primary transition text-sm font-medium text-foreground/90"
+                >
+                  {c.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
-      {/* 状況に近いものは？（横軸タグ） */}
-      <section className="bg-primary-light/20 rounded-2xl border border-primary/20 p-4 sm:p-6">
-        <h2 className="text-sm font-bold text-primary mb-2">今のあなたの状況に近いものは？</h2>
-        <p className="text-xs text-foreground/60 mb-3">
-          ボタンを押すと、その状況に合った記事まとめページへ移動します。
-        </p>
-        <ul className="flex flex-wrap gap-2">
-          {ARTICLE_TAGS.map((tag) => (
-            <li key={tag.slug}>
-              <Link
-                href={`/articles/tag/${tag.slug}`}
-                className="inline-block px-4 py-2.5 rounded-xl bg-card border border-border hover:border-primary/50 hover:bg-primary-light/30 transition text-sm font-medium text-foreground/90"
-              >
-                {tag.shortLabel ?? tag.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {/* 状況に近いものは？（横軸タグ）：microCMS の tags API */}
+      {tags.length > 0 && (
+        <section className="bg-primary-light/20 rounded-2xl border border-primary/20 p-4 sm:p-6">
+          <h2 className="text-sm font-bold text-primary mb-2">今のあなたの状況に近いものは？</h2>
+          <p className="text-xs text-foreground/60 mb-3">
+            ボタンを押すと、その状況に合った記事まとめページへ移動します。
+          </p>
+          <ul className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <li key={tag.id}>
+                <Link
+                  href={`/articles/tag/${tag.id}`}
+                  className="inline-block px-4 py-2.5 rounded-xl bg-card border border-border hover:border-primary/50 hover:bg-primary-light/30 transition text-sm font-medium text-foreground/90"
+                >
+                  {tag.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <ul className="grid gap-6 md:grid-cols-2">
         {gridItems.map((item) =>
