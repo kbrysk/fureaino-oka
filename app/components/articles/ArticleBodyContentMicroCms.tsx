@@ -9,19 +9,20 @@ const OWL_REGEX = /【フクロウ:\s*([^】]+)】/g;
 type Segment = { type: "html"; content: string } | { type: "owl"; message: string };
 
 function splitByOwl(body: string): Segment[] {
+  const str = body ?? "";
   const segments: Segment[] = [];
   let lastIndex = 0;
   let m: RegExpExecArray | null;
   OWL_REGEX.lastIndex = 0;
-  while ((m = OWL_REGEX.exec(body)) !== null) {
+  while ((m = OWL_REGEX.exec(str)) !== null) {
     if (m.index > lastIndex) {
-      segments.push({ type: "html", content: body.slice(lastIndex, m.index).trim() });
+      segments.push({ type: "html", content: str.slice(lastIndex, m.index).trim() });
     }
     segments.push({ type: "owl", message: m[1].trim() });
     lastIndex = m.index + m[0].length;
   }
-  if (lastIndex < body.length) {
-    segments.push({ type: "html", content: body.slice(lastIndex).trim() });
+  if (lastIndex < str.length) {
+    segments.push({ type: "html", content: str.slice(lastIndex).trim() });
   }
   return segments;
 }
@@ -31,7 +32,7 @@ interface ArticleBodyContentMicroCmsProps {
 }
 
 export default function ArticleBodyContentMicroCms({ body }: ArticleBodyContentMicroCmsProps) {
-  const segments = splitByOwl(body);
+  const segments = splitByOwl(body ?? "");
 
   const parseOptions = {
     replace(domNode: DOMNode, index: number) {

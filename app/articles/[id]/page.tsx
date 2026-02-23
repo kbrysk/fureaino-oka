@@ -16,7 +16,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const ids = await getBlogPostIds();
+  const ids = (await getBlogPostIds()) ?? [];
   return ids.map((id) => ({ id }));
 }
 
@@ -67,6 +67,8 @@ export default async function ArticleDetailPage({ params }: Props) {
     ? format(new Date(post.publishedAt), "yyyy年M月d日", { locale: ja })
     : "";
   const thumb = post.thumbnail?.url;
+  const tags = post.tags ?? [];
+  const category = post.category;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -97,9 +99,9 @@ export default async function ArticleDetailPage({ params }: Props) {
       </nav>
 
       <header>
-        {post.category?.name && (
+        {category?.name && (
           <span className="inline-block text-xs font-medium text-primary bg-primary-light px-2 py-0.5 rounded mb-2">
-            {post.category.name}
+            {category.name}
           </span>
         )}
         <h1 className="text-2xl md:text-3xl font-bold text-primary mt-1" itemProp="headline">
@@ -113,6 +115,20 @@ export default async function ArticleDetailPage({ params }: Props) {
           >
             {dateStr}
           </time>
+        )}
+        {(tags?.length ?? 0) > 0 && (
+          <ul className="flex flex-wrap gap-2 mt-2" aria-label="タグ">
+            {(tags || []).map((tag) => (
+              <li key={tag.id}>
+                <Link
+                  href={`/articles/tag/${tag.id}`}
+                  className="text-xs font-medium text-primary bg-primary-light/30 hover:bg-primary-light px-2 py-0.5 rounded"
+                >
+                  {tag.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         )}
       </header>
 
@@ -132,7 +148,7 @@ export default async function ArticleDetailPage({ params }: Props) {
       <ArticleLineCTABanner />
 
       <div className="mt-8">
-        <ArticleBodyContentMicroCms body={post.body} />
+        <ArticleBodyContentMicroCms body={post.body ?? ""} />
       </div>
 
       <ArticleLineCTABanner />
