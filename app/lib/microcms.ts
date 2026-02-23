@@ -1,6 +1,10 @@
 /**
  * microCMS クライアントの初期化（環境変数で安全に設定）
- * 未設定時はビルド・実行時にエラーにせず、取得処理側でハンドリングする
+ * 未設定時はビルド・実行時にエラーにせず、取得処理側でハンドリングする。
+ *
+ * 【Vercel 必須環境変数】
+ * - MICROCMS_SERVICE_DOMAIN … サービスID（例: xxxxx）
+ * - MICROCMS_API_KEY       … 閲覧用APIキー
  */
 import { createClient } from "microcms-js-sdk";
 import type {
@@ -12,6 +16,19 @@ import type {
 
 const DOMAIN = process.env.MICROCMS_SERVICE_DOMAIN ?? "";
 const API_KEY = process.env.MICROCMS_API_KEY ?? "";
+
+/** 環境変数未設定時のデバッグログ（Vercel ビルドログで欠落変数を判別するため） */
+if (typeof process !== "undefined" && process.env?.NODE_ENV !== "test") {
+  const missing: string[] = [];
+  if (!DOMAIN || DOMAIN.trim() === "") missing.push("MICROCMS_SERVICE_DOMAIN");
+  if (!API_KEY || API_KEY.trim() === "") missing.push("MICROCMS_API_KEY");
+  if (missing.length > 0) {
+    console.warn(
+      "[microCMS] 環境変数が未設定のためブログAPIは無効です。欠落:",
+      missing.join(", ")
+    );
+  }
+}
 
 export const microCmsClient =
   DOMAIN && API_KEY
@@ -47,20 +64,31 @@ export async function getBlogList(
   if (!microCmsClient) {
     return { contents: [], totalCount: 0, offset, limit };
   }
-  const queries: Record<string, string | number> = { limit, offset, orders: "-publishedAt" };
-  if (filters?.categoryId) {
-    queries.filters = `category[equals]${filters.categoryId}`;
+  try {
+    const queries: Record<string, string | number> = { limit, offset, orders: "-publishedAt" };
+    if (filters?.categoryId) {
+      queries.filters = `category[equals]${filters.categoryId}`;
+    }
+    if (filters?.tagId) {
+      queries.filters = queries.filters
+        ? `${queries.filters}[and]tags[contains]${filters.tagId}`
+        : `tags[contains]${filters.tagId}`;
+    }
+    const res = await microCmsClient.get<MicroCmsListResponse<MicroCmsBlogPost>>({
+      endpoint: BLOG_LIST_ENDPOINT,
+      queries,
+    });
+    return res;
+  } catch (e) {
+    logMicroCmsError(`getBlogList (${BLOG_LIST_ENDPOINT})`, e);
+    return { contents: [], totalCount: 0, offset, limit };
   }
-  if (filters?.tagId) {
-    queries.filters = queries.filters
-      ? `${queries.filters}[and]tags[contains]${filters.tagId}`
-      : `tags[contains]${filters.tagId}`;
-  }
-  const res = await microCmsClient.get<MicroCmsListResponse<MicroCmsBlogPost>>({
-    endpoint: BLOG_LIST_ENDPOINT,
-    queries,
-  });
-  return res;
+}
+
+/** API エラー時のデバッグログ（404＝エンドポイント名不一致の可能性） */
+function logMicroCmsError(context: string, err: unknown): void {
+  const msg = err instanceof Error ? err.message : String(err);
+  console.warn(`[microCMS] ${context} でエラー:`, msg);
 }
 
 /** カテゴリ一覧取得（記事一覧の「カテゴリから探す」用） */
@@ -72,7 +100,8 @@ export async function getCategories(): Promise<MicroCmsCategory[]> {
       queries: { limit: 100 },
     });
     return res.contents ?? [];
-  } catch {
+  } catch (e) {
+    logMicroCmsError(`getCategories (${CATEGORIES_ENDPOINT})`, e);
     return [];
   }
 }
@@ -86,7 +115,8 @@ export async function getTags(): Promise<MicroCmsTag[]> {
       queries: { limit: 100 },
     });
     return res.contents ?? [];
-  } catch {
+  } catch (e) {
+    logMicroCmsError(`getTags (${TAGS_ENDPOINT})`, e);
     return [];
   }
 }
@@ -100,7 +130,8 @@ export async function getBlogPost(id: string): Promise<MicroCmsBlogPost | null> 
       contentId: id,
     });
     return res;
-  } catch {
+  } catch (e) {
+    logMicroCmsError(`getBlogPost (${BLOG_CONTENT_ENDPOINT}/${id})`, e);
     return null;
   }
 }
