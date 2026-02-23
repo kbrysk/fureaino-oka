@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAreaIdSlugs } from "./lib/area-data";
 import { getRegionSlugs } from "./lib/regions";
-import { getArticleSlugs } from "./lib/articles";
+import { getBlogPostIds } from "./lib/microcms";
 import { getLayoutSlugs } from "./lib/cost-by-layout";
 import { getDisposeSlugs } from "./lib/dispose-items";
 import { DISPOSE_CATEGORIES } from "./lib/dispose-categories";
@@ -14,7 +14,7 @@ const SITEMAP_BASE = getCanonicalBase();
  * XML Sitemap（SEO: クロール効率・インデックス促進）
  * 静的ページ＋地域・費用・捨て方・記事の全URLを出力。クローラーが全ページを確実に発見できるようにする。
  */
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = SITEMAP_BASE;
 
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -87,9 +87,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     );
   }
 
-  const articleSlugs = getArticleSlugs();
-  const articleRoutes: MetadataRoute.Sitemap = articleSlugs.map((slug) => ({
-    url: `${base}/articles/${encodeURIComponent(slug)}`,
+  const articleIds = await getBlogPostIds();
+  const articleRoutes: MetadataRoute.Sitemap = articleIds.map((id) => ({
+    url: `${base}/articles/${encodeURIComponent(id)}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,

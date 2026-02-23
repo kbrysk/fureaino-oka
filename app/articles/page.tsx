@@ -1,8 +1,11 @@
 import Link from "next/link";
-import { getArticlesIndex } from "../lib/articles";
+import { getBlogList } from "../lib/microcms";
+import type { MicroCmsBlogPost } from "../lib/microcms-types";
 import { ARTICLE_CATEGORIES } from "../lib/article-categories";
 import { ARTICLE_TAGS } from "../lib/article-tags";
 import { pageTitle } from "../lib/site-brand";
+import ArticleCardMicroCms from "../components/articles/ArticleCardMicroCms";
+import AdSlotInfeed from "../components/articles/AdSlotInfeed";
 
 export const metadata = {
   title: pageTitle("記事一覧"),
@@ -10,8 +13,30 @@ export const metadata = {
     "生前整理・実家の片付け・終活に関する記事。進め方、処分、資産、デジタル遺品まで。",
 };
 
-export default function ArticlesPage() {
-  const articles = getArticlesIndex();
+const INFEED_AD_POSITIONS = [3, 7];
+
+type GridItem =
+  | { type: "card"; post: MicroCmsBlogPost }
+  | { type: "ad"; key: string };
+
+function buildGridItems(contents: MicroCmsBlogPost[]): GridItem[] {
+  const items: GridItem[] = [];
+  let cardIndex = 0;
+  for (let pos = 1; pos <= contents.length + INFEED_AD_POSITIONS.length; pos++) {
+    if (INFEED_AD_POSITIONS.includes(pos)) {
+      items.push({ type: "ad", key: `ad-${pos}` });
+    } else if (cardIndex < contents.length) {
+      items.push({ type: "card", post: contents[cardIndex] });
+      cardIndex++;
+    }
+  }
+  return items;
+}
+
+export default async function ArticlesPage() {
+  const { contents } = await getBlogList(24, 0);
+  const gridItems = buildGridItems(contents);
+
   return (
     <div className="space-y-8">
       <div>
@@ -59,25 +84,17 @@ export default function ArticlesPage() {
       </section>
 
       <ul className="grid gap-6 md:grid-cols-2">
-        {articles.map((a) => (
-          <li key={a.slug}>
-            <Link
-              href={`/articles/${a.slug}`}
-              className="block bg-card rounded-xl p-6 border border-border hover:shadow-md hover:border-primary/30 transition"
-            >
-              <span className="text-xs text-foreground/50">{a.category}</span>
-              <h2 className="font-bold text-lg mt-1 text-primary">{a.title}</h2>
-              <p className="text-sm text-foreground/60 mt-2 line-clamp-2">
-                {a.description}
-              </p>
-              <time className="text-xs text-foreground/40 mt-2 block" dateTime={a.date}>
-                {a.date}
-              </time>
-            </Link>
-          </li>
-        ))}
+        {gridItems.map((item) =>
+          item.type === "ad" ? (
+            <li key={item.key} className="md:col-span-2">
+              <AdSlotInfeed />
+            </li>
+          ) : (
+            <ArticleCardMicroCms key={item.post.id} post={item.post} />
+          )
+        )}
       </ul>
-      {articles.length === 0 && (
+      {contents.length === 0 && gridItems.length === 0 && (
         <p className="text-foreground/50">記事は準備中です。</p>
       )}
 
