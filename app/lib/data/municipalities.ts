@@ -48,3 +48,9 @@ export async function getMunicipalityData(
 export function getMunicipalitySlugs(): { prefecture: string; city: string }[] {
   return MUNICIPALITY_STORE.map((m) => ({ prefecture: m.prefId, city: m.cityId }));
 }
+
+/** 同一都道府県内の市区町村一覧（近隣リンク・回遊用） */
+export function getMunicipalitiesByPrefecture(prefId: string): MunicipalityData[] {
+  const normalized = prefId.toLowerCase().trim();
+  return MUNICIPALITY_STORE.filter((m) => m.prefId.toLowerCase() === normalized);
+}

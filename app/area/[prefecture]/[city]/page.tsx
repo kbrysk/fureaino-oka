@@ -1,12 +1,17 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAreaById, getAreaIdSlugs, getAreaIds } from "../../../lib/area-data";
+import { getMunicipalityData, getMunicipalitiesByPrefecture } from "../../../lib/data/municipalities";
 import { getRegionBySlug } from "../../../lib/regions";
 import { getAreaSeizenseiriColumn, getAreaOwlColumn } from "../../../lib/area-column";
 import AreaBreadcrumbs from "../../../components/AreaBreadcrumbs";
 import AreaOwlBlock from "../../../components/AreaOwlBlock";
 import AreaBulkyWasteLink from "../../../components/AreaBulkyWasteLink";
 import CleanupAffiliateCard from "../../../components/CleanupAffiliateCard";
+import RealEstateAppraisalCard from "../../../components/RealEstateAppraisalCard";
+import MascotAdviceBlock from "../../../components/MascotAdviceBlock";
+import LocalConsultationCard from "../../../components/LocalConsultationCard";
+import NearbySubsidyLinks from "../../../components/NearbySubsidyLinks";
 import { pageTitle } from "../../../lib/site-brand";
 
 interface Props {
@@ -36,6 +41,7 @@ export default async function AreaPage({ params }: Props) {
   if (!area) notFound();
   const ids = getAreaIds(area.prefecture, area.city)!;
   const region = getRegionBySlug([area.prefecture, area.city]);
+  const municipalityData = await getMunicipalityData(ids.prefectureId, ids.cityId);
 
   return (
     <div className="space-y-8">
@@ -60,14 +66,25 @@ export default async function AreaPage({ params }: Props) {
         </p>
       </section>
 
-      <section className="bg-primary-light/40 rounded-2xl border border-primary/20 p-5">
-        <h2 className="text-sm font-bold text-primary mb-2">
-          モグ隊長（フクロウ）のひとこと
-        </h2>
-        <p className="text-sm text-foreground/80 leading-relaxed">
-          {getAreaOwlColumn(area.prefecture, area.city)}
-        </p>
-      </section>
+      {municipalityData ? (
+        <>
+          <MascotAdviceBlock localRiskText={municipalityData.mascot.localRiskText} cityName={area.city} />
+          <LocalConsultationCard
+            cityName={area.city}
+            prefName={municipalityData.prefName}
+            localRiskText={municipalityData.mascot.localRiskText}
+          />
+        </>
+      ) : (
+        <section className="bg-primary-light/40 rounded-2xl border border-primary/20 p-5">
+          <h2 className="text-sm font-bold text-primary mb-2">
+            モグ隊長（フクロウ）のひとこと
+          </h2>
+          <p className="text-sm text-foreground/80 leading-relaxed">
+            {getAreaOwlColumn(area.prefecture, area.city)}
+          </p>
+        </section>
+      )}
 
       <div className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
@@ -109,6 +126,12 @@ export default async function AreaPage({ params }: Props) {
 
       <CleanupAffiliateCard cityName={area.city} cityId={ids.cityId} />
 
+      <RealEstateAppraisalCard
+        cityName={area.city}
+        cityId={ids.cityId}
+        localRiskText={municipalityData?.mascot.localRiskText}
+      />
+
       <div className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
           <h2 className="font-bold text-primary">遺品整理・生前整理の相談</h2>
@@ -125,6 +148,15 @@ export default async function AreaPage({ params }: Props) {
           </Link>
         </div>
       </div>
+
+      <NearbySubsidyLinks
+        cityName={area.city}
+        prefId={ids.prefectureId}
+        neighbours={getMunicipalitiesByPrefecture(ids.prefectureId)
+          .filter((m) => m.cityId !== ids.cityId)
+          .slice(0, 6)
+          .map((m) => ({ cityId: m.cityId, cityName: m.cityName }))}
+      />
 
       <div className="flex flex-wrap gap-3">
         <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">

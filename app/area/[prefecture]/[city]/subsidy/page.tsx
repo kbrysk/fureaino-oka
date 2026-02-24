@@ -1,11 +1,15 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getMunicipalityData, getMunicipalitySlugs } from "../../../../lib/data/municipalities";
+import { getMunicipalityData, getMunicipalitySlugs, getMunicipalitiesByPrefecture } from "../../../../lib/data/municipalities";
 import { getAreaById, getAreaIds } from "../../../../lib/area-data";
 import { getAreaSeizenseiriColumn } from "../../../../lib/area-column";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
 import AreaOwlBlock from "../../../../components/AreaOwlBlock";
 import AreaBulkyWasteLink from "../../../../components/AreaBulkyWasteLink";
+import MascotAdviceBlock from "../../../../components/MascotAdviceBlock";
+import LocalConsultationCard from "../../../../components/LocalConsultationCard";
+import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalCard";
+import NearbySubsidyLinks from "../../../../components/NearbySubsidyLinks";
 import { pageTitle } from "../../../../lib/site-brand";
 
 interface Props {
@@ -79,14 +83,13 @@ export default async function AreaSubsidyPage({ params }: Props) {
         </p>
       </section>
 
-      <section className="bg-primary-light/40 rounded-2xl border border-primary/20 p-5">
-        <h2 className="text-sm font-bold text-primary mb-2">
-          モグ隊長（フクロウ）のひとこと
-        </h2>
-        <p className="text-sm text-foreground/80 leading-relaxed">
-          {data.mascot.localRiskText}
-        </p>
-      </section>
+      <MascotAdviceBlock localRiskText={data.mascot.localRiskText} cityName={data.cityName} />
+
+      <LocalConsultationCard
+        cityName={data.cityName}
+        prefName={data.prefName}
+        localRiskText={data.mascot.localRiskText}
+      />
 
       <div className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
@@ -172,6 +175,12 @@ export default async function AreaSubsidyPage({ params }: Props) {
         </div>
       </div>
 
+      <RealEstateAppraisalCard
+        cityName={data.cityName}
+        cityId={data.cityId}
+        localRiskText={data.mascot.localRiskText}
+      />
+
       {/* PLG導線: 補助金対象か30秒で判定 ＋ 高単価査定導線・マイクロコピー */}
       <div className="bg-primary rounded-2xl p-6 text-white text-center">
         <p className="font-bold mb-2">あなたの実家が補助金の対象か、モグ隊長が30秒で判定！</p>
@@ -203,6 +212,15 @@ export default async function AreaSubsidyPage({ params }: Props) {
           </Link>
         </div>
       </div>
+
+      <NearbySubsidyLinks
+        cityName={data.cityName}
+        prefId={data.prefId}
+        neighbours={getMunicipalitiesByPrefecture(data.prefId)
+          .filter((m) => m.cityId !== data.cityId)
+          .slice(0, 6)
+          .map((m) => ({ cityId: m.cityId, cityName: m.cityName }))}
+      />
 
       <div className="flex flex-wrap gap-3">
         <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">

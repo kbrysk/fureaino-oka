@@ -1,10 +1,15 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAreaById, getAreaIdSlugs, getAreaIds } from "../../../../lib/area-data";
+import { getMunicipalityData, getMunicipalitiesByPrefecture } from "../../../../lib/data/municipalities";
 import { getAreaSeizenseiriColumn, getAreaOwlColumn } from "../../../../lib/area-column";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
 import AreaOwlBlock from "../../../../components/AreaOwlBlock";
 import CleanupAffiliateCard from "../../../../components/CleanupAffiliateCard";
+import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalCard";
+import MascotAdviceBlock from "../../../../components/MascotAdviceBlock";
+import LocalConsultationCard from "../../../../components/LocalConsultationCard";
+import NearbySubsidyLinks from "../../../../components/NearbySubsidyLinks";
 import { pageTitle } from "../../../../lib/site-brand";
 
 interface Props {
@@ -33,6 +38,7 @@ export default async function AreaCleanupPage({ params }: Props) {
   const area = getAreaById(prefecture, city);
   if (!area) notFound();
   const ids = getAreaIds(area.prefecture, area.city)!;
+  const municipalityData = await getMunicipalityData(ids.prefectureId, ids.cityId);
 
   const cleanupText = area.cleanupPriceNote || `${area.city}では、遺品整理・実家の片付けは、部屋数・荷物量・立地により相場が異なります。1Kで十数万円〜、2LDKで20〜40万円程度、3LDK以上で40万円〜が目安となることが多いです。複数社の無料見積もりで比較することをおすすめします。`;
 
@@ -59,14 +65,25 @@ export default async function AreaCleanupPage({ params }: Props) {
         </p>
       </section>
 
-      <section className="bg-primary-light/40 rounded-2xl border border-primary/20 p-5">
-        <h2 className="text-sm font-bold text-primary mb-2">
-          モグ隊長（フクロウ）のひとこと
-        </h2>
-        <p className="text-sm text-foreground/80 leading-relaxed">
-          {getAreaOwlColumn(area.prefecture, area.city)}
-        </p>
-      </section>
+      {municipalityData ? (
+        <>
+          <MascotAdviceBlock localRiskText={municipalityData.mascot.localRiskText} cityName={area.city} />
+          <LocalConsultationCard
+            cityName={area.city}
+            prefName={municipalityData.prefName}
+            localRiskText={municipalityData.mascot.localRiskText}
+          />
+        </>
+      ) : (
+        <section className="bg-primary-light/40 rounded-2xl border border-primary/20 p-5">
+          <h2 className="text-sm font-bold text-primary mb-2">
+            モグ隊長（フクロウ）のひとこと
+          </h2>
+          <p className="text-sm text-foreground/80 leading-relaxed">
+            {getAreaOwlColumn(area.prefecture, area.city)}
+          </p>
+        </section>
+      )}
 
       <div className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
@@ -86,6 +103,12 @@ export default async function AreaCleanupPage({ params }: Props) {
       </div>
 
       <CleanupAffiliateCard cityName={area.city} cityId={ids.cityId} />
+
+      <RealEstateAppraisalCard
+        cityName={area.city}
+        cityId={ids.cityId}
+        localRiskText={municipalityData?.mascot.localRiskText}
+      />
 
       {/* PLG導線: 荷物量で費用シミュレーション */}
       <div className="bg-primary rounded-2xl p-6 text-white text-center">
@@ -108,6 +131,15 @@ export default async function AreaCleanupPage({ params }: Props) {
           無料で見積もりを依頼する
         </Link>
       </div>
+
+      <NearbySubsidyLinks
+        cityName={area.city}
+        prefId={ids.prefectureId}
+        neighbours={getMunicipalitiesByPrefecture(ids.prefectureId)
+          .filter((m) => m.cityId !== ids.cityId)
+          .slice(0, 6)
+          .map((m) => ({ cityId: m.cityId, cityName: m.cityName }))}
+      />
 
       <div className="flex flex-wrap gap-3">
         <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
