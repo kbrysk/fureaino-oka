@@ -15,6 +15,7 @@ import LocalConsultationCard from "../../../../components/LocalConsultationCard"
 import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalCard";
 import NearbySubsidyLinks from "../../../../components/NearbySubsidyLinks";
 import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
+import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import { pageTitle } from "../../../../lib/site-brand";
 
@@ -282,7 +283,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
         cityName={data.cityName}
         currentSpoke="subsidy"
       />
-
+      <OperatorTrustBlock />
       <div className="flex flex-wrap gap-3">
         <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
           ← 地域一覧（全国）へ

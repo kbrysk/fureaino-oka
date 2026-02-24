@@ -8,6 +8,7 @@ import JsonLdBreadcrumb from "./components/JsonLdBreadcrumb";
 import AreaNavigation from "./components/AreaNavigation";
 import { AreaCtaProvider } from "./components/AreaCtaContext";
 import GlobalStickyCTA from "./components/GlobalStickyCTA";
+import EeatJsonLd from "./components/json-ld/EeatJsonLd";
 import { SITE_TITLE_TOP, SITE_NAME_LOGO, SITE_NAME_SHORT } from "./lib/site-brand";
 import { getBaseUrl, getCanonicalBase, getCanonicalUrl } from "./lib/site-url";
 
@@ -99,19 +100,7 @@ export default function RootLayout({
         <meta name="twitter:title" content={SITE_TITLE_TOP} />
         <meta name="twitter:description" content={DEFAULT_DESCRIPTION} />
         <meta name="twitter:image" content={`${canonicalOrigin}${OG_IMAGE_PATH}`} />
-        {/* JSON-LD: Organization（Google推奨の構造化データ） */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: SITE_NAME_LOGO,
-              url: canonicalOrigin,
-              logo: `${canonicalOrigin}${APPLE_TOUCH_ICON_PATH}`,
-            }),
-          }}
-        />
+        {/* JSON-LD は EeatJsonLd（Organization + WebSite）を body 末尾で出力 */}
         {/* Google Tag Manager - head 内のなるべく上 */}
         <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
         {/* Google AdSense 審査コード（初期HTMLに含めクローラーに確実に読ませる） */}
@@ -154,6 +143,7 @@ export default function RootLayout({
           </div>
           <GlobalStickyCTA />
         </AreaCtaProvider>
+        <EeatJsonLd />
       </body>
     </html>
   );

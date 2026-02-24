@@ -7,6 +7,7 @@ export const revalidate = 86400;
 import { getMunicipalityDataOrDefault } from "../../../../lib/data/municipalities";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
 import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
+import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
 import JikkaOptimizer from "../../../../components/JikkaOptimizer";
 import { getRegionalStats } from "../../../../lib/utils/regional-stats-loader";
 import { pageTitle } from "../../../../lib/site-brand";
@@ -77,7 +78,7 @@ export default async function AreaCostPage({ params }: Props) {
         cityName={cityName}
         currentSpoke="cost"
       />
-
+      <OperatorTrustBlock />
       <div className="flex flex-wrap gap-3">
         <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
           ← 地域一覧（全国）へ
