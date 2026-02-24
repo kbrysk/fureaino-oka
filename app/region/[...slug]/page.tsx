@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import {
   getRegionBySlug,
@@ -31,6 +31,9 @@ export default async function RegionPage({ params }: Props) {
   const region = getRegionBySlug(slug);
   if (!region) notFound();
   const areaIds = getAreaIds(region.prefecture, region.city);
+  if (areaIds) {
+    permanentRedirect(`/area/${areaIds.prefectureId}/${areaIds.cityId}/garbage`);
+  }
 
   const neighbors = getNeighborRegions(region, 12);
   const hasSubsidy = region.subsidy_amount === "あり";
@@ -142,23 +145,29 @@ export default async function RegionPage({ params }: Props) {
         </Link>
       </div>
 
-      {/* 近隣の市区町村の相場を見る（内部リンク） */}
+      {/* 近隣の市区町村の相場を見る（内部リンク・ローマ字URLでクロール効率化） */}
       {neighbors.length > 0 && (
         <section className="bg-card rounded-2xl border border-border p-6">
           <h2 className="font-bold text-lg text-primary mb-4">
             近隣の市区町村の相場を見る
           </h2>
           <ul className="flex flex-wrap gap-2">
-            {neighbors.map((r) => (
-              <li key={`${r.prefecture}-${r.city}`}>
-                <Link
-                  href={`/region/${encodeURIComponent(r.prefecture)}/${encodeURIComponent(r.city)}`}
-                  className="inline-block px-4 py-2 rounded-xl border border-border bg-background text-sm font-medium hover:bg-primary-light hover:border-primary/50 hover:text-primary transition"
-                >
-                  {r.city_name}
-                </Link>
-              </li>
-            ))}
+            {neighbors.map((r) => {
+              const neighborIds = getAreaIds(r.prefecture, r.city);
+              const href = neighborIds
+                ? `/area/${neighborIds.prefectureId}/${neighborIds.cityId}/garbage`
+                : `/region/${encodeURIComponent(r.prefecture)}/${encodeURIComponent(r.city)}`;
+              return (
+                <li key={`${r.prefecture}-${r.city}`}>
+                  <Link
+                    href={href}
+                    className="inline-block px-4 py-2 rounded-xl border border-border bg-background text-sm font-medium hover:bg-primary-light hover:border-primary/50 hover:text-primary transition"
+                  >
+                    {r.city_name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </section>
       )}
@@ -168,7 +177,7 @@ export default async function RegionPage({ params }: Props) {
           ← 地域一覧（全国）へ
         </Link>
         <Link
-          href={areaIds ? `/area/${areaIds.prefectureId}/${areaIds.cityId}` : `/area/${encodeURIComponent(region.prefecture)}/${encodeURIComponent(region.city)}`}
+          href={areaIds ? `/area/${areaIds.prefectureId}/${areaIds.cityId}/garbage` : `/area/${encodeURIComponent(region.prefecture)}/${encodeURIComponent(region.city)}`}
           className="text-primary font-medium hover:underline"
         >
           {region.city}の粗大ゴミ・遺品整理（詳細）

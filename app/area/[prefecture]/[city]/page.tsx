@@ -51,13 +51,13 @@ export async function generateMetadata({ params }: Props) {
   if (!area) return { title: pageTitle("地域情報") };
   if (data._isDefault) {
     return {
-      title: pageTitle(`${data.cityName}の空き家補助金・実家整理ガイド【2026年最新版】`),
+      title: pageTitle(`${data.cityName}の実家じまい・空き家対策 総合ガイド`),
       description: `${data.cityName}で空き家整理や売却を検討中の方へ。自治体の窓口情報や、相続時に役立つ3,000万円控除の特例、おすすめの査定サービスをまとめています。`,
     };
   }
   return {
-    title: pageTitle(`${data.cityName}（${data.prefName}）の粗大ゴミ・遺品整理`),
-    description: `${data.prefName}${data.cityName}の粗大ゴミ申し込み・遺品整理の相談先。無料見積もりで比較。`,
+    title: pageTitle(`${data.cityName}の実家じまい・空き家対策 総合ガイド`),
+    description: `${data.prefName}${data.cityName}の粗大ゴミ申し込み・遺品整理・補助金の相談先。無料見積もりで比較。`,
   };
 }
 
@@ -327,14 +327,12 @@ export default async function AreaPage({ params, searchParams }: Props) {
         <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
           ← 地域一覧（全国）へ
         </Link>
-        {region && (
-          <Link
-            href={`/region/${encodeURIComponent(area.prefecture)}/${encodeURIComponent(area.city)}`}
-            className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition"
-          >
-            {area.city}で安く遺品整理する裏技を読む
-          </Link>
-        )}
+        <Link
+          href={`/area/${ids.prefectureId}/${ids.cityId}/garbage`}
+          className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition"
+        >
+          {area.city}の粗大ゴミ・遺品整理
+        </Link>
         <Link
           href={`/area/${ids.prefectureId}/${ids.cityId}/subsidy`}
           className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition"
@@ -346,6 +344,12 @@ export default async function AreaPage({ params, searchParams }: Props) {
           className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition"
         >
           {area.city}の遺品整理・相場
+        </Link>
+        <Link
+          href={`/area/${ids.prefectureId}/${ids.cityId}/cost`}
+          className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition"
+        >
+          {area.city}の費用相場シミュレーション
         </Link>
         <Link
           href={`/tax-simulator/${ids.prefectureId}/${ids.cityId}`}

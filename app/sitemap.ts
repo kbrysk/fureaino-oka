@@ -12,8 +12,8 @@ const SITEMAP_BASE = getCanonicalBase();
 /** 1サイトマップあたりのURL数（Google並列クロール促進・推奨1,000件以下） */
 const URLS_PER_SITEMAP = 1000;
 
-/** 自治体1件あたりのURL数（メイン・補助金・相場・税シミュ） */
-const URLS_PER_AREA = 4;
+/** 自治体1件あたりのURL数（Hub・補助金・粗大ゴミ・相場・費用・税シミュ） */
+const URLS_PER_AREA = 6;
 
 /** 主要都市（政令指定都市等）：priority 0.8・daily。先頭N件を指定。 */
 const MAJOR_AREA_COUNT = 93;
@@ -164,7 +164,9 @@ export default async function sitemap(props: {
     areaRoutes.push(
       { url: `${base}/area/${prefId}/${cityId}`, lastModified: now, changeFrequency: changeFreq, priority: mainPriority },
       { url: `${base}/area/${prefId}/${cityId}/subsidy`, lastModified: now, changeFrequency: changeFreq, priority: subPriority },
+      { url: `${base}/area/${prefId}/${cityId}/garbage`, lastModified: now, changeFrequency: changeFreq, priority: subPriority },
       { url: `${base}/area/${prefId}/${cityId}/cleanup`, lastModified: now, changeFrequency: changeFreq, priority: subPriority },
+      { url: `${base}/area/${prefId}/${cityId}/cost`, lastModified: now, changeFrequency: changeFreq, priority: subPriority },
       { url: `${base}/tax-simulator/${prefId}/${cityId}`, lastModified: now, changeFrequency: changeFreq, priority: subPriority }
     );
   }

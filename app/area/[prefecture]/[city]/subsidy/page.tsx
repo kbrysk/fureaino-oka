@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props) {
   if (!area) return { title: pageTitle("空き家・補助金") };
   if (data._isDefault) {
     return {
-      title: pageTitle(`${data.cityName}の空き家補助金・実家整理ガイド【2026年最新版】`),
+      title: pageTitle(`${data.cityName}の実家解体・空き家補助金・助成金まとめ`),
       description: `${data.cityName}で空き家整理や売却を検討中の方へ。自治体の窓口情報や、相続時に役立つ3,000万円控除の特例、おすすめの査定サービスをまとめています。`,
     };
   }
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props) {
   }
 
   return {
-    title: pageTitle(`${data.cityName}（${data.prefName}）の空き家解体補助金・3000万円控除の相談`),
+    title: pageTitle(`${data.cityName}の実家解体・空き家補助金・助成金まとめ`),
     description: `${data.prefName}${data.cityName}の空き家解体補助金・相続空き家の3000万円特別控除の相談窓口と概要。専門家への無料相談がおすすめです。`,
   };
 }

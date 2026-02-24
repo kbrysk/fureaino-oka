@@ -5,7 +5,7 @@ const BASE_URL =
     ? process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "")
     : "") || "https://www.fureaino-oka.com";
 
-export type AreaBreadcrumbPage = "main" | "subsidy" | "cleanup";
+export type AreaBreadcrumbPage = "main" | "subsidy" | "cleanup" | "garbage" | "cost";
 
 interface AreaBreadcrumbsProps {
   prefecture: string;
@@ -18,8 +18,10 @@ interface AreaBreadcrumbsProps {
 
 const PAGE_LABELS: Record<AreaBreadcrumbPage, string> = {
   main: "",
-  subsidy: "空き家・補助金",
+  subsidy: "補助金を探す",
   cleanup: "遺品整理・相場",
+  garbage: "粗大ゴミ・遺品整理",
+  cost: "費用相場を見る",
 };
 
 /**
@@ -37,9 +39,11 @@ export default function AreaBreadcrumbs({ prefecture, city, prefectureId, cityId
   ];
   if (page !== "main") {
     const label = PAGE_LABELS[page];
+    const segment =
+      page === "subsidy" ? "subsidy" : page === "garbage" ? "garbage" : page === "cost" ? "cost" : "cleanup";
     items.push({
       name: label,
-      path: page === "subsidy" ? `/area/${p}/${c}/subsidy` : `/area/${p}/${c}/cleanup`,
+      path: `/area/${p}/${c}/${segment}`,
     });
   }
 
