@@ -29,9 +29,20 @@ export default function AreaIndexPage() {
       <JapanMapNav />
 
       <div className="space-y-6">
-        {Object.entries(byPrefecture).map(([prefecture, rows]) => (
+        {Object.entries(byPrefecture).map(([prefecture, rows]) => {
+          const firstIds = rows[0] ? getAreaIds(rows[0].prefecture, rows[0].city) : null;
+          const prefId = firstIds?.prefectureId;
+          return (
           <div key={prefecture} id={prefecture}>
-            <h2 className="font-bold text-lg text-foreground/80 mb-3">{prefecture}</h2>
+            <h2 className="font-bold text-lg text-foreground/80 mb-3">
+              {prefId ? (
+                <Link href={`/area/${prefId}`} className="hover:text-primary hover:underline">
+                  {prefecture}
+                </Link>
+              ) : (
+                prefecture
+              )}
+            </h2>
             <ul className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
               {rows.map((r) => {
                 const ids = getAreaIds(r.prefecture, r.city);
@@ -62,7 +73,8 @@ export default function AreaIndexPage() {
               );})}
             </ul>
           </div>
-        ))}
+          );
+        })}
       </div>
       {/* トピッククラスター：実家じまい・費用・診断への送客 */}
       <section className="bg-primary-light/30 rounded-2xl border border-primary/20 p-6">

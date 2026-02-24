@@ -32,7 +32,7 @@ export default function AreaBreadcrumbs({ prefecture, city, prefectureId, cityId
   const items: { name: string; path: string }[] = [
     { name: "ホーム", path: "/" },
     { name: "地域一覧", path: "/area" },
-    { name: prefecture, path: `/area#${encodeURIComponent(prefecture)}` },
+    { name: prefecture, path: `/area/${p}` },
     { name: city, path: `/area/${p}/${c}` },
   ];
   if (page !== "main") {

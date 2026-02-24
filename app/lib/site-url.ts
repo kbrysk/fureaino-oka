@@ -21,3 +21,14 @@ export function getBaseUrl(): string {
 export function getCanonicalBase(): string {
   return CANONICAL_BASE.replace(/\/$/, "");
 }
+
+/**
+ * パラメータ・ハッシュを含まない Canonical 用の絶対URL。
+ * ?l=xxx 等の重複インデックスを防ぎ、Search Console の評価を正規URLに集約する。
+ */
+export function getCanonicalUrl(pathname: string): string {
+  const base = getCanonicalBase();
+  const clean = pathname.replace(/\?.*$/, "").replace(/#.*$/, "").trim();
+  const path = !clean || clean === "/" ? "" : clean.startsWith("/") ? clean : `/${clean}`;
+  return path ? `${base}${path}` : `${base}/`;
+}

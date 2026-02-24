@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "picsum.photos", pathname: "/**" },
     ],
   },
+  // SEO: index.html 付きURLをクリーンなURLへ 301 正規化（重複コンテンツ防止）
   async redirects() {
     return [
       { source: "/index.html", destination: "/", permanent: true },

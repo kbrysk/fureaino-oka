@@ -4,6 +4,7 @@ import { getAreaById, getAreaIdSlugs, getAreaIds } from "../../../../lib/area-da
 import { getAreaSeizenseiriColumn, getAreaOwlColumn } from "../../../../lib/area-column";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
 import AreaOwlBlock from "../../../../components/AreaOwlBlock";
+import CleanupAffiliateCard from "../../../../components/CleanupAffiliateCard";
 import { pageTitle } from "../../../../lib/site-brand";
 
 interface Props {
@@ -83,6 +84,8 @@ export default async function AreaCleanupPage({ params }: Props) {
           </p>
         </div>
       </div>
+
+      <CleanupAffiliateCard cityName={area.city} cityId={ids.cityId} />
 
       {/* PLG導線: 荷物量で費用シミュレーション */}
       <div className="bg-primary rounded-2xl p-6 text-white text-center">

@@ -7,8 +7,23 @@ function containsJapanese(str: string): boolean {
   return /[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf\u3000-\u303f]/.test(str);
 }
 
+/** 中古ドメイン時代の残骸：410 Gone で「永久に消滅」を伝えインデックス削除を促す */
+const LEGACY_410_PREFIXES = ["/tenmon", "/shizen", "/search"] as const;
+const LEGACY_410_EXACT = "/parking.php";
+
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+
+  // 1. 中古ドメイン遺物 → 410 Gone（Search Console でインデックス削除を促す）
+  if (pathname === LEGACY_410_EXACT) {
+    return new NextResponse(null, { status: 410 });
+  }
+  for (const prefix of LEGACY_410_PREFIXES) {
+    if (pathname === prefix || pathname.startsWith(`${prefix}/`)) {
+      return new NextResponse(null, { status: 410 });
+    }
+  }
+
   const segments = pathname.split("/").filter(Boolean);
 
   if (segments.length < 3) return NextResponse.next();
@@ -41,5 +56,12 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/area/:path*", "/tax-simulator/:path*"],
+  matcher: [
+    "/area/:path*",
+    "/tax-simulator/:path*",
+    "/tenmon/:path*",
+    "/shizen/:path*",
+    "/search/:path*",
+    "/parking.php",
+  ],
 };

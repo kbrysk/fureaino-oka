@@ -55,8 +55,8 @@ interface JsonLdBreadcrumbProps {
 }
 
 /**
- * 現在パスから BreadcrumbList の JSON-LD を生成（SEO: 検索結果のパンくず表示）
- * layout で1回だけ読み込み、全ページに出力する。
+ * 現在パスから BreadcrumbList の JSON-LD を生成（SEO: 検索結果のパンくず表示・クローラー巡回効率）
+ * layout で1回だけ読み込み、4,000+ 地域ページ含む全ページに出力。item はパラメータなし絶対URLで評価を正規URLに集約。
  */
 export default function JsonLdBreadcrumb({ baseUrl }: JsonLdBreadcrumbProps) {
   const pathname = usePathname();
@@ -79,7 +79,7 @@ export default function JsonLdBreadcrumb({ baseUrl }: JsonLdBreadcrumbProps) {
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      item: `${baseUrl}${item.path === "/" ? "" : item.path}`,
+      item: `${baseUrl}${item.path === "/" ? "" : item.path}`.replace(/\?.*$/, ""),
     })),
   };
 

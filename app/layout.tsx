@@ -5,8 +5,9 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import MobileFooterBar from "./components/MobileFooterBar";
 import JsonLdBreadcrumb from "./components/JsonLdBreadcrumb";
+import AreaNavigation from "./components/AreaNavigation";
 import { SITE_TITLE_TOP, SITE_NAME_LOGO, SITE_NAME_SHORT } from "./lib/site-brand";
-import { getBaseUrl, getCanonicalBase } from "./lib/site-url";
+import { getBaseUrl, getCanonicalBase, getCanonicalUrl } from "./lib/site-url";
 
 /** Google AdSense 審査用パブリッシャーID（next/third-parties に GoogleAdSense はないため next/script で同等の読み込み） */
 const GOOGLE_ADSENSE_PUBLISHER_ID = "ca-pub-8324936850324481";
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     apple: APPLE_TOUCH_ICON_PATH,
   },
   alternates: {
-    canonical: "./",
+    canonical: getCanonicalUrl("/"),
   },
   openGraph: {
     type: "website",
@@ -119,6 +120,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${geistSans.variable} antialiased overflow-x-hidden`}>
+        {/* 4,000+ 地域ページ含む全ページで BreadcrumbList を出力し、クローラー効率と検索結果のパンくず表示を強化 */}
         <JsonLdBreadcrumb baseUrl={canonicalOrigin} />
         {/* Google Tag Manager (noscript) - body 開始直後 */}
         <noscript>
@@ -137,6 +139,9 @@ export default function RootLayout({
           <main className="flex-1 shrink-0 max-w-5xl mx-auto w-full px-4 py-8 pb-24 overflow-x-visible" id="main-content">
             {children}
           </main>
+          <div className="no-print shrink-0">
+            <AreaNavigation />
+          </div>
           <div className="no-print shrink-0">
             <Footer />
           </div>

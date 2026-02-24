@@ -6,6 +6,7 @@ import { getAreaSeizenseiriColumn, getAreaOwlColumn } from "../../../lib/area-co
 import AreaBreadcrumbs from "../../../components/AreaBreadcrumbs";
 import AreaOwlBlock from "../../../components/AreaOwlBlock";
 import AreaBulkyWasteLink from "../../../components/AreaBulkyWasteLink";
+import CleanupAffiliateCard from "../../../components/CleanupAffiliateCard";
 import { pageTitle } from "../../../lib/site-brand";
 
 interface Props {
@@ -105,6 +106,8 @@ export default async function AreaPage({ params }: Props) {
           </Link>
         </div>
       </div>
+
+      <CleanupAffiliateCard cityName={area.city} cityId={ids.cityId} />
 
       <div className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">

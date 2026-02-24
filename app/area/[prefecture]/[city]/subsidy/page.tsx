@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getAreaById, getAreaIdSlugs, getAreaIds } from "../../../../lib/area-data";
-import { getAreaSeizenseiriColumn, getAreaOwlColumn } from "../../../../lib/area-column";
+import { getMunicipalityData, getMunicipalitySlugs } from "../../../../lib/data/municipalities";
+import { getAreaById, getAreaIds } from "../../../../lib/area-data";
+import { getAreaSeizenseiriColumn } from "../../../../lib/area-column";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
 import AreaOwlBlock from "../../../../components/AreaOwlBlock";
 import AreaBulkyWasteLink from "../../../../components/AreaBulkyWasteLink";
@@ -12,59 +13,69 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getAreaIdSlugs().map(({ prefectureId, cityId }) => ({
-    prefecture: prefectureId,
-    city: cityId,
+  return getMunicipalitySlugs().map(({ prefecture, city }) => ({
+    prefecture,
+    city,
   }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { prefecture, city } = await params;
-  const area = getAreaById(prefecture, city);
-  if (!area) return { title: pageTitle("空き家・補助金") };
+  const data = await getMunicipalityData(prefecture, city);
+  if (!data) return { title: pageTitle("空き家・補助金") };
+
+  if (data.subsidy.hasSubsidy && data.subsidy.maxAmount) {
+    const amount = data.subsidy.maxAmount.replace(/最大|万円|円/g, "").trim() || "〇〇";
+    return {
+      title: pageTitle(
+        `${data.cityName}（${data.prefName}）の空き家解体補助金は最大${amount}万円！対象条件と粗大ゴミの捨て方`
+      ),
+      description: `${data.prefName}${data.cityName}の空き家解体補助金「${data.subsidy.name ?? "自治体補助"}」は${data.subsidy.maxAmount}。対象条件・申請方法と粗大ゴミの申し込み案内。`,
+    };
+  }
+
   return {
-    title: pageTitle(`${area.city}（${area.prefecture}）空き家 解体 補助金・3000万円控除`),
-    description: `${area.prefecture}${area.city}の空き家解体補助金・相続空き家の3000万円特別控除の相談窓口と概要。`,
+    title: pageTitle(`${data.cityName}（${data.prefName}）の空き家解体補助金・3000万円控除の相談`),
+    description: `${data.prefName}${data.cityName}の空き家解体補助金・相続空き家の3000万円特別控除の相談窓口と概要。専門家への無料相談がおすすめです。`,
   };
 }
 
 export default async function AreaSubsidyPage({ params }: Props) {
   const { prefecture, city } = await params;
-  const area = getAreaById(prefecture, city);
-  if (!area) notFound();
-  const ids = getAreaIds(area.prefecture, area.city)!;
+  const data = await getMunicipalityData(prefecture, city);
+  if (!data) notFound();
 
-  const subsidyText = area.subsidyNote || `${area.city}では、空き家の解体に際して自治体の補助金や、相続した空き家の譲渡所得から3000万円まで控除できる特例（相続空き家の3000万円特別控除）の対象になるかどうか、市区町村の窓口や税理士にご確認ください。`;
-
-  const bulkyWasteSummary =
-    area.bulkyWasteUrl.startsWith("https://www.google.com/search")
-      ? `${area.city}の粗大ゴミは、自治体の案内に従って申し込みます。申し込み方法・収集日・料金は市区町村により異なります。`
-      : `${area.city}の粗大ゴミ回収は、自治体の公式案内で申し込み方法・収集日・料金を確認できます。`;
-
+  const area = getAreaById(data.prefId, data.cityId);
   const cleanupPriceText =
-    area.cleanupPriceNote ||
-    `${area.city}では、遺品整理・実家の片付けは、部屋数・荷物量・立地により相場が異なります。1Kで十数万円〜、2LDKで20〜40万円程度、3LDK以上で40万円〜が目安となることが多いです。複数社の無料見積もりで比較することをおすすめします。`;
+    area?.cleanupPriceNote ||
+    `${data.cityName}では、遺品整理・実家の片付けは、部屋数・荷物量・立地により相場が異なります。1Kで十数万円〜、2LDKで20〜40万円程度、3LDK以上で40万円〜が目安となることが多いです。複数社の無料見積もりで比較することをおすすめします。`;
 
   return (
     <div className="space-y-8">
-      <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="subsidy" />
+      <AreaBreadcrumbs
+        prefecture={data.prefName}
+        city={data.cityName}
+        prefectureId={data.prefId}
+        cityId={data.cityId}
+        page="subsidy"
+      />
       <div>
         <h1 className="text-2xl font-bold text-primary">
-          {area.city}（{area.prefecture}）の空き家 解体補助金・3000万円控除
+          {data.cityName}（{data.prefName}）の空き家 解体補助金・3000万円控除
         </h1>
         <p className="text-foreground/60 mt-1">
           空き家の解体補助金と、相続空き家の3000万円特別控除の相談の目安です。
         </p>
       </div>
 
-      <AreaOwlBlock cityName={area.city} />
+      <AreaOwlBlock cityName={data.cityName} />
 
       <section className="bg-amber-50/80 rounded-2xl border border-amber-200/60 p-5">
         <h2 className="text-sm font-bold text-amber-900/90 mb-2">
-          {area.city}（{area.prefecture}）の生前整理コラム
+          {data.cityName}（{data.prefName}）の生前整理コラム
         </h2>
         <p className="text-sm text-foreground/80 leading-relaxed">
-          {getAreaSeizenseiriColumn(area.prefecture, area.city)}
+          {getAreaSeizenseiriColumn(data.prefName, data.cityName)}
         </p>
       </section>
 
@@ -73,68 +84,102 @@ export default async function AreaSubsidyPage({ params }: Props) {
           モグ隊長（フクロウ）のひとこと
         </h2>
         <p className="text-sm text-foreground/80 leading-relaxed">
-          {getAreaOwlColumn(area.prefecture, area.city)}
+          {data.mascot.localRiskText}
         </p>
       </section>
 
-      {/* {city}の粗大ゴミ回収ルール概要 */}
       <div className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
-          <h2 className="font-bold text-primary">{area.city}の粗大ゴミ回収ルール概要</h2>
+          <h2 className="font-bold text-primary">{data.cityName}の粗大ゴミ回収ルール概要</h2>
         </div>
         <div className="p-6 space-y-3">
-          <p className="text-sm text-foreground/70 leading-relaxed">{bulkyWasteSummary}</p>
+          <p className="text-sm text-foreground/70 leading-relaxed">
+            {data.cityName}の粗大ゴミ回収は、自治体の公式案内で申し込み方法・収集日・料金を確認できます。
+          </p>
           <AreaBulkyWasteLink
-            href={area.bulkyWasteUrl}
-            prefecture={area.prefecture}
-            city={area.city}
+            href={data.garbage.officialUrl}
+            prefecture={data.prefName}
+            city={data.cityName}
           >
-            {area.bulkyWasteUrl.startsWith("https://www.google.com/search")
-              ? `${area.prefecture}${area.city}の粗大ゴミ案内を検索`
-              : `${area.city}の粗大ゴミ申し込み案内を見る`}
+            {data.cityName}の粗大ゴミ受付ページ（公式サイト）へ
           </AreaBulkyWasteLink>
         </div>
       </div>
 
-      {/* {city}で使える可能性のある補助金リスト */}
       <div className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
-          <h2 className="font-bold text-primary">{area.city}で使える可能性のある補助金</h2>
+          <h2 className="font-bold text-primary">{data.cityName}で使える可能性のある補助金</h2>
         </div>
         <div className="p-6 space-y-4">
-          <ul className="list-disc list-inside space-y-2 text-sm text-foreground/70">
-            <li>空き家解体・除却に伴う補助金（自治体により要件・上限あり）</li>
-            <li>相続空き家の3000万円特別控除（譲渡所得から控除。条件あり）</li>
-            <li>空き家バンク登録・改修補助（自治体による）</li>
-          </ul>
-          <p className="text-sm text-foreground/70 leading-relaxed">{subsidyText}</p>
+          {data.subsidy.hasSubsidy ? (
+            <>
+              <ul className="list-disc list-inside space-y-2 text-sm text-foreground/70">
+                {data.subsidy.name && <li><strong>制度名：</strong>{data.subsidy.name}</li>}
+                {data.subsidy.maxAmount && <li><strong>補助額：</strong>{data.subsidy.maxAmount}</li>}
+                {data.subsidy.conditions && <li><strong>対象条件：</strong>{data.subsidy.conditions}</li>}
+              </ul>
+              {data.subsidy.officialUrl && (
+                <a
+                  href={data.subsidy.officialUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-4 py-2 rounded-xl bg-primary text-white text-sm font-medium hover:opacity-90 transition"
+                >
+                  自治体の公式案内はこちら
+                </a>
+              )}
+            </>
+          ) : (
+            <>
+              <p className="text-sm text-foreground/70 leading-relaxed">
+                現在、{data.cityName}独自の空き家解体特化の補助金は確認されていません。しかし、国や県の制度が使える場合があるため、専門家への無料相談をおすすめします。
+              </p>
+              {/* CRO: 補助金なし時の節税メリット訴求CTA */}
+              <div className="mt-4 p-4 rounded-xl bg-primary-light/60 border border-primary/30">
+                <p className="text-sm font-medium text-foreground/90 mb-2">
+                  補助金がなくても、諦めるのは早いです！
+                </p>
+                <p className="text-sm text-foreground/80 leading-relaxed mb-4">
+                  「相続空き家の3,000万円控除」という特例を使えば、売却時の税金を数百万円単位で抑えられる可能性があります。まずは対象かどうか、無料査定でプロに確認してみましょう。
+                </p>
+                <Link
+                  href="/tools/appraisal"
+                  className="inline-block px-4 py-2.5 rounded-xl bg-primary text-white text-sm font-bold hover:opacity-90 transition"
+                >
+                  無料査定で対象か確認する
+                </Link>
+              </div>
+            </>
+          )}
           <p className="text-xs text-foreground/50">
             制度の要件・申請方法は自治体により異なります。必ずお住まいの市区町村窓口または税理士にご確認ください。
           </p>
         </div>
       </div>
 
-      {/* {city}対応の遺品整理業者の相場 */}
       <div className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
-          <h2 className="font-bold text-primary">{area.city}対応の遺品整理業者の相場</h2>
+          <h2 className="font-bold text-primary">{data.cityName}対応の遺品整理業者の相場</h2>
         </div>
         <div className="p-6 space-y-4">
           <p className="text-sm text-foreground/70 leading-relaxed">{cleanupPriceText}</p>
           <Link
-            href={`/area/${ids.prefectureId}/${ids.cityId}/cleanup`}
+            href={`/area/${data.prefId}/${data.cityId}/cleanup`}
             className="inline-block text-primary font-medium hover:underline"
           >
-            {area.city}の片付け相場・詳細を見る →
+            {data.cityName}の片付け相場・詳細を見る →
           </Link>
         </div>
       </div>
 
-      {/* PLG導線: 補助金対象か30秒で判定 */}
+      {/* PLG導線: 補助金対象か30秒で判定 ＋ 高単価査定導線・マイクロコピー */}
       <div className="bg-primary rounded-2xl p-6 text-white text-center">
         <p className="font-bold mb-2">あなたの実家が補助金の対象か、モグ隊長が30秒で判定！</p>
         <p className="text-sm text-white/80 mb-4">
           空き家の維持費シミュレーターで「10年でいくらかかるか」を確認し、売却・活用の相談につなげましょう。
+        </p>
+        <p className="text-xs text-white/60 mb-3">
+          ※自治体の窓口に代わって、専門家が制度の適用可否を無料でアドバイスします
         </p>
         <Link
           href="/tools/empty-house-tax"
@@ -149,14 +194,22 @@ export default async function AreaSubsidyPage({ params }: Props) {
         >
           実家じまい力診断を受ける
         </Link>
+        <div className="mt-4 pt-4 border-t border-white/20">
+          <Link
+            href="/tools/appraisal"
+            className="text-sm text-white/90 hover:text-white underline"
+          >
+            {data.cityName}の不動産売却相場をチェック
+          </Link>
+        </div>
       </div>
 
       <div className="flex flex-wrap gap-3">
         <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
           ← 地域一覧（全国）へ
         </Link>
-        <Link href={`/area/${ids.prefectureId}/${ids.cityId}`} className="inline-block text-primary font-medium hover:underline">
-          ← {area.city}の粗大ゴミ・遺品整理ページへ
+        <Link href={`/area/${data.prefId}/${data.cityId}`} className="inline-block text-primary font-medium hover:underline">
+          ← {data.cityName}の粗大ゴミ・遺品整理ページへ
         </Link>
       </div>
 

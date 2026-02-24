@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getBlogPost, getBlogPostIds } from "../../lib/microcms";
 import { pageTitle, SITE_NAME_FULL } from "../../lib/site-brand";
-import { getCanonicalBase } from "../../lib/site-url";
+import { getCanonicalBase, getCanonicalUrl } from "../../lib/site-url";
 import { format } from "date-fns";
 import { ja } from "date-fns/locale";
 import ArticleLineCTABanner from "../../components/articles/ArticleLineCTABanner";
@@ -29,9 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const bodyText = post.content ?? post.body ?? "";
   const description =
     post.description ?? (bodyText ? bodyText.replace(/<[^>]+>/g, "").slice(0, 160) + "…" : undefined);
-  const base = getCanonicalBase();
   const ogImage = post.ogpImage?.url ?? post.thumbnail?.url;
-  const url = `${base}/articles/${id}`;
+  const url = getCanonicalUrl(`/articles/${id}`);
 
   return {
     title: pageTitle(title),
