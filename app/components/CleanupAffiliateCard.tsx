@@ -1,8 +1,45 @@
 "use client";
 
-/** アールクリーニング A8 直リンク（計測漏れ防止のため <a> 直リンク・next/image 不使用） */
-const A8_CLEANUP_CLICK = "https://px.a8.net/svt/ejp?a8mat=4AXE4D+BUADWY+4X26+NTRMQ";
-const A8_CLEANUP_IMP = "https://www12.a8.net/0.gif?a8mat=4AXE4D+BUADWY+4X26+NTRMQ";
+/**
+ * アールクリーニング対象エリア（首都圏）。
+ * cityName がこの配列に含まれる場合のみアールクリーニングを表示し、それ以外は ECOクリーン（全国）とする。
+ */
+const R_CLEANING_CITIES: string[] = [
+  // 東京23区
+  "千代田区", "中央区", "港区", "新宿区", "文京区", "台東区", "墨田区", "江東区", "品川区", "目黒区", "大田区", "世田谷区", "渋谷区", "中野区", "杉並区", "豊島区", "北区", "荒川区", "板橋区", "練馬区", "足立区", "葛飾区", "江戸川区",
+  // 東京その他
+  "八王子市", "立川市", "武蔵野市", "三鷹市", "青梅市", "府中市", "昭島市", "調布市", "町田市", "小金井市", "小平市", "日野市", "東村山市", "国分寺市", "国立市", "福生市", "狛江市", "東大和市", "清瀬市", "東久留米市", "武蔵村山市", "多摩市", "稲城市", "羽村市", "あきる野市", "西東京市", "瑞穂町", "日の出町",
+  // 埼玉・さいたま市の区
+  "さいたま市", "西区", "北区", "大宮区", "見沼区", "桜区", "浦和区", "南区", "緑区", "岩槻区",
+  // 埼玉その他
+  "川越市", "川口市", "所沢市", "春日部市", "狭山市", "上尾市", "草加市", "越谷市", "蕨市", "戸田市", "入間市", "朝霞市", "志木市", "和光市", "新座市", "八潮市", "富士見市", "三郷市", "蓮田市", "吉川市", "ふじみ野市", "白岡市", "三芳町", "松伏町",
+  // 神奈川・横浜市の区
+  "横浜市", "鶴見区", "神奈川区", "西区", "中区", "南区", "保土ケ谷区", "磯子区", "金沢区", "港北区", "戸塚区", "港南区", "旭区", "緑区", "瀬谷区", "栄区", "泉区", "青葉区", "都筑区",
+  // 神奈川・川崎市の区
+  "川崎市", "川崎区", "幸区", "中原区", "高津区", "多摩区", "宮前区", "麻生区",
+  // 神奈川その他
+  "相模原市", "横須賀市", "平塚市", "鎌倉市", "藤沢市", "茅ヶ崎市", "逗子市", "秦野市", "厚木市", "大和市", "伊勢原市", "海老名市", "座間市", "綾瀬市", "葉山町", "寒川町", "愛川町", "清川村",
+  // 千葉・千葉市の区
+  "千葉市", "花見川区", "稲毛区", "若葉区", "美浜区",
+  // 千葉その他（中央区は上で東京・埼玉と重複のため1件でよい）
+  "市川市", "船橋市", "松戸市", "野田市", "佐倉市", "習志野市", "柏市", "流山市", "八千代市", "我孫子市", "鎌ケ谷市", "浦安市", "四街道市", "印西市", "白井市",
+];
+
+const R_CLEANING_SET = new Set(R_CLEANING_CITIES);
+
+/** アールクリーニング（首都圏）A8 */
+const A8_R_CLICK = "https://px.a8.net/svt/ejp?a8mat=4AXE4D+BUADWY+4X26+NTRMQ";
+const A8_R_IMP = "https://www12.a8.net/0.gif?a8mat=4AXE4D+BUADWY+4X26+NTRMQ";
+
+/** ECOクリーン（全国）A8 */
+const A8_ECO_CLICK = "https://px.a8.net/svt/ejp?a8mat=4AXDCK+E68I7M+36X8+15OK2A";
+const A8_ECO_IMP = "https://www18.a8.net/0.gif?a8mat=4AXDCK+E68I7M+36X8+15OK2A";
+
+/** cityName がアールクリーニング対象エリアかどうか。不一致時は false（ECOクリーン表示） */
+function isRCleaningArea(cityName: string): boolean {
+  if (typeof cityName !== "string" || !cityName.trim()) return false;
+  return R_CLEANING_SET.has(cityName.trim());
+}
 
 /** cityId から決定的なオフセットを算出（同一市区町村で一貫した相場表示） */
 function getPriceOffset(cityId: string): number {
@@ -32,6 +69,13 @@ interface CleanupAffiliateCardProps {
 
 export default function CleanupAffiliateCard({ cityName, cityId }: CleanupAffiliateCardProps) {
   const prices = getPriceRanges(cityId);
+  const isR = isRCleaningArea(cityName);
+  const clickUrl = isR ? A8_R_CLICK : A8_ECO_CLICK;
+  const impUrl = isR ? A8_R_IMP : A8_ECO_IMP;
+  const buttonText = isR ? "【業界最安値水準】アールクリーニングに無料相談する 👉" : "【全国対応・24時間】ECOクリーンに無料相談する 👉";
+  const microcopy = isR
+    ? `※お見積り後のキャンセルも無料です。まずは${cityName}の実家の片付け費用を確認してみましょう。`
+    : `※${cityName}の最短当日対応も可能です。まずは無料で見積もりを取って相場を確認しましょう。`;
 
   return (
     <section
@@ -61,22 +105,22 @@ export default function CleanupAffiliateCard({ cityName, cityId }: CleanupAffili
 
         <div className="pt-2">
           <a
-            href={A8_CLEANUP_CLICK}
+            href={clickUrl}
             target="_blank"
             rel="nofollow noopener noreferrer"
             className="flex flex-col items-center justify-center w-full py-4 px-5 rounded-xl font-bold text-white bg-orange-500 border-2 border-orange-600/80 shadow-md hover:bg-orange-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
           >
-            <span className="text-lg drop-shadow-sm">【業界最安値水準】アールクリーニングに無料相談する 👉</span>
+            <span className="text-lg drop-shadow-sm">{buttonText}</span>
           </a>
           <p className="text-center text-xs text-amber-950/80 mt-2">
-            ※お見積り後のキャンセルも無料です。まずは{cityName}の実家の片付けにいくらかかるか確認してみましょう。
+            {microcopy}
           </p>
         </div>
       </div>
-      {/* A8 インプレッション計測（next/image 不使用・計測漏れ防止） */}
+      {/* A8 インプレッション計測（next/image 不使用・loading=lazy なし・計測漏れ防止） */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={A8_CLEANUP_IMP}
+        src={impUrl}
         width={1}
         height={1}
         alt=""
