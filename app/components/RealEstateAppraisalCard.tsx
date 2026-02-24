@@ -4,6 +4,10 @@ import Link from "next/link";
 
 const WAKEGAI_KEYWORDS = /老朽|放置|特定空家|倒壊|危険/;
 
+/** A8.net インプレッション計測用 1px 画像（レイアウト崩れなし・隠し要素） */
+const A8_IMP_NOMU = "https://www13.a8.net/0.gif?a8mat=4AXE4D+D2CGOI+5M76+BWVTE";
+const A8_IMP_WAKEGAI = "https://www13.a8.net/0.gif?a8mat=4AXDCK+E6TXTE+5J56+5YRHE";
+
 function useVariant(localRiskText: string | null | undefined): "wakegai" | "nomu" {
   if (typeof localRiskText !== "string" || !localRiskText) return "nomu";
   return WAKEGAI_KEYWORDS.test(localRiskText) ? "wakegai" : "nomu";
@@ -19,7 +23,6 @@ export default function RealEstateAppraisalCard({ cityName, cityId, localRiskTex
   const variant = useVariant(localRiskText);
   const type = variant;
   const href = `/api/affiliate/appraisal?area=${encodeURIComponent(cityId)}&type=${type}`;
-  const impSrc = `/api/affiliate/appraisal?area=${encodeURIComponent(cityId)}&type=${type}&imp=1`;
 
   if (variant === "wakegai") {
     return (
@@ -82,9 +85,9 @@ export default function RealEstateAppraisalCard({ cityName, cityId, localRiskTex
         </Link>
       </div>
       <div className="h-px overflow-hidden" aria-hidden>
-        {/* A8インプレッション計測用1px画像 */}
+        {/* A8インプレッション計測用1px画像（ノムコム） */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={impSrc} alt="" width={1} height={1} className="block w-px h-px" />
+        <img src={A8_IMP_NOMU} alt="" width={1} height={1} className="block w-px h-px" />
       </div>
     </section>
   );
