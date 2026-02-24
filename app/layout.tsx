@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import MobileFooterBar from "./components/MobileFooterBar";
 import JsonLdBreadcrumb from "./components/JsonLdBreadcrumb";
 import AreaNavigation from "./components/AreaNavigation";
+import { AreaCtaProvider } from "./components/AreaCtaContext";
+import GlobalStickyCTA from "./components/GlobalStickyCTA";
 import { SITE_TITLE_TOP, SITE_NAME_LOGO, SITE_NAME_SHORT } from "./lib/site-brand";
 import { getBaseUrl, getCanonicalBase, getCanonicalUrl } from "./lib/site-url";
 
@@ -132,23 +134,26 @@ export default function RootLayout({
             title="Google Tag Manager"
           />
         </noscript>
-        <div className="min-h-screen flex flex-col" data-layout="root">
-          <div className="no-print shrink-0">
-            <Navigation />
+        <AreaCtaProvider>
+          <div className="min-h-screen flex flex-col" data-layout="root">
+            <div className="no-print shrink-0">
+              <Navigation />
+            </div>
+            <main className="flex-1 shrink-0 max-w-5xl mx-auto w-full px-4 py-8 pb-24 overflow-x-visible" id="main-content">
+              {children}
+            </main>
+            <div className="no-print shrink-0">
+              <AreaNavigation />
+            </div>
+            <div className="no-print shrink-0">
+              <Footer />
+            </div>
+            <div className="no-print" aria-hidden>
+              <MobileFooterBar />
+            </div>
           </div>
-          <main className="flex-1 shrink-0 max-w-5xl mx-auto w-full px-4 py-8 pb-24 overflow-x-visible" id="main-content">
-            {children}
-          </main>
-          <div className="no-print shrink-0">
-            <AreaNavigation />
-          </div>
-          <div className="no-print shrink-0">
-            <Footer />
-          </div>
-          <div className="no-print" aria-hidden>
-            <MobileFooterBar />
-          </div>
-        </div>
+          <GlobalStickyCTA />
+        </AreaCtaProvider>
       </body>
     </html>
   );

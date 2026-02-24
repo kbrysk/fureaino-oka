@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import JikkaOptimizer from "@/app/components/JikkaOptimizer";
 import type { JikkaRegionalStats } from "@/app/components/JikkaOptimizer";
+import { getOptimalCtaUrl } from "@/app/lib/utils/cta-router";
 
 export interface OptimizerAreaOption {
   prefectureId: string;
@@ -37,10 +38,12 @@ export default function OptimizerToolClient({
   const statsKey = selectedPrefId && selectedCityId ? `${selectedPrefId}-${selectedCityId}` : "";
   const regionalStats = statsKey ? (statsMap[statsKey] ?? null) : null;
   const hasSelection = Boolean(selectedPrefId && selectedCityId);
+  const ctaUrl = getOptimalCtaUrl(selectedPrefId || undefined, selectedCityId || undefined);
+  const ctaLabel = selectedCityName ? `${selectedCityName}の無料査定を依頼する` : "地域を選択して査定相場を見る";
 
   return (
     <div className="space-y-6">
-      <section className="rounded-2xl border-2 border-slate-200 bg-white p-5 shadow-sm">
+      <section id="area-selector" className="rounded-2xl border-2 border-slate-200 bg-white p-5 shadow-sm">
         <h2 className="font-bold text-slate-800 text-lg mb-4">診断する地域を選ぶ</h2>
         <div className="flex flex-wrap gap-4 items-end">
           <div className="min-w-[140px]">
@@ -97,6 +100,8 @@ export default function OptimizerToolClient({
           cityId={selectedCityId || "default"}
           regionalStats={regionalStats}
           initialLayout={initialLayout}
+          ctaHref={ctaUrl}
+          ctaLabel={ctaLabel}
         />
       </section>
     </div>

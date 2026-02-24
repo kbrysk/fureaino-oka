@@ -40,16 +40,16 @@ function HeroJikkaCta() {
   );
 
   return (
-    <div className="w-full pt-10 pb-2 flex flex-col items-start gap-3">
-      <div className="flex flex-wrap items-center gap-3 w-full">
-        <label htmlFor="hero-layout" className="text-sm font-medium text-slate-700 shrink-0">
+    <div className="w-full pt-4 pb-1 flex flex-col items-start gap-2 md:pt-10 md:pb-2 md:gap-3">
+      <div className="flex flex-wrap items-center gap-2 md:gap-3 w-full">
+        <label htmlFor="hero-layout" className="text-xs md:text-sm font-medium text-slate-700 shrink-0">
           間取り
         </label>
         <select
           id="hero-layout"
           value={layout}
           onChange={handleLayoutChange}
-          className="rounded-lg border-2 border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-800 focus:ring-2 focus:ring-primary focus:border-primary min-w-[120px]"
+          className="rounded-lg border-2 border-slate-300 bg-white px-3 py-1 md:py-2 text-xs md:text-sm font-medium text-slate-800 focus:ring-2 focus:ring-primary focus:border-primary min-w-[100px]"
           aria-label="間取りを選んで診断へ"
         >
           <option value="1K">1K</option>
@@ -62,7 +62,7 @@ function HeroJikkaCta() {
         <span className="hero-cta-ribbon absolute -top-0.5 left-2 -rotate-12 z-10 px-1.5 py-0.5 text-[9px] font-bold tracking-wide text-primary bg-primary-light border border-primary/40 shadow-md rounded" aria-hidden>100%完全無料</span>
         <Link
           href={optimizerUrl}
-          className="hero-cta-button animate-soft-pulse relative inline-block w-full overflow-hidden text-center bg-gradient-to-r from-[#f26601] to-[#ff8c3a] text-white px-6 py-3.5 sm:py-4 rounded-xl text-base sm:text-lg font-bold transition-all duration-300 shadow-[0_20px_40px_-15px_rgba(242,102,1,0.4)] hover:shadow-[0_24px_48px_-12px_rgba(242,102,1,0.5)] hover:brightness-105"
+          className="hero-cta-button animate-soft-pulse relative inline-block w-full overflow-hidden text-center bg-gradient-to-r from-[#f26601] to-[#ff8c3a] text-white px-4 py-2.5 md:px-6 md:py-3.5 sm:py-4 rounded-xl text-sm md:text-base sm:text-lg font-bold transition-all duration-300 shadow-[0_20px_40px_-15px_rgba(242,102,1,0.4)] hover:shadow-[0_24px_48px_-12px_rgba(242,102,1,0.5)] hover:brightness-105"
         >
           【無料】あなたの実家はあと何年で『赤字』になる？（30秒診断）
         </Link>
@@ -168,7 +168,7 @@ export default function Home() {
     <div className="space-y-8">
       {/* Hero：引きの画角（画像は左側 max-w で制限）・右は白背景へグラデで溶かす */}
       <div className="relative left-1/2 -ml-[50vw] w-screen overflow-hidden max-h-[600px] md:max-h-[650px] lg:max-h-[700px] xl:max-h-[800px] bg-[#FFFDF9]">
-        <section className="relative w-full min-h-[420px] md:min-h-[520px] overflow-hidden bg-[#FFFDF9]">
+        <section className="relative w-full min-h-0 md:min-h-[520px] overflow-hidden bg-[#FFFDF9]">
           {/* 背景画像：左アンカー・最大幅 1400px で過剰ズーム防止 */}
           <div
             className="hero-panorama-bg absolute left-0 top-0 bottom-0 w-full max-w-[1400px] h-full bg-cover bg-[position:8%_center]"
@@ -177,14 +177,15 @@ export default function Home() {
           />
           <div className="hero-panorama-gradient absolute inset-0 w-full h-full pointer-events-none" aria-hidden />
 
-          {/* コンテンツ：max-w-7xl で保護・右ブロックは厳格な左揃え（見えない縦軸） */}
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row md:justify-end md:items-center min-h-[420px] md:min-h-[520px] pt-10 md:pt-12 pb-12">
+          {/* コンテンツ：スマホは余白圧縮でCTA収納。グラデーションで上部は写真・下部は白に二分。PCは従来どおり */}
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row md:justify-end md:items-center min-h-[380px] md:min-h-[520px] pt-6 md:pt-12 pb-6 md:pb-12">
           <div className="w-full md:max-w-[58%] lg:max-w-[56%] flex flex-col items-start text-left">
-            <div className="hero-glass-panorama-v2 w-full max-w-[90%] mx-auto md:max-w-full md:mx-0 bg-white/5 py-8 px-6 sm:px-8 md:py-10 md:pl-12 md:pr-10 flex flex-col items-start text-left">
-              {/* 1. フクロウ：左揃え */}
-              <div className="flex flex-row items-center gap-3 w-full mb-3">
+            <div className="hero-glass-panorama-v2 w-full max-w-[90%] mx-auto md:max-w-full md:mx-0 bg-white/5 py-4 px-4 sm:px-6 md:py-10 md:px-8 md:pl-12 md:pr-10 flex flex-col items-start text-left">
+              {/* 1. フクロウ：左揃え（モバイルは極小化） */}
+              <div className="flex flex-row items-center gap-2 md:gap-3 w-full mb-1.5 md:mb-3">
                 <OwlCharacter
                   size={42}
+                  sizeMobile={32}
                   message={<>今のあなたに必要なサポートを<span className="whitespace-nowrap">無料診断</span></>}
                   tone="calm"
                   bubblePosition="above"
@@ -192,26 +193,26 @@ export default function Home() {
                 />
               </div>
 
-              {/* 2. メインコピー：左揃え・text-balance で右端を整える */}
-              <h1 className="w-full max-w-[18em] min-w-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight tracking-tighter text-balance [filter:drop-shadow(0_1px_1px_rgba(255,255,255,0.9))]">
+              {/* 2. メインコピー：左揃え・text-balance。スマホはサイズ圧縮でFV死守 */}
+              <h1 className="w-full max-w-[18em] min-w-0 text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight tracking-tighter text-balance [filter:drop-shadow(0_1px_1px_rgba(255,255,255,0.9))]">
                 <span className="whitespace-nowrap">生前整理のすべてを</span>
                 <br />
                 これひとつで
               </h1>
 
               {/* 3. サブコピー：左揃え */}
-              <p className="mt-4 md:mt-5 text-slate-700 text-sm md:text-base w-full max-w-md font-normal leading-relaxed text-left">
+              <p className="mt-2 md:mt-5 text-slate-700 text-xs sm:text-sm md:text-base w-full max-w-md font-normal leading-snug md:leading-relaxed text-left">
                 実家の片付けから不動産・相続まで。AIと専門家が丸ごと一括サポート。
               </p>
 
-              {/* 4. サービスチップ：マイクロカプセルUI・2行で軽やかに */}
-              <ul className="flex flex-wrap gap-2 md:gap-3 justify-start mt-6 md:mt-8" aria-label="対応範囲">
-                <li><span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap">実家の片付け・実家じまい</span></li>
-                <li><span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap">空き家の売却・解体</span></li>
-                <li><span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap">遺品・生前整理</span></li>
-                <li><span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap">相続手続き・税金</span></li>
-                <li><span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap">不動産査定・買取</span></li>
-                <li><span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap">エンディングノート</span></li>
+              {/* 4. サービスチップ：マイクロカプセルUI（モバイルは高さ・隙間を極限圧縮） */}
+              <ul className="flex flex-wrap gap-1.5 md:gap-3 justify-start mt-3 md:mt-8" aria-label="対応範囲">
+                <li><span className="inline-block px-2.5 py-0.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap leading-tight">実家の片付け・実家じまい</span></li>
+                <li><span className="inline-block px-2.5 py-0.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap leading-tight">空き家の売却・解体</span></li>
+                <li><span className="inline-block px-2.5 py-0.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap leading-tight">遺品・生前整理</span></li>
+                <li><span className="inline-block px-2.5 py-0.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap leading-tight">相続手続き・税金</span></li>
+                <li><span className="inline-block px-2.5 py-0.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap leading-tight">不動産査定・買取</span></li>
+                <li><span className="inline-block px-2.5 py-0.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap leading-tight">エンディングノート</span></li>
               </ul>
 
               {/* 5. CTA：3秒クイック診断＝間取り選択でシミュレーターへ遷移 */}

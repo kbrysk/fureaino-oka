@@ -23,6 +23,7 @@ import RegionalFacts from "../../../components/RegionalFacts";
 import InheritanceRouting from "../../../components/InheritanceRouting";
 import SituationGuide from "../../../components/SituationGuide";
 import JikkaOptimizer from "../../../components/JikkaOptimizer";
+import AreaBodyMeta from "../../../components/AreaBodyMeta";
 import { getRegionalStats } from "../../../lib/utils/regional-stats-loader";
 import { getCanonicalBase } from "../../../lib/site-url";
 import { pageTitle } from "../../../lib/site-brand";
@@ -93,6 +94,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
     const bulkySearchUrl = `https://www.google.com/search?q=${encodeURIComponent(data.prefName + " " + data.cityName + " 粗大ゴミ")}`;
     return (
       <div className="space-y-8">
+        <AreaBodyMeta cityName={data.cityName} />
         <BreadcrumbJsonLd itemListElements={breadcrumbItems} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
         <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="main" />
@@ -174,6 +176,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
 
   return (
     <div className="space-y-8">
+      <AreaBodyMeta cityName={data.cityName} />
       <BreadcrumbJsonLd itemListElements={richBreadcrumbItems} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="main" />

@@ -71,17 +71,15 @@ body {
   );
 }
 
-/* スマホのみ：左側を弱くして老夫婦が少し見えるように、右側は文字が隠れない強さで */
+/* スマホのみ：上部の白飛びを排除。「上部に写真・下部にコンテンツ」の縦パノラマを強制。上30%は透明で写真表示、30%〜60%で白に遷移。 */
 @media (max-width: 767px) {
   .hero-panorama-gradient {
     background: linear-gradient(
-      to right,
+      to bottom,
       transparent 0%,
-      rgba(255, 255, 255, 0.08) 20%,
-      rgba(255, 255, 255, 0.35) 45%,
-      rgba(255, 255, 255, 0.75) 62%,
-      #fff 72%,
-      #fff 100%
+      transparent 30%,
+      white 60%,
+      white 100%
     );
   }
 }

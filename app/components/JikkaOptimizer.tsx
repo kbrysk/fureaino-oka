@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState, useCallback, useEffect, useRef } from "react";
+import Link from "next/link";
 
 /** 数値のカウントアップ表示用。target が変わると duration ミリ秒かけてアニメーション */
 function useCountUp(target: number, duration = 600): number {
@@ -81,9 +82,13 @@ interface JikkaOptimizerProps {
   initialLayout?: LayoutKey;
   /** エリアページ用：「[cityName]限定：実家じまい診断」表記 */
   titleVariant?: "default" | "area";
+  /** ツールページ用：CTA を Link で遷移させる場合の URL（未指定時は従来どおり #appraisal-section へスクロール） */
+  ctaHref?: string | null;
+  /** ツールページ用：CTA ボタンのラベル */
+  ctaLabel?: string;
 }
 
-export default function JikkaOptimizer({ cityName, cityId, regionalStats, initialLayout, titleVariant = "default" }: JikkaOptimizerProps) {
+export default function JikkaOptimizer({ cityName, cityId, regionalStats, initialLayout, titleVariant = "default", ctaHref, ctaLabel }: JikkaOptimizerProps) {
   const [layout, setLayout] = useState<LayoutKey>(initialLayout ?? "2DK");
   const [density, setDensity] = useState(2);
   const [floor3PlusNoElevator, setFloor3PlusNoElevator] = useState(false);
@@ -405,13 +410,22 @@ export default function JikkaOptimizer({ cityName, cityId, regionalStats, initia
           </button>
 
           <div className="pt-2">
-            <button
-              type="button"
-              onClick={handleAppraisalCta}
-              className="w-full py-3 px-4 rounded-xl font-bold text-white bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-200"
-            >
-              この損失を止めるための第一歩：無料査定を依頼する →
-            </button>
+            {ctaHref ? (
+              <Link
+                href={ctaHref}
+                className="w-full block text-center py-3 px-4 rounded-xl font-bold text-white bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-200"
+              >
+                {ctaLabel ?? "無料査定を依頼する"} →
+              </Link>
+            ) : (
+              <button
+                type="button"
+                onClick={handleAppraisalCta}
+                className="w-full py-3 px-4 rounded-xl font-bold text-white bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-200"
+              >
+                この損失を止めるための第一歩：無料査定を依頼する →
+              </button>
+            )}
             <p className="mt-2 text-xs text-slate-500 text-center">
               ※{cityName}を管轄する専門家が、制度の適用可否を無料でアドバイスします
             </p>
