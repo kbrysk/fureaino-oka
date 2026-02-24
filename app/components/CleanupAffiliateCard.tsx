@@ -1,6 +1,8 @@
 "use client";
 
-import Link from "next/link";
+/** アールクリーニング A8 直リンク（計測漏れ防止のため <a> 直リンク・next/image 不使用） */
+const A8_CLEANUP_CLICK = "https://px.a8.net/svt/ejp?a8mat=4AXE4D+BUADWY+4X26+NTRMQ";
+const A8_CLEANUP_IMP = "https://www12.a8.net/0.gif?a8mat=4AXE4D+BUADWY+4X26+NTRMQ";
 
 /** cityId から決定的なオフセットを算出（同一市区町村で一貫した相場表示） */
 function getPriceOffset(cityId: string): number {
@@ -30,7 +32,6 @@ interface CleanupAffiliateCardProps {
 
 export default function CleanupAffiliateCard({ cityName, cityId }: CleanupAffiliateCardProps) {
   const prices = getPriceRanges(cityId);
-  const href = `/api/affiliate/cleanup?area=${encodeURIComponent(cityId)}`;
 
   return (
     <section
@@ -59,17 +60,28 @@ export default function CleanupAffiliateCard({ cityName, cityId }: CleanupAffili
         </p>
 
         <div className="pt-2">
-          <Link
-            href={href}
-            className="flex flex-col items-center justify-center w-full py-4 px-5 rounded-xl font-bold text-amber-950 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 border-2 border-amber-500/80 shadow-md hover:from-amber-300 hover:via-yellow-300 hover:to-amber-300 hover:shadow-lg hover:scale-[1.02] transition-all duration-200"
+          <a
+            href={A8_CLEANUP_CLICK}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            className="flex flex-col items-center justify-center w-full py-4 px-5 rounded-xl font-bold text-white bg-orange-500 border-2 border-orange-600/80 shadow-md hover:bg-orange-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
           >
-            <span className="text-lg drop-shadow-sm">【無料】提携業者へ一括見積もり・相談する</span>
-          </Link>
+            <span className="text-lg drop-shadow-sm">【業界最安値水準】アールクリーニングに無料相談する 👉</span>
+          </a>
           <p className="text-center text-xs text-amber-950/80 mt-2">
-            {cityName}の優良業者から最短30分で回答が届きます。今なら最大10万円のキャッシュバック対象！
+            ※お見積り後のキャンセルも無料です。まずは{cityName}の実家の片付けにいくらかかるか確認してみましょう。
           </p>
         </div>
       </div>
+      {/* A8 インプレッション計測（next/image 不使用・計測漏れ防止） */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={A8_CLEANUP_IMP}
+        width={1}
+        height={1}
+        alt=""
+        style={{ border: 0, display: "none" }}
+      />
     </section>
   );
 }
