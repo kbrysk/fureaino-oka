@@ -60,7 +60,7 @@ export default async function RegionPage({ params }: Props) {
             空き家の解体や除却時に自治体の補助制度を利用できる場合があります。窓口で要件をご確認ください。
           </p>
           <Link
-            href={areaIds ? `/area/${areaIds.prefectureId}/${areaIds.cityId}/subsidy` : `/area/${encodeURIComponent(region.prefecture)}/${encodeURIComponent(region.city)}/subsidy`}
+            href={`/area/${encodeURIComponent(region.prefecture)}/${encodeURIComponent(region.city)}/subsidy`}
             className="mt-3 inline-block text-green-700 font-medium underline hover:no-underline"
           >
             {region.city}の補助金詳細を見る
@@ -177,7 +177,7 @@ export default async function RegionPage({ params }: Props) {
           ← 地域一覧（全国）へ
         </Link>
         <Link
-          href={areaIds ? `/area/${areaIds.prefectureId}/${areaIds.cityId}/garbage` : `/area/${encodeURIComponent(region.prefecture)}/${encodeURIComponent(region.city)}`}
+          href={`/area/${encodeURIComponent(region.prefecture)}/${encodeURIComponent(region.city)}`}
           className="text-primary font-medium hover:underline"
         >
           {region.city}の粗大ゴミ・遺品整理（詳細）
