@@ -15,6 +15,11 @@ import LocalConsultationCard from "../../../components/LocalConsultationCard";
 import NearbySubsidyLinks from "../../../components/NearbySubsidyLinks";
 import AreaDirectoryFallback from "../../../components/AreaDirectoryFallback";
 import DynamicFaq from "../../../components/DynamicFaq";
+import BreadcrumbJsonLd from "../../../components/BreadcrumbJsonLd";
+import RelatedAreas from "../../../components/RelatedAreas";
+import RegionalFacts from "../../../components/RegionalFacts";
+import InheritanceRouting from "../../../components/InheritanceRouting";
+import { getCanonicalBase } from "../../../lib/site-url";
 import { pageTitle } from "../../../lib/site-brand";
 
 interface Props {
@@ -56,22 +61,32 @@ export default async function AreaPage({ params }: Props) {
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
 
   const showFallback = !area || data._isDefault;
+  const base = getCanonicalBase();
+  const breadcrumbItems = [
+    { name: "ホーム", item: `${base}/` },
+    { name: data.prefName, item: `${base}/area#${prefecture}` },
+    { name: data.cityName, item: `${base}/area/${prefecture}/${city}` },
+  ];
+
   if (showFallback) {
     const bulkySearchUrl = `https://www.google.com/search?q=${encodeURIComponent(data.prefName + " " + data.cityName + " 粗大ゴミ")}`;
     return (
       <div className="space-y-8">
+        <BreadcrumbJsonLd itemListElements={breadcrumbItems} />
         <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="main" />
         <div>
           <h1 className="text-2xl font-bold text-primary">
             {data.cityName}の空き家補助金・遺品整理の公式窓口（2026年最新）
           </h1>
         </div>
+        <RegionalFacts prefName={data.prefName} cityName={data.cityName} prefId={prefecture} cityId={city} />
         <AreaDirectoryFallback
           cityName={data.cityName}
           prefName={data.prefName}
           prefId={data.prefId}
           cityId={data.cityId}
         />
+        <InheritanceRouting prefName={data.prefName} cityName={data.cityName} />
         <DynamicFaq
           prefName={data.prefName}
           cityName={data.cityName}
@@ -104,6 +119,7 @@ export default async function AreaPage({ params }: Props) {
             ← 無料ツール一覧へ
           </Link>
         </div>
+        <RelatedAreas currentPrefId={prefecture} currentCityId={city} prefName={data.prefName} />
         <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
           <p className="font-medium text-foreground/80 mb-1">監修</p>
           <p>整理収納・生前整理に関する記載は整理収納アドバイザー／税理士の監修を受けております。YMYL領域の情報は随時見直しを行っています。</p>
@@ -112,8 +128,15 @@ export default async function AreaPage({ params }: Props) {
     );
   }
 
+  const richBreadcrumbItems = [
+    { name: "ホーム", item: `${base}/` },
+    { name: area.prefecture, item: `${base}/area#${prefecture}` },
+    { name: area.city, item: `${base}/area/${prefecture}/${city}` },
+  ];
+
   return (
     <div className="space-y-8">
+      <BreadcrumbJsonLd itemListElements={richBreadcrumbItems} />
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="main" />
       <div>
         <h1 className="text-2xl font-bold text-primary">
@@ -124,6 +147,7 @@ export default async function AreaPage({ params }: Props) {
         </p>
       </div>
 
+      <RegionalFacts prefName={data.prefName} cityName={area.city} prefId={prefecture} cityId={city} />
       <AreaOwlBlock cityName={area.city} />
 
       <section className="bg-amber-50/80 rounded-2xl border border-amber-200/60 p-5">
@@ -180,6 +204,7 @@ export default async function AreaPage({ params }: Props) {
         </div>
       </div>
 
+      <InheritanceRouting prefName={data.prefName} cityName={area.city} />
       <DynamicFaq
         prefName={data.prefName}
         cityName={area.city}
@@ -255,6 +280,7 @@ export default async function AreaPage({ params }: Props) {
         </Link>
       </div>
 
+      <RelatedAreas currentPrefId={prefecture} currentCityId={city} prefName={data.prefName} />
       <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
         <p className="font-medium text-foreground/80 mb-1">監修</p>
         <p>
