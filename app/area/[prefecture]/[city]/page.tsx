@@ -25,9 +25,11 @@ import { getRegionalStats } from "../../../lib/utils/regional-stats-loader";
 import { getCanonicalBase } from "../../../lib/site-url";
 import { pageTitle } from "../../../lib/site-brand";
 
+type SearchParamsRecord = { [key: string]: string | string[] | undefined };
+
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
-  searchParams?: Promise<{ layout?: string }>;
+  searchParams?: Promise<SearchParamsRecord>;
 }
 
 export async function generateStaticParams() {
@@ -57,9 +59,10 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function AreaPage({ params, searchParams }: Props) {
   const { prefecture, city } = await params;
-  const resolvedSearchParams = await searchParams?.catch(() => ({})) ?? {};
-  const initialLayout = resolvedSearchParams.layout as "1K" | "2DK" | "3LDK" | "4LDK+" | undefined;
-  const validLayout = initialLayout && ["1K", "2DK", "3LDK", "4LDK+"].includes(initialLayout) ? initialLayout : undefined;
+  const resolvedSearchParams: SearchParamsRecord = (await searchParams) ?? {};
+  const rawLayout = resolvedSearchParams.layout;
+  const layoutStr = typeof rawLayout === "string" ? rawLayout : Array.isArray(rawLayout) ? rawLayout[0] : undefined;
+  const validLayout = layoutStr && ["1K", "2DK", "3LDK", "4LDK+"].includes(layoutStr) ? (layoutStr as "1K" | "2DK" | "3LDK" | "4LDK+") : undefined;
   const area = getAreaById(prefecture, city);
   // if (!area) notFound();
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
