@@ -34,6 +34,11 @@ export default function RegionalFacts({
           {prefName}{cityName}の地域統計に基づく解説
         </h2>
         <p>{text}</p>
+        <div className="mt-4 font-bold">
+          <a href="#appraisal-section" className="text-blue-600 underline hover:text-blue-800 transition-colors flex items-center">
+            <span className="mr-1">👉</span> {cityName}の不動産売却相場をノムコムで確認（無料）
+          </a>
+        </div>
       </aside>
     );
   }
@@ -49,6 +54,11 @@ export default function RegionalFacts({
         {prefName}{cityName}の空き家・実家に関する解説
       </h2>
       <p>{fallbackText}</p>
+      <div className="mt-4 font-bold">
+        <a href="#appraisal-section" className="text-blue-600 underline hover:text-blue-800 transition-colors flex items-center">
+          <span className="mr-1">👉</span> {cityName}の不動産売却相場をノムコムで確認（無料）
+        </a>
+      </div>
     </aside>
   );
 }

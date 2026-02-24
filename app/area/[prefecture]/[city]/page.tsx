@@ -19,6 +19,7 @@ import BreadcrumbJsonLd from "../../../components/BreadcrumbJsonLd";
 import RelatedAreas from "../../../components/RelatedAreas";
 import RegionalFacts from "../../../components/RegionalFacts";
 import InheritanceRouting from "../../../components/InheritanceRouting";
+import SituationGuide from "../../../components/SituationGuide";
 import { getCanonicalBase } from "../../../lib/site-url";
 import { pageTitle } from "../../../lib/site-brand";
 
@@ -80,6 +81,7 @@ export default async function AreaPage({ params }: Props) {
           </h1>
         </div>
         <RegionalFacts prefName={data.prefName} cityName={data.cityName} prefId={prefecture} cityId={city} />
+        <SituationGuide prefName={data.prefName} cityName={data.cityName} />
         <AreaDirectoryFallback
           cityName={data.cityName}
           prefName={data.prefName}
@@ -148,6 +150,7 @@ export default async function AreaPage({ params }: Props) {
       </div>
 
       <RegionalFacts prefName={data.prefName} cityName={area.city} prefId={prefecture} cityId={city} />
+      <SituationGuide prefName={data.prefName} cityName={area.city} />
       <AreaOwlBlock cityName={area.city} />
 
       <section className="bg-amber-50/80 rounded-2xl border border-amber-200/60 p-5">
@@ -211,7 +214,9 @@ export default async function AreaPage({ params }: Props) {
         hasData={!data._isDefault}
         municipalityData={data._isDefault ? undefined : data}
       />
-      <CleanupAffiliateCard cityName={area.city} cityId={ids.cityId} />
+      <div id="cleanup-section">
+        <CleanupAffiliateCard cityName={area.city} cityId={ids.cityId} />
+      </div>
 
       <RealEstateAppraisalCard
         cityName={area.city}

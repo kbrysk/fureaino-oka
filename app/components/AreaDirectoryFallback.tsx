@@ -61,7 +61,7 @@ export default function AreaDirectoryFallback({
 
       <DynamicFaq prefName={prefName} cityName={cityName} hasData={false} />
 
-      <section className="bg-card rounded-2xl border border-border overflow-hidden">
+      <section id="appraisal-section" className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
           <h2 className="font-bold text-primary">{cityName}周辺で利用可能な不動産一括査定</h2>
         </div>
@@ -79,7 +79,7 @@ export default function AreaDirectoryFallback({
         </div>
       </section>
 
-      <section className="bg-card rounded-2xl border border-border overflow-hidden">
+      <section id="cleanup-section" className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
           <h2 className="font-bold text-primary">自治体で回収できない不用品の処分フロー</h2>
         </div>
