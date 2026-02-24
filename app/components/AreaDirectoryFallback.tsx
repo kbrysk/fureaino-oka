@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DynamicFaq from "./DynamicFaq";
 
 /**
  * municipalities.json にデータがない自治体向けのディレクトリ型インフラページ用コンテンツ。
@@ -57,6 +58,8 @@ export default function AreaDirectoryFallback({
           </Link>
         </div>
       </section>
+
+      <DynamicFaq prefName={prefName} cityName={cityName} hasData={false} />
 
       <section className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">

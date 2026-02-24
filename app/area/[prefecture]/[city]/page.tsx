@@ -14,6 +14,7 @@ import MascotAdviceBlock from "../../../components/MascotAdviceBlock";
 import LocalConsultationCard from "../../../components/LocalConsultationCard";
 import NearbySubsidyLinks from "../../../components/NearbySubsidyLinks";
 import AreaDirectoryFallback from "../../../components/AreaDirectoryFallback";
+import DynamicFaq from "../../../components/DynamicFaq";
 import { pageTitle } from "../../../lib/site-brand";
 
 interface Props {
@@ -70,6 +71,11 @@ export default async function AreaPage({ params }: Props) {
           prefName={data.prefName}
           prefId={data.prefId}
           cityId={data.cityId}
+        />
+        <DynamicFaq
+          prefName={data.prefName}
+          cityName={data.cityName}
+          hasData={false}
         />
         <div className="bg-card rounded-2xl border border-border overflow-hidden">
           <div className="px-6 py-4 border-b border-border bg-primary-light/30">
@@ -174,6 +180,12 @@ export default async function AreaPage({ params }: Props) {
         </div>
       </div>
 
+      <DynamicFaq
+        prefName={data.prefName}
+        cityName={area.city}
+        hasData={!data._isDefault}
+        municipalityData={data._isDefault ? undefined : data}
+      />
       <CleanupAffiliateCard cityName={area.city} cityId={ids.cityId} />
 
       <RealEstateAppraisalCard

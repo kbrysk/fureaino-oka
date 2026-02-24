@@ -4,9 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import OwlCharacter from "./OwlCharacter";
-import LineGuideModal from "./LineGuideModal";
 
-const navItems: { href?: string; label: string; openLineModal?: boolean }[] = [
+const navItems: { href: string; label: string }[] = [
   { href: "/", label: "ホーム" },
   { href: "/guidebook", label: "ガイドブック" },
   { href: "/articles", label: "記事" },
@@ -17,20 +16,11 @@ const navItems: { href?: string; label: string; openLineModal?: boolean }[] = [
   { href: "/ending-note", label: "エンディングノート" },
   { href: "/settings", label: "設定" },
   { href: "/contact", label: "お問い合わせ" },
-  { label: "無料ガイドブック", openLineModal: true },
 ];
 
 export default function Navigation() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [lineModalOpen, setLineModalOpen] = useState(false);
-
-  const handleNavClick = (item: (typeof navItems)[0]) => {
-    if (item.openLineModal) {
-      setLineModalOpen(true);
-      setMobileOpen(false);
-    }
-  };
 
   return (
     <header className="bg-card border-b border-border shadow-sm sticky top-0 z-40">
@@ -74,20 +64,10 @@ export default function Navigation() {
                 mobileOpen ? "translate-x-0" : "translate-x-full"
               }`}
             >
-              {navItems.map((item) =>
-                item.openLineModal ? (
-                  <button
-                    key="line-guide"
-                    type="button"
-                    onClick={() => handleNavClick(item)}
-                    className="block w-full text-left px-4 py-3 rounded-lg text-base font-medium text-foreground/70 hover:bg-primary-light hover:text-primary transition-colors"
-                  >
-                    {item.label}
-                  </button>
-                ) : (
+              {navItems.map((item) => (
                   <Link
                     key={item.href}
-                    href={item.href!}
+                    href={item.href}
                     onClick={() => setMobileOpen(false)}
                     className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                       pathname === item.href
@@ -97,27 +77,16 @@ export default function Navigation() {
                   >
                     {item.label}
                   </Link>
-                )
-              )}
+                ))}
             </nav>
           </div>
 
           {/* PC: 横並びナビ */}
           <nav className="hidden md:flex items-center gap-1">
-            {navItems.map((item) =>
-              item.openLineModal ? (
-                <button
-                  key="line-guide"
-                  type="button"
-                  onClick={() => setLineModalOpen(true)}
-                  className="px-3 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap text-foreground/70 hover:bg-primary-light hover:text-primary"
-                >
-                  {item.label}
-                </button>
-              ) : (
+            {navItems.map((item) => (
                 <Link
                   key={item.href}
-                  href={item.href!}
+                  href={item.href}
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
                     pathname === item.href
                       ? "bg-primary text-white"
@@ -126,12 +95,10 @@ export default function Navigation() {
                 >
                   {item.label}
                 </Link>
-              )
-            )}
+              ))}
           </nav>
         </div>
       </div>
-      <LineGuideModal isOpen={lineModalOpen} onClose={() => setLineModalOpen(false)} />
     </header>
   );
 }
