@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import JikkaOptimizer from "../../../components/JikkaOptimizer";
-import type { JikkaRegionalStats } from "../../../components/JikkaOptimizer";
+import JikkaOptimizer from "@/app/components/JikkaOptimizer";
+import type { JikkaRegionalStats } from "@/app/components/JikkaOptimizer";
 
 export interface OptimizerAreaOption {
   prefectureId: string;

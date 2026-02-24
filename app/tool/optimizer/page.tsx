@@ -1,8 +1,8 @@
-import { AREA_ID_MAP } from "../../../lib/area-id-map.generated";
-import { getAllRegionalStats } from "../../../lib/utils/regional-stats-loader";
+import { AREA_ID_MAP } from "@/app/lib/area-id-map.generated";
+import { getAllRegionalStats } from "@/app/lib/utils/regional-stats-loader";
 import OptimizerToolClient from "./OptimizerToolClient";
-import { getCanonicalBase } from "../../../lib/site-url";
-import { pageTitle } from "../../../lib/site-brand";
+import { getCanonicalBase } from "@/app/lib/site-url";
+import { pageTitle } from "@/app/lib/site-brand";
 
 type SearchParamsRecord = { [key: string]: string | string[] | undefined };
 
