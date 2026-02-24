@@ -1,7 +1,10 @@
 // import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAreaById, getAreaIds } from "../../../../lib/area-data";
-import { getAllCityPaths } from "../../../../lib/utils/city-loader";
+import { getSampleCityPaths } from "../../../../lib/utils/city-loader";
+
+export const dynamicParams = true;
+export const revalidate = 86400;
 import { getMunicipalityDataOrDefault, getMunicipalitiesByPrefecture } from "../../../../lib/data/municipalities";
 import { getAreaSeizenseiriColumn } from "../../../../lib/area-column";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
@@ -19,7 +22,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getAllCityPaths().map(({ prefId, cityId }) => ({
+  return getSampleCityPaths().map(({ prefId, cityId }) => ({
     prefecture: prefId,
     city: cityId,
   }));

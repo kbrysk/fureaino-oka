@@ -14,6 +14,13 @@ const municipalities = data as MunicipalityRow[];
 
 const PREF_IDS = Array.from(new Set(municipalities.map((m) => m.prefId)));
 
+/** ISR: ビルド時は代表都道府県のみ事前生成し、それ以外はオンデマンド生成。 */
+export const dynamicParams = true;
+export const revalidate = 86400;
+
+/** 代表都道府県のみ（東京・神奈川・大阪など先頭5件）。 */
+const SAMPLE_PREF_IDS = PREF_IDS.slice(0, 5);
+
 function getPrefectureName(prefId: string): string | null {
   const first = municipalities.find((m) => m.prefId.toLowerCase() === prefId.toLowerCase());
   return first?.prefName ?? null;
@@ -24,7 +31,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return PREF_IDS.map((prefecture) => ({ prefecture }));
+  return SAMPLE_PREF_IDS.map((prefecture) => ({ prefecture }));
 }
 
 export async function generateMetadata({ params }: Props) {
