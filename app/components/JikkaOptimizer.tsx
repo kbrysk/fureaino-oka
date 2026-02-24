@@ -79,9 +79,11 @@ interface JikkaOptimizerProps {
   regionalStats: JikkaRegionalStats | null;
   /** トップページの間取り選択から引き継ぎ */
   initialLayout?: LayoutKey;
+  /** エリアページ用：「[cityName]限定：実家じまい診断」表記 */
+  titleVariant?: "default" | "area";
 }
 
-export default function JikkaOptimizer({ cityName, cityId, regionalStats, initialLayout }: JikkaOptimizerProps) {
+export default function JikkaOptimizer({ cityName, cityId, regionalStats, initialLayout, titleVariant = "default" }: JikkaOptimizerProps) {
   const [layout, setLayout] = useState<LayoutKey>(initialLayout ?? "2DK");
   const [density, setDensity] = useState(2);
   const [floor3PlusNoElevator, setFloor3PlusNoElevator] = useState(false);
@@ -215,7 +217,7 @@ export default function JikkaOptimizer({ cityName, cityId, regionalStats, initia
     >
       <div className="px-5 py-4 border-b border-slate-200 bg-slate-50">
         <h2 id="jikka-optimizer-heading" className="font-bold text-slate-800 text-lg">
-          {cityName}の実家じまい・資産防衛シミュレーター
+          {titleVariant === "area" ? `${cityName}限定：実家じまい診断` : `${cityName}の実家じまい・資産防衛シミュレーター`}
         </h2>
         <p className="text-sm text-slate-600 mt-1">
           間取り・荷物量・建物条件を選ぶと、費用と放置リスクがリアルタイムで計算されます。内訳は親族への説明資料としてもご利用ください。

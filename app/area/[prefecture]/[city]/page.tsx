@@ -106,6 +106,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
             cityId={city}
             regionalStats={getRegionalStats(`${prefecture}-${city}`)}
             initialLayout={validLayout}
+            titleVariant="area"
           />
         </section>
         <SituationGuide prefName={data.prefName} cityName={data.cityName} />
@@ -184,6 +185,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
           cityId={ids.cityId}
           regionalStats={getRegionalStats(`${prefecture}-${city}`)}
           initialLayout={validLayout}
+          titleVariant="area"
         />
       </section>
       <SituationGuide prefName={data.prefName} cityName={area.city} />

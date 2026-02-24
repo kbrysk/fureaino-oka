@@ -43,3 +43,9 @@ export function getRegionalStats(statsKey: string): RegionalStatsRow | null {
   const map = parseCsvSync();
   return map.get(statsKey) ?? null;
 }
+
+/** 全地域の統計をキー付きで取得（診断ツール等で利用）。サーバーコンポーネント専用。 */
+export function getAllRegionalStats(): Record<string, RegionalStatsRow> {
+  const map = parseCsvSync();
+  return Object.fromEntries(map);
+}
