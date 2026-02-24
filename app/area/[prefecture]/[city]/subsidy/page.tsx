@@ -1,7 +1,8 @@
-import { notFound } from "next/navigation";
+// import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getMunicipalityData, getMunicipalitySlugs, getMunicipalitiesByPrefecture } from "../../../../lib/data/municipalities";
+import { getMunicipalityDataOrDefault, getMunicipalitiesByPrefecture } from "../../../../lib/data/municipalities";
 import { getAreaById, getAreaIds } from "../../../../lib/area-data";
+import { getAllCityPaths } from "../../../../lib/utils/city-loader";
 import { getAreaSeizenseiriColumn } from "../../../../lib/area-column";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
 import AreaOwlBlock from "../../../../components/AreaOwlBlock";
@@ -10,6 +11,7 @@ import MascotAdviceBlock from "../../../../components/MascotAdviceBlock";
 import LocalConsultationCard from "../../../../components/LocalConsultationCard";
 import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalCard";
 import NearbySubsidyLinks from "../../../../components/NearbySubsidyLinks";
+import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import { pageTitle } from "../../../../lib/site-brand";
 
 interface Props {
@@ -17,16 +19,24 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getMunicipalitySlugs().map(({ prefecture, city }) => ({
-    prefecture,
-    city,
+  return getAllCityPaths().map(({ prefId, cityId }) => ({
+    prefecture: prefId,
+    city: cityId,
   }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { prefecture, city } = await params;
-  const data = await getMunicipalityData(prefecture, city);
-  if (!data) return { title: pageTitle("空き家・補助金") };
+  const area = getAreaById(prefecture, city);
+  const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
+  const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
+  if (!area) return { title: pageTitle("空き家・補助金") };
+  if (data._isDefault) {
+    return {
+      title: pageTitle(`${data.cityName}の空き家補助金・実家整理ガイド【2026年最新版】`),
+      description: `${data.cityName}で空き家整理や売却を検討中の方へ。自治体の窓口情報や、相続時に役立つ3,000万円控除の特例、おすすめの査定サービスをまとめています。`,
+    };
+  }
 
   if (data.subsidy.hasSubsidy && data.subsidy.maxAmount) {
     const amount = data.subsidy.maxAmount.replace(/最大|万円|円/g, "").trim() || "〇〇";
@@ -46,10 +56,49 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function AreaSubsidyPage({ params }: Props) {
   const { prefecture, city } = await params;
-  const data = await getMunicipalityData(prefecture, city);
-  if (!data) notFound();
+  const area = getAreaById(prefecture, city);
+  // if (!area) notFound();
+  const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
+  const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
+  const ids = area ? getAreaIds(area.prefecture, area.city)! : { prefectureId: prefecture, cityId: city };
 
-  const area = getAreaById(data.prefId, data.cityId);
+  if (data._isDefault || !area) {
+    return (
+      <div className="space-y-8">
+        <AreaBreadcrumbs
+          prefecture={data.prefName}
+          city={data.cityName}
+          prefectureId={data.prefId}
+          cityId={data.cityId}
+          page="subsidy"
+        />
+        <div>
+          <h1 className="text-2xl font-bold text-primary">
+            {data.cityName}の空き家補助金・遺品整理の公式窓口（2026年最新）
+          </h1>
+        </div>
+        <AreaDirectoryFallback
+          cityName={data.cityName}
+          prefName={data.prefName}
+          prefId={data.prefId}
+          cityId={data.cityId}
+        />
+        <div className="flex flex-wrap gap-3">
+          <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
+            ← 地域一覧（全国）へ
+          </Link>
+          <Link href={`/area/${data.prefId}/${data.cityId}`} className="inline-block text-primary font-medium hover:underline">
+            ← {data.cityName}の粗大ゴミ・遺品整理ページへ
+          </Link>
+        </div>
+        <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
+          <p className="font-medium text-foreground/80 mb-1">監修</p>
+          <p>税制・補助金に関する記載は税理士の監修を受けております。詳細は自治体・専門家にご確認ください。</p>
+        </footer>
+      </div>
+    );
+  }
+
   const cleanupPriceText =
     area?.cleanupPriceNote ||
     `${data.cityName}では、遺品整理・実家の片付けは、部屋数・荷物量・立地により相場が異なります。1Kで十数万円〜、2LDKで20〜40万円程度、3LDK以上で40万円〜が目安となることが多いです。複数社の無料見積もりで比較することをおすすめします。`;

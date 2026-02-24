@@ -1,7 +1,8 @@
-import { notFound } from "next/navigation";
+// import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getAreaById, getAreaIdSlugs, getAreaIds } from "../../../lib/area-data";
-import { getMunicipalityData, getMunicipalitiesByPrefecture } from "../../../lib/data/municipalities";
+import { getAreaById, getAreaIds } from "../../../lib/area-data";
+import { getAllCityPaths } from "../../../lib/utils/city-loader";
+import { getMunicipalityDataOrDefault, getMunicipalitiesByPrefecture } from "../../../lib/data/municipalities";
 import { getRegionBySlug } from "../../../lib/regions";
 import { getAreaSeizenseiriColumn, getAreaOwlColumn } from "../../../lib/area-column";
 import AreaBreadcrumbs from "../../../components/AreaBreadcrumbs";
@@ -12,6 +13,7 @@ import RealEstateAppraisalCard from "../../../components/RealEstateAppraisalCard
 import MascotAdviceBlock from "../../../components/MascotAdviceBlock";
 import LocalConsultationCard from "../../../components/LocalConsultationCard";
 import NearbySubsidyLinks from "../../../components/NearbySubsidyLinks";
+import AreaDirectoryFallback from "../../../components/AreaDirectoryFallback";
 import { pageTitle } from "../../../lib/site-brand";
 
 interface Props {
@@ -19,8 +21,8 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getAreaIdSlugs().map(({ prefectureId, cityId }) => ({
-    prefecture: prefectureId,
+  return getAllCityPaths().map(({ prefId, cityId }) => ({
+    prefecture: prefId,
     city: cityId,
   }));
 }
@@ -28,20 +30,81 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { prefecture, city } = await params;
   const area = getAreaById(prefecture, city);
+  const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
+  const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
   if (!area) return { title: pageTitle("地域情報") };
+  if (data._isDefault) {
+    return {
+      title: pageTitle(`${data.cityName}の空き家補助金・実家整理ガイド【2026年最新版】`),
+      description: `${data.cityName}で空き家整理や売却を検討中の方へ。自治体の窓口情報や、相続時に役立つ3,000万円控除の特例、おすすめの査定サービスをまとめています。`,
+    };
+  }
   return {
-    title: pageTitle(`${area.city}（${area.prefecture}）の粗大ゴミ・遺品整理`),
-    description: `${area.prefecture}${area.city}の粗大ゴミ申し込み・遺品整理の相談先。無料見積もりで比較。`,
+    title: pageTitle(`${data.cityName}（${data.prefName}）の粗大ゴミ・遺品整理`),
+    description: `${data.prefName}${data.cityName}の粗大ゴミ申し込み・遺品整理の相談先。無料見積もりで比較。`,
   };
 }
 
 export default async function AreaPage({ params }: Props) {
   const { prefecture, city } = await params;
   const area = getAreaById(prefecture, city);
-  if (!area) notFound();
-  const ids = getAreaIds(area.prefecture, area.city)!;
-  const region = getRegionBySlug([area.prefecture, area.city]);
-  const municipalityData = await getMunicipalityData(ids.prefectureId, ids.cityId);
+  // if (!area) notFound();
+  const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
+  const ids = area ? getAreaIds(area.prefecture, area.city)! : { prefectureId: prefecture, cityId: city };
+  const region = area ? getRegionBySlug([area.prefecture, area.city]) : null;
+  const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
+
+  const showFallback = !area || data._isDefault;
+  if (showFallback) {
+    const bulkySearchUrl = `https://www.google.com/search?q=${encodeURIComponent(data.prefName + " " + data.cityName + " 粗大ゴミ")}`;
+    return (
+      <div className="space-y-8">
+        <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="main" />
+        <div>
+          <h1 className="text-2xl font-bold text-primary">
+            {data.cityName}の空き家補助金・遺品整理の公式窓口（2026年最新）
+          </h1>
+        </div>
+        <AreaDirectoryFallback
+          cityName={data.cityName}
+          prefName={data.prefName}
+          prefId={data.prefId}
+          cityId={data.cityId}
+        />
+        <div className="bg-card rounded-2xl border border-border overflow-hidden">
+          <div className="px-6 py-4 border-b border-border bg-primary-light/30">
+            <h2 className="font-bold text-primary">粗大ゴミの申し込み</h2>
+          </div>
+          <div className="p-6 space-y-3">
+            <p className="text-sm text-foreground/70">
+              {data.cityName}の粗大ゴミは、自治体の案内に従って申し込みます。
+            </p>
+            <AreaBulkyWasteLink href={bulkySearchUrl} prefecture={data.prefName} city={data.cityName}>
+              {data.prefName}{data.cityName}の粗大ゴミ案内を検索
+            </AreaBulkyWasteLink>
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-3">
+          <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
+            ← 地域一覧（全国）へ
+          </Link>
+          <Link href={`/area/${data.prefId}/${data.cityId}/subsidy`} className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition">
+            {data.cityName}の空き家・補助金
+          </Link>
+          <Link href={`/area/${data.prefId}/${data.cityId}/cleanup`} className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition">
+            {data.cityName}の遺品整理・相場
+          </Link>
+          <Link href="/tools" className="inline-block text-primary font-medium hover:underline">
+            ← 無料ツール一覧へ
+          </Link>
+        </div>
+        <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
+          <p className="font-medium text-foreground/80 mb-1">監修</p>
+          <p>整理収納・生前整理に関する記載は整理収納アドバイザー／税理士の監修を受けております。YMYL領域の情報は随時見直しを行っています。</p>
+        </footer>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-8">
@@ -66,25 +129,12 @@ export default async function AreaPage({ params }: Props) {
         </p>
       </section>
 
-      {municipalityData ? (
-        <>
-          <MascotAdviceBlock localRiskText={municipalityData.mascot.localRiskText} cityName={area.city} />
-          <LocalConsultationCard
-            cityName={area.city}
-            prefName={municipalityData.prefName}
-            localRiskText={municipalityData.mascot.localRiskText}
-          />
-        </>
-      ) : (
-        <section className="bg-primary-light/40 rounded-2xl border border-primary/20 p-5">
-          <h2 className="text-sm font-bold text-primary mb-2">
-            モグ隊長（フクロウ）のひとこと
-          </h2>
-          <p className="text-sm text-foreground/80 leading-relaxed">
-            {getAreaOwlColumn(area.prefecture, area.city)}
-          </p>
-        </section>
-      )}
+      <MascotAdviceBlock localRiskText={data.mascot.localRiskText} cityName={area.city} />
+      <LocalConsultationCard
+        cityName={area.city}
+        prefName={data.prefName}
+        localRiskText={data.mascot.localRiskText}
+      />
 
       <div className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
@@ -129,7 +179,7 @@ export default async function AreaPage({ params }: Props) {
       <RealEstateAppraisalCard
         cityName={area.city}
         cityId={ids.cityId}
-        localRiskText={municipalityData?.mascot.localRiskText}
+        localRiskText={data?.mascot.localRiskText}
       />
 
       <div className="bg-card rounded-2xl border border-border overflow-hidden">

@@ -44,6 +44,42 @@ export async function getMunicipalityData(
   return found ?? null;
 }
 
+/** 公式窓口誘導用の固定デフォルト（作文なし）。データなし時に即返す。 */
+const DEFAULT_MUNICIPALITY_TEMPLATE = {
+  mascot: { localRiskText: "" },
+  subsidy: { hasSubsidy: false as const },
+  garbage: {
+    officialUrl: "https://www.google.com/search?q=空き家補助金+公式サイト",
+  },
+};
+
+export type MunicipalityDataOrDefault = MunicipalityData & { _isDefault?: boolean };
+
+/**
+ * データがなければ即座に標準オブジェクトを返すラッパー。
+ * 呼び出し側は _isDefault でフォールバック表示を判定する。
+ */
+export async function getMunicipalityDataOrDefault(
+  prefId: string,
+  cityId: string,
+  fallback: { prefName: string; cityName: string }
+): Promise<MunicipalityDataOrDefault> {
+  const data = await getMunicipalityData(prefId, cityId);
+  if (data) return data;
+  return {
+    prefId,
+    cityId,
+    prefName: fallback.prefName,
+    cityName: fallback.cityName,
+    ...DEFAULT_MUNICIPALITY_TEMPLATE,
+    garbage: {
+      ...DEFAULT_MUNICIPALITY_TEMPLATE.garbage,
+      officialUrl: `https://www.google.com/search?q=${encodeURIComponent(fallback.prefName + " " + fallback.cityName + " 空き家補助金 公式サイト")}`,
+    },
+    _isDefault: true,
+  };
+}
+
 /** データが存在する地域のスラッグ一覧（generateStaticParams 用） */
 export function getMunicipalitySlugs(): { prefecture: string; city: string }[] {
   return MUNICIPALITY_STORE.map((m) => ({ prefecture: m.prefId, city: m.cityId }));

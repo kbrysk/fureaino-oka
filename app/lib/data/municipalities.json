@@ -353,17 +353,17 @@
     "prefName": "神奈川県",
     "cityName": "相模原市",
     "mascot": {
-      "localRiskText": "相模原市は広いから、管理が行き届かない空き家が増えると防犯面でも心配だホー。早めに実家の片付けを検討するホー！"
+      "localRiskText": "相模原市は緑区などの斜面地も多いホー。空き家の土台が緩んで傾く前に、プロに見積もりを取るのが安心だホー！"
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "相模原市空き家解体撤去費補助金",
-      "maxAmount": "最大30万円",
-      "conditions": "1年以上使用されていない空き家で、倒壊の恐れがあるなどの判定を受けたもの",
-      "officialUrl": "https://www.city.sagamihara.kanagawa.jp/kurashi/1026527/shakaifukushi/1013915.html"
+      "name": "相模原市空き家等除却費補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "市が認めた危険空き家等の解体費用の一部を助成",
+      "officialUrl": "https://www.city.sagamihara.kanagawa.jp/kurashi/sumai/1014167/1008691.html"
     },
     "garbage": {
-      "officialUrl": "https://www.city.sagamihara.kanagawa.jp/kurashi/1026488/gomi/1007808/index.html",
+      "officialUrl": "https://www.city.sagamihara.kanagawa.jp/kurashi/gomi/1007809/index.html",
       "phone": "042-774-9933"
     }
   },
@@ -393,17 +393,17 @@
     "prefName": "神奈川県",
     "cityName": "藤沢市",
     "mascot": {
-      "localRiskText": "藤沢市は潮風による建物の劣化が早い地域もあるホー！空き家を放っておくと傷みが進んで危ないから、今のうちに整理だホー！"
+      "localRiskText": "藤沢市の潮風は建物の劣化を早めるホー！湘南の美しい街並みを保つためにも、空き家の適切な管理が必要だホー！"
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "藤沢市空き家等利活用・除却支援補助金",
+      "name": "藤沢市空き家等除却補助金",
       "maxAmount": "最大50万円",
-      "conditions": "適切な管理が行われていない空き家で、除却後に更地として利活用する計画があるものなど",
-      "officialUrl": "https://www.city.fujisawa.kanagawa.jp/jutaku/kurashi/sumai/jutaku/akiya-hojo.html"
+      "conditions": "倒壊等の危険がある空き家等の所有者など",
+      "officialUrl": "https://www.city.fujisawa.kanagawa.jp/jutaku/kurashi/sumai/jutaku/akiyataisaku/akiyajokyakujosei.html"
     },
     "garbage": {
-      "officialUrl": "https://www.city.fujisawa.kanagawa.jp/kankyo-s/kurashi/gomi/katei/dashikata/sodaigomi.html",
+      "officialUrl": "https://www.city.fujisawa.kanagawa.jp/kankyo-c/kurashi/gomi/dashikata/sodaigomi.html",
       "phone": "0466-23-5301"
     }
   },
@@ -453,17 +453,17 @@
     "prefName": "埼玉県",
     "cityName": "川越市",
     "mascot": {
-      "localRiskText": "小江戸・川越の美しい街並みを守るためにも、崩れそうな空き家は放置しちゃダメだホー！早めに対策を立てるホー！"
+      "localRiskText": "小江戸・川越の景観を守るんだホー！古い家を放置すると、火災の際に被害が大きくなるから注意が必要だホー！"
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "川越市老朽空き家解体補助金",
-      "maxAmount": "最大30万円",
-      "conditions": "1年以上空き家で、老朽化が著しく危険であると判定された建築物",
-      "officialUrl": "https://www.city.kawagoe.saitama.jp/kurashi/sumai/sumai/akiya/akiyakaitaihojo.html"
+      "name": "川越市老朽空き家等解体費補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "1年以上空き家で、老朽化が著しいと認められたもの",
+      "officialUrl": "https://www.city.kawagoe.saitama.jp/kurashi/sumai/sumai/akiyataisaku/akiyajokyakujosei.html"
     },
     "garbage": {
-      "officialUrl": "https://www.city.kawagoe.saitama.jp/kurashi/gomi_recycle/gomi/gominodashikata/sodaigomi.html",
+      "officialUrl": "https://www.city.kawagoe.saitama.jp/kurashi/gomi/gomi_wakekata/sodaigomi.html",
       "phone": "049-239-5056"
     }
   },
@@ -533,17 +533,17 @@
     "prefName": "千葉県",
     "cityName": "船橋市",
     "mascot": {
-      "localRiskText": "船橋市は人口が多いから、古い空き家の火災や倒壊のリスクは街全体の課題だホー！補助金を賢く使って解決だホー！"
+      "localRiskText": "船橋市は密集した住宅地も多いホー。空き家の管理ミスが火災や害虫トラブルを招かないよう、早めに片付けるホー！"
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "船橋市空き家除却助成事業",
+      "name": "船橋市老朽空き家等解体費補助金",
       "maxAmount": "最大50万円",
-      "conditions": "昭和56年5月31日以前に建築された木造住宅で、1年以上空き家であるものなど",
-      "officialUrl": "https://www.city.funabashi.lg.jp/kurashi/sumai/003/p112527.html"
+      "conditions": "倒壊の恐れがあるなどの危険な空き家を除却する場合",
+      "officialUrl": "https://www.city.funabashi.lg.jp/kurashi/sumai/003/p044199.html"
     },
     "garbage": {
-      "officialUrl": "https://www.city.funabashi.lg.jp/kurashi/gomi/001/p001550.html",
+      "officialUrl": "https://www.city.funabashi.lg.jp/kurashi/gomi/001/p001552.html",
       "phone": "047-410-5374"
     }
   },
@@ -593,18 +593,18 @@
     "prefName": "千葉県",
     "cityName": "柏市",
     "mascot": {
-      "localRiskText": "柏市は新しい街と古い住宅地が混在しているホー。古い家を放置せず、補助金を活用して次の一歩を踏み出すホー！"
+      "localRiskText": "柏市はベッドタウンとして人気だけど、古い実家が放置されているのも見かけるホー。資産価値が高いうちに整理だホー！"
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "柏市空き家等除却費用助成金",
+      "name": "柏市空き家等除却促進事業補助金",
       "maxAmount": "最大50万円",
-      "conditions": "昭和56年5月31日以前に建築された木造住宅で、空き家バンクに登録予定がある場合など",
-      "officialUrl": "https://www.city.kashiwa.lg.jp/jutakuseisaku/sumai/jutaku/akiyataisaku/akiyajokyokuhojo.html"
+      "conditions": "周辺の住環境を阻害している空き家などの除却",
+      "officialUrl": "https://www.city.kashiwa.lg.jp/jutakuseisaku/kurashi/sumai/akiya/jokyaku.html"
     },
     "garbage": {
-      "officialUrl": "https://www.city.kashiwa.lg.jp/kankyojigyo/kurashi/gomi/wakekata/sodaigomi.html",
-      "phone": "04-7132-5374"
+      "officialUrl": "https://www.city.kashiwa.lg.jp/haikitaisaku/kurashi/gomi/wakekata/sodaigomi.html",
+      "phone": "04-7132-1877"
     }
   },
   {
@@ -913,18 +913,18 @@
     "prefName": "兵庫県",
     "cityName": "姫路市",
     "mascot": {
-      "localRiskText": "姫路市の空き家問題も放置すると家屋の劣化が進んで資産価値が下がるホー！補助金を使って次の一歩をサポートするホー！"
+      "localRiskText": "姫路城の見える美しい街に危険な空き家は似合わないホー。倒壊して観光客や住民に迷惑をかける前に対策だホー！"
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "姫路市老朽空き家除却支援事業",
-      "maxAmount": "最大50万円",
-      "conditions": "1年以上使用されておらず、老朽化により危険な状態にある建築物",
-      "officialUrl": "https://www.city.himeji.lg.jp/bousai/0000001479.html"
+      "name": "姫路市老朽危険空家等除却支援事業",
+      "maxAmount": "最大100万円",
+      "conditions": "周辺に悪影響を及ぼす恐れがある危険な空き家など",
+      "officialUrl": "https://www.city.himeji.lg.jp/bousai/0000003468.html"
     },
     "garbage": {
-      "officialUrl": "https://www.city.himeji.lg.jp/kurashi/0000001243.html",
-      "phone": "079-224-0530"
+      "officialUrl": "https://www.city.himeji.lg.jp/kurashi/0000003254.html",
+      "phone": "079-221-2111"
     }
   },
   {
@@ -933,17 +933,17 @@
     "prefName": "兵庫県",
     "cityName": "西宮市",
     "mascot": {
-      "localRiskText": "住みたい街・西宮だからこそ、空き家を整理して健全な街並みを維持することが大切だホー！まずは一歩踏み出すホー！"
+      "localRiskText": "西宮市は阪神淡路大震災の教訓を忘れてはいけないホー。地震で倒壊するリスクがある古い家は、今のうちに整理するホー！"
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "西宮市老朽空き家除却支援事業",
+      "name": "西宮市老朽危険空家等除却支援事業",
       "maxAmount": "最大50万円",
-      "conditions": "昭和56年5月31日以前に建築された木造住宅で、倒壊の危険性があるものなど",
-      "officialUrl": "https://www.nishi.or.jp/kurashi/sumai/jutakushien/akiyataisaku/akiyajokyaku.html"
+      "conditions": "著しく老朽化し、周囲に危険を及ぼす空き家の除却",
+      "officialUrl": "https://www.city.nishi.or.jp/kurashi/sumai/akiya/jokyaku.html"
     },
     "garbage": {
-      "officialUrl": "https://www.nishi.or.jp/kurashi/gomi/gominodashikata/sodaigomi.html",
+      "officialUrl": "https://www.city.nishi.or.jp/kurashi/gomi/gomi/sodaigomi/sodaigomi.html",
       "phone": "0798-33-6776"
     }
   },
@@ -1605,6 +1605,246 @@
     "garbage": {
       "officialUrl": "https://www.city.miyazaki.miyazaki.jp/kurashi/gomi/dasikata/523.html",
       "phone": "0985-21-1764"
+    }
+  },
+  {
+    "prefId": "shiga",
+    "cityId": "otsu",
+    "prefName": "滋賀県",
+    "cityName": "大津市",
+    "mascot": {
+      "localRiskText": "琵琶湖周辺の湿気は、空き家の柱や基礎を傷めやすいホー。放置するとシロアリの温床になるから、早めの点検が大事だホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "大津市空き家等除却事業補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "倒壊の恐れがある老朽空き家で、市が認めたもの",
+      "officialUrl": "https://www.city.otsu.lg.jp/soshiki/035/1314/g/akiya/1418794833215.html"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.otsu.lg.jp/soshiki/030/1402/g/1388647012579.html",
+      "phone": "077-528-2761"
+    }
+  },
+  {
+    "prefId": "yamaguchi",
+    "cityId": "yamaguchi",
+    "prefName": "山口県",
+    "cityName": "山口市",
+    "mascot": {
+      "localRiskText": "山口市は歴史的な建物も多いけど、管理されない空き家は火災の延焼リスクを高めるホー。地域の安全のために整理を考えるホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "山口市老朽空き家等除却補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "市が定める危険度基準を満たす空き家を解体する場合",
+      "officialUrl": "https://www.city.yamaguchi.lg.jp/soshiki/83/68310.html"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.yamaguchi.lg.jp/soshiki/53/2405.html",
+      "phone": "083-941-2186"
+    }
+  },
+  {
+    "prefId": "okinawa",
+    "cityId": "naha",
+    "prefName": "沖縄県",
+    "cityName": "那覇市",
+    "mascot": {
+      "localRiskText": "那覇市は強力な台風の通り道だホー！空き家の瓦や看板が飛んで近隣を傷つける前に、補助金を使って安全にするホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "那覇市空き家等除却支援事業補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "周辺に悪影響を及ぼす恐れがある危険な空き家など",
+      "officialUrl": "https://www.city.naha.okinawa.jp/kurashi/sumai/akiyataisaku/akiyajokyaku.html"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.naha.okinawa.jp/kurashi/gomi/gomi/gomi_wakekata/sodaigomi.html",
+      "phone": "098-889-3551"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "asahikawa",
+    "prefName": "北海道",
+    "cityName": "旭川市",
+    "mascot": {
+      "localRiskText": "旭川は極寒の地だホー！空き家放置は水道管の破裂や屋根の積雪倒壊に直結するから、冬が来る前に決断するホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "旭川市特定空家等除却費補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "周辺に危険を及ぼす特定空家等の解体",
+      "officialUrl": "https://www.city.asahikawa.hokkaido.jp/kurashi/218/222/227/p005842.html"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.asahikawa.hokkaido.jp/kurashi/271/272/279/p000185.html",
+      "phone": "0166-36-2591"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "koriyama",
+    "prefName": "福島県",
+    "cityName": "郡山市",
+    "mascot": {
+      "localRiskText": "郡山市は交通の要所だけど、空き家が増えると治安にも影響するホー。補助金を使って土地を有効活用してほしいホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "郡山市空き家等除却支援事業補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "危険空家等として判定された住宅の除却",
+      "officialUrl": "https://www.city.koriyama.lg.jp/soshiki/116/2165.html"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.koriyama.lg.jp/soshiki/77/2324.html",
+      "phone": "024-943-1717"
+    }
+  },
+  {
+    "prefId": "tokyo",
+    "cityId": "machida",
+    "prefName": "東京都",
+    "cityName": "町田市",
+    "mascot": {
+      "localRiskText": "町田市は住宅地が広がっているけど、空き家の庭木が道路にはみ出すトラブルが増えているホー！早めに整理するホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "町田市空き家等除却支援事業補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "管理不全な状態にある空き家等の除却",
+      "officialUrl": "https://www.city.machida.tokyo.jp/kurashi/sumai/house/akiyataisaku/akiyajosei.html"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.machida.tokyo.jp/kurashi/gomi/gomi_program/wakekata/sodai/index.html",
+      "phone": "042-797-1651"
+    }
+  },
+  {
+    "prefId": "aichi",
+    "cityId": "toyota",
+    "prefName": "愛知県",
+    "cityName": "豊田市",
+    "mascot": {
+      "localRiskText": "豊田市の山間部では空き家の老朽化が深刻だホー。補助金を活用して、実家の重荷を軽くすることを考えてほしいホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "豊田市老朽空き家解体費補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "1年以上空き家で、老朽度基準を満たす住宅",
+      "officialUrl": "https://www.city.toyota.aichi.jp/kurashi/sumai/akiya/1006834.html"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.toyota.aichi.jp/kurashi/gomi/gomi/1003463.html",
+      "phone": "0565-33-1101"
+    }
+  },
+  {
+    "prefId": "aichi",
+    "cityId": "okazaki",
+    "prefName": "愛知県",
+    "cityName": "岡崎市",
+    "mascot": {
+      "localRiskText": "岡崎の歴史ある街並みを守るホー。地震で空き家が崩れて避難路を塞ぐ前に、耐震診断と片付けを行うんだホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "岡崎市老朽空き家等解体費補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "1年以上空き家で、倒壊の恐れがある建物の解体",
+      "officialUrl": "https://www.city.okazaki.lg.jp/1550/1565/p013532.html"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.okazaki.lg.jp/1550/1562/p003112.html",
+      "phone": "0564-22-2000"
+    }
+  },
+  {
+    "prefId": "aichi",
+    "cityId": "ichinomiya",
+    "prefName": "愛知県",
+    "cityName": "一宮市",
+    "mascot": {
+      "localRiskText": "一宮市は密集した住宅も多いから、空き家放置は防犯面でも大きなリスクだホー。今のうちに将来の相談をするんだホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "一宮市老朽空き家等解体費補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "市が定める老朽基準を満たす空き家を解体する場合",
+      "officialUrl": "https://www.city.ichinomiya.aichi.jp/shisei/kensetsukoe/1010372/1003130.html"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.ichinomiya.aichi.jp/kurashi/gomi/1010344/1000216.html",
+      "phone": "0586-45-7004"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "yokkaichi",
+    "prefName": "三重県",
+    "cityName": "四日市市",
+    "mascot": {
+      "localRiskText": "四日市市は工業都市として発展しているけど、古い住宅の空き家問題も多いホー。補助金を賢く使って実家を整理だホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "四日市市老朽空き家等除却事業補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "倒壊の恐れがある老朽化した空き家を除却する場合",
+      "officialUrl": "https://www.city.yokkaichi.lg.jp/www/contents/1492045610582/index.html"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.yokkaichi.lg.jp/www/contents/1001000010266/index.html",
+      "phone": "059-354-8191"
+    }
+  },
+  {
+    "prefId": "okayama",
+    "cityId": "kurashiki",
+    "prefName": "岡山県",
+    "cityName": "倉敷市",
+    "mascot": {
+      "localRiskText": "倉敷の美観地区近くでも空き家問題は起きているホー。災害時に被害を広げないためにも、適切な除却が必要だホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "倉敷市老朽危険空家等除却補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "倒壊の恐れがあるなどの危険な空き家として認定されたもの",
+      "officialUrl": "https://www.city.kurashiki.okayama.jp/30154.htm"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kurashiki.okayama.jp/6312.htm",
+      "phone": "086-426-3371"
+    }
+  },
+  {
+    "prefId": "hiroshima",
+    "cityId": "fukuyama",
+    "prefName": "広島県",
+    "cityName": "福山市",
+    "mascot": {
+      "localRiskText": "福山市は瀬戸内海の穏やかな気候だけど、空き家の老朽化は確実に進むホー。補助金がある今のうちに検討だホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "福山市老朽空家等除却支援事業補助金",
+      "maxAmount": "最大50万円",
+      "conditions": "市が定める基準を超える老朽化した空き家の解体費用を補助",
+      "officialUrl": "https://www.city.fukuyama.hiroshima.jp/soshiki/kenchikushido/228185.html"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.fukuyama.hiroshima.jp/soshiki/kankyo/2952.html",
+      "phone": "084-954-2619"
     }
   }
 ]
