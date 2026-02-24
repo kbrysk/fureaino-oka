@@ -20,11 +20,14 @@ import RelatedAreas from "../../../components/RelatedAreas";
 import RegionalFacts from "../../../components/RegionalFacts";
 import InheritanceRouting from "../../../components/InheritanceRouting";
 import SituationGuide from "../../../components/SituationGuide";
+import JikkaOptimizer from "../../../components/JikkaOptimizer";
+import { getRegionalStats } from "../../../lib/utils/regional-stats-loader";
 import { getCanonicalBase } from "../../../lib/site-url";
 import { pageTitle } from "../../../lib/site-brand";
 
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
+  searchParams?: Promise<{ layout?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -52,8 +55,11 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function AreaPage({ params }: Props) {
+export default async function AreaPage({ params, searchParams }: Props) {
   const { prefecture, city } = await params;
+  const resolvedSearchParams = await searchParams?.catch(() => ({})) ?? {};
+  const initialLayout = resolvedSearchParams.layout as "1K" | "2DK" | "3LDK" | "4LDK+" | undefined;
+  const validLayout = initialLayout && ["1K", "2DK", "3LDK", "4LDK+"].includes(initialLayout) ? initialLayout : undefined;
   const area = getAreaById(prefecture, city);
   // if (!area) notFound();
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
@@ -69,11 +75,21 @@ export default async function AreaPage({ params }: Props) {
     { name: data.cityName, item: `${base}/area/${prefecture}/${city}` },
   ];
 
+  const optimizerJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: `${showFallback ? data.cityName : area!.city}の実家じまい・資産防衛シミュレーター`,
+    description: "間取り・荷物量・建物条件を選ぶと、費用と放置リスクがリアルタイムで計算されます。家族会議用レポートで共有可能。",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Any",
+  };
+
   if (showFallback) {
     const bulkySearchUrl = `https://www.google.com/search?q=${encodeURIComponent(data.prefName + " " + data.cityName + " 粗大ゴミ")}`;
     return (
       <div className="space-y-8">
         <BreadcrumbJsonLd itemListElements={breadcrumbItems} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
         <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="main" />
         <div>
           <h1 className="text-2xl font-bold text-primary">
@@ -81,6 +97,14 @@ export default async function AreaPage({ params }: Props) {
           </h1>
         </div>
         <RegionalFacts prefName={data.prefName} cityName={data.cityName} prefId={prefecture} cityId={city} />
+        <section id="optimizer-section" aria-label="実家じまいシミュレーター">
+          <JikkaOptimizer
+            cityName={data.cityName}
+            cityId={city}
+            regionalStats={getRegionalStats(`${prefecture}-${city}`)}
+            initialLayout={validLayout}
+          />
+        </section>
         <SituationGuide prefName={data.prefName} cityName={data.cityName} />
         <AreaDirectoryFallback
           cityName={data.cityName}
@@ -139,6 +163,7 @@ export default async function AreaPage({ params }: Props) {
   return (
     <div className="space-y-8">
       <BreadcrumbJsonLd itemListElements={richBreadcrumbItems} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="main" />
       <div>
         <h1 className="text-2xl font-bold text-primary">
@@ -150,6 +175,14 @@ export default async function AreaPage({ params }: Props) {
       </div>
 
       <RegionalFacts prefName={data.prefName} cityName={area.city} prefId={prefecture} cityId={city} />
+      <section id="optimizer-section" aria-label="実家じまいシミュレーター">
+        <JikkaOptimizer
+          cityName={area.city}
+          cityId={ids.cityId}
+          regionalStats={getRegionalStats(`${prefecture}-${city}`)}
+          initialLayout={validLayout}
+        />
+      </section>
       <SituationGuide prefName={data.prefName} cityName={area.city} />
       <AreaOwlBlock cityName={area.city} />
 
