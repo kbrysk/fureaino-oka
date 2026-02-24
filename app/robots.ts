@@ -5,8 +5,9 @@ import { getCanonicalBase } from "./lib/site-url";
 const ROBOTS_BASE = getCanonicalBase();
 
 /**
- * robots.txt（SEO: クローラーへの案内・sitemapの明示）
- * User-agent: * に Allow、sitemap.xml の絶対URLを必ず出力。
+ * robots.txt（SEO: クローラーへの案内・Sitemap Index の明示）
+ * generateSitemaps により /sitemap.xml がインデックスとなり /sitemap/0.xml, /sitemap/1.xml... を参照。
+ * 正規ドメインの絶対URLで Sitemap を指定し、Search Console の評価を正規URLに統合。
  */
 export default function robots(): MetadataRoute.Robots {
   return {

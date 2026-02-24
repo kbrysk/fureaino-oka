@@ -17,6 +17,8 @@ import AreaDirectoryFallback from "../../../components/AreaDirectoryFallback";
 import DynamicFaq from "../../../components/DynamicFaq";
 import BreadcrumbJsonLd from "../../../components/BreadcrumbJsonLd";
 import RelatedAreas from "../../../components/RelatedAreas";
+import NearbyAreas from "../../../components/NearbyAreas";
+import DynamicCaseStudy from "../../../components/DynamicCaseStudy";
 import RegionalFacts from "../../../components/RegionalFacts";
 import InheritanceRouting from "../../../components/InheritanceRouting";
 import SituationGuide from "../../../components/SituationGuide";
@@ -100,6 +102,11 @@ export default async function AreaPage({ params, searchParams }: Props) {
           </h1>
         </div>
         <RegionalFacts prefName={data.prefName} cityName={data.cityName} prefId={prefecture} cityId={city} />
+        <DynamicCaseStudy
+          cityName={data.cityName}
+          landPrice={getRegionalStats(`${prefecture}-${city}`)?.landPrice ?? 20000000}
+          cityId={city}
+        />
         <section id="optimizer-section" aria-label="実家じまいシミュレーター">
           <JikkaOptimizer
             cityName={data.cityName}
@@ -150,6 +157,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
           </Link>
         </div>
         <RelatedAreas currentPrefId={prefecture} currentCityId={city} prefName={data.prefName} />
+        <NearbyAreas currentPrefecture={prefecture} currentCity={city} />
         <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
           <p className="font-medium text-foreground/80 mb-1">監修</p>
           <p>整理収納・生前整理に関する記載は整理収納アドバイザー／税理士の監修を受けております。YMYL領域の情報は随時見直しを行っています。</p>
@@ -179,6 +187,11 @@ export default async function AreaPage({ params, searchParams }: Props) {
       </div>
 
       <RegionalFacts prefName={data.prefName} cityName={area.city} prefId={prefecture} cityId={city} />
+      <DynamicCaseStudy
+        cityName={area.city}
+        landPrice={getRegionalStats(`${prefecture}-${city}`)?.landPrice ?? 20000000}
+        cityId={ids.cityId}
+      />
       <section id="optimizer-section" aria-label="実家じまいシミュレーター">
         <JikkaOptimizer
           cityName={area.city}
@@ -324,6 +337,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
       </div>
 
       <RelatedAreas currentPrefId={prefecture} currentCityId={city} prefName={data.prefName} />
+      <NearbyAreas currentPrefecture={ids.prefectureId} currentCity={ids.cityId} />
       <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
         <p className="font-medium text-foreground/80 mb-1">監修</p>
         <p>
