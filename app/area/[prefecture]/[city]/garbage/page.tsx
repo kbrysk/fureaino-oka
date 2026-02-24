@@ -14,6 +14,7 @@ import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalC
 import MascotAdviceBlock from "../../../../components/MascotAdviceBlock";
 import LocalConsultationCard from "../../../../components/LocalConsultationCard";
 import NearbySubsidyLinks from "../../../../components/NearbySubsidyLinks";
+import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import { pageTitle } from "../../../../lib/site-brand";
 
@@ -163,6 +164,14 @@ export default async function AreaGarbagePage({ params }: Props) {
           .filter((m) => m.cityId !== ids.cityId)
           .slice(0, 6)
           .map((m) => ({ cityId: m.cityId, cityName: m.cityName }))}
+      />
+
+      <SpokeInternalLinks
+        prefId={ids.prefectureId}
+        cityId={ids.cityId}
+        prefName={data.prefName}
+        cityName={area.city}
+        currentSpoke="garbage"
       />
 
       <div className="flex flex-wrap gap-3">

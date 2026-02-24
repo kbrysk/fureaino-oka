@@ -14,6 +14,7 @@ import MascotAdviceBlock from "../../../../components/MascotAdviceBlock";
 import LocalConsultationCard from "../../../../components/LocalConsultationCard";
 import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalCard";
 import NearbySubsidyLinks from "../../../../components/NearbySubsidyLinks";
+import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import { pageTitle } from "../../../../lib/site-brand";
 
@@ -272,6 +273,14 @@ export default async function AreaSubsidyPage({ params }: Props) {
           .filter((m) => m.cityId !== data.cityId)
           .slice(0, 6)
           .map((m) => ({ cityId: m.cityId, cityName: m.cityName }))}
+      />
+
+      <SpokeInternalLinks
+        prefId={data.prefId}
+        cityId={data.cityId}
+        prefName={data.prefName}
+        cityName={data.cityName}
+        currentSpoke="subsidy"
       />
 
       <div className="flex flex-wrap gap-3">

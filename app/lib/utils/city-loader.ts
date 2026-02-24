@@ -29,3 +29,18 @@ export function getSampleCityPaths(): CityPath[] {
     cityName: e.city,
   }));
 }
+
+/** 全国の都道府県ID（prefId）のユニークリスト。sitemap 分割用。 */
+export function getPrefectureIds(): string[] {
+  const prefIds = AREA_ID_MAP.map((e) => e.prefectureId);
+  return Array.from(new Set(prefIds));
+}
+
+/** 指定都道府県に属する市区町村パスのみ。sitemap(prefId) 用。 */
+export function getCityPathsByPrefecture(prefId: string): CityPath[] {
+  return AREA_ID_MAP.filter((e) => e.prefectureId === prefId).map((e) => ({
+    prefId: e.prefectureId,
+    cityId: e.cityId,
+    cityName: e.city,
+  }));
+}

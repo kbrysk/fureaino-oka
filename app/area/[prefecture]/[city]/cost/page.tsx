@@ -6,6 +6,7 @@ export const dynamicParams = true;
 export const revalidate = 86400;
 import { getMunicipalityDataOrDefault } from "../../../../lib/data/municipalities";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
+import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
 import JikkaOptimizer from "../../../../components/JikkaOptimizer";
 import { getRegionalStats } from "../../../../lib/utils/regional-stats-loader";
 import { pageTitle } from "../../../../lib/site-brand";
@@ -68,6 +69,14 @@ export default async function AreaCostPage({ params }: Props) {
           ctaLabel={`${cityName}の無料査定・相場確認へ進む 👉`}
         />
       </section>
+
+      <SpokeInternalLinks
+        prefId={ids.prefectureId}
+        cityId={ids.cityId}
+        prefName={data.prefName}
+        cityName={cityName}
+        currentSpoke="cost"
+      />
 
       <div className="flex flex-wrap gap-3">
         <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
