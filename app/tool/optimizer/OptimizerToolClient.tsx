@@ -39,7 +39,7 @@ export default function OptimizerToolClient({
   const regionalStats = statsKey ? (statsMap[statsKey] ?? null) : null;
   const hasSelection = Boolean(selectedPrefId && selectedCityId);
   const ctaUrl = getOptimalCtaUrl(selectedPrefId || undefined, selectedCityId || undefined);
-  const ctaLabel = selectedCityName ? `${selectedCityName}の無料査定を依頼する` : "地域を選択して査定相場を見る";
+  const ctaLabel = selectedCityName ? `${selectedCityName}の無料査定・相場確認へ進む 👉` : "地域を選択して診断結果の詳細を見る 👉";
 
   return (
     <div className="space-y-6">

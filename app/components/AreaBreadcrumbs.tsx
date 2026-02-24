@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const BASE_URL =
-  typeof process.env.NEXT_PUBLIC_SITE_URL === "string" && process.env.NEXT_PUBLIC_SITE_URL
+  (typeof process.env.NEXT_PUBLIC_SITE_URL === "string" && process.env.NEXT_PUBLIC_SITE_URL?.trim()
     ? process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "")
-    : "";
+    : "") || "https://www.fureaino-oka.com";
 
 export type AreaBreadcrumbPage = "main" | "subsidy" | "cleanup";
 
@@ -46,11 +46,11 @@ export default function AreaBreadcrumbs({ prefecture, city, prefectureId, cityId
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, i) => ({
+    itemListElement: items.map((crumb, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      name: item.name,
-      ...(BASE_URL && { item: { "@id": `${BASE_URL}${item.path}` } }),
+      name: crumb.name,
+      item: `${BASE_URL}${crumb.path === "/" ? "" : crumb.path}`,
     })),
   };
 

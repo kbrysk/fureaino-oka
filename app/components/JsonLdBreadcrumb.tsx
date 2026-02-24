@@ -61,6 +61,7 @@ interface JsonLdBreadcrumbProps {
 export default function JsonLdBreadcrumb({ baseUrl }: JsonLdBreadcrumbProps) {
   const pathname = usePathname();
   const segments = pathname.split("/").filter(Boolean);
+  const base = (baseUrl && String(baseUrl).trim()) ? String(baseUrl).replace(/\/$/, "") : "https://www.fureaino-oka.com";
 
   const items: { name: string; path: string }[] = [{ name: "ホーム", path: "/" }];
   let acc = "";
@@ -79,7 +80,7 @@ export default function JsonLdBreadcrumb({ baseUrl }: JsonLdBreadcrumbProps) {
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      item: `${baseUrl}${item.path === "/" ? "" : item.path}`.replace(/\?.*$/, ""),
+      item: `${base}${item.path === "/" ? "" : item.path}`.replace(/\?.*$/, ""),
     })),
   };
 

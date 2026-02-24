@@ -415,7 +415,7 @@ export default function JikkaOptimizer({ cityName, cityId, regionalStats, initia
                 href={ctaHref}
                 className="w-full block text-center py-3 px-4 rounded-xl font-bold text-white bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-200"
               >
-                {ctaLabel ?? "無料査定を依頼する"} →
+                {ctaLabel ?? "無料査定・相場確認へ進む 👉"}
               </Link>
             ) : (
               <button

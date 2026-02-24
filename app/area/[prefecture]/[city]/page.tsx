@@ -20,6 +20,7 @@ import RelatedAreas from "../../../components/RelatedAreas";
 import NearbyAreas from "../../../components/NearbyAreas";
 import DynamicCaseStudy from "../../../components/DynamicCaseStudy";
 import RegionalFacts from "../../../components/RegionalFacts";
+import LocalSubsidyFaq from "../../../components/LocalSubsidyFaq";
 import InheritanceRouting from "../../../components/InheritanceRouting";
 import SituationGuide from "../../../components/SituationGuide";
 import JikkaOptimizer from "../../../components/JikkaOptimizer";
@@ -104,6 +105,15 @@ export default async function AreaPage({ params, searchParams }: Props) {
           </h1>
         </div>
         <RegionalFacts prefName={data.prefName} cityName={data.cityName} prefId={prefecture} cityId={city} />
+        <LocalSubsidyFaq
+          municipalityData={data}
+          cityName={data.cityName}
+          prefName={data.prefName}
+          prefId={prefecture}
+          cityId={city}
+          regionalStats={getRegionalStats(`${prefecture}-${city}`)}
+          baseUrl={base}
+        />
         <DynamicCaseStudy
           cityName={data.cityName}
           landPrice={getRegionalStats(`${prefecture}-${city}`)?.landPrice ?? 20000000}
@@ -190,6 +200,15 @@ export default async function AreaPage({ params, searchParams }: Props) {
       </div>
 
       <RegionalFacts prefName={data.prefName} cityName={area.city} prefId={prefecture} cityId={city} />
+      <LocalSubsidyFaq
+        municipalityData={data}
+        cityName={area.city}
+        prefName={data.prefName}
+        prefId={prefecture}
+        cityId={city}
+        regionalStats={getRegionalStats(`${prefecture}-${city}`)}
+        baseUrl={base}
+      />
       <DynamicCaseStudy
         cityName={area.city}
         landPrice={getRegionalStats(`${prefecture}-${city}`)?.landPrice ?? 20000000}

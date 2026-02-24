@@ -44,9 +44,12 @@ export async function getMunicipalityData(
   return found ?? null;
 }
 
-/** 公式窓口誘導用の固定デフォルト（作文なし）。データなし時に即返す。 */
+/** 公式窓口誘導用の固定デフォルト。データなし時（1000自治体規模で未登録地域）に即返す。 */
 const DEFAULT_MUNICIPALITY_TEMPLATE = {
-  mascot: { localRiskText: "" },
+  mascot: {
+    localRiskText:
+      "お住まいの地域の補助金・粗大ゴミの出し方は自治体の公式サイトでご確認ください。無料査定で資産価値の目安も把握できます。",
+  },
   subsidy: { hasSubsidy: false as const },
   garbage: {
     officialUrl: "https://www.google.com/search?q=空き家補助金+公式サイト",
