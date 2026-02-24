@@ -24,6 +24,11 @@ export default function RealEstateAppraisalCard({ cityName, cityId, localRiskTex
   const type = variant;
   const href = `/api/affiliate/appraisal?area=${encodeURIComponent(cityId)}&type=${type}`;
 
+  const isWakegai = localRiskText && WAKEGAI_KEYWORDS.test(localRiskText);
+  const impSrc = isWakegai
+    ? "https://www13.a8.net/0.gif?a8mat=4AXDCK+E6TXTE+5J56+5YRHE"
+    : "https://www13.a8.net/0.gif?a8mat=4AXE4D+D2CGOI+5M76+BWVTE";
+
   if (variant === "wakegai") {
     return (
       <section
@@ -87,7 +92,7 @@ export default function RealEstateAppraisalCard({ cityName, cityId, localRiskTex
       <div className="h-px overflow-hidden" aria-hidden>
         {/* A8インプレッション計測用1px画像（ノムコム） */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={A8_IMP_NOMU} alt="" width={1} height={1} className="block w-px h-px" />
+        <img src={impSrc} alt="" width={1} height={1} className="block w-px h-px" />
       </div>
     </section>
   );
