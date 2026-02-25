@@ -178,20 +178,44 @@ export default function EmptyHouseTaxSimulator({
             </p>
 
             {/* Primary CTA：不動産の一括査定（アフィリエイト導線） */}
-            <Link
-              href="/tools/appraisal"
-              onClick={() => {
-                if (total * 10 >= 100) {
-                  trackLeadEvent("empty_house_sim_10y_loss_100_plus", {
-                    ten_year_loss_yen: total * 10 * 10000,
-                  });
-                }
-                trackLeadEvent("appraisal_button_click", { source: "empty_house_sim" });
-              }}
-              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-accent text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg hover:opacity-90 transition shadow-lg mb-4"
-            >
-              不動産の一括査定はこちら（無料）
-            </Link>
+            <div className="flex flex-col items-center justify-center w-full mb-4">
+              {/* アフィリエイター視点: マイクロコピーでクリックの心理的ハードルを下げる */}
+              <span className="text-accent font-bold text-sm sm:text-base mb-1">
+                ＼たった60秒・完全無料／
+              </span>
+
+              <a
+                href="https://px.a8.net/svt/ejp?a8mat=4AXE4D+D2CGOI+5M76+BWVTE"
+                target="_blank"
+                rel="nofollow sponsored noopener noreferrer"
+                onClick={() => {
+                  if (total * 10 >= 100) {
+                    trackLeadEvent("empty_house_sim_10y_loss_100_plus", {
+                      ten_year_loss_yen: total * 10 * 10000,
+                    });
+                  }
+                  trackLeadEvent("appraisal_button_click", { source: "empty_house_sim_affiliate" });
+                }}
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto min-h-[48px] bg-accent text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg hover:opacity-90 hover:-translate-y-1 transition-all duration-300 shadow-lg"
+              >
+                不動産の一括査定はこちら（無料）
+              </a>
+
+              {/* ユーザー利益＆Googleアルゴリズム視点: 遷移先の透明性確保と計測ビーコン */}
+              <div className="flex flex-col items-center mt-2 relative">
+                <span className="text-xs text-gray-500">
+                  ※提携先のノムコム（野村不動産ソリューションズ）のサイトへ移動します
+                </span>
+                <img
+                  style={{ border: 0 }}
+                  width={1}
+                  height={1}
+                  src="https://www14.a8.net/0.gif?a8mat=4AXE4D+D2CGOI+5M76+BWVTE"
+                  alt=""
+                  className="absolute opacity-0 pointer-events-none"
+                />
+              </div>
+            </div>
 
             {/* Secondary CTA：LINEで対策ガイドを受け取る */}
             <p className="text-base text-foreground/80 mb-2">詳しい対策ガイドをLINEで受け取る（無料）</p>
