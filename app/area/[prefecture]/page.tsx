@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import data from "../../lib/data/municipalities.json";
 import PrefectureSummary from "../../components/PrefectureSummary";
+import { getCityPathsByPrefecture } from "../../lib/utils/city-loader";
 import { pageTitle } from "../../lib/site-brand";
 
 type MunicipalityRow = {
@@ -77,6 +78,32 @@ export default async function AreaPrefecturePage({ params }: Props) {
       </div>
 
       <PrefectureSummary prefId={prefId} prefName={prefName ?? undefined} />
+
+      <section className="mt-12 mb-8" aria-labelledby="all-cities-heading">
+        <div className="mb-6">
+          <h2 id="all-cities-heading" className="text-2xl font-bold text-foreground border-b-2 border-primary pb-2">
+            {prefName ?? prefId}のすべての市区町村から探す
+          </h2>
+          <p className="mt-3 text-sm text-foreground/60 leading-relaxed">
+            ご実家や空き家のある地域を選択して、<strong>解体費用の相場</strong>や<strong>粗大ゴミ処分の手順</strong>、使える<strong>補助金・助成金制度</strong>を確認しましょう。
+          </p>
+        </div>
+
+        <nav aria-label={`${prefName ?? prefId}の市区町村一覧`}>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            {getCityPathsByPrefecture(prefId.toLowerCase().trim()).map(({ cityId, cityName }) => (
+              <li key={cityId}>
+                <Link
+                  href={`/area/${prefId}/${cityId}`}
+                  className="block w-full text-center py-3 px-2 bg-white border border-border rounded-lg shadow-sm hover:shadow-md hover:border-primary hover:bg-primary-light transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <span className="text-base font-medium text-foreground">{cityName}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </section>
 
       <div className="flex flex-wrap gap-3 pt-4 border-t border-border">
         <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
