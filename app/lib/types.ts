@@ -1,8 +1,28 @@
+/** チェック項目の進捗状態（skipped はプログレス分母から除外） */
+export type CheckItemStatus = "todo" | "completed" | "skipped";
+
+/** 担当者 */
+export type CheckItemAssignee = "unassigned" | "me" | "family" | "expert";
+
+/** 内部リンク（SEO回遊用） */
+export interface CheckItemActionLink {
+  url: string;
+  text: string;
+}
+
 export interface CheckItem {
   id: string;
   category: string;
   label: string;
   checked: boolean;
+  /** 進捗状態（未設定時は checked から導出） */
+  status?: CheckItemStatus;
+  /** 担当者（未設定時は unassigned） */
+  assignee?: CheckItemAssignee;
+  /** アコーディオン内の How-To テキスト */
+  description?: string;
+  /** サイト内ツール・エリアページへの内部リンク */
+  actionLink?: CheckItemActionLink;
 }
 
 // --- Asset (構造化データ) ---

@@ -14,6 +14,11 @@ const LEGACY_410_EXACT = "/parking.php";
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  // 0. 運営者情報 → 会社概要ページへ恒久リダイレクト（SEO 評価の引き継ぎ）
+  if (pathname === "/about" || pathname === "/about/") {
+    return NextResponse.redirect(new URL("/company", request.url), 301);
+  }
+
   // 1. 中古ドメイン遺物 → 410 Gone（Search Console でインデックス削除を促す）
   if (pathname === LEGACY_410_EXACT) {
     return new NextResponse(null, { status: 410 });
@@ -57,6 +62,8 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+    "/about",
+    "/about/",
     "/area/:path*",
     "/tax-simulator/:path*",
     "/tenmon/:path*",

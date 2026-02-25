@@ -23,7 +23,9 @@ import {
   isOverTaxThreshold,
   getInheritanceTaxThreshold,
   getTotalEstimatedValue,
+  getEstimatedDisposalCost,
 } from "../lib/storage";
+import { baseUrl } from "../lib/constants/site-metadata";
 import ContextualCTABanner from "../components/ContextualCTABanner";
 import AppraisalModal from "../components/AppraisalModal";
 import AppraisalCTA from "../components/AppraisalCTA";
@@ -84,6 +86,7 @@ export default function AssetsPage() {
   const [intentModal, setIntentModal] = useState<{ asset: Asset; intent: DispositionIntent } | null>(null);
   const [familyMembers, setFamilyMembers] = useState<FamilyMember[]>([]);
   const [overTax, setOverTax] = useState(false);
+  const [estimatedDisposalCost, setEstimatedDisposalCost] = useState(0);
 
   useEffect(() => {
     const loadedAssets = getAssets();
@@ -92,6 +95,7 @@ export default function AssetsPage() {
     const profile = getUserProfile();
     setFamilyMembers(profile.familyMembers);
     setOverTax(isOverTaxThreshold());
+    setEstimatedDisposalCost(getEstimatedDisposalCost());
   }, []);
 
   const isRealEstate = form.category === "不動産";
@@ -120,6 +124,7 @@ export default function AssetsPage() {
     setForm(INITIAL_FORM);
     setShowForm(false);
     setOverTax(isOverTaxThreshold());
+    setEstimatedDisposalCost(getEstimatedDisposalCost());
 
     if (form.wantsAppraisal) {
       setAppraisalTarget(newAsset);
@@ -142,6 +147,7 @@ export default function AssetsPage() {
     setAssets(assets.filter((a) => a.id !== id));
     if (justAdded?.id === id) setJustAdded(null);
     setOverTax(isOverTaxThreshold());
+    setEstimatedDisposalCost(getEstimatedDisposalCost());
   };
 
   const handleIntentChange = (id: string, intent: DispositionIntent) => {
@@ -152,6 +158,7 @@ export default function AssetsPage() {
     );
     setAssets(updated);
     saveAssets(updated);
+    setEstimatedDisposalCost(getEstimatedDisposalCost());
 
     // Trigger modal for hot intents
     if (intent === "売却を検討中" || intent === "処分に困っている") {
@@ -215,6 +222,18 @@ export default function AssetsPage() {
           >
             無料で査定を比較する
           </Link>
+        </div>
+      )}
+
+      {/* 損失回避メーター：想定処分費用（マイナスが発生しているときのみ表示） */}
+      {assets.length > 0 && estimatedDisposalCost < 0 && (
+        <div className="bg-red-50 border border-red-200 rounded-2xl p-5">
+          <p className="text-red-700 font-medium">
+            ⚠️ そのまま残すと… 想定処分費用: -{formatAmount(Math.abs(estimatedDisposalCost))}
+          </p>
+          <p className="text-red-600 text-sm mt-1">
+            「迷っている」「処分予定」のアイテムがあると、処分時に費用がかかる場合があります。早めの整理で負担を減らせます。
+          </p>
         </div>
       )}
 
@@ -636,6 +655,40 @@ export default function AssetsPage() {
         </div>
       )}
 
+      {/* 文脈型SEO内部リンク（アクションロードマップ）：処分費用 or 車・不動産に応じた案内 */}
+      {assets.length > 0 && (estimatedDisposalCost < 0 || assets.some((a) => a.category === "車・バイク" || a.category === "不動産")) && (
+        <div className="space-y-4">
+          {estimatedDisposalCost < 0 && (
+            <div className="border-l-4 border-primary bg-primary/5 p-4 rounded-r-xl">
+              <h3 className="font-bold text-foreground mb-1">💡 処分費用を安く抑える・補助金を探す</h3>
+              <p className="text-sm text-foreground/80 mb-3">
+                「迷っている」「処分予定」のアイテムがあります。お住まいの地域の粗大ゴミ処分の裏技や、使える補助金を確認しましょう。
+              </p>
+              <Link
+                href="/area/tokyo/setagaya/garbage"
+                className="inline-block bg-primary text-white px-4 py-2 rounded-xl font-medium text-sm hover:opacity-90 transition"
+              >
+                世田谷区の粗大ゴミ・遺品整理の費用相場を見る
+              </Link>
+            </div>
+          )}
+          {assets.some((a) => a.category === "車・バイク" || a.category === "不動産") && (
+            <div className="border-l-4 border-primary bg-primary/5 p-4 rounded-r-xl">
+              <h3 className="font-bold text-foreground mb-1">🚗 価値が下がる前に無料一括査定へ</h3>
+              <p className="text-sm text-foreground/80 mb-3">
+                車・バイク・不動産は査定で価値がわかります。複数社の無料査定で比較してみましょう。
+              </p>
+              <Link
+                href="/guide"
+                className="inline-block bg-primary text-white px-4 py-2 rounded-xl font-medium text-sm hover:opacity-90 transition"
+              >
+                無料一括査定を申し込む
+              </Link>
+            </div>
+          )}
+        </div>
+      )}
+
       {/* Cross-analysis CTAs */}
       {concernTags.length > 0 && assets.length > 0 && (
         <ContextualCTABanner concernTags={concernTags} assets={assets} />
@@ -769,18 +822,29 @@ export default function AssetsPage() {
         </div>
       )}
 
-      {/* Sticky Footer: 一括査定CTA */}
+      {/* Sticky Footer: 一括査定CTA + LINE共有 */}
       {assets.length > 0 && (
-        <div className="sticky bottom-0 left-0 right-0 z-10 mt-8 -mx-4 px-4 py-4 bg-background/95 border-t border-border shadow-[0_-4px_12px_rgba(0,0,0,0.06)] md:max-w-3xl md:mx-auto md:rounded-t-2xl">
+        <div className="sticky bottom-0 left-0 right-0 z-10 mt-8 -mx-4 px-4 py-4 bg-background/95 border-t border-border shadow-[0_-4px_12px_rgba(0,0,0,0.06)] md:max-w-3xl md:mx-auto md:rounded-t-2xl space-y-3">
           <Link
             href="/guide"
             className="block w-full text-center bg-primary text-white py-4 px-6 rounded-xl font-bold text-base hover:opacity-90 transition shadow-lg"
           >
             登録した全資産をまとめて現金化シミュレーション
           </Link>
-          <p className="text-xs text-center text-foreground/50 mt-2">
+          <p className="text-xs text-center text-foreground/50">
             提携業者へ無料で査定・見積もりを依頼できます
           </p>
+          <a
+            href={`https://line.me/R/msg/text/?${encodeURIComponent(
+              `実家の資産や持ち物のリストを整理しました。「ふれあいの丘」のサイト（私のスマホ/PCのブラウザ）に保存してあるので、もしもの時は確認してね。 ${baseUrl}`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 w-full py-3 px-6 rounded-xl font-medium text-base text-white hover:opacity-90 transition shadow-md"
+            style={{ backgroundColor: "#06C755" }}
+          >
+            💬 家族に資産リストの保管をLINEで知らせる
+          </a>
         </div>
       )}
     </div>

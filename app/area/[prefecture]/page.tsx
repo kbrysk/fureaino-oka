@@ -51,10 +51,13 @@ export async function generateMetadata({ params }: Props) {
  */
 export default async function AreaPrefecturePage({ params }: Props) {
   const { prefecture: prefId } = await params;
+  const prefIdNorm = prefId.toLowerCase().trim();
   const prefName = getPrefectureName(prefId);
-  const hasData = municipalities.some((m) => m.prefId.toLowerCase() === prefId.toLowerCase());
+  const hasData = municipalities.some((m) => m.prefId.toLowerCase() === prefIdNorm);
 
   if (!hasData) notFound();
+
+  const allCities = getCityPathsByPrefecture(prefIdNorm);
 
   return (
     <div className="space-y-8">
@@ -81,23 +84,23 @@ export default async function AreaPrefecturePage({ params }: Props) {
 
       <section className="mt-12 mb-8" aria-labelledby="all-cities-heading">
         <div className="mb-6">
-          <h2 id="all-cities-heading" className="text-2xl font-bold text-foreground border-b-2 border-primary pb-2">
+          <h2 id="all-cities-heading" className="text-2xl font-bold text-gray-900 border-b-2 border-primary pb-2">
             {prefName ?? prefId}のすべての市区町村から探す
           </h2>
-          <p className="mt-3 text-sm text-foreground/60 leading-relaxed">
+          <p className="mt-3 text-sm text-gray-600 leading-relaxed">
             ご実家や空き家のある地域を選択して、<strong>解体費用の相場</strong>や<strong>粗大ゴミ処分の手順</strong>、使える<strong>補助金・助成金制度</strong>を確認しましょう。
           </p>
         </div>
 
         <nav aria-label={`${prefName ?? prefId}の市区町村一覧`}>
           <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-            {getCityPathsByPrefecture(prefId.toLowerCase().trim()).map(({ cityId, cityName }) => (
+            {allCities.map(({ prefId: pId, cityId, cityName }) => (
               <li key={cityId}>
                 <Link
-                  href={`/area/${prefId}/${cityId}`}
-                  className="block w-full text-center py-3 px-2 bg-white border border-border rounded-lg shadow-sm hover:shadow-md hover:border-primary hover:bg-primary-light transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
+                  href={`/area/${pId}/${cityId}`}
+                  className="block w-full text-center py-3 px-2 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:border-primary hover:bg-primary-light transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
                 >
-                  <span className="text-base font-medium text-foreground">{cityName}</span>
+                  <span className="text-base font-medium text-gray-800">{cityName}</span>
                 </Link>
               </li>
             ))}

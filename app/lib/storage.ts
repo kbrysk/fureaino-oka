@@ -28,6 +28,8 @@ export function getChecklist(): CheckItem[] {
     ...item,
     id: generateId(),
     checked: false,
+    status: "todo" as const,
+    assignee: "unassigned" as const,
   }));
   localStorage.setItem("seizenseiri_checklist", JSON.stringify(defaults));
   return defaults;
@@ -241,6 +243,41 @@ export function isOverTaxThreshold(): boolean {
 }
 
 // --- Utility ---
+
+/** 想定処分費用の算出：1アイテムあたりの金額（後で調整可能なため定数化） */
+export const DISPOSAL_COST_PER_ITEM_YEN = 5000;
+
+/** 処分費用を算出する対象カテゴリ（家具・家電・その他不用品）。車・バイク・不動産は0円。 */
+export const CATEGORIES_WITH_DISPOSAL_COST: string[] = [
+  "家具・家電",
+  "衣類",
+  "書籍・趣味品",
+  "その他",
+];
+
+/** 処分費用をカウントする意向（迷っている・処分に困っている・処分済） */
+const DISPOSITION_INTENTS_WITH_DISPOSAL_COST: string[] = [
+  "迷っている（保留）",
+  "処分に困っている",
+  "処分済",
+];
+
+/**
+ * 想定処分費用（マイナス額）を算出。
+ * 対象：カテゴリが家具・家電・衣類・書籍・趣味品・その他 かつ 意向が迷っている/処分に困っている/処分済。
+ * 車・バイク・不動産は0円（要査定のため計算外）。
+ */
+export function getEstimatedDisposalCost(): number {
+  if (typeof window === "undefined") return 0;
+  const assets = getAssets();
+  const count = assets.filter(
+    (a) =>
+      CATEGORIES_WITH_DISPOSAL_COST.includes(a.category) &&
+      DISPOSITION_INTENTS_WITH_DISPOSAL_COST.includes(a.dispositionIntent)
+  ).length;
+  if (count === 0) return 0;
+  return -(count * DISPOSAL_COST_PER_ITEM_YEN);
+}
 
 export function getTotalEstimatedValue(): number {
   return getAssets()

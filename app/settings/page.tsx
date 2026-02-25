@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+import Link from "next/link";
 import {
   ReminderSettings,
   FamilyShare,
@@ -39,12 +40,15 @@ export default function SettingsPage() {
   const [saved, setSaved] = useState(false);
   const [dmsSaved, setDmsSaved] = useState(false);
   const [profileSaved, setProfileSaved] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   useEffect(() => {
     setReminder(getReminderSettings());
     setShares(getFamilyShares());
     setDms(getDeadManSwitchSettings());
     setProfile(getUserProfile());
+    setIsMounted(true);
   }, []);
 
   const handleSaveReminder = () => {
@@ -107,11 +111,65 @@ export default function SettingsPage() {
     saveUserProfile(updated);
   };
 
+  const handleTestSend = () => {
+    setToastMessage(
+      "テストメールをご自身のブラウザ上でシミュレーションしました。（※実際の画面では、ここからメールクライアントが立ち上がるか、登録アドレスに送信されます）"
+    );
+    setTimeout(() => setToastMessage(null), 5000);
+  };
+
+  const safetyMet = useMemo(() => {
+    const hasFamily = profile.familyMembers.length >= 1;
+    const hasReminder = reminder.enabled;
+    const hasShareRecipient = shares.length >= 1;
+    return [hasFamily, hasReminder, hasShareRecipient].filter(Boolean).length;
+  }, [profile.familyMembers.length, reminder.enabled, shares.length]);
+
+  const safetyPercent = isMounted ? Math.round((safetyMet / 3) * 100) : 0;
+
+  const inheritanceDeduction = useMemo(
+    () => 3000 + 600 * profile.legalHeirs,
+    [profile.legalHeirs]
+  );
+
   return (
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-primary">設定</h1>
         <p className="text-foreground/50 mt-1">家族情報・リマインダー・共有の設定</p>
+      </div>
+
+      {/* 終活・安全性スコアダッシュボード（マウント後のみ値表示で Hydration 対策） */}
+      <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200/80 rounded-2xl p-6">
+        <p className="font-bold text-emerald-800 text-lg mb-2">
+          現在のデジタル金庫の安全性: 🛡️ {isMounted ? `${safetyPercent}%` : "—"}
+        </p>
+        {isMounted && (
+          <p className="text-sm text-emerald-700/90 mb-4">
+            {safetyMet === 3
+              ? "家族登録・リマインダー・共有先の3つがそろっています。"
+              : `${3 - safetyMet}項目を設定すると、より安心して情報を残せます。`}
+          </p>
+        )}
+        <div className="w-full bg-emerald-200/60 rounded-full h-3 overflow-hidden">
+          <div
+            className="h-full bg-emerald-600 rounded-full transition-all duration-500 ease-out"
+            style={{ width: isMounted ? `${safetyPercent}%` : "0%" }}
+          />
+        </div>
+        {isMounted && (
+          <ul className="mt-3 text-xs text-emerald-800/80 space-y-1">
+            <li className={safetyMet >= 1 ? "text-emerald-700" : "text-emerald-600/70"}>
+              {profile.familyMembers.length >= 1 ? "✓" : "—"} 家族が1人以上登録
+            </li>
+            <li className={safetyMet >= 2 ? "text-emerald-700" : "text-emerald-600/70"}>
+              {reminder.enabled ? "✓" : "—"} リマインダーON
+            </li>
+            <li className={safetyMet >= 3 ? "text-emerald-700" : "text-emerald-600/70"}>
+              {shares.length >= 1 ? "✓" : "—"} 共有先の登録あり
+            </li>
+          </ul>
+        )}
       </div>
 
       {/* Family Members Master */}
@@ -139,6 +197,25 @@ export default function SettingsPage() {
                 相続税の基礎控除額の計算に使用します（3,000万円 + 600万円 × 人数）
               </p>
             </div>
+            {isMounted && (
+              <div className="mt-4 space-y-3">
+                <p className="text-lg font-bold text-primary">
+                  💡 あなたのご家族の相続税・基礎控除額（非課税枠）:{" "}
+                  <span className="text-xl">{inheritanceDeduction.toLocaleString()}万円</span>
+                </p>
+                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 rounded-r-lg">
+                  <p className="text-sm text-yellow-800">
+                    ご実家の不動産や預貯金の合計がこの金額を超えると、ご家族に多額の相続税がかかる可能性があります。
+                  </p>
+                </div>
+                <Link
+                  href="/assets"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary text-white font-medium text-sm hover:opacity-90 transition"
+                >
+                  👉 ご実家の資産価値をシミュレーションする（無料）
+                </Link>
+              </div>
+            )}
           </div>
 
           <div className="bg-background rounded-xl p-4 space-y-3">
@@ -425,6 +502,21 @@ export default function SettingsPage() {
                 追加
               </button>
             </div>
+            <button
+              type="button"
+              onClick={handleTestSend}
+              className="mt-3 px-4 py-2 rounded-lg border border-border bg-card text-sm font-medium text-foreground/80 hover:bg-background transition"
+            >
+              📩 家族にどう届くか、自分宛てにテスト送信してみる
+            </button>
+            {toastMessage && (
+              <div
+                role="alert"
+                className="mt-3 p-4 rounded-xl bg-primary-light border border-primary/20 text-sm text-foreground/90"
+              >
+                {toastMessage}
+              </div>
+            )}
           </div>
 
           {shares.length > 0 ? (
@@ -459,12 +551,24 @@ export default function SettingsPage() {
               「家族に共有する / しない」を個別に設定できます。
             </p>
             <div className="flex items-center gap-4 mt-2">
-              <span className="inline-flex items-center gap-1 text-xs">
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-100 text-green-600 text-[10px]">&#128065;</span>
+              <span className="inline-flex items-center gap-1.5 text-xs">
+                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-100 text-green-600">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </span>
                 <span className="text-green-600">共有する</span>
               </span>
-              <span className="inline-flex items-center gap-1 text-xs">
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gray-100 text-gray-400 text-[10px]">&#128274;</span>
+              <span className="inline-flex items-center gap-1.5 text-xs">
+                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gray-100 text-gray-400">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" />
+                    <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" />
+                    <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-4.444" />
+                    <path d="m2 2 20 20" />
+                  </svg>
+                </span>
                 <span className="text-gray-500">非共有（秘密）</span>
               </span>
             </div>
