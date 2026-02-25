@@ -32,7 +32,6 @@ const FOOTER_GUIDE_AND_CONTENT: { href: string; label: string }[] = [
   { href: "/about-site", label: "ふれあいの丘とは" },
   { href: "/guide", label: "生前整理のはじめかた" },
   { href: "/guidebook", label: "ガイドブック（無料PDF）" },
-  { href: "/about", label: "運営者情報" }, // 旧「運営者の想い」から名称変更
   { href: "/articles", label: "記事一覧" },
   { href: "/cost", label: "間取り別 片付け費用" },
   { href: "/dispose", label: "捨て方辞典" },
