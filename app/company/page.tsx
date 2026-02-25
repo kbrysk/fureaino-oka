@@ -24,30 +24,18 @@ export default function CompanyPage() {
         <h2 className="text-xl font-bold text-primary mb-6">モノを捨てるのではなく、家族の心を整えるために</h2>
       </header>
 
-      {/* フクロウマスコット＋センター長プロフィール */}
+      {/* センター長プロフィール（緑の服・眼鏡のふくろう） */}
       <div className="mb-10 flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end">
-          <div className="relative w-[120px] sm:w-[140px] flex-shrink-0">
-            <Image
-              src="/images/owl-character.png"
-              alt="ふれあいの丘のマスコット（フクロウ）"
-              width={140}
-              height={140}
-              className="w-full h-auto object-contain"
-              sizes="140px"
-            />
-          </div>
-          <div className="relative w-[200px] sm:w-[220px] md:w-[180px] flex-shrink-0 flex items-end">
-            <Image
-              src="/images/operator.png"
-              alt="運営者（ふれあいの丘 センター長）"
-              width={400}
-              height={400}
-              className="w-full h-auto object-contain object-bottom drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
-              sizes="(max-width: 640px) 220px, 180px"
-              priority
-            />
-          </div>
+        <div className="relative w-[200px] sm:w-[220px] md:w-[180px] flex-shrink-0 flex items-end">
+          <Image
+            src="/images/operator.png"
+            alt="運営者（ふれあいの丘 センター長）"
+            width={400}
+            height={400}
+            className="w-full h-auto object-contain object-bottom drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+            sizes="(max-width: 640px) 220px, 180px"
+            priority
+          />
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-primary font-bold text-lg">
