@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import {
   Asset,
@@ -75,6 +75,14 @@ function formatAmount(amount: number): string {
   return `${amount.toLocaleString()}円`;
 }
 
+/** クイック追加ボタン用：名称とカテゴリのペア */
+const QUICK_ADD_SUGGESTIONS: { label: string; name: string; category: string }[] = [
+  { label: "🏠 実家の土地・建物", name: "実家の土地・建物", category: "不動産" },
+  { label: "🏦 メインの銀行口座", name: "メインの銀行口座", category: "預貯金" },
+  { label: "🚙 車・バイク", name: "車・バイク", category: "車・バイク" },
+  { label: "🛋️ 大型家具・家電", name: "大型家具・家電", category: "家具・家電" },
+];
+
 export default function AssetsPage() {
   const [assets, setAssets] = useState<Asset[]>([]);
   const [showForm, setShowForm] = useState(false);
@@ -103,6 +111,16 @@ export default function AssetsPage() {
   }, []);
 
   const isRealEstate = form.category === "不動産";
+
+  /** 追加モーダルを開く。クイック追加から呼ぶ場合は初期名称・カテゴリを渡す（DRY） */
+  const openAddForm = useCallback((initialName?: string, initialCategory?: string) => {
+    setForm({
+      ...INITIAL_FORM,
+      ...(initialName != null && { name: initialName }),
+      ...(initialCategory != null && { category: initialCategory }),
+    });
+    setShowForm(true);
+  }, []);
 
   const handleAdd = () => {
     if (!form.name.trim()) return;
@@ -255,7 +273,7 @@ export default function AssetsPage() {
           </p>
         </div>
         <button
-          onClick={() => setShowForm(!showForm)}
+          onClick={() => openAddForm()}
           className="bg-primary text-white px-5 py-2.5 rounded-xl font-medium hover:opacity-90 transition"
         >
           + 追加
@@ -820,11 +838,53 @@ export default function AssetsPage() {
             </div>
           ))}
         </div>
+      ) : assets.length === 0 ? (
+        /* Empty State: リッチなオンボーディングUI */
+        <div className="space-y-8">
+          <section className="bg-primary-light/40 border border-primary/20 rounded-xl p-6 sm:p-8">
+            <h3 className="text-lg font-bold text-primary mb-6">資産・持ち物を登録する3つのメリット</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-card rounded-xl p-4 border border-border">
+                <p className="font-medium text-foreground mb-1">📝 現状の把握</p>
+                <p className="text-sm text-foreground/70">
+                  実家の不動産や口座など、何がどこにあるか整理できます。
+                </p>
+              </div>
+              <div className="bg-card rounded-xl p-4 border border-border">
+                <p className="font-medium text-foreground mb-1">💰 費用のシミュレーション</p>
+                <p className="text-sm text-foreground/70">
+                  放置した場合の「想定処分費用」が自動で分かります。
+                </p>
+              </div>
+              <div className="bg-card rounded-xl p-4 border border-border">
+                <p className="font-medium text-foreground mb-1">💬 家族と共有</p>
+                <p className="text-sm text-foreground/70">
+                  整理したリストは、LINEで簡単に家族へ共有できます。
+                </p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <p className="text-sm font-medium text-foreground/80 mb-3">
+              👇 まずは以下から、該当するものをクリックして追加してみましょう
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {QUICK_ADD_SUGGESTIONS.map((item) => (
+                <button
+                  key={item.name}
+                  type="button"
+                  onClick={() => openAddForm(item.name, item.category)}
+                  className="px-4 py-2.5 rounded-full text-sm font-medium bg-card border border-border text-foreground/90 hover:bg-primary-light hover:border-primary/30 transition"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </section>
+        </div>
       ) : (
         <div className="bg-card rounded-2xl p-12 border border-border text-center text-foreground/40">
-          {assets.length === 0
-            ? "まだ登録がありません。「+ 追加」ボタンから始めましょう"
-            : "該当する項目がありません"}
+          該当する項目がありません
         </div>
       )}
 
