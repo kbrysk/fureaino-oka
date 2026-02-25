@@ -87,6 +87,8 @@ export default function AssetsPage() {
   const [familyMembers, setFamilyMembers] = useState<FamilyMember[]>([]);
   const [overTax, setOverTax] = useState(false);
   const [estimatedDisposalCost, setEstimatedDisposalCost] = useState(0);
+  const [totalValue, setTotalValue] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     const loadedAssets = getAssets();
@@ -96,6 +98,8 @@ export default function AssetsPage() {
     setFamilyMembers(profile.familyMembers);
     setOverTax(isOverTaxThreshold());
     setEstimatedDisposalCost(getEstimatedDisposalCost());
+    setTotalValue(getTotalEstimatedValue());
+    setIsMounted(true);
   }, []);
 
   const isRealEstate = form.category === "不動産";
@@ -125,6 +129,7 @@ export default function AssetsPage() {
     setShowForm(false);
     setOverTax(isOverTaxThreshold());
     setEstimatedDisposalCost(getEstimatedDisposalCost());
+    setTotalValue(getTotalEstimatedValue());
 
     if (form.wantsAppraisal) {
       setAppraisalTarget(newAsset);
@@ -148,6 +153,7 @@ export default function AssetsPage() {
     if (justAdded?.id === id) setJustAdded(null);
     setOverTax(isOverTaxThreshold());
     setEstimatedDisposalCost(getEstimatedDisposalCost());
+    setTotalValue(getTotalEstimatedValue());
   };
 
   const handleIntentChange = (id: string, intent: DispositionIntent) => {
@@ -159,6 +165,7 @@ export default function AssetsPage() {
     setAssets(updated);
     saveAssets(updated);
     setEstimatedDisposalCost(getEstimatedDisposalCost());
+    setTotalValue(getTotalEstimatedValue());
 
     // Trigger modal for hot intents
     if (intent === "売却を検討中" || intent === "処分に困っている") {
@@ -177,8 +184,7 @@ export default function AssetsPage() {
 
   const filtered = filterCat === "すべて" ? assets : assets.filter((a) => a.category === filterCat);
 
-  // Stats
-  const totalValue = getTotalEstimatedValue();
+  // Stats（totalValue は useEffect で設定し、Hydration 対策で isMounted まで 0）
   const appraisalCount = assets.filter((a) => a.wantsAppraisal).length;
   const completionRate = getCompletionRate();
   const pendingCount = assets.filter((a) => a.dispositionIntent === "迷っている（保留）").length;
@@ -209,15 +215,15 @@ export default function AssetsPage() {
         />
       )}
 
-      {/* 資産総額のフィードバック（もっと登録したくなる） */}
-      {assets.length > 0 && totalValue > 0 && (
+      {/* 資産総額のフィードバック（もっと登録したくなる）。isMounted 以降のみ表示で Hydration 対策 */}
+      {isMounted && assets.length > 0 && totalValue > 0 && (
         <div className="bg-primary rounded-2xl p-5 text-white flex flex-wrap items-center justify-between gap-4">
           <div>
             <p className="text-white/80 text-sm">あなたの資産総額（推計）</p>
             <p className="text-2xl font-bold">{formatAmount(totalValue)}</p>
           </div>
           <Link
-            href="/guide"
+            href="/tools/appraisal"
             className="bg-white text-primary px-4 py-2 rounded-xl font-bold text-sm hover:opacity-90 transition shrink-0"
           >
             無料で査定を比較する
@@ -226,7 +232,7 @@ export default function AssetsPage() {
       )}
 
       {/* 損失回避メーター：想定処分費用（マイナスが発生しているときのみ表示） */}
-      {assets.length > 0 && estimatedDisposalCost < 0 && (
+      {isMounted && assets.length > 0 && estimatedDisposalCost < 0 && (
         <div className="bg-red-50 border border-red-200 rounded-2xl p-5">
           <p className="text-red-700 font-medium">
             ⚠️ そのまま残すと… 想定処分費用: -{formatAmount(Math.abs(estimatedDisposalCost))}
@@ -238,7 +244,7 @@ export default function AssetsPage() {
       )}
 
       {/* お宝埋蔵金マップ：3件以上でアンロック（PLG共有ループ） */}
-      {assets.length >= 3 && <TreasureAssetMap totalValue={totalValue} assetCount={assets.length} />}
+      {isMounted && assets.length >= 3 && <TreasureAssetMap totalValue={totalValue} assetCount={assets.length} />}
 
       <div className="flex items-center justify-between">
         <div>
@@ -257,7 +263,7 @@ export default function AssetsPage() {
       </div>
 
       {/* Inheritance Tax Alert */}
-      {overTax && concernTags.includes("相続税が心配") && (
+      {isMounted && overTax && concernTags.includes("相続税が心配") && (
         <div className="bg-red-50 border border-red-200 rounded-2xl p-5">
           <div className="flex items-start justify-between gap-4">
             <div>
@@ -286,7 +292,7 @@ export default function AssetsPage() {
       )}
 
       {/* KPI Dashboard */}
-      {assets.length > 0 && (
+      {isMounted && assets.length > 0 && (
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           <div className="bg-card rounded-xl p-4 border border-border text-center">
             <div className="text-xl font-bold text-primary">
@@ -656,10 +662,10 @@ export default function AssetsPage() {
       )}
 
       {/* 文脈型SEO内部リンク（アクションロードマップ）：処分費用 or 車・不動産に応じた案内 */}
-      {assets.length > 0 && (estimatedDisposalCost < 0 || assets.some((a) => a.category === "車・バイク" || a.category === "不動産")) && (
+      {isMounted && assets.length > 0 && (estimatedDisposalCost < 0 || assets.some((a) => a.category === "車・バイク" || a.category === "不動産")) && (
         <div className="space-y-4">
           {estimatedDisposalCost < 0 && (
-            <div className="border-l-4 border-primary bg-primary/5 p-4 rounded-r-xl">
+            <div className="border-l-4 border-primary bg-primary-light/40 p-4 rounded-r-xl">
               <h3 className="font-bold text-foreground mb-1">💡 処分費用を安く抑える・補助金を探す</h3>
               <p className="text-sm text-foreground/80 mb-3">
                 「迷っている」「処分予定」のアイテムがあります。お住まいの地域の粗大ゴミ処分の裏技や、使える補助金を確認しましょう。
@@ -673,13 +679,13 @@ export default function AssetsPage() {
             </div>
           )}
           {assets.some((a) => a.category === "車・バイク" || a.category === "不動産") && (
-            <div className="border-l-4 border-primary bg-primary/5 p-4 rounded-r-xl">
+            <div className="border-l-4 border-primary bg-primary-light/40 p-4 rounded-r-xl">
               <h3 className="font-bold text-foreground mb-1">🚗 価値が下がる前に無料一括査定へ</h3>
               <p className="text-sm text-foreground/80 mb-3">
                 車・バイク・不動産は査定で価値がわかります。複数社の無料査定で比較してみましょう。
               </p>
               <Link
-                href="/guide"
+                href="/tools/appraisal"
                 className="inline-block bg-primary text-white px-4 py-2 rounded-xl font-medium text-sm hover:opacity-90 transition"
               >
                 無料一括査定を申し込む
@@ -822,11 +828,11 @@ export default function AssetsPage() {
         </div>
       )}
 
-      {/* Sticky Footer: 一括査定CTA + LINE共有 */}
-      {assets.length > 0 && (
+      {/* Sticky Footer: 一括査定CTA + LINE共有（isMounted 以降で Hydration 対策） */}
+      {isMounted && assets.length > 0 && (
         <div className="sticky bottom-0 left-0 right-0 z-10 mt-8 -mx-4 px-4 py-4 bg-background/95 border-t border-border shadow-[0_-4px_12px_rgba(0,0,0,0.06)] md:max-w-3xl md:mx-auto md:rounded-t-2xl space-y-3">
           <Link
-            href="/guide"
+            href="/tools/appraisal"
             className="block w-full text-center bg-primary text-white py-4 px-6 rounded-xl font-bold text-base hover:opacity-90 transition shadow-lg"
           >
             登録した全資産をまとめて現金化シミュレーション

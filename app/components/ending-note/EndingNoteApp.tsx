@@ -17,8 +17,7 @@ const STEPS = [
 ] as const;
 
 function buildLineShareUrl(siteUrl: string) {
-  const url = `${siteUrl.replace(/\/$/, "")}/ending-note`;
-  const message = `エンディングノートを書いておきました。私のスマホ（またはPC）のブラウザから『ふれあいの丘』にアクセスすると見られます。大切なことなので一度確認しておいてね。 ${url}`;
+  const message = `エンディングノートを書いておきました。私のスマホ（またはPC）のブラウザから『ふれあいの丘』にアクセスすると見られます。大切なことなので一度確認しておいてね。 ${siteUrl.replace(/\/$/, "")}`;
   return `https://line.me/R/msg/text/?${encodeURIComponent(message)}`;
 }
 
@@ -76,11 +75,7 @@ export default function EndingNoteApp() {
   const [saved, setSaved] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
   const [contactForm, setContactForm] = useState({ name: "", relation: "", phone: "", note: "" });
-  const [lineShareUrl, setLineShareUrl] = useState(() => buildLineShareUrl(baseUrl));
-
-  useEffect(() => {
-    if (typeof window !== "undefined") setLineShareUrl(buildLineShareUrl(window.location.origin));
-  }, []);
+  const lineShareUrl = buildLineShareUrl(baseUrl);
 
   const handleSave = () => {
     saveNote(note);

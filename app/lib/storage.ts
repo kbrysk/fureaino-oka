@@ -255,17 +255,16 @@ export const CATEGORIES_WITH_DISPOSAL_COST: string[] = [
   "その他",
 ];
 
-/** 処分費用をカウントする意向（迷っている・処分に困っている・処分済） */
+/** 処分費用をカウントする意向（迷っている・処分に困っているのみ。処分済は計算外） */
 const DISPOSITION_INTENTS_WITH_DISPOSAL_COST: string[] = [
   "迷っている（保留）",
   "処分に困っている",
-  "処分済",
 ];
 
 /**
  * 想定処分費用（マイナス額）を算出。
- * 対象：カテゴリが家具・家電・衣類・書籍・趣味品・その他 かつ 意向が迷っている/処分に困っている/処分済。
- * 車・バイク・不動産は0円（要査定のため計算外）。
+ * 対象：カテゴリが家具・家電・衣類・書籍・趣味品・その他 かつ 意向が迷っている/処分に困っている。
+ * 車・バイク・不動産は0円（要査定のため計算外）。処分済は計算外。
  */
 export function getEstimatedDisposalCost(): number {
   if (typeof window === "undefined") return 0;
