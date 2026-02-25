@@ -1,5 +1,14 @@
 import Link from "next/link";
+import { organization } from "../lib/constants/site-metadata";
 import OwlCharacter from "./OwlCharacter";
+
+/** 必須リンク（コンプライアンス・運営者情報）。site-metadata と整合するパス。 */
+const REQUIRED_LINKS: { href: string; label: string }[] = [
+  { href: "/company", label: "運営会社情報" },
+  { href: "/contact", label: "お問い合わせ" },
+  { href: "/privacy", label: "プライバシーポリシー" },
+  { href: "/terms", label: "利用規約" },
+];
 
 /**
  * フッター内部リンク（SEO: クロール効率・重要ページへのリンクジュース配分）
@@ -37,10 +46,9 @@ const FOOTER_PROGRESS: { href: string; label: string }[] = [
   { href: "/area", label: "地域別 粗大ゴミ・遺品整理" },
 ];
 
+/** 法的情報セクション（必須リンクを先頭に） */
 const FOOTER_LEGAL: { href: string; label: string }[] = [
-  { href: "/terms", label: "利用規約" },
-  { href: "/privacy", label: "プライバシーポリシー" },
-  { href: "/contact", label: "お問い合わせ" },
+  ...REQUIRED_LINKS,
 ];
 
 function FooterLinkList({
@@ -67,18 +75,27 @@ function FooterLinkList({
 }
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="border-t border-border py-8 px-4">
+    <footer
+      className="border-t border-border bg-muted/25 py-8 px-4"
+      role="contentinfo"
+      aria-label="サイトフッター"
+    >
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           <FooterLinkList title="無料ツール" links={FOOTER_TOOLS} />
           <FooterLinkList title="はじめ方・コンテンツ" links={FOOTER_GUIDE_AND_CONTENT} />
           <FooterLinkList title="進捗・管理" links={FOOTER_PROGRESS} />
-          <FooterLinkList title="法的情報" links={FOOTER_LEGAL} />
+          <FooterLinkList title="運営・法的情報" links={FOOTER_LEGAL} />
         </div>
-        <div className="text-center pt-6 border-t border-border text-base text-foreground/75">
-          <OwlCharacter size={48} className="mb-2" />
-          <p>生前整理支援センター ふれあいの丘 &copy; 2026 株式会社Kogera | 実家じまい・遺品整理の無料相談</p>
+        <div className="text-center pt-6 border-t border-border">
+          <OwlCharacter size={40} className="mb-3 mx-auto opacity-90" aria-hidden />
+          <p className="text-sm text-foreground/80">
+            &copy; {currentYear} {organization.name} All Rights Reserved.
+          </p>
+          <p className="text-xs text-foreground/60 mt-1">実家じまい・遺品整理の無料相談</p>
         </div>
       </div>
     </footer>
