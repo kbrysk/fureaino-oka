@@ -148,7 +148,12 @@ export default function CompanyPage() {
           </div>
           <div className="flex flex-col sm:flex-row sm:py-2 border-b border-gray-200 last:border-0">
             <dt className="sm:w-36 flex-shrink-0 font-medium text-foreground/80">所在地</dt>
-            <dd className="text-foreground mt-0.5 sm:mt-0">※オンラインにて全国対応</dd>
+            <dd className="text-foreground mt-0.5 sm:mt-0">
+              〒104-0061
+              <br />
+              東京都中央区銀座1丁目12番4号 N&E BLD.6F
+              <p className="mt-1.5 text-sm text-foreground/70">※サービスはオンラインにて全国対応しております</p>
+            </dd>
           </div>
           <div className="flex flex-col sm:flex-row sm:py-2 border-b border-gray-200 last:border-0">
             <dt className="sm:w-36 flex-shrink-0 font-medium text-foreground/80">お問い合わせ</dt>
