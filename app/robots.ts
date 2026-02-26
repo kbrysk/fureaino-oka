@@ -5,13 +5,36 @@ import { getCanonicalBase } from "./lib/site-url";
 const ROBOTS_BASE = getCanonicalBase();
 
 /**
- * robots.txt（SEO: クローラーへの案内・Sitemap Index の明示）
- * generateSitemaps により /sitemap.xml がインデックスとなり /sitemap/0.xml, /sitemap/1.xml... を参照。
- * 正規ドメインの絶対URLで Sitemap を指定し、Search Console の評価を正規URLに統合。
+ * robots.txt（GSC クロールバジェット最適化）
+ * - 無駄な再クロールを防ぐ: /api/, 管理・送信完了ページを Disallow
+ * - Sitemap Index を明示し「検出」目的のクロールを sitemap に集約
+ * - WRS リソース枯渇対策: インデックス不要なパスを遮断
  */
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: { userAgent: "*", allow: "/", disallow: ["/api/"] },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: [
+          "/api/",
+          "/settings",
+          "/contact/thanks",
+          "/senryu/submit",
+        ],
+      },
+      {
+        userAgent: "Googlebot",
+        allow: "/",
+        disallow: [
+          "/api/",
+          "/settings",
+          "/contact/thanks",
+          "/senryu/submit",
+        ],
+      },
+    ],
     sitemap: `${ROBOTS_BASE}/sitemap.xml`,
+    host: ROBOTS_BASE,
   };
 }

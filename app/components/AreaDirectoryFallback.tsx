@@ -1,15 +1,19 @@
 import Link from "next/link";
 import DynamicFaq from "./DynamicFaq";
+import type { FaqItem } from "@/app/lib/faq/schema";
 
 /**
  * municipalities.json にデータがない自治体向けのディレクトリ型インフラページ用コンテンツ。
  * 公式窓口導線・汎用ツール案内・免責を表示し、404にせずE-E-A-Tを担保する。
+ * faqItems は Page で buildDynamicFaqItems を 1 回だけ呼んだ結果を渡す（1 ページ 1 FAQPage のため）。
  */
 interface AreaDirectoryFallbackProps {
   cityName: string;
   prefName: string;
   prefId: string;
   cityId: string;
+  /** DynamicFaq に表示する Q&A（Page で生成した同じ配列を渡す） */
+  faqItems: FaqItem[];
 }
 
 const OFFICIAL_SEARCH_QUERY = "空き家補助金 公式サイト";
@@ -19,6 +23,7 @@ export default function AreaDirectoryFallback({
   prefName,
   prefId,
   cityId,
+  faqItems,
 }: AreaDirectoryFallbackProps) {
   const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(`${prefName} ${cityName} ${OFFICIAL_SEARCH_QUERY}`)}`;
 
@@ -59,7 +64,10 @@ export default function AreaDirectoryFallback({
         </div>
       </section>
 
-      <DynamicFaq prefName={prefName} cityName={cityName} hasData={false} />
+      <DynamicFaq
+        items={faqItems}
+        heading={`${cityName}の実家・空き家に関するよくある質問`}
+      />
 
       <section id="appraisal-section" className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">

@@ -6,6 +6,15 @@ import { getBuybackExamples } from "../../lib/dispose-buyback-examples";
 import { pageTitle } from "../../lib/site-brand";
 import DisposeItemLineCTA from "../../components/DisposeItemLineCTA";
 import DisposeToCostCrossLink from "../../components/DisposeToCostCrossLink";
+import { isSubsidyBlockVisibleForCategory } from "../../lib/dispose/subsidy-visibility";
+import SubsidyBlock from "../../components/dispose/SubsidyBlock";
+import DIYStepGuide from "../../components/dispose/DIYStepGuide";
+import AuthorProfile from "../../components/dispose/AuthorProfile";
+import RealTransactionTable from "../../components/dispose/RealTransactionTable";
+import ContextualCTA from "../../components/dispose/ContextualCTA";
+import { getStepGuideForSlug } from "../../lib/dispose/step-guide-data";
+import { getRealTransactionRows } from "../../lib/dispose/real-transaction-data";
+import { getDefaultAuthor } from "../../lib/dispose/author-profile-data";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -104,6 +113,13 @@ export default async function DisposeItemPage({ params }: Props) {
         </ul>
       </section>
 
+      {(() => {
+        const stepGuide = getStepGuideForSlug(slug);
+        return stepGuide && stepGuide.steps.length > 0 ? (
+          <DIYStepGuide title={stepGuide.title} description={stepGuide.description} steps={stepGuide.steps} />
+        ) : null;
+      })()}
+
       {/* 買取相場例テーブル */}
       {(() => {
         const examples = getBuybackExamples(item.slug, item.categoryId);
@@ -149,11 +165,18 @@ export default async function DisposeItemPage({ params }: Props) {
         );
       })()}
 
-      {/* ふれあいの丘からのアドバイス */}
-      <section className="bg-primary-light/50 rounded-2xl border border-primary/20 p-6">
-        <h2 className="font-bold text-primary mb-3">「ふれあいの丘」からのアドバイス</h2>
-        <p className="text-foreground/85 leading-relaxed">{item.adviceFureai}</p>
-      </section>
+      {(() => {
+        const realRows = getRealTransactionRows(slug);
+        return realRows.length > 0 ? (
+          <RealTransactionTable
+            title="実際の買取実績・処分費用"
+            caption="当センター相談事例に基づく一例です。状態・時期により変動します。"
+            rows={realRows}
+          />
+        ) : null;
+      })()}
+
+      <AuthorProfile {...getDefaultAuthor()} comment={item.adviceFureai} />
 
       {item.memorialNote && (
         <section className="bg-amber-50/80 rounded-2xl border border-amber-200/60 p-6">
@@ -164,8 +187,14 @@ export default async function DisposeItemPage({ params }: Props) {
 
       <DisposeItemLineCTA itemName={item.name} ctaType={item.ctaType} />
 
+      <ContextualCTA itemName={item.name} categoryId={item.categoryId} />
+
       {/* 捨て方辞書 → 間取り別費用・診断へのクロスリンク（蜘蛛の巣） */}
       <DisposeToCostCrossLink />
+
+      {isSubsidyBlockVisibleForCategory(item.categoryId) && (
+        <SubsidyBlock />
+      )}
 
       <div className="flex flex-wrap gap-3">
         {category && (

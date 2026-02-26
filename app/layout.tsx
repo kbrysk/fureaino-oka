@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import MobileFooterBar from "./components/MobileFooterBar";
 import JsonLdBreadcrumb from "./components/JsonLdBreadcrumb";
-import AreaNavigation from "./components/AreaNavigation";
+import AreaNavigationGate from "./components/AreaNavigationGate";
 import { AreaCtaProvider } from "./components/AreaCtaContext";
 import GlobalStickyCTA from "./components/GlobalStickyCTA";
 import EeatJsonLd from "./components/json-ld/EeatJsonLd";
@@ -101,19 +102,22 @@ export default function RootLayout({
         <meta name="twitter:description" content={DEFAULT_DESCRIPTION} />
         <meta name="twitter:image" content={`${canonicalOrigin}${OG_IMAGE_PATH}`} />
         {/* JSON-LD は EeatJsonLd（Organization + WebSite）を body 末尾で出力 */}
-        {/* Google Tag Manager - head 内のなるべく上 */}
-        <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
-        {/* Google AdSense 審査コード（初期HTMLに含めクローラーに確実に読ませる） */}
-        <script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GOOGLE_ADSENSE_PUBLISHER_ID}`}
-          crossOrigin="anonymous"
-        />
+        {/* GTM・AdSense は body 内 next/script で遅延読み込み（WRS リソース枯渇対策） */}
       </head>
       <body className={`${geistSans.variable} antialiased overflow-x-hidden`}>
+        {/* GTM: afterInteractive で初期HTML解析をブロックせず、WRS 負荷を低減 */}
+        <Script id="gtm-init" strategy="afterInteractive">
+          {gtmScript}
+        </Script>
+        {/* AdSense: lazyOnload でアイドル後に読み込み（クロール時のJS 62% 消費を削減） */}
+        <Script
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GOOGLE_ADSENSE_PUBLISHER_ID}`}
+          strategy="lazyOnload"
+          crossOrigin="anonymous"
+        />
         {/* 4,000+ 地域ページ含む全ページで BreadcrumbList を出力し、クローラー効率と検索結果のパンくず表示を強化 */}
         <JsonLdBreadcrumb baseUrl={canonicalOrigin} />
-        {/* Google Tag Manager (noscript) - body 開始直後 */}
+        {/* Google Tag Manager (noscript) - JS 無効時用 */}
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -132,7 +136,7 @@ export default function RootLayout({
               {children}
             </main>
             <div className="no-print shrink-0">
-              <AreaNavigation />
+              <AreaNavigationGate />
             </div>
             <div className="no-print shrink-0">
               <Footer />

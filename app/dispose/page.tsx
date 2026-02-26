@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { DISPOSE_CATEGORIES } from "../lib/dispose-categories";
-import { getItemsByCategoryId } from "../lib/dispose-items";
+import { getItemsByCategoryId, DISPOSE_ITEMS } from "../lib/dispose-items";
 import { getDisposalCategoryById } from "../../data/disposalItems";
 import { pageTitle } from "../lib/site-brand";
+import SearchBar from "../components/dispose/SearchBar";
 
 export const metadata = {
   title: pageTitle("捨て方辞典｜品目別 処分方法・供養・買取相場"),
@@ -11,6 +12,7 @@ export const metadata = {
 };
 
 export default function DisposeIndexPage() {
+  const searchSuggestions = DISPOSE_ITEMS.map((i) => ({ slug: i.slug, name: i.name }));
   return (
     <div className="space-y-10">
       <div>
@@ -19,6 +21,13 @@ export default function DisposeIndexPage() {
           品目別の処分方法・供養・買取の目安。自治体で捨てられるか、費用、業者依頼の選び方まで。気になるモノの捨て方を調べられます。
         </p>
       </div>
+
+      <SearchBar
+        placeholder="品目名で検索（例：仏壇、布団、パソコン）"
+        suggestions={searchSuggestions}
+        ariaLabel="捨て方辞典の品目を検索"
+        showSuggestions={true}
+      />
 
       {/* カテゴリートップ（トピッククラスター） */}
       <section>

@@ -7,13 +7,16 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "picsum.photos", pathname: "/**" },
     ],
   },
-  // SEO: index.html 付きURLをクリーンなURLへ 301 正規化（重複コンテンツ防止）
+  // SEO: 正規化・重複コンテンツ防止（GSC クロールバジェット回復）
   async redirects() {
     return [
       { source: "/index.html", destination: "/", permanent: true },
       { source: "/:path+/index.html", destination: "/:path+", permanent: true },
+      // トレilingスラッシュ統一（Next デフォルトはスラッシュなし → 一貫性のため明示不要ならコメントアウト可）
     ];
   },
+  // ホストエラー・5xx 抑制: ビルド時エラーを厳格に検出
+  typescript: { ignoreBuildErrors: false },
 };
 
 export default nextConfig;

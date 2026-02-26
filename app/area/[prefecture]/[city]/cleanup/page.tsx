@@ -68,6 +68,7 @@ export default async function AreaCleanupPage({ params }: Props) {
           prefName={data.prefName}
           prefId={data.prefId}
           cityId={data.cityId}
+          faqItems={[]}
         />
         <div className="flex flex-wrap gap-3">
           <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">

@@ -1,11 +1,15 @@
 "use client";
 
+import Image from "next/image";
+
 /**
  * 知恵の番人「ふくろう（不苦労）」キャラクター
  * 伴走者として「言いにくいこと」を代弁し、CVRを高める機能するキャラ。
  * 画像: public/images/owl-character.png
  */
 const OWL_IMAGE = "/images/owl-character.png?v=4";
+/** next/image 用（クエリ付きは localPatterns 未対応のためクエリなし） */
+const OWL_IMAGE_SRC = "/images/owl-character.png";
 
 interface OwlCharacterProps {
   /** 表示サイズ（一辺の目安px） */
@@ -23,6 +27,8 @@ interface OwlCharacterProps {
   /** 背景の光に馴染むよう影を約10%に抑える（ヒーロー等で使用） */
   softShadow?: boolean;
   className?: string;
+  /** FV で表示する場合は true。LCP 用に next/image で priority + fetchPriority="high" を付与 */
+  priority?: boolean;
 }
 
 export default function OwlCharacter({
@@ -34,6 +40,7 @@ export default function OwlCharacter({
   bubblePosition = "above",
   softShadow = false,
   className = "",
+  priority = false,
 }: OwlCharacterProps) {
   const bubbleClasses =
     tone === "warning"
@@ -61,16 +68,32 @@ export default function OwlCharacter({
         className={`relative shrink-0 overflow-hidden rounded-2xl ${softShadow ? "shadow-[0_2px_12px_rgba(0,0,0,0.1)]" : ""} ${sizeMobile != null ? "max-md:!w-8 max-md:!h-8" : ""}`}
         style={{ width: size, height: size }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={OWL_IMAGE}
-          alt="ふくろう"
-          width={size}
-          height={size}
-          className="h-full w-full object-contain object-center"
-          style={{ width: size, height: size }}
-          aria-hidden
-        />
+        {priority ? (
+          <Image
+            src={OWL_IMAGE_SRC}
+            alt="ふくろう"
+            width={size}
+            height={size}
+            className="h-full w-full object-contain object-center"
+            priority
+            fetchPriority="high"
+            sizes={`${size}px`}
+          />
+        ) : (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={OWL_IMAGE}
+              alt="ふくろう"
+              width={size}
+              height={size}
+              className="h-full w-full object-contain object-center"
+              style={{ width: size, height: size }}
+              loading="lazy"
+              aria-hidden
+            />
+          </>
+        )}
         {sweat && (
           <span className="absolute inset-0 flex items-start justify-center pt-1 text-lg opacity-80" aria-hidden>💦</span>
         )}

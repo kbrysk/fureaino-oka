@@ -32,6 +32,13 @@ import OperatorTrustBlock from "../../../components/OperatorTrustBlock";
 import { getRegionalStats } from "../../../lib/utils/regional-stats-loader";
 import { getCanonicalBase } from "../../../lib/site-url";
 import { pageTitle } from "../../../lib/site-brand";
+import {
+  buildLocalSubsidyFaqItems,
+  buildDynamicFaqItems,
+  generateCases,
+  generateCaseStudyFaqItems,
+} from "../../../lib/faq/area-faq-data";
+import { generateFaqSchema } from "../../../lib/faq/schema";
 
 type SearchParamsRecord = { [key: string]: string | string[] | undefined };
 
@@ -95,6 +102,33 @@ export default async function AreaPage({ params, searchParams }: Props) {
     operatingSystem: "Any",
   };
 
+  const regionalStatsVal = getRegionalStats(`${prefecture}-${city}`);
+  const landPriceVal = regionalStatsVal?.landPrice ?? 20000000;
+  const displayCityName = showFallback ? data.cityName : area!.city;
+  const cityIdForCases = showFallback ? city : ids.cityId;
+  const hasMunicipalityData = !data._isDefault;
+
+  const localSubsidyItems = buildLocalSubsidyFaqItems({
+    municipalityData: data,
+    cityName: displayCityName,
+    prefName: data.prefName,
+    prefId: prefecture,
+    cityId: city,
+    regionalStats: regionalStatsVal ?? undefined,
+  });
+  const dynamicFaqItems = buildDynamicFaqItems({
+    prefName: data.prefName,
+    cityName: displayCityName,
+    hasData: hasMunicipalityData,
+    municipalityData: data._isDefault ? undefined : data,
+  });
+  const cases = generateCases(cityIdForCases, displayCityName, landPriceVal);
+  const caseStudyFaqItems = generateCaseStudyFaqItems(displayCityName, cases);
+  const allFaqItems = [...localSubsidyItems, ...caseStudyFaqItems, ...dynamicFaqItems];
+  const faqPageSchema = generateFaqSchema(allFaqItems, {
+    url: `${base.replace(/\/$/, "")}/area/${prefecture}/${city}`,
+  });
+
   if (showFallback) {
     const bulkySearchUrl = `https://www.google.com/search?q=${encodeURIComponent(data.prefName + " " + data.cityName + " 粗大ゴミ")}`;
     return (
@@ -102,6 +136,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
         <AreaBodyMeta cityName={data.cityName} />
         <BreadcrumbJsonLd itemListElements={breadcrumbItems} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
         <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="main" />
         <div>
           <h1 className="text-2xl font-bold text-primary">
@@ -110,19 +145,10 @@ export default async function AreaPage({ params, searchParams }: Props) {
         </div>
         <RegionalFacts prefName={data.prefName} cityName={data.cityName} prefId={prefecture} cityId={city} />
         <LocalSubsidyFaq
-          municipalityData={data}
-          cityName={data.cityName}
-          prefName={data.prefName}
-          prefId={prefecture}
-          cityId={city}
-          regionalStats={getRegionalStats(`${prefecture}-${city}`)}
-          baseUrl={base}
+          items={localSubsidyItems}
+          heading={`${data.cityName}の実家じまい・補助金よくある質問`}
         />
-        <DynamicCaseStudy
-          cityName={data.cityName}
-          landPrice={getRegionalStats(`${prefecture}-${city}`)?.landPrice ?? 20000000}
-          cityId={city}
-        />
+        <DynamicCaseStudy cityName={data.cityName} cases={cases} />
         <section id="optimizer-section" aria-label="実家じまいシミュレーター">
           <JikkaOptimizer
             cityName={data.cityName}
@@ -138,12 +164,12 @@ export default async function AreaPage({ params, searchParams }: Props) {
           prefName={data.prefName}
           prefId={data.prefId}
           cityId={data.cityId}
+          faqItems={dynamicFaqItems}
         />
         <InheritanceRouting prefName={data.prefName} cityName={data.cityName} />
         <DynamicFaq
-          prefName={data.prefName}
-          cityName={data.cityName}
-          hasData={false}
+          items={dynamicFaqItems}
+          heading={`${data.cityName}の実家・空き家に関するよくある質問`}
         />
         <div className="bg-card rounded-2xl border border-border overflow-hidden">
           <div className="px-6 py-4 border-b border-border bg-primary-light/30">
@@ -194,6 +220,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
       <AreaBodyMeta cityName={data.cityName} />
       <BreadcrumbJsonLd itemListElements={richBreadcrumbItems} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="main" />
       <div>
         <h1 className="text-2xl font-bold text-primary">
@@ -206,19 +233,10 @@ export default async function AreaPage({ params, searchParams }: Props) {
 
       <RegionalFacts prefName={data.prefName} cityName={area.city} prefId={prefecture} cityId={city} />
       <LocalSubsidyFaq
-        municipalityData={data}
-        cityName={area.city}
-        prefName={data.prefName}
-        prefId={prefecture}
-        cityId={city}
-        regionalStats={getRegionalStats(`${prefecture}-${city}`)}
-        baseUrl={base}
+        items={localSubsidyItems}
+        heading={`${area.city}の実家じまい・補助金よくある質問`}
       />
-      <DynamicCaseStudy
-        cityName={area.city}
-        landPrice={getRegionalStats(`${prefecture}-${city}`)?.landPrice ?? 20000000}
-        cityId={ids.cityId}
-      />
+      <DynamicCaseStudy cityName={area.city} cases={cases} />
       <section id="optimizer-section" aria-label="実家じまいシミュレーター">
         <JikkaOptimizer
           cityName={area.city}
@@ -287,10 +305,8 @@ export default async function AreaPage({ params, searchParams }: Props) {
 
       <InheritanceRouting prefName={data.prefName} cityName={area.city} />
       <DynamicFaq
-        prefName={data.prefName}
-        cityName={area.city}
-        hasData={!data._isDefault}
-        municipalityData={data._isDefault ? undefined : data}
+        items={dynamicFaqItems}
+        heading={`${area.city}の実家・空き家に関するよくある質問`}
       />
       <div id="cleanup-section">
         <CleanupAffiliateCard cityName={area.city} cityId={ids.cityId} />

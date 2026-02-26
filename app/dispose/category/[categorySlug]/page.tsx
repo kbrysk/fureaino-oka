@@ -5,6 +5,7 @@ import { getItemsByCategoryId } from "../../../lib/dispose-items";
 import { getDisposalCategoryById } from "../../../../data/disposalItems";
 import { getCategoryDetail } from "../../../../data/disposalCategoryDetails";
 import { pageTitle } from "../../../lib/site-brand";
+import SearchBar from "../../../components/dispose/SearchBar";
 
 type Props = { params: Promise<{ categorySlug: string }> };
 
@@ -41,6 +42,13 @@ export default async function DisposeCategoryPage({ params }: Props) {
         <span className="mx-2">/</span>
         <span>{category.shortName}</span>
       </p>
+
+      <SearchBar
+        placeholder="このカテゴリ内で検索"
+        suggestions={items.map((i) => ({ slug: i.slug, name: i.name }))}
+        ariaLabel="捨て方辞典の品目を検索"
+        showSuggestions={true}
+      />
 
       {/* 解説コンテンツ（SEO・訴求用）：データがあるカテゴリのみ表示 */}
       {detail ? (

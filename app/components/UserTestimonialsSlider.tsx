@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 /**
  * 利用者事例（お客様の声）3件
@@ -45,14 +46,14 @@ type Case = (typeof CASES)[number];
 /** 1件目用：公園ベンチ・スマホの実写画像（右下の生成マークはトリミングで非表示） */
 function Case1Image() {
   return (
-    <div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-primary-light/30 border border-primary/20">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+    <div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-primary-light/30 border border-primary/20 relative">
+      <Image
         src="/images/fv-park-bench.png"
         alt="公園のベンチでスマートフォンを手にリラックスする女性"
-        className="h-full w-full object-cover object-top"
-        width={640}
-        height={480}
+        fill
+        className="object-cover object-top"
+        sizes="(max-width: 768px) 85vw, 400px"
+        priority
       />
     </div>
   );
@@ -61,14 +62,13 @@ function Case1Image() {
 /** 2件目用：公園のベンチで古い写真とノートを見る男性（右下の生成マークはトリミングで非表示） */
 function Case2Image() {
   return (
-    <div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-primary-light/30 border border-primary/20">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+    <div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-primary-light/30 border border-primary/20 relative">
+      <Image
         src="/images/testimonial-case2-photos.png"
         alt="公園のベンチで古い写真とノートを手に穏やかに見つめる男性"
-        className="h-full w-full object-cover object-top"
-        width={640}
-        height={480}
+        fill
+        className="object-cover object-top"
+        sizes="(max-width: 768px) 85vw, 400px"
       />
     </div>
   );
@@ -78,13 +78,12 @@ function Case2Image() {
 function Case3Image() {
   return (
     <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-primary-light/30 border border-primary/20">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         src="/images/testimonial-case3-tablet.png"
         alt="公園のベンチでタブレットを手に集中して操作する男性"
-        className="absolute inset-0 h-full w-full object-cover object-center block min-h-full min-w-full scale-[1.15]"
-        width={640}
-        height={480}
+        fill
+        className="object-cover object-center scale-[1.15]"
+        sizes="(max-width: 768px) 85vw, 400px"
       />
     </div>
   );

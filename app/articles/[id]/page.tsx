@@ -141,6 +141,7 @@ export default async function ArticleDetailPage({ params }: Props) {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 672px"
             priority
+            fetchPriority="high"
           />
         </figure>
       )}

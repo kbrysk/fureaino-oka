@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts";
+import dynamic from "next/dynamic";
 import {
   type InheritanceInputPattern,
   calculateInheritanceShares,
@@ -10,6 +10,19 @@ import {
 } from "../../lib/inheritance-share";
 
 const COLORS = ["#2d6a4f", "#40916c", "#52b788", "#74c69d", "#95d5b2", "#b7e4c7", "#d8f3dc"];
+
+/** recharts を遅延読み込み。CLS 防止のため実コンポーネントと同高さ（h-64 md:h-80 = 320px）でスケルトン */
+const InheritanceShareChart = dynamic(
+  () => import("./InheritanceShareChart").then((m) => m.default),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-64 md:h-80 min-h-[256px] rounded-xl bg-muted/30 flex items-center justify-center" aria-hidden>
+        <span className="text-foreground/50 text-sm">グラフを準備しています…</span>
+      </div>
+    ),
+  }
+);
 
 const defaultInput: InheritanceInputPattern = {
   step: 1,
@@ -193,28 +206,8 @@ export default function InheritanceSharePage() {
           </div>
           <div className="bg-card rounded-2xl border border-border p-6">
             <h2 className="font-bold text-lg mb-4">法定相続分（割合）</h2>
-            <div className="h-64 md:h-80">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={chartData}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={60}
-                    outerRadius={100}
-                    paddingAngle={2}
-                    dataKey="value"
-                    nameKey="name"
-                    label={({ name, value }) => `${name} ${value}%`}
-                  >
-                    {chartData.map((_, i) => (
-                      <Cell key={i} fill={chartData[i].color} />
-                    ))}
-                  </Pie>
-                  <Tooltip formatter={(value: number | undefined) => value != null ? `${value}%` : ""} />
-                  <Legend />
-                </PieChart>
-              </ResponsiveContainer>
+            <div className="h-64 md:h-80 min-h-[256px]">
+              <InheritanceShareChart chartData={chartData} />
             </div>
             <ul className="mt-4 space-y-1 text-sm text-foreground/70">
               {shares.map((s) => (
