@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Asset, DispositionIntent } from "../lib/types";
+import FukuchanCTA from "./FukuchanCTA";
 
 interface Props {
   asset: Asset;
@@ -16,10 +17,10 @@ const INTENT_OFFERS: Partial<Record<DispositionIntent, {
   partnerLabel: string;
 }>> = {
   "売却を検討中": {
-    headline: "今なら複数社で無料比較。最大で査定額に差が出ます",
-    description: "複数の提携業者から匿名で概算見積もりを取得できます。売却義務はありません。",
-    ctaLabel: "無料で見積もりを依頼する",
-    partnerLabel: "提携：買取・査定専門業者",
+    headline: "そのお品物、捨てる前にプロの無料査定に出してみませんか？",
+    description: "出張料・査定料・キャンセル料はすべて完全無料。状態が悪いものでも、思わぬ価値がつくかもしれません。",
+    ctaLabel: "まずは完全無料で査定を依頼する",
+    partnerLabel: "提携：出張買取専門店",
   },
   "処分に困っている": {
     headline: "処分のプロに匿名で相談できます",
@@ -63,6 +64,19 @@ export default function IntentChangeModal({ asset, newIntent, onClose }: Props) 
             <button
               onClick={onClose}
               className="bg-primary text-white px-6 py-2.5 rounded-xl font-medium hover:opacity-90 transition"
+            >
+              閉じる
+            </button>
+          </div>
+        ) : newIntent === "売却を検討中" ? (
+          <div className="space-y-5">
+            <p className="text-sm text-foreground/50 mb-1">
+              「{asset.name}」を「{newIntent}」に変更しました
+            </p>
+            <FukuchanCTA />
+            <button
+              onClick={onClose}
+              className="w-full py-3 rounded-xl border border-border text-sm hover:bg-background"
             >
               閉じる
             </button>

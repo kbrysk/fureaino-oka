@@ -103,9 +103,9 @@ export interface DIYStepGuideProps {
 
 ```ts
 export interface AuthorProfileProps {
-  /** 表示名（例: 遺品整理士 山田 太郎） */
+  /** 表示名（例: 生前整理支援センター ふれあいの丘 センター長） */
   name: string;
-  /** 資格・肩書き（例: 遺品整理士認定協会 認定資格） */
+  /** 資格・肩書き（任意。空の場合は表示しない） */
   qualification: string;
   /** コメント（専門家の一言） */
   comment: string;

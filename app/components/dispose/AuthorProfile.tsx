@@ -38,7 +38,9 @@ export default function AuthorProfile({
         <div className="min-w-0 flex-1">
           <p className="text-foreground/90">
             {nameContent}
-            <span className="text-sm text-foreground/70 font-normal ml-1">（{qualification}）</span>
+            {qualification && (
+              <span className="text-sm text-foreground/70 font-normal ml-1">（{qualification}）</span>
+            )}
           </p>
           <p className="text-sm text-foreground/85 leading-relaxed mt-2">{comment}</p>
         </div>

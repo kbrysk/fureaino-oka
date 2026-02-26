@@ -2,6 +2,10 @@ import Link from "next/link";
 import DynamicFaq from "./DynamicFaq";
 import type { FaqItem } from "@/app/lib/faq/schema";
 
+/** ノムコム（野村不動産ソリューションズ）A8 */
+const NOMU_CLICK_URL = "https://px.a8.net/svt/ejp?a8mat=4AXE4D+D2CGOI+5M76+BWVTE";
+const NOMU_IMP_URL = "https://www12.a8.net/0.gif?a8mat=4AXE4D+D2CGOI+5M76+BWVTE";
+
 /**
  * municipalities.json にデータがない自治体向けのディレクトリ型インフラページ用コンテンツ。
  * 公式窓口導線・汎用ツール案内・免責を表示し、404にせずE-E-A-Tを担保する。
@@ -69,22 +73,39 @@ export default function AreaDirectoryFallback({
         heading={`${cityName}の実家・空き家に関するよくある質問`}
       />
 
-      <section id="appraisal-section" className="bg-card rounded-2xl border border-border overflow-hidden">
+      <section id="appraisal-section" className="relative bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
-          <h2 className="font-bold text-primary">{cityName}周辺で利用可能な不動産一括査定</h2>
+          <h2 className="font-bold text-primary">{cityName}周辺で利用可能な不動産査定（大手1社）</h2>
         </div>
         <div className="p-6 space-y-3 text-sm text-foreground/80">
           <p>
-            野村不動産グループの「ノムコム」など、複数社の一括査定で実家の適正価値を把握できます。相続空き家の3,000万円控除を検討する前に、無料で相場を確認することをおすすめします。
+            野村不動産グループの「ノムコム」が、実家の適正価値を無料で算出。売却すれば片付け費用を相殺できるかもしれません。
           </p>
-          <Link
-            href={`/api/affiliate/appraisal?area=${encodeURIComponent(cityId)}&type=nomu`}
-            rel="nofollow"
+          <p>
+            相続空き家の3,000万円控除を検討する前に、まずは無料で相場を確認することをおすすめします。
+          </p>
+          <a
+            href={NOMU_CLICK_URL}
+            target="_blank"
+            rel="nofollow sponsored noopener noreferrer"
             className="inline-block py-2.5 px-4 rounded-xl font-bold text-white bg-primary hover:opacity-90 transition"
           >
             {cityName}の土地・建物の相場を無料で確認
-          </Link>
+          </a>
+          <p className="text-xs text-foreground/60">
+            ※ノムコム（野村不動産ソリューションズ）の公式サイトへ移動します
+          </p>
         </div>
+        {/* A8 インプレッション（レイアウトに影響しないよう絶対配置・非表示） */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={NOMU_IMP_URL}
+          alt=""
+          width={1}
+          height={1}
+          style={{ border: 0 }}
+          className="absolute bottom-0 left-0 w-px h-px opacity-0 pointer-events-none"
+        />
       </section>
 
       <section id="cleanup-section" className="bg-card rounded-2xl border border-border overflow-hidden">

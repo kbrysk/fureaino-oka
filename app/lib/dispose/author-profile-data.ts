@@ -6,10 +6,10 @@
 import type { AuthorProfileProps } from "./types";
 
 const DEFAULT_AUTHOR: Omit<AuthorProfileProps, "comment"> = {
-  name: "遺品整理士 ふれあいの丘 センター長",
-  qualification: "遺品整理士認定協会 認定資格",
+  name: "生前整理支援センター ふれあいの丘 センター長",
+  qualification: "",
   imageUrl: "/images/operator.png",
-  imageAlt: "遺品整理士 ふれあいの丘 センター長",
+  imageAlt: "生前整理支援センター ふれあいの丘 センター長",
   authorUrl: "/company",
 };
 

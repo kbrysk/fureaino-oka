@@ -4,8 +4,11 @@ import Link from "next/link";
 
 const WAKEGAI_KEYWORDS = /老朽|放置|特定空家|倒壊|危険/;
 
-/** A8.net インプレッション計測用 1px 画像（ノムコム＝最新正規タグ www12 / ワケガイ＝既存維持） */
-const A8_IMP_NOMU = "https://www12.a8.net/0.gif?a8mat=4AXE4D+D2CGOI+5M76+BWVTE";
+/** ノムコム（野村不動産ソリューションズ）A8 */
+const NOMU_CLICK_URL = "https://px.a8.net/svt/ejp?a8mat=4AXE4D+D2CGOI+5M76+BWVTE";
+const NOMU_IMP_URL = "https://www12.a8.net/0.gif?a8mat=4AXE4D+D2CGOI+5M76+BWVTE";
+
+/** ワケガイ A8 インプレッション */
 const A8_IMP_WAKEGAI = "https://www13.a8.net/0.gif?a8mat=4AXDCK+E6TXTE+5J56+5YRHE";
 
 function useVariant(localRiskText: string | null | undefined): "wakegai" | "nomu" {
@@ -25,7 +28,7 @@ export default function RealEstateAppraisalCard({ cityName, cityId, localRiskTex
   const href = `/api/affiliate/appraisal?area=${encodeURIComponent(cityId)}&type=${type}`;
 
   const isWakegai = localRiskText && WAKEGAI_KEYWORDS.test(localRiskText);
-  const impSrc = isWakegai ? A8_IMP_WAKEGAI : A8_IMP_NOMU;
+  const impSrc = isWakegai ? A8_IMP_WAKEGAI : NOMU_IMP_URL;
 
   if (variant === "wakegai") {
     return (
@@ -65,7 +68,7 @@ export default function RealEstateAppraisalCard({ cityName, cityId, localRiskTex
   return (
     <section
       id="appraisal-section"
-      className="rounded-xl border-2 border-orange-400 bg-orange-50 shadow-sm p-6 overflow-hidden"
+      className="relative rounded-xl border-2 border-orange-400 bg-orange-50 shadow-sm p-6 overflow-hidden"
       aria-labelledby="real-estate-appraisal-heading"
     >
       <div className="border-0">
@@ -75,27 +78,38 @@ export default function RealEstateAppraisalCard({ cityName, cityId, localRiskTex
       </div>
       <div className="space-y-2">
         <p className="text-sm text-foreground/80 leading-relaxed">
-          野村不動産グループの「ノムコム」が、あなたの実家の適正価値を算出。3,000万円控除の特例を最大限活かすなら今です。
+          大手・野村不動産グループの「ノムコム」が、あなたの実家の適正価値を算出。売却すれば片付け費用を相殺できるかもしれません。3,000万円控除の特例を活かすなら今がチャンスです。
         </p>
-        <Link href={href} rel="nofollow" className="block">
-          <div className="flex flex-col items-center mt-4">
-            <span className="text-red-600 font-bold text-sm mb-2 animate-pulse">
-              ＼ 3,000万円控除の特例期限が迫っています ／
-            </span>
-            <div className="w-full md:w-4/5 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold text-lg py-4 px-6 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center flex justify-center items-center">
-              {cityName}の土地・建物の相場を無料で確認 👉
-            </div>
-            <span className="text-gray-500 text-xs mt-3 text-center">
-              ※完全無料・Webから約60秒で入力完了（査定＝売却ではありません）
-            </span>
-          </div>
-        </Link>
+        <p className="text-xs text-foreground/70">
+          完全無料・Webから約60秒で入力完了。査定を受けるだけなら売却義務はありません。
+        </p>
+        <div className="flex flex-col items-center mt-4">
+          <span className="text-red-600 font-bold text-sm mb-2 animate-pulse">
+            ＼ 3,000万円控除の特例期限が迫っています ／
+          </span>
+          <a
+            href={NOMU_CLICK_URL}
+            target="_blank"
+            rel="nofollow sponsored noopener noreferrer"
+            className="w-full md:w-4/5 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold text-lg py-4 px-6 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center flex justify-center items-center"
+          >
+            {cityName}の土地・建物の相場を無料で確認 👉
+          </a>
+          <span className="text-gray-500 text-xs mt-3 text-center">
+            ※ノムコム（野村不動産ソリューションズ）の公式サイトへ移動します
+          </span>
+        </div>
       </div>
-      <div className="h-px overflow-hidden" aria-hidden>
-        {/* A8インプレッション計測用1px画像（ノムコム・最新正規タグ） */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={A8_IMP_NOMU} alt="" width={1} height={1} className="block w-px h-px" />
-      </div>
+      {/* A8 インプレッション（レイアウトに影響しないよう絶対配置・非表示） */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={NOMU_IMP_URL}
+        alt=""
+        width={1}
+        height={1}
+        style={{ border: 0 }}
+        className="absolute bottom-0 left-0 w-px h-px opacity-0 pointer-events-none"
+      />
     </section>
   );
 }

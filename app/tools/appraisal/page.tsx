@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import FukuchanCTA from "../../components/FukuchanCTA";
 
 /**
  * カテゴリ別の査定目安（一般的な買取相場の目安・生前整理で処分される品目中心）
@@ -104,18 +105,7 @@ export default function AppraisalPage() {
         上記は一般的な買取相場の目安です。実際の査定額は状態・時期・業者により異なります。正確な価格は複数社の無料査定をご利用ください。
       </p>
 
-      <div className="bg-primary rounded-2xl p-8 text-white text-center">
-        <h3 className="text-xl font-bold mb-2">複数社で無料比較しませんか？</h3>
-        <p className="text-white/80 text-sm mb-4">
-          提携の買取・査定業者から匿名で概算を取得できます。最大で査定額に差が出ることも。
-        </p>
-        <Link
-          href="/guide"
-          className="inline-block bg-accent text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition"
-        >
-          無料で見積もりを依頼する
-        </Link>
-      </div>
+      <FukuchanCTA />
 
       <Link href="/tools" className="inline-block text-primary font-medium hover:underline">
         ← ツール一覧へ
