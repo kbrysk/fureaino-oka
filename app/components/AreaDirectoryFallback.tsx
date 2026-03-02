@@ -3,8 +3,8 @@ import DynamicFaq from "./DynamicFaq";
 import type { FaqItem } from "@/app/lib/faq/schema";
 
 /** ノムコム（野村不動産ソリューションズ）A8 */
-const NOMU_CLICK_URL = "https://px.a8.net/svt/ejp?a8mat=4AXE4D+D2CGOI+5M76+BWVTE";
-const NOMU_IMP_URL = "https://www12.a8.net/0.gif?a8mat=4AXE4D+D2CGOI+5M76+BWVTE";
+const NOMU_CLICK_URL = "https://px.a8.net/svt/ejp?a8mat=4AXE4D+D2CGOI+5M76+BX3J6";
+const NOMU_IMP_URL = "https://www17.a8.net/0.gif?a8mat=4AXE4D+D2CGOI+5M76+BX3J6";
 
 /**
  * municipalities.json にデータがない自治体向けのディレクトリ型インフラページ用コンテンツ。
