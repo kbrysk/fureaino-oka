@@ -19,6 +19,8 @@ import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import { pageTitle } from "../../../../lib/site-brand";
 
+const currentYear = new Date().getFullYear();
+
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
 }
@@ -35,11 +37,11 @@ export async function generateMetadata({ params }: Props) {
   const area = getAreaById(prefecture, city);
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
-  if (!area) return { title: pageTitle("空き家・補助金") };
+  if (!area) return { title: pageTitle(`【${currentYear}年最新】空き家・補助金`) };
   if (data._isDefault) {
     return {
-      title: pageTitle(`${data.cityName}の実家解体・空き家補助金・助成金まとめ`),
-      description: `${data.cityName}で空き家整理や売却を検討中の方へ。自治体の窓口情報や、相続時に役立つ3,000万円控除の特例、おすすめの査定サービスをまとめています。`,
+      title: pageTitle(`【${currentYear}年最新】${data.cityName}の実家解体・空き家補助金・助成金まとめ`),
+      description: `【${currentYear}年最新】${data.cityName}で空き家整理や売却を検討中の方へ。自治体の窓口情報や、相続時に役立つ3,000万円控除の特例、おすすめの査定サービスをまとめています。`,
     };
   }
 
@@ -47,15 +49,15 @@ export async function generateMetadata({ params }: Props) {
     const amount = data.subsidy.maxAmount.replace(/最大|万円|円/g, "").trim() || "〇〇";
     return {
       title: pageTitle(
-        `${data.cityName}（${data.prefName}）の空き家解体補助金は最大${amount}万円！対象条件と粗大ゴミの捨て方`
+        `【${currentYear}年最新】${data.cityName}（${data.prefName}）の空き家解体補助金は最大${amount}万円！対象条件と粗大ゴミの捨て方`
       ),
-      description: `${data.prefName}${data.cityName}の空き家解体補助金「${data.subsidy.name ?? "自治体補助"}」は${data.subsidy.maxAmount}。対象条件・申請方法と粗大ゴミの申し込み案内。`,
+      description: `【${currentYear}年最新】${data.prefName}${data.cityName}の空き家解体補助金「${data.subsidy.name ?? "自治体補助"}」は${data.subsidy.maxAmount}。対象条件・申請方法と粗大ゴミの申し込み案内。`,
     };
   }
 
   return {
-    title: pageTitle(`${data.cityName}の実家解体・空き家補助金・助成金まとめ`),
-    description: `${data.prefName}${data.cityName}の空き家解体補助金・相続空き家の3000万円特別控除の相談窓口と概要。専門家への無料相談がおすすめです。`,
+    title: pageTitle(`【${currentYear}年最新】${data.cityName}の実家解体・空き家補助金・助成金まとめ`),
+    description: `【${currentYear}年最新】${data.prefName}${data.cityName}の空き家解体補助金・相続空き家の3000万円特別控除の相談窓口と概要。専門家への無料相談がおすすめです。`,
   };
 }
 
@@ -79,8 +81,16 @@ export default async function AreaSubsidyPage({ params }: Props) {
         />
         <div>
           <h1 className="text-2xl font-bold text-primary">
-            {data.cityName}の空き家補助金・遺品整理の公式窓口（2026年最新）
+            【{currentYear}年最新】{data.cityName}の空き家補助金・遺品整理の公式窓口
           </h1>
+        </div>
+        <div className="my-8 rounded-xl border border-yellow-200 bg-yellow-50 p-6 shadow-sm">
+          <p className="mb-3 font-bold text-yellow-800 flex items-center gap-2">
+            <span className="text-xl">💡</span> 【重要】補助金を使って解体・改修する前に！
+          </p>
+          <p className="text-sm leading-relaxed text-gray-700">
+            解体費用を払って更地にするよりも、場合によっては<strong>「そのまま売却」</strong>した方が手元に多くのお金が残るケースがあります。行動を起こす前に、まずはご実家・空き家の「現在の価値」を無料で把握しておくことを強くおすすめします。
+          </p>
         </div>
         <AreaDirectoryFallback
           cityName={data.cityName}
@@ -120,10 +130,19 @@ export default async function AreaSubsidyPage({ params }: Props) {
       />
       <div>
         <h1 className="text-2xl font-bold text-primary">
-          {data.cityName}（{data.prefName}）の空き家 解体補助金・3000万円控除
+          【{currentYear}年最新】{data.cityName}（{data.prefName}）の空き家 解体補助金・3000万円控除
         </h1>
         <p className="text-foreground/60 mt-1">
           空き家の解体補助金と、相続空き家の3000万円特別控除の相談の目安です。
+        </p>
+      </div>
+
+      <div className="my-8 rounded-xl border border-yellow-200 bg-yellow-50 p-6 shadow-sm">
+        <p className="mb-3 font-bold text-yellow-800 flex items-center gap-2">
+          <span className="text-xl">💡</span> 【重要】補助金を使って解体・改修する前に！
+        </p>
+        <p className="text-sm leading-relaxed text-gray-700">
+          解体費用を払って更地にするよりも、場合によっては<strong>「そのまま売却」</strong>した方が手元に多くのお金が残るケースがあります。行動を起こす前に、まずはご実家・空き家の「現在の価値」を無料で把握しておくことを強くおすすめします。
         </p>
       </div>
 
