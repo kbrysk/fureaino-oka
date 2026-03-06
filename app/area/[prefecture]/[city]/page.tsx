@@ -39,6 +39,7 @@ import {
   generateCaseStudyFaqItems,
 } from "../../../lib/faq/area-faq-data";
 import { generateFaqSchema } from "../../../lib/faq/schema";
+import { getAreaContent } from "../../../lib/getAreaContent";
 
 type SearchParamsRecord = { [key: string]: string | string[] | undefined };
 
@@ -85,6 +86,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
   const region = area ? getRegionBySlug([area.prefecture, area.city]) : null;
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
 
+  const areaData = await getAreaContent(prefecture, city);
   const showFallback = !area || data._isDefault;
   const base = getCanonicalBase();
   const breadcrumbItems = [
@@ -215,12 +217,27 @@ export default async function AreaPage({ params, searchParams }: Props) {
     { name: area.city, item: `${base}/area/${prefecture}/${city}` },
   ];
 
+  const areaFaqJsonLd =
+    areaData?.faqs?.length &&
+    ({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: areaData.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    });
+
   return (
     <div className="space-y-8">
       <AreaBodyMeta cityName={data.cityName} />
       <BreadcrumbJsonLd itemListElements={richBreadcrumbItems} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
+      {areaFaqJsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(areaFaqJsonLd) }} />
+      )}
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="main" />
       <div>
         <h1 className="text-2xl font-bold text-primary">
@@ -230,6 +247,74 @@ export default async function AreaPage({ params, searchParams }: Props) {
           粗大ゴミの申し込み方法と、遺品整理の相談先をご案内します。
         </p>
       </div>
+
+      {areaData && (
+        <>
+          <div className="my-8 rounded-2xl bg-blue-50/80 p-6 sm:p-8 border border-blue-100 shadow-sm">
+            <p className="text-base sm:text-lg leading-loose text-gray-800 font-medium">
+              {areaData.empatheticLead}
+            </p>
+          </div>
+
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mt-10 mb-6 border-b-2 border-blue-500 pb-2">
+            {areaData.cityName}の粗大ゴミ出し方・ルール
+          </h2>
+          <ul className="space-y-4">
+            {areaData.localDisposalRules.map((rule, i) => (
+              <li key={i} className="flex items-start text-base sm:text-lg leading-relaxed text-gray-800">
+                <span className="mr-3 text-green-500 text-xl flex-shrink-0">✅</span>
+                {rule}
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mt-8 mb-4">
+            持ち込み可能な施設
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {areaData.facilities.map((facility, i) => (
+              <div key={i} className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+                <h4 className="font-bold text-gray-900 text-lg mb-2">{facility.name}</h4>
+                <p className="text-base text-gray-800">{facility.address}</p>
+                {facility.phone && (
+                  <a
+                    href={`tel:${facility.phone}`}
+                    className="text-blue-600 font-bold underline text-lg block mt-2 py-2"
+                  >
+                    {facility.phone}
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mt-10 mb-6 border-b-2 border-blue-500 pb-2">
+            {areaData.cityName}の生前整理・遺品整理の費用相場
+          </h2>
+          <p className="text-base sm:text-lg leading-loose text-gray-800 mb-8">
+            {areaData.marketPriceText}
+          </p>
+          <RealEstateAppraisalCard
+            cityName={area.city}
+            cityId={ids.cityId}
+            localRiskText={data?.mascot.localRiskText}
+          />
+          <CleanupAffiliateCard cityName={area.city} cityId={ids.cityId} />
+
+          <dl className="space-y-6 mt-10">
+            {areaData.faqs.map((faq, i) => (
+              <div key={i}>
+                <dt className="font-bold text-lg text-gray-900 bg-gray-100 p-4 rounded-t-lg flex items-center">
+                  Q. {faq.question}
+                </dt>
+                <dd className="text-base sm:text-lg text-gray-800 leading-relaxed bg-white border border-gray-100 p-4 rounded-b-lg shadow-sm">
+                  A. {faq.answer}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </>
+      )}
 
       <RegionalFacts prefName={data.prefName} cityName={area.city} prefId={prefecture} cityId={city} />
       <LocalSubsidyFaq
@@ -386,6 +471,11 @@ export default async function AreaPage({ params, searchParams }: Props) {
       <RelatedAreas currentPrefId={prefecture} currentCityId={city} prefName={data.prefName} />
       <NearbyAreas currentPrefecture={ids.prefectureId} currentCity={ids.cityId} />
       <OperatorTrustBlock />
+      {areaData && (
+        <p className="mt-12 text-sm text-gray-500 leading-normal bg-gray-50 p-4 rounded-lg">
+          {areaData.advisoryNote}
+        </p>
+      )}
       <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
         <p className="font-medium text-foreground/80 mb-1">監修</p>
         <p>
