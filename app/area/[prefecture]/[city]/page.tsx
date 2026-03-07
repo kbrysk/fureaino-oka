@@ -29,6 +29,7 @@ import SituationGuide from "../../../components/SituationGuide";
 import JikkaOptimizer from "../../../components/JikkaOptimizer";
 import AreaBodyMeta from "../../../components/AreaBodyMeta";
 import OperatorTrustBlock from "../../../components/OperatorTrustBlock";
+import LocalAreaLinks from "../../../components/LocalAreaLinks";
 import { getRegionalStats } from "../../../lib/utils/regional-stats-loader";
 import { getCanonicalBase } from "../../../lib/site-url";
 import { pageTitle } from "../../../lib/site-brand";
@@ -203,6 +204,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
         <RelatedAreas currentPrefId={prefecture} currentCityId={city} prefName={data.prefName} />
         <NearbyAreas currentPrefecture={prefecture} currentCity={city} />
         <OperatorTrustBlock />
+        <LocalAreaLinks prefecture={prefecture} currentCity={city} />
         <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
           <p className="font-medium text-foreground/80 mb-1">監修</p>
           <p>整理収納・生前整理に関する記載は整理収納アドバイザー／税理士の監修を受けております。YMYL領域の情報は随時見直しを行っています。</p>
@@ -471,6 +473,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
       <RelatedAreas currentPrefId={prefecture} currentCityId={city} prefName={data.prefName} />
       <NearbyAreas currentPrefecture={ids.prefectureId} currentCity={ids.cityId} />
       <OperatorTrustBlock />
+      <LocalAreaLinks prefecture={prefecture} currentCity={city} />
       {areaData && (
         <p className="mt-12 text-sm text-gray-500 leading-normal bg-gray-50 p-4 rounded-lg">
           {areaData.advisoryNote}
