@@ -9,6 +9,13 @@ export interface FAQ {
   answer: string;
 }
 
+export interface SubsidyInfo {
+  name: string;
+  maxAmount: string;
+  condition: string;
+  contact: string;
+}
+
 export interface AreaContentData {
   cityName: string;
   empatheticLead: string;
@@ -17,4 +24,6 @@ export interface AreaContentData {
   marketPriceText: string;
   faqs: FAQ[];
   advisoryNote: string;
+  /** 解体補助金・空き家助成金（任意） */
+  subsidyInfo?: SubsidyInfo;
 }
