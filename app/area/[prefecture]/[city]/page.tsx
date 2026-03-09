@@ -64,13 +64,13 @@ export async function generateMetadata({ params }: Props) {
   if (!area) return { title: pageTitle("地域情報") };
   if (data._isDefault) {
     return {
-      title: pageTitle(`${data.cityName}の実家じまい・空き家対策 総合ガイド`),
-      description: `${data.cityName}で空き家整理や売却を検討中の方へ。自治体の窓口情報や、相続時に役立つ3,000万円控除の特例、おすすめの査定サービスをまとめています。`,
+      title: pageTitle(`${data.cityName}の実家じまい・空き家処分｜実家の片付け・粗大ゴミ費用とルール`),
+      description: `${data.cityName}で実家じまいや空き家整理にお悩みの方へ。シニアが自力で運べない粗大ゴミの処分ルールや、実家の片付け費用、遺品整理のポイントをわかりやすく解説します。`,
     };
   }
   return {
-    title: pageTitle(`${data.cityName}の実家じまい・空き家対策 総合ガイド`),
-    description: `${data.prefName}${data.cityName}の粗大ゴミ申し込み・遺品整理・補助金の相談先。無料見積もりで比較。`,
+    title: pageTitle(`${data.cityName}の実家じまい・空き家処分｜実家の片付け・粗大ゴミ費用とルール`),
+    description: `${data.cityName}で実家じまいや空き家整理にお悩みの方へ。シニアが自力で運べない粗大ゴミの処分ルールや、実家の片付け費用、遺品整理のポイントをわかりやすく解説します。`,
   };
 }
 
@@ -142,8 +142,11 @@ export default async function AreaPage({ params, searchParams }: Props) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
         <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="main" />
         <div>
-          <h1 className="text-2xl font-bold text-primary">
-            {data.cityName}の空き家補助金・遺品整理の公式窓口（2026年最新）
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug">
+            {data.cityName}の実家じまい・空き家処分
+            <span className="block text-lg sm:text-xl text-gray-600 mt-2 font-normal">
+              （粗大ゴミ・実家の片付け費用とルール）
+            </span>
           </h1>
         </div>
         <RegionalFacts prefName={data.prefName} cityName={data.cityName} prefId={prefecture} cityId={city} />
@@ -219,17 +222,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
     { name: area.city, item: `${base}/area/${prefecture}/${city}` },
   ];
 
-  const areaFaqJsonLd =
-    areaData?.faqs?.length &&
-    ({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: areaData.faqs.map((f) => ({
-        "@type": "Question",
-        name: f.question,
-        acceptedAnswer: { "@type": "Answer", text: f.answer },
-      })),
-    });
+  const faqs = areaData?.faqs ?? [];
 
   return (
     <div className="space-y-8">
@@ -237,17 +230,33 @@ export default async function AreaPage({ params, searchParams }: Props) {
       <BreadcrumbJsonLd itemListElements={richBreadcrumbItems} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
-      {areaFaqJsonLd && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(areaFaqJsonLd) }} />
+      {faqs && faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
       )}
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="main" />
       <div>
-        <h1 className="text-2xl font-bold text-primary">
-          {area.city}（{area.prefecture}）の粗大ゴミ・遺品整理
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug">
+          {area.city}の実家じまい・空き家処分
+          <span className="block text-lg sm:text-xl text-gray-600 mt-2 font-normal">
+            （粗大ゴミ・実家の片付け費用とルール）
+          </span>
         </h1>
-        <p className="text-foreground/60 mt-1">
-          粗大ゴミの申し込み方法と、遺品整理の相談先をご案内します。
-        </p>
       </div>
 
       {areaData && (
