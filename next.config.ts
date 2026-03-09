@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
     return [
       { source: "/index.html", destination: "/", permanent: true },
       { source: "/:path+/index.html", destination: "/:path+", permanent: true },
+      // 旧ガイドパス → マスターガイド（404防止・リンクジュース集約）
+      { source: "/guide", destination: "/articles/master-guide", permanent: true },
+      { source: "/guide/:path*", destination: "/articles/master-guide", permanent: true },
       // トレilingスラッシュ統一（Next デフォルトはスラッシュなし → 一貫性のため明示不要ならコメントアウト可）
     ];
   },

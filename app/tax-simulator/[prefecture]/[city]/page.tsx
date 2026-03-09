@@ -51,7 +51,7 @@ export default async function TaxSimulatorAreaPage({ params }: Props) {
       <div className="bg-card rounded-xl p-5 border border-border">
         <p className="text-sm text-foreground/60">
           実際の税額は評価額・自治体により異なります。{area.city}の空き家については特例措置の対象になる場合もあります。売却・活用のご相談は
-          <Link href="/guide" className="text-primary hover:underline ml-1">はじめかた</Link>
+          <Link href="/articles/master-guide" className="text-primary hover:underline ml-1">はじめかた</Link>
           から提携サービスをご案内しています。
         </p>
       </div>

@@ -55,7 +55,7 @@ export default function AppraisalCTA({ asset, onRequestAppraisal, onDismiss }: A
           </button>
         ) : (
           <Link
-            href="/guide"
+            href="/articles/master-guide"
             className="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-xl font-bold text-sm hover:opacity-90 transition"
           >
             無料で査定依頼する（提携業者へ）

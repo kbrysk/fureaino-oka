@@ -55,7 +55,7 @@ export const ARTICLE_TAGS: ArticleTag[] = [
     title: "親を説得したい方のための実家じまいガイド",
     leadText:
       "「まだ早い」「もったいない」と親に片付けを拒まれて困っている方へ。怒らせない切り出し方や、親の心理に寄り添う会話のコツ、進捗を共有する方法をまとめました。こじらせずに、一歩ずつ進めるヒントがあります。",
-    toolHref: "/guide",
+    toolHref: "/articles/master-guide",
     toolLabel: "実家じまいの進め方 全手順",
     shortLabel: "親と喧嘩している",
   },

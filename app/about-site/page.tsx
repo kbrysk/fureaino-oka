@@ -59,7 +59,7 @@ export default function AboutSitePage() {
           <p className="text-foreground/80 text-sm leading-relaxed mb-4">
             空き家の補助金活用、売却・査定の目安、固定資産税のシミュレーションなど、損をしない家のしまい方に役立つ無料ツールを提供。必要に応じて、税理士・司法書士・不動産・遺品整理業者など専門家への無料相談窓口もご案内しています。
           </p>
-          <Link href="/guide" className="text-primary text-sm font-medium hover:underline">
+          <Link href="/articles/master-guide" className="text-primary text-sm font-medium hover:underline">
             専門家に相談する →
           </Link>
         </div>

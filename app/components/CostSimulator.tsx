@@ -244,8 +244,11 @@ export default function CostSimulator({
         </p>
 
         <Link
-          href="/guide"
+          href="/articles/master-guide"
           className="inline-flex items-center justify-center w-full sm:w-auto text-lg font-bold py-4 px-8 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition shadow-md"
+          id="cta-cost-simulator-estimate"
+          data-ga-cta="cost_simulator_estimate"
+          data-event-name="cta_estimate_request"
         >
           この地域の優良業者から、正確な見積もりを取り寄せる（無料）
         </Link>

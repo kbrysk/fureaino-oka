@@ -70,7 +70,7 @@ export default function CostIndexPage() {
         </p>
         <div className="flex flex-wrap gap-3">
           <Link
-            href="/guide"
+            href="/articles/master-guide"
             className="inline-block bg-primary text-white px-5 py-2.5 rounded-xl font-medium text-sm hover:opacity-90 transition"
           >
             実家じまいの進め方 全手順
@@ -109,7 +109,7 @@ export default function CostIndexPage() {
           </li>
           <li>
             <Link
-              href="/guide"
+              href="/articles/master-guide"
               className="block py-2 px-4 rounded-xl border border-border hover:border-primary/50 hover:bg-primary-light/30 transition font-medium text-foreground/90"
             >
               孤独死・特殊清掃が必要な場合（はじめかた・業者相談）

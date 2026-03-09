@@ -205,7 +205,7 @@ export default async function DisposeItemPage({ params }: Props) {
         <Link href="/dispose" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
           捨て方辞典トップへ
         </Link>
-        <Link href="/guide" className="inline-block text-primary font-medium hover:underline">
+        <Link href="/articles/master-guide" className="inline-block text-primary font-medium hover:underline">
           実家の整理をまるごと相談する
         </Link>
       </div>

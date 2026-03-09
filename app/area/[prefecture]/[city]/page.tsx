@@ -28,9 +28,11 @@ import InheritanceRouting from "../../../components/InheritanceRouting";
 import SituationGuide from "../../../components/SituationGuide";
 import JikkaOptimizer from "../../../components/JikkaOptimizer";
 import CostSimulator from "../../../components/CostSimulator";
+import ExpertGuideLink from "../../../components/ExpertGuideLink";
 import AreaBodyMeta from "../../../components/AreaBodyMeta";
 import OperatorTrustBlock from "../../../components/OperatorTrustBlock";
 import LocalAreaLinks from "../../../components/LocalAreaLinks";
+import AreaSurveyCredit from "../../../components/AreaSurveyCredit";
 import { getRegionalStats } from "../../../lib/utils/regional-stats-loader";
 import { getCanonicalBase } from "../../../lib/site-url";
 import { pageTitle } from "../../../lib/site-brand";
@@ -191,6 +193,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
             </AreaBulkyWasteLink>
           </div>
         </div>
+        <ExpertGuideLink variant="default" />
         <div className="flex flex-wrap gap-3">
           <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
             ← 地域一覧（全国）へ
@@ -209,6 +212,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
         <NearbyAreas currentPrefecture={prefecture} currentCity={city} />
         <OperatorTrustBlock />
         <LocalAreaLinks prefecture={prefecture} currentCity={city} />
+        <AreaSurveyCredit />
         <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
           <p className="font-medium text-foreground/80 mb-1">監修</p>
           <p>整理収納・生前整理に関する記載は整理収納アドバイザー／税理士の監修を受けております。YMYL領域の情報は随時見直しを行っています。</p>
@@ -284,6 +288,9 @@ export default async function AreaPage({ params, searchParams }: Props) {
               <Link
                 href={`/area/${ids.prefectureId}/${ids.cityId}/subsidy`}
                 className="inline-block bg-green-600 text-white font-medium px-5 py-2.5 rounded-lg hover:bg-green-700 transition"
+                id="cta-subsidy-check"
+                data-ga-cta="subsidy_check"
+                data-event-name="cta_subsidy_confirm"
               >
                 {area.city}の補助金・申請条件を確認する
               </Link>
@@ -291,6 +298,9 @@ export default async function AreaPage({ params, searchParams }: Props) {
               <Link
                 href={`/area/${ids.prefectureId}/${ids.cityId}/subsidy`}
                 className="inline-block bg-green-600 text-white font-medium px-5 py-2.5 rounded-lg hover:bg-green-700 transition"
+                id="cta-subsidy-check-fallback"
+                data-ga-cta="subsidy_check"
+                data-event-name="cta_subsidy_confirm"
               >
                 {area.city}役所の最新補助枠を確認する（窓口案内）
               </Link>
@@ -445,7 +455,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
             清掃関係の問い合わせ・収集日は、{area.city}の公式HPまたは窓口でご確認ください。
           </p>
           <Link
-            href="/guide"
+            href="/articles/master-guide"
             className="inline-block bg-primary text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:opacity-90 transition"
           >
             遺品整理の無料見積もりを依頼する
@@ -477,7 +487,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
             {area.estateCleanupNote}。複数社で見積もりを取ると安心です。
           </p>
           <Link
-            href="/guide"
+            href="/articles/master-guide"
             className="inline-block bg-primary text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:opacity-90 transition"
           >
             無料で見積もりを依頼する
@@ -492,6 +502,18 @@ export default async function AreaPage({ params, searchParams }: Props) {
           .filter((m) => m.cityId !== ids.cityId)
           .slice(0, 6)
           .map((m) => ({ cityId: m.cityId, cityName: m.cityName }))}
+      />
+
+      <ExpertGuideLink
+        variant={
+          areaData?.empatheticLead
+            ? /坂|階段/.test(areaData.empatheticLead)
+              ? "narrow"
+              : /豪雪|積雪/.test(areaData.empatheticLead)
+                ? "snow"
+                : "default"
+            : "default"
+        }
       />
 
       <div className="flex flex-wrap gap-3">
@@ -542,6 +564,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
           {areaData.advisoryNote}
         </p>
       )}
+      <AreaSurveyCredit />
       <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
         <p className="font-medium text-foreground/80 mb-1">監修</p>
         <p>

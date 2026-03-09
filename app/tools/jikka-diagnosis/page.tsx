@@ -169,7 +169,7 @@ export default function JikkaDiagnosisPage() {
           <Link href="/tools/empty-house-tax" className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition">
             空き家の維持費をシミュレーション
           </Link>
-          <Link href="/guide" className="inline-block bg-primary text-white px-4 py-2 rounded-xl text-sm font-medium hover:opacity-90 transition">
+          <Link href="/articles/master-guide" className="inline-block bg-primary text-white px-4 py-2 rounded-xl text-sm font-medium hover:opacity-90 transition">
             はじめかたガイドを見る
           </Link>
           <button

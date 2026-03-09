@@ -301,9 +301,9 @@ export default function AssetsPage() {
             <input type="checkbox" className="w-3.5 h-3.5 accent-red-600 mt-0.5" />
             <span className="text-[11px] text-red-400 leading-tight">
               提携パートナーに情報を提供することに同意します。
-              <a href="/guide" className="text-red-600 underline ml-0.5">利用規約</a>
+              <a href="/terms" className="text-red-600 underline ml-0.5">利用規約</a>
               <span className="mx-0.5">・</span>
-              <a href="/guide" className="text-red-600 underline">プライバシーポリシー</a>
+              <a href="/privacy" className="text-red-600 underline">プライバシーポリシー</a>
             </span>
           </label>
         </div>

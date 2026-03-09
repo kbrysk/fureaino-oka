@@ -125,9 +125,9 @@ function CTACard({ cta }: { cta: ContextualCTA }) {
         />
         <span className="text-[11px] text-foreground/50 leading-tight">
           提携パートナーに情報を提供することに同意します。
-          <a href="/guide" className="text-accent underline ml-0.5">利用規約</a>
+          <a href="/terms" className="text-accent underline ml-0.5">利用規約</a>
           <span className="mx-0.5">・</span>
-          <a href="/guide" className="text-accent underline">プライバシーポリシー</a>
+          <a href="/privacy" className="text-accent underline">プライバシーポリシー</a>
         </span>
       </label>
     </div>

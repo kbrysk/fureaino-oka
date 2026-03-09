@@ -29,7 +29,7 @@ export default function ContextualCTA({ itemName }: ContextualCTAProps) {
       <p className="text-sm text-foreground/70 mb-4">{lead}</p>
       <div className="flex flex-wrap gap-3 justify-center items-center">
         <Link
-          href="/guide"
+          href="/articles/master-guide"
           className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold text-sm hover:opacity-90 transition shadow-sm"
         >
           <span aria-hidden className="text-lg leading-none">📞</span>

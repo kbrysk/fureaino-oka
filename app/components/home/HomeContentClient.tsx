@@ -209,7 +209,7 @@ export default function HomeContentClient() {
           <ToolCard slug="/area" lead="全国の市区町村ごとに掲載" title="地域別・粗大ゴミ・遺品整理" sub="検索→見積もり・回収業者導線" ctaLabel="詳しく見てみる">
             <svg viewBox="0 0 140 140" className="w-12 h-12" fill="none"><path d="M25 85 Q70 25 115 85 L115 115 L25 115 Z" fill="currentColor" opacity="0.8" /><circle cx="70" cy="65" r="12" fill="currentColor" opacity="0.5" /></svg>
           </ToolCard>
-          <ToolCard slug="/guide" lead="相続・不動産・デジタル遺品など" title="専門家への無料相談" sub="匿名で質問→税理士・司法書士紹介" ctaLabel="無料相談してみる">
+          <ToolCard slug="/articles/master-guide" lead="相続・不動産・デジタル遺品など" title="専門家への無料相談" sub="匿名で質問→税理士・司法書士紹介" ctaLabel="無料相談してみる">
             <svg viewBox="0 0 140 140" className="w-12 h-12" fill="none"><rect x="45" y="35" width="50" height="65" rx="4" fill="currentColor" opacity="0.9" /><path d="M58 55 L82 55 M58 65 L78 65 M58 75 L75 75" stroke="white" strokeWidth="3" strokeLinecap="round" /></svg>
           </ToolCard>
           <ToolCard slug="/tools/jikka-diagnosis" lead="家族会議にそのまま使える" title="実家じまい力診断" sub="約10問でリスク度がわかる" ctaLabel="診断してみる">
@@ -323,7 +323,7 @@ export default function HomeContentClient() {
           </div>
         </div>
         <div className="mt-4 text-right">
-          <Link href="/guide" className="text-primary text-sm font-medium hover:underline">詳しい進め方を見る →</Link>
+          <Link href="/articles/master-guide" className="text-primary text-sm font-medium hover:underline">詳しい進め方を見る →</Link>
         </div>
       </div>
 
@@ -400,7 +400,7 @@ export default function HomeContentClient() {
             「終わり」の準備ではなく、<strong>残りの人生をより豊かにする</strong>前向きな取り組みです。
           </p>
           <div className="mt-4">
-            <Link href="/guide" className="inline-block bg-primary-light text-primary px-5 py-2.5 rounded-lg font-medium hover:bg-primary hover:text-white transition-colors">詳しい進め方ガイドを見る</Link>
+            <Link href="/articles/master-guide" className="inline-block bg-primary-light text-primary px-5 py-2.5 rounded-lg font-medium hover:bg-primary hover:text-white transition-colors">詳しい進め方ガイドを見る</Link>
           </div>
         </div>
       </div>

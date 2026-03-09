@@ -43,7 +43,7 @@ export default function DisposeItemLineCTA({ itemName, ctaType = "default" }: Di
           3分で無料診断する
         </Link>
         <Link
-          href="/guide"
+          href="/articles/master-guide"
           className="inline-block bg-primary-light text-primary border border-primary/30 px-6 py-3 rounded-xl font-bold text-sm hover:bg-primary hover:text-white transition"
         >
           はじめかた・相談窓口

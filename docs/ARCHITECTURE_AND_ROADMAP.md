@@ -232,7 +232,7 @@ create policy "Service role can do all" on public.leads for all using (true);
 - **記事 → 記事**: 同カテゴリから 2〜3 本を `internal-links.json` または記事メタで指定し、`InternalLinkList` で表示。  
 - **記事 → ツール**: カテゴリに応じて「空き家」「査定」「チェックリスト」のいずれかを `ToolCTA` で表示。  
 - **ツール → 記事**: ツールページ下部に「関連コラム」で該当カテゴリ記事 2 本リンク。  
-- **サイト内リンク**: ヘッダー・フッターで `/articles`, `/tools`, `/guide`, `/checklist` を必ず露出。
+- **サイト内リンク**: ヘッダー・フッターで `/articles`, `/tools`, `/articles/master-guide`, `/checklist` を必ず露出。
 
 これで**少ない記事数でもドメインパワーを分散させず、重要ページにリンクを集約**できる。
 

@@ -106,7 +106,7 @@ export default function HojiCalendarPage() {
                         </Link>
                       ) : (
                         <Link
-                          href="/guide?source=hoji_gift"
+                          href="/articles/master-guide?source=hoji_gift"
                           className="inline-block border border-border px-3 py-2 rounded-lg text-xs hover:bg-primary-light/20"
                         >
                           法要の引き出物を探す
@@ -124,7 +124,7 @@ export default function HojiCalendarPage() {
                       </a>
                       <div>
                         <Link
-                          href="/guide?source=obosan_bin"
+                          href="/articles/master-guide?source=obosan_bin"
                           className="inline-block border border-border px-3 py-1.5 rounded-lg text-xs hover:bg-primary-light/20 mt-1"
                         >
                           お坊さん便（僧侶手配）

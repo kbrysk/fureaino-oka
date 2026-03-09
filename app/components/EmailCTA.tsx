@@ -87,7 +87,7 @@ export default function EmailCTA({
         <ul className="flex flex-wrap justify-center gap-3 mt-2">
           <li>
             <a
-              href="/guide"
+              href="/articles/master-guide"
               className={`inline-block px-4 py-2 rounded-lg font-medium text-sm transition ${
                 isBanner
                   ? "bg-white/20 text-white hover:bg-white/30"
@@ -124,7 +124,7 @@ export default function EmailCTA({
         </ul>
         <p className={`text-xs mt-3 ${isBanner ? "text-white/60" : "text-foreground/50"}`}>
           不用品の見積もり・買取の相談は
-          <a href="/guide" className="underline ml-1">はじめかた</a>
+          <a href="/articles/master-guide" className="underline ml-1">はじめかた</a>
           からご案内しています。
         </p>
       </div>

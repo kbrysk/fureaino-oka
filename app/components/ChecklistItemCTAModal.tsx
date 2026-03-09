@@ -9,15 +9,15 @@ interface Props {
 }
 
 const CATEGORY_CTA: Record<string, { label: string; href: string }> = {
-  "財産・お金": { label: "預貯金・不動産の整理をプロに相談", href: "/guide" },
+  "財産・お金": { label: "預貯金・不動産の整理をプロに相談", href: "/articles/master-guide" },
   "持ち物": { label: "買取・処分の見積もりを取る", href: "/tools/appraisal" },
-  "デジタル": { label: "デジタル遺品の整理を相談する", href: "/guide" },
-  "書類・手続き": { label: "遺言書・エンディングノートをプロに相談", href: "/guide" },
+  "デジタル": { label: "デジタル遺品の整理を相談する", href: "/articles/master-guide" },
+  "書類・手続き": { label: "遺言書・エンディングノートをプロに相談", href: "/articles/master-guide" },
   "人間関係": { label: "エンディングノートの書き方を確認", href: "/ending-note" },
 };
 
 export default function ChecklistItemCTAModal({ category, label, onClose }: Props) {
-  const cta = CATEGORY_CTA[category] ?? { label: "この項目をプロに頼む（見積もり）", href: "/guide" };
+  const cta = CATEGORY_CTA[category] ?? { label: "この項目をプロに頼む（見積もり）", href: "/articles/master-guide" };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40" onClick={onClose}>

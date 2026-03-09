@@ -217,13 +217,13 @@ export default function InheritanceSharePage() {
 
             <div className="mt-6 pt-6 border-t border-border flex flex-wrap gap-3">
               <Link
-                href="/guide?source=inheritance_will_kit"
+                href="/articles/master-guide?source=inheritance_will_kit"
                 className="inline-block bg-primary text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:opacity-90"
               >
                 この配分を実現するための「遺言書キット」を見る
               </Link>
               <Link
-                href="/guide?source=inheritance_expert"
+                href="/articles/master-guide?source=inheritance_expert"
                 className="inline-block border-2 border-primary text-primary px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-primary-light/20"
               >
                 専門家に相談する
@@ -236,7 +236,7 @@ export default function InheritanceSharePage() {
               <p className="font-bold">遺言書がないと揉める可能性が高いパターンです</p>
               <p className="text-sm mt-1">兄弟姉妹が相続人になる場合や、相続人が多い場合、遺言がないとトラブルになりやすいです。早めの相談をおすすめします。</p>
               <Link
-                href="/guide?source=inheritance_complex"
+                href="/articles/master-guide?source=inheritance_complex"
                 className="mt-4 inline-block bg-amber-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:opacity-90"
               >
                 司法書士・行政書士への無料相談（提携）

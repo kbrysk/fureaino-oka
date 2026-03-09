@@ -99,7 +99,7 @@ export default function DisposeIndexPage() {
             3分で無料診断する
           </Link>
           <Link
-            href="/guide"
+            href="/articles/master-guide"
             className="inline-block bg-primary-light text-primary border border-primary/30 px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-primary hover:text-white transition"
           >
             実家じまいのはじめかたを見る

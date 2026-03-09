@@ -46,7 +46,7 @@ export default function GuidebookGate() {
               <Link href="/guidebook/jikka-jimai" className="inline-block bg-primary text-white px-5 py-2.5 rounded-xl font-medium text-sm hover:opacity-90 transition">
                 実家じまい完全ガイドをウェブで読む
               </Link>
-              <Link href="/guide" className="inline-block bg-primary-light text-primary border border-primary/30 px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-primary hover:text-white transition">
+              <Link href="/articles/master-guide" className="inline-block bg-primary-light text-primary border border-primary/30 px-5 py-2.5 rounded-xl font-medium text-sm hover:bg-primary hover:text-white transition">
                 はじめかたガイドを見る
               </Link>
             </div>

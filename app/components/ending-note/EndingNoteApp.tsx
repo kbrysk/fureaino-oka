@@ -81,7 +81,7 @@ export default function EndingNoteApp() {
     saveNote(note);
     if (note.funeralBrochureRequested && note.funeralType) {
       trackLeadEvent("funeral_brochure_request", { option: note.funeralType });
-      window.open("/guide?source=funeral_brochure", "_blank", "noopener,noreferrer");
+      window.open("/articles/master-guide?source=funeral_brochure", "_blank", "noopener,noreferrer");
     }
     setSaved(true);
     setTimeout(() => setSaved(false), 2000);
@@ -403,7 +403,7 @@ export default function EndingNoteApp() {
         <div className="rounded-2xl border-2 border-red-500 bg-red-50 p-4 text-red-900 text-sm">
           <p className="font-bold">相続税が発生する可能性があります。</p>
           <p className="mt-1">資産総額（推計）が基礎控除を超えています。対策は早めに。</p>
-          <Link href="/guide?source=inheritance_tax_alert" className="mt-3 inline-block bg-red-600 text-white px-4 py-2 rounded-lg font-medium text-sm hover:opacity-90">
+          <Link href="/articles/master-guide?source=inheritance_tax_alert" className="mt-3 inline-block bg-red-600 text-white px-4 py-2 rounded-lg font-medium text-sm hover:opacity-90">
             節税シミュレーションへ
           </Link>
         </div>

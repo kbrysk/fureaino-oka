@@ -12,6 +12,7 @@ import CostSimulator from "../../../../components/CostSimulator";
 import NearbySubsidyLinks from "../../../../components/NearbySubsidyLinks";
 import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
 import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
+import AreaSurveyCredit from "../../../../components/AreaSurveyCredit";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalCard";
 import { pageTitle } from "../../../../lib/site-brand";
@@ -158,6 +159,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
           </Link>
         </div>
         <StickyCta cityName={cityName} prefId={data.prefId} cityId={data.cityId} />
+        <AreaSurveyCredit />
         <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
           <p className="font-medium text-foreground/80 mb-1">監修</p>
           <p>税制・補助金に関する記載は税理士の監修を受けております。詳細は自治体・専門家にご確認ください。</p>
@@ -247,7 +249,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
           「空き家対策特別措置法」により、危険や不衛生と判断された空き家は「特定空き家」に指定されることがあります。指定されると、固定資産税の優遇が外れ、これまでの約6倍になるケースも。早めに「補助金＋解体＋売却」を検討すれば、実質プラスになる可能性もあります。
         </p>
         <Link
-          href="/guide"
+          href="/articles/master-guide"
           className="inline-flex items-center gap-2 rounded-xl bg-primary text-white px-5 py-3 font-bold text-sm hover:opacity-90 transition"
         >
           <span>無料で解体・一括見積もりを依頼する</span>
@@ -308,6 +310,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
 
       <StickyCta cityName={cityName} prefId={ids.prefectureId} cityId={ids.cityId} />
 
+      <AreaSurveyCredit />
       <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
         <p className="font-medium text-foreground/80 mb-1">監修</p>
         <p>税制・補助金に関する記載は税理士の監修を受けております。詳細は自治体・専門家にご確認ください。</p>
@@ -329,7 +332,7 @@ function StickyCta({
     <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-white/95 backdrop-blur-sm shadow-lg safe-area-pb">
       <div className="mx-auto max-w-lg px-4 py-3 flex items-center justify-center gap-3">
         <Link
-          href="/guide"
+          href="/articles/master-guide"
           className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-white py-3.5 px-4 font-bold text-sm hover:opacity-90 transition touch-manipulation"
         >
           <span className="inline-block w-5 h-5" aria-hidden>

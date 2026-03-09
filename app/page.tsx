@@ -90,7 +90,7 @@ export default function Home() {
               <p className="text-base text-foreground/85 leading-relaxed flex-1">
                 補助金の活用から売却査定まで。損をしない家のしまい方を専門家がサポート。
               </p>
-              <Link href="/guide" className="mt-3 text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
+              <Link href="/articles/master-guide" className="mt-3 text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
                 専門家に相談する <span aria-hidden>→</span>
               </Link>
             </div>

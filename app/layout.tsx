@@ -12,6 +12,7 @@ import GlobalStickyCTA from "./components/GlobalStickyCTA";
 import EeatJsonLd from "./components/json-ld/EeatJsonLd";
 import { SITE_TITLE_TOP, SITE_NAME_LOGO, SITE_NAME_SHORT } from "./lib/site-brand";
 import { getBaseUrl, getCanonicalBase, getCanonicalUrl } from "./lib/site-url";
+import { organization } from "./lib/constants/site-metadata";
 
 /** Google AdSense 審査用パブリッシャーID（next/third-parties に GoogleAdSense はないため next/script で同等の読み込み） */
 const GOOGLE_ADSENSE_PUBLISHER_ID = "ca-pub-8324936850324481";
@@ -101,6 +102,28 @@ export default function RootLayout({
         <meta name="twitter:title" content={SITE_TITLE_TOP} />
         <meta name="twitter:description" content={DEFAULT_DESCRIPTION} />
         <meta name="twitter:image" content={`${canonicalOrigin}${OG_IMAGE_PATH}`} />
+        {/* 全ページ共通: Organization Schema（E-E-A-T・ナレッジパネル用） */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "@id": `${canonicalOrigin}/#organization`,
+              name: organization.name,
+              alternateName: "Kogera Inc.",
+              url: `${canonicalOrigin}/`,
+              logo: `${canonicalOrigin}/logo.png`,
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                areaServed: "JP",
+                availableLanguage: "Japanese",
+              },
+              knowsAbout: ["実家じまい", "遺品整理", "解体補助金", "空き家対策", "不用品回収"],
+            }),
+          }}
+        />
         {/* JSON-LD は EeatJsonLd（Organization + WebSite）を body 末尾で出力 */}
         {/* GTM・AdSense は body 内 next/script で遅延読み込み（WRS リソース枯渇対策） */}
       </head>

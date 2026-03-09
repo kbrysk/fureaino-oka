@@ -89,7 +89,7 @@ export default async function ArticlesCategoryPage({ params }: Props) {
         <Link href="/articles" className="inline-block text-primary font-medium hover:underline">
           ← 記事一覧へ
         </Link>
-        <Link href="/guide" className="inline-block text-primary font-medium hover:underline">
+        <Link href="/articles/master-guide" className="inline-block text-primary font-medium hover:underline">
           実家じまいの進め方 全手順
         </Link>
       </div>

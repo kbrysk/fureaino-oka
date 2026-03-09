@@ -10,7 +10,7 @@ const navItems: { href: string; label: string }[] = [
   { href: "/guidebook", label: "ガイドブック" },
   { href: "/articles", label: "記事" },
   { href: "/tools", label: "ツール" },
-  { href: "/guide", label: "はじめかた" },
+  { href: "/articles/master-guide", label: "はじめかた" },
   { href: "/checklist", label: "チェックリスト" },
   { href: "/assets", label: "資産・持ち物" },
   { href: "/ending-note", label: "エンディングノート" },

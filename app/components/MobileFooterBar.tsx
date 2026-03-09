@@ -52,7 +52,7 @@ export default function MobileFooterBar() {
         aria-label="固定メニュー（無料相談・LINE登録）"
       >
         <Link
-          href="/guide"
+          href="/articles/master-guide"
           className="flex-1 flex items-center justify-center gap-2 py-4 px-6 font-bold text-primary bg-primary-light hover:bg-primary hover:text-white transition-colors"
         >
           無料相談はこちら

@@ -52,7 +52,7 @@ export default function TreasureAssetMap({ totalValue, assetCount }: TreasureAss
         </button>
       </div>
       <Link
-        href="/guide"
+        href="/articles/master-guide"
         className="mt-4 inline-block text-white/90 text-sm font-medium hover:underline"
       >
         無料で査定を比較する →

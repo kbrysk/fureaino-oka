@@ -4,6 +4,8 @@ import OwlCharacter from "./OwlCharacter";
 
 /** 必須リンク（コンプライアンス・運営者情報）。site-metadata と整合するパス。 */
 const REQUIRED_LINKS: { href: string; label: string }[] = [
+  { href: "/about", label: "運営者情報" },
+  { href: "/editorial-policy", label: "編集指針" },
   { href: "/company", label: "運営会社情報" },
   { href: "/contact", label: "お問い合わせ" },
   { href: "/privacy", label: "プライバシーポリシー" },
@@ -30,7 +32,7 @@ const FOOTER_TOOLS: { href: string; label: string }[] = [
 
 const FOOTER_GUIDE_AND_CONTENT: { href: string; label: string }[] = [
   { href: "/about-site", label: "ふれあいの丘とは" },
-  { href: "/guide", label: "生前整理のはじめかた" },
+  { href: "/articles/master-guide", label: "生前整理のはじめかた" },
   { href: "/guidebook", label: "ガイドブック（無料PDF）" },
   { href: "/articles", label: "記事一覧" },
   { href: "/cost", label: "間取り別 片付け費用" },

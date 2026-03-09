@@ -27,7 +27,7 @@ export default function EmptyHouseTaxPage() {
       <div className="bg-card rounded-xl p-5 border border-border">
         <p className="text-sm text-foreground/60">
           実際の税額は評価額・自治体により異なります。空き家の場合は特例措置（更地より軽減など）の対象になる場合もあります。売却・活用のご相談は
-          <Link href="/guide" className="text-primary hover:underline ml-1">はじめかた</Link>
+          <Link href="/articles/master-guide" className="text-primary hover:underline ml-1">はじめかた</Link>
           から提携サービスをご案内しています。
         </p>
       </div>

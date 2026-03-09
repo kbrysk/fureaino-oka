@@ -312,16 +312,16 @@ export const CHECKLIST_DEFAULTS: Omit<CheckItem, "id" | "checked">[] = [
  * 面倒だと思った瞬間にプロに任せる選択肢を提示する
  */
 export const CHECKLIST_ITEM_SOLUTION_LINKS: Record<string, { label: string; href: string }> = {
-  "衣類を整理する": { label: "着物・古着の出張買取を呼ぶ", href: "/guide" },
-  "書籍・趣味の品を整理する": { label: "本・コレクションの買取に出す", href: "/guide" },
-  "家具・家電の処分を検討する": { label: "家具・家電の引き取り・処分を依頼する", href: "/guide" },
-  "写真・アルバムを整理する": { label: "写真のスキャン・デジタル化を依頼する", href: "/guide" },
+  "衣類を整理する": { label: "着物・古着の出張買取を呼ぶ", href: "/articles/master-guide" },
+  "書籍・趣味の品を整理する": { label: "本・コレクションの買取に出す", href: "/articles/master-guide" },
+  "家具・家電の処分を検討する": { label: "家具・家電の引き取り・処分を依頼する", href: "/articles/master-guide" },
+  "写真・アルバムを整理する": { label: "写真のスキャン・デジタル化を依頼する", href: "/articles/master-guide" },
   "貴重品（宝石・美術品等）をリストアップする": { label: "鑑定・査定を依頼する", href: "/tools/appraisal" },
-  "不動産の権利証・登記簿を確認する": { label: "不動産売却の無料相談をする", href: "/guide" },
-  "預貯金の一覧を作成する": { label: "相続・資産整理の相談をする", href: "/guide" },
-  "遺言書を作成・更新する": { label: "弁護士に遺言書の相談をする", href: "/guide" },
-  "葬儀の希望を書き残す": { label: "葬儀の事前相談をする", href: "/guide" },
-  "お墓について確認・決定する": { label: "お墓・永代供養の相談をする", href: "/guide" },
+  "不動産の権利証・登記簿を確認する": { label: "不動産売却の無料相談をする", href: "/articles/master-guide" },
+  "預貯金の一覧を作成する": { label: "相続・資産整理の相談をする", href: "/articles/master-guide" },
+  "遺言書を作成・更新する": { label: "弁護士に遺言書の相談をする", href: "/articles/master-guide" },
+  "葬儀の希望を書き残す": { label: "葬儀の事前相談をする", href: "/articles/master-guide" },
+  "お墓について確認・決定する": { label: "お墓・永代供養の相談をする", href: "/articles/master-guide" },
 };
 
 /** 各チェック項目の「完了の目安」・ポイント（進捗の精度向上用） */

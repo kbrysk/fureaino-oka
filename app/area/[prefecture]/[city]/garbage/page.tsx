@@ -152,7 +152,7 @@ export default async function AreaGarbagePage({ params }: Props) {
           生前整理チェックリストを見る
         </Link>
         <Link
-          href="/guide"
+          href="/articles/master-guide"
           className="inline-block bg-white/20 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/30 transition"
         >
           無料で見積もりを依頼する

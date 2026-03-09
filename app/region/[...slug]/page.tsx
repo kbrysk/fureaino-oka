@@ -138,7 +138,7 @@ export default async function RegionPage({ params }: Props) {
           複数社の無料見積もりで比較すると、安心して依頼できます。
         </p>
         <Link
-          href="/guide"
+          href="/articles/master-guide"
           className="inline-block bg-accent text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition"
         >
           無料で見積もりを依頼する

@@ -223,7 +223,7 @@ export default function ToolsPageClient() {
         <ul className="grid gap-3 sm:grid-cols-3">
           <li>
             <Link
-              href="/guide"
+              href="/articles/master-guide"
               className="block py-3 px-4 rounded-xl border border-border hover:border-primary/50 hover:bg-primary-light/30 transition font-medium text-foreground/90 text-sm"
             >
               実家じまいの進め方 全手順

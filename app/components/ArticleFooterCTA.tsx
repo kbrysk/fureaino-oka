@@ -71,7 +71,7 @@ export default function ArticleFooterCTA({ slug, category = "" }: ArticleFooterC
         <ul className="flex flex-wrap gap-3">
           <li>
             <Link
-              href="/guide"
+              href="/articles/master-guide"
               className="inline-block px-4 py-2 rounded-lg bg-card border border-border hover:border-primary/40 hover:text-primary transition text-sm font-medium"
             >
               はじめかたガイド
@@ -120,7 +120,7 @@ export default function ArticleFooterCTA({ slug, category = "" }: ArticleFooterC
         </ul>
         <p className="text-xs text-foreground/50 mt-3">
           不用品の見積もり・買取の相談は
-          <Link href="/guide" className="text-primary hover:underline">
+          <Link href="/articles/master-guide" className="text-primary hover:underline">
             はじめかた
           </Link>
           からご案内しています。
