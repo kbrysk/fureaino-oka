@@ -259,6 +259,45 @@ export default async function AreaPage({ params, searchParams }: Props) {
         </h1>
       </div>
 
+      {areaData?.subsidyInfo && (() => {
+        const { maxAmount } = areaData.subsidyInfo;
+        const hasConcreteAmount =
+          /[0-9０-９]|万|円|上限/.test(maxAmount) && maxAmount !== "—" && !/詳細確認中|お問い合わせ/.test(maxAmount);
+        return (
+          <div className="bg-green-50 border-l-4 border-green-600 p-6 my-8 rounded-r-lg shadow-sm">
+            <p className="text-lg font-semibold text-gray-900 mb-2 flex items-center gap-2">
+              <span aria-hidden>💡</span>
+              <span aria-hidden>🏠</span>
+              {hasConcreteAmount ? (
+                <>
+                  【{area.city}限定】最大{maxAmount}の補助金を活用して、実家じまいの負担を軽減しませんか？
+                </>
+              ) : (
+                <>【{area.city}限定】補助金を活用して、実家じまいの負担を軽減しませんか？</>
+              )}
+            </p>
+            <p className="text-sm text-gray-700 mb-4">
+              空き家の放置は固定資産税の増税（最大6倍）のリスクがあります。公的な支援を確認し、賢く整理を進めましょう。
+            </p>
+            {hasConcreteAmount ? (
+              <Link
+                href={`/area/${ids.prefectureId}/${ids.cityId}/subsidy`}
+                className="inline-block bg-green-600 text-white font-medium px-5 py-2.5 rounded-lg hover:bg-green-700 transition"
+              >
+                {area.city}の補助金・申請条件を確認する
+              </Link>
+            ) : (
+              <Link
+                href={`/area/${ids.prefectureId}/${ids.cityId}/subsidy`}
+                className="inline-block bg-green-600 text-white font-medium px-5 py-2.5 rounded-lg hover:bg-green-700 transition"
+              >
+                {area.city}役所の最新補助枠を確認する（窓口案内）
+              </Link>
+            )}
+          </div>
+        );
+      })()}
+
       {areaData && (
         <>
           <div className="my-8 rounded-2xl bg-blue-50/80 p-6 sm:p-8 border border-blue-100 shadow-sm">
