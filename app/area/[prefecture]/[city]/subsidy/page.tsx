@@ -6,7 +6,9 @@ import { getAreaContentsStaticParams } from "../../../../lib/utils/area-contents
 import { translateBureaucraticToPlain } from "../../../../lib/subsidy-translate";
 import { generateFaqSchema } from "../../../../lib/faq/schema";
 import { getCanonicalBase } from "../../../../lib/site-url";
+import { getRegionalStats } from "../../../../lib/utils/regional-stats-loader";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
+import CostSimulator from "../../../../components/CostSimulator";
 import NearbySubsidyLinks from "../../../../components/NearbySubsidyLinks";
 import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
 import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
@@ -202,6 +204,18 @@ export default async function AreaSubsidyPage({ params }: Props) {
             </p>
           </div>
         </div>
+      </section>
+
+      <section id="cost-simulator-section" aria-label="解体・片付け費用シミュレーター">
+        <CostSimulator
+          cityName={cityName}
+          cityId={ids.cityId}
+          prefId={prefecture}
+          regionalStats={getRegionalStats(`${prefecture}-${city}`)}
+          subsidyInfo={subsidyInfo ?? undefined}
+          hasNarrowAccess={areaContent ? /坂|階段/.test(areaContent.empatheticLead ?? "") : false}
+          hasSnowRegion={areaContent ? /豪雪|積雪/.test(areaContent.empatheticLead ?? "") : false}
+        />
       </section>
 
       {/* B. 役所言葉の「翻訳」セクション */}

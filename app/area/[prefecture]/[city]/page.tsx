@@ -27,6 +27,7 @@ import LocalSubsidyFaq from "../../../components/LocalSubsidyFaq";
 import InheritanceRouting from "../../../components/InheritanceRouting";
 import SituationGuide from "../../../components/SituationGuide";
 import JikkaOptimizer from "../../../components/JikkaOptimizer";
+import CostSimulator from "../../../components/CostSimulator";
 import AreaBodyMeta from "../../../components/AreaBodyMeta";
 import OperatorTrustBlock from "../../../components/OperatorTrustBlock";
 import LocalAreaLinks from "../../../components/LocalAreaLinks";
@@ -297,6 +298,20 @@ export default async function AreaPage({ params, searchParams }: Props) {
           </div>
         );
       })()}
+
+      {!showFallback && area && (
+        <section id="cost-simulator-section" aria-label="解体・片付け費用シミュレーター">
+          <CostSimulator
+            cityName={area.city}
+            cityId={ids.cityId}
+            prefId={prefecture}
+            regionalStats={getRegionalStats(`${prefecture}-${city}`)}
+            subsidyInfo={areaData?.subsidyInfo ?? undefined}
+            hasNarrowAccess={areaData ? /坂|階段/.test(areaData.empatheticLead ?? "") : false}
+            hasSnowRegion={areaData ? /豪雪|積雪/.test(areaData.empatheticLead ?? "") : false}
+          />
+        </section>
+      )}
 
       {areaData && (
         <>
