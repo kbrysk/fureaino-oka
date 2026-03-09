@@ -33,6 +33,12 @@ const prefMap: Record<string, string> = {
   kagawa: "香川県",
   kochi: "高知県",
   tokushima: "徳島県",
+  tochigi: "栃木県",
+  gunma: "群馬県",
+  ibaraki: "茨城県",
+  gifu: "岐阜県",
+  nara: "奈良県",
+  wakayama: "和歌山県",
 };
 
 interface LocalAreaLinksProps {
