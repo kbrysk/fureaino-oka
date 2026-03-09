@@ -17,6 +17,22 @@ const prefMap: Record<string, string> = {
   kyoto: "京都府",
   miyagi: "宮城県",
   shizuoka: "静岡県",
+  okayama: "岡山県",
+  kumamoto: "熊本県",
+  kagoshima: "鹿児島県",
+  nagasaki: "長崎県",
+  oita: "大分県",
+  miyazaki: "宮崎県",
+  okinawa: "沖縄県",
+  niigata: "新潟県",
+  ishikawa: "石川県",
+  toyama: "富山県",
+  fukui: "福井県",
+  nagano: "長野県",
+  ehime: "愛媛県",
+  kagawa: "香川県",
+  kochi: "高知県",
+  tokushima: "徳島県",
 };
 
 interface LocalAreaLinksProps {
