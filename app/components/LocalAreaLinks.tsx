@@ -12,6 +12,9 @@ const prefMap: Record<string, string> = {
   saitama: "埼玉県",
   chiba: "千葉県",
   aichi: "愛知県",
+  hyogo: "兵庫県",
+  hokkaido: "北海道",
+  kyoto: "京都府",
 };
 
 interface LocalAreaLinksProps {
