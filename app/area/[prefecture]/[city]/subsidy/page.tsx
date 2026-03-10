@@ -14,6 +14,7 @@ import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
 import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
 import AreaSurveyCredit from "../../../../components/AreaSurveyCredit";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
+import RegionalFaq from "../../../../components/RegionalFaq";
 import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalCard";
 import { pageTitle } from "../../../../lib/site-brand";
 import type { FaqItem } from "../../../../lib/faq/schema";
@@ -264,11 +265,14 @@ export default async function AreaSubsidyPage({ params }: Props) {
         localRiskText={data.mascot?.localRiskText}
       />
 
-      {/* FAQ */}
+      {/* 地域特化FAQ（アコーディオン + FAQPage JSON-LD・単一データソース） */}
+      <RegionalFaq cityName={cityName} />
+
+      {/* その他FAQ（地域JSON・共通補助金FAQ） */}
       {faqItems.length > 0 && (
         <section className="rounded-2xl border border-border bg-card overflow-hidden">
           <div className="px-6 py-4 border-b border-border bg-primary-light/30">
-            <h2 className="font-bold text-primary">{cityName}の補助金 よくある質問</h2>
+            <h2 className="font-bold text-primary">{cityName}の補助金 その他の質問</h2>
           </div>
           <dl className="divide-y divide-border">
             {faqItems.map((item, i) => (

@@ -30,6 +30,9 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# Google Indexing API 認証（機密のためコミットしない）
+/credentials/
+
 # env files (can opt-in for committing if needed)
 .env*
 
