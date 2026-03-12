@@ -5,6 +5,7 @@ import { getAreaContent } from "../../../../lib/getAreaContent";
 import { getAreaContentsStaticParams } from "../../../../lib/utils/area-contents-paths";
 import { translateBureaucraticToPlain } from "../../../../lib/subsidy-translate";
 import { generateFaqSchema } from "../../../../lib/faq/schema";
+import { buildRegionalFaqItems } from "../../../../lib/regional-faq-data";
 import { getCanonicalBase } from "../../../../lib/site-url";
 import { getRegionalStats } from "../../../../lib/utils/regional-stats-loader";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
@@ -120,6 +121,8 @@ export default async function AreaSubsidyPage({ params }: Props) {
     ...commonSubsidyFaqs,
   ];
   const faqSchema = generateFaqSchema(faqItems, { url: pageUrl });
+  const regionalFaqItems = buildRegionalFaqItems(cityName);
+  const regionalFaqSchema = generateFaqSchema(regionalFaqItems, { url: pageUrl });
 
   if (data._isDefault && !areaContent) {
     return (
@@ -171,7 +174,14 @@ export default async function AreaSubsidyPage({ params }: Props) {
 
   return (
     <div className="space-y-8 pb-24">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(regionalFaqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <AreaBreadcrumbs
         prefecture={prefName}
         city={cityName}
