@@ -1,5 +1,6 @@
 import { pageTitle, SITE_NAME_FULL } from "../lib/site-brand";
-import { getCanonicalUrl } from "../lib/site-url";
+import { getCanonicalUrl, getCanonicalBase } from "../lib/site-url";
+import { generateBreadcrumbSchema } from "../lib/schema/breadcrumb";
 import ToolsPageClient from "./ToolsPageClient";
 
 export const metadata = {
@@ -10,5 +11,15 @@ export const metadata = {
 };
 
 export default function ToolsPage() {
-  return <ToolsPageClient />;
+  const base = getCanonicalBase();
+  const breadcrumb = generateBreadcrumbSchema([
+    { name: "ホーム", url: `${base}/` },
+    { name: "無料ツール", url: `${base}/tools` },
+  ]);
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <ToolsPageClient />
+    </>
+  );
 }

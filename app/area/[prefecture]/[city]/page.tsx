@@ -44,6 +44,7 @@ import {
 } from "../../../lib/faq/area-faq-data";
 import { generateFaqSchema } from "../../../lib/faq/schema";
 import { getAreaContent } from "../../../lib/getAreaContent";
+import { generateBreadcrumbSchema } from "../../../lib/schema/breadcrumb";
 
 type SearchParamsRecord = { [key: string]: string | string[] | undefined };
 
@@ -140,9 +141,16 @@ export default async function AreaPage({ params, searchParams }: Props) {
 
   if (showFallback) {
     const bulkySearchUrl = `https://www.google.com/search?q=${encodeURIComponent(data.prefName + " " + data.cityName + " 粗大ゴミ")}`;
+    const breadcrumb = generateBreadcrumbSchema([
+      { name: "ホーム", url: `${base}/` },
+      { name: "地域一覧", url: `${base}/area` },
+      { name: data.prefName, url: `${base}/area/${prefecture}` },
+      { name: data.cityName, url: `${base}/area/${prefecture}/${city}` },
+    ]);
     return (
       <div className="space-y-8">
         <AreaBodyMeta cityName={data.cityName} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
         <BreadcrumbJsonLd itemListElements={breadcrumbItems} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
@@ -230,11 +238,19 @@ export default async function AreaPage({ params, searchParams }: Props) {
     { name: area.city, item: `${base}/area/${prefecture}/${city}` },
   ];
 
+  const breadcrumb = generateBreadcrumbSchema([
+    { name: "ホーム", url: `${base}/` },
+    { name: "地域一覧", url: `${base}/area` },
+    { name: area.prefecture, url: `${base}/area/${prefecture}` },
+    { name: area.city, url: `${base}/area/${prefecture}/${city}` },
+  ]);
+
   const faqs = areaData?.faqs ?? [];
 
   return (
     <div className="space-y-8">
       <AreaBodyMeta cityName={data.cityName} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <BreadcrumbJsonLd itemListElements={richBreadcrumbItems} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />

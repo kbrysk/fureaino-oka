@@ -18,7 +18,10 @@ import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
 import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import { pageTitle } from "../../../../lib/site-brand";
-import { getCanonicalUrl } from "../../../../lib/site-url";
+import { getCanonicalUrl, getCanonicalBase } from "../../../../lib/site-url";
+import { generateBreadcrumbSchema } from "../../../../lib/schema/breadcrumb";
+import { generateFaqSchema } from "../../../../lib/faq/schema";
+import { getGarbageFaq } from "../../../../lib/faq/area-subsidy-garbage-faq";
 
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
@@ -51,9 +54,22 @@ export default async function AreaGarbagePage({ params }: Props) {
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
   const ids = area ? getAreaIds(area.prefecture, area.city)! : { prefectureId: prefecture, cityId: city };
 
+  const base = getCanonicalBase();
+
   if (data._isDefault || !area) {
+    const breadcrumb = generateBreadcrumbSchema([
+      { name: "ホーム", url: `${base}/` },
+      { name: "地域一覧", url: `${base}/area` },
+      { name: data.prefName, url: `${base}/area/${prefecture}` },
+      { name: data.cityName, url: `${base}/area/${prefecture}/${city}` },
+      { name: `${data.cityName}の粗大ゴミ・遺品整理`, url: `${base}/area/${prefecture}/${city}/garbage` },
+    ]);
+    const garbagePageUrl = `${base}/area/${prefecture}/${city}/garbage`;
+    const faqSchema = generateFaqSchema(getGarbageFaq(data.cityName), { url: garbagePageUrl });
     return (
       <div className="space-y-8">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="garbage" />
         <div>
           <h1 className="text-2xl font-bold text-primary">
@@ -85,8 +101,20 @@ export default async function AreaGarbagePage({ params }: Props) {
 
   const cleanupText = area.cleanupPriceNote || `${area.city}では、遺品整理・実家の片付けは、部屋数・荷物量・立地により相場が異なります。1Kで十数万円〜、2LDKで20〜40万円程度、3LDK以上で40万円〜が目安となることが多いです。複数社の無料見積もりで比較することをおすすめします。`;
 
+  const breadcrumb = generateBreadcrumbSchema([
+    { name: "ホーム", url: `${base}/` },
+    { name: "地域一覧", url: `${base}/area` },
+    { name: area.prefecture, url: `${base}/area/${prefecture}` },
+    { name: area.city, url: `${base}/area/${prefecture}/${city}` },
+    { name: `${area.city}の粗大ゴミ・遺品整理`, url: `${base}/area/${prefecture}/${city}/garbage` },
+  ]);
+  const garbagePageUrl = `${base}/area/${prefecture}/${city}/garbage`;
+  const faqSchema = generateFaqSchema(getGarbageFaq(area.city), { url: garbagePageUrl });
+
   return (
     <div className="space-y-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="garbage" />
       <div>
         <h1 className="text-2xl font-bold text-primary">

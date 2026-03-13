@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pageTitle } from "../../lib/site-brand";
-import { getCanonicalUrl } from "../../lib/site-url";
+import { getCanonicalUrl, getCanonicalBase } from "../../lib/site-url";
+import { generateBreadcrumbSchema } from "../../lib/schema/breadcrumb";
 import { generateFaqSchema } from "../../lib/faq/schema";
 import type { FaqItem } from "../../lib/faq/schema";
 import MasterGuideFaqAccordion from "../../components/MasterGuideFaqAccordion";
@@ -40,12 +41,19 @@ const FAQ_ITEMS: FaqItem[] = [
 ];
 
 export default function MasterGuidePage() {
+  const base = getCanonicalBase();
+  const breadcrumb = generateBreadcrumbSchema([
+    { name: "ホーム", url: `${base}/` },
+    { name: "記事", url: `${base}/articles` },
+    { name: "実家じまい・生前整理のはじめかた", url: `${base}/articles/master-guide` },
+  ]);
   const faqSchema = generateFaqSchema(FAQ_ITEMS, {
     url: getCanonicalUrl("/articles/master-guide"),
   });
 
   return (
     <div className="space-y-10 sm:space-y-12 pb-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

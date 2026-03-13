@@ -2,7 +2,8 @@ import Link from "next/link";
 import { getAreaData, getAreaIds } from "../lib/area-data";
 import JapanMapNav from "../components/JapanMapNav";
 import { pageTitle } from "../lib/site-brand";
-import { getCanonicalUrl } from "../lib/site-url";
+import { getCanonicalUrl, getCanonicalBase } from "../lib/site-url";
+import { generateBreadcrumbSchema } from "../lib/schema/breadcrumb";
 
 export const metadata = {
   title: pageTitle("地域別 粗大ゴミ・遺品整理"),
@@ -12,6 +13,12 @@ export const metadata = {
 };
 
 export default function AreaIndexPage() {
+  const base = getCanonicalBase();
+  const breadcrumb = generateBreadcrumbSchema([
+    { name: "ホーム", url: `${base}/` },
+    { name: "地域一覧", url: `${base}/area` },
+  ]);
+
   const areas = getAreaData();
   const byPrefecture = areas.reduce<Record<string, typeof areas>>((acc, row) => {
     if (!acc[row.prefecture]) acc[row.prefecture] = [];
@@ -21,6 +28,10 @@ export default function AreaIndexPage() {
 
   return (
     <div className="space-y-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <div>
         <h1 className="text-2xl font-bold text-primary">地域別 粗大ゴミ・遺品整理</h1>
         <p className="text-foreground/60 mt-1">

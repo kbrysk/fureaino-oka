@@ -4,7 +4,8 @@ import data from "../../lib/data/municipalities.json";
 import PrefectureSummary from "../../components/PrefectureSummary";
 import { getCityPathsByPrefecture } from "../../lib/utils/city-loader";
 import { pageTitle } from "../../lib/site-brand";
-import { getCanonicalUrl } from "../../lib/site-url";
+import { getCanonicalUrl, getCanonicalBase } from "../../lib/site-url";
+import { generateBreadcrumbSchema } from "../../lib/schema/breadcrumb";
 
 type MunicipalityRow = {
   prefId: string;
@@ -60,9 +61,20 @@ export default async function AreaPrefecturePage({ params }: Props) {
   if (!hasData) notFound();
 
   const allCities = getCityPathsByPrefecture(prefIdNorm);
+  const base = getCanonicalBase();
+  const prefectureName = prefName ?? prefId;
+  const breadcrumb = generateBreadcrumbSchema([
+    { name: "ホーム", url: `${base}/` },
+    { name: "地域一覧", url: `${base}/area` },
+    { name: prefectureName, url: `${base}/area/${prefId}` },
+  ]);
 
   return (
     <div className="space-y-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <nav className="text-sm text-foreground/60">
         <ol className="flex flex-wrap items-center gap-1.5 [&_a]:hover:text-primary [&_a]:hover:underline">
           <li><Link href="/">ホーム</Link></li>

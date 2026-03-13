@@ -11,7 +11,8 @@ import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
 import JikkaOptimizer from "../../../../components/JikkaOptimizer";
 import { getRegionalStats } from "../../../../lib/utils/regional-stats-loader";
 import { pageTitle } from "../../../../lib/site-brand";
-import { getCanonicalUrl } from "../../../../lib/site-url";
+import { getCanonicalUrl, getCanonicalBase } from "../../../../lib/site-url";
+import { generateBreadcrumbSchema } from "../../../../lib/schema/breadcrumb";
 
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
@@ -46,9 +47,19 @@ export default async function AreaCostPage({ params }: Props) {
   const regionalStats = getRegionalStats(`${prefecture}-${city}`);
   const cityName = area?.city ?? data.cityName;
   const cityId = ids.cityId;
+  const base = getCanonicalBase();
+  const prefName = data.prefName;
+  const breadcrumb = generateBreadcrumbSchema([
+    { name: "ホーム", url: `${base}/` },
+    { name: "地域一覧", url: `${base}/area` },
+    { name: prefName, url: `${base}/area/${prefecture}` },
+    { name: cityName, url: `${base}/area/${prefecture}/${city}` },
+    { name: `${cityName}の費用相場`, url: `${base}/area/${prefecture}/${city}/cost` },
+  ]);
 
   return (
     <div className="space-y-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="cost" />
       <div>
         <h1 className="text-2xl font-bold text-primary">

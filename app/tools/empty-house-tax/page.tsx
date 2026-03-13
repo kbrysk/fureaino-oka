@@ -1,7 +1,8 @@
 import Link from "next/link";
 import EmptyHouseTaxSimulator from "../../components/EmptyHouseTaxSimulator";
 import { pageTitle } from "../../lib/site-brand";
-import { getCanonicalUrl } from "../../lib/site-url";
+import { getCanonicalUrl, getCanonicalBase } from "../../lib/site-url";
+import { generateBreadcrumbSchema } from "../../lib/schema/breadcrumb";
 
 export const metadata = {
   title: pageTitle("空き家税金シミュレーター"),
@@ -10,8 +11,15 @@ export const metadata = {
 };
 
 export default function EmptyHouseTaxPage() {
+  const base = getCanonicalBase();
+  const breadcrumb = generateBreadcrumbSchema([
+    { name: "ホーム", url: `${base}/` },
+    { name: "無料ツール", url: `${base}/tools` },
+    { name: "空き家税金シミュレーター", url: `${base}/tools/empty-house-tax` },
+  ]);
   return (
     <div className="space-y-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <div>
         <h1 className="text-2xl font-bold text-primary">
           空き家税金シミュレーター

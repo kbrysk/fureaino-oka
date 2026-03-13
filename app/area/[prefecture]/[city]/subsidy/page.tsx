@@ -5,8 +5,10 @@ import { getAreaContent } from "../../../../lib/getAreaContent";
 import { getAreaContentsStaticParams } from "../../../../lib/utils/area-contents-paths";
 import { translateBureaucraticToPlain } from "../../../../lib/subsidy-translate";
 import { generateFaqSchema } from "../../../../lib/faq/schema";
+import { getSubsidyFaq } from "../../../../lib/faq/area-subsidy-garbage-faq";
 import { buildRegionalFaqItems } from "../../../../lib/regional-faq-data";
 import { getCanonicalBase } from "../../../../lib/site-url";
+import { generateBreadcrumbSchema } from "../../../../lib/schema/breadcrumb";
 import { getRegionalStats } from "../../../../lib/utils/regional-stats-loader";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
 import CostSimulator from "../../../../components/CostSimulator";
@@ -101,6 +103,13 @@ export default async function AreaSubsidyPage({ params }: Props) {
 
   const base = getCanonicalBase();
   const pageUrl = `${base}/area/${prefecture}/${city}/subsidy`;
+  const breadcrumb = generateBreadcrumbSchema([
+    { name: "ホーム", url: `${base}/` },
+    { name: "地域一覧", url: `${base}/area` },
+    { name: prefName, url: `${base}/area/${prefecture}` },
+    { name: cityName, url: `${base}/area/${prefecture}/${city}` },
+    { name: `${cityName}の補助金・助成金`, url: `${base}/area/${prefecture}/${city}/subsidy` },
+  ]);
 
   // FAQ: 地域JSONの「解体補助金」関連 + 共通補助金FAQ
   const localFaqs = (areaContent?.faqs ?? []).filter(
@@ -116,17 +125,22 @@ export default async function AreaSubsidyPage({ params }: Props) {
       answer: "はい。補助金で解体費用を抑えつつ、更地にしてから売却すると、実質的な負担が軽くなるケースがあります。まずは無料の一括見積もりで解体費用と、無料査定で土地の価値を確認してみてください。",
     },
   ];
+  const subsidyFaqSet = getSubsidyFaq(cityName);
   const faqItems: FaqItem[] = [
+    ...subsidyFaqSet,
     ...localFaqs.map((f) => ({ question: f.question, answer: f.answer })),
-    ...commonSubsidyFaqs,
+    ...commonSubsidyFaqs.filter((c) => c.question !== "空き家を放置すると固定資産税はどうなりますか？"),
   ];
   const faqSchema = generateFaqSchema(faqItems, { url: pageUrl });
   const regionalFaqItems = buildRegionalFaqItems(cityName);
   const regionalFaqSchema = generateFaqSchema(regionalFaqItems, { url: pageUrl });
 
   if (data._isDefault && !areaContent) {
+    const fallbackFaqSchema = generateFaqSchema(getSubsidyFaq(cityName), { url: pageUrl });
     return (
       <div className="space-y-8">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fallbackFaqSchema) }} />
         <AreaBreadcrumbs
           prefecture={prefName}
           city={cityName}
@@ -174,6 +188,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
 
   return (
     <div className="space-y-8 pb-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(regionalFaqSchema) }}
