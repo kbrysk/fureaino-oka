@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getLayoutBySlug, getLayoutSlugs } from "../../../lib/cost-by-layout";
 import { pageTitle } from "../../../lib/site-brand";
+import { getCanonicalUrl } from "../../../lib/site-url";
 import CostLayoutLineCTA from "../../../components/CostLayoutLineCTA";
 import CostLayoutChecklistCTA from "../../../components/CostLayoutChecklistCTA";
 
@@ -16,10 +17,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const layout = getLayoutBySlug(slug);
-  if (!layout) return { title: pageTitle("間取り別 費用") };
+  if (!layout) return { title: pageTitle("間取り別 費用"), alternates: { canonical: getCanonicalUrl(`/cost/layout/${slug}`) } };
   return {
     title: pageTitle(`${layout.label}の遺品整理費用相場｜トラック何台？安くするコツと作業時間`),
     description: `${layout.label}の遺品整理・実家じまいの費用相場（最安${layout.minYen}万円〜最高${layout.maxYen}万円）。トラックの台数・費用が変わる3つの要因・松竹梅の料金モデル・安くするコツ・作業時間を解説。`,
+    alternates: { canonical: getCanonicalUrl(`/cost/layout/${slug}`) },
   };
 }
 

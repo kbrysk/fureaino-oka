@@ -18,6 +18,7 @@ import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
 import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import { pageTitle } from "../../../../lib/site-brand";
+import { getCanonicalUrl } from "../../../../lib/site-url";
 
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
@@ -39,6 +40,7 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: pageTitle(`${data.cityName}の粗大ゴミ処分・遺品整理の費用と手順`),
     description: `${data.prefName}${data.cityName}の粗大ゴミ申し込み・遺品整理の相談先。無料見積もりで比較。`,
+    alternates: { canonical: getCanonicalUrl(`/area/${prefecture}/${city}/garbage`) },
   };
 }
 

@@ -11,6 +11,7 @@ import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
 import JikkaOptimizer from "../../../../components/JikkaOptimizer";
 import { getRegionalStats } from "../../../../lib/utils/regional-stats-loader";
 import { pageTitle } from "../../../../lib/site-brand";
+import { getCanonicalUrl } from "../../../../lib/site-url";
 
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
@@ -32,6 +33,7 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: pageTitle(`${data.cityName}の実家じまい・解体費用相場シミュレーション`),
     description: `${data.prefName}${data.cityName}の実家じまい・空き家解体の費用相場を間取り・荷物量でシミュレーション。無料診断で資産価値の目安を把握。`,
+    alternates: { canonical: getCanonicalUrl(`/area/${prefecture}/${city}/cost`) },
   };
 }
 

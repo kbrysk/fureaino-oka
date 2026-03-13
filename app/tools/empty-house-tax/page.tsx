@@ -1,10 +1,12 @@
 import Link from "next/link";
 import EmptyHouseTaxSimulator from "../../components/EmptyHouseTaxSimulator";
 import { pageTitle } from "../../lib/site-brand";
+import { getCanonicalUrl } from "../../lib/site-url";
 
 export const metadata = {
   title: pageTitle("空き家税金シミュレーター"),
   description: "空き家の固定資産税・維持費の目安を無料でシミュレーション。",
+  alternates: { canonical: getCanonicalUrl("/tools/empty-house-tax") },
 };
 
 export default function EmptyHouseTaxPage() {

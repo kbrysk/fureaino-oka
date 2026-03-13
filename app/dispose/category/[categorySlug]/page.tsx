@@ -5,6 +5,7 @@ import { getItemsByCategoryId } from "../../../lib/dispose-items";
 import { getDisposalCategoryById } from "../../../../data/disposalItems";
 import { getCategoryDetail } from "../../../../data/disposalCategoryDetails";
 import { pageTitle } from "../../../lib/site-brand";
+import { getCanonicalUrl } from "../../../lib/site-url";
 import SearchBar from "../../../components/dispose/SearchBar";
 
 type Props = { params: Promise<{ categorySlug: string }> };
@@ -16,13 +17,14 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { categorySlug } = await params;
   const category = getCategoryBySlug(categorySlug);
-  if (!category) return { title: pageTitle("捨て方辞典") };
+  if (!category) return { title: pageTitle("捨て方辞典"), alternates: { canonical: getCanonicalUrl(`/dispose/category/${categorySlug}`) } };
   const detail = getCategoryDetail(category.id);
   const title = detail?.title ?? category.name + "一覧";
   const description = detail?.lead ?? `${category.description} ${category.name}の品目一覧。各品目の捨て方・費用相場・買取・供養を解説。`;
   return {
     title: pageTitle(title),
     description,
+    alternates: { canonical: getCanonicalUrl(`/dispose/category/${categorySlug}`) },
   };
 }
 

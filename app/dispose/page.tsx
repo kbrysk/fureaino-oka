@@ -3,12 +3,14 @@ import { DISPOSE_CATEGORIES } from "../lib/dispose-categories";
 import { getItemsByCategoryId, DISPOSE_ITEMS } from "../lib/dispose-items";
 import { getDisposalCategoryById } from "../../data/disposalItems";
 import { pageTitle } from "../lib/site-brand";
+import { getCanonicalUrl } from "../lib/site-url";
 import SearchBar from "../components/dispose/SearchBar";
 
 export const metadata = {
   title: pageTitle("捨て方辞典｜品目別 処分方法・供養・買取相場"),
   description:
     "仏壇・金庫・布団・タンス・着物など、品目別の捨て方・費用相場・買取・供養を解説。供養・大型家具・家電・処理困難物・趣味・日用品のカテゴリ別一覧。",
+  alternates: { canonical: getCanonicalUrl("/dispose") },
 };
 
 export default function DisposeIndexPage() {

@@ -2,11 +2,13 @@ import Link from "next/link";
 import { COST_BREAKDOWN_DATA } from "../../data/costBreakdown";
 import { LAYOUT_COST_LIST } from "../lib/cost-by-layout";
 import { pageTitle } from "../lib/site-brand";
+import { getCanonicalUrl } from "../lib/site-url";
 
 export const metadata = {
   title: pageTitle("間取り別 遺品整理・実家じまい 費用の目安"),
   description:
     "1K〜5LDK以上の間取り別に、遺品整理・実家じまいの費用の最安値・平均・最高値と作業時間の目安を掲載。戸建て・マンション別の相場と安く済ませるコツ。",
+  alternates: { canonical: getCanonicalUrl("/cost") },
 };
 
 export default function CostIndexPage() {

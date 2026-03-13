@@ -7,6 +7,7 @@ import {
 } from "../../lib/regions";
 import { getAreaIds } from "../../lib/area-data";
 import { pageTitle } from "../../lib/site-brand";
+import { getCanonicalUrl } from "../../lib/site-url";
 
 interface Props {
   params: Promise<{ slug: string[] }>;
@@ -19,10 +20,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const region = getRegionBySlug(slug);
-  if (!region) return { title: pageTitle("粗大ゴミ・遺品整理") };
+  const canonicalPath = `/region/${slug.join("/")}`;
+  if (!region) return { title: pageTitle("粗大ゴミ・遺品整理"), alternates: { canonical: getCanonicalUrl(canonicalPath) } };
   return {
     title: pageTitle(`${region.city_name}で安く遺品整理・粗大ゴミを処分する裏技`),
     description: `${region.city_name}の粗大ゴミ・遺品整理のやり方比較。行政回収と不用品回収業者の違いと、優良業者相場の見方。`,
+    alternates: { canonical: getCanonicalUrl(canonicalPath) },
   };
 }
 

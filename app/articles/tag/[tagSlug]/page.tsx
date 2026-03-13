@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { getBlogList, getTags } from "../../../lib/microcms";
 import type { MicroCmsBlogPost } from "../../../lib/microcms-types";
 import { pageTitle } from "../../../lib/site-brand";
+import { getCanonicalUrl } from "../../../lib/site-url";
 import ArticleCardMicroCms from "../../../components/articles/ArticleCardMicroCms";
 import AdSlotInfeed from "../../../components/articles/AdSlotInfeed";
 
@@ -40,10 +41,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { tagSlug } = await params;
   const tags = await getTags();
   const tag = tags.find((t) => t.id === tagSlug);
-  if (!tag) return { title: pageTitle("記事一覧") };
+  if (!tag) return { title: pageTitle("記事一覧"), alternates: { canonical: getCanonicalUrl(`/articles/tag/${tagSlug}`) } };
   return {
     title: pageTitle(`${tag.name}｜記事一覧`),
     description: `${tag.name}に関する記事一覧。生前整理・実家じまいのヒントをご紹介します。`,
+    alternates: { canonical: getCanonicalUrl(`/articles/tag/${tagSlug}`) },
   };
 }
 

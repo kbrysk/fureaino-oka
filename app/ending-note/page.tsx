@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { pageTitle } from "../lib/site-brand";
+import { getCanonicalUrl } from "../lib/site-url";
 import EndingNoteApp from "../components/ending-note/EndingNoteApp";
 
 export const metadata: Metadata = {
   title: pageTitle("エンディングノート"),
   description:
     "エンディングノートの書き方。想い・連絡先・医療の希望・葬儀の希望・重要書類の保管場所をブラウザにだけ保存。外部送信なしで安心して記入できます。",
+  alternates: { canonical: getCanonicalUrl("/ending-note") },
 };
 
 /**

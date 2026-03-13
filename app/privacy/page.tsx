@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pageTitle, SITE_NAME_FULL } from "../lib/site-brand";
+import { getCanonicalUrl } from "../lib/site-url";
 
 export const metadata: Metadata = {
   title: pageTitle("プライバシーポリシー"),
   description: `${SITE_NAME_FULL}のプライバシーポリシーです。個人情報の収集・利用・第三者提供についてご説明します。`,
+  alternates: { canonical: getCanonicalUrl("/privacy") },
 };
 
 export default function PrivacyPage() {

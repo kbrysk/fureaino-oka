@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pageTitle, SITE_NAME_LOGO } from "../lib/site-brand";
+import { getCanonicalUrl } from "../lib/site-url";
 
 export const metadata: Metadata = {
   title: pageTitle("生前整理支援センター ふれあいの丘とは"),
   description: `「ふれあいの丘」は、エンディングノート・生前整理・遺品整理・実家じまい・空き家相談まで、あなたの段階に合わせた無料ツールと専門家紹介をご提供するサイトです。`,
+  alternates: { canonical: getCanonicalUrl("/about-site") },
 };
 
 export default function AboutSitePage() {

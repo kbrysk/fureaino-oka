@@ -34,7 +34,7 @@ import OperatorTrustBlock from "../../../components/OperatorTrustBlock";
 import LocalAreaLinks from "../../../components/LocalAreaLinks";
 import AreaSurveyCredit from "../../../components/AreaSurveyCredit";
 import { getRegionalStats } from "../../../lib/utils/regional-stats-loader";
-import { getCanonicalBase } from "../../../lib/site-url";
+import { getCanonicalBase, getCanonicalUrl } from "../../../lib/site-url";
 import { pageTitle } from "../../../lib/site-brand";
 import {
   buildLocalSubsidyFaqItems,
@@ -64,16 +64,19 @@ export async function generateMetadata({ params }: Props) {
   const area = getAreaById(prefecture, city);
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
-  if (!area) return { title: pageTitle("地域情報") };
+  const canonical = getCanonicalUrl(`/area/${prefecture}/${city}`);
+  if (!area) return { title: pageTitle("地域情報"), alternates: { canonical } };
   if (data._isDefault) {
     return {
       title: pageTitle(`${data.cityName}の実家じまい・空き家処分｜実家の片付け・粗大ゴミ費用とルール`),
       description: `${data.cityName}で実家じまいや空き家整理にお悩みの方へ。シニアが自力で運べない粗大ゴミの処分ルールや、実家の片付け費用、遺品整理のポイントをわかりやすく解説します。`,
+      alternates: { canonical },
     };
   }
   return {
     title: pageTitle(`${data.cityName}の実家じまい・空き家処分｜実家の片付け・粗大ゴミ費用とルール`),
     description: `${data.cityName}で実家じまいや空き家整理にお悩みの方へ。シニアが自力で運べない粗大ゴミの処分ルールや、実家の片付け費用、遺品整理のポイントをわかりやすく解説します。`,
+    alternates: { canonical },
   };
 }
 

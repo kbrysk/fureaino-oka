@@ -4,11 +4,13 @@ import path from "path";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { pageTitle } from "../../lib/site-brand";
+import { getCanonicalUrl } from "../../lib/site-url";
 import { jikkaJimaiGuideTitle, jikkaJimaiGuideSubtitle } from "../../../content/guidebook/jikka-jimai";
 
 export const metadata: Metadata = {
   title: pageTitle(jikkaJimaiGuideTitle),
   description: `${jikkaJimaiGuideSubtitle}。チェック項目・実行フロー・注意点を網羅。PDFとして保存できます。`,
+  alternates: { canonical: getCanonicalUrl("/guidebook/jikka-jimai") },
 };
 
 function getGuideContent(): string {

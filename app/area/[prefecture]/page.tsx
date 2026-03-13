@@ -4,6 +4,7 @@ import data from "../../lib/data/municipalities.json";
 import PrefectureSummary from "../../components/PrefectureSummary";
 import { getCityPathsByPrefecture } from "../../lib/utils/city-loader";
 import { pageTitle } from "../../lib/site-brand";
+import { getCanonicalUrl } from "../../lib/site-url";
 
 type MunicipalityRow = {
   prefId: string;
@@ -38,10 +39,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { prefecture } = await params;
   const prefName = getPrefectureName(prefecture);
-  if (!prefName) return { title: pageTitle("地域別 粗大ゴミ・遺品整理") };
+  if (!prefName) return { title: pageTitle("地域別 粗大ゴミ・遺品整理"), alternates: { canonical: getCanonicalUrl(`/area/${prefecture}`) } };
   return {
     title: pageTitle(`${prefName}の空き家補助金・実家整理の総合ガイド（2026年最新）`),
     description: `${prefName}の市区町村別・空き家解体補助金・粗大ゴミ申し込み・遺品整理相場の案内。補助金が手厚い自治体ピックアップと不用品処分の公式リンク。`,
+    alternates: { canonical: getCanonicalUrl(`/area/${prefecture}`) },
   };
 }
 

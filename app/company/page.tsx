@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { pageTitle, SITE_NAME_FULL } from "../lib/site-brand";
 import { siteName, organization } from "../lib/constants/site-metadata";
+import { getCanonicalUrl } from "../lib/site-url";
 
 export const metadata: Metadata = {
   title: pageTitle("会社概要・運営者情報"),
   description: `${SITE_NAME_FULL}の運営者情報と会社概要。想い・ストーリーと、運営法人・お問い合わせ先をご案内します。`,
+  alternates: { canonical: getCanonicalUrl("/company") },
 };
 
 export default function CompanyPage() {

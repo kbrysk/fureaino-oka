@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pageTitle, SITE_NAME_FULL } from "../lib/site-brand";
+import { getCanonicalUrl } from "../lib/site-url";
 
 export const metadata: Metadata = {
   title: pageTitle("利用規約"),
   description: `${SITE_NAME_FULL}の利用規約です。サービスの利用条件、禁止行為、免責事項をご確認ください。`,
+  alternates: { canonical: getCanonicalUrl("/terms") },
 };
 
 export default function TermsPage() {

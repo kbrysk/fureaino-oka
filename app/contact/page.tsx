@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pageTitle, SITE_NAME_FULL } from "../lib/site-brand";
+import { getCanonicalUrl } from "../lib/site-url";
 import ContactThanksLineCTA from "../components/ContactThanksLineCTA";
 
 export const metadata: Metadata = {
   title: pageTitle("お問い合わせ"),
   description: `${SITE_NAME_FULL}へのお問い合わせはこちら。株式会社Kogeraが運営しています。`,
+  alternates: { canonical: getCanonicalUrl("/contact") },
 };
 
 type Props = { searchParams: Promise<{ sent?: string }> };

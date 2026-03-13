@@ -1,7 +1,7 @@
 import { AREA_ID_MAP } from "@/app/lib/area-id-map.generated";
 import { getAllRegionalStats } from "@/app/lib/utils/regional-stats-loader";
 import OptimizerToolClient from "./OptimizerToolClient";
-import { getCanonicalBase } from "@/app/lib/site-url";
+import { getCanonicalBase, getCanonicalUrl } from "@/app/lib/site-url";
 import { pageTitle } from "@/app/lib/site-brand";
 
 type SearchParamsRecord = { [key: string]: string | string[] | undefined };
@@ -33,6 +33,7 @@ export const metadata = {
   title: pageTitle("実家じまい・資産防衛シミュレーター（30秒診断）"),
   description:
     "都道府県・市区町村を選んで、実家を放置した場合の年間損失額と10年後の消失資産を試算。家族会議用レポートで共有可能。",
+  alternates: { canonical: getCanonicalUrl("/tool/optimizer") },
   openGraph: {
     title: pageTitle("実家じまい・資産防衛シミュレーター（30秒診断）"),
     description:

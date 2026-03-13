@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getBlogList, getCategories } from "../../../lib/microcms";
 import type { MicroCmsBlogPost } from "../../../lib/microcms-types";
 import { pageTitle } from "../../../lib/site-brand";
+import { getCanonicalUrl } from "../../../lib/site-url";
 import ArticleCardMicroCms from "../../../components/articles/ArticleCardMicroCms";
 import AdSlotInfeed from "../../../components/articles/AdSlotInfeed";
 
@@ -39,10 +40,11 @@ export async function generateMetadata({ params }: Props) {
   const { categorySlug } = await params;
   const categories = await getCategories();
   const category = categories.find((c) => c.id === categorySlug);
-  if (!category) return { title: pageTitle("記事一覧") };
+  if (!category) return { title: pageTitle("記事一覧"), alternates: { canonical: getCanonicalUrl(`/articles/category/${categorySlug}`) } };
   return {
     title: pageTitle(`${category.name}｜記事一覧`),
     description: `${category.name}の記事一覧。生前整理・実家じまいに関するコラムです。`,
+    alternates: { canonical: getCanonicalUrl(`/articles/category/${categorySlug}`) },
   };
 }
 

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getBlogList, getCategories, getTags } from "../lib/microcms";
 import type { MicroCmsBlogPost } from "../lib/microcms-types";
 import { pageTitle } from "../lib/site-brand";
+import { getCanonicalUrl } from "../lib/site-url";
 import ArticleCardMicroCms from "../components/articles/ArticleCardMicroCms";
 import AdSlotInfeed from "../components/articles/AdSlotInfeed";
 
@@ -9,6 +10,7 @@ export const metadata = {
   title: pageTitle("記事一覧"),
   description:
     "生前整理・実家の片付け・終活に関する記事。進め方、処分、資産、デジタル遺品まで。",
+  alternates: { canonical: getCanonicalUrl("/articles") },
 };
 
 const INFEED_AD_POSITIONS = [3, 7];

@@ -11,7 +11,7 @@ import { AreaCtaProvider } from "./components/AreaCtaContext";
 import GlobalStickyCTA from "./components/GlobalStickyCTA";
 import EeatJsonLd from "./components/json-ld/EeatJsonLd";
 import { SITE_TITLE_TOP, SITE_NAME_LOGO, SITE_NAME_SHORT } from "./lib/site-brand";
-import { getBaseUrl, getCanonicalBase, getCanonicalUrl } from "./lib/site-url";
+import { getBaseUrl, getCanonicalBase } from "./lib/site-url";
 import { organization } from "./lib/constants/site-metadata";
 
 /** Google AdSense 審査用パブリッシャーID（next/third-parties に GoogleAdSense はないため next/script で同等の読み込み） */
@@ -51,9 +51,6 @@ export const metadata: Metadata = {
   icons: {
     icon: FAVICON_PATH,
     apple: APPLE_TOUCH_ICON_PATH,
-  },
-  alternates: {
-    canonical: getCanonicalUrl("/"),
   },
   openGraph: {
     type: "website",

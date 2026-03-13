@@ -2,11 +2,13 @@ import Link from "next/link";
 import { getAreaData, getAreaIds } from "../lib/area-data";
 import JapanMapNav from "../components/JapanMapNav";
 import { pageTitle } from "../lib/site-brand";
+import { getCanonicalUrl } from "../lib/site-url";
 
 export const metadata = {
   title: pageTitle("地域別 粗大ゴミ・遺品整理"),
   description:
     "全国の市区町村別に粗大ゴミ申し込み・補助金・遺品整理相場を掲載。お住まいの地域を選んでご確認ください。",
+  alternates: { canonical: getCanonicalUrl("/area") },
 };
 
 export default function AreaIndexPage() {

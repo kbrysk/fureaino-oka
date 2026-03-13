@@ -1,6 +1,11 @@
 import Link from "next/link";
 import HeroSection from "./components/home/HeroSection";
 import HomeContentClient from "./components/home/HomeContentClient";
+import { getCanonicalUrl } from "./lib/site-url";
+
+export const metadata = {
+  alternates: { canonical: getCanonicalUrl("/") },
+};
 
 export default function Home() {
   return (

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAreaById, getAreaIdSlugs, getAreaIds } from "../../../lib/area-data";
 import EmptyHouseTaxSimulator from "../../../components/EmptyHouseTaxSimulator";
 import { pageTitle } from "../../../lib/site-brand";
+import { getCanonicalUrl } from "../../../lib/site-url";
 
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
@@ -18,10 +19,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { prefecture, city } = await params;
   const area = getAreaById(prefecture, city);
-  if (!area) return { title: pageTitle("空き家税金シミュレーション") };
+  if (!area) return { title: pageTitle("空き家税金シミュレーション"), alternates: { canonical: getCanonicalUrl(`/tax-simulator/${prefecture}/${city}`) } };
   return {
     title: pageTitle(`${area.city}の空き家税金シミュレーション | 固定資産税はいくら?`),
     description: `${area.prefecture}${area.city}の空き家・固定資産税・維持費の目安を無料でシミュレーション。地域別の維持費目安がわかります。`,
+    alternates: { canonical: getCanonicalUrl(`/tax-simulator/${prefecture}/${city}`) },
   };
 }
 

@@ -4,6 +4,7 @@ import { getDisposeItemBySlug, getDisposeSlugs } from "../../lib/dispose-items";
 import { getCategoryById } from "../../lib/dispose-categories";
 import { getBuybackExamples } from "../../lib/dispose-buyback-examples";
 import { pageTitle } from "../../lib/site-brand";
+import { getCanonicalUrl } from "../../lib/site-url";
 import DisposeItemLineCTA from "../../components/DisposeItemLineCTA";
 import DisposeToCostCrossLink from "../../components/DisposeToCostCrossLink";
 import { isSubsidyBlockVisibleForCategory } from "../../lib/dispose/subsidy-visibility";
@@ -25,10 +26,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const item = getDisposeItemBySlug(slug);
-  if (!item) return { title: pageTitle("捨て方辞典") };
+  if (!item) return { title: pageTitle("捨て方辞典"), alternates: { canonical: getCanonicalUrl(`/dispose/${slug}`) } };
   return {
     title: pageTitle(`${item.name}の捨て方決定版｜費用相場・買取・供養まで解説`),
     description: `${item.name}は自治体で捨てられる？結論と処分方法3選（自治体・買取・業者）、費用の目安、買取の可能性、供養のしかたを解説。ふれあいの丘のアドバイス付き。`,
+    alternates: { canonical: getCanonicalUrl(`/dispose/${slug}`) },
   };
 }
 

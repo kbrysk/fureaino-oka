@@ -16,6 +16,7 @@ import LocalConsultationCard from "../../../../components/LocalConsultationCard"
 import NearbySubsidyLinks from "../../../../components/NearbySubsidyLinks";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import { pageTitle } from "../../../../lib/site-brand";
+import { getCanonicalUrl } from "../../../../lib/site-url";
 
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
@@ -33,16 +34,19 @@ export async function generateMetadata({ params }: Props) {
   const area = getAreaById(prefecture, city);
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
-  if (!area) return { title: pageTitle("遺品整理・片付け相場") };
+  if (!area) return { title: pageTitle("遺品整理・片付け相場"), alternates: { canonical: getCanonicalUrl(`/area/${prefecture}/${city}/cleanup`) } };
+  const canonical = getCanonicalUrl(`/area/${prefecture}/${city}/cleanup`);
   if (data._isDefault) {
     return {
       title: pageTitle(`${data.cityName}の空き家補助金・実家整理ガイド【2026年最新版】`),
       description: `${data.cityName}で空き家整理や売却を検討中の方へ。自治体の窓口情報や、相続時に役立つ3,000万円控除の特例、おすすめの査定サービスをまとめています。`,
+      alternates: { canonical },
     };
   }
   return {
     title: pageTitle(`${data.cityName}（${data.prefName}）遺品整理 相場・実家 片付け 業者 おすすめ`),
     description: `${data.prefName}${data.cityName}の遺品整理・実家の片付けの相場（1K〜4LDK）と業者選びのポイント。`,
+    alternates: { canonical },
   };
 }
 
