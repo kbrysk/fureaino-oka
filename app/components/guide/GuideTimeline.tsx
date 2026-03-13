@@ -1,5 +1,8 @@
 import Link from "next/link";
 import FukuroSpeech from "./FukuroSpeech";
+import { CtaButton } from "@/app/components/ui/CtaButton";
+// U1: CTAボタン色統一（赤・オレンジ→グリーン）2026-03
+// U8: フクロウコメント トーン統一 2026-03
 
 interface GuideStep {
   id: string;
@@ -20,7 +23,7 @@ const STEPS: GuideStep[] = [
     linkHref: "/senryu",
     linkLabel: "👉 家族で笑える『実家じまい川柳』を見る",
     fukuroMessage:
-      "重い話題こそ、ユーモアが大事だホゥ！川柳をLINEで家族に送って、会話の糸口にするのがおすすめだよ。",
+      "重い話題は、川柳をLINEで送ると話しやすくなるよ。",
   },
   {
     id: "step-2",
@@ -30,7 +33,7 @@ const STEPS: GuideStep[] = [
     linkHref: "/assets",
     linkLabel: "👉 『資産・持ち物』ツールに登録する（無料）",
     fukuroMessage:
-      "『資産』って難しく聞こえるけど、最初は『通帳の場所』をメモするだけで十分だホゥ！金額は空欄でもOK！",
+      "最初は通帳の場所をメモするだけで十分だよ。",
   },
   {
     id: "step-3",
@@ -40,7 +43,7 @@ const STEPS: GuideStep[] = [
     linkHref: "/checklist",
     linkLabel: "👉 『チェックリスト』を開いてLINEで家族に共有する",
     fukuroMessage:
-      "『これ、お兄ちゃんにお願い！』って担当を振り分ける機能があるから、絶対に使ってみてほしいホゥ！",
+      "担当を振り分ける機能があるから、LINEで家族に共有してみて。",
   },
   {
     id: "step-4",
@@ -50,7 +53,7 @@ const STEPS: GuideStep[] = [
     linkHref: "/area",
     linkLabel: "👉 お住まいの地域の『粗大ゴミ・補助金情報』を検索する",
     fukuroMessage:
-      "補助金は『知っている人だけが得をする』制度だホゥ。損しないように必ず自分の自治体をチェックするんだヨ！",
+      "補助金は自治体ごとに違うから、お住まいの窓口を確認してみてね。",
   },
   {
     id: "step-5",
@@ -61,7 +64,7 @@ const STEPS: GuideStep[] = [
     linkLabel: "👉 【完全無料】AIで実家の価値を一括査定する",
     linkVariant: "affiliate",
     fukuroMessage:
-      "『まだ売らないから』と後回しにするのが一番危険だホゥ。価値を知るだけで、心の余裕が全然違うヨ！",
+      "価値を知っておくだけで、気持ちに余裕が出るよ。",
   },
 ];
 
@@ -90,16 +93,18 @@ export default function GuideTimeline() {
               </h2>
               <p className="text-foreground/80 leading-relaxed text-sm sm:text-base mb-4">{step.description}</p>
               <div className="mb-4">
-                <Link
-                  href={step.linkHref}
-                  className={
-                    step.linkVariant === "affiliate"
-                      ? "inline-block px-4 py-2.5 rounded-lg text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 transition-colors"
-                      : "inline-block px-4 py-2.5 rounded-lg text-sm font-medium text-primary bg-primary-light/50 hover:bg-primary-light border border-primary/20 transition-colors"
-                  }
-                >
-                  {step.linkLabel}
-                </Link>
+                {step.linkVariant === "affiliate" ? (
+                  <CtaButton variant="primary" href={step.linkHref}>
+                    {step.linkLabel}
+                  </CtaButton>
+                ) : (
+                  <Link
+                    href={step.linkHref}
+                    className="inline-block px-4 py-2.5 rounded-lg text-sm font-medium text-primary bg-primary-light/50 hover:bg-primary-light border border-primary/20 transition-colors"
+                  >
+                    {step.linkLabel}
+                  </Link>
+                )}
               </div>
               <FukuroSpeech message={step.fukuroMessage} owlSize={40} className="mt-3" />
             </section>

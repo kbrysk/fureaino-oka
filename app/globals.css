@@ -24,11 +24,17 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* U2: 本文フォント16px統一 2026-03 */
 body {
+  font-size: 16px;
   background: var(--background);
   color: var(--foreground);
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Arial, sans-serif;
   overflow-x: hidden;
+}
+
+p, li, dd, td, th {
+  font-size: inherit;
 }
 
 /* ヒーロー背景：人物を左端に（10%）、右半分を光の空間に */
@@ -263,12 +269,26 @@ body {
 }
 
 /* 印刷時：ナビ・フッターを非表示（PDF保存しやすくする） */
+/* U4: 診断結果 印刷スタイル 2026-03 */
 @media print {
-  .no-print {
+  .no-print,
+  nav,
+  footer,
+  [data-no-print] {
     display: none !important;
   }
   main {
     padding-bottom: 0 !important;
+  }
+  body {
+    font-size: 12pt;
+    color: #000;
+  }
+  .print-result {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 16px;
   }
 }
 

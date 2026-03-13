@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { baseUrl } from "../../lib/constants/site-metadata";
+import { CtaButton } from "../ui/CtaButton";
+// U1: CTAボタン色統一（赤・オレンジ→グリーン）2026-03
 import { useEndingNote } from "../../hooks/useEndingNote";
 import ProgressBar from "./ProgressBar";
 import { EndingNote, FUNERAL_TYPE_OPTIONS } from "../../lib/types";
@@ -403,9 +405,9 @@ export default function EndingNoteApp() {
         <div className="rounded-2xl border-2 border-red-500 bg-red-50 p-4 text-red-900 text-sm">
           <p className="font-bold">相続税が発生する可能性があります。</p>
           <p className="mt-1">資産総額（推計）が基礎控除を超えています。対策は早めに。</p>
-          <Link href="/articles/master-guide?source=inheritance_tax_alert" className="mt-3 inline-block bg-red-600 text-white px-4 py-2 rounded-lg font-medium text-sm hover:opacity-90">
+          <CtaButton variant="primary" href="/articles/master-guide?source=inheritance_tax_alert" className="mt-3">
             節税シミュレーションへ
-          </Link>
+          </CtaButton>
         </div>
       )}
 

@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { RegionalCTASelector } from "../../components/RegionalCTASelector";
+import { PrintResultButton } from "../../components/ui/PrintResultButton";
+import { DiagnosisProgress } from "../../components/ui/DiagnosisProgress";
 import {
   type InheritanceInputPattern,
   calculateInheritanceShares,
@@ -81,11 +83,8 @@ export default function InheritanceShareClient({ prefectures }: { prefectures: P
 
       {!done ? (
         <div className="bg-card rounded-2xl border border-border p-6 space-y-6">
-          <p className="text-sm text-foreground/50">{step} / {maxStep}</p>
-          <p className="text-xs text-foreground/40">※ ご自身（または相続分を知りたい方）の家族構成を入力しています</p>
-          <div className="w-full bg-border rounded-full h-2">
-            <div className="bg-primary h-2 rounded-full transition-all" style={{ width: `${(step / maxStep) * 100}%` }} />
-          </div>
+          <DiagnosisProgress current={step} total={maxStep} />
+          <p className="text-xs text-foreground/40 -mt-4">※ ご自身（または相続分を知りたい方）の家族構成を入力しています</p>
 
           {step === 1 && (
             <div>
@@ -207,7 +206,7 @@ export default function InheritanceShareClient({ prefectures }: { prefectures: P
               これは<strong>ご自身（入力した方）が亡くなった場合</strong>の法定相続分の割合です。相続人となる方（配偶者・子・直系尊属・兄弟姉妹）が、それぞれ遺産の何割を相続するかの民法上の目安です。実際の遺産分割では遺言や話し合いで変わる場合があります。
             </p>
           </div>
-          <div className="bg-card rounded-2xl border border-border p-6">
+          <div className="bg-card rounded-2xl border border-border p-6 print-result">
             <h2 className="font-bold text-lg mb-4">法定相続分（割合）</h2>
             <div className="h-64 md:h-80 min-h-[256px]">
               <InheritanceShareChart chartData={chartData} />
@@ -246,6 +245,10 @@ export default function InheritanceShareClient({ prefectures }: { prefectures: P
               </Link>
             </div>
           )}
+
+          <div className="flex flex-col sm:flex-row gap-3 mt-6 no-print">
+            <PrintResultButton toolName="法定相続分シミュレーター" />
+          </div>
 
           <RegionalCTASelector
             targetPage="cost"

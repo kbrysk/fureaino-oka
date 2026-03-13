@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { getAreaData, getAreaIds } from "../lib/area-data";
+import { PREFECTURE_ID_TO_NAME } from "../lib/prefecture-ids";
 import JapanMapNav from "../components/JapanMapNav";
+import { PrefectureSelector } from "../components/ui/PrefectureSelector";
 import { pageTitle } from "../lib/site-brand";
 import { getCanonicalUrl, getCanonicalBase } from "../lib/site-url";
 import { generateBreadcrumbSchema } from "../lib/schema/breadcrumb";
@@ -26,6 +28,8 @@ export default function AreaIndexPage() {
     return acc;
   }, {});
 
+  const prefectures = Object.entries(PREFECTURE_ID_TO_NAME).map(([id, name]) => ({ id, name }));
+
   return (
     <div className="space-y-8">
       <script
@@ -39,9 +43,12 @@ export default function AreaIndexPage() {
         </p>
       </div>
 
+      <PrefectureSelector prefectures={prefectures} placeholder="都道府県を選んでください" targetPath="area" />
+
       <JapanMapNav />
 
-      <div className="space-y-6">
+      <div className="mt-8 pt-8 border-t border-gray-200 space-y-6">
+        <p className="text-sm text-gray-500 mb-4">または都道府県一覧から選ぶ</p>
         {Object.entries(byPrefecture).map(([prefecture, rows]) => {
           const firstIds = rows[0] ? getAreaIds(rows[0].prefecture, rows[0].city) : null;
           const prefId = firstIds?.prefectureId;

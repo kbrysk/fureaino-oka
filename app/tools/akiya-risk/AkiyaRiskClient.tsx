@@ -11,9 +11,12 @@ import {
 } from "../../lib/akiya-risk-diagnosis";
 import DiagnosisAnimeIllustration from "../../components/DiagnosisAnimeIllustration";
 import OwlCharacter from "../../components/OwlCharacter";
+import { PageLead } from "../../components/PageLead";
+import { DiagnosisProgress } from "../../components/ui/DiagnosisProgress";
 import DiagnosisResultLineCTA from "../../components/DiagnosisResultLineCTA";
 import { RegionalCTASelector } from "../../components/RegionalCTASelector";
-import { LINE_ADD_URL } from "../../lib/site-brand";
+import { CtaButton } from "../../components/ui/CtaButton";
+import { PrintResultButton } from "../../components/ui/PrintResultButton";
 
 const RANK_STYLES: Record<AkiyaRiskRank, { bg: string; text: string; border: string }> = {
   S: { bg: "bg-red-100", text: "text-red-800", border: "border-red-300" },
@@ -30,7 +33,6 @@ export default function AkiyaRiskClient({ prefectures }: { prefectures: Prefectu
   const [answers, setAnswers] = useState<number[]>([]);
   const [done, setDone] = useState(false);
   const [result, setResult] = useState<ReturnType<typeof getAkiyaRiskResult> | null>(null);
-  const [unlocked, setUnlocked] = useState(false);
 
   const totalQuestions = AKIYA_RISK_QUESTIONS.length;
   const isLastStep = step === totalQuestions - 1;
@@ -53,86 +55,59 @@ export default function AkiyaRiskClient({ prefectures }: { prefectures: Prefectu
     const style = RANK_STYLES[result.rank];
 
     return (
-      <div className="space-y-8">
+      <div className="space-y-10">
         <div>
           <h1 className="text-2xl font-bold text-primary">空き家リスク診断 結果</h1>
           <p className="text-foreground/60 mt-1">あなたの実家の危険度は…</p>
         </div>
 
-        <div className="relative">
-          <div
-            className={`rounded-2xl border-2 p-6 transition-all ${style.bg} ${style.text} ${style.border} ${!unlocked ? "select-none blur-md pointer-events-none" : ""}`}
-          >
-            <p className="text-sm font-medium opacity-80">診断結果</p>
-            <p className="text-xl font-bold mt-1">リスク{result.rank}ランク</p>
-            <h2 className="text-lg font-bold mt-4">{result.title}</h2>
-            <p className="mt-3 text-sm leading-relaxed opacity-90">{result.message}</p>
-          </div>
+        {/* U4: 結果をブラウザで常に表示（LINE登録不要） */}
+        <div className={`rounded-2xl border-2 p-6 transition-all print-result ${style.bg} ${style.text} ${style.border}`}>
+          <p className="text-sm font-medium opacity-80">診断結果</p>
+          <p className="text-xl font-bold mt-1">リスク{result.rank}ランク</p>
+          <h2 className="text-lg font-bold mt-4">{result.title}</h2>
+          <p className="mt-3 text-sm leading-relaxed opacity-90">{result.message}</p>
+        </div>
 
-          {!unlocked && (
-            <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-background/80">
-              <div className="bg-card border-2 border-primary rounded-2xl p-6 max-w-md w-full mx-4 shadow-xl text-center space-y-4">
-                <p className="font-bold text-primary text-lg">
-                  詳細な診断レポートと対策PDFをLINEで受け取る（自分用に保存）
-                </p>
-                <a
-                  href={LINE_ADD_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setUnlocked(true)}
-                  className="flex items-center justify-center gap-2 w-full bg-[#06C755] text-white px-6 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition"
-                >
-                  <span className="text-2xl">LINE</span>
-                  自分が結果を受け取る
-                </a>
-                <p className="text-xs text-foreground/50">受け取ったあと、このページで全文を確認できます</p>
-                <hr className="border-border" />
-                <p className="text-sm text-foreground/60">親に送りたい場合</p>
-                <a
-                  href={letterLineUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border-2 border-[#06C755] text-[#06C755] font-medium hover:bg-[#06C755]/10 transition"
-                >
-                  LINEで親に送る（お手紙）
-                </a>
-              </div>
-            </div>
-          )}
+        <p className="text-sm text-gray-500 text-center">※ 結果はこのページで確認できます。LINEシェアは任意です。</p>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center no-print">
+          <CtaButton variant="secondary" href={lineUrl}>
+            LINEで家族にシェアする（任意）
+          </CtaButton>
         </div>
 
         <DiagnosisResultLineCTA />
 
-        {unlocked && (
-          <>
-            <div className="bg-amber-50 rounded-2xl p-6 border-2 border-amber-200">
-              <p className="font-bold text-amber-900 mb-1">親御さんにそのまま送れる『空き家の未来についてのお手紙』を生成しました</p>
-              <p className="text-sm text-amber-800/80 mb-3">コピーまたはLINEでそのまま送れます。</p>
-              <div className="bg-white rounded-xl p-4 border border-amber-100 text-sm text-foreground/80 whitespace-pre-wrap mb-4 max-h-48 overflow-y-auto">
-                {parentLetter}
-              </div>
-              <div className="flex flex-wrap gap-2 justify-center">
-                <button
-                  type="button"
-                  onClick={() => navigator.clipboard.writeText(parentLetter)}
-                  className="px-4 py-2 rounded-xl border-2 border-amber-400 text-amber-800 font-medium hover:bg-amber-100 transition"
-                >
-                  コピーする
-                </button>
-                <a href={letterLineUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#06C755] text-white px-4 py-2 rounded-xl font-bold hover:opacity-90 transition">
-                  LINEで送る
-                </a>
-              </div>
-            </div>
+        <div className="bg-amber-50 rounded-2xl p-6 border-2 border-amber-200">
+          <p className="font-bold text-amber-900 mb-1">親御さんにそのまま送れる『空き家の未来についてのお手紙』を生成しました</p>
+          <p className="text-sm text-amber-800/80 mb-3">コピーまたはLINEでそのまま送れます。</p>
+          <div className="bg-white rounded-xl p-4 border border-amber-100 text-sm text-foreground/80 whitespace-pre-wrap mb-4 max-h-48 overflow-y-auto">
+            {parentLetter}
+          </div>
+          <div className="flex flex-wrap gap-2 justify-center">
+            <button
+              type="button"
+              onClick={() => navigator.clipboard.writeText(parentLetter)}
+              className="px-4 py-2 rounded-xl border-2 border-amber-400 text-amber-800 font-medium hover:bg-amber-100 transition"
+            >
+              コピーする
+            </button>
+            <a href={letterLineUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#06C755] text-white px-4 py-2 rounded-xl font-bold hover:opacity-90 transition">
+              LINEで送る
+            </a>
+          </div>
+        </div>
 
-            <div className="bg-primary rounded-2xl p-6 text-white">
-              <OwlCharacter size={70} message="結果を家族に送って、話し合いのきっかけにしよう" tone="calm" />
-              <a href={lineUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 bg-[#06C755] text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition">
-                <span className="text-xl">LINE</span> 結果を家族に送る
-              </a>
-            </div>
-          </>
-        )}
+        <div className="bg-primary rounded-2xl p-6 text-white">
+          <OwlCharacter size={70} message="結果を家族に送って、話し合いのきっかけにしよう" tone="calm" />
+          <CtaButton variant="secondary" href={lineUrl} className="mt-4">
+            結果を家族に送る
+          </CtaButton>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-3 mt-6 no-print">
+          <PrintResultButton toolName="空き家リスク診断" />
+        </div>
 
         <RegionalCTASelector
           targetPage="subsidy"
@@ -149,7 +124,7 @@ export default function AkiyaRiskClient({ prefectures }: { prefectures: Prefectu
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       <div className="bg-primary text-white rounded-2xl p-6 flex flex-wrap items-center gap-6 border-2 border-primary">
         <DiagnosisAnimeIllustration variant="akiya" size={100} className="shrink-0" />
         <div className="min-w-0 flex-1">
@@ -158,11 +133,10 @@ export default function AkiyaRiskClient({ prefectures }: { prefectures: Prefectu
           <p className="text-white/90 text-sm mt-2">約8問で実家が空き家予備軍かがわかる。結果をLINEで送って会議を開こう</p>
         </div>
       </div>
+      <PageLead text="約8問に答えるだけで、空き家を放置した場合のリスクと対策がわかります。" />
+
       <div className="bg-card rounded-2xl border border-border p-6">
-        <p className="text-sm text-foreground/50 mb-2">{step + 1} / {totalQuestions}</p>
-        <div className="w-full bg-border rounded-full h-2 mb-6">
-          <div className="bg-primary h-2 rounded-full transition-all" style={{ width: `${((step + 1) / totalQuestions) * 100}%` }} />
-        </div>
+        <DiagnosisProgress current={step + 1} total={totalQuestions} />
         <h2 className="text-lg font-bold text-foreground/90 mb-4">{currentQ.label}</h2>
         <ul className="space-y-2">
           {currentQ.options.map((opt) => (

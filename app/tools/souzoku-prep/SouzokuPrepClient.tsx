@@ -10,8 +10,11 @@ import {
   type SouzokuPrepRank,
 } from "../../lib/souzoku-prep-diagnosis";
 import DiagnosisAnimeIllustration from "../../components/DiagnosisAnimeIllustration";
+import { DiagnosisProgress } from "../../components/ui/DiagnosisProgress";
 import OwlCharacter from "../../components/OwlCharacter";
 import DiagnosisResultLineCTA from "../../components/DiagnosisResultLineCTA";
+import { CtaButton } from "../../components/ui/CtaButton";
+import { PrintResultButton } from "../../components/ui/PrintResultButton";
 import { RegionalCTASelector } from "../../components/RegionalCTASelector";
 
 type PrefectureOption = { id: string; name: string };
@@ -56,13 +59,14 @@ export default function SouzokuPrepClient({ prefectures }: { prefectures: Prefec
           <h1 className="text-2xl font-bold text-primary">相続準備力診断 結果</h1>
           <p className="text-foreground/60 mt-1">相続の「準備度」を診断しました</p>
         </div>
-        <div className={`rounded-2xl border-2 p-6 ${style.bg} ${style.text} ${style.border}`}>
+        <div className={`rounded-2xl border-2 p-6 print-result ${style.bg} ${style.text} ${style.border}`}>
           <p className="text-sm font-medium opacity-80">診断結果</p>
           <p className="text-xl font-bold mt-1">準備力{result.rank}ランク</p>
           <h2 className="text-lg font-bold mt-4">{result.title}</h2>
           <p className="mt-3 text-sm leading-relaxed opacity-90">{result.message}</p>
         </div>
 
+        <p className="text-sm text-gray-500 text-center">※ 結果はこのページで確認できます。LINEシェアは任意です。</p>
         <DiagnosisResultLineCTA />
 
         <div className="bg-amber-50 rounded-2xl p-6 border-2 border-amber-200">
@@ -79,18 +83,21 @@ export default function SouzokuPrepClient({ prefectures }: { prefectures: Prefec
             >
               コピーする
             </button>
-            <a href={letterLineUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#06C755] text-white px-4 py-2 rounded-xl font-bold hover:opacity-90 transition">
-              LINEで送る
-            </a>
+            <CtaButton variant="secondary" href={letterLineUrl}>LINEで送る</CtaButton>
           </div>
         </div>
 
         <div className="bg-primary rounded-2xl p-6 text-white">
           <OwlCharacter size={70} message="結果を家族に送って、準備の第一歩にしよう" tone="calm" />
-          <a href={lineUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 bg-[#06C755] text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition">
-            <span className="text-xl">LINE</span> 結果を家族に送る
-          </a>
+          <CtaButton variant="secondary" href={lineUrl} className="mt-4">
+            LINEで家族にシェアする（任意）
+          </CtaButton>
         </div>
+
+        <div className="flex flex-col sm:flex-row gap-3 mt-6 no-print">
+          <PrintResultButton toolName="相続準備力診断" />
+        </div>
+
         <RegionalCTASelector
           targetPage="cost"
           labelText="お住まいの地域の費用相場と業者情報を確認しましょう"
@@ -116,10 +123,7 @@ export default function SouzokuPrepClient({ prefectures }: { prefectures: Prefec
         </div>
       </div>
       <div className="bg-card rounded-2xl border border-border p-6">
-        <p className="text-sm text-foreground/50 mb-2">{step + 1} / {totalQuestions}</p>
-        <div className="w-full bg-border rounded-full h-2 mb-6">
-          <div className="bg-primary h-2 rounded-full transition-all" style={{ width: `${((step + 1) / totalQuestions) * 100}%` }} />
-        </div>
+        <DiagnosisProgress current={step + 1} total={totalQuestions} />
         <h2 className="text-lg font-bold text-foreground/90 mb-4">{currentQ.label}</h2>
         <ul className="space-y-2">
           {currentQ.options.map((opt) => (

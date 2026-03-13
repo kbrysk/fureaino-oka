@@ -6,6 +6,7 @@ import Image from "next/image";
 import OwlCharacter from "./OwlCharacter";
 import { trackLeadEvent } from "../lib/lead-score";
 import { LINE_ADD_URL } from "../lib/site-brand";
+// U8: フクロウコメント トーン統一 2026-03
 
 /**
  * 都道府県別・建物種別の年間維持費目安（万円）
@@ -138,7 +139,7 @@ export default function EmptyHouseTaxSimulator({
               size={compact ? 80 : 100}
               message={
                 total >= 25
-                  ? "ホー、これはもったいない！ 早めの対策を考えましょう"
+                  ? "負担が大きいね。早めに対策を検討してみて。"
                   : `ホー、私が計算しておきました。年間約${total}万円かかりますよ`
               }
               tone={total >= 25 ? "warning" : "calm"}

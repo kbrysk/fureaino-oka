@@ -7,6 +7,7 @@ import { generateHowToSchema } from "../../lib/schema/howto";
 import { generateFaqSchema } from "../../lib/faq/schema";
 import type { FaqItem } from "../../lib/faq/schema";
 import MasterGuideFaqAccordion from "../../components/MasterGuideFaqAccordion";
+import { PageLead } from "../../components/PageLead";
 import { LINE_ADD_URL } from "../../lib/site-brand";
 
 export const metadata: Metadata = {
@@ -94,6 +95,7 @@ export default function MasterGuidePage() {
         <h1 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
           実家じまい・生前整理、何から始める？
         </h1>
+        <PageLead text="実家じまい・生前整理を何から始めるかを、3ステップでわかりやすく解説します。" />
         <p className="text-foreground/85 leading-relaxed mb-6">
           「そろそろ考えないと」と思いながら、何から手をつければいいか分からない——
           このページでは、全体の流れを3ステップで整理します。
@@ -274,7 +276,7 @@ export default function MasterGuidePage() {
         <h2 id="master-guide-line-heading" className="font-bold text-primary text-lg sm:text-xl mb-2">
           無料ガイドブック（PDF）をLINEでお届けします
         </h2>
-        <p className="text-foreground/80 text-sm sm:text-base mb-6">
+        <p className="text-foreground/80 text-base mb-6">
           失敗しない実家じまいの進め方やチェックリストを、LINEで無料で受け取れます。
         </p>
         <a

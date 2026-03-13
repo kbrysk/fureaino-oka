@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { CtaButton } from "@/app/components/ui/CtaButton";
+// U1: CTAボタン色統一（赤・オレンジ→グリーン）2026-03
 
 /**
  * 福ちゃん（出張買取専門店）アフィリエイトCTA。
@@ -28,14 +30,9 @@ export default function FukuchanCTA() {
       <p className="text-amber-200 text-xs font-bold mb-2">
         ＼テレビCMでおなじみ・豊富な買取実績／
       </p>
-      <a
-        href={FUKUCHAN_CLICK_URL}
-        target="_blank"
-        rel="nofollow sponsored noopener noreferrer"
-        className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-bold transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
-      >
+      <CtaButton variant="primary" href={FUKUCHAN_CLICK_URL}>
         まずは完全無料で査定を依頼する
-      </a>
+      </CtaButton>
       <p className="text-white/50 text-[10px] mt-2">
         ※出張買取専門店「福ちゃん」の公式サイトへ移動します
       </p>

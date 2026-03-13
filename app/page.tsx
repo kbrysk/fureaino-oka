@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HeroSection from "./components/home/HeroSection";
+import { SituationSelector } from "./components/top/SituationSelector";
 import HomeContentClient from "./components/home/HomeContentClient";
 import { pageTitle } from "./lib/site-brand";
 import { getCanonicalUrl } from "./lib/site-url";
@@ -20,6 +21,18 @@ export default function Home() {
   return (
     <div className="space-y-8">
       <HeroSection />
+
+      <section
+        aria-label="お困りの状況を選んでください"
+        className="w-full max-w-3xl mx-auto px-4 py-10"
+      >
+        <SituationSelector />
+      </section>
+      <div className="text-center py-4">
+        <p className="text-sm text-gray-400">
+          ↓ または下にスクロールして全機能を見る
+        </p>
+      </div>
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6" aria-label="今の悩みに合わせて選ぶ">
         <Link

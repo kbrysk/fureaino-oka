@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import OwlCharacter from "./OwlCharacter";
+import { SiteSearch } from "./ui/SiteSearch";
 
 const navItems: { href: string; label: string }[] = [
   { href: "/", label: "ホーム" },
@@ -21,15 +22,34 @@ const navItems: { href: string; label: string }[] = [
 export default function Navigation() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <header className="bg-card border-b border-border shadow-sm sticky top-0 z-40">
       <div className="max-w-5xl mx-auto px-4">
-        <div className="flex items-center justify-between h-14 sm:h-16">
-          <Link href="/" className="flex items-center gap-2 shrink-0 md:mr-6">
+        <div className="flex items-center justify-between h-14 sm:h-16 gap-2">
+          <Link href="/" className="flex items-center gap-2 shrink-0 md:mr-2">
             <OwlCharacter size={36} className="!gap-0" />
             <span className="text-lg sm:text-xl font-bold text-primary">生前整理支援センター ふれあいの丘</span>
           </Link>
+
+          {/* PC: サイト内検索（U6） */}
+          <div className="hidden md:block flex-1 min-w-0 max-w-[200px] lg:max-w-[240px]">
+            <SiteSearch />
+          </div>
+
+          {/* スマホ: 検索アイコン（U6） */}
+          <button
+            type="button"
+            onClick={() => setSearchOpen((o) => !o)}
+            className="md:hidden p-2 -mr-2 rounded-lg text-foreground/70 hover:bg-primary-light hover:text-primary"
+            aria-label="検索を開く"
+            aria-expanded={searchOpen}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
 
           {/* スマホ: ハンバーガーボタン */}
           <button
@@ -82,7 +102,7 @@ export default function Navigation() {
           </div>
 
           {/* PC: 横並びナビ */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-1 shrink-0">
             {navItems.map((item) => (
                 <Link
                   key={item.href}
@@ -98,6 +118,13 @@ export default function Navigation() {
               ))}
           </nav>
         </div>
+
+        {/* スマホ: 検索展開エリア（U6） */}
+        {searchOpen && (
+          <div className="md:hidden pt-2 pb-3 border-t border-border">
+            <SiteSearch />
+          </div>
+        )}
       </div>
     </header>
   );

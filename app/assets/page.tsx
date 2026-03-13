@@ -28,6 +28,8 @@ import {
 import { baseUrl } from "../lib/constants/site-metadata";
 import ContextualCTABanner from "../components/ContextualCTABanner";
 import AppraisalModal from "../components/AppraisalModal";
+import { CtaButton } from "../components/ui/CtaButton";
+// U1: CTAボタン色統一（赤・オレンジ→グリーン）2026-03
 import AppraisalCTA from "../components/AppraisalCTA";
 import IntentChangeModal from "../components/IntentChangeModal";
 import TreasureAssetMap from "../components/TreasureAssetMap";
@@ -293,9 +295,9 @@ export default function AssetsPage() {
                 相続税の申告が必要になる可能性があります。早めに税理士へご相談されることをおすすめします。
               </p>
             </div>
-            <button className="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap hover:opacity-90 transition shrink-0">
+            <CtaButton variant="primary" className="whitespace-nowrap shrink-0">
               税理士に無料相談
-            </button>
+            </CtaButton>
           </div>
           <label className="flex items-start gap-2 mt-3 cursor-pointer">
             <input type="checkbox" className="w-3.5 h-3.5 accent-red-600 mt-0.5" />

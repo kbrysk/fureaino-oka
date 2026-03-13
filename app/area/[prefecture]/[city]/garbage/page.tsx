@@ -18,6 +18,7 @@ import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
 import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import { TableOfContents } from "../../../../components/TableOfContents";
+import { PageLead } from "../../../../components/PageLead";
 import { RelatedCitiesInPrefecture } from "../../../../components/RelatedCitiesInPrefecture";
 import { pageTitle } from "../../../../lib/site-brand";
 import { getCanonicalUrl, getCanonicalBase } from "../../../../lib/site-url";
@@ -77,7 +78,7 @@ export default async function AreaGarbagePage({ params }: Props) {
       pageType: "garbage",
     });
     return (
-      <div className="space-y-8">
+      <div className="space-y-10">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
@@ -87,6 +88,7 @@ export default async function AreaGarbagePage({ params }: Props) {
             {data.cityName}の粗大ゴミ処分・遺品整理の費用と手順
           </h1>
         </div>
+        <PageLead text={`${data.cityName}の粗大ゴミの申込方法・遺品整理の費用相場をこのページで確認できます。`} />
         <AreaDirectoryFallback
           cityName={data.cityName}
           prefName={data.prefName}
@@ -130,7 +132,7 @@ export default async function AreaGarbagePage({ params }: Props) {
   });
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
@@ -144,6 +146,7 @@ export default async function AreaGarbagePage({ params }: Props) {
         </p>
       </div>
 
+      <PageLead text={`${area.city}の粗大ゴミの申込方法・遺品整理の費用相場をこのページで確認できます。`} />
       <TableOfContents
         items={[
           { id: "column", label: "生前整理コラム" },
@@ -157,7 +160,7 @@ export default async function AreaGarbagePage({ params }: Props) {
         <h2 className="text-sm font-bold text-amber-900/90 mb-2">
           {area.city}（{area.prefecture}）の生前整理コラム
         </h2>
-        <p className="text-sm text-foreground/80 leading-relaxed">
+        <p className="text-base text-foreground/80 leading-relaxed">
           {getAreaSeizenseiriColumn(area.prefecture, area.city)}
         </p>
       </section>
@@ -175,7 +178,7 @@ export default async function AreaGarbagePage({ params }: Props) {
         </div>
         <div className="p-6 space-y-4">
           <p className="text-sm text-foreground/70 leading-relaxed">{cleanupText}</p>
-          <ul className="text-sm text-foreground/70 space-y-1 list-disc list-inside">
+          <ul className="text-base text-foreground/70 space-y-1 list-disc list-inside">
             <li>1K：十数万円〜</li>
             <li>2LDK：20〜40万円程度の目安</li>
             <li>3LDK〜4LDK：40万円〜（荷物量で変動）</li>
@@ -198,7 +201,7 @@ export default async function AreaGarbagePage({ params }: Props) {
         <p className="font-bold mb-2">
           {area.city}の平均より高い？安い？実家の荷物量で片付け費用をシミュレーション
         </p>
-        <p className="text-sm text-white/80 mb-4">
+        <p className="text-base text-white/80 mb-4">
           チェックリストで「やること」を把握し、見積もり依頼の準備をしましょう。
         </p>
         <Link

@@ -22,6 +22,7 @@ import RegionalFaq from "../../../../components/RegionalFaq";
 import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalCard";
 import { TableOfContents } from "../../../../components/TableOfContents";
 import { SubsidySummaryBox } from "../../../../components/SubsidySummaryBox";
+import { PageLead } from "../../../../components/PageLead";
 import { RelatedCitiesInPrefecture } from "../../../../components/RelatedCitiesInPrefecture";
 import { pageTitle } from "../../../../lib/site-brand";
 import type { FaqItem } from "../../../../lib/faq/schema";
@@ -150,7 +151,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
   if (data._isDefault && !areaContent) {
     const fallbackFaqSchema = generateFaqSchema(getSubsidyFaq(cityName), { url: pageUrl });
     return (
-      <div className="space-y-8">
+      <div className="space-y-10">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fallbackFaqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
@@ -166,11 +167,12 @@ export default async function AreaSubsidyPage({ params }: Props) {
             【{CURRENT_YEAR}年最新】{cityName}の空き家補助金・遺品整理の公式窓口
           </h1>
         </div>
+        <PageLead text={`${cityName}の空き家解体補助金の受給条件・申請方法・上限額をこのページで確認できます。`} />
         <div className="my-8 rounded-xl border border-yellow-200 bg-yellow-50 p-6 shadow-sm">
           <p className="mb-3 font-bold text-yellow-800 flex items-center gap-2">
             <span className="text-xl" aria-hidden>💡</span> 【重要】補助金を使って解体・改修する前に！
           </p>
-          <p className="text-sm leading-relaxed text-gray-700">
+          <p className="text-base leading-relaxed text-gray-700">
             解体費用を払って更地にするよりも、場合によっては<strong>「そのまま売却」</strong>した方が手元に多くのお金が残るケースがあります。行動を起こす前に、まずはご実家・空き家の「現在の価値」を無料で把握しておくことをおすすめします。
           </p>
         </div>
@@ -200,7 +202,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
   }
 
   return (
-    <div className="space-y-8 pb-24">
+    <div className="space-y-10 pb-24">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script
         type="application/ld+json"
@@ -259,6 +261,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
         return <TableOfContents items={tocItems} />;
       })()}
 
+      <PageLead text={`${cityName}の空き家解体補助金の受給条件・申請方法・上限額をこのページで確認できます。`} />
       <SubsidySummaryBox cityName={cityName} hasRealData={!data._isDefault} />
 
       <section id="cost-simulator-section" aria-label="解体・片付け費用シミュレーター">
@@ -280,7 +283,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
             <h2 className="font-bold text-primary">役所の言葉を、わかりやすく翻訳しました</h2>
           </div>
           <div className="p-6 space-y-4">
-            <p className="text-sm text-foreground/60">（お金をもらうために守るべきルールを、やさしい言葉に置き換えています）</p>
+            <p className="text-base text-foreground/60">（お金をもらうために守るべきルールを、やさしい言葉に置き換えています）</p>
             <div className="rounded-xl bg-amber-50/80 border border-amber-200/60 p-5">
               <p className="text-foreground/90 leading-relaxed whitespace-pre-line">
                 {translateBureaucraticToPlain(subsidyInfo.condition)}
@@ -298,7 +301,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
         <h2 className="font-bold text-amber-900/90 mb-4 flex items-center gap-2">
           <span aria-hidden>⚠️</span> 空き家を放置すると、固定資産税が最大6倍になる可能性があります
         </h2>
-        <p className="text-sm text-foreground/80 leading-relaxed mb-4">
+        <p className="text-base text-foreground/80 leading-relaxed mb-4">
           「空き家対策特別措置法」により、危険や不衛生と判断された空き家は「特定空き家」に指定されることがあります。指定されると、固定資産税の優遇が外れ、これまでの約6倍になるケースも。早めに「補助金＋解体＋売却」を検討すれば、実質プラスになる可能性もあります。
         </p>
         <Link
@@ -330,7 +333,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
             {faqItems.map((item, i) => (
               <div key={i} className="px-6 py-4">
                 <dt className="font-bold text-foreground/90 mb-1">Q. {item.question}</dt>
-                <dd className="text-sm text-foreground/70 leading-relaxed">A. {item.answer}</dd>
+                <dd className="text-base text-foreground/70 leading-relaxed">A. {item.answer}</dd>
               </div>
             ))}
           </dl>

@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { CtaButton } from "@/app/components/ui/CtaButton";
+// U1: CTAボタン色統一（赤・オレンジ→グリーン）2026-03
 
 /**
  * アールクリーニング対象エリア（首都圏）。
@@ -106,14 +108,9 @@ export default function CleanupAffiliateCard({ cityName, cityId }: CleanupAffili
         </p>
 
         <div className="pt-2">
-          <a
-            href={clickUrl}
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            className="flex flex-col items-center justify-center w-full py-4 px-5 rounded-xl font-bold text-white bg-orange-500 border-2 border-orange-600/80 shadow-md hover:bg-orange-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
-          >
+          <CtaButton variant="primary" href={clickUrl} className="w-full">
             <span className="text-lg drop-shadow-sm">{buttonText}</span>
-          </a>
+          </CtaButton>
           <p className="text-center text-xs text-amber-950/80 mt-2">
             {microcopy}
           </p>

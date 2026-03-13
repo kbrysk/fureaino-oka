@@ -45,10 +45,11 @@ export async function getMunicipalityData(
 }
 
 /** 公式窓口誘導用の固定デフォルト。データなし時（1000自治体規模で未登録地域）に即返す。 */
+// U8: フクロウコメント トーン統一 2026-03
 const DEFAULT_MUNICIPALITY_TEMPLATE = {
   mascot: {
     localRiskText:
-      "お住まいの地域の補助金・粗大ゴミの出し方は自治体の公式サイトでご確認ください。無料査定で資産価値の目安も把握できます。",
+      "補助金や粗大ゴミの出し方は自治体の案内で確認してみてね。",
   },
   subsidy: { hasSubsidy: false as const },
   garbage: {

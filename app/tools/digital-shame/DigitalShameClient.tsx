@@ -8,6 +8,8 @@ import {
   type ShameResult,
 } from "../../lib/digital-shame-diagnosis";
 import { RegionalCTASelector } from "../../components/RegionalCTASelector";
+import { PrintResultButton } from "../../components/ui/PrintResultButton";
+import { DiagnosisProgress } from "../../components/ui/DiagnosisProgress";
 
 type PrefectureOption = { id: string; name: string };
 
@@ -45,10 +47,14 @@ export default function DigitalShameClient({ prefectures }: { prefectures: Prefe
           <p className="text-foreground/60 mt-1">あなたの「見られたくないデータ」リスクを診断しました</p>
         </div>
 
-        <div className="rounded-2xl border-2 border-primary/40 bg-card p-6">
+        <div className="rounded-2xl border-2 border-primary/40 bg-card p-6 print-result">
           <p className="text-2xl font-bold text-primary mb-2">{result.title}</p>
           <p className="text-foreground/70 mb-4">Shame Score: {result.score}点</p>
           <p className="text-foreground/80 leading-relaxed">{result.message}</p>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-3 mt-6 no-print">
+          <PrintResultButton toolName="デジタル遺品リスク診断" />
         </div>
 
         <div className="bg-primary rounded-2xl p-6 text-white text-center">
@@ -105,10 +111,7 @@ export default function DigitalShameClient({ prefectures }: { prefectures: Prefe
       </div>
 
       <div className="bg-card rounded-2xl border border-border p-6">
-        <p className="text-sm text-foreground/50 mb-2">{step + 1} / {totalQ}</p>
-        <div className="w-full bg-border rounded-full h-2 mb-6">
-          <div className="bg-primary h-2 rounded-full transition-all" style={{ width: `${((step + 1) / totalQ) * 100}%` }} />
-        </div>
+        <DiagnosisProgress current={step + 1} total={totalQ} />
         <h2 className="text-lg font-bold mb-4">{current.label}</h2>
         <ul className="space-y-2">
           {current.options.map((opt) => (
