@@ -24,6 +24,7 @@ import { TableOfContents } from "../../../../components/TableOfContents";
 import { SubsidySummaryBox } from "../../../../components/SubsidySummaryBox";
 import { PageLead } from "../../../../components/PageLead";
 import { RelatedCitiesInPrefecture } from "../../../../components/RelatedCitiesInPrefecture";
+import JsonLd from "../../../../components/JsonLd";
 import { pageTitle } from "../../../../lib/site-brand";
 import type { FaqItem } from "../../../../lib/faq/schema";
 
@@ -152,9 +153,9 @@ export default async function AreaSubsidyPage({ params }: Props) {
     const fallbackFaqSchema = generateFaqSchema(getSubsidyFaq(cityName), { url: pageUrl });
     return (
       <div className="space-y-10">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fallbackFaqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
+        <JsonLd data={breadcrumb} />
+        <JsonLd data={fallbackFaqSchema} />
+        <JsonLd data={localBizSchema} />
         <AreaBreadcrumbs
           prefecture={prefName}
           city={cityName}
@@ -203,16 +204,10 @@ export default async function AreaSubsidyPage({ params }: Props) {
 
   return (
     <div className="space-y-10 pb-24">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(regionalFaqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
+      <JsonLd data={breadcrumb} />
+      <JsonLd data={regionalFaqSchema} />
+      <JsonLd data={faqSchema} />
+      <JsonLd data={localBizSchema} />
       <AreaBreadcrumbs
         prefecture={prefName}
         city={cityName}
