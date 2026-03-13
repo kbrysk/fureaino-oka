@@ -2,13 +2,21 @@ import { pageTitle } from "../../lib/site-brand";
 import { getCanonicalUrl, getCanonicalBase } from "../../lib/site-url";
 import { generateBreadcrumbSchema } from "../../lib/schema/breadcrumb";
 
+const TOOL_TITLE = "法定相続分シミュレーター";
+const TOOL_DESCRIPTION = "家族構成を入力すると民法の法定相続分を円グラフで表示。家系図をエンディングノートへ保存。";
+
 export const metadata = {
   title: pageTitle("法定相続分シミュレーター"),
-  description: "家族構成を入力すると民法の法定相続分を円グラフで表示。家系図をエンディングノートへ保存。",
+  description: TOOL_DESCRIPTION,
   alternates: { canonical: getCanonicalUrl("/tools/inheritance-share") },
+  openGraph: {
+    title: `${TOOL_TITLE}【無料】｜ふれあいの丘`,
+    description: TOOL_DESCRIPTION,
+    url: getCanonicalUrl("/tools/inheritance-share"),
+  },
 };
 
-const TOOL_NAME = "法定相続分シミュレーター";
+const TOOL_NAME = TOOL_TITLE;
 const SLUG = "inheritance-share";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

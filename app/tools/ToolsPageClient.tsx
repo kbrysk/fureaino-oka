@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import ToolCardIcon from "../components/ToolCardIcon";
 import { useToolsHub } from "../hooks/useToolsHub";
 import {
@@ -205,8 +206,7 @@ export default function ToolsPageClient() {
                   <p className="text-sm text-foreground/60 mt-1 line-clamp-2">{t.description}</p>
                 </div>
                 <div className="hidden sm:flex shrink-0 self-center w-10 h-10 rounded-xl overflow-hidden bg-primary-light/30 border border-primary/20 items-center justify-center">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={OWL_IMAGE} alt="" width={28} height={28} className="object-contain w-7 h-7" aria-hidden />
+                  <Image src={OWL_IMAGE} alt="ふれあいの丘 マスコットキャラクター フクロウ" width={28} height={28} className="object-contain w-7 h-7" aria-hidden />
                 </div>
               </Link>
             </li>

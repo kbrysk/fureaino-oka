@@ -1,10 +1,12 @@
 "use client";
 
+import Image from "next/image";
+
 /**
  * ふくろうが相槌を打つUI（チャット風）
  * 画像: public/images/owl-character.png
  */
-const OWL_IMAGE = "/images/owl-character.png?v=4";
+const OWL_IMAGE = "/images/owl-character.png";
 
 interface OwlAizuchiProps {
   /** 相槌の文言 */
@@ -42,14 +44,12 @@ export default function OwlAizuchi({
       aria-label="ふくろうの相槌"
     >
       <div className="relative shrink-0 overflow-hidden rounded-2xl" style={{ width: avatarSize, height: avatarSize }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={OWL_IMAGE}
-          alt=""
+          alt="ふれあいの丘 マスコットキャラクター フクロウ"
           width={avatarSize}
           height={avatarSize}
           className="h-full w-full object-contain object-center"
-          style={{ width: avatarSize, height: avatarSize }}
           aria-hidden
         />
       </div>

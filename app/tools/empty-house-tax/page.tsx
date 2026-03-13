@@ -4,10 +4,18 @@ import { pageTitle } from "../../lib/site-brand";
 import { getCanonicalUrl, getCanonicalBase } from "../../lib/site-url";
 import { generateBreadcrumbSchema } from "../../lib/schema/breadcrumb";
 
+const TOOL_TITLE = "空き家税金シミュレーター";
+const TOOL_DESCRIPTION = "空き家の固定資産税・維持費の目安を無料でシミュレーション。";
+
 export const metadata = {
   title: pageTitle("空き家税金シミュレーター"),
-  description: "空き家の固定資産税・維持費の目安を無料でシミュレーション。",
+  description: TOOL_DESCRIPTION,
   alternates: { canonical: getCanonicalUrl("/tools/empty-house-tax") },
+  openGraph: {
+    title: `${TOOL_TITLE}【無料】｜ふれあいの丘`,
+    description: TOOL_DESCRIPTION,
+    url: getCanonicalUrl("/tools/empty-house-tax"),
+  },
 };
 
 export default function EmptyHouseTaxPage() {

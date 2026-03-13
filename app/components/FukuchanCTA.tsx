@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 /**
  * 福ちゃん（出張買取専門店）アフィリエイトCTA。
  * 設置箇所: A, B, C, D, E（捨て方辞典 canSell のみ）, H, I を想定。
@@ -38,14 +40,13 @@ export default function FukuchanCTA() {
         ※出張買取専門店「福ちゃん」の公式サイトへ移動します
       </p>
       {/* A8 インプレッション（レイアウトに影響しないよう絶対配置・非表示） */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         src={FUKUCHAN_IMP_URL}
         width={1}
         height={1}
         alt=""
-        style={{ border: 0 }}
         className="absolute bottom-0 left-0 w-px h-px opacity-0 pointer-events-none"
+        unoptimized
       />
     </section>
   );

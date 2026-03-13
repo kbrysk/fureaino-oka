@@ -1,8 +1,9 @@
 "use client";
 
 import { useCallback } from "react";
+import Image from "next/image";
 
-const OWL_IMAGE = "/images/owl-character.png?v=4";
+const OWL_IMAGE = "/images/owl-character.png";
 
 interface TriageOption {
   label: string;
@@ -42,10 +43,9 @@ export default function GuideTriage() {
     >
       <div className="flex flex-col sm:flex-row sm:items-start gap-4">
         <div className="flex shrink-0 items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden bg-primary-light/50 border border-primary/20">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={OWL_IMAGE}
-            alt=""
+            alt="ふれあいの丘 マスコットキャラクター フクロウ"
             width={64}
             height={64}
             className="w-full h-full object-contain"

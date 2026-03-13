@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ja_JP",
     url: "./",
-    siteName: SITE_NAME_SHORT,
+    siteName: "生前整理支援センター ふれあいの丘",
     title: SITE_TITLE_TOP,
     description: DEFAULT_DESCRIPTION,
     images: [
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE_PATH,
         width: 1200,
         height: 630,
-        alt: "生前整理支援センター ふれあいの丘",
+        alt: "生前整理支援センター ふれあいの丘 - 実家じまい・遺品整理・補助金の総合サポート",
       },
     ],
   },

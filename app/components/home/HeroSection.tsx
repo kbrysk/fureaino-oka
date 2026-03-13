@@ -17,7 +17,7 @@ export default function HeroSection() {
         <div className="absolute left-0 top-0 bottom-0 w-full max-w-[1400px] h-full overflow-hidden z-0" aria-hidden>
           <Image
             src={HERO_IMAGE}
-            alt=""
+            alt="家族で生前整理について話し合う夫婦"
             fill
             className="object-cover object-[8%_50%] max-md:object-[3%_50%]"
             sizes="(max-width: 767px) 100vw, 1400px"

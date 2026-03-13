@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const WAKEGAI_KEYWORDS = /老朽|放置|特定空家|倒壊|危険/;
 
@@ -58,8 +59,7 @@ export default function RealEstateAppraisalCard({ cityName, cityId, localRiskTex
         </div>
         <div className="h-px overflow-hidden" aria-hidden>
           {/* A8インプレッション計測用1px画像 */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={impSrc} alt="" width={1} height={1} className="block w-px h-px" />
+          <Image src={impSrc} alt="" width={1} height={1} className="block w-px h-px" unoptimized />
         </div>
       </section>
     );
@@ -101,14 +101,13 @@ export default function RealEstateAppraisalCard({ cityName, cityId, localRiskTex
         </div>
       </div>
       {/* A8 インプレッション（レイアウトに影響しないよう絶対配置・非表示） */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         src={NOMU_IMP_URL}
         alt=""
         width={1}
         height={1}
-        style={{ border: 0 }}
         className="absolute bottom-0 left-0 w-px h-px opacity-0 pointer-events-none"
+        unoptimized
       />
     </section>
   );

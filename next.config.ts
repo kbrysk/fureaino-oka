@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
       { protocol: "https", hostname: "picsum.photos", pathname: "/**" },
+      { protocol: "https", hostname: "www11.a8.net", pathname: "/**" },
+      { protocol: "https", hostname: "www14.a8.net", pathname: "/**" },
+      { protocol: "https", hostname: "www12.a8.net", pathname: "/**" },
+      { protocol: "https", hostname: "www13.a8.net", pathname: "/**" },
+      { protocol: "https", hostname: "www17.a8.net", pathname: "/**" },
+      { protocol: "https", hostname: "www18.a8.net", pathname: "/**" },
     ],
   },
   // SEO: 正規化・重複コンテンツ防止（GSC クロールバジェット回復）

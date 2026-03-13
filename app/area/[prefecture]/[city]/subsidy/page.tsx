@@ -61,20 +61,21 @@ export async function generateMetadata({ params }: Props) {
   } : null);
 
   const cityName = areaContent?.cityName ?? data.cityName;
-  const maxForTitle = extractMaxAmountForTitle(subsidyInfo?.maxAmount);
 
-  const title = maxForTitle
-    ? `${cityName}の解体補助金（${CURRENT_YEAR}年最新）| 上限${maxForTitle}の受給条件と申請方法をプロが解説`
-    : `${cityName}の解体補助金（${CURRENT_YEAR}年最新）| 受給条件と申請方法をプロが解説`;
-
-  const description = maxForTitle
-    ? `${cityName}で実家の解体・処分をお考えの方へ。最大${maxForTitle}が支給される空き家解体補助金の条件や、令和${CURRENT_YEAR - 2018}年度の最新情報を分かりやすく翻訳。固定資産税が6倍になる前に知っておきたい節税対策も公開中。`
-    : `${cityName}で実家の解体・処分をお考えの方へ。空き家解体補助金の条件や、令和${CURRENT_YEAR - 2018}年度の最新情報を分かりやすく翻訳。固定資産税が6倍になる前に知っておきたい節税対策も公開中。`;
+  const base = getCanonicalBase();
+  const canonicalSubsidy = `${base}/area/${prefecture}/${city}/subsidy`;
+  const title = `【2026年最新】${cityName}の解体補助金｜受給条件・申請方法・上限額を解説`;
+  const description = `${cityName}の空き家解体補助金について、受給条件・申請方法・上限額をわかりやすく解説。固定資産税が最大6倍になるリスクも。補助金を活用した解体費用の実質負担額を今すぐ無料で試算できます。`;
 
   return {
     title: pageTitle(title),
     description,
-    alternates: { canonical: `${getCanonicalBase()}/area/${prefecture}/${city}/subsidy` },
+    alternates: { canonical: canonicalSubsidy },
+    openGraph: {
+      title: `${cityName}の解体補助金【2026年最新】｜ふれあいの丘`,
+      description: `${cityName}の空き家解体補助金の条件・申請方法・上限額を解説。無料で費用を試算できます。`,
+      url: canonicalSubsidy,
+    },
   };
 }
 

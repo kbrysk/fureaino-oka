@@ -6,9 +6,9 @@ import { getCanonicalUrl, getCanonicalBase } from "../lib/site-url";
 import { generateBreadcrumbSchema } from "../lib/schema/breadcrumb";
 
 export const metadata = {
-  title: pageTitle("地域別 粗大ゴミ・遺品整理"),
+  title: pageTitle("全国の実家じまい・空き家補助金を地域から探す｜都道府県・市区町村別"),
   description:
-    "全国の市区町村別に粗大ゴミ申し込み・補助金・遺品整理相場を掲載。お住まいの地域を選んでご確認ください。",
+    "全国47都道府県・主要市区町村の空き家補助金・遺品整理費用相場・粗大ゴミ申込方法をまとめて掲載。お住まいの地域を選ぶだけで、補助金の条件・申請方法・費用の目安が確認できます。",
   alternates: { canonical: getCanonicalUrl("/area") },
 };
 

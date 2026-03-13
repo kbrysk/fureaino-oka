@@ -67,18 +67,12 @@ export async function generateMetadata({ params }: Props) {
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
   const canonical = getCanonicalUrl(`/area/${prefecture}/${city}`);
   if (!area) return { title: pageTitle("地域情報"), alternates: { canonical } };
+  const title = `【2026年最新】${data.cityName}の実家じまい・遺品整理｜補助金・粗大ゴミ・費用相場`;
+  const description = `${data.cityName}の実家じまい・遺品整理を徹底解説。空き家解体補助金の条件と金額、粗大ゴミの申込方法、遺品整理業者の費用相場（1K〜3LDK）まで。無料の費用シミュレーターで今すぐ概算を確認。`;
   if (data._isDefault) {
-    return {
-      title: pageTitle(`${data.cityName}の実家じまい・空き家処分｜実家の片付け・粗大ゴミ費用とルール`),
-      description: `${data.cityName}で実家じまいや空き家整理にお悩みの方へ。シニアが自力で運べない粗大ゴミの処分ルールや、実家の片付け費用、遺品整理のポイントをわかりやすく解説します。`,
-      alternates: { canonical },
-    };
+    return { title: pageTitle(title), description, alternates: { canonical } };
   }
-  return {
-    title: pageTitle(`${data.cityName}の実家じまい・空き家処分｜実家の片付け・粗大ゴミ費用とルール`),
-    description: `${data.cityName}で実家じまいや空き家整理にお悩みの方へ。シニアが自力で運べない粗大ゴミの処分ルールや、実家の片付け費用、遺品整理のポイントをわかりやすく解説します。`,
-    alternates: { canonical },
-  };
+  return { title: pageTitle(title), description, alternates: { canonical } };
 }
 
 export default async function AreaPage({ params, searchParams }: Props) {

@@ -47,10 +47,11 @@ export async function createToolOgImage(title: string): Promise<ImageResponse> {
             paddingLeft: 48,
           }}
         >
+          {/* ImageResponse 内のため next/image は使用不可 */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={owlSrc}
-            alt=""
+            alt="ふれあいの丘 マスコットキャラクター フクロウ"
             width={320}
             height={320}
             style={{ objectFit: "contain" }}

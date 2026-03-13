@@ -136,7 +136,7 @@ export default async function ArticleDetailPage({ params }: Props) {
         <figure className="mt-6 rounded-xl overflow-hidden border border-border aspect-video relative w-full">
           <Image
             src={thumb}
-            alt=""
+            alt={post.title.slice(0, 20)}
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 672px"

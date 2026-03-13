@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import OwlCharacter from "./OwlCharacter";
 import { trackLeadEvent } from "../lib/lead-score";
 import { LINE_ADD_URL } from "../lib/site-brand";
@@ -206,13 +207,13 @@ export default function EmptyHouseTaxSimulator({
                 <span className="text-xs text-gray-500">
                   ※提携先のノムコム（野村不動産ソリューションズ）のサイトへ移動します
                 </span>
-                <img
-                  style={{ border: 0 }}
-                  width={1}
-                  height={1}
+                <Image
                   src="https://www14.a8.net/0.gif?a8mat=4AXE4D+D2CGOI+5M76+BWVTE"
                   alt=""
+                  width={1}
+                  height={1}
                   className="absolute opacity-0 pointer-events-none"
+                  unoptimized
                 />
               </div>
             </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import DynamicFaq from "./DynamicFaq";
 import type { FaqItem } from "@/app/lib/faq/schema";
 
@@ -97,14 +98,13 @@ export default function AreaDirectoryFallback({
           </p>
         </div>
         {/* A8 インプレッション（レイアウトに影響しないよう絶対配置・非表示） */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={NOMU_IMP_URL}
           alt=""
           width={1}
           height={1}
-          style={{ border: 0 }}
           className="absolute bottom-0 left-0 w-px h-px opacity-0 pointer-events-none"
+          unoptimized
         />
       </section>
 

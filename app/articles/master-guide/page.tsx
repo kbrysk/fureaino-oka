@@ -3,17 +3,23 @@ import Link from "next/link";
 import { pageTitle } from "../../lib/site-brand";
 import { getCanonicalUrl, getCanonicalBase } from "../../lib/site-url";
 import { generateBreadcrumbSchema } from "../../lib/schema/breadcrumb";
+import { generateHowToSchema } from "../../lib/schema/howto";
 import { generateFaqSchema } from "../../lib/faq/schema";
 import type { FaqItem } from "../../lib/faq/schema";
 import MasterGuideFaqAccordion from "../../components/MasterGuideFaqAccordion";
 import { LINE_ADD_URL } from "../../lib/site-brand";
 
 export const metadata: Metadata = {
-  title: pageTitle("実家じまい・生前整理のはじめかた完全ガイド【2026年最新】"),
+  title: pageTitle("【2026年最新】実家じまい・生前整理のはじめかた完全ガイド｜何から始めるかがわかる"),
   description:
-    "実家じまい・生前整理を何から始めればいいか迷っていませんか？片付け・補助金・相続・業者選びまで、全手順をわかりやすく解説。無料診断ツールで今すぐ自分の状況を確認できます。",
+    "「そろそろ実家をどうにかしないと」と思いながら何から手をつければいいか分からない方へ。片付け・補助金・相続・業者選びまでの全手順を3ステップで解説。無料診断ツールで今すぐ現状確認できます。",
   alternates: {
     canonical: getCanonicalUrl("/articles/master-guide"),
+  },
+  openGraph: {
+    title: "実家じまい・生前整理のはじめかた完全ガイド｜ふれあいの丘",
+    description: "片付け・補助金・相続・業者選びまでの全手順を3ステップで解説。",
+    url: getCanonicalUrl("/articles/master-guide"),
   },
 };
 
@@ -51,8 +57,32 @@ export default function MasterGuidePage() {
     url: getCanonicalUrl("/articles/master-guide"),
   });
 
+  const howToSchema = generateHowToSchema({
+    name: "実家じまい・生前整理のはじめかた",
+    description: "実家じまいや生前整理を、何から始めればいいか迷っている方のための3ステップガイドです。",
+    url: `${base}/articles/master-guide`,
+    steps: [
+      {
+        name: "Step 1：エンディングノートで想いを整理する",
+        text: "財産・医療・葬儀の希望を書き残すことで、家族の負担を大きく減らせます。まずはデジタルエンディングノートで現状を整理しましょう。",
+        url: `${base}/ending-note`,
+      },
+      {
+        name: "Step 2：生前整理・遺品整理を進める",
+        text: "体力があるうちに、地域の専門業者に相談しながら計画的に進めましょう。地域ページで費用相場と業者情報を確認できます。",
+        url: `${base}/area`,
+      },
+      {
+        name: "Step 3：空き家・実家の処分を検討する",
+        text: "補助金の活用・売却・解体など、損をしない選択肢を専門家と確認します。まず維持費のシミュレーターで現状を把握しましょう。",
+        url: `${base}/tools/empty-house-tax`,
+      },
+    ],
+  });
+
   return (
     <div className="space-y-10 sm:space-y-12 pb-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script
         type="application/ld+json"

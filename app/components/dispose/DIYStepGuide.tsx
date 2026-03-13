@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { DIYStepGuideProps } from "../../lib/dispose/types";
 import { generateHowToSchema } from "../../lib/dispose/schema";
 
@@ -36,9 +37,11 @@ export default function DIYStepGuide({ title, description, steps }: DIYStepGuide
               <h3 className="font-semibold text-foreground mb-1">{step.name}</h3>
               <p className="text-sm text-foreground/80 leading-relaxed">{step.text}</p>
               {step.imageUrl && (
-                <img
+                <Image
                   src={step.imageUrl}
-                  alt=""
+                  alt={step.name.slice(0, 20)}
+                  width={320}
+                  height={180}
                   className="mt-3 rounded-lg max-w-xs w-full h-auto object-cover"
                 />
               )}

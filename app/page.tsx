@@ -1,10 +1,19 @@
 import Link from "next/link";
 import HeroSection from "./components/home/HeroSection";
 import HomeContentClient from "./components/home/HomeContentClient";
+import { pageTitle } from "./lib/site-brand";
 import { getCanonicalUrl } from "./lib/site-url";
 
 export const metadata = {
+  title: pageTitle("生前整理・実家じまいを無料でサポート【ふれあいの丘】診断・補助金・業者紹介まで"),
+  description:
+    "実家じまい・生前整理を何から始めるか迷っていませんか？30秒診断で状況を把握し、全国の補助金情報・費用相場・業者紹介まで完全無料で対応。エンディングノートや相続シミュレーターも無料で利用できます。",
   alternates: { canonical: getCanonicalUrl("/") },
+  openGraph: {
+    title: "生前整理・実家じまいを無料でサポート｜ふれあいの丘",
+    description: "実家じまい・生前整理を何から始めるか迷っていませんか？診断・補助金・業者紹介まで完全無料。",
+    url: getCanonicalUrl("/"),
+  },
 };
 
 export default function Home() {

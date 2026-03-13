@@ -71,7 +71,7 @@ export default function OwlCharacter({
         {priority ? (
           <Image
             src={OWL_IMAGE_SRC}
-            alt="ふくろう"
+            alt="ふれあいの丘 マスコットキャラクター フクロウ"
             width={size}
             height={size}
             className="h-full w-full object-contain object-center"
@@ -80,19 +80,15 @@ export default function OwlCharacter({
             sizes={`${size}px`}
           />
         ) : (
-          <>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={OWL_IMAGE}
-              alt="ふくろう"
-              width={size}
-              height={size}
-              className="h-full w-full object-contain object-center"
-              style={{ width: size, height: size }}
-              loading="lazy"
-              aria-hidden
-            />
-          </>
+          <Image
+            src={OWL_IMAGE_SRC}
+            alt="ふれあいの丘 マスコットキャラクター フクロウ"
+            width={size}
+            height={size}
+            className="h-full w-full object-contain object-center"
+            loading="lazy"
+            aria-hidden
+          />
         )}
         {sweat && (
           <span className="absolute inset-0 flex items-start justify-center pt-1 text-lg opacity-80" aria-hidden>💦</span>

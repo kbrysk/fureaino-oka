@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 /**
  * アールクリーニング対象エリア（首都圏）。
  * cityName がこの配列に含まれる場合のみアールクリーニングを表示し、それ以外は ECOクリーン（全国）とする。
@@ -117,14 +119,14 @@ export default function CleanupAffiliateCard({ cityName, cityId }: CleanupAffili
           </p>
         </div>
       </div>
-      {/* A8 インプレッション計測（next/image 不使用・loading=lazy なし・計測漏れ防止） */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      {/* A8 インプレッション計測（計測漏れ防止のため unoptimized） */}
+      <Image
         src={impUrl}
         width={1}
         height={1}
         alt=""
-        style={{ border: 0, display: "none" }}
+        className="hidden"
+        unoptimized
       />
     </section>
   );

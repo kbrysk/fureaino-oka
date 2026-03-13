@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 /**
  * ガイドブック用の解説図・イラスト。サイトカラー（primary / accent / border）のみ使用しトンマナを統一。
  */
@@ -94,21 +96,19 @@ export function ExpertFlowDiagram() {
 }
 
 /** 章の冒頭用・小さなフクロウイラスト（画像: public/images/owl-character.png） */
-const OWL_IMAGE = "/images/owl-character.png?v=4";
+const OWL_IMAGE = "/images/owl-character.png";
 
 export function ChapterOwl({ chapterNumber }: { chapterNumber?: number }) {
   const size = 72;
   return (
     <div className="mb-4 flex justify-center print:mb-3" aria-hidden>
       <div className="relative overflow-hidden rounded-2xl" style={{ width: size, height: size }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={OWL_IMAGE}
-          alt=""
+          alt="ふれあいの丘 マスコットキャラクター フクロウ"
           width={size}
           height={size}
           className="h-full w-full object-contain object-center"
-          style={{ width: size, height: size }}
         />
       </div>
       {chapterNumber != null && (

@@ -25,7 +25,7 @@ export default function ArticleCardMicroCms({ post }: ArticleCardMicroCmsProps) 
           <div className="relative aspect-video w-full rounded-lg overflow-hidden bg-border mb-4">
             <Image
               src={thumb}
-              alt=""
+              alt={post.title.slice(0, 20)}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

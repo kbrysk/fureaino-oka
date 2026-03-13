@@ -130,7 +130,7 @@ function DashboardCard({
       </div>
       {iconSlug && (
         <div className="hidden sm:flex shrink-0 self-center w-10 h-10 rounded-xl overflow-hidden bg-primary-light/30 border border-primary/20 items-center justify-center">
-          <Image src={OWL_IMAGE} alt="" width={28} height={28} className="object-contain w-7 h-7" aria-hidden />
+          <Image src={OWL_IMAGE} alt="ふれあいの丘 マスコットキャラクター フクロウ" width={28} height={28} className="object-contain w-7 h-7" aria-hidden />
         </div>
       )}
     </Link>
