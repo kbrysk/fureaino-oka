@@ -1,6 +1,7 @@
 "use client";
 
 // U6: サイト内検索UI 2026-03
+// U6-ARIA-FIX: aria-haspopup削除・aria-controls追加 2026-03
 
 import React from "react";
 import Link from "next/link";
@@ -100,9 +101,9 @@ export function SiteSearch() {
           ].join(" ")}
           aria-label="サイト内検索"
           aria-expanded={isOpen && results.length > 0}
-          aria-haspopup="listbox"
           role="combobox"
           aria-autocomplete="list"
+          aria-controls="search-results-listbox"
         />
         <svg
           className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400"
