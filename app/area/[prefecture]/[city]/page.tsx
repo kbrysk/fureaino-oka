@@ -45,6 +45,7 @@ import {
 import { generateFaqSchema } from "../../../lib/faq/schema";
 import { getAreaContent } from "../../../lib/getAreaContent";
 import { generateBreadcrumbSchema } from "../../../lib/schema/breadcrumb";
+import { generateLocalBusinessSchema } from "../../../lib/schema/local-business";
 
 type SearchParamsRecord = { [key: string]: string | string[] | undefined };
 
@@ -141,6 +142,13 @@ export default async function AreaPage({ params, searchParams }: Props) {
       { name: data.prefName, url: `${base}/area/${prefecture}` },
       { name: data.cityName, url: `${base}/area/${prefecture}/${city}` },
     ]);
+    const localBizSchema = generateLocalBusinessSchema({
+      cityName: data.cityName,
+      prefectureName: data.prefName,
+      prefecture,
+      city,
+      pageType: "city",
+    });
     return (
       <div className="space-y-8">
         <AreaBodyMeta cityName={data.cityName} />
@@ -148,6 +156,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
         <BreadcrumbJsonLd itemListElements={breadcrumbItems} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
         <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="main" />
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug">
@@ -238,6 +247,13 @@ export default async function AreaPage({ params, searchParams }: Props) {
     { name: area.prefecture, url: `${base}/area/${prefecture}` },
     { name: area.city, url: `${base}/area/${prefecture}/${city}` },
   ]);
+  const localBizSchema = generateLocalBusinessSchema({
+    cityName: area.city,
+    prefectureName: area.prefecture,
+    prefecture,
+    city,
+    pageType: "city",
+  });
 
   const faqs = areaData?.faqs ?? [];
 
@@ -248,6 +264,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
       <BreadcrumbJsonLd itemListElements={richBreadcrumbItems} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
       {faqs && faqs.length > 0 && (
         <script
           type="application/ld+json"

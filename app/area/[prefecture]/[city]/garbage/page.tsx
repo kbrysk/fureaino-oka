@@ -17,9 +17,12 @@ import NearbySubsidyLinks from "../../../../components/NearbySubsidyLinks";
 import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
 import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
+import { TableOfContents } from "../../../../components/TableOfContents";
+import { RelatedCitiesInPrefecture } from "../../../../components/RelatedCitiesInPrefecture";
 import { pageTitle } from "../../../../lib/site-brand";
 import { getCanonicalUrl, getCanonicalBase } from "../../../../lib/site-url";
 import { generateBreadcrumbSchema } from "../../../../lib/schema/breadcrumb";
+import { generateLocalBusinessSchema } from "../../../../lib/schema/local-business";
 import { generateFaqSchema } from "../../../../lib/faq/schema";
 import { getGarbageFaq } from "../../../../lib/faq/area-subsidy-garbage-faq";
 
@@ -66,10 +69,18 @@ export default async function AreaGarbagePage({ params }: Props) {
     ]);
     const garbagePageUrl = `${base}/area/${prefecture}/${city}/garbage`;
     const faqSchema = generateFaqSchema(getGarbageFaq(data.cityName), { url: garbagePageUrl });
+    const localBizSchema = generateLocalBusinessSchema({
+      cityName: data.cityName,
+      prefectureName: data.prefName,
+      prefecture,
+      city,
+      pageType: "garbage",
+    });
     return (
       <div className="space-y-8">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
         <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="garbage" />
         <div>
           <h1 className="text-2xl font-bold text-primary">
@@ -110,11 +121,19 @@ export default async function AreaGarbagePage({ params }: Props) {
   ]);
   const garbagePageUrl = `${base}/area/${prefecture}/${city}/garbage`;
   const faqSchema = generateFaqSchema(getGarbageFaq(area.city), { url: garbagePageUrl });
+  const localBizSchema = generateLocalBusinessSchema({
+    cityName: area.city,
+    prefectureName: data.prefName,
+    prefecture,
+    city,
+    pageType: "garbage",
+  });
 
   return (
     <div className="space-y-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="garbage" />
       <div>
         <h1 className="text-2xl font-bold text-primary">
@@ -125,9 +144,16 @@ export default async function AreaGarbagePage({ params }: Props) {
         </p>
       </div>
 
+      <TableOfContents
+        items={[
+          { id: "column", label: "生前整理コラム" },
+          { id: "price-guide", label: "遺品整理・相場目安" },
+        ]}
+      />
+
       <AreaOwlBlock cityName={area.city} />
 
-      <section className="bg-amber-50/80 rounded-2xl border border-amber-200/60 p-5">
+      <section id="column" className="bg-amber-50/80 rounded-2xl border border-amber-200/60 p-5">
         <h2 className="text-sm font-bold text-amber-900/90 mb-2">
           {area.city}（{area.prefecture}）の生前整理コラム
         </h2>
@@ -143,7 +169,7 @@ export default async function AreaGarbagePage({ params }: Props) {
         localRiskText={data.mascot.localRiskText}
       />
 
-      <div className="bg-card rounded-2xl border border-border overflow-hidden">
+      <div id="price-guide" className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
           <h2 className="font-bold text-primary">遺品整理・実家片付けの相場目安</h2>
         </div>
@@ -188,6 +214,13 @@ export default async function AreaGarbagePage({ params }: Props) {
           無料で見積もりを依頼する
         </Link>
       </div>
+
+      <RelatedCitiesInPrefecture
+        currentCity={city}
+        prefecture={prefecture}
+        prefectureName={data.prefName}
+        pageType="garbage"
+      />
 
       <NearbySubsidyLinks
         cityName={area.city}

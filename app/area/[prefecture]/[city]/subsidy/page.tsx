@@ -9,6 +9,7 @@ import { getSubsidyFaq } from "../../../../lib/faq/area-subsidy-garbage-faq";
 import { buildRegionalFaqItems } from "../../../../lib/regional-faq-data";
 import { getCanonicalBase } from "../../../../lib/site-url";
 import { generateBreadcrumbSchema } from "../../../../lib/schema/breadcrumb";
+import { generateLocalBusinessSchema } from "../../../../lib/schema/local-business";
 import { getRegionalStats } from "../../../../lib/utils/regional-stats-loader";
 import AreaBreadcrumbs from "../../../../components/AreaBreadcrumbs";
 import CostSimulator from "../../../../components/CostSimulator";
@@ -19,6 +20,9 @@ import AreaSurveyCredit from "../../../../components/AreaSurveyCredit";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import RegionalFaq from "../../../../components/RegionalFaq";
 import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalCard";
+import { TableOfContents } from "../../../../components/TableOfContents";
+import { SubsidySummaryBox } from "../../../../components/SubsidySummaryBox";
+import { RelatedCitiesInPrefecture } from "../../../../components/RelatedCitiesInPrefecture";
 import { pageTitle } from "../../../../lib/site-brand";
 import type { FaqItem } from "../../../../lib/faq/schema";
 
@@ -135,6 +139,13 @@ export default async function AreaSubsidyPage({ params }: Props) {
   const faqSchema = generateFaqSchema(faqItems, { url: pageUrl });
   const regionalFaqItems = buildRegionalFaqItems(cityName);
   const regionalFaqSchema = generateFaqSchema(regionalFaqItems, { url: pageUrl });
+  const localBizSchema = generateLocalBusinessSchema({
+    cityName,
+    prefectureName: prefName,
+    prefecture,
+    city,
+    pageType: "subsidy",
+  });
 
   if (data._isDefault && !areaContent) {
     const fallbackFaqSchema = generateFaqSchema(getSubsidyFaq(cityName), { url: pageUrl });
@@ -142,6 +153,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
       <div className="space-y-8">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fallbackFaqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
         <AreaBreadcrumbs
           prefecture={prefName}
           city={cityName}
@@ -198,6 +210,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
       <AreaBreadcrumbs
         prefecture={prefName}
         city={cityName}
@@ -235,6 +248,19 @@ export default async function AreaSubsidyPage({ params }: Props) {
         </div>
       </section>
 
+      {(() => {
+        const tocItems = [
+          { id: "cost-simulator-section", label: "費用シミュレーター" },
+          ...(subsidyInfo?.condition ? [{ id: "conditions", label: "申請条件" }] : []),
+          { id: "tax-risk", label: "放置のリスク" },
+          { id: "regional-faq-heading", label: "よくある質問" },
+          ...(faqItems.length > 0 ? [{ id: "faq-other", label: "その他の質問" }] : []),
+        ];
+        return <TableOfContents items={tocItems} />;
+      })()}
+
+      <SubsidySummaryBox cityName={cityName} hasRealData={!data._isDefault} />
+
       <section id="cost-simulator-section" aria-label="解体・片付け費用シミュレーター">
         <CostSimulator
           cityName={cityName}
@@ -249,7 +275,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
 
       {/* B. 役所言葉の「翻訳」セクション */}
       {subsidyInfo?.condition && (
-        <section className="rounded-2xl border border-border bg-card overflow-hidden">
+        <section id="conditions" className="rounded-2xl border border-border bg-card overflow-hidden">
           <div className="px-6 py-4 border-b border-border bg-primary-light/30">
             <h2 className="font-bold text-primary">役所の言葉を、わかりやすく翻訳しました</h2>
           </div>
@@ -268,7 +294,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
       )}
 
       {/* C. 放置のリスクと解決策 */}
-      <section className="rounded-2xl border border-amber-200 bg-amber-50/80 p-6">
+      <section id="tax-risk" className="rounded-2xl border border-amber-200 bg-amber-50/80 p-6">
         <h2 className="font-bold text-amber-900/90 mb-4 flex items-center gap-2">
           <span aria-hidden>⚠️</span> 空き家を放置すると、固定資産税が最大6倍になる可能性があります
         </h2>
@@ -296,7 +322,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
 
       {/* その他FAQ（地域JSON・共通補助金FAQ） */}
       {faqItems.length > 0 && (
-        <section className="rounded-2xl border border-border bg-card overflow-hidden">
+        <section id="faq-other" className="rounded-2xl border border-border bg-card overflow-hidden">
           <div className="px-6 py-4 border-b border-border bg-primary-light/30">
             <h2 className="font-bold text-primary">{cityName}の補助金 その他の質問</h2>
           </div>
@@ -310,6 +336,13 @@ export default async function AreaSubsidyPage({ params }: Props) {
           </dl>
         </section>
       )}
+
+      <RelatedCitiesInPrefecture
+        currentCity={city}
+        prefecture={prefecture}
+        prefectureName={prefName}
+        pageType="subsidy"
+      />
 
       <NearbySubsidyLinks
         cityName={cityName}

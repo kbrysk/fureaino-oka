@@ -13,6 +13,7 @@ import { getRegionalStats } from "../../../../lib/utils/regional-stats-loader";
 import { pageTitle } from "../../../../lib/site-brand";
 import { getCanonicalUrl, getCanonicalBase } from "../../../../lib/site-url";
 import { generateBreadcrumbSchema } from "../../../../lib/schema/breadcrumb";
+import { generateLocalBusinessSchema } from "../../../../lib/schema/local-business";
 
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
@@ -56,10 +57,18 @@ export default async function AreaCostPage({ params }: Props) {
     { name: cityName, url: `${base}/area/${prefecture}/${city}` },
     { name: `${cityName}の費用相場`, url: `${base}/area/${prefecture}/${city}/cost` },
   ]);
+  const localBizSchema = generateLocalBusinessSchema({
+    cityName,
+    prefectureName: prefName,
+    prefecture,
+    city,
+    pageType: "cost",
+  });
 
   return (
     <div className="space-y-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
       <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="cost" />
       <div>
         <h1 className="text-2xl font-bold text-primary">

@@ -1,5 +1,8 @@
 import Link from "next/link";
 import EmptyHouseTaxSimulator from "../../components/EmptyHouseTaxSimulator";
+import { RegionalCTASelector } from "../../components/RegionalCTASelector";
+import { getPrefectureIds } from "../../lib/utils/city-loader";
+import { PREFECTURE_ID_TO_NAME } from "../../lib/prefecture-ids";
 import { pageTitle } from "../../lib/site-brand";
 import { getCanonicalUrl, getCanonicalBase } from "../../lib/site-url";
 import { generateBreadcrumbSchema } from "../../lib/schema/breadcrumb";
@@ -20,6 +23,8 @@ export const metadata = {
 
 export default function EmptyHouseTaxPage() {
   const base = getCanonicalBase();
+  const prefIds = getPrefectureIds();
+  const prefectures = prefIds.map((id) => ({ id, name: PREFECTURE_ID_TO_NAME[id] ?? id }));
   const breadcrumb = generateBreadcrumbSchema([
     { name: "ホーム", url: `${base}/` },
     { name: "無料ツール", url: `${base}/tools` },
@@ -49,6 +54,11 @@ export default function EmptyHouseTaxPage() {
           から提携サービスをご案内しています。
         </p>
       </div>
+      <RegionalCTASelector
+        targetPage="subsidy"
+        labelText="維持費を減らすための補助金をお住まいの地域で確認しましょう"
+        prefectures={prefectures}
+      />
       <Link
         href="/tools"
         className="inline-block text-primary font-medium hover:underline"
