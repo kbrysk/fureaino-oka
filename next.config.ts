@@ -19,8 +19,15 @@ const nextConfig: NextConfig = {
     ];
   },
   // GSC 用: generateSitemaps は /sitemap/[id].xml のみ生成するため /sitemap.xml は 404 になる。インデックスを返す API へ転送。
+  // 分割サイトマップ: /sitemaps/*/sitemap.xml で配信（Route Handler は .xml なしで応答するため rewrite）
   async rewrites() {
-    return [{ source: "/sitemap.xml", destination: "/api/sitemap-index" }];
+    return [
+      { source: "/sitemap.xml", destination: "/api/sitemap-index" },
+      { source: "/sitemaps/static/sitemap.xml", destination: "/sitemaps/static/sitemap" },
+      { source: "/sitemaps/area/sitemap.xml", destination: "/sitemaps/area/sitemap" },
+      { source: "/sitemaps/tools/sitemap.xml", destination: "/sitemaps/tools/sitemap" },
+      { source: "/sitemaps/articles/sitemap.xml", destination: "/sitemaps/articles/sitemap" },
+    ];
   },
   // ホストエラー・5xx 抑制: ビルド時エラーを厳格に検出
   typescript: { ignoreBuildErrors: false },

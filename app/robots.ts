@@ -19,6 +19,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           "/api/",
           "/settings",
+          "/_next/",
           "/contact/thanks",
           "/senryu/submit",
         ],
@@ -29,12 +30,19 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           "/api/",
           "/settings",
+          "/_next/",
           "/contact/thanks",
           "/senryu/submit",
         ],
       },
     ],
-    sitemap: `${ROBOTS_BASE}/sitemap.xml`,
+    sitemap: [
+      `${ROBOTS_BASE}/sitemap.xml`,
+      `${ROBOTS_BASE}/sitemaps/static/sitemap.xml`,
+      `${ROBOTS_BASE}/sitemaps/area/sitemap.xml`,
+      `${ROBOTS_BASE}/sitemaps/tools/sitemap.xml`,
+      `${ROBOTS_BASE}/sitemaps/articles/sitemap.xml`,
+    ],
     host: ROBOTS_BASE,
   };
 }
