@@ -17,15 +17,18 @@ import NearbySubsidyLinks from "../../../../components/NearbySubsidyLinks";
 import SpokeInternalLinks from "../../../../components/SpokeInternalLinks";
 import OperatorTrustBlock from "../../../../components/OperatorTrustBlock";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
+import { DirectAnswerFaq } from "../../../../components/DirectAnswerFaq";
 import { TableOfContents } from "../../../../components/TableOfContents";
 import { PageLead } from "../../../../components/PageLead";
 import { RelatedCitiesInPrefecture } from "../../../../components/RelatedCitiesInPrefecture";
 import { pageTitle } from "../../../../lib/site-brand";
 import { getCanonicalUrl, getCanonicalBase } from "../../../../lib/site-url";
+// S1: _isDefaultページ CTR改善 メタ修正 2026-03（Search Console CTR=0%改善）
 import { generateBreadcrumbSchema } from "../../../../lib/schema/breadcrumb";
 import { generateLocalBusinessSchema } from "../../../../lib/schema/local-business";
 import { generateFaqSchema } from "../../../../lib/faq/schema";
 import { getGarbageFaq } from "../../../../lib/faq/area-subsidy-garbage-faq";
+import { getGarbageDirectAnswerFaq } from "../../../../lib/faq/direct-answer-faq";
 
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
@@ -44,10 +47,24 @@ export async function generateMetadata({ params }: Props) {
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
   if (!area) return { title: pageTitle("粗大ゴミ・遺品整理") };
+  const canonicalUrl = getCanonicalUrl(`/area/${prefecture}/${city}/garbage`);
+  const year = new Date().getFullYear();
+  const title = data._isDefault
+    ? `${data.cityName}の粗大ゴミ回収・遺品整理費用｜申込方法と相場【${year}年版】`
+    : `${data.cityName}の粗大ゴミ処分・遺品整理の費用と手順`;
+  const description = data._isDefault
+    ? `${data.cityName}の粗大ゴミの申込方法・収集日・持ち込み場所と、遺品整理業者の費用相場（1K〜3LDK別）をまとめています。無料見積もりも確認できます。`
+    : `${data.prefName}${data.cityName}の粗大ゴミ申し込み・遺品整理の相談先。無料見積もりで比較。`;
+  const fullTitle = pageTitle(title);
   return {
-    title: pageTitle(`${data.cityName}の粗大ゴミ処分・遺品整理の費用と手順`),
-    description: `${data.prefName}${data.cityName}の粗大ゴミ申し込み・遺品整理の相談先。無料見積もりで比較。`,
-    alternates: { canonical: getCanonicalUrl(`/area/${prefecture}/${city}/garbage`) },
+    title: fullTitle,
+    description,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title: fullTitle,
+      description,
+      url: canonicalUrl,
+    },
   };
 }
 
@@ -70,6 +87,16 @@ export default async function AreaGarbagePage({ params }: Props) {
     ]);
     const garbagePageUrl = `${base}/area/${prefecture}/${city}/garbage`;
     const faqSchema = generateFaqSchema(getGarbageFaq(data.cityName), { url: garbagePageUrl });
+    const garbageFaqItems = getGarbageDirectAnswerFaq(data.cityName);
+    const garbageFaqSchemaEntries = garbageFaqItems.map((item) => ({
+      "@type": "Question" as const,
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: item.supplement ? `${item.directAnswer} ${item.supplement}` : item.directAnswer,
+      },
+    }));
+    faqSchema.mainEntity = [...faqSchema.mainEntity, ...garbageFaqSchemaEntries];
     const localBizSchema = generateLocalBusinessSchema({
       cityName: data.cityName,
       prefectureName: data.prefName,
@@ -95,6 +122,10 @@ export default async function AreaGarbagePage({ params }: Props) {
           prefId={data.prefId}
           cityId={data.cityId}
           faqItems={[]}
+        />
+        <DirectAnswerFaq
+          items={garbageFaqItems}
+          sectionTitle={`${data.cityName}の粗大ゴミ・遺品整理 よくある質問`}
         />
         <div className="flex flex-wrap gap-3">
           <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
@@ -123,6 +154,16 @@ export default async function AreaGarbagePage({ params }: Props) {
   ]);
   const garbagePageUrl = `${base}/area/${prefecture}/${city}/garbage`;
   const faqSchema = generateFaqSchema(getGarbageFaq(area.city), { url: garbagePageUrl });
+  const garbageFaqItems = getGarbageDirectAnswerFaq(area.city);
+  const garbageFaqSchemaEntries = garbageFaqItems.map((item) => ({
+    "@type": "Question" as const,
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer" as const,
+      text: item.supplement ? `${item.directAnswer} ${item.supplement}` : item.directAnswer,
+    },
+  }));
+  faqSchema.mainEntity = [...faqSchema.mainEntity, ...garbageFaqSchemaEntries];
   const localBizSchema = generateLocalBusinessSchema({
     cityName: area.city,
     prefectureName: data.prefName,
@@ -149,9 +190,15 @@ export default async function AreaGarbagePage({ params }: Props) {
       <PageLead text={`${area.city}の粗大ゴミの申込方法・遺品整理の費用相場をこのページで確認できます。`} />
       <TableOfContents
         items={[
+          { id: "faq-garbage-method", label: "よくある質問" },
           { id: "column", label: "生前整理コラム" },
           { id: "price-guide", label: "遺品整理・相場目安" },
         ]}
+      />
+
+      <DirectAnswerFaq
+        items={garbageFaqItems}
+        sectionTitle={`${area.city}の粗大ゴミ・遺品整理 よくある質問`}
       />
 
       <AreaOwlBlock cityName={area.city} />

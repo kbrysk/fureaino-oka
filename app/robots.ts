@@ -18,6 +18,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: [
           "/api/",
+          "/admin/",
           "/settings",
           "/_next/",
           "/contact/thanks",
@@ -29,6 +30,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: [
           "/api/",
+          "/admin/",
           "/settings",
           "/_next/",
           "/contact/thanks",

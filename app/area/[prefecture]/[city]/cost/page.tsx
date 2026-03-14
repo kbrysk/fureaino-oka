@@ -12,8 +12,12 @@ import JikkaOptimizer from "../../../../components/JikkaOptimizer";
 import { getRegionalStats } from "../../../../lib/utils/regional-stats-loader";
 import { pageTitle } from "../../../../lib/site-brand";
 import { getCanonicalUrl, getCanonicalBase } from "../../../../lib/site-url";
+// S1: _isDefaultページ CTR改善 メタ修正 2026-03（Search Console CTR=0.1%改善・全ページ共通）
 import { generateBreadcrumbSchema } from "../../../../lib/schema/breadcrumb";
 import { generateLocalBusinessSchema } from "../../../../lib/schema/local-business";
+import JsonLd from "../../../../components/JsonLd";
+import { CostBreakdownTable } from "../../../../components/CostBreakdownTable";
+// S2: costページ 解体費用テーブル・FAQスキーマ追加（CTR改善・AI Overview対策）2026-03
 
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
@@ -32,10 +36,19 @@ export async function generateMetadata({ params }: Props) {
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
   if (!area) return { title: pageTitle("費用相場") };
+  const canonicalUrl = getCanonicalUrl(`/area/${prefecture}/${city}/cost`);
+  const title = `${data.cityName}の実家じまい・解体費用の目安｜間取り別相場と補助金【無料確認】`;
+  const description = `${data.cityName}の実家じまい・空き家解体にかかる費用の目安を間取り別（1K〜4LDK以上）で掲載。解体補助金を使えばさらに費用を抑えられます。無料で相場を確認できます。`;
+  const fullTitle = pageTitle(title);
   return {
-    title: pageTitle(`${data.cityName}の実家じまい・解体費用相場シミュレーション`),
-    description: `${data.prefName}${data.cityName}の実家じまい・空き家解体の費用相場を間取り・荷物量でシミュレーション。無料診断で資産価値の目安を把握。`,
-    alternates: { canonical: getCanonicalUrl(`/area/${prefecture}/${city}/cost`) },
+    title: fullTitle,
+    description,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title: fullTitle,
+      description,
+      url: canonicalUrl,
+    },
   };
 }
 
@@ -65,10 +78,34 @@ export default async function AreaCostPage({ params }: Props) {
     pageType: "cost",
   });
 
+  const costFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `${cityName}で実家の解体にはいくらかかりますか？`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${cityName}の木造住宅の解体費用は30〜40坪で90〜150万円が目安です。解体補助金を活用することで費用を大幅に抑えられる場合があります。まずは無料見積もりで確認することをお勧めします。`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `${cityName}で遺品整理・実家片付けにはいくらかかりますか？`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${cityName}の遺品整理費用は間取りによって異なり、1Kで3〜8万円、3LDK以上で25万円〜が目安です。荷物の量や種類によって変動するため、複数業者から無料見積もりを取ることをお勧めします。`,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="space-y-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
+      <JsonLd data={breadcrumb} />
+      <JsonLd data={localBizSchema} />
+      <JsonLd data={costFaqSchema} />
       <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="cost" />
       <div>
         <h1 className="text-2xl font-bold text-primary">
@@ -78,6 +115,8 @@ export default async function AreaCostPage({ params }: Props) {
           間取り・荷物量・建物条件で費用と放置リスクを試算します。
         </p>
       </div>
+
+      <CostBreakdownTable cityName={cityName} />
 
       <section aria-labelledby="cost-simulator-heading">
         <h2 id="cost-simulator-heading" className="sr-only">

@@ -6,6 +6,7 @@ import { getAreaContentsStaticParams } from "../../../../lib/utils/area-contents
 import { translateBureaucraticToPlain } from "../../../../lib/subsidy-translate";
 import { generateFaqSchema } from "../../../../lib/faq/schema";
 import { getSubsidyFaq } from "../../../../lib/faq/area-subsidy-garbage-faq";
+import { getSubsidyDirectAnswerFaq } from "../../../../lib/faq/direct-answer-faq";
 import { buildRegionalFaqItems } from "../../../../lib/regional-faq-data";
 import { getCanonicalBase } from "../../../../lib/site-url";
 import { generateBreadcrumbSchema } from "../../../../lib/schema/breadcrumb";
@@ -25,8 +26,12 @@ import { SubsidySummaryBox } from "../../../../components/SubsidySummaryBox";
 import { PageLead } from "../../../../components/PageLead";
 import { RelatedCitiesInPrefecture } from "../../../../components/RelatedCitiesInPrefecture";
 import JsonLd from "../../../../components/JsonLd";
+import { SubsidyCostSection } from "../../../../components/SubsidyCostSection";
+import { DirectAnswerFaq } from "../../../../components/DirectAnswerFaq";
 import { pageTitle } from "../../../../lib/site-brand";
-import type { FaqItem } from "../../../../lib/faq/schema";
+import type { FaqItem, FaqPageSchema } from "../../../../lib/faq/schema";
+// S1: _isDefaultページ CTR改善 メタ修正 2026-03（Search Console CTR=0%改善）
+// S4: 解体費用目安セクション追加（「解体費用 ○○市」クエリ取り込み）2026-03
 
 export const dynamicParams = true;
 export const revalidate = 86400;
@@ -44,6 +49,15 @@ function extractMaxAmountForTitle(maxAmountRaw: string | undefined): string | nu
   if (!matches?.length) return null;
   const maxVal = Math.max(...matches.map((m) => parseInt(m.replace(/\D/g, ""), 10)));
   return maxVal ? `${maxVal}万円` : null;
+}
+
+/** S4: 補助金上限額テキストから円換算の数値を取得（SubsidyCostSection・FAQ用） */
+function parseMaxSubsidyAmountYen(maxAmountRaw: string | undefined): number | null {
+  if (!maxAmountRaw || /詳細確認中|お問い合わせ|—|－/.test(maxAmountRaw)) return null;
+  const matches = maxAmountRaw.match(/(\d+)\s*万/g);
+  if (!matches?.length) return null;
+  const maxVal = Math.max(...matches.map((m) => parseInt(m.replace(/\D/g, ""), 10)));
+  return maxVal ? maxVal * 10000 : null;
 }
 
 export async function generateStaticParams() {
@@ -67,19 +81,31 @@ export async function generateMetadata({ params }: Props) {
   } : null);
 
   const cityName = areaContent?.cityName ?? data.cityName;
+  const prefName = data.prefName;
 
   const base = getCanonicalBase();
   const canonicalSubsidy = `${base}/area/${prefecture}/${city}/subsidy`;
-  const title = `【2026年最新】${cityName}の解体補助金｜受給条件・申請方法・上限額を解説`;
-  const description = `${cityName}の空き家解体補助金について、受給条件・申請方法・上限額をわかりやすく解説。固定資産税が最大6倍になるリスクも。補助金を活用した解体費用の実質負担額を今すぐ無料で試算できます。`;
 
+  // _isDefault時のみCTR改善用のtitle・description（実データありは変更しない）
+  const isDefaultSubsidy = data._isDefault && !areaContent;
+  const title = isDefaultSubsidy
+    ? `${cityName}の空き家解体補助金｜申請条件と上限額を確認【無料】`
+    : `【2026年最新】${cityName}の解体補助金｜受給条件・申請方法・上限額を解説`;
+  let description = isDefaultSubsidy
+    ? `${cityName}（${prefName}）で空き家・実家の解体に使える補助金の申請条件・上限額・窓口をまとめています。補助金の対象か無料でチェックできます。`
+    : `${cityName}の空き家解体補助金について、受給条件・申請方法・上限額をわかりやすく解説。固定資産税が最大6倍になるリスクも。補助金を活用した解体費用の実質負担額を今すぐ無料で試算できます。`;
+  if (isDefaultSubsidy && description.length < 120) {
+    description += "昭和56年以前の建物をお持ちの方はぜひご確認ください。";
+  }
+
+  const fullTitle = pageTitle(title);
   return {
-    title: pageTitle(title),
+    title: fullTitle,
     description,
     alternates: { canonical: canonicalSubsidy },
     openGraph: {
-      title: `${cityName}の解体補助金【2026年最新】｜ふれあいの丘`,
-      description: `${cityName}の空き家解体補助金の条件・申請方法・上限額を解説。無料で費用を試算できます。`,
+      title: fullTitle,
+      description,
       url: canonicalSubsidy,
     },
   };
@@ -107,6 +133,8 @@ export default async function AreaSubsidyPage({ params }: Props) {
     /[0-9０-９]|万|円|上限/.test(subsidyInfo.maxAmount) &&
     subsidyInfo.maxAmount !== "—" &&
     !/詳細確認中|お問い合わせ/.test(subsidyInfo.maxAmount);
+
+  const maxSubsidyAmount = parseMaxSubsidyAmountYen(subsidyInfo?.maxAmount) ?? null;
 
   const base = getCanonicalBase();
   const pageUrl = `${base}/area/${prefecture}/${city}/subsidy`;
@@ -139,6 +167,30 @@ export default async function AreaSubsidyPage({ params }: Props) {
     ...commonSubsidyFaqs.filter((c) => c.question !== "空き家を放置すると固定資産税はどうなりますか？"),
   ];
   const faqSchema = generateFaqSchema(faqItems, { url: pageUrl });
+  const directFaqItems = getSubsidyDirectAnswerFaq(cityName, maxSubsidyAmount);
+  const directFaqSchemaEntries = directFaqItems.map((item) => ({
+    "@type": "Question" as const,
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer" as const,
+      text: item.supplement ? `${item.directAnswer} ${item.supplement}` : item.directAnswer,
+    },
+  }));
+  const costQuestionEntry = {
+    "@type": "Question" as const,
+    name: `${cityName}で解体費用に補助金を使うといくら節約できますか？`,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: maxSubsidyAmount
+        ? `${cityName}の補助金上限は${(maxSubsidyAmount / 10000).toFixed(0)}万円です。木造30〜40坪の解体費用（90〜150万円）に適用すると、実質${Math.max(0, 90 - maxSubsidyAmount / 10000).toFixed(0)}〜${Math.max(0, 150 - maxSubsidyAmount / 10000).toFixed(0)}万円程度になります。補助金の申請条件を満たしているか必ず確認してください。`
+        : `${cityName}の補助金（最大100万円程度）を活用すると、木造30〜40坪の解体費用（90〜150万円）から補助金分を差し引いた実質負担を大幅に抑えられます。詳細はページ内の費用目安テーブルをご確認ください。`,
+    },
+  };
+  faqSchema.mainEntity = [
+    ...faqSchema.mainEntity,
+    ...directFaqSchemaEntries,
+    costQuestionEntry,
+  ] as FaqPageSchema["mainEntity"];
   const regionalFaqItems = buildRegionalFaqItems(cityName);
   const regionalFaqSchema = generateFaqSchema(regionalFaqItems, { url: pageUrl });
   const localBizSchema = generateLocalBusinessSchema({
@@ -151,6 +203,27 @@ export default async function AreaSubsidyPage({ params }: Props) {
 
   if (data._isDefault && !areaContent) {
     const fallbackFaqSchema = generateFaqSchema(getSubsidyFaq(cityName), { url: pageUrl });
+    const fallbackDirectFaq = getSubsidyDirectAnswerFaq(cityName, null);
+    const fallbackDirectEntries = fallbackDirectFaq.map((item) => ({
+      "@type": "Question" as const,
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: item.supplement ? `${item.directAnswer} ${item.supplement}` : item.directAnswer,
+      },
+    }));
+    fallbackFaqSchema.mainEntity = [
+      ...fallbackFaqSchema.mainEntity,
+      ...fallbackDirectEntries,
+      {
+        "@type": "Question" as const,
+        name: `${cityName}で解体費用に補助金を使うといくら節約できますか？`,
+        acceptedAnswer: {
+          "@type": "Answer" as const,
+          text: `${cityName}の補助金（最大100万円程度）を活用すると、木造30〜40坪の解体費用（90〜150万円）から補助金分を差し引いた実質負担を大幅に抑えられます。詳細はページ内の費用目安テーブルをご確認ください。`,
+        },
+      },
+    ];
     return (
       <div className="space-y-10">
         <JsonLd data={breadcrumb} />
@@ -184,6 +257,11 @@ export default async function AreaSubsidyPage({ params }: Props) {
           cityId={data.cityId}
           faqItems={[]}
         />
+        <DirectAnswerFaq
+          items={getSubsidyDirectAnswerFaq(cityName, null)}
+          sectionTitle={`${cityName}の補助金 よくある質問`}
+        />
+        <SubsidyCostSection cityName={cityName} maxSubsidyAmount={null} />
         <div className="flex flex-wrap gap-3">
           <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
             ← 地域一覧（全国）へ
@@ -250,6 +328,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
           { id: "cost-simulator-section", label: "費用シミュレーター" },
           ...(subsidyInfo?.condition ? [{ id: "conditions", label: "申請条件" }] : []),
           { id: "tax-risk", label: "放置のリスク" },
+          { id: "cost-estimate", label: "解体費用の目安" },
           { id: "regional-faq-heading", label: "よくある質問" },
           ...(faqItems.length > 0 ? [{ id: "faq-other", label: "その他の質問" }] : []),
         ];
@@ -315,6 +394,12 @@ export default async function AreaSubsidyPage({ params }: Props) {
         localRiskText={data.mascot?.localRiskText}
       />
 
+      {/* S5: 直接回答型FAQ（AI Overview対策・40文字以内の直接回答） */}
+      <DirectAnswerFaq
+        items={directFaqItems}
+        sectionTitle={`${cityName}の補助金 よくある質問`}
+      />
+
       {/* 地域特化FAQ（アコーディオン + FAQPage JSON-LD・単一データソース） */}
       <RegionalFaq cityName={cityName} />
 
@@ -334,6 +419,8 @@ export default async function AreaSubsidyPage({ params }: Props) {
           </dl>
         </section>
       )}
+
+      <SubsidyCostSection cityName={cityName} maxSubsidyAmount={maxSubsidyAmount} />
 
       <RelatedCitiesInPrefecture
         currentCity={city}
