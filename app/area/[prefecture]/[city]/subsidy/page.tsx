@@ -73,12 +73,17 @@ export async function generateMetadata({ params }: Props) {
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
   const areaContent = await getAreaContent(prefecture, city);
-  const subsidyInfo = areaContent?.subsidyInfo ?? (data.subsidy?.maxAmount ? {
-    name: data.subsidy.name ?? "",
-    maxAmount: data.subsidy.maxAmount ?? "",
-    condition: data.subsidy.conditions ?? "",
-    contact: "",
-  } : null);
+  const hasNoSubsidyMeta = data.subsidy?.hasSubsidy === false;
+  const subsidyInfo = areaContent?.subsidyInfo ?? (hasNoSubsidyMeta
+    ? null
+    : data.subsidy?.maxAmount
+      ? {
+          name: data.subsidy.name ?? "",
+          maxAmount: data.subsidy.maxAmount ?? "",
+          condition: Array.isArray(data.subsidy.conditions) ? data.subsidy.conditions.join("。") : (data.subsidy.conditions ?? ""),
+          contact: "",
+        }
+      : null);
 
   const cityName = areaContent?.cityName ?? data.cityName;
   const prefName = data.prefName;
@@ -121,12 +126,19 @@ export default async function AreaSubsidyPage({ params }: Props) {
 
   const cityName = areaContent?.cityName ?? data.cityName;
   const prefName = data.prefName;
-  const subsidyInfo = areaContent?.subsidyInfo ?? (data.subsidy?.maxAmount && data.subsidy?.name ? {
-    name: data.subsidy.name,
-    maxAmount: data.subsidy.maxAmount,
-    condition: data.subsidy.conditions ?? "",
-    contact: "",
-  } : null);
+  const hasNoSubsidy = data.subsidy?.hasSubsidy === false;
+  const subsidyInfo = areaContent?.subsidyInfo ?? (hasNoSubsidy
+    ? null
+    : data.subsidy?.maxAmount && data.subsidy?.name
+      ? {
+          name: data.subsidy.name,
+          maxAmount: data.subsidy.maxAmount,
+          condition: Array.isArray(data.subsidy.conditions)
+            ? data.subsidy.conditions.join("。")
+            : (data.subsidy.conditions ?? ""),
+          contact: data.subsidy.windowName ? `${data.subsidy.windowName}${data.subsidy.windowPhone ? `（${data.subsidy.windowPhone}）` : ""}` : "",
+        }
+      : null);
 
   const hasConcreteAmount =
     subsidyInfo?.maxAmount &&
@@ -250,6 +262,21 @@ export default async function AreaSubsidyPage({ params }: Props) {
             解体費用を払って更地にするよりも、場合によっては<strong>「そのまま売却」</strong>した方が手元に多くのお金が残るケースがあります。行動を起こす前に、まずはご実家・空き家の「現在の価値」を無料で把握しておくことをおすすめします。
           </p>
         </div>
+        {hasNoSubsidy && data.subsidy?.noSubsidyNote && (
+          <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-4">
+            <p className="text-sm font-bold text-amber-800 mb-1">
+              ⚠️ {cityName}の補助金制度について
+            </p>
+            <p className="text-sm text-amber-700">
+              {data.subsidy.noSubsidyNote}
+            </p>
+            {data.subsidy.windowPhone && (
+              <p className="text-sm text-amber-700 mt-2">
+                窓口：{data.subsidy.windowName}（{data.subsidy.windowPhone}）
+              </p>
+            )}
+          </div>
+        )}
         <AreaDirectoryFallback
           cityName={cityName}
           prefName={prefName}
@@ -261,7 +288,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
           items={getSubsidyDirectAnswerFaq(cityName, null)}
           sectionTitle={`${cityName}の補助金 よくある質問`}
         />
-        <SubsidyCostSection cityName={cityName} maxSubsidyAmount={null} />
+        {!hasNoSubsidy && <SubsidyCostSection cityName={cityName} maxSubsidyAmount={null} />}
         <div className="flex flex-wrap gap-3">
           <Link href="/area" className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline">
             ← 地域一覧（全国）へ
@@ -294,34 +321,36 @@ export default async function AreaSubsidyPage({ params }: Props) {
         page="subsidy"
       />
 
-      {/* A. ヒーローセクション */}
-      <section className="rounded-2xl bg-gradient-to-br from-primary/10 to-amber-50 border border-primary/20 p-6 sm:p-8">
-        <p className="text-lg sm:text-xl font-bold text-primary mb-6 text-center">
-          その実家、壊す前に補助金をチェック！
-        </p>
-        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-3">
-          <div className="rounded-xl bg-white border border-primary/20 p-5 shadow-sm">
-            <p className="text-xs font-bold text-foreground/60 uppercase tracking-wide mb-1">補助金名</p>
-            <p className="font-bold text-foreground/90 break-words">
-              {subsidyInfo?.name ?? `${cityName}の空き家解体補助金`}
-            </p>
+      {/* A. ヒーローセクション（制度ありの場合のみ） */}
+      {!hasNoSubsidy && (
+        <section className="rounded-2xl bg-gradient-to-br from-primary/10 to-amber-50 border border-primary/20 p-6 sm:p-8">
+          <p className="text-lg sm:text-xl font-bold text-primary mb-6 text-center">
+            その実家、壊す前に補助金をチェック！
+          </p>
+          <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-3">
+            <div className="rounded-xl bg-white border border-primary/20 p-5 shadow-sm">
+              <p className="text-xs font-bold text-foreground/60 uppercase tracking-wide mb-1">補助金名</p>
+              <p className="font-bold text-foreground/90 break-words">
+                {subsidyInfo?.name ?? `${cityName}の空き家解体補助金`}
+              </p>
+            </div>
+            <div className="rounded-xl bg-white border border-primary/20 p-5 shadow-sm">
+              <p className="text-xs font-bold text-foreground/60 uppercase tracking-wide mb-1">最大金額</p>
+              {hasConcreteAmount ? (
+                <p className="font-bold text-primary text-lg">{subsidyInfo!.maxAmount}</p>
+              ) : (
+                <p className="font-bold text-foreground/80">{cityName}の最新予算を窓口で確認する</p>
+              )}
+            </div>
+            <div className="rounded-xl bg-white border border-primary/20 p-5 shadow-sm">
+              <p className="text-xs font-bold text-foreground/60 uppercase tracking-wide mb-1">窓口</p>
+              <p className="font-medium text-foreground/90 break-words">
+                {subsidyInfo?.contact || `${cityName}の建築指導課・空き家対策担当など`}
+              </p>
+            </div>
           </div>
-          <div className="rounded-xl bg-white border border-primary/20 p-5 shadow-sm">
-            <p className="text-xs font-bold text-foreground/60 uppercase tracking-wide mb-1">最大金額</p>
-            {hasConcreteAmount ? (
-              <p className="font-bold text-primary text-lg">{subsidyInfo!.maxAmount}</p>
-            ) : (
-              <p className="font-bold text-foreground/80">{cityName}の最新予算を窓口で確認する</p>
-            )}
-          </div>
-          <div className="rounded-xl bg-white border border-primary/20 p-5 shadow-sm">
-            <p className="text-xs font-bold text-foreground/60 uppercase tracking-wide mb-1">窓口</p>
-            <p className="font-medium text-foreground/90 break-words">
-              {subsidyInfo?.contact || `${cityName}の建築指導課・空き家対策担当など`}
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {(() => {
         const tocItems = [
@@ -336,7 +365,24 @@ export default async function AreaSubsidyPage({ params }: Props) {
       })()}
 
       <PageLead text={`${cityName}の空き家解体補助金の受給条件・申請方法・上限額をこのページで確認できます。`} />
-      <SubsidySummaryBox cityName={cityName} hasRealData={!data._isDefault} />
+
+      {hasNoSubsidy && data.subsidy?.noSubsidyNote ? (
+        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-4">
+          <p className="text-sm font-bold text-amber-800 mb-1">
+            ⚠️ {cityName}の補助金制度について
+          </p>
+          <p className="text-sm text-amber-700">
+            {data.subsidy.noSubsidyNote}
+          </p>
+          {data.subsidy.windowPhone && (
+            <p className="text-sm text-amber-700 mt-2">
+              窓口：{data.subsidy.windowName}（{data.subsidy.windowPhone}）
+            </p>
+          )}
+        </div>
+      ) : !hasNoSubsidy ? (
+        <SubsidySummaryBox cityName={cityName} hasRealData={!data._isDefault} />
+      ) : null}
 
       <section id="cost-simulator-section" aria-label="解体・片付け費用シミュレーター">
         <CostSimulator
@@ -420,7 +466,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
         </section>
       )}
 
-      <SubsidyCostSection cityName={cityName} maxSubsidyAmount={maxSubsidyAmount} />
+      {!hasNoSubsidy && <SubsidyCostSection cityName={cityName} maxSubsidyAmount={maxSubsidyAmount} />}
 
       <RelatedCitiesInPrefecture
         currentCity={city}

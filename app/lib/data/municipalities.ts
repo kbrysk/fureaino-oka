@@ -18,8 +18,15 @@ export interface MunicipalityData {
     hasSubsidy: boolean;
     name?: string;
     maxAmount?: string;
-    conditions?: string;
+    /** 文字列または配列（新データ用） */
+    conditions?: string | string[];
     officialUrl?: string;
+    /** hasSubsidy=false のときの説明文 */
+    noSubsidyNote?: string;
+    windowName?: string;
+    windowPhone?: string;
+    applicationPeriod?: string;
+    notes?: string;
   };
   garbage: {
     officialUrl: string;

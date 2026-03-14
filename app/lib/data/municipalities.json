@@ -2010,5 +2010,189 @@
       "officialUrl": "https://www.city.amagasaki.hyogo.jp/kurashi/gomi/wakekata/1001925.html",
       "phone": "06-6409-1341"
     }
+  },
+  {
+    "prefId": "osaka",
+    "cityId": "ikeda",
+    "cityName": "池田市",
+    "prefName": "大阪府",
+    "mascot": {
+      "localRiskText": "池田市でも空き家の除却補助を活用して、安全なまちづくりを進めているホー。申請前に窓口に相談するホー！"
+    },
+    "subsidy": {
+      "name": "池田市既存民間建築物除却補助金",
+      "hasSubsidy": true,
+      "maxAmount": "工事費の一部（20万円以上の工事が対象。詳細は窓口にお問い合わせください）",
+      "conditions": ["倒壊する恐れのある空き家等老朽木造住宅であること", "除却工事費用が20万円以上であること", "建設業法の許可または建設リサイクル法の登録を受けた業者が施工すること", "補助金交付決定後3ヶ月以内に工事着手すること", "市税の滞納がないこと"],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "池田市まちづくり環境部都市政策課（住宅担当）",
+      "windowPhone": "072-754-6283",
+      "officialUrl": "https://www.city.ikeda.osaka.jp/soshiki/machidukurikankyo/toshiseisaku/akiya/12890.html",
+      "notes": "補助金の交付決定前に工事の契約または着手した場合は対象外。申請前に必ず窓口に相談すること。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.ikeda.osaka.jp/",
+      "phone": "072-754-6283"
+    }
+  },
+  {
+    "prefId": "shiga",
+    "cityId": "kusatsu",
+    "cityName": "草津市",
+    "prefName": "滋賀県",
+    "mascot": {
+      "localRiskText": "草津市の空き家解体補助金を活用して、安全な住環境を守るホー。年度内の完了を忘れずにホー！"
+    },
+    "subsidy": {
+      "name": "草津市空き家解体補助金",
+      "hasSubsidy": true,
+      "maxAmount": "最大40万円（補助対象費用の1/3以内）",
+      "conditions": ["5年以上使用されていない個人所有の空き家であること", "戸建て住宅（併用住宅を含む）であること", "所有権以外の権利（抵当権等）が設定されていないこと", "市税の滞納がないこと", "解体業者は建設業法の許可を受けた業者であること"],
+      "applicationPeriod": "令和7年度（9月末日が期限）",
+      "windowName": "草津市建築住宅課",
+      "windowPhone": "077-563-1234",
+      "officialUrl": "https://www.city.kusatsu.shiga.jp/kurashi/sumai/sumai/zeikinhojyo/index.html",
+      "notes": "交付決定を受けてから除却工事を行うこと。年度内に取り壊しが完了すること。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kusatsu.shiga.jp/",
+      "phone": "077-563-1234"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "fujinomiya",
+    "cityName": "富士宮市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "富士宮市の空家等除却費補助金で、老朽空き家を安全に除却するホー。事前申請を忘れずにホー！"
+    },
+    "subsidy": {
+      "name": "富士宮市空家等除却費補助金",
+      "hasSubsidy": true,
+      "maxAmount": "最大50万円（除却費用の8/10以内）",
+      "conditions": ["概ね1年以上使用されていない空き家であること", "市に特定空家等と認定されたもの、または住宅の不良度の外観測定基準の評点が100点以上のもの", "空家法第22条第2項の勧告を受けていないこと", "所有権以外の権利が設定されていないこと", "市税の滞納がないこと"],
+      "applicationPeriod": "令和7年度（要事前申請・詳細は窓口に確認）",
+      "windowName": "富士宮市役所（建築住宅課）",
+      "windowPhone": "0544-22-1111",
+      "officialUrl": "https://www.city.fujinomiya.lg.jp/1040610000/p000592.html",
+      "notes": "補助金の交付決定前に工事に着手した場合は対象外。自治会等が5年以上広場等に利用する予定の空き家も対象。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.fujinomiya.lg.jp/",
+      "phone": "0544-22-1111"
+    }
+  },
+  {
+    "prefId": "fukuoka",
+    "cityId": "nakagawa",
+    "cityName": "那珂川市",
+    "prefName": "福岡県",
+    "mascot": {
+      "localRiskText": "那珂川市の耐震改修・除却補助金で、旧耐震の木造住宅を安全に除却するホー。耐震診断から申請するホー！"
+    },
+    "subsidy": {
+      "name": "那珂川市木造住宅耐震改修工事費補助金（除却工事）",
+      "hasSubsidy": true,
+      "maxAmount": "最大30万円（除却費用の23%以内）",
+      "conditions": ["昭和56年5月31日以前の旧耐震基準で建築された木造住宅であること", "耐震診断の結果、上部構造評点が1.0未満と判定されたもの", "木造住宅の所有者またはその他市長が必要と認める者であること", "市税の滞納がないこと", "過去に本補助金の交付を受けたことがないこと"],
+      "applicationPeriod": "令和7年4月1日より先着順受付（予算がなくなり次第終了）",
+      "windowName": "那珂川市都市計画課",
+      "windowPhone": "092-952-2137",
+      "officialUrl": "https://www.city.nakagawa.lg.jp/soshiki/16/taisinkaisyukoujihihojo20130107.html",
+      "notes": "補助金交付決定前に工事契約の締結および着手している場合は対象外。耐震診断完了後、工事契約着手前に申請すること。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.nakagawa.lg.jp/",
+      "phone": "092-952-2137"
+    }
+  },
+  {
+    "prefId": "akita",
+    "cityId": "kazuno",
+    "cityName": "鹿角市",
+    "prefName": "秋田県",
+    "mascot": {
+      "localRiskText": "鹿角市の危険老朽空き家解体補助金で、実態調査のうえ安全に除却するホー。まずは市に相談するホー！"
+    },
+    "subsidy": {
+      "name": "鹿角市危険老朽空き家解体補助金",
+      "hasSubsidy": true,
+      "maxAmount": "最大50万円（市県民税非課税世帯は70万円）（解体費用の1/2以内）",
+      "conditions": ["鹿角市内に存し1年以上使用されていない空き家であること", "個人が所有するものであること", "市の実態調査において危険度・緊急度が高い「危険老朽空き家」と判定されたもの", "建て替えを目的としていないこと", "公共事業等の補償対象となっていないこと"],
+      "applicationPeriod": "令和7年度（詳細は窓口に確認）",
+      "windowName": "鹿角市生活環境課環境推進班",
+      "windowPhone": "0186-30-0224",
+      "officialUrl": "https://www.city.kazuno.akita.jp/kurashi_tetuzuki/jutaku_kenshiku/1/2910.html",
+      "notes": "市の実態調査で「危険老朽空き家」と判定される必要があります。まず市に実態調査を依頼してください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kazuno.akita.jp/",
+      "phone": "0186-30-0224"
+    }
+  },
+  {
+    "prefId": "aichi",
+    "cityId": "takahama",
+    "cityName": "高浜市",
+    "prefName": "愛知県",
+    "mascot": {
+      "localRiskText": "高浜市では独自の解体補助金はないホー。国・県の制度を窓口で確認してみるホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "noSubsidyNote": "高浜市では現在、空き家の解体を対象とした独自の補助金制度は設けられていません。ただし、国や愛知県の支援制度が活用できる場合があります。詳細は高浜市都市計画グループにお問い合わせください。",
+      "windowName": "高浜市都市計画グループ（建築担当）",
+      "windowPhone": "0566-95-9534",
+      "officialUrl": "https://www.city.takahama.lg.jp/"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.takahama.lg.jp/",
+      "phone": "0566-95-9534"
+    }
+  },
+  {
+    "prefId": "aichi",
+    "cityId": "nishio",
+    "cityName": "西尾市",
+    "prefName": "愛知県",
+    "mascot": {
+      "localRiskText": "西尾市では独自の解体補助金はないホー。耐震診断・改修の補助はあるので窓口で確認するホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "noSubsidyNote": "西尾市では現在、空き家の解体を対象とした独自の補助金制度は設けられていません（西尾市公式サイトに明記）。耐震診断・耐震改修に関する補助制度はあります。詳細は西尾市建築課にお問い合わせください。",
+      "windowName": "西尾市建築課",
+      "windowPhone": "0563-65-2178",
+      "officialUrl": "https://www.city.nishio.aichi.jp/kurashi/bosai/1001366/1005258.html"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.nishio.aichi.jp/",
+      "phone": "0563-65-2178"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "minamata",
+    "cityName": "水俣市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "水俣市の空き家除却補助金の詳細は窓口で確認するホー。条件・上限額は建設課に問い合わせるホー！"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "水俣市空き家除却補助金（詳細確認中）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": ["1年以上使用されていない空き家であること", "市税の滞納がないこと（詳細条件は窓口に確認）"],
+      "applicationPeriod": "令和7年度（詳細は窓口に確認）",
+      "windowName": "水俣市建設課",
+      "windowPhone": "0966-61-1600",
+      "officialUrl": "https://www.city.minamata.lg.jp/",
+      "notes": "補助金の詳細条件・上限額は水俣市建設課に直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.minamata.lg.jp/",
+      "phone": "0966-61-1600"
+    }
   }
 ]
