@@ -1,0 +1,560 @@
+[
+  {
+    "prefId": "shimane",
+    "cityId": "matsue",
+    "cityName": "松江市",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "松江市老朽空き家除却支援事業補助金",
+      "maxAmount": "最大50万円（除却工事費の1/2以内）",
+      "conditions": [
+        "1年以上使用されていない居住用木造住宅",
+        "市職員による不良度判定点数が基準以上のもの",
+        "隣地や隣接の公道等周辺への影響があるもの",
+        "市税の滞納がないこと",
+        "暴力団員等でないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "まちづくり部 住宅政策課 空家対策係",
+      "windowPhone": "0852-55-5346",
+      "windowUrl": "https://www.city.matsue.lg.jp/soshikikarasagasu/tosiseibibu_jutakuseisakuka/sumai/3/22291.html",
+      "noSubsidyNote": null,
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "hamada",
+    "cityName": "浜田市",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "浜田市特定空家等除却促進事業補助金",
+      "maxAmount": "最大50万円（除却費用の10分の4以内）",
+      "conditions": [
+        "特定空家等または不良住宅と認定されたもの",
+        "木造または鉄骨造の建築物",
+        "不良度の測定基準による評点の合計が100点以上のもの",
+        "申請前の直近1年間が空き家の状態であったもの",
+        "補助金交付決定後に工事着手し、年度内に完了するもの"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建築住宅課 空き家対策室",
+      "windowPhone": "0855-25-9632",
+      "windowUrl": "https://www.city.hamada.shimane.jp/www/contents/1487894620978/index.html",
+      "noSubsidyNote": null,
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "izumo",
+    "cityName": "出雲市",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "出雲市老朽危険空家等除却支援補助事業",
+      "maxAmount": "最大50万円（実際の除却工事費または標準的な除却工事費の低い方の10分の4以内）",
+      "conditions": [
+        "1年以上居住・使用がなく今後も使用見込みのない建築物",
+        "主として居住の用に供される建築物（延べ面積の1/2以上）",
+        "空家の不良度・危険度の評点の合計が100点以上",
+        "建築物の軒の高さが隣地や道路境界線からの距離を超える建築物",
+        "市税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建築住宅課 空き家対策室",
+      "windowPhone": "0853-21-6210",
+      "windowUrl": "https://www.city.izumo.shimane.jp/www/contents/1680830340710/index.html",
+      "noSubsidyNote": null,
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "masuda",
+    "cityName": "益田市",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "益田市老朽危険空家等除却支援事業補助金",
+      "maxAmount": "最大50万円（実際の除却工事費または標準的な除却工事費の低い方の10分の4以内）",
+      "conditions": [
+        "1年以上居住その他の使用がなされていないもの",
+        "主たる構造が木造または鉄骨造の建築物",
+        "建築物の軒の高さが隣地または道路境界線からの距離を超える建築物",
+        "市内に事務所を置く事業者に請け負わせるもの",
+        "市税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年5月7日〜令和7年12月12日（令和8年2月20日までに事業完了要）",
+      "windowName": "建設部 建築課 指導係",
+      "windowPhone": "0856-31-0668",
+      "windowUrl": "https://www.city.masuda.lg.jp/soshikikarasagasu/kensetsubu/kenchikuka/3/2951.html",
+      "noSubsidyNote": null,
+      "notes": "複数棟除却の場合は20万円、裁判所申立て等による除却の場合は30万円の加算あり。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "oda",
+    "cityName": "大田市",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "大田市不良空家等除却事業補助金",
+      "maxAmount": "最大50万円（対象経費の4/5以内）",
+      "conditions": [
+        "市内にある使用実態がない個人住宅",
+        "登記事項証明書に所有者以外の権利が設定されていない住宅",
+        "事前調査申請により不良空家の確認（判定）が必要",
+        "補助対象となる不良空家の全部を除却する工事",
+        "解体のできる資格を持った施工者が行う工事"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建築営繕課",
+      "windowPhone": "0854-83-8174",
+      "windowUrl": "https://www.city.oda.lg.jp/ohda_city/city_organization/22/06062/1690",
+      "noSubsidyNote": null,
+      "notes": "事前調査申請により不良度を判定し、危険性の高いものから補助する。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "yasugi",
+    "cityName": "安来市",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "安来市老朽危険建築物等除却助成事業",
+      "maxAmount": "最大100万円（解体工事費の4/5以内）",
+      "conditions": [
+        "不良住宅で周辺への影響があるもの（不良住宅タイプ）",
+        "または、除却後の跡地が地域活性化のための計画利用に供されるもの（空き家住宅タイプ）",
+        "市税の滞納がないこと",
+        "補助金交付決定後に工事着手するもの"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建築住宅課",
+      "windowPhone": "0854-23-3343",
+      "windowUrl": "https://www.city.yasugi.shimane.jp/kurashi/sumai/shien-seido/rokyu-jokyo.html",
+      "noSubsidyNote": null,
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "gotsu",
+    "cityName": "江津市",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "江津市老朽危険空家除却支援事業補助金",
+      "maxAmount": "最大100万円（対象工事費の4/5以内）",
+      "conditions": [
+        "1年以上居住・使用されていないもの",
+        "主たる構造が木造の建築物",
+        "不良度・危険度の測定基準による評点の合計が100点以上",
+        "市税の滞納がないこと",
+        "補助金交付決定後に工事着手するもの"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市計画課",
+      "windowPhone": "0855-52-7951",
+      "windowUrl": "https://www.city.gotsu.lg.jp/soshiki/18/24139.html",
+      "noSubsidyNote": null,
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "unnan",
+    "cityName": "雲南市",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "雲南市危険空き家除却事業補助金",
+      "maxAmount": "最大50万円（除却費用の8/10の1/2以内）",
+      "conditions": [
+        "居住用の建築物で空き家であるもの",
+        "不良住宅と判定された空き家で主たる構造が木造であるもの",
+        "倒壊により幹線道路や通学路等に影響を及ぼすおそれがあるもの",
+        "市税の滞納がないこと",
+        "補助金交付決定後に工事着手するもの"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市計画課 空き家対策室",
+      "windowPhone": "0854-40-1066",
+      "windowUrl": "https://www.city.unnan.shimane.jp/unnan/kurashi/sumai/akiya/2021-0802-0811-62.html",
+      "noSubsidyNote": null,
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "okuizumo",
+    "cityName": "奥出雲町",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "奥出雲町老朽危険空き家除却助成事業補助金",
+      "maxAmount": "最大160万円（標準除却費の4/5以内）",
+      "conditions": [
+        "現に使用されていない倒壊等のおそれがある空き家等",
+        "主たる構造が木造または鉄骨造の建築物",
+        "不良度・危険度の判定基準点数が100点以上",
+        "町内に事務所を置く事業者に請け負わせるもの",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "定住産業課",
+      "windowPhone": "0854-54-2524",
+      "windowUrl": "https://www.town.okuizumo.shimane.jp/",
+      "noSubsidyNote": null,
+      "notes": "中山間地域のため補助上限額が160万円と高額。詳細は担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "iinan",
+    "cityName": "飯南町",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "飯南町特定空家等除却促進事業補助金",
+      "maxAmount": "最大50万円（補助対象経費の1/2以内）",
+      "conditions": [
+        "周囲に対して著しく危険性が高い特定空家等",
+        "飯南町内における住宅危険度・周辺環境危険度の基準表の判定による規定に基づき認定されたもの",
+        "建設業法の許可を受けた施工業者が行う工事",
+        "町税の滞納がないこと",
+        "補助金交付決定後に工事着手するもの"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設課",
+      "windowPhone": "0854-76-3942",
+      "windowUrl": "https://www.iinan.jp/",
+      "noSubsidyNote": null,
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "kawamoto",
+    "cityName": "川本町",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "まちづくり推進課",
+      "windowPhone": "0855-72-0634",
+      "windowUrl": "https://www.town.shimanekawamoto.lg.jp/",
+      "noSubsidyNote": null,
+      "notes": "※空き家解体専用の補助制度は公式サイトで確認できませんでした。住宅新築時に土地の既存建物解体撤去費の1/2（上限50万円）の助成あり。詳細は担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "misato",
+    "cityName": "美郷町",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "美郷暮らし推進課",
+      "windowPhone": "0855-75-1212",
+      "windowUrl": "https://gov.town.shimane-misato.lg.jp/",
+      "noSubsidyNote": null,
+      "notes": "※解体後に新築住宅等を建てることを条件とする解体補助制度が存在する可能性があります。詳細は担当課にお問い合わせください。※要確認"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "ohnan",
+    "cityName": "邑南町",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "邑南町跡地活用のための空き家解体支援事業補助金",
+      "maxAmount": "最大100万円（補助対象経費の10/10）",
+      "conditions": [
+        "空き家バンク登録1年以上経過または昭和56年5月31日以前に工事着手された空き家",
+        "跡地に1年以内に新築（住宅・店舗等）予定のある空き家",
+        "解体・新築ともに町内業者による施工",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "地域みらい課",
+      "windowPhone": "0855-95-1117",
+      "windowUrl": "https://www.town.ohnan.lg.jp/www/contents/1001000000509/index.html",
+      "noSubsidyNote": null,
+      "notes": "跡地への新築が条件。新築を予定していない解体のみの場合は対象外となります。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "tsuwano",
+    "cityName": "津和野町",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "津和野町老朽危険空家除却支援事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください（除却工事費または標準的な除却工事費の低い方の4/5以内）",
+      "conditions": [
+        "概ね1年以上使用されておらず今後も居住見込みのない建築物",
+        "主として居住の用に供される建築物（延べ面積の1/2以上を居住用）",
+        "空家の不良度・危険度の評点の合計が100点以上",
+        "町内に事務所を置く事業者に請け負わせるもの",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）※令和7年度は受付終了済み",
+      "windowName": "つわの暮らし推進課",
+      "windowPhone": "0856-74-0092",
+      "windowUrl": "https://www.town.tsuwano.lg.jp/www/contents/1653959395835/index.html",
+      "noSubsidyNote": null,
+      "notes": "津和野町は「山陰の小京都」として景観保護が重要な地域です。歴史的景観保護条例との関係もあるため、解体前に担当課への事前相談を強くお勧めします。令和7年度は受付終了済みのため、令和8年度以降の申請については担当課に確認ください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "yoshika",
+    "cityName": "吉賀町",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "吉賀町老朽危険空家除却支援事業補助金",
+      "maxAmount": "最大120万円（除却工事費または標準的な除却工事費の低い方の4/5以内）",
+      "conditions": [
+        "1年以上居住その他の使用がなされていないもの",
+        "主として居住の用に供される建築物（延べ面積の1/2以上を居住用）",
+        "主たる構造が木造または鉄骨造の建築物",
+        "空家の不良度・危険度の評点の合計が100点以上",
+        "建築物の軒の高さが隣地や道路境界線からの距離を超える建築物",
+        "町税の滞納がないこと",
+        "町内に事務所を置く事業者に請け負わせるもの"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "企画課",
+      "windowPhone": "0856-77-1437",
+      "windowUrl": "https://www.town.yoshika.lg.jp/kurashi/josei/akiyataisaku/rokyukikenakitajokyaku.html",
+      "noSubsidyNote": null,
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "ama",
+    "cityName": "海士町",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "建設課管理係",
+      "windowPhone": "08514-2-1825",
+      "windowUrl": "https://www.town.ama.shimane.jp/",
+      "noSubsidyNote": null,
+      "notes": "※離島のため制度詳細・申請方法は各町村役場に直接お問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "nishinoshima",
+    "cityName": "西ノ島町",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "地域振興課 定住促進係",
+      "windowPhone": "08514-7-8777",
+      "windowUrl": "https://www.town.nishinoshima.shimane.jp/",
+      "noSubsidyNote": null,
+      "notes": "※離島のため制度詳細・申請方法は各町村役場に直接お問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "chibu",
+    "cityName": "知夫村",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "観光振興課",
+      "windowPhone": "08514-8-2211",
+      "windowUrl": "https://www.chibu.jp/",
+      "noSubsidyNote": null,
+      "notes": "※離島のため制度詳細・申請方法は各町村役場に直接お問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "shimane",
+    "cityId": "okinoshima",
+    "cityName": "隠岐の島町",
+    "prefName": "島根県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "隠岐の島町危険空き家除却事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "危険な状態にある空き家（条例に基づく認定が必要）",
+        "居住用の建築物で空き家であるもの",
+        "事前調査により危険空き家と判定されたもの",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設課 管理住宅係",
+      "windowPhone": "08512-2-8564",
+      "windowUrl": "https://www.town.okinoshima.shimane.jp/",
+      "noSubsidyNote": null,
+      "notes": "※離島のため制度詳細・申請方法は各町村役場に直接お問い合わせください。補助率・上限額の詳細は建設課管理住宅係にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  }
+]

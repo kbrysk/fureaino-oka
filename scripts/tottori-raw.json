@@ -1,0 +1,511 @@
+[
+  {
+    "prefId": "tottori",
+    "cityId": "tottori",
+    "cityName": "鳥取市",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "鳥取市空家等除却事業費補助金",
+      "maxAmount": "最大60万円（除却工事費の1/2以内）",
+      "conditions": [
+        "空家等対策特別措置法第22条の指導または勧告を受けた特定空家等であること",
+        "木造または軽量鉄骨造の建築物であること",
+        "延床面積の2分の1以上が居住用であること",
+        "附属建物・基礎を含む建築物の全部を除却するものであること",
+        "市税等（市税・国民健康保険料・介護保険料等）の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市整備部 建築指導課",
+      "windowPhone": "0857-20-3281",
+      "windowUrl": "https://www.city.tottori.lg.jp/www/contents/1682476132987/index.html",
+      "noSubsidyNote": null,
+      "notes": "残置物処分費も別途最大20万円補助あり（工事費の1/2）。事前相談・建物調査が必須。"
+    },
+    "garbage": {
+      "hasService": true,
+      "applicationUrl": "https://www.city.tottori.lg.jp/www/contents/1001000000000/index.html",
+      "applicationPhone": "0857-20-3210",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "yonago",
+    "cityName": "米子市",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "米子市特定空家等除却支援事業補助金",
+      "maxAmount": "最大120万円（除却費の4/5以内）",
+      "conditions": [
+        "保安上著しく危険な状態の特定空家等であること",
+        "市への事前相談が必要",
+        "市が不良住宅と判定した建物であること",
+        "市税等の滞納がないこと",
+        "暴力団関係者でないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設部 住宅政策課",
+      "windowPhone": "0859-23-5288",
+      "windowUrl": "https://www.city.yonago.lg.jp/43127.htm",
+      "noSubsidyNote": null,
+      "notes": "事前相談必須。補助率4/5・上限120万円。"
+    },
+    "garbage": {
+      "hasService": true,
+      "applicationUrl": "https://www.city.yonago.lg.jp/1466.htm",
+      "applicationPhone": "0859-22-7111",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "kurayoshi",
+    "cityName": "倉吉市",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "老朽危険空き家等除却支援事業補助金",
+      "maxAmount": "最大120万円（除却費の5/4以内）",
+      "conditions": [
+        "法または条例に基づく助言・指導・勧告・命令を受けた空家等であること",
+        "倉吉市内に存する建築物であること",
+        "木造2万7千円・非木造3万8千円／㎡を乗じた額が標準除却費の上限",
+        "所有権以外の権利が設定されていないこと",
+        "市税等の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設部 建築住宅課",
+      "windowPhone": "0858-22-8175",
+      "windowUrl": "https://www.city.kurayoshi.lg.jp/gyousei/div/kensetsu/kenchiku/akiyatouhojo/",
+      "noSubsidyNote": null,
+      "notes": null
+    },
+    "garbage": {
+      "hasService": true,
+      "applicationUrl": "https://www.city.kurayoshi.lg.jp/1878.htm",
+      "applicationPhone": "0858-22-8168",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "sakaiminato",
+    "cityName": "境港市",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "境港市空家除却支援事業費補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "利活用の見込みのない空家であること",
+        "1年以上居住されていないこと",
+        "市が確認している空家であること",
+        "解体を行おうとする日の30日前までに申請が必要",
+        "市税等の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度まで（令和3〜7年度の5年間限定制度・最終年度）",
+      "windowName": "建設部 都市整備課 空家対策推進室",
+      "windowPhone": "0859-47-1015",
+      "windowUrl": "https://www.city.sakaiminato.lg.jp/index.php?view=111146",
+      "noSubsidyNote": null,
+      "notes": "令和7年度が最終年度。解体後3年間の固定資産税減免制度も併用可。補助金額は要窓口確認。"
+    },
+    "garbage": {
+      "hasService": true,
+      "applicationUrl": "https://www.city.sakaiminato.lg.jp/index.php?view=102571",
+      "applicationPhone": "0859-44-2111",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "iwami",
+    "cityName": "岩美町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "岩美町役場 企画財政課",
+      "windowPhone": "0857-73-1111",
+      "windowUrl": "https://www.iwami.gr.jp/3189.htm",
+      "noSubsidyNote": "岩美町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。UIJターン住宅改修支援補助金（上限200万円）・家財道具等整理補助金（上限40万円）は存在します。詳細は企画財政課にお問い合わせください。",
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0857-73-1111",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "wakasa",
+    "cityName": "若桜町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "若桜町役場",
+      "windowPhone": "0858-82-2131",
+      "windowUrl": "https://www.town.wakasa.tottori.jp/",
+      "noSubsidyNote": "若桜町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。移住者向け空き家改修補助・家財処分補助は存在します。詳細は若桜町役場にお問い合わせください。",
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0858-82-2131",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "chizu",
+    "cityName": "智頭町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "智頭町役場",
+      "windowPhone": "0858-75-0321",
+      "windowUrl": "https://www.town.chizu.tottori.jp/",
+      "noSubsidyNote": "智頭町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。改修補助・家財処分補助は存在します。詳細は智頭町役場にお問い合わせください。",
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0858-75-0321",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "yazu",
+    "cityName": "八頭町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "八頭町役場",
+      "windowPhone": "0858-72-5862",
+      "windowUrl": "https://www.town.yazu.tottori.jp/",
+      "noSubsidyNote": "八頭町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家バンク登録物件の改修補助（上限200万円）は存在します。詳細は八頭町役場にお問い合わせください。",
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0858-72-5862",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "misasa",
+    "cityName": "三朝町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "三朝町管理不全家屋等対策補助金",
+      "maxAmount": "最大60万円（費用の1/2以内）",
+      "conditions": [
+        "条例第6条第1項の規定により認定された管理不全家屋等であること",
+        "所有権以外の権利が設定されていないこと",
+        "国・地方公共団体等が所有していないこと",
+        "公共事業等による補償対象でないこと",
+        "所有者等による建替えを目的としていないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "三朝町役場 企画健康課",
+      "windowPhone": "0858-43-0113",
+      "windowUrl": "https://www.town.misasa.tottori.jp/315/319/374/1325/1726/28452.html",
+      "noSubsidyNote": null,
+      "notes": "補助率1/2・限度額60万円。条例に基づく指導・助言を受けた管理不全家屋が対象。解体前に交付決定を受けてから着手すること。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0858-43-0113",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "yurihama",
+    "cityName": "湯梨浜町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "湯梨浜町老朽危険空き家等除却支援事業",
+      "maxAmount": "最大200万円（除却費の4/5以内）",
+      "conditions": [
+        "条例または空家等対策特別措置法に基づく指導・勧告・命令により除却する空き家であること",
+        "倒壊すれば前面道路封鎖・通行人への被害・隣地損壊のおそれがあるもの等",
+        "湯梨浜町内に存する建築物であること",
+        "町税等の滞納がないこと",
+        "所有権以外の権利が設定されていないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設水道課",
+      "windowPhone": "0858-35-5375",
+      "windowUrl": "https://www.yurihama.jp/soshiki/13/15422.html",
+      "noSubsidyNote": null,
+      "notes": "補助率4/5・限度額200万円（令和6年度）。国の標準除却費を上限とするため年度により変動あり。住宅以外のみ除却は補助率2/3に下がる。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0858-35-5375",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "kotoura",
+    "cityName": "琴浦町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "琴浦町役場",
+      "windowPhone": "0858-52-1111",
+      "windowUrl": "https://www.town.kotoura.tottori.jp/",
+      "noSubsidyNote": "琴浦町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。住宅リフォーム資金助成・家財処分補助は存在します。詳細は琴浦町役場にお問い合わせください。",
+      "notes": "空き家率12.5%で県内最高水準。制度新設の可能性があるため、窓口への最新情報確認を推奨。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0858-52-1111",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "hokuei",
+    "cityName": "北栄町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "北栄町役場 観光交流課",
+      "windowPhone": "0858-37-5908",
+      "windowUrl": "https://www.e-hokuei.net/7782.htm",
+      "noSubsidyNote": null,
+      "notes": "※要確認：解体専用補助金の存在がウェブ上で確認できませんでした。空き家改修補助（上限90万円）・家財処分補助（上限30万円）は存在します。窓口への直接確認を推奨。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0858-37-5908",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "daisen",
+    "cityName": "大山町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "大山町役場 まちづくり課",
+      "windowPhone": "0859-53-3111",
+      "windowUrl": "https://www.daisen.jp/1/10/2/e139/",
+      "noSubsidyNote": "大山町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家活用事業（改修補助・上限150万円）は存在します。詳細はまちづくり課にお問い合わせください。",
+      "notes": "空き家率9.6%と高水準。制度新設の可能性があるため、窓口への最新情報確認を推奨。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0859-53-3111",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "nanbu",
+    "cityName": "南部町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "南部町老朽危険家屋等解体撤去補助金",
+      "maxAmount": "最大30万円（費用の1/5以内）",
+      "conditions": [
+        "老朽度・危険度判定基準表の評点が150点以上であること",
+        "所有権以外の権利が設定されていないこと",
+        "国・地方公共団体等が所有していないこと",
+        "公共事業等による補償対象でないこと",
+        "町税・使用料・貸付金償還など町への債務の履行を怠っていないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "南部町役場 企画政策課",
+      "windowPhone": "0859-66-3113",
+      "windowUrl": "http://www.town.nanbu.tottori.jp/admin/kikakuseisakuka/permanent/4/",
+      "noSubsidyNote": null,
+      "notes": "補助率1/5・上限30万円。評点150点以上と判定基準が厳しめ。空き家一括借上げ制度（NPO法人なんぶ里山デザイン機構・10年借上げ）も存在。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0859-66-3113",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "hoki",
+    "cityName": "伯耆町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "伯耆町空家等対策推進補助金（個人除却タイプ）",
+      "maxAmount": "最大150万円（特定空家は費用の4/5・通常は1/2で上限100万円）",
+      "conditions": [
+        "集落からの要請により個人所有者が除却する老朽危険な空き家であること",
+        "伯耆町内に存する建築物であること",
+        "所有権以外の権利（抵当権等）が設定されていないこと",
+        "税金等の滞納がないこと",
+        "暴力団関係者でないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "伯耆町役場 総務課 総務室",
+      "windowPhone": "0859-68-3111",
+      "windowUrl": "https://www.houki-town.jp/new1/10/3/a733/",
+      "noSubsidyNote": null,
+      "notes": "集落活用タイプ（集落主体）は10/10・上限200万円（特定空家は4/5・300万円）。個人除却は集落からの要請が条件。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0859-68-3111",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "nichinan",
+    "cityName": "日南町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "日南町老朽危険家屋等解体撤去補助金",
+      "maxAmount": "最大120万円（費用の1/2以内）",
+      "conditions": [
+        "老朽度・危険度判定基準表の評点が150点以上であること",
+        "所有権以外の権利が設定されていないこと",
+        "国・地方公共団体等が所有していないこと",
+        "公共事業等による補償対象でないこと",
+        "解体は資格を有する町内業者が実施すること"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "日南町役場 環境エネルギー課",
+      "windowPhone": "0859-82-1111",
+      "windowUrl": "https://www.town.nichinan.lg.jp/soshikikarasagasu/juminka/hojo_hojoseido/1027.html",
+      "noSubsidyNote": null,
+      "notes": "補助率1/2・限度額120万円。解体業者は資格を有する町内業者に限定。消費税・地方消費税は対象外。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0859-82-1111",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "hino",
+    "cityName": "日野町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "日野町役場 企画政策課",
+      "windowPhone": "0859-72-0200",
+      "windowUrl": "https://www.town.hino.tottori.jp/2465.htm",
+      "noSubsidyNote": "日野町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。移住・定住促進住宅整備費補助金（上限100〜150万円）・家財道具等処分費補助金（上限40万円）は存在します。詳細は企画政策課にお問い合わせください。",
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0859-72-0200",
+      "notes": null
+    }
+  },
+  {
+    "prefId": "tottori",
+    "cityId": "kofu",
+    "cityName": "江府町",
+    "prefName": "鳥取県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "特定空家等除去支援事業補助金",
+      "maxAmount": "最大50万円（費用の4/5以内）",
+      "conditions": [
+        "集落等からの要請により所有者等が除去する特定空家等であること",
+        "特定空家等判定基準により特定空家と判断された建物",
+        "江府町内に存する建築物であること",
+        "廃材等の収集運搬費・処分費も対象"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "住民生活課",
+      "windowPhone": "0859-75-2211",
+      "windowUrl": "https://www.town-kofu.jp/2/1/4/10-copy/z884/",
+      "noSubsidyNote": null,
+      "notes": "補助率4/5（千円未満切り捨て）・上限50万円。集落からの要請が条件。空き家改修助成（上限100万円）も別途存在。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": "0859-75-2211",
+      "notes": null
+    }
+  }
+]
