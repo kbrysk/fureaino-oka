@@ -1,0 +1,808 @@
+[
+  {
+    "prefId": "wakayama",
+    "cityId": "wakayama",
+    "cityName": "和歌山市",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "和歌山市不良空家除却補助金",
+      "maxAmount": "最大50万円（費用の2/3以内）",
+      "conditions": [
+        "不良空家の認定を受けた建築物であること",
+        "おおむね1年以上居住の用に供されていないこと",
+        "床面積の2分の1以上が居住の用に供されていたこと",
+        "市税を滞納していないこと",
+        "暴力団関係者でないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算件数に達し次第終了）",
+      "windowName": "耐震・空家対策課",
+      "windowPhone": "073-435-1091",
+      "windowUrl": "https://www.city.wakayama.wakayama.jp/kurashi/sumai_jyougesuidou/1001110/1010373/1001893.html",
+      "noSubsidyNote": null,
+      "notes": "令和7年度は予算件数に達し受付終了。令和8年度は決定後ホームページでお知らせ予定。事前調査は随時受付中。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kainan",
+    "cityName": "海南市",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "老朽危険空家除却工事補助事業",
+      "maxAmount": "最大60万円（費用の2/3以内）",
+      "conditions": [
+        "老朽危険空家と認定された建築物であること",
+        "居住の用に供されなくなっておおむね90日以上経過",
+        "市税を滞納していないこと",
+        "法人でないこと（個人が対象）"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "まちづくり部都市整備課",
+      "windowPhone": "073-483-8480",
+      "windowUrl": "https://www.city.kainan.lg.jp/kakubusho/machizukuribu/toshiseibika/akiya_kanren/1604299286174.html",
+      "noSubsidyNote": null,
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "hashimoto",
+    "cityName": "橋本市",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "空家等対策推進助成金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "空家法第2条第2項の特定空家等に該当すること",
+        "建物除却権原者が空家法第22条第3項の命令を受けていないこと",
+        "交付決定後半年以内に除却する意思があること",
+        "市町村税を滞納していないこと",
+        "暴力団に関係していないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設部建築住宅課",
+      "windowPhone": "0736-33-1115",
+      "windowUrl": "https://www.city.hashimoto.lg.jp/guide/kensetsubu/kentikujutaku/jutakusisaku/akiya/jyoseiseido/akiyatoutaisakusuishinjyoseikin.html",
+      "noSubsidyNote": null,
+      "notes": "※多くの自治体で実施されている「単純な解体費補助」ではありません。特定空家等を対象とした制度です。詳細は建築住宅課にご相談ください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "arida",
+    "cityName": "有田市",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "有田市不良空家等除却補助事業",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "おおむね年間を通して使用実績がなく常態として空き家であること",
+        "個人が所有する空き家であること",
+        "市担当者の現地調査で不良度評点が60点以上と認定されること",
+        "特定空家等に指定されていないこと",
+        "市税を滞納していないこと"
+      ],
+      "applicationPeriod": "令和7年5月7日〜12月26日（予算がなくなり次第終了）",
+      "windowName": "経済建設部都市整備課公共建築係",
+      "windowPhone": "0737-22-3619",
+      "windowUrl": "https://www.city.arida.lg.jp/kurashi/sumai/1001036.html",
+      "noSubsidyNote": null,
+      "notes": "補助金の交付決定前に契約・着工したものは補助対象外。空き家の現地調査および認定申請は年間を通じて受付中。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "gobo",
+    "cityName": "御坊市",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "御坊市老朽危険空家除却事業補助金",
+      "maxAmount": "最大80万円（評点100以上：費用の4/5以内）",
+      "conditions": [
+        "市内にある個人の居住用空家で1年以上使用されていないもの",
+        "老朽危険空家の測定基準で評点60点以上",
+        "所有者若しくは法定相続人であること",
+        "市税等を滞納していないこと",
+        "市内の業者により解体を行うこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設部都市整備課",
+      "windowPhone": "0738-22-4111",
+      "windowUrl": "https://www.city.gobo.lg.jp/sosiki/sangyokensetu/tosi/tanto/1651803411303.html",
+      "noSubsidyNote": null,
+      "notes": "評点100点以上：工事金額の4/5・上限80万円。評点60〜100点未満で耐震性能なし：工事金額の23%・上限40万円。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "tanabe",
+    "cityName": "田辺市",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "田辺市不良空家等除却補助金",
+      "maxAmount": "最大50万円（費用の2/3以内）",
+      "conditions": [
+        "おおむね1年以上空家となっていること",
+        "評定項目の評点が60点以上の建物",
+        "屋根が抜け落ちた状態・基礎が沈下し柱やはりが変形しているなど倒壊の恐れがある建物",
+        "市税を滞納していないこと"
+      ],
+      "applicationPeriod": "令和7年4月1日〜（予算がなくなり次第終了）",
+      "windowName": "建築課調査計画係",
+      "windowPhone": "0739-26-9935",
+      "windowUrl": "https://www.city.tanabe.lg.jp/kenchiku/tyousakeikaku/2022-0323-1541-73.html",
+      "noSubsidyNote": null,
+      "notes": "補助を受けるには事前に不良空家等認定申請が必要。熊野古道・熊野三山周辺地域を含むが本制度は通常の空き家解体補助（景観保護補助とは別）。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "shingu",
+    "cityName": "新宮市",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "詳細は窓口にお問い合わせください",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "詳細は窓口にお問い合わせください"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "新宮市役所",
+      "windowPhone": "0735-23-3333",
+      "windowUrl": "https://www.city.shingu.lg.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在は国交省資料等で確認済み。詳細は新宮市役所にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kinokawa",
+    "cityName": "紀の川市",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "不良空家の除却に係る補助金交付事業",
+      "maxAmount": "最大100万円（工事費と国標準除却費のいずれか低い方の4/5）",
+      "conditions": [
+        "老朽化し倒壊等危険な状態にある建物",
+        "不良空家の認定を受けること（市による現地調査あり）",
+        "登記簿名義人またはその相続人であること",
+        "市税を滞納していないこと"
+      ],
+      "applicationPeriod": "令和7年5月15日〜6月13日（事前相談受付期間）",
+      "windowName": "建設部住宅政策課",
+      "windowPhone": "0736-77-2511",
+      "windowUrl": "https://www.city.kinokawa.lg.jp/038/2025jyokyakuhojyo.html",
+      "noSubsidyNote": null,
+      "notes": "予算範囲内のため認定調査件数に限りあり。相談件数によっては認定調査を受けられない場合がある。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "iwade",
+    "cityName": "岩出市",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "岩出市役所",
+      "windowPhone": "0736-62-2111",
+      "windowUrl": "https://www.city.iwade.lg.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が情報源で確認されています。詳細は岩出市役所にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kimino",
+    "cityName": "紀美野町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "紀美野町老朽危険空家除却工事補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "居住の用に供されなくなり1年以上経過していること",
+        "延べ面積の2分の1以上が居住の用に供されていた建築物",
+        "世帯員に暴力団員がいないこと",
+        "建設業法の許可を受けた業者が請け負う工事であること"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "住民課",
+      "windowPhone": "073-489-5903",
+      "windowUrl": "https://www.town.kimino.wakayama.jp/sagasu/juminka/2207.html",
+      "noSubsidyNote": null,
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "katsuragi",
+    "cityName": "かつらぎ町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "かつらぎ町役場",
+      "windowPhone": "0736-22-0300",
+      "windowUrl": "https://www.town.katsuragi.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細はかつらぎ町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kudoyama",
+    "cityName": "九度山町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "九度山町役場",
+      "windowPhone": "0736-54-2067",
+      "windowUrl": "https://www.town.kudoyama.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は九度山町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "koya",
+    "cityName": "高野町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "高野町役場",
+      "windowPhone": "0736-56-2932",
+      "windowUrl": "https://www.town.koya.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。世界遺産（高野山）を抱えるため景観保護に関する別途規制がある可能性があります。空き家解体補助の詳細は高野町役場に直接お問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "yuasa",
+    "cityName": "湯浅町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "湯浅町役場",
+      "windowPhone": "0737-63-1122",
+      "windowUrl": "https://www.town.yuasa.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は湯浅町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "hirokawa",
+    "cityName": "広川町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "広川町役場",
+      "windowPhone": "0737-23-3111",
+      "windowUrl": "https://www.town.hirokawa.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は広川町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "aridagawa",
+    "cityName": "有田川町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "有田川町不良空家除却補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "使用がなくなった日から概ね1年以上経過していること",
+        "居住の用に供する建築物またはその床面積の2分の1以上が居住用であったもの",
+        "有田川町が定める不良空家の判定基準で評点100点以上",
+        "市税を滞納していないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設課",
+      "windowPhone": "0737-22-3281",
+      "windowUrl": "https://www.town.aridagawa.lg.jp/top/kakuka/kibi/4/1/2/2/935.html",
+      "noSubsidyNote": null,
+      "notes": "※令和6年度情報を参照。令和7年度の詳細は建設課に直接ご確認ください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "mihama",
+    "cityName": "美浜町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "美浜町役場",
+      "windowPhone": "0738-22-4111",
+      "windowUrl": "https://www.town.mihama.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は美浜町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "hidaka",
+    "cityName": "日高町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "日高町役場",
+      "windowPhone": "0738-63-2525",
+      "windowUrl": "https://www.town.hidaka.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。国土交通省資料で補助制度の存在が確認されています。解体後に土地に新たな建築物が建てられないこと等の条件がある場合があります。詳細は日高町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "yura",
+    "cityName": "由良町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "由良町役場",
+      "windowPhone": "0738-65-0200",
+      "windowUrl": "https://www.town.yura.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は由良町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "inami",
+    "cityName": "印南町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "印南町役場",
+      "windowPhone": "0738-42-1111",
+      "windowUrl": "https://www.town.inami.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は印南町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "minabe",
+    "cityName": "みなべ町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "みなべ町役場",
+      "windowPhone": "0739-74-3111",
+      "windowUrl": "https://www.town.minabe.lg.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細はみなべ町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "hidakagawa",
+    "cityName": "日高川町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "日高川町役場",
+      "windowPhone": "0738-52-2111",
+      "windowUrl": "https://www.town.hidakagawa.lg.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は日高川町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "shirahama",
+    "cityName": "白浜町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "白浜町不良空家等除却補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください（費用の2/3相当）",
+      "conditions": [
+        "居住の用に供されなくなって概ね1年を経過していること",
+        "居住用建築物でその床面積の2分の1以上が居住の用に供されていたこと",
+        "不良空家の判定で評定項目合計が100点以上となる建物",
+        "市税を滞納していないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設課",
+      "windowPhone": "0739-43-5555",
+      "windowUrl": "https://www.town.shirahama.wakayama.jp/soshiki/kensetsu/toshi/gyomu/akiya/1556164988718.html",
+      "noSubsidyNote": null,
+      "notes": null
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kamitonda",
+    "cityName": "上富田町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "上富田町役場",
+      "windowPhone": "0739-47-0550",
+      "windowUrl": "https://www.town.kamitonda.lg.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は上富田町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "susami",
+    "cityName": "すさみ町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "すさみ町役場",
+      "windowPhone": "0739-55-4122",
+      "windowUrl": "https://www.town.susami.lg.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細はすさみ町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "nachikatsuura",
+    "cityName": "那智勝浦町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "那智勝浦町役場",
+      "windowPhone": "0735-52-0555",
+      "windowUrl": "https://www.town.nachikatsuura.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。熊野古道・熊野那智大社周辺ですが空き家解体補助は景観保護補助とは別制度です。詳細は那智勝浦町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "taiji",
+    "cityName": "太地町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "太地町役場",
+      "windowPhone": "0735-59-2335",
+      "windowUrl": "https://www.town.taiji.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が情報源で確認されています。詳細は太地町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kozagawa",
+    "cityName": "古座川町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "古座川町役場",
+      "windowPhone": "0735-72-0180",
+      "windowUrl": "https://www.town.kozagawa.lg.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。過疎化が深刻な地域のため補助制度が充実している可能性があります。詳細は古座川町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kitayama",
+    "cityName": "北山村",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "北山村役場",
+      "windowPhone": "0735-49-2511",
+      "windowUrl": "https://www.vill.kitayama.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※飛び地の村のため制度詳細は北山村役場に直接お問い合わせください。三重県・奈良県に囲まれた和歌山県の飛び地であり、補助制度が独自の内容となっている可能性があります。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kushimoto",
+    "cityName": "串本町",
+    "prefName": "和歌山県",
+    "mascot": null,
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "串本町役場",
+      "windowPhone": "0735-62-0555",
+      "windowUrl": "https://www.town.kushimoto.wakayama.jp/",
+      "noSubsidyNote": null,
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。熊野古道周辺ですが空き家解体補助は景観保護補助とは別制度です。詳細は串本町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "hasService": null,
+      "applicationUrl": null,
+      "applicationPhone": null,
+      "notes": null
+    }
+  }
+]

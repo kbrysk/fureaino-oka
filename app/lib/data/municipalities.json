@@ -21832,5 +21832,5221 @@
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E6%A0%84%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
     }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "takayama",
+    "cityName": "高山市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "高山市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "高山市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%AB%98%E5%B1%B1%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "tajimi",
+    "cityName": "多治見市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "多治見市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "多治見市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%9A%E6%B2%BB%E8%A6%8B%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "seki",
+    "cityName": "関市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "関市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "関市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%96%A2%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "nakatsugawa",
+    "cityName": "中津川市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "中津川市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "中津川市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%AD%E6%B4%A5%E5%B7%9D%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "mino",
+    "cityName": "美濃市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "美濃市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "美濃市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%BE%8E%E6%BF%83%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "mizunami",
+    "cityName": "瑞浪市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "瑞浪市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "瑞浪市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%91%9E%E6%B5%AA%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "hashima",
+    "cityName": "羽島市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "羽島市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "羽島市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%BE%BD%E5%B3%B6%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "ena",
+    "cityName": "恵那市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "恵那市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "恵那市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%81%B5%E9%82%A3%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "minokamo",
+    "cityName": "美濃加茂市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "美濃加茂市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "美濃加茂市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%BE%8E%E6%BF%83%E5%8A%A0%E8%8C%82%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "toki",
+    "cityName": "土岐市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "土岐市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "土岐市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%9C%9F%E5%B2%90%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "kakamigahara",
+    "cityName": "各務原市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "各務原市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "各務原市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%90%84%E5%8B%99%E5%8E%9F%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "kani",
+    "cityName": "可児市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "可児市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "可児市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8F%AF%E5%85%90%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "yamagata",
+    "cityName": "山県市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "山県市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "山県市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B1%B1%E7%9C%8C%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "mizuho",
+    "cityName": "瑞穂市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "瑞穂市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "瑞穂市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%91%9E%E7%A9%82%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "hida",
+    "cityName": "飛騨市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "飛騨市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "飛騨市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%A3%9B%E9%A8%A8%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "motosu",
+    "cityName": "本巣市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "本巣市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "本巣市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9C%AC%E5%B7%A3%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "gujo",
+    "cityName": "郡上市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "郡上市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "郡上市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%83%A1%E4%B8%8A%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "gero",
+    "cityName": "下呂市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "下呂市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "下呂市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8B%E5%91%82%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "kaizu",
+    "cityName": "海津市",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "海津市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "海津市では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B5%B7%E6%B4%A5%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "ginan",
+    "cityName": "岐南町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "岐南町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "岐南町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B2%90%E5%8D%97%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "kasamatsu",
+    "cityName": "笠松町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "笠松町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "笠松町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%AC%A0%E6%9D%BE%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "yoro",
+    "cityName": "養老町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "養老町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "養老町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%A4%8A%E8%80%81%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "tarui",
+    "cityName": "垂井町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "垂井町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "垂井町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%9E%82%E4%BA%95%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "sekigahara",
+    "cityName": "関ケ原町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "関ケ原町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "関ケ原町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%96%A2%E3%82%B1%E5%8E%9F%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "godo",
+    "cityName": "神戸町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "神戸町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "神戸町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%A5%9E%E6%88%B8%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "wanonai",
+    "cityName": "輪之内町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "輪之内町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "輪之内町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%BC%AA%E4%B9%8B%E5%86%85%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "anpachi",
+    "cityName": "安八町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "安八町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "安八町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%AE%89%E5%85%AB%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "ibigawa",
+    "cityName": "揖斐川町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "揖斐川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "揖斐川町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%8F%96%E6%96%90%E5%B7%9D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "ono",
+    "cityName": "大野町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "大野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "大野町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%A7%E9%87%8E%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "ikeda",
+    "cityName": "池田町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "池田町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "池田町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B1%A0%E7%94%B0%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "kitagata",
+    "cityName": "北方町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "北方町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "北方町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8C%97%E6%96%B9%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "sakahogi",
+    "cityName": "坂祝町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "坂祝町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "坂祝町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%9D%82%E7%A5%9D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "tomika",
+    "cityName": "富加町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "富加町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "富加町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%AF%8C%E5%8A%A0%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "kawabe",
+    "cityName": "川辺町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "川辺町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "川辺町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B7%9D%E8%BE%BA%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "shichisou",
+    "cityName": "七宗町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "七宗町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "七宗町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%83%E5%AE%97%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "yaotsu",
+    "cityName": "八百津町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "八百津町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "八百津町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%85%AB%E7%99%BE%E6%B4%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "shirakawa",
+    "cityName": "白川町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "白川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "白川町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%99%BD%E5%B7%9D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "higashishirakawa",
+    "cityName": "東白川村",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "東白川村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "東白川村では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9D%B1%E7%99%BD%E5%B7%9D%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "mitake",
+    "cityName": "御嵩町",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "御嵩町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "御嵩町では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%BE%A1%E5%B5%A9%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "gifu",
+    "cityId": "shirakawago",
+    "cityName": "白川村",
+    "prefName": "岐阜県",
+    "mascot": {
+      "localRiskText": "白川村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "noSubsidyNote": "白川村では現在、空き家解体を対象とした独自の補助金制度の有無は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%99%BD%E5%B7%9D%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "ise",
+    "cityName": "伊勢市",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "伊勢市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "木造空家住宅の除却（解体）補助制度",
+      "maxAmount": "最大30万円（費用の2/3以内）",
+      "conditions": [
+        "昭和56年5月31日以前に着工された木造住宅",
+        "耐震診断の評点が0.7未満",
+        "1ヘクタールあたり10戸以上の建て込んだ区域内または避難路沿い",
+        "在来軸組構法・伝統的構法・枠組壁構法",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.ise.mie.jp/kurashi/hikkoshi_sumai/akiya/hojo/1004965.html",
+      "applicationPeriod": "令和7年度4月1日午前8時30分より先着順（予算がなくなり次第終了）",
+      "windowName": "住宅政策課空家対策係",
+      "windowPhone": "0596-21-5597",
+      "notes": "老朽危険空家等除却費補助金（特定空家等対象）も別途あり。詳細は窓口へ"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.ise.mie.jp/kurashi/gomi/index.html",
+      "phone": "0596-21-5543"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "matsusaka",
+    "cityName": "松阪市",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "松阪市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "松阪市不良空家等除却促進補助金／木造住宅の除却補助",
+      "maxAmount": "最大25万円（費用の23%以内）※旧耐震木造住宅除却は最大30万円（費用の2/3以内）",
+      "conditions": [
+        "不良空家等：住宅地区改良法基準による評点50点以上の空家",
+        "旧耐震木造住宅：昭和56年5月31日以前建築、耐震診断評点0.7未満",
+        "1年以上使用されていないことが常態",
+        "市内業者による解体工事",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.matsusaka.mie.jp/soshiki/47/63-jyokyakuhojyokin.html",
+      "applicationPeriod": "令和7年度（先着24件・予算の範囲内）",
+      "windowName": "建築開発課空家対策係／防災対策課防災対策係",
+      "windowPhone": "0598-53-4034",
+      "notes": "不良空家に該当するか事前判定申請が必要。旧耐震木造住宅除却は防災対策課（0598-53-4034）へ別途申請"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.matsusaka.mie.jp/site/gomi/index.html",
+      "phone": "0598-53-4070"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "kuwana",
+    "cityName": "桑名市",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "桑名市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "桑名市特定空家等除却補助金",
+      "maxAmount": "最大30万円（費用の1/3以内）",
+      "conditions": [
+        "桑名市が特定空家等と認定した建築物",
+        "建設業法の許可または建設リサイクル法の登録を受けた業者による除却工事",
+        "他の公的補助金を受けていない工事",
+        "権利者全員の同意があること"
+      ],
+      "officialUrl": "https://www.city.kuwana.lg.jp/toshikanri/tsukamoto.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了・予定件数5件先着順）※要確認",
+      "windowName": "都市管理課",
+      "windowPhone": "0594-24-1291",
+      "notes": "特定空家等の認定が必要。令和7年度詳細は窓口へ要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kuwana.lg.jp/index.cfm/10,0,81,html",
+      "phone": "0594-24-1511"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "suzuka",
+    "cityName": "鈴鹿市",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "鈴鹿市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "鈴鹿市特定空家等除却費補助金",
+      "maxAmount": "最大30万円（費用の1/3以内）",
+      "conditions": [
+        "鈴鹿市内に存する特定空家等",
+        "特定空家等の所有者または相続人",
+        "権利者全員の同意があること",
+        "申請年度の3月1日までに完了する工事"
+      ],
+      "officialUrl": "https://www.city.suzuka.lg.jp/kurashi/sumai/1009631/1002595.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "住宅政策課",
+      "windowPhone": "059-382-7616",
+      "notes": "特定空家等の認定は市が判断。事前に住宅政策課へ要相談"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.suzuka.lg.jp/kurashi/gomi/index.html",
+      "phone": "059-382-0511"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "nabari",
+    "cityName": "名張市",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "名張市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "名張市特定空家等及び不良空家除却費補助金",
+      "maxAmount": "最大30万円（費用の1/3以内）",
+      "conditions": [
+        "名張市内の特定空家等または不良空家",
+        "1年以上居住その他の使用がなされていないことが常態",
+        "延べ床面積の1/2以上が居住用として使用されていたもの",
+        "著しく危険性がある状態（外壁・屋根の変形、柱・梁の腐朽等）",
+        "市内業者による除却工事"
+      ],
+      "officialUrl": "https://www.city.nabari.lg.jp/s043/030/080/290/20190516154450.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "住宅室",
+      "windowPhone": "0595-63-7698",
+      "notes": "不良空家の場合は事前判定申請が必要"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.nabari.lg.jp/s043/010/010/20150417165741.html",
+      "phone": "0595-63-7621"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "owase",
+    "cityName": "尾鷲市",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "尾鷲市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.owase.lg.jp/0000011820.html",
+      "windowName": "尾鷲市建設課建築係",
+      "windowPhone": "0597-23-8243",
+      "noSubsidyNote": "※要確認：耐震診断・補強工事の補助は確認済み。空き家解体除却補助の有無は窓口へ直接確認推奨。空き家率21.3%と高い漁村・山間地域",
+      "notes": "※要確認：耐震診断・補強工事の補助は確認済み。空き家解体除却補助の有無は窓口へ直接確認推奨。空き家率21.3%と高い漁村・山間地域"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.owase.lg.jp/",
+      "phone": "0597-23-8106"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "kameyama",
+    "cityName": "亀山市",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "亀山市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "木造住宅除却事業費補助金（木造住宅耐震事業）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造住宅",
+        "耐震診断の結果、評点が0.7未満",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.kameyama.mie.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設部建設課",
+      "windowPhone": "0595-84-5030",
+      "notes": "※要確認：令和6年度実績で木造住宅耐震事業（除却含む）の実施を確認。上限額・条件の詳細は窓口へ"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kameyama.mie.jp/",
+      "phone": "0595-84-5012"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "toba",
+    "cityName": "鳥羽市",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "鳥羽市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "木造住宅耐震支援制度（除却補助含む）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造住宅",
+        "耐震診断の結果、評点が0.7未満",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.toba.mie.jp/",
+      "applicationPeriod": "令和7年度・先着順（随時受付）",
+      "windowName": "建設課",
+      "windowPhone": "0599-25-1156",
+      "notes": "※要確認：令和6年度実績で木造住宅耐震支援制度（除却含む）の実施を確認。空き家率17.9%と高い観光地。上限額は窓口へ"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.toba.mie.jp/",
+      "phone": "0599-25-1154"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "kumano",
+    "cityName": "熊野市",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "熊野市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "熊野市耐震性のない木造住宅除却事業費補助金",
+      "maxAmount": "最大20万7千円（工事費の23%以内）",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造住宅",
+        "耐震診断の評点が0.7未満または市長が耐震性のないと判断した住宅",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.kumano.lg.jp/life/?content=2191",
+      "applicationPeriod": "令和7年5月1日（木）〜令和7年8月18日（月）",
+      "windowName": "建設課都市整備室都市整備係",
+      "windowPhone": "0597-89-4111（内線222）",
+      "notes": "申請締切後に優先度審査あり。別途、特定空家等除却事業費補助金（最大50万円・費用の1/2、重機が入れない場合は最大60万円）も設置"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kumano.lg.jp/kurasi/gomi/index.html",
+      "phone": "0597-89-4111"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "inabe",
+    "cityName": "いなべ市",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "いなべ市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "木造住宅耐震補強等事業費補助制度（除却補助含む）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造住宅",
+        "耐震診断の評点が0.7未満",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.inabe.mie.jp/",
+      "applicationPeriod": "令和7年度5月初旬〜12月中旬（予定戸数まで）",
+      "windowName": "建設部建設課",
+      "windowPhone": "0594-46-6113",
+      "notes": "※要確認：令和6年度実績で実施を確認。上限額の詳細は窓口へ"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.inabe.mie.jp/kurashi/gomi/index.html",
+      "phone": "0594-86-7833"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "shima",
+    "cityName": "志摩市",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "志摩市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "志摩市木造住宅空き家除却（解体）補助金",
+      "maxAmount": "最大30万円（費用の2/3以内）",
+      "conditions": [
+        "昭和56年5月31日以前に着工された木造住宅",
+        "1ヘクタール内に10戸以上の建て込んだ区域内",
+        "耐震性がないと判断されたもの（事前申込審査または耐震診断評点0.7未満）",
+        "在来軸組構法・伝統的構法・枠組壁構法（プレハブ工法除く）",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.shima.mie.jp/kakuka/kensetsubu/eizenshitsu/eizen_sumai/1554777997590.html",
+      "applicationPeriod": "令和7年4月8日（火）午前8時30分より先着順（予算額に達するまで）",
+      "windowName": "建設部営繕課",
+      "windowPhone": "0599-44-0306",
+      "notes": "空き家率14.9%と高い観光地。空き家除却後の固定資産税減免制度（2年度分）も別途あり"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.shima.mie.jp/kurashi_tetsuzuki/gomi/index.html",
+      "phone": "0599-44-0006"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "iga",
+    "cityName": "伊賀市",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "伊賀市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "耐震のない木造住宅（空き家）の除却支援",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造住宅（空き家）",
+        "耐震診断の評点が0.7未満",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.iga.lg.jp/",
+      "applicationPeriod": "令和7年度4月10日〜12月27日（予算上限まで）",
+      "windowName": "建設部住宅課",
+      "windowPhone": "0595-22-9690",
+      "notes": "※要確認：令和6年度実績で実施を確認。大阪・名古屋のベッドタウンとして空き家問題が増加傾向。上限額は窓口へ"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.iga.lg.jp/kurashi/gomi/index.html",
+      "phone": "0595-22-9683"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "kisosaki",
+    "cityName": "木曽岬町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "木曽岬町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kisosaki.mie.jp/",
+      "windowName": "木曽岬町役場建設課",
+      "windowPhone": "0567-68-0001",
+      "noSubsidyNote": "木曽岬町では現在、空き家解体を対象とした独自の補助金制度の実施状況について情報が確認できませんでした。詳細は建設課にお問い合わせください。",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kisosaki.mie.jp/",
+      "phone": "0567-68-0001"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "toin",
+    "cityName": "東員町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "東員町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "空家除却支援事業",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造住宅",
+        "耐震性を満たさない空き家",
+        "町税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.town.toin.mie.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "東員町建設課",
+      "windowPhone": "0594-86-2832",
+      "notes": "※要確認：令和6年度実績で空家除却支援事業の実施を確認。詳細は窓口へ"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.toin.mie.jp/",
+      "phone": "0594-86-2832"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "komono",
+    "cityName": "菰野町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "菰野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "木造住宅耐震診断・補強事業（除却補助含む）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造住宅",
+        "耐震診断の評点が0.7未満",
+        "町税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.town.komono.mie.jp/",
+      "applicationPeriod": "令和7年度5月16日〜5月31日（20件先着順）",
+      "windowName": "菰野町建設課",
+      "windowPhone": "059-391-1112",
+      "notes": "※要確認：令和6年度実績で実施を確認。詳細は窓口へ"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.komono.mie.jp/",
+      "phone": "059-391-1112"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "asahi",
+    "cityName": "朝日町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "朝日町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "officialUrl": "https://www.town.asahi.mie.jp/",
+      "windowName": "朝日町役場建設課",
+      "windowPhone": "059-377-5604",
+      "noSubsidyNote": "朝日町では現在、空き家解体を対象とした独自の補助金制度は設けられていません（耐震補強工事の補助のみ）。詳細は建設課にお問い合わせください。",
+      "notes": "令和6年度実績で「解体工事該当なし・補強工事のみ」と確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.asahi.mie.jp/",
+      "phone": "059-377-5604"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "kawagoe",
+    "cityName": "川越町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "川越町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kawagoe.mie.jp/",
+      "windowName": "川越町役場建設課",
+      "windowPhone": "059-366-7120",
+      "noSubsidyNote": "※要確認：解体補助の実施状況は不明。詳細は窓口へ",
+      "notes": "※要確認：解体補助の実施状況は不明。詳細は窓口へ"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kawagoe.mie.jp/",
+      "phone": "059-366-7120"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "taki",
+    "cityName": "多気町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "多気町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.taki.mie.jp/",
+      "windowName": "多気町役場建設課",
+      "windowPhone": "0598-38-1111",
+      "noSubsidyNote": "※要確認：空家等対策計画を令和8年度に策定中（令和8年全員協議会で確認）。解体補助制度の詳細は建設課へ直接確認推奨",
+      "notes": "※要確認：空家等対策計画を令和8年度に策定中（令和8年全員協議会で確認）。解体補助制度の詳細は建設課へ直接確認推奨"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.taki.mie.jp/",
+      "phone": "0598-38-1111"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "meiwa",
+    "cityName": "明和町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "明和町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "明和町木造空家住宅除却補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造住宅（空家）",
+        "耐震診断の評点が0.7未満",
+        "町税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.town.meiwa.mie.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "明和町建設課",
+      "windowPhone": "0596-52-7119",
+      "notes": "※要確認：令和6年度実績で明和町木造空家住宅除却補助金の実施を確認。上限額は窓口へ"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.meiwa.mie.jp/",
+      "phone": "0596-52-7119"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "odai",
+    "cityName": "大台町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "大台町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "大台町空家等除却補助制度",
+      "maxAmount": "最大100万円（令和7年度〜令和9年度）",
+      "conditions": [
+        "大台町内に存する空家等",
+        "建設業法許可または建設リサイクル法登録業者による工事",
+        "他の補助金等の対象となっていない工事",
+        "権利者全員の同意があること",
+        "交付決定後に着手する工事"
+      ],
+      "officialUrl": "https://www.odaitown.jp/soshiki/yakuba/8/2/1974.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "生活環境課",
+      "windowPhone": "0598-82-3787",
+      "notes": "令和7年度から令和9年度の3か年で上限100万円という三重県内最高水準の制度。事前に担当課への相談が必要"
+    },
+    "garbage": {
+      "officialUrl": "https://www.odaitown.jp/",
+      "phone": "0598-82-3611"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "tamaki",
+    "cityName": "玉城町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "玉城町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "木造住宅への耐震事業補助金制度（除却補助含む）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造住宅",
+        "耐震診断の評点が0.7未満",
+        "町税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.town.tamaki.mie.jp/",
+      "applicationPeriod": "令和7年度（予算額達成まで）",
+      "windowName": "玉城町建設課",
+      "windowPhone": "0596-58-8211",
+      "notes": "※要確認：令和6年度実績で木造住宅耐震事業補助金制度の実施を確認。除却補助の詳細は窓口へ"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.tamaki.mie.jp/",
+      "phone": "0596-58-8211"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "watarai",
+    "cityName": "度会町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "度会町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.watarai.mie.jp/",
+      "windowName": "度会町役場建設課",
+      "windowPhone": "0596-62-2510",
+      "noSubsidyNote": "※要確認：度会郡の過疎地域。補助制度の実施状況は不明。詳細は建設課へ直接確認推奨",
+      "notes": "※要確認：度会郡の過疎地域。補助制度の実施状況は不明。詳細は建設課へ直接確認推奨"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.watarai.mie.jp/",
+      "phone": "0596-62-2510"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "taiki",
+    "cityName": "大紀町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "大紀町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "大紀町空家等除却補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "大紀町内の老朽化した空家",
+        "1年以上使用されていないことが常態",
+        "町税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.town.taiki.mie.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "大紀町建設課",
+      "windowPhone": "0598-86-2311",
+      "notes": "※要確認：令和6年度実績で大紀町空家等除却補助金の実施を確認。詳細は窓口へ"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.taiki.mie.jp/",
+      "phone": "0598-86-2311"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "minamiise",
+    "cityName": "南伊勢町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "南伊勢町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "南伊勢町木造住宅耐震除却事業費補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造住宅",
+        "耐震診断の評点が0.7未満",
+        "町税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.town.minamiise.mie.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "南伊勢町建設課",
+      "windowPhone": "0599-66-0005",
+      "notes": "※要確認：令和6年度実績で南伊勢町木造住宅耐震除却事業費補助金の実施を確認。上限額は窓口へ"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.minamiise.mie.jp/",
+      "phone": "0599-66-0005"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "kihoku",
+    "cityName": "紀北町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "紀北町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "木造住宅の解体工事補助",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造住宅",
+        "耐震診断の評点が0.7未満",
+        "町税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.town.kihoku.mie.jp/",
+      "applicationPeriod": "令和7年7月22日〜8月9日（20件・抽選）",
+      "windowName": "紀北町建設課",
+      "windowPhone": "0597-46-3113",
+      "notes": "令和6年度実績で受付期間7〜8月・20件抽選の実施を確認。空き家率23.2%と三重県内最高水準の過疎地域"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kihoku.mie.jp/",
+      "phone": "0597-46-3113"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "mihama",
+    "cityName": "御浜町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "御浜町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "御浜町不良空家除却補助金／木造空き家住宅除却工事補助",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "不良空家：1年以上使用されていない老朽化した危険な空家",
+        "木造空き家除却：昭和56年5月31日以前建築で耐震診断評点が低いもの",
+        "町税の滞納がないこと",
+        "建設業法許可または建設リサイクル法登録業者による工事"
+      ],
+      "officialUrl": "https://www.town.mihama.mie.jp/soshikikarasagasu/kensetsuka/kurashinojoho/1/228.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設課 管理係",
+      "windowPhone": "05979-3-0521",
+      "notes": "不良空家除却補助と木造空き家住宅除却補助の2制度あり。上限額は窓口またはPDF（御浜町不良空家除却補助金のご案内）にて確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.mihama.mie.jp/kurashinojoho/index.html",
+      "phone": "05979-3-0505"
+    }
+  },
+  {
+    "prefId": "mie",
+    "cityId": "kiho",
+    "cityName": "紀宝町",
+    "prefName": "三重県",
+    "mascot": {
+      "localRiskText": "紀宝町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "officialUrl": "https://www.town.kiho.mie.jp/",
+      "windowName": "紀宝町役場建設課",
+      "windowPhone": "0735-33-0355",
+      "noSubsidyNote": "紀宝町では現在、空き家解体を対象とした独自の補助金制度は設けられていません（耐震補強工事のみ対応）。詳細は建設課にお問い合わせください。",
+      "notes": "令和6年度実績で「該当なし・補強工事のみ」と確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kiho.mie.jp/",
+      "phone": "0735-33-0355"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "fukuchiyama",
+    "cityName": "福知山市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "福知山市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.fukuchiyama.lg.jp/",
+      "windowName": "まちづくり推進部 都市計画課",
+      "windowPhone": "0773-24-7041",
+      "noSubsidyNote": "※要確認：移住促進向け空き家改修補助金（上限100万円）は確認済みだが、解体専用補助金の存否は未確認。直接窓口にお問い合わせください。",
+      "notes": "※要確認：移住促進向け空き家改修補助金（上限100万円）は確認済みだが、解体専用補助金の存否は未確認。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.fukuchiyama.lg.jp/",
+      "phone": "0773-22-6111"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "maizuru",
+    "cityName": "舞鶴市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "舞鶴市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "舞鶴市空き家除却支援事業補助金",
+      "maxAmount": "最大40万円（工事費の1/3以内）",
+      "conditions": [
+        "都市計画区域内の木造住宅であること",
+        "居住・使用がなされていないことが常態であること",
+        "倒壊等のおそれがある空き家（住宅地区改良法に基づく評点100点以上）",
+        "市内に本社・本店を有する事業者と契約した除却工事であること",
+        "申込み前に工事着工していないこと"
+      ],
+      "officialUrl": "https://www.city.maizuru.kyoto.jp/0000012316.html",
+      "applicationPeriod": "令和7年5月7日〜5月30日（年度内3月末までに工事完了）",
+      "windowName": "建設部 都市計画課",
+      "windowPhone": "0773-66-1048",
+      "notes": "年度ごとに募集期間が設定される先着順制度。令和7年度は5月7日〜30日の短期間のみ受付。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.maizuru.kyoto.jp/",
+      "phone": "0773-66-1040"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "ayabe",
+    "cityName": "綾部市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "綾部市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "綾部市特定空家等除却費補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "市が特定空家等と判断した空き家であること",
+        "補助を受けるには一定の条件あり（詳細は建築課に問い合わせ）"
+      ],
+      "officialUrl": "https://www.city.ayabe.lg.jp/faq/faq_detail.php?co=cat&frmId=87&frmCd=5-4-0-0-0",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設部 都市建築課 住宅・空家等対策担当",
+      "windowPhone": "0773-42-4284",
+      "notes": "※要確認：特定空家等（市が危険と判断した空き家）のみ対象。一般的な空き家解体補助とは異なり適用範囲が限定的。補助額・詳細条件は窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.ayabe.lg.jp/",
+      "phone": "0773-42-4284"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "uji",
+    "cityName": "宇治市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "宇治市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "宇治市老朽空き家等解体補助金",
+      "maxAmount": "最大30万円（解体工事費の1/3以内）",
+      "conditions": [
+        "昭和56年5月31日以前に着工した旧耐震空き家であること",
+        "概ね1年以上使用されていない建物であること",
+        "腐朽または破損のある老朽化が目視で確認できる状態であること",
+        "宇治市税の滞納がないこと",
+        "敷地全体を更地にする工事であること"
+      ],
+      "officialUrl": "https://www.city.uji.kyoto.jp/soshiki/48/88936.html",
+      "applicationPeriod": "令和7年5月23日〜令和7年12月26日（予算がなくなり次第終了）",
+      "windowName": "住宅課",
+      "windowPhone": "0774-21-0418",
+      "notes": "令和7年度は先着順。郵送申請不可（窓口持参のみ）。交付決定前の工事契約・着手は不可。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.uji.kyoto.jp/",
+      "phone": "0774-22-3141"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "miyazu",
+    "cityName": "宮津市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "宮津市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.miyazu.kyoto.jp/",
+      "windowName": "建設部 建設課",
+      "windowPhone": "0772-45-1609",
+      "noSubsidyNote": "※要確認：移住者向け空き家改修補助（上限最大180万円）・家財撤去補助は確認済みだが、解体専用補助金の存否は未確認。空き家率約19%と高水準のため制度が存在する可能性あり。直接窓口にお問い合わせください。",
+      "notes": "※要確認：移住者向け空き家改修補助（上限最大180万円）・家財撤去補助は確認済みだが、解体専用補助金の存否は未確認。空き家率約19%と高水準のため制度が存在する可能性あり。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.miyazu.kyoto.jp/",
+      "phone": "0772-45-1620"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "kameoka",
+    "cityName": "亀岡市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "亀岡市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.kameoka.kyoto.jp/",
+      "windowName": "まちづくり推進部 都市計画課",
+      "windowPhone": "0771-25-5047",
+      "noSubsidyNote": "※要確認：移住者向け空き家活用補助金・家財撤去補助金は確認済みだが、解体専用補助金の存否は未確認。直接窓口にお問い合わせください。",
+      "notes": "※要確認：移住者向け空き家活用補助金・家財撤去補助金は確認済みだが、解体専用補助金の存否は未確認。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kameoka.kyoto.jp/",
+      "phone": "0771-22-3131"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "joyo",
+    "cityName": "城陽市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "城陽市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "officialUrl": "https://www.city.joyo.kyoto.jp/0000006469.html",
+      "windowName": "都市整備部 都市政策課",
+      "windowPhone": "0774-56-4067",
+      "noSubsidyNote": "城陽市では現在、空き家解体を対象とした独自の補助金制度は設けられていません。詳細は都市政策課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.joyo.kyoto.jp/",
+      "phone": "0774-56-4041"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "muko",
+    "cityName": "向日市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "向日市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.muko.kyoto.jp/",
+      "windowName": "建設部 建築指導課",
+      "windowPhone": "075-931-1111",
+      "noSubsidyNote": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。",
+      "notes": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.muko.kyoto.jp/",
+      "phone": "075-931-1111"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "nagaokakyo",
+    "cityName": "長岡京市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "長岡京市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.nagaokakyo.lg.jp/",
+      "windowName": "建設交通部 都市計画課 開発指導・空き家対策係",
+      "windowPhone": "075-955-9715",
+      "noSubsidyNote": "※要確認：空き家相談窓口（行政プラットフォーム）は整備済みだが、解体専用補助金の存否は未確認。直接窓口にお問い合わせください。",
+      "notes": "※要確認：空き家相談窓口（行政プラットフォーム）は整備済みだが、解体専用補助金の存否は未確認。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.nagaokakyo.lg.jp/",
+      "phone": "075-955-9500"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "yawata",
+    "cityName": "八幡市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "八幡市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.yawata.kyoto.jp/",
+      "windowName": "都市整備部 建築住宅課",
+      "windowPhone": "075-983-1111",
+      "noSubsidyNote": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。",
+      "notes": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.yawata.kyoto.jp/",
+      "phone": "075-983-1111"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "kyotanabe",
+    "cityName": "京田辺市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "京田辺市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.kyotanabe.lg.jp/",
+      "windowName": "都市整備部 建築住宅課",
+      "windowPhone": "0774-64-1369",
+      "noSubsidyNote": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。",
+      "notes": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kyotanabe.lg.jp/",
+      "phone": "0774-64-1300"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "kyotango",
+    "cityName": "京丹後市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "京丹後市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "京丹後市老朽空家等除却費補助金",
+      "maxAmount": "最大20万円（対象経費の1/3以内）",
+      "conditions": [
+        "倒壊により周辺に危害を及ぼすおそれのある空家等であること",
+        "不良度判定基準による全体評点が100点以上であること",
+        "個人所有の居住用建物（延べ面積の1/2以上が居住用）であること",
+        "市の事前指導等の対象となった空き家であること",
+        "京丹後市内業者に除却を委託すること"
+      ],
+      "officialUrl": "https://www.city.kyotango.lg.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市計画・建築住宅課",
+      "windowPhone": "0772-69-0530",
+      "notes": "上限20万円（国交省が定める標準除却費が20万円を下回る場合はその額）。千円未満切捨て。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kyotango.lg.jp/",
+      "phone": "0772-69-0120"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "nantan",
+    "cityName": "南丹市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "南丹市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.nantan.kyoto.jp/",
+      "windowName": "定住促進サポートセンター（日吉支所内）",
+      "windowPhone": "0771-68-1616",
+      "noSubsidyNote": "※要確認：移住促進住宅整備事業（改修補助最大200万円）は確認済み。解体専用補助金の存否は未確認。空き家率11.2%と高水準。直接窓口にお問い合わせください。",
+      "notes": "※要確認：移住促進住宅整備事業（改修補助最大200万円）は確認済み。解体専用補助金の存否は未確認。空き家率11.2%と高水準。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.nantan.kyoto.jp/",
+      "phone": "0771-68-1616"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "kizugawa",
+    "cityName": "木津川市",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "木津川市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.kizugawa.lg.jp/",
+      "windowName": "都市整備部 都市計画課 開発指導係",
+      "windowPhone": "0774-75-1222",
+      "noSubsidyNote": "※要確認：空家等の解体相談事業者紹介制度はあるが、補助金の存否は未確認。直接窓口にお問い合わせください。",
+      "notes": "※要確認：空家等の解体相談事業者紹介制度はあるが、補助金の存否は未確認。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kizugawa.lg.jp/",
+      "phone": "0774-72-0501"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "oyamazaki",
+    "cityName": "大山崎町",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "大山崎町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.oyamazaki.kyoto.jp/",
+      "windowName": "建設課",
+      "windowPhone": "075-956-2101",
+      "noSubsidyNote": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。",
+      "notes": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.oyamazaki.kyoto.jp/",
+      "phone": "075-956-2101"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "kumiyama",
+    "cityName": "久御山町",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "久御山町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kumiyama.lg.jp/",
+      "windowName": "建設部 都市整備課",
+      "windowPhone": "075-631-5141",
+      "noSubsidyNote": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。",
+      "notes": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kumiyama.lg.jp/",
+      "phone": "075-631-5141"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "ide",
+    "cityName": "井手町",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "井手町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.ide.kyoto.jp/",
+      "windowName": "建設課",
+      "windowPhone": "0774-82-2514",
+      "noSubsidyNote": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。",
+      "notes": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.ide.kyoto.jp/",
+      "phone": "0774-82-2514"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "ujitawara",
+    "cityName": "宇治田原町",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "宇治田原町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.ujitawara.kyoto.jp/",
+      "windowName": "建設課",
+      "windowPhone": "0774-88-6624",
+      "noSubsidyNote": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。",
+      "notes": "※要確認：公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.ujitawara.kyoto.jp/",
+      "phone": "0774-88-6624"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "kasagi",
+    "cityName": "笠置町",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "笠置町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kasagi.lg.jp/",
+      "windowName": "産業建設課",
+      "windowPhone": "0743-95-2334",
+      "noSubsidyNote": "※要確認：小規模自治体。制度詳細は直接窓口にお問い合わせください。",
+      "notes": "※要確認：小規模自治体。制度詳細は直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kasagi.lg.jp/",
+      "phone": "0743-95-2334"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "wazuka",
+    "cityName": "和束町",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "和束町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.wazuka.lg.jp/",
+      "windowName": "産業建設課",
+      "windowPhone": "0774-78-2001",
+      "noSubsidyNote": "※要確認：茶産地として知られる農村自治体。制度詳細は直接窓口にお問い合わせください。",
+      "notes": "※要確認：茶産地として知られる農村自治体。制度詳細は直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.wazuka.lg.jp/",
+      "phone": "0774-78-2001"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "seika",
+    "cityName": "精華町",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "精華町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.seika.kyoto.jp/",
+      "windowName": "まちづくり部 都市建設課",
+      "windowPhone": "0774-95-1900",
+      "noSubsidyNote": "※要確認：けいはんな学研都市に位置する町。公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。",
+      "notes": "※要確認：けいはんな学研都市に位置する町。公式サイトでの解体補助金情報が未確認。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.seika.kyoto.jp/",
+      "phone": "0774-95-1900"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "minamiyamashiro",
+    "cityName": "南山城村",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "南山城村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.vill.minamiyamashiro.lg.jp/",
+      "windowName": "産業建設課",
+      "windowPhone": "0743-93-0106",
+      "noSubsidyNote": "※要確認：京都府唯一の村。小規模自治体のため制度詳細は直接窓口にお問い合わせください。",
+      "notes": "※要確認：京都府唯一の村。小規模自治体のため制度詳細は直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.minamiyamashiro.lg.jp/",
+      "phone": "0743-93-0106"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "kyotamba",
+    "cityName": "京丹波町",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "京丹波町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kyotamba.kyoto.jp/",
+      "windowName": "建設環境課",
+      "windowPhone": "0771-82-0700",
+      "noSubsidyNote": "※要確認：丹波地域で人口減少が進む町。補助制度が存在する可能性あり。直接窓口にお問い合わせください。",
+      "notes": "※要確認：丹波地域で人口減少が進む町。補助制度が存在する可能性あり。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kyotamba.kyoto.jp/",
+      "phone": "0771-82-0700"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "ine",
+    "cityName": "伊根町",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "伊根町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.ine.kyoto.jp/",
+      "windowName": "企画観光課",
+      "windowPhone": "0772-32-0502",
+      "noSubsidyNote": "※要確認：舟屋で有名な漁村集落。空き家問題が深刻なため解体補助制度が存在する可能性あり。直接窓口にお問い合わせください。",
+      "notes": "※要確認：舟屋で有名な漁村集落。空き家問題が深刻なため解体補助制度が存在する可能性あり。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.ine.kyoto.jp/",
+      "phone": "0772-32-0502"
+    }
+  },
+  {
+    "prefId": "kyoto",
+    "cityId": "yosano",
+    "cityName": "与謝野町",
+    "prefName": "京都府",
+    "mascot": {
+      "localRiskText": "与謝野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.yosano.lg.jp/",
+      "windowName": "観光交流課",
+      "windowPhone": "0772-43-9016",
+      "noSubsidyNote": "※要確認：空き家率が約11%と高く、補助制度が存在する可能性あり。直接窓口にお問い合わせください。",
+      "notes": "※要確認：空き家率が約11%と高く、補助制度が存在する可能性あり。直接窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.yosano.lg.jp/",
+      "phone": "0772-43-9016"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "akashi",
+    "cityName": "明石市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "明石市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.akashi.lg.jp/tosei/ken_anzen_ka/20180906.html",
+      "windowName": "明石市住宅政策課",
+      "windowPhone": "078-918-5097",
+      "noSubsidyNote": "※要確認。公式サイトで空き家解体補助制度の確認が取れませんでした。耐震改修補助制度は存在します。詳細は住宅政策課へ直接お問い合わせください。",
+      "notes": "※要確認。公式サイトで空き家解体補助制度の確認が取れませんでした。耐震改修補助制度は存在します。詳細は住宅政策課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.akashi.lg.jp/seisou/kankyo_shimin_ka/sodaigomi.html",
+      "phone": "078-918-5780"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "sumoto",
+    "cityName": "洲本市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "洲本市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "洲本市危険空き家除却支援事業補助金",
+      "maxAmount": "最大133.2万円（費用の2/3以内）※住宅用途以外は最大30万円（費用の1/3）",
+      "conditions": [
+        "市の危険空家判定基準を満たす老朽危険空き家",
+        "主として住居の用に供されていたもの",
+        "市内に主たる事業所を有する業者による施工",
+        "補助金の交付決定前に着手した工事でないこと",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.sumoto.lg.jp/soshiki/22/index.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "洲本市都市計画課",
+      "windowPhone": "0799-22-3321",
+      "notes": "跡地は10年間適正管理が必要。公共・公益用地として活用する場合も補助対象（2/3・上限133.2万円）。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.sumoto.lg.jp/soshiki/11/index.html",
+      "phone": "0799-22-3321"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "ashiya",
+    "cityName": "芦屋市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "芦屋市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "officialUrl": "https://www.city.ashiya.lg.jp/juutaku/akiyakatuyousienjigyouhojyo.html",
+      "windowName": "芦屋市都市建設部建築課",
+      "windowPhone": "0797-38-2087",
+      "noSubsidyNote": "芦屋市では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家の改修・活用に関する補助制度（空き家活用支援事業補助金）は実施しています。詳細は建築課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.ashiya.lg.jp/kankyo/sodaigomi.html",
+      "phone": "0797-38-2082"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "itami",
+    "cityName": "伊丹市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "伊丹市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.itami.lg.jp/SOSIKI/TOSHI/JUTAKU/index.html",
+      "windowName": "伊丹市都市活力部住宅政策課",
+      "windowPhone": "072-784-8104",
+      "noSubsidyNote": "※要確認。詳細は住宅政策課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は住宅政策課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.itami.lg.jp/SOSIKI/KANKYO/GOMISYORI/index.html",
+      "phone": "072-784-8025"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "aioi",
+    "cityName": "相生市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "相生市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.aioi.lg.jp/",
+      "windowName": "相生市建設部都市計画課",
+      "windowPhone": "0791-23-7014",
+      "noSubsidyNote": "※要確認。空き家率が兵庫県内4位（13.4%）と高く制度がある可能性が高い。詳細は都市計画課へ直接お問い合わせください。",
+      "notes": "※要確認。空き家率が兵庫県内4位（13.4%）と高く制度がある可能性が高い。詳細は都市計画課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.aioi.lg.jp/",
+      "phone": "0791-23-7017"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "toyooka",
+    "cityName": "豊岡市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "豊岡市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "豊岡市危険空家除却支援事業補助金",
+      "maxAmount": "最大33.3万円（費用の1/6以内）",
+      "conditions": [
+        "市の「危険空家判定基準」および「周辺危険度判定基準」を満たす空き家",
+        "主として居住の用に供されていたもの",
+        "空き家の所有者・相続人またはこれに代わる者（法人不可）",
+        "市税の滞納がないこと",
+        "事前に市へ「危険空家除却支援事業事前審査申出書」を提出し審査を受けること"
+      ],
+      "officialUrl": "https://www.city.toyooka.lg.jp/kurashi/tochijutaku/1004666/1029069.html",
+      "applicationPeriod": "令和6〜10年度（5年間限定）予算の範囲内",
+      "windowName": "豊岡市都市整備部建築住宅課 住宅管理係",
+      "windowPhone": "0796-21-9018",
+      "notes": "補助率1/6・上限33.3万円は他市と比べ低め。事前審査と危険度判定が必要。工事は市内業者限定。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.toyooka.lg.jp/kurashi/gomi/index.html",
+      "phone": "0796-23-1111"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "kakogawa",
+    "cityName": "加古川市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "加古川市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.kakogawa.lg.jp/",
+      "windowName": "加古川市都市計画部建築指導課",
+      "windowPhone": "079-427-9263",
+      "noSubsidyNote": "※要確認。詳細は建築指導課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は建築指導課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kakogawa.lg.jp/kurashi/gomi/",
+      "phone": "079-421-4301"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "ako",
+    "cityName": "赤穂市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "赤穂市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.ako.lg.jp/",
+      "windowName": "赤穂市建設部都市整備課",
+      "windowPhone": "0791-43-6847",
+      "noSubsidyNote": "※要確認。詳細は都市整備課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市整備課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.ako.lg.jp/",
+      "phone": "0791-43-6848"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "nishiwaki",
+    "cityName": "西脇市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "西脇市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.nishiwaki.lg.jp/",
+      "windowName": "西脇市都市整備部都市計画課",
+      "windowPhone": "0795-22-3111",
+      "noSubsidyNote": "※要確認。詳細は都市計画課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市計画課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.nishiwaki.lg.jp/",
+      "phone": "0795-22-3111"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "takarazuka",
+    "cityName": "宝塚市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "宝塚市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.takarazuka.hyogo.jp/",
+      "windowName": "宝塚市都市安全部住宅政策課",
+      "windowPhone": "0797-74-7658",
+      "noSubsidyNote": "※要確認。詳細は住宅政策課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は住宅政策課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.takarazuka.hyogo.jp/kurashi/gomi/sodaigomi/",
+      "phone": "0797-74-6019"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "miki",
+    "cityName": "三木市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "三木市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.miki.lg.jp/",
+      "windowName": "三木市建設部都市計画課",
+      "windowPhone": "0794-82-2000",
+      "noSubsidyNote": "※要確認。詳細は都市計画課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市計画課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.miki.lg.jp/",
+      "phone": "0794-82-2000"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "takasago",
+    "cityName": "高砂市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "高砂市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.takasago.hyogo.jp/",
+      "windowName": "高砂市都市政策部都市計画課",
+      "windowPhone": "079-443-9044",
+      "noSubsidyNote": "※要確認。詳細は都市計画課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市計画課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.takasago.hyogo.jp/",
+      "phone": "079-443-9030"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "kawanishi",
+    "cityName": "川西市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "川西市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.kawanishi.hyogo.jp/",
+      "windowName": "川西市まちづくり部住宅政策課",
+      "windowPhone": "072-740-1160",
+      "noSubsidyNote": "※要確認。詳細は住宅政策課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は住宅政策課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kawanishi.hyogo.jp/kurashi/gomi/sodai/",
+      "phone": "072-740-1245"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "ono",
+    "cityName": "小野市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "小野市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.ono.hyogo.jp/",
+      "windowName": "小野市建設部都市整備課",
+      "windowPhone": "0794-63-1111",
+      "noSubsidyNote": "※要確認。詳細は都市整備課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市整備課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.ono.hyogo.jp/",
+      "phone": "0794-63-1111"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "sanda",
+    "cityName": "三田市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "三田市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.sanda.lg.jp/",
+      "windowName": "三田市都市整備部住宅政策課",
+      "windowPhone": "079-559-5082",
+      "noSubsidyNote": "※要確認。詳細は住宅政策課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は住宅政策課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.sanda.lg.jp/kurashi/gomi/",
+      "phone": "079-563-1361"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "kasai",
+    "cityName": "加西市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "加西市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.kasai.hyogo.jp/",
+      "windowName": "加西市建設部都市計画課",
+      "windowPhone": "0790-42-8728",
+      "noSubsidyNote": "※要確認。詳細は都市計画課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市計画課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kasai.hyogo.jp/",
+      "phone": "0790-42-8731"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "tanbasasayama",
+    "cityName": "丹波篠山市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "丹波篠山市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "丹波篠山市老朽危険空き家等除却支援事業補助金",
+      "maxAmount": "最大80万円（費用の2/3以内）",
+      "conditions": [
+        "市の職員による現地調査（不良度判定）で100点以上と認定された老朽危険空き家",
+        "主として居住の用に供されていたもの",
+        "申請前に必ず市との事前相談が必要",
+        "市内に事業所を持つ解体業者による施工",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.tanbasasayama.lg.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "丹波篠山市建築住宅課",
+      "windowPhone": "079-552-1111",
+      "notes": "補助率2/3・上限80万円は兵庫県内でも高水準。事前に必ず市との相談・不良度判定が必要。交付決定前の工事着手は不可。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.tanbasasayama.lg.jp/kurashi/gomi/",
+      "phone": "079-552-1111"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "yabu",
+    "cityName": "養父市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "養父市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "養父市老朽空き家等解体補助金",
+      "maxAmount": "最大50万円（費用の1/5以内）",
+      "conditions": [
+        "昭和56年5月以前に着工された建物",
+        "腐朽・破損のある空き家",
+        "補助金の交付決定後に工事着手すること",
+        "申請年度の2月末日までに完了する工事",
+        "他の補助金の対象となる工事でないこと"
+      ],
+      "officialUrl": "https://www.city.yabu.hyogo.jp/soshiki/seibi/miraika/1_1/10786.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "養父市市街地整備課 まちづくり住宅係",
+      "windowPhone": "079-664-1125",
+      "notes": "補助対象経費には門・塀等の撤去費や立木竹の伐採費も含む（剪定・草刈りは除く）。兵庫県内最高水準の空き家率（16.9%）のため制度が充実。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.yabu.hyogo.jp/soshiki/kankyo/",
+      "phone": "079-662-3366"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "tamba",
+    "cityName": "丹波市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "丹波市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "丹波市老朽危険空き家解体撤去支援事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "空家等対策の推進に関する特別措置法に基づく「特定空家等」に市長が認定し市から助言・指導を受けているもの",
+        "主として居住の用に供されていたもの（今後も居住見込みがないもの）",
+        "倒壊のおそれがある危険な状態の空き家等",
+        "事前に市への調査申込が必要",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.tamba.lg.jp/soshiki/toshijutakuka/gyomuannai/6/3/1817.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "丹波市建設部都市住宅課",
+      "windowPhone": "0795-82-0691",
+      "notes": "※要確認（補助率・上限額）。特定空家等に認定された建物が対象で国・県の補助要件への適合も審査あり。申請前に事前調査申込が必須。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.tamba.lg.jp/soshiki/kankyo/",
+      "phone": "0795-82-1006"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "minamiawaji",
+    "cityName": "南あわじ市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "南あわじ市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.minamiawaji.hyogo.jp/soshiki/toshi/",
+      "windowName": "南あわじ市都市政策課",
+      "windowPhone": "0799-43-5227",
+      "noSubsidyNote": "※要確認。改修・活用補助（定住促進空き家活用支援事業、最大100万円）は確認済み。解体補助制度については都市政策課へ直接お問い合わせください。",
+      "notes": "※要確認。改修・活用補助（定住促進空き家活用支援事業、最大100万円）は確認済み。解体補助制度については都市政策課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.minamiawaji.hyogo.jp/soshiki/toshi/",
+      "phone": "0799-43-5200"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "asago",
+    "cityName": "朝来市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "朝来市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.asago.hyogo.jp/",
+      "windowName": "朝来市建設部都市計画課",
+      "windowPhone": "079-672-6040",
+      "noSubsidyNote": "※要確認。詳細は都市計画課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市計画課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.asago.hyogo.jp/",
+      "phone": "079-672-6004"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "awaji",
+    "cityName": "淡路市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "淡路市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "淡路市危険空き家除却支援事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください（費用の2/3以内・標準除却費に基づき算定）",
+      "conditions": [
+        "市から助言または指導を受けているもの",
+        "主として居住の用に供されていたもの（居宅面積が延床の1/2超）",
+        "危険空き家判定基準で合計100点以上のもの",
+        "市が街並み景観等の観点から除却について支障がないと判断したもの",
+        "市内に主たる事業所を有する業者による施工",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.awaji.lg.jp/soshiki/toshikei/24588.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "淡路市都市計画課",
+      "windowPhone": "0799-64-0001",
+      "notes": "空き家率が兵庫県内3位（14.3%）と高く制度が整備されている。補助上限額は標準除却費に基づき算定のため、事前に窓口で確認を。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.awaji.lg.jp/soshiki/kankyo/",
+      "phone": "0799-64-0001"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "shiso",
+    "cityName": "宍粟市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "宍粟市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.shiso.lg.jp/",
+      "windowName": "宍粟市建設部都市計画課",
+      "windowPhone": "0790-63-3157",
+      "noSubsidyNote": "※要確認。詳細は都市計画課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市計画課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.shiso.lg.jp/",
+      "phone": "0790-63-3157"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "kato",
+    "cityName": "加東市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "加東市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.kato.lg.jp/",
+      "windowName": "加東市建設部都市整備課",
+      "windowPhone": "0795-43-0330",
+      "noSubsidyNote": "※要確認。詳細は都市整備課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市整備課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kato.lg.jp/",
+      "phone": "0795-43-0333"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "tatsuno",
+    "cityName": "たつの市",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "たつの市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.tatsuno.lg.jp/",
+      "windowName": "たつの市都市建設部都市計画課",
+      "windowPhone": "0791-64-3163",
+      "noSubsidyNote": "※要確認。詳細は都市計画課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市計画課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.tatsuno.lg.jp/",
+      "phone": "0791-64-3166"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "inagawa",
+    "cityName": "猪名川町",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "猪名川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.inagawa.lg.jp/",
+      "windowName": "猪名川町建設部都市整備課",
+      "windowPhone": "072-766-8717",
+      "noSubsidyNote": "※要確認。詳細は都市整備課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市整備課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.inagawa.lg.jp/",
+      "phone": "072-766-8720"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "taka",
+    "cityName": "多可町",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "多可町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.taka.lg.jp/",
+      "windowName": "多可町地域整備部建設課",
+      "windowPhone": "0795-32-2351",
+      "noSubsidyNote": "※要確認。詳細は建設課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は建設課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.taka.lg.jp/",
+      "phone": "0795-32-2351"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "inami",
+    "cityName": "稲美町",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "稲美町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.inami.lg.jp/",
+      "windowName": "稲美町建設経済部建設課",
+      "windowPhone": "079-492-1111",
+      "noSubsidyNote": "※要確認。詳細は建設課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は建設課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.inami.lg.jp/",
+      "phone": "079-492-1111"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "harima",
+    "cityName": "播磨町",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "播磨町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.harima.lg.jp/",
+      "windowName": "播磨町まちづくり部まちづくり課",
+      "windowPhone": "079-435-0373",
+      "noSubsidyNote": "※要確認。詳細はまちづくり課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細はまちづくり課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.harima.lg.jp/",
+      "phone": "079-435-0373"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "ichikawa",
+    "cityName": "市川町",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "市川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.ichikawa.lg.jp/",
+      "windowName": "市川町産業建設部建設課",
+      "windowPhone": "0790-26-1010",
+      "noSubsidyNote": "※要確認。詳細は建設課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は建設課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.ichikawa.lg.jp/",
+      "phone": "0790-26-1010"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "fukusaki",
+    "cityName": "福崎町",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "福崎町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.fukusaki.hyogo.jp/",
+      "windowName": "福崎町地域振興部都市計画課",
+      "windowPhone": "0790-22-0560",
+      "noSubsidyNote": "※要確認。詳細は都市計画課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市計画課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.fukusaki.hyogo.jp/",
+      "phone": "0790-22-0560"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "kamikawa",
+    "cityName": "神河町",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "神河町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kamikawa.hyogo.jp/",
+      "windowName": "神河町建設課",
+      "windowPhone": "0790-34-1001",
+      "noSubsidyNote": "※要確認。詳細は建設課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は建設課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kamikawa.hyogo.jp/",
+      "phone": "0790-34-1001"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "taishi",
+    "cityName": "太子町",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "太子町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.taishi.hyogo.jp/",
+      "windowName": "太子町都市部都市整備課",
+      "windowPhone": "079-277-1003",
+      "noSubsidyNote": "※要確認。詳細は都市整備課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は都市整備課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.taishi.hyogo.jp/",
+      "phone": "079-277-1003"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "kamigori",
+    "cityName": "上郡町",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "上郡町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kamigori.hyogo.jp/",
+      "windowName": "上郡町建設課",
+      "windowPhone": "0791-52-1111",
+      "noSubsidyNote": "※要確認。詳細は建設課へ直接お問い合わせください。",
+      "notes": "※要確認。詳細は建設課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kamigori.hyogo.jp/",
+      "phone": "0791-52-1111"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "sayo",
+    "cityName": "佐用町",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "佐用町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.sayo.lg.jp/",
+      "windowName": "佐用町建設課",
+      "windowPhone": "0790-82-0661",
+      "noSubsidyNote": "※要確認。空き家率が兵庫県内2位（14.4%）と高く制度がある可能性が高い。詳細は建設課へ直接お問い合わせください。",
+      "notes": "※要確認。空き家率が兵庫県内2位（14.4%）と高く制度がある可能性が高い。詳細は建設課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.sayo.lg.jp/",
+      "phone": "0790-82-2521"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "kami",
+    "cityName": "香美町",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "香美町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kami.hyogo.jp/",
+      "windowName": "香美町建設課",
+      "windowPhone": "0796-36-1111",
+      "noSubsidyNote": "※要確認。但馬地域の過疎地域で補助制度がある可能性が高い。詳細は建設課へ直接お問い合わせください。",
+      "notes": "※要確認。但馬地域の過疎地域で補助制度がある可能性が高い。詳細は建設課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kami.hyogo.jp/",
+      "phone": "0796-36-1111"
+    }
+  },
+  {
+    "prefId": "hyogo",
+    "cityId": "shinnonsen",
+    "cityName": "新温泉町",
+    "prefName": "兵庫県",
+    "mascot": {
+      "localRiskText": "新温泉町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.shinonsen.hyogo.jp/",
+      "windowName": "新温泉町建設課",
+      "windowPhone": "0796-82-3111",
+      "noSubsidyNote": "※要確認。但馬地域の過疎地域で補助制度がある可能性が高い。詳細は建設課へ直接お問い合わせください。",
+      "notes": "※要確認。但馬地域の過疎地域で補助制度がある可能性が高い。詳細は建設課へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.shinonsen.hyogo.jp/",
+      "phone": "0796-82-3111"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "yamatotakada",
+    "cityName": "大和高田市",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "大和高田市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "大和高田市老朽空家等除却工事補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "1年以上居住その他の使用がなされていないこと",
+        "不良住宅（住宅地区改良法の評点基準該当）と認定されること",
+        "市区域内に存する建物であること",
+        "市税の滞納がないこと",
+        "暴力団関係者でないこと"
+      ],
+      "officialUrl": "https://www.city.yamatotakada.nara.jp/soshikikarasagasu/jutakuka/zumai/1/7867.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "住宅課",
+      "windowPhone": "0745-22-1101",
+      "notes": "交付申請前に必ず補助金対象承認申請書を提出し、承認を受けること。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.yamatotakada.nara.jp/",
+      "phone": "0745-22-1101"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "yamatokoriyama",
+    "cityName": "大和郡山市",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "大和郡山市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.yamatokoriyama.nara.jp/",
+      "windowName": "都市建設部まちづくり推進課",
+      "windowPhone": "0743-53-1151",
+      "noSubsidyNote": "空き家解体専用の補助金制度の設置が現時点で確認できませんでした。詳細は市役所まちづくり推進課にお問い合わせください。※要確認",
+      "notes": "空き家解体専用の補助金制度の設置が現時点で確認できませんでした。詳細は市役所まちづくり推進課にお問い合わせください。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.yamatokoriyama.nara.jp/",
+      "phone": "0743-53-1151"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "tenri",
+    "cityName": "天理市",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "天理市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.tenri.nara.jp/kurashi/akiya/index.html",
+      "windowName": "建築課住宅係",
+      "windowPhone": "0743-63-1001",
+      "noSubsidyNote": "空き家解体専用の補助金制度の設置が現時点で確認できませんでした。詳細は市役所建築課住宅係にお問い合わせください。※要確認",
+      "notes": "空き家解体専用の補助金制度の設置が現時点で確認できませんでした。詳細は市役所建築課住宅係にお問い合わせください。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.tenri.nara.jp/",
+      "phone": "0743-63-1001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "kashihara",
+    "cityName": "橿原市",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "橿原市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "橿原市空家等除却事業",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "不良住宅（評点100点以上）または跡地活用予定の空家であること",
+        "1年以上居住・使用がなされていないこと",
+        "個人が所有する物件であること",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.kashihara.nara.jp/soshiki/1009/gyomu/3/1/16182.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "住宅政策課",
+      "windowPhone": "0744-47-3514",
+      "notes": "今井町の重要伝統的建造物群保存地区など歴史的景観保護区域を含む。解体の際は景観保護条例との関係を住宅政策課に事前確認すること。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kashihara.nara.jp/",
+      "phone": "0744-22-4001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "sakurai",
+    "cityName": "桜井市",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "桜井市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "桜井市老朽危険空家等除却支援事業補助金",
+      "maxAmount": "最大30万円（費用の2分の1以内）",
+      "conditions": [
+        "市が特定空家等または不良住宅（評点100点以上）と判断した物件であること",
+        "建設業法に基づく許可業者による工事であること",
+        "交付決定前に着工していないこと",
+        "工事が当年12月末までに完了するものであること",
+        "市税等の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.sakurai.lg.jp/sosiki/toshikensetsubu/eizenka/akiyaseido/6587.html",
+      "applicationPeriod": "令和7年度（受付期間・件数は年度ごとに設定、応募多数の場合は抽選）",
+      "windowName": "都市建設部営繕課",
+      "windowPhone": "0744-42-9111",
+      "notes": "令和6年度は7件の募集（応募多数の場合は抽選）。受付は例年5月頃。早めに窓口へ相談を。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.sakurai.lg.jp/",
+      "phone": "0744-42-9111"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "gojo",
+    "cityName": "五條市",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "五條市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "五條市特定空家等除却事業補助金",
+      "maxAmount": "最大50万円（費用の2分の1以内）",
+      "conditions": [
+        "市が特定空家等と判断した物件であること",
+        "市税所得割が非課税の世帯に属する者であること",
+        "市税に滞納がないこと",
+        "暴力団員・暴力団関係者でないこと",
+        "交付決定前に工事着手していないこと"
+      ],
+      "officialUrl": "https://www.city.gojo.lg.jp/soshiki/machidukuri/7578.html",
+      "applicationPeriod": "令和7年4月1日〜令和7年11月末（事前申請10月末まで、先着順）",
+      "windowName": "まちづくり推進課",
+      "windowPhone": "0747-22-4001",
+      "notes": "所得制限あり（市民税所得割が非課税の世帯に属する者が対象）。年度当初は申請が殺到するため早めの相談を推奨。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.gojo.lg.jp/",
+      "phone": "0747-22-4001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "gose",
+    "cityName": "御所市",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "御所市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "御所市危険空家等解体工事補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "危険空家等と認定された物件であること",
+        "交付申請年度内に解体の実績報告が行えること",
+        "建設業法の許可または解体工事業の登録を受けた事業者に発注すること"
+      ],
+      "officialUrl": "https://www.city.gose.nara.jp/0000001657.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "まちづくり建設課",
+      "windowPhone": "0745-62-3001",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.gose.nara.jp/",
+      "phone": "0745-62-3001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "ikoma",
+    "cityName": "生駒市",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "生駒市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "生駒市既存住宅の解体費用補助",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "市内に存する既存住宅であること",
+        "市税の滞納がないこと",
+        "暴力団員等でないこと"
+      ],
+      "officialUrl": "https://www.city.ikoma.lg.jp/0000009876.html",
+      "applicationPeriod": "令和7年5月12日から（予算がなくなり次第終了、約30件）",
+      "windowName": "建築指導係",
+      "windowPhone": "0743-74-1111",
+      "notes": "令和7年度は5月12日から受付開始。受付件数は約30件程度のため早めの申請を推奨。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.ikoma.lg.jp/",
+      "phone": "0743-74-1111"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "kashiba",
+    "cityName": "香芝市",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "香芝市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "香芝市空家等対策推進支援事業（除却）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "不良住宅に該当する空き家であること",
+        "1年以上使用がなされていないこと",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.kashiba.nara.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市計画課",
+      "windowPhone": "0745-76-2001",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kashiba.nara.jp/",
+      "phone": "0745-76-2001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "katsuragi",
+    "cityName": "葛城市",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "葛城市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "葛城市危険空家等解体工事補助金",
+      "maxAmount": "最大50万円（費用の2分の1以内）＋跡地公共利用の場合20万円加算",
+      "conditions": [
+        "不良度判定基準の評点合計が100点以上の物件または市長が解体の必要があると認めるもの",
+        "木造または軽量鉄骨造の居住用建築物であること",
+        "居住その他の使用がなされていないことが常態のもの",
+        "市税の滞納がないこと",
+        "暴力団員または暴力団関係者でないこと（共有の場合は全員の同意が必要）"
+      ],
+      "officialUrl": "https://www.city.katsuragi.nara.jp/soshiki/kikakuseisakuka/akiyataisaku/8048.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "企画政策課",
+      "windowPhone": "0745-44-5016"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.katsuragi.nara.jp/",
+      "phone": "0745-44-5011"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "uda",
+    "cityName": "宇陀市",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "宇陀市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.uda.nara.jp/s-suishin/akiyataisaku.html",
+      "windowName": "地域振興課",
+      "windowPhone": "0745-82-8000",
+      "noSubsidyNote": "空き家解体専用の補助金は確認できませんでした。空き家家財道具処分事業補助金・空き家空き店舗活用支援補助金はあります。解体補助については地域振興課に直接お問い合わせください。※要確認",
+      "notes": "空き家解体専用の補助金は確認できませんでした。空き家家財道具処分事業補助金・空き家空き店舗活用支援補助金はあります。解体補助については地域振興課に直接お問い合わせください。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.uda.nara.jp/",
+      "phone": "0745-82-8000"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "yamazoe",
+    "cityName": "山添村",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "山添村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "山添村老朽危険空家等解体支援事業",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空家等と判定されたもの",
+        "村内に所在する建物であること",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.vill.yamazoe.nara.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "山添村役場",
+      "windowPhone": "0743-85-0001",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.yamazoe.nara.jp/",
+      "phone": "0743-85-0001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "heguri",
+    "cityName": "平群町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "平群町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "officialUrl": "https://www.town.heguri.nara.jp/",
+      "windowName": "まちづくり推進課",
+      "windowPhone": "0745-45-1001",
+      "noSubsidyNote": "平群町では現在、空き家解体を対象とした独自の補助金制度は設けられていません（ブロック塀等の撤去工事補助制度はあります）。詳細はまちづくり推進課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.heguri.nara.jp/",
+      "phone": "0745-45-1001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "sango",
+    "cityName": "三郷町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "三郷町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "三郷町危険老朽空き家の解体・撤去費用補助",
+      "maxAmount": "最大50万円（費用の2分の1以内）",
+      "conditions": [
+        "三郷町空き家等の適正管理に関する条例第6条に基づき危険な状態にある空き家等と認定されたもの",
+        "町内に所在する建物であること",
+        "個人が所有する物件であること",
+        "所有権以外の権利が設定されていないもの"
+      ],
+      "officialUrl": "https://www.town.sango.nara.jp/seikatsukankyo/machi/kikenakiya.html",
+      "applicationPeriod": "令和7年度（2月末日までに工事完了）",
+      "windowName": "まちづくり課",
+      "windowPhone": "0745-73-3531"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.sango.nara.jp/seikatsukankyo/machi/kikenakiya.html",
+      "phone": "0745-73-3531"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "ikaruga",
+    "cityName": "斑鳩町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "斑鳩町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "officialUrl": "https://www.town.ikaruga.nara.jp/",
+      "windowName": "まちづくり推進課",
+      "windowPhone": "0745-74-1001",
+      "noSubsidyNote": "斑鳩町では現在、空き家解体を対象とした独自の補助金制度は設けられていません（ブロック塀等撤去支援事業はあります）。詳細はまちづくり推進課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.ikaruga.nara.jp/",
+      "phone": "0745-74-1001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "ando",
+    "cityName": "安堵町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "安堵町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "officialUrl": "https://www.town.ando.nara.jp/",
+      "windowName": "安堵町役場",
+      "windowPhone": "0743-57-1511",
+      "noSubsidyNote": "安堵町では現在、空き家解体を対象とした独自の補助金制度は設けられていません（ブロック塀等の撤去工事補助制度はあります）。詳細は安堵町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.ando.nara.jp/",
+      "phone": "0743-57-1511"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "kawanishi",
+    "cityName": "川西町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "川西町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kawanishi.nara.jp/",
+      "windowName": "川西町役場",
+      "windowPhone": "0745-56-2101",
+      "noSubsidyNote": "補助金制度の詳細は川西町役場にお問い合わせください。※要確認",
+      "notes": "補助金制度の詳細は川西町役場にお問い合わせください。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kawanishi.nara.jp/",
+      "phone": "0745-56-2101"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "miyake",
+    "cityName": "三宅町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "三宅町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "三宅町老朽危険空き家解体事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険度判定基準による評点が一定以上の空き家であること",
+        "町内に所在する個人所有の物件であること",
+        "市町村税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.town.miyake.nara.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "三宅町役場",
+      "windowPhone": "0745-43-3001",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.miyake.nara.jp/",
+      "phone": "0745-43-3001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "tawaramoto",
+    "cityName": "田原本町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "田原本町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "田原本町老朽危険空家等除却費用補助金交付事業",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険度判定基準による各評点の合計が100点以上の木造家屋等であること",
+        "おおむね1年以上使用がされていない建築物であること",
+        "個人が所有するものであること",
+        "過去に耐震化に関する補助金等の交付を受けていないこと",
+        "暴力団員等でないこと"
+      ],
+      "officialUrl": "https://www.town.tawaramoto.nara.jp/soshki/sangyo/kanko/kurashi/seikatsu/akiya/13525.html",
+      "applicationPeriod": "令和7年4月1日〜令和7年12月19日（先着順）",
+      "windowName": "まちづくり建設課",
+      "windowPhone": "0744-32-1101",
+      "notes": "生活保護受給者は対象外。工事は交付決定年度の2月末日までに完了し実績報告が必要。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.tawaramoto.nara.jp/soshki/sangyo/kanko/kurashi/seikatsu/akiya/13525.html",
+      "phone": "0744-32-1101"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "soni",
+    "cityName": "曽爾村",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "曽爾村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.vill.soni.nara.jp/",
+      "windowName": "曽爾村役場",
+      "windowPhone": "0745-94-2101",
+      "noSubsidyNote": "補助金制度の詳細は曽爾村役場にお問い合わせください。※要確認",
+      "notes": "補助金制度の詳細は曽爾村役場にお問い合わせください。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.soni.nara.jp/",
+      "phone": "0745-94-2101"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "mitsue",
+    "cityName": "御杖村",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "御杖村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "御杖村老朽危険空家等除却費用補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険度判定基準による各評点の合計が100点以上の空家等であること",
+        "村内に存する個人所有の物件であること",
+        "市税・村税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.vill.mitsue.nara.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "御杖村役場",
+      "windowPhone": "0745-95-2001",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.mitsue.nara.jp/",
+      "phone": "0745-95-2001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "takatori",
+    "cityName": "高取町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "高取町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "高取町老朽危険空き家解体事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町が実施する空家実態調査で老朽度・危険度がC・D判定のもの",
+        "老朽危険度判定基準による各評点の合計が100点以上の木造家屋等",
+        "個人が所有するものであること",
+        "当該土地および建物の所有関係が明確であること",
+        "暴力団員等でないこと、申請者および同一世帯員に税金等の滞納がないこと"
+      ],
+      "officialUrl": "https://www.town.takatori.nara.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "まちづくり推進課",
+      "windowPhone": "0744-52-1111"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.takatori.nara.jp/",
+      "phone": "0744-52-1111"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "asuka",
+    "cityName": "明日香村",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "明日香村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "officialUrl": "https://www.asukamura.jp/",
+      "windowName": "明日香村役場",
+      "windowPhone": "0744-54-2001",
+      "noSubsidyNote": "明日香村では現在、空き家解体を対象とした独自の補助金制度は設けられていません（リフォーム工事助成金・古民家等再生基盤整備事業補助金はあります）。詳細は明日香村役場にお問い合わせください。",
+      "notes": "明日香村特別措置法（明日香法）による強い景観・歴史的建造物保護規制地区。解体や建築行為には法律上の制限がある場合があります。事前に村役場へ必ずご相談ください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.asukamura.jp/",
+      "phone": "0744-54-2001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "kamimaki",
+    "cityName": "上牧町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "上牧町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "officialUrl": "https://www.town.kamimaki.nara.jp/",
+      "windowName": "まちづくり推進課",
+      "windowPhone": "0745-76-2476",
+      "noSubsidyNote": "上牧町では現在、空き家解体を対象とした独自の補助金制度は設けられていません（ブロック塀等の撤去工事補助制度はあります）。詳細はまちづくり推進課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kamimaki.nara.jp/",
+      "phone": "0745-76-2476"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "oji",
+    "cityName": "王寺町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "王寺町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "王寺町老朽空き家解体補助金",
+      "maxAmount": "最大30万円（費用の2分の1以内）",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造住宅であること",
+        "町内に所在すること",
+        "老朽化した空き家の所有者または所有者（共有者全員）の同意を得た者であること"
+      ],
+      "officialUrl": "https://www.town.oji.nara.jp/kakuka/chiikiseibi/machidukuri/gyomuannai/akiyatoutaisaku/jokyakuatochiriyou/2644.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "まちづくり推進課",
+      "windowPhone": "0745-73-2001"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.oji.nara.jp/kakuka/chiikiseibi/machidukuri/gyomuannai/akiyatoutaisaku/jokyakuatochiriyou/2644.html",
+      "phone": "0745-73-2001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "koryo",
+    "cityName": "広陵町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "広陵町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "officialUrl": "https://www.town.koryo.nara.jp/",
+      "windowName": "まちづくり推進課",
+      "windowPhone": "0745-55-1001",
+      "noSubsidyNote": "広陵町では現在、空き家解体を対象とした独自の補助金制度は設けられていません（ブロック塀等の撤去工事補助制度はあります）。詳細はまちづくり推進課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.koryo.nara.jp/",
+      "phone": "0745-55-1001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "kawai",
+    "cityName": "河合町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "河合町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "officialUrl": "https://www.town.kawai.nara.jp/",
+      "windowName": "まちづくり推進課",
+      "windowPhone": "0745-56-2001",
+      "noSubsidyNote": "河合町では現在、空き家解体を対象とした独自の補助金制度は設けられていません（ブロック塀等の撤去工事費補助はあります）。詳細はまちづくり推進課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kawai.nara.jp/",
+      "phone": "0745-56-2001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "yoshino",
+    "cityName": "吉野町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "吉野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.yoshino.nara.jp/",
+      "windowName": "産業観光振興課",
+      "windowPhone": "0746-32-3081",
+      "noSubsidyNote": "空き家バンク改修補助金はあります。解体補助金の設置の有無は産業観光振興課にお問い合わせください。吉野山等の景観保護区域・都市計画区域に含まれる地域あり。※要確認",
+      "notes": "空き家バンク改修補助金はあります。解体補助金の設置の有無は産業観光振興課にお問い合わせください。吉野山等の景観保護区域・都市計画区域に含まれる地域あり。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.yoshino.nara.jp/",
+      "phone": "0746-32-3081"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "oyodo",
+    "cityName": "大淀町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "大淀町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.oyodo.nara.jp/",
+      "windowName": "大淀町役場",
+      "windowPhone": "0747-52-2001",
+      "noSubsidyNote": "空き家率が奈良県内トップクラス（17.8%）の町。解体補助金の設置の有無は役場にお問い合わせください。※要確認",
+      "notes": "空き家率が奈良県内トップクラス（17.8%）の町。解体補助金の設置の有無は役場にお問い合わせください。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.oyodo.nara.jp/",
+      "phone": "0747-52-2001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "shimoichi",
+    "cityName": "下市町",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "下市町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.shimoichi.nara.jp/",
+      "windowName": "下市町役場",
+      "windowPhone": "0747-52-0001",
+      "noSubsidyNote": "補助金制度の詳細は下市町役場にお問い合わせください。※要確認",
+      "notes": "補助金制度の詳細は下市町役場にお問い合わせください。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.shimoichi.nara.jp/",
+      "phone": "0747-52-0001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "kurotaki",
+    "cityName": "黒滝村",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "黒滝村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "黒滝村空き家除却補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "村内に存する空き家であること",
+        "個人が所有する物件であること",
+        "村税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.vill.kurotaki.nara.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "黒滝村役場 企画政策課",
+      "windowPhone": "0747-62-2031",
+      "notes": "山間過疎地域のため条件が異なる場合あり。要問合せ。若者定住促進に向けた各種支援も充実。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.kurotaki.nara.jp/",
+      "phone": "0747-62-2031"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "tenkawa",
+    "cityName": "天川村",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "天川村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.vill.tenkawa.nara.jp/",
+      "windowName": "天川村役場",
+      "windowPhone": "0747-63-0001",
+      "noSubsidyNote": "山間過疎地域のため条件が異なる場合あり。補助金制度の詳細は天川村役場にお問い合わせください。要問合せ。※要確認",
+      "notes": "山間過疎地域のため条件が異なる場合あり。補助金制度の詳細は天川村役場にお問い合わせください。要問合せ。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.tenkawa.nara.jp/",
+      "phone": "0747-63-0001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "nosegawa",
+    "cityName": "野迫川村",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "野迫川村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.vill.nosegawa.nara.jp/",
+      "windowName": "野迫川村役場",
+      "windowPhone": "0747-37-0101",
+      "noSubsidyNote": "日本有数の過疎地域（人口約300人）のため補助制度の内容が他地域と異なる場合あり。補助金制度の詳細は野迫川村役場に直接お問い合わせください。要問合せ。※要確認",
+      "notes": "日本有数の過疎地域（人口約300人）のため補助制度の内容が他地域と異なる場合あり。補助金制度の詳細は野迫川村役場に直接お問い合わせください。要問合せ。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.nosegawa.nara.jp/",
+      "phone": "0747-37-0101"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "totsukawa",
+    "cityName": "十津川村",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "十津川村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.vill.totsukawa.lg.jp/",
+      "windowName": "十津川村役場 企画観光課",
+      "windowPhone": "0746-62-0004",
+      "noSubsidyNote": "日本一広い村（面積672㎢）、日本有数の過疎地域。補助制度の内容が他地域と異なる場合あり。空き家バンク（売買・賃貸）制度は充実。解体補助については企画観光課に直接お問い合わせください。要問合せ。※要確認",
+      "notes": "日本一広い村（面積672㎢）、日本有数の過疎地域。補助制度の内容が他地域と異なる場合あり。空き家バンク（売買・賃貸）制度は充実。解体補助については企画観光課に直接お問い合わせください。要問合せ。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.totsukawa.lg.jp/",
+      "phone": "0746-62-0001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "shimokitayama",
+    "cityName": "下北山村",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "下北山村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "下北山村老朽危険空き家解体事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "村内に存する老朽危険度の高い空き家であること",
+        "個人が所有する物件であること",
+        "村税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.vill.shimokitayama.nara.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "下北山村役場",
+      "windowPhone": "07468-9-0001",
+      "notes": "山間過疎地域のため条件が異なる場合あり。要問合せ。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.shimokitayama.nara.jp/",
+      "phone": "07468-9-0001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "kamikitayama",
+    "cityName": "上北山村",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "上北山村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "上北山村空家解体事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "村内に存する空き家であること",
+        "個人が所有する物件であること",
+        "村税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.vill.kamikitayama.nara.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "上北山村役場",
+      "windowPhone": "07468-3-0001",
+      "notes": "山間過疎地域のため条件が異なる場合あり。要問合せ。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.kamikitayama.nara.jp/",
+      "phone": "07468-3-0001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "kawakami",
+    "cityName": "川上村",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "川上村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.vill.kawakami.nara.jp/",
+      "windowName": "川上村役場",
+      "windowPhone": "07468-2-0001",
+      "noSubsidyNote": "吉野川（紀ノ川）源流の山間村。補助金制度の詳細は川上村役場にお問い合わせください。※要確認",
+      "notes": "吉野川（紀ノ川）源流の山間村。補助金制度の詳細は川上村役場にお問い合わせください。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.kawakami.nara.jp/",
+      "phone": "07468-2-0001"
+    }
+  },
+  {
+    "prefId": "nara",
+    "cityId": "higashiyoshino",
+    "cityName": "東吉野村",
+    "prefName": "奈良県",
+    "mascot": {
+      "localRiskText": "東吉野村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.vill.higashiyoshino.nara.jp/",
+      "windowName": "東吉野村役場",
+      "windowPhone": "07468-6-0001",
+      "noSubsidyNote": "山間過疎地域のため条件が異なる場合あり。補助金制度の詳細は東吉野村役場にお問い合わせください。要問合せ。※要確認",
+      "notes": "山間過疎地域のため条件が異なる場合あり。補助金制度の詳細は東吉野村役場にお問い合わせください。要問合せ。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.higashiyoshino.nara.jp/",
+      "phone": "07468-6-0001"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "numazu",
+    "cityName": "沼津市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "沼津市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "沼津市空家等除却事業",
+      "maxAmount": "最大80万円（補助対象経費と標準除却費のうち少ない額の80%以内）",
+      "conditions": [
+        "1年以上空き家となっている住宅",
+        "老朽化が著しく倒壊等の危険がある状態",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.numazu.shizuoka.jp/kurashi/sumai/akiya/jyokyaku.htm",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市計画課",
+      "windowPhone": "055-934-4790"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.numazu.shizuoka.jp/kurashi/sumai/akiya/jyokyaku.htm",
+      "phone": "055-934-4790"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "atami",
+    "cityName": "熱海市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "熱海市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "老朽危険空家除却事業",
+      "maxAmount": "最大80万円（対象経費の4/5以内）",
+      "conditions": [
+        "老朽化が著しく危険な空き家",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.atami.lg.jp/kurashi/sumai/1005144/1005902.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "まちづくり課",
+      "windowPhone": "0557-86-6267"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.atami.lg.jp/kurashi/sumai/1005144/1005902.html",
+      "phone": "0557-86-6267"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "mishima",
+    "cityName": "三島市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "三島市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "conditions": [],
+      "officialUrl": "https://www.city.mishima.shizuoka.jp/ipn047844.html",
+      "windowName": "建築住宅課 三島住まい推進室",
+      "windowPhone": "055-983-2660",
+      "noSubsidyNote": "三島市では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家に関するご相談は建築住宅課三島住まい推進室にお問い合わせください。",
+      "notes": "公式サイトの補助金一覧および空き家サポート総合サイトに解体補助金の記載なし。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.mishima.shizuoka.jp/ipn047844.html",
+      "phone": "055-983-2660"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "ito",
+    "cityName": "伊東市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "伊東市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "廃屋解体・撤去補助金",
+      "maxAmount": "最大30万円（補助対象費用の1/2以内）",
+      "conditions": [
+        "老朽化が著しく倒壊等の危険がある空き家（廃屋）",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.ito.shizuoka.jp/gyosei/soshikikarasagasu/toshikeikakuka/toshikeikaku/keikann/2527.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市計画課",
+      "windowPhone": "0557-36-3312"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.ito.shizuoka.jp/gyosei/soshikikarasagasu/toshikeikakuka/toshikeikaku/keikann/2527.html",
+      "phone": "0557-36-3312"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "shimada",
+    "cityName": "島田市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "島田市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "島田市空き家解体事業費補助金",
+      "maxAmount": "最大30万円（解体費用の23%以内）※相続後3年以内は最大50万円",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造一戸建て住宅",
+        "空き家の所有者またはその相続人",
+        "市内の解体事業者が施工すること",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.shimada.shizuoka.jp/kurashi-docs/445924540.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "まちづくり課",
+      "windowPhone": "0547-36-7194",
+      "notes": "被相続人の死亡日から3年以内に解体完了の場合は上限50万円に増額。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.shimada.shizuoka.jp/kurashi-docs/445924540.html",
+      "phone": "0547-36-7194"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "fuji",
+    "cityName": "富士市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "富士市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "富士市危険空家除却促進補助金",
+      "maxAmount": "最大30万円（解体費用の1/2以内）※住民税非課税世帯は最大50万円",
+      "conditions": [
+        "特定空家等に認定された保安上危険な空き家、または昭和56年5月31日以前に建築され周辺に危険を及ぼすおそれのある空き家",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.fuji.shizuoka.jp/kurashi/c0309/akiyajyokyakuhojyo.html",
+      "applicationPeriod": "令和7年4月1日～令和9年3月31日",
+      "windowName": "住宅政策課",
+      "windowPhone": "0545-55-2814",
+      "notes": "住民税非課税世帯は上限額が20万円加算され最大50万円。事前調査申出書の提出が必要。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.fuji.shizuoka.jp/kurashi/c0309/akiyajyokyakuhojyo.html",
+      "phone": "0545-55-2814"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "iwata",
+    "cityName": "磐田市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "磐田市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "磐田市危険空き家等除却事業費補助金",
+      "maxAmount": "最大50万円（対象工事費の1/2以内）",
+      "conditions": [
+        "老朽化が著しく倒壊等の危険がある空き家",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.iwata.shizuoka.jp/kurashi_tetsuzuki/juutaku_pet_seikatsu/1010112/1001515.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市整備課",
+      "windowPhone": "0538-37-4887"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.iwata.shizuoka.jp/kurashi_tetsuzuki/juutaku_pet_seikatsu/1010112/1001515.html",
+      "phone": "0538-37-4887"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "yaizu",
+    "cityName": "焼津市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "焼津市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "焼津市空き家除却事業補助金",
+      "maxAmount": "最大30万円（補助対象経費の1/3以内）",
+      "conditions": [
+        "老朽化が著しく倒壊等の危険がある空き家",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.yaizu.lg.jp/life/sumai-kenchiku/akiya/akiya-hojyo.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建築住宅課",
+      "windowPhone": "054-626-1208"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.yaizu.lg.jp/life/sumai-kenchiku/akiya/akiya-hojyo.html",
+      "phone": "054-626-1208"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "kakegawa",
+    "cityName": "掛川市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "掛川市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "掛川市空き家除却事業費補助金",
+      "maxAmount": "最大50万円（定額）",
+      "conditions": [
+        "老朽化が著しく危険な空き家",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.kakegawa.shizuoka.jp/kurashi/sumai/1003936.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設政策課",
+      "windowPhone": "0537-21-1271",
+      "notes": "定額50万円（工事費の実額が50万円未満の場合はその額）。詳細は公式サイトで最新情報を確認のこと。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kakegawa.shizuoka.jp/kurashi/sumai/1003936.html",
+      "phone": "0537-21-1271"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "fujieda",
+    "cityName": "藤枝市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "藤枝市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "空き家解体・除却事業費補助金",
+      "maxAmount": "最大30万円（工事費の23%以内）※相続後3年以内は最大50万円",
+      "conditions": [
+        "1年以上使用されていない木造住宅",
+        "昭和56年5月31日以前に建築された空き家",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.fujieda.shizuoka.jp/soshiki/toshikensetsu/akiya/gyomu/hojyokin/1527064532268.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市建設部建築住宅課",
+      "windowPhone": "054-643-3277",
+      "notes": "被相続人の死亡日から3年以内に解体完了の場合は上限50万円。Search Consoleで上位表示中のため公式サイトで最新情報を要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.fujieda.shizuoka.jp/soshiki/toshikensetsu/akiya/gyomu/hojyokin/1527064532268.html",
+      "phone": "054-643-3277"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "gotemba",
+    "cityName": "御殿場市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "御殿場市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "空き家活用等支援事業費補助金（除却）",
+      "maxAmount": "最大50万円（工事費の1/3以内）※中学生未満の子がいる移住世帯は最大80万円",
+      "conditions": [
+        "老朽化が著しく危険な空き家",
+        "1年以上空き家であること",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.gotemba.lg.jp/kurashi/b-7/b-7-5/12230.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設水道部都市整備課",
+      "windowPhone": "0550-82-4517",
+      "notes": "中学生未満の子がいる移住世帯は上限80万円に増額。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.gotemba.lg.jp/kurashi/b-7/b-7-5/12230.html",
+      "phone": "0550-82-4517"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "fukuroi",
+    "cityName": "袋井市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "袋井市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "袋井市空き家跡地利用のための空き家除却支援事業費補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "市内の空き家を除却し、跡地を居住環境の改善または地域活性化のために活用すること",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.fukuroi.shizuoka.jp/soshiki/53/sumainosoudann/1587967767606.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "ふくろいすまいの相談センター（建築住宅課）",
+      "windowPhone": "0538-44-3321",
+      "notes": "※要確認：補助上限額・補助率が公式サイトに明記されていないため、事前に窓口にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.fukuroi.shizuoka.jp/soshiki/53/sumainosoudann/1587967767606.html",
+      "phone": "0538-44-3321"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "shimoda",
+    "cityName": "下田市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "下田市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：公式サイトでの空き家解体補助金の記載が確認できませんでした。下田市建設水道部にお問い合わせください。",
+      "notes": "※要確認：公式サイトでの空き家解体補助金の記載が確認できませんでした。下田市建設水道部にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8B%E7%94%B0%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "susono",
+    "cityName": "裾野市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "裾野市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：公式サイトで空き家解体補助金の確認ができませんでした。裾野市建築住宅課にお問い合わせください。",
+      "notes": "※要確認：公式サイトで空き家解体補助金の確認ができませんでした。裾野市建築住宅課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%A3%BE%E9%87%8E%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "kosai",
+    "cityName": "湖西市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "湖西市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：国土交通省の空き家対策マップにて解体補助制度の記載なし。湖西市建設部都市計画課にお問い合わせください。",
+      "notes": "※要確認：国土交通省の空き家対策マップにて解体補助制度の記載なし。湖西市建設部都市計画課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B9%96%E8%A5%BF%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "izu",
+    "cityName": "伊豆市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "伊豆市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "伊豆市老朽空家等除却支援事業補助金",
+      "maxAmount": "最大50万円（対象経費の1/2以内）※市への寄付条件付きの場合は最大300万円",
+      "conditions": [
+        "老朽化が著しく危険な空き家",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること",
+        "市への土地寄付の場合は300万円まで補助"
+      ],
+      "officialUrl": "https://www.city.izu.shizuoka.jp/soshiki/1024/3/871.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市計画課 土地対策スタッフ",
+      "windowPhone": "0558-83-5206",
+      "notes": "空き家率が高く（約32.9%）空き家問題が深刻。敷地を市に寄付する場合は最大300万円に増額。解体後の固定資産税減免制度あり。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.izu.shizuoka.jp/soshiki/1024/3/871.html",
+      "phone": "0558-83-5206"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "omaezaki",
+    "cityName": "御前崎市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "御前崎市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "御前崎市危険空家除却事業費補助金",
+      "maxAmount": "最大60万円（対象経費の4/5以内）",
+      "conditions": [
+        "老朽化が著しく危険な空き家（不良住宅に相当するもの）",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.omaezaki.shizuoka.jp/soshiki/toshiseisaku/sumaitochi/sumai/akiya/kikennakiyatoujokyakujigyouhihojokinn.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市政策課",
+      "windowPhone": "0537-85-1178"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.omaezaki.shizuoka.jp/soshiki/toshiseisaku/sumaitochi/sumai/akiya/kikennakiyatoujokyakujigyouhihojokinn.html",
+      "phone": "0537-85-1178"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "kikugawa",
+    "cityName": "菊川市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "菊川市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "空家等の除却（解体）補助制度",
+      "maxAmount": "最大30万円（解体工事費の23%以内）",
+      "conditions": [
+        "老朽化が著しく危険な空き家",
+        "昭和56年5月31日以前に建築された空き家",
+        "空き家の所有者（個人）またはその相続人",
+        "市税を滞納していないこと",
+        "補助金交付決定後に工事着手すること"
+      ],
+      "officialUrl": "https://www.city.kikugawa.shizuoka.jp/toshikeikaku/jokyakuhojo.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市計画課",
+      "windowPhone": "0537-35-0948",
+      "notes": "Search Consoleで上位表示中のため、公式サイトで令和7年度の最新情報を要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kikugawa.shizuoka.jp/toshikeikaku/jokyakuhojo.html",
+      "phone": "0537-35-0948"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "izunokuni",
+    "cityName": "伊豆の国市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "伊豆の国市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：空き家解体補助金の確認ができませんでした。伊豆の国市建設部建築住宅課にお問い合わせください。",
+      "notes": "※要確認：空き家解体補助金の確認ができませんでした。伊豆の国市建設部建築住宅課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%BC%8A%E8%B1%86%E3%81%AE%E5%9B%BD%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "makinohara",
+    "cityName": "牧之原市",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "牧之原市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：リフォーム補助・家財処理補助は確認済みだが、解体補助金の記載が確認できませんでした。牧之原市地域整備課にお問い合わせください。",
+      "notes": "※要確認：リフォーム補助・家財処理補助は確認済みだが、解体補助金の記載が確認できませんでした。牧之原市地域整備課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%89%A7%E4%B9%8B%E5%8E%9F%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "higashiizu",
+    "cityName": "東伊豆町",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "東伊豆町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：公式サイトでは空き家バンク登録物件の改修支援・家財道具処分支援のみ確認。空き家解体（除却）補助金の存在は確認できませんでした。東伊豆町企画調整課へお問い合わせください。",
+      "notes": "※要確認：公式サイトでは空き家バンク登録物件の改修支援・家財道具処分支援のみ確認。空き家解体（除却）補助金の存在は確認できませんでした。東伊豆町企画調整課へお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9D%B1%E4%BC%8A%E8%B1%86%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "kawazu",
+    "cityName": "河津町",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "河津町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：伊豆半島の別荘・空き家問題が深刻な地域。河津町役場建設課にお問い合わせください。",
+      "notes": "※要確認：伊豆半島の別荘・空き家問題が深刻な地域。河津町役場建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B2%B3%E6%B4%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "minamiizu",
+    "cityName": "南伊豆町",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "南伊豆町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：伊豆半島の別荘・空き家問題が深刻な地域。南伊豆町役場建設課にお問い合わせください。",
+      "notes": "※要確認：伊豆半島の別荘・空き家問題が深刻な地域。南伊豆町役場建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E4%BC%8A%E8%B1%86%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "matsuzaki",
+    "cityName": "松崎町",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "松崎町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：伊豆半島の別荘・空き家問題が深刻な地域。松崎町役場建設課にお問い合わせください。",
+      "notes": "※要確認：伊豆半島の別荘・空き家問題が深刻な地域。松崎町役場建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9D%BE%E5%B4%8E%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "nishiizu",
+    "cityName": "西伊豆町",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "西伊豆町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：伊豆半島の別荘・空き家問題が深刻な地域。西伊豆町役場建設課にお問い合わせください。",
+      "notes": "※要確認：伊豆半島の別荘・空き家問題が深刻な地域。西伊豆町役場建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%A5%BF%E4%BC%8A%E8%B1%86%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "kannami",
+    "cityName": "函南町",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "函南町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：函南町役場建設課にお問い合わせください。",
+      "notes": "※要確認：函南町役場建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%87%BD%E5%8D%97%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "shimizucho",
+    "cityName": "清水町",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "清水町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：清水町役場建設課にお問い合わせください。",
+      "notes": "※要確認：清水町役場建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B8%85%E6%B0%B4%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "nagaizumi",
+    "cityName": "長泉町",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "長泉町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：長泉町役場建設課にお問い合わせください。",
+      "notes": "※要確認：長泉町役場建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%95%B7%E6%B3%89%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "oyama",
+    "cityName": "小山町",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "小山町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：小山町役場建設課にお問い合わせください。",
+      "notes": "※要確認：小山町役場建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B0%8F%E5%B1%B1%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "yoshida",
+    "cityName": "吉田町",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "吉田町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：吉田町役場建設課にお問い合わせください。",
+      "notes": "※要確認：吉田町役場建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%90%89%E7%94%B0%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "shizuoka",
+    "cityId": "mori",
+    "cityName": "森町",
+    "prefName": "静岡県",
+    "mascot": {
+      "localRiskText": "森町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認：森町役場建設課にお問い合わせください。",
+      "notes": "※要確認：森町役場建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%A3%AE%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kainan",
+    "cityName": "海南市",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "海南市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "老朽危険空家除却工事補助事業",
+      "maxAmount": "最大60万円（費用の2/3以内）",
+      "conditions": [
+        "老朽危険空家と認定された建築物であること",
+        "居住の用に供されなくなっておおむね90日以上経過",
+        "市税を滞納していないこと",
+        "法人でないこと（個人が対象）"
+      ],
+      "officialUrl": "https://www.city.kainan.lg.jp/kakubusho/machizukuribu/toshiseibika/akiya_kanren/1604299286174.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "まちづくり部都市整備課",
+      "windowPhone": "073-483-8480"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kainan.lg.jp/kakubusho/machizukuribu/toshiseibika/akiya_kanren/1604299286174.html",
+      "phone": "073-483-8480"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "hashimoto",
+    "cityName": "橋本市",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "橋本市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "空家等対策推進助成金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "空家法第2条第2項の特定空家等に該当すること",
+        "建物除却権原者が空家法第22条第3項の命令を受けていないこと",
+        "交付決定後半年以内に除却する意思があること",
+        "市町村税を滞納していないこと",
+        "暴力団に関係していないこと"
+      ],
+      "officialUrl": "https://www.city.hashimoto.lg.jp/guide/kensetsubu/kentikujutaku/jutakusisaku/akiya/jyoseiseido/akiyatoutaisakusuishinjyoseikin.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設部建築住宅課",
+      "windowPhone": "0736-33-1115",
+      "notes": "※多くの自治体で実施されている「単純な解体費補助」ではありません。特定空家等を対象とした制度です。詳細は建築住宅課にご相談ください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.hashimoto.lg.jp/guide/kensetsubu/kentikujutaku/jutakusisaku/akiya/jyoseiseido/akiyatoutaisakusuishinjyoseikin.html",
+      "phone": "0736-33-1115"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "arida",
+    "cityName": "有田市",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "有田市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "有田市不良空家等除却補助事業",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "おおむね年間を通して使用実績がなく常態として空き家であること",
+        "個人が所有する空き家であること",
+        "市担当者の現地調査で不良度評点が60点以上と認定されること",
+        "特定空家等に指定されていないこと",
+        "市税を滞納していないこと"
+      ],
+      "officialUrl": "https://www.city.arida.lg.jp/kurashi/sumai/1001036.html",
+      "applicationPeriod": "令和7年5月7日〜12月26日（予算がなくなり次第終了）",
+      "windowName": "経済建設部都市整備課公共建築係",
+      "windowPhone": "0737-22-3619",
+      "notes": "補助金の交付決定前に契約・着工したものは補助対象外。空き家の現地調査および認定申請は年間を通じて受付中。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.arida.lg.jp/kurashi/sumai/1001036.html",
+      "phone": "0737-22-3619"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "gobo",
+    "cityName": "御坊市",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "御坊市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "御坊市老朽危険空家除却事業補助金",
+      "maxAmount": "最大80万円（評点100以上：費用の4/5以内）",
+      "conditions": [
+        "市内にある個人の居住用空家で1年以上使用されていないもの",
+        "老朽危険空家の測定基準で評点60点以上",
+        "所有者若しくは法定相続人であること",
+        "市税等を滞納していないこと",
+        "市内の業者により解体を行うこと"
+      ],
+      "officialUrl": "https://www.city.gobo.lg.jp/sosiki/sangyokensetu/tosi/tanto/1651803411303.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設部都市整備課",
+      "windowPhone": "0738-22-4111",
+      "notes": "評点100点以上：工事金額の4/5・上限80万円。評点60〜100点未満で耐震性能なし：工事金額の23%・上限40万円。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.gobo.lg.jp/sosiki/sangyokensetu/tosi/tanto/1651803411303.html",
+      "phone": "0738-22-4111"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "tanabe",
+    "cityName": "田辺市",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "田辺市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "田辺市不良空家等除却補助金",
+      "maxAmount": "最大50万円（費用の2/3以内）",
+      "conditions": [
+        "おおむね1年以上空家となっていること",
+        "評定項目の評点が60点以上の建物",
+        "屋根が抜け落ちた状態・基礎が沈下し柱やはりが変形しているなど倒壊の恐れがある建物",
+        "市税を滞納していないこと"
+      ],
+      "officialUrl": "https://www.city.tanabe.lg.jp/kenchiku/tyousakeikaku/2022-0323-1541-73.html",
+      "applicationPeriod": "令和7年4月1日〜（予算がなくなり次第終了）",
+      "windowName": "建築課調査計画係",
+      "windowPhone": "0739-26-9935",
+      "notes": "補助を受けるには事前に不良空家等認定申請が必要。熊野古道・熊野三山周辺地域を含むが本制度は通常の空き家解体補助（景観保護補助とは別）。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.tanabe.lg.jp/kenchiku/tyousakeikaku/2022-0323-1541-73.html",
+      "phone": "0739-26-9935"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "shingu",
+    "cityName": "新宮市",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "新宮市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "詳細は窓口にお問い合わせください",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "詳細は窓口にお問い合わせください"
+      ],
+      "officialUrl": "https://www.city.shingu.lg.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "新宮市役所",
+      "windowPhone": "0735-23-3333",
+      "notes": "※要確認。補助制度の存在は国交省資料等で確認済み。詳細は新宮市役所にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.shingu.lg.jp/",
+      "phone": "0735-23-3333"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kinokawa",
+    "cityName": "紀の川市",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "紀の川市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "不良空家の除却に係る補助金交付事業",
+      "maxAmount": "最大100万円（工事費と国標準除却費のいずれか低い方の4/5）",
+      "conditions": [
+        "老朽化し倒壊等危険な状態にある建物",
+        "不良空家の認定を受けること（市による現地調査あり）",
+        "登記簿名義人またはその相続人であること",
+        "市税を滞納していないこと"
+      ],
+      "officialUrl": "https://www.city.kinokawa.lg.jp/038/2025jyokyakuhojyo.html",
+      "applicationPeriod": "令和7年5月15日〜6月13日（事前相談受付期間）",
+      "windowName": "建設部住宅政策課",
+      "windowPhone": "0736-77-2511",
+      "notes": "予算範囲内のため認定調査件数に限りあり。相談件数によっては認定調査を受けられない場合がある。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kinokawa.lg.jp/038/2025jyokyakuhojyo.html",
+      "phone": "0736-77-2511"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "iwade",
+    "cityName": "岩出市",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "岩出市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.city.iwade.lg.jp/",
+      "windowName": "岩出市役所",
+      "windowPhone": "0736-62-2111",
+      "noSubsidyNote": "※要確認。補助制度の存在が情報源で確認されています。詳細は岩出市役所にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が情報源で確認されています。詳細は岩出市役所にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.iwade.lg.jp/",
+      "phone": "0736-62-2111"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kimino",
+    "cityName": "紀美野町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "紀美野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "紀美野町老朽危険空家除却工事補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "居住の用に供されなくなり1年以上経過していること",
+        "延べ面積の2分の1以上が居住の用に供されていた建築物",
+        "世帯員に暴力団員がいないこと",
+        "建設業法の許可を受けた業者が請け負う工事であること"
+      ],
+      "officialUrl": "https://www.town.kimino.wakayama.jp/sagasu/juminka/2207.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "住民課",
+      "windowPhone": "073-489-5903"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kimino.wakayama.jp/sagasu/juminka/2207.html",
+      "phone": "073-489-5903"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "katsuragi",
+    "cityName": "かつらぎ町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "かつらぎ町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.katsuragi.wakayama.jp/",
+      "windowName": "かつらぎ町役場",
+      "windowPhone": "0736-22-0300",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細はかつらぎ町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細はかつらぎ町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.katsuragi.wakayama.jp/",
+      "phone": "0736-22-0300"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kudoyama",
+    "cityName": "九度山町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "九度山町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kudoyama.wakayama.jp/",
+      "windowName": "九度山町役場",
+      "windowPhone": "0736-54-2067",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は九度山町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は九度山町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kudoyama.wakayama.jp/",
+      "phone": "0736-54-2067"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "koya",
+    "cityName": "高野町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "高野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.koya.wakayama.jp/",
+      "windowName": "高野町役場",
+      "windowPhone": "0736-56-2932",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。世界遺産（高野山）を抱えるため景観保護に関する別途規制がある可能性があります。空き家解体補助の詳細は高野町役場に直接お問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。世界遺産（高野山）を抱えるため景観保護に関する別途規制がある可能性があります。空き家解体補助の詳細は高野町役場に直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.koya.wakayama.jp/",
+      "phone": "0736-56-2932"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "yuasa",
+    "cityName": "湯浅町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "湯浅町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.yuasa.wakayama.jp/",
+      "windowName": "湯浅町役場",
+      "windowPhone": "0737-63-1122",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は湯浅町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は湯浅町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.yuasa.wakayama.jp/",
+      "phone": "0737-63-1122"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "hirokawa",
+    "cityName": "広川町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "広川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.hirokawa.wakayama.jp/",
+      "windowName": "広川町役場",
+      "windowPhone": "0737-23-3111",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は広川町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は広川町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.hirokawa.wakayama.jp/",
+      "phone": "0737-23-3111"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "aridagawa",
+    "cityName": "有田川町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "有田川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "有田川町不良空家除却補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "使用がなくなった日から概ね1年以上経過していること",
+        "居住の用に供する建築物またはその床面積の2分の1以上が居住用であったもの",
+        "有田川町が定める不良空家の判定基準で評点100点以上",
+        "市税を滞納していないこと"
+      ],
+      "officialUrl": "https://www.town.aridagawa.lg.jp/top/kakuka/kibi/4/1/2/2/935.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設課",
+      "windowPhone": "0737-22-3281",
+      "notes": "※令和6年度情報を参照。令和7年度の詳細は建設課に直接ご確認ください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.aridagawa.lg.jp/top/kakuka/kibi/4/1/2/2/935.html",
+      "phone": "0737-22-3281"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "mihama",
+    "cityName": "美浜町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "美浜町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.mihama.wakayama.jp/",
+      "windowName": "美浜町役場",
+      "windowPhone": "0738-22-4111",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は美浜町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は美浜町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.mihama.wakayama.jp/",
+      "phone": "0738-22-4111"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "hidaka",
+    "cityName": "日高町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "日高町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.hidaka.wakayama.jp/",
+      "windowName": "日高町役場",
+      "windowPhone": "0738-63-2525",
+      "noSubsidyNote": "※要確認。国土交通省資料で補助制度の存在が確認されています。解体後に土地に新たな建築物が建てられないこと等の条件がある場合があります。詳細は日高町役場にお問い合わせください。",
+      "notes": "※要確認。国土交通省資料で補助制度の存在が確認されています。解体後に土地に新たな建築物が建てられないこと等の条件がある場合があります。詳細は日高町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.hidaka.wakayama.jp/",
+      "phone": "0738-63-2525"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "yura",
+    "cityName": "由良町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "由良町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.yura.wakayama.jp/",
+      "windowName": "由良町役場",
+      "windowPhone": "0738-65-0200",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は由良町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は由良町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.yura.wakayama.jp/",
+      "phone": "0738-65-0200"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "inami",
+    "cityName": "印南町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "印南町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.inami.wakayama.jp/",
+      "windowName": "印南町役場",
+      "windowPhone": "0738-42-1111",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は印南町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は印南町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.inami.wakayama.jp/",
+      "phone": "0738-42-1111"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "minabe",
+    "cityName": "みなべ町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "みなべ町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.minabe.lg.jp/",
+      "windowName": "みなべ町役場",
+      "windowPhone": "0739-74-3111",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細はみなべ町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細はみなべ町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.minabe.lg.jp/",
+      "phone": "0739-74-3111"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "hidakagawa",
+    "cityName": "日高川町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "日高川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.hidakagawa.lg.jp/",
+      "windowName": "日高川町役場",
+      "windowPhone": "0738-52-2111",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は日高川町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は日高川町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.hidakagawa.lg.jp/",
+      "phone": "0738-52-2111"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "shirahama",
+    "cityName": "白浜町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "白浜町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "白浜町不良空家等除却補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください（費用の2/3相当）",
+      "conditions": [
+        "居住の用に供されなくなって概ね1年を経過していること",
+        "居住用建築物でその床面積の2分の1以上が居住の用に供されていたこと",
+        "不良空家の判定で評定項目合計が100点以上となる建物",
+        "市税を滞納していないこと"
+      ],
+      "officialUrl": "https://www.town.shirahama.wakayama.jp/soshiki/kensetsu/toshi/gyomu/akiya/1556164988718.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設課",
+      "windowPhone": "0739-43-5555"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.shirahama.wakayama.jp/soshiki/kensetsu/toshi/gyomu/akiya/1556164988718.html",
+      "phone": "0739-43-5555"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kamitonda",
+    "cityName": "上富田町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "上富田町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kamitonda.lg.jp/",
+      "windowName": "上富田町役場",
+      "windowPhone": "0739-47-0550",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は上富田町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細は上富田町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kamitonda.lg.jp/",
+      "phone": "0739-47-0550"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "susami",
+    "cityName": "すさみ町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "すさみ町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.susami.lg.jp/",
+      "windowName": "すさみ町役場",
+      "windowPhone": "0739-55-4122",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細はすさみ町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。詳細はすさみ町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.susami.lg.jp/",
+      "phone": "0739-55-4122"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "nachikatsuura",
+    "cityName": "那智勝浦町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "那智勝浦町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.nachikatsuura.wakayama.jp/",
+      "windowName": "那智勝浦町役場",
+      "windowPhone": "0735-52-0555",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。熊野古道・熊野那智大社周辺ですが空き家解体補助は景観保護補助とは別制度です。詳細は那智勝浦町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。熊野古道・熊野那智大社周辺ですが空き家解体補助は景観保護補助とは別制度です。詳細は那智勝浦町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.nachikatsuura.wakayama.jp/",
+      "phone": "0735-52-0555"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "taiji",
+    "cityName": "太地町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "太地町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.taiji.wakayama.jp/",
+      "windowName": "太地町役場",
+      "windowPhone": "0735-59-2335",
+      "noSubsidyNote": "※要確認。補助制度の存在が情報源で確認されています。詳細は太地町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が情報源で確認されています。詳細は太地町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.taiji.wakayama.jp/",
+      "phone": "0735-59-2335"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kozagawa",
+    "cityName": "古座川町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "古座川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kozagawa.lg.jp/",
+      "windowName": "古座川町役場",
+      "windowPhone": "0735-72-0180",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。過疎化が深刻な地域のため補助制度が充実している可能性があります。詳細は古座川町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。過疎化が深刻な地域のため補助制度が充実している可能性があります。詳細は古座川町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kozagawa.lg.jp/",
+      "phone": "0735-72-0180"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kitayama",
+    "cityName": "北山村",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "北山村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.vill.kitayama.wakayama.jp/",
+      "windowName": "北山村役場",
+      "windowPhone": "0735-49-2511",
+      "noSubsidyNote": "※飛び地の村のため制度詳細は北山村役場に直接お問い合わせください。三重県・奈良県に囲まれた和歌山県の飛び地であり、補助制度が独自の内容となっている可能性があります。",
+      "notes": "※飛び地の村のため制度詳細は北山村役場に直接お問い合わせください。三重県・奈良県に囲まれた和歌山県の飛び地であり、補助制度が独自の内容となっている可能性があります。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.kitayama.wakayama.jp/",
+      "phone": "0735-49-2511"
+    }
+  },
+  {
+    "prefId": "wakayama",
+    "cityId": "kushimoto",
+    "cityName": "串本町",
+    "prefName": "和歌山県",
+    "mascot": {
+      "localRiskText": "串本町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "officialUrl": "https://www.town.kushimoto.wakayama.jp/",
+      "windowName": "串本町役場",
+      "windowPhone": "0735-62-0555",
+      "noSubsidyNote": "※要確認。補助制度の存在が複数の情報源で確認されています。熊野古道周辺ですが空き家解体補助は景観保護補助とは別制度です。詳細は串本町役場にお問い合わせください。",
+      "notes": "※要確認。補助制度の存在が複数の情報源で確認されています。熊野古道周辺ですが空き家解体補助は景観保護補助とは別制度です。詳細は串本町役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kushimoto.wakayama.jp/",
+      "phone": "0735-62-0555"
+    }
   }
 ]
