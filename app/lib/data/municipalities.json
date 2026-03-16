@@ -15193,5 +15193,6644 @@
       "officialUrl": "https://www.vill.tabayama.yamanashi.jp/",
       "phone": "0428-88-0211"
     }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "aizuwakamatsu",
+    "cityName": "会津若松市",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "会津若松市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "会津若松市空家等解体撤去支援事業補助金",
+      "maxAmount": "最大50万円（基本30万円＋加算最大20万円、費用の5分の1以内）",
+      "conditions": [
+        "1年以上使用されていない空家等の所有者またはその相続人",
+        "市税の滞納がないこと",
+        "空家等を全部除却して更地にする工事であること",
+        "交付決定後に業者と請負契約をした工事であること",
+        "令和8年3月末までに工事が完了できること"
+      ],
+      "officialUrl": "https://www.city.aizuwakamatsu.fukushima.jp/docs/2023031600016/",
+      "applicationPeriod": "令和7年度（予算枠に達し次第終了）",
+      "windowName": "危機管理課",
+      "windowPhone": "0242-39-1227",
+      "notes": "解体後に地域活性化に資する公共性・公益性のある取組を行う場合は最大20万円加算（5年以上の定住または事業継続が条件）。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.aizuwakamatsu.fukushima.jp/docs/2023031600016/",
+      "phone": "0242-39-1227"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "iwaki",
+    "cityName": "いわき市",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "いわき市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.city.iwaki.lg.jp/www/genre/1677226221058/index.html",
+      "windowName": "都市建設部 住まい政策課 空き家対策係",
+      "windowPhone": "0246-22-7593",
+      "noSubsidyNote": "いわき市では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修支援・バンク活用支援等の改修補助は実施中です。詳細は住まい政策課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.iwaki.lg.jp/www/genre/1677226221058/index.html",
+      "phone": "0246-22-7593"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "shirakawa",
+    "cityName": "白河市",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "白河市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "白河市空家解体費補助金",
+      "maxAmount": "最大20万円（費用の3分の1以内）",
+      "conditions": [
+        "空家の所有者・相続人、または同意を得た者（法人を除く）",
+        "市税等の滞納がないこと",
+        "過去にこの補助金の交付を受けていないこと",
+        "福島県に登録されている解体工事業者または建設業者が施工すること",
+        "契約締結・工事着手前に必ず申し込むこと"
+      ],
+      "officialUrl": "https://www.city.shirakawa.fukushima.jp/page/page006658.html",
+      "applicationPeriod": "令和7年度（予算の範囲内で先着順）",
+      "windowName": "市長公室 企画政策課",
+      "windowPhone": "0248-22-1111",
+      "notes": "特定空家等に認定されている場合は対象要件・補助額が異なる場合あり。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.shirakawa.fukushima.jp/page/page006658.html",
+      "phone": "0248-22-1111"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "sukagawa",
+    "cityName": "須賀川市",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "須賀川市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "須賀川市不良空き家等解体補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "市内の不良空き家（老朽化した空き家）の所有者または相続人",
+        "市税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定後に契約・着手する工事"
+      ],
+      "officialUrl": "https://www.city.sukagawa.fukushima.jp/kurashi/hikkoshi_sumai/1002444/1009061.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設部 建築住宅課",
+      "windowPhone": "0248-88-9151",
+      "notes": "※要確認。補助率・上限額の詳細は直接窓口へお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.sukagawa.fukushima.jp/kurashi/hikkoshi_sumai/1002444/1009061.html",
+      "phone": "0248-88-9151"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "kitakata",
+    "cityName": "喜多方市",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "喜多方市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "喜多方市空き家対策支援事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "市内の空き家の所有者または相続人",
+        "市税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に解体の契約・着手を行っていないこと"
+      ],
+      "officialUrl": "https://www.city.kitakata.fukushima.jp/soshiki/toshiseibi/16510.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市整備課",
+      "windowPhone": "0241-24-5267",
+      "notes": "解体・活用・相続登記・境界確定まで対応した総合補助制度。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kitakata.fukushima.jp/soshiki/toshiseibi/16510.html",
+      "phone": "0241-24-5267"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "soma",
+    "cityName": "相馬市",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "相馬市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "建築課",
+      "windowPhone": "0244-37-2178",
+      "noSubsidyNote": "相馬市では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修・残置物処分の補助は実施中です。詳細は建築課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%9B%B8%E9%A6%AC%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0244-37-2178"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "nihonmatsu",
+    "cityName": "二本松市",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "二本松市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "二本松市空家除却費補助事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "市内の空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "市税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.city.nihonmatsu.lg.jp/kurashi_tetsuduki/jyutaku_kouen/page008267.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "秘書政策課",
+      "windowPhone": "0243-24-7120",
+      "notes": "改修・残置物処分・解体・インスペクション対応の総合補助制度。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.nihonmatsu.lg.jp/kurashi_tetsuduki/jyutaku_kouen/page008267.html",
+      "phone": "0243-24-7120"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "tamura",
+    "cityName": "田村市",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "田村市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.city.tamura.lg.jp/soshiki/1/souseikurashi.html",
+      "windowName": "企画調整課 地域振興係",
+      "windowPhone": "0247-61-7615",
+      "noSubsidyNote": "田村市では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修支援事業補助金は実施中です。詳細は企画調整課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.tamura.lg.jp/soshiki/1/souseikurashi.html",
+      "phone": "0247-61-7615"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "minamisoma",
+    "cityName": "南相馬市",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "南相馬市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": "南相馬市空き家解体支援事業補助金（要確認）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "市内にある概ね1年以上使用されていない空き家の所有者または相続人",
+        "市税の完納証明または非課税証明が取得できること",
+        "建設業法の許可または解体工事業の登録を受けた業者による工事",
+        "抵当権が設定されていないこと（権利者の同意がある場合を除く）"
+      ],
+      "officialUrl": "https://www.city.minamisoma.lg.jp/portal/sections/17/1730/17301/1/14953.html",
+      "applicationPeriod": "令和7年度（実施状況は窓口に要確認）",
+      "windowName": "建築課（空き家と住まいの相談窓口「ミライエ」）",
+      "windowPhone": "0244-26-6383",
+      "noSubsidyNote": "※要確認。令和5年度に解体支援補助金の実績あり。令和7年度の実施状況は直接窓口へお問い合わせください。",
+      "notes": "※要確認。令和5年度に解体支援補助金の実績あり。令和7年度の実施状況は直接窓口へお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.minamisoma.lg.jp/portal/sections/17/1730/17301/1/14953.html",
+      "phone": "0244-26-6383"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "date",
+    "cityName": "伊達市",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "伊達市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.city.fukushima-date.lg.jp/soshiki/11/29946.html",
+      "windowName": "協働まちづくり課",
+      "windowPhone": "024-575-1177",
+      "noSubsidyNote": "伊達市では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修等支援事業補助金は実施中です。詳細は協働まちづくり課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.fukushima-date.lg.jp/soshiki/11/29946.html",
+      "phone": "024-575-1177"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "motomiya",
+    "cityName": "本宮市",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "本宮市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "本宮市空き家改修等支援事業補助金（解体対応）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "市内の空き家の所有者・相続人または利活用希望者",
+        "1年以上使用されていない空き家",
+        "市税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.city.motomiya.lg.jp/soshiki/50/akiyakaisyu.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建築住宅課",
+      "windowPhone": "0243-24-5393",
+      "notes": "改修・残置物処分・解体・インスペクション対応の総合補助制度。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.motomiya.lg.jp/soshiki/50/akiyakaisyu.html",
+      "phone": "0243-24-5393"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "koori",
+    "cityName": "桑折町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "桑折町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "桑折町空家等除却工事補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.koori.fukushima.jp/soshiki/kensetsu/akiya/6888.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設水道課",
+      "windowPhone": "024-582-2127"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.koori.fukushima.jp/soshiki/kensetsu/akiya/6888.html",
+      "phone": "024-582-2127"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "kunimi",
+    "cityName": "国見町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "国見町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "国見町空き家対策支援事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.kunimi.fukushima.jp/soshiki/2/16213.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設課",
+      "windowPhone": "024-585-2972"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kunimi.fukushima.jp/soshiki/2/16213.html",
+      "phone": "024-585-2972"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "kawamata",
+    "cityName": "川俣町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "川俣町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "川俣町空き家対策総合支援事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者・相続人または利活用希望者",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.kawamata.lg.jp/site/kurashi-tetsuzuki/akiyataisakusogoshienzigyo.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "政策推進課",
+      "windowPhone": "024-566-2111",
+      "notes": "改修・残置物処分・解体・インスペクションすべてに対応。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kawamata.lg.jp/site/kurashi-tetsuzuki/akiyataisakusogoshienzigyo.html",
+      "phone": "024-566-2111"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "otama",
+    "cityName": "大玉村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "大玉村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.vill.otama.fukushima.jp/kurashi/teijyuusien/akiya_hojyo/",
+      "windowName": "建設課",
+      "windowPhone": "0243-24-8112",
+      "noSubsidyNote": "大玉村では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修等・残置物処分の補助は実施中です。詳細は建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.otama.fukushima.jp/kurashi/teijyuusien/akiya_hojyo/",
+      "phone": "0243-24-8112"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "kagamiishi",
+    "cityName": "鏡石町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "鏡石町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "鏡石町空き家改修等支援事業補助金（解体対応）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者・相続人または利活用希望者",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.kagamiishi.fukushima.jp/kurashi/kurashi_tetuzuki/iju/011569.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "企画財政課",
+      "windowPhone": "0248-62-2117",
+      "notes": "改修・残置物処分・解体・インスペクション対応。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kagamiishi.fukushima.jp/kurashi/kurashi_tetuzuki/iju/011569.html",
+      "phone": "0248-62-2117"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "tenei",
+    "cityName": "天栄村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "天栄村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "http://www.vill.tenei.fukushima.jp/site/iju/ijuakiyabank2019.html",
+      "windowName": "建設課管理係",
+      "windowPhone": "0248-82-2110",
+      "noSubsidyNote": "天栄村では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修事業等補助金は実施中です。詳細は建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "http://www.vill.tenei.fukushima.jp/site/iju/ijuakiyabank2019.html",
+      "phone": "0248-82-2110"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "shimogo",
+    "cityName": "下郷町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "下郷町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.town.shimogo.fukushima.jp/organization/sougouseisaku/kikakuseisaku/5/1797.html",
+      "windowName": "総合政策課 企画政策係",
+      "windowPhone": "0241-69-1144",
+      "noSubsidyNote": "下郷町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修等支援は実施中です。詳細は総合政策課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.shimogo.fukushima.jp/organization/sougouseisaku/kikakuseisaku/5/1797.html",
+      "phone": "0241-69-1144"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "hinoemata",
+    "cityName": "檜枝岐村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "檜枝岐村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "総務課",
+      "windowPhone": "0241-75-2500",
+      "noSubsidyNote": "檜枝岐村では現在、空き家解体を対象とした補助金制度は確認されていません。詳細は総務課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%AA%9C%E6%9E%9D%E5%B2%90%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0241-75-2500"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "tadami",
+    "cityName": "只見町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "只見町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "只見町空き家等解体工事補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.tadami.lg.jp/abouttown/ui-jyutaku.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "交流推進課",
+      "windowPhone": "0241-82-5220",
+      "notes": "空き家改修・家財処分費補助も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.tadami.lg.jp/abouttown/ui-jyutaku.html",
+      "phone": "0241-82-5220"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "minamiaizu",
+    "cityName": "南会津町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "南会津町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "南会津町危険空き家等除却事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の危険な空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.minamiaizu.lg.jp/official/soshikikarasagasu/sogoseisakuka/sumai/1/594.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "総合政策課",
+      "windowPhone": "0241-62-6210"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.minamiaizu.lg.jp/official/soshikikarasagasu/sogoseisakuka/sumai/1/594.html",
+      "phone": "0241-62-6210"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "kitashiobara",
+    "cityName": "北塩原村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "北塩原村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "北塩原村空き家等解体撤去補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "村内の空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "村税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.vill.kitashiobara.fukushima.jp/site/iju/3713.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設課",
+      "windowPhone": "0241-23-3261",
+      "notes": "空き家改修補助・家財道具処分費補助も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.kitashiobara.fukushima.jp/site/iju/3713.html",
+      "phone": "0241-23-3261"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "nishiaizu",
+    "cityName": "西会津町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "西会津町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.town.nishiaizu.fukushima.jp/site/iju/3442.html",
+      "windowName": "商工観光課",
+      "windowPhone": "0241-45-2213",
+      "noSubsidyNote": "西会津町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家利活用・賃貸改修・清掃・相続登記補助は実施中です。詳細は商工観光課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.nishiaizu.fukushima.jp/site/iju/3442.html",
+      "phone": "0241-45-2213"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "bandai",
+    "cityName": "磐梯町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "磐梯町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "磐梯町空き家解体撤去費用補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.bandai.fukushima.jp/soshiki/gyousei/akiya_taisaku_hojokin.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "行政経営課",
+      "windowPhone": "0242-74-1211",
+      "notes": "空き家改修・家財道具処分・相続登記支援補助も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.bandai.fukushima.jp/soshiki/gyousei/akiya_taisaku_hojokin.html",
+      "phone": "0242-74-1211"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "inawashiro",
+    "cityName": "猪苗代町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "猪苗代町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.town.inawashiro.fukushima.jp/cb/hpc/Article-25233.html",
+      "windowName": "建設課",
+      "windowPhone": "0242-62-2118",
+      "noSubsidyNote": "猪苗代町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修等支援・残置物処分補助は実施中です。詳細は建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.inawashiro.fukushima.jp/cb/hpc/Article-25233.html",
+      "phone": "0242-62-2118"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "aizubange",
+    "cityName": "会津坂下町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "会津坂下町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "会津坂下町空家等除却推進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.aizubange.fukushima.jp/soshiki/2/15872.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "政策財務課",
+      "windowPhone": "0242-84-1504",
+      "notes": "解体・活用両対応。空き家改修等支援事業補助金も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.aizubange.fukushima.jp/soshiki/2/15872.html",
+      "phone": "0242-84-1504"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "yugawa",
+    "cityName": "湯川村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "湯川村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "湯川村空家解体事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "村内の空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "村税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.vill.yugawa.fukushima.jp/kensetu/akiyakaitaijigyo.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "産業建設課 商工観光係",
+      "windowPhone": "0241-27-8831",
+      "notes": "空家改修事業補助金も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.yugawa.fukushima.jp/kensetu/akiyakaitaijigyo.html",
+      "phone": "0241-27-8831"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "yanaizu",
+    "cityName": "柳津町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "柳津町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "柳津町空き家改修支援事業補助金（解体対応）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者・相続人または利活用希望者",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.yanaizu.fukushima.jp/docs/2015072300017/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "みらい創生課",
+      "windowPhone": "0241-42-2447",
+      "notes": "改修・残置物処分・解体対応。空き家家財道具等処分費補助金も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.yanaizu.fukushima.jp/docs/2015072300017/",
+      "phone": "0241-42-2447"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "mishima",
+    "cityName": "三島町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "三島町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "三島町空き家等解体費補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.mishima.fukushima.jp/site/ijyu/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "地域政策課",
+      "windowPhone": "0241-48-5533",
+      "notes": "空き家改修費補助・家財処分費補助・住宅取得改修費補助も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.mishima.fukushima.jp/site/ijyu/",
+      "phone": "0241-48-5533"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "kaneyama",
+    "cityName": "金山町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "金山町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "金山町空き家・住宅対策支援事業補助金（解体対応）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.kaneyama.fukushima.jp/soshiki/54/akiya-jyuutakutaisaku26.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "企画課",
+      "windowPhone": "0241-54-5203",
+      "notes": "空き家家財道具等処分支援事業補助金も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kaneyama.fukushima.jp/soshiki/54/akiya-jyuutakutaisaku26.html",
+      "phone": "0241-54-5203"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "showa",
+    "cityName": "昭和村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "昭和村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "産業建設課 観光交流係",
+      "windowPhone": "0241-57-2124",
+      "noSubsidyNote": "昭和村では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修等支援事業補助金は実施中です。詳細は産業建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%98%AD%E5%92%8C%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0241-57-2124"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "aizumisato",
+    "cityName": "会津美里町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "会津美里町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://misato-iju.jp/subsidies/index.html",
+      "windowName": "政策財政課",
+      "windowPhone": "0242-55-1171",
+      "noSubsidyNote": "会津美里町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修補助金・残置物処分補助は実施中です。詳細は政策財政課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://misato-iju.jp/subsidies/index.html",
+      "phone": "0242-55-1171"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "nishigo",
+    "cityName": "西郷村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "西郷村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "西郷村空き家改修・除却等支援事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "村内の空き家の所有者・相続人または利活用希望者",
+        "1年以上使用されていない空き家",
+        "村税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "企画政策課",
+      "windowPhone": "0248-25-2943",
+      "notes": "改修・残置物処分・解体対応の総合補助制度。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%A5%BF%E9%83%B7%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0248-25-2943"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "izumizaki",
+    "cityName": "泉崎村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "泉崎村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "総務課",
+      "windowPhone": "0248-53-2114",
+      "noSubsidyNote": "泉崎村では現在、空き家解体を対象とした補助金制度は確認されていません。詳細は総務課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B3%89%E5%B4%8E%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0248-53-2114"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "nakajima",
+    "cityName": "中島村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "中島村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "建設課",
+      "windowPhone": "0248-52-3484",
+      "noSubsidyNote": "中島村では現在、空き家解体を対象とした補助金制度は確認されていません。詳細は建設課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%AD%E5%B3%B6%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0248-52-3484"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "yabuki",
+    "cityName": "矢吹町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "矢吹町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.town.yabuki.fukushima.jp/page/page009850.html",
+      "windowName": "商工観光課 地域活性係",
+      "windowPhone": "0248-42-2119",
+      "noSubsidyNote": "矢吹町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家取得支援金は実施中です。詳細は商工観光課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.yabuki.fukushima.jp/page/page009850.html",
+      "phone": "0248-42-2119"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "tanagura",
+    "cityName": "棚倉町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "棚倉町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "棚倉町空き家改修等支援事業補助金（解体対応）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.tanagura.fukushima.jp/page/page001123.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "地域創生課",
+      "windowPhone": "0247-33-2112"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.tanagura.fukushima.jp/page/page001123.html",
+      "phone": "0247-33-2112"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "yamatsuri",
+    "cityName": "矢祭町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "矢祭町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.town.yamatsuri.fukushima.jp/page/page000953.html",
+      "windowName": "事業課",
+      "windowPhone": "0247-46-4577",
+      "noSubsidyNote": "矢祭町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修等支援事業・残置物処分補助は実施中です。詳細は事業課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.yamatsuri.fukushima.jp/page/page000953.html",
+      "phone": "0247-46-4577"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "hanawa",
+    "cityName": "塙町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "塙町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "塙町空家除去補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "まち振興課",
+      "windowPhone": "0247-43-2112",
+      "notes": "空き家改修等支援事業補助金（改修・解体対応）も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A1%99%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0247-43-2112"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "samegawa",
+    "cityName": "鮫川村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "鮫川村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "鮫川村空き家改修等支援助成金（解体対応）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "村内の空き家の所有者・相続人または利活用希望者",
+        "1年以上使用されていない空き家",
+        "村税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.vill.samegawa.fukushima.jp/page/page002217.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "村づくり推進室",
+      "windowPhone": "0247-57-6332",
+      "notes": "改修・残置物処分・解体対応。移住定住促進補助金も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.samegawa.fukushima.jp/page/page002217.html",
+      "phone": "0247-57-6332"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "ishikawa",
+    "cityName": "石川町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "石川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "石川町老朽危険空き家等除却事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽化・危険な状態にある空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.ishikawa.fukushima.jp/admin/city/01/16.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市建設課 都市整備係",
+      "windowPhone": "0247-26-9131",
+      "notes": "老朽危険空き家に限定した除却補助。空き家家財整理事業補助金も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.ishikawa.fukushima.jp/admin/city/01/16.html",
+      "phone": "0247-26-9131"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "tamakawa",
+    "cityName": "玉川村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "玉川村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "玉川村特定空家等解体事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "特定空家等に認定された空き家の所有者または相続人",
+        "1年以上使用されていない空き家",
+        "村税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.vill.tamakawa.fukushima.jp/guide/region/003850.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "地域整備課",
+      "windowPhone": "0247-57-4626",
+      "notes": "空き家改修等支援（改修・残置物処分・解体・インスペクション）・空き家活用等支援補助金も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.tamakawa.fukushima.jp/guide/region/003850.html",
+      "phone": "0247-57-4626"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "hirata",
+    "cityName": "平田村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "平田村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.vill.hirata.fukushima.jp/soshiki/2/53.html",
+      "windowName": "企画商工課 政策情報係",
+      "windowPhone": "0247-55-3115",
+      "noSubsidyNote": "平田村では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家貸付助成金は実施中です。詳細は企画商工課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.hirata.fukushima.jp/soshiki/2/53.html",
+      "phone": "0247-55-3115"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "asakawa",
+    "cityName": "浅川町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "浅川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "浅川町空き家改修等支援事業補助金（解体対応）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者・相続人または利活用希望者",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "http://www.town.asakawa.fukushima.jp/residence/001969.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設水道課",
+      "windowPhone": "0247-36-1184",
+      "notes": "改修・残置物処分・解体・インスペクション対応の総合補助制度。"
+    },
+    "garbage": {
+      "officialUrl": "http://www.town.asakawa.fukushima.jp/residence/001969.html",
+      "phone": "0247-36-1184"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "furudono",
+    "cityName": "古殿町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "古殿町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "古殿町空き家改修等支援事業補助金（解体対応）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者・相続人または利活用希望者",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.furudono.fukushima.jp/reiki_int/reiki_honbun/c572RG00000849.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "地域整備課",
+      "windowPhone": "0247-53-4615",
+      "notes": "改修・残置物処分・解体・インスペクション対応の総合補助制度。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.furudono.fukushima.jp/reiki_int/reiki_honbun/c572RG00000849.html",
+      "phone": "0247-53-4615"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "miharu",
+    "cityName": "三春町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "三春町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "みはるぐらし空き家改修等支援事業補助金（解体対応）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者・相続人または利活用希望者",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.miharu.fukushima.jp/soshiki/8/akiyajigyou.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設課",
+      "windowPhone": "0247-62-2113",
+      "notes": "改修・残置物処分・解体・インスペクション対応の総合補助制度。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.miharu.fukushima.jp/soshiki/8/akiyajigyou.html",
+      "phone": "0247-62-2113"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "ono",
+    "cityName": "小野町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "小野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "小野町空き家解体等支援事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町内の空き家の所有者・相続人または利活用希望者",
+        "1年以上使用されていない空き家",
+        "町税の滞納がないこと",
+        "建設業法の許可を受けた業者による工事",
+        "交付決定前に着工・契約していないこと"
+      ],
+      "officialUrl": "https://www.town.ono.fukushima.jp/soshiki/8/entry_14.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "地域整備課",
+      "windowPhone": "0247-72-6936",
+      "notes": "解体・改修両対応。空き家改修等支援事業補助金も別途実施。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.ono.fukushima.jp/soshiki/8/entry_14.html",
+      "phone": "0247-72-6936"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "hirono",
+    "cityName": "広野町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "広野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "広野町役場",
+      "windowPhone": "0240-27-2111",
+      "noSubsidyNote": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。",
+      "notes": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%BA%83%E9%87%8E%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0240-27-2111"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "naraha",
+    "cityName": "楢葉町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "楢葉町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "楢葉町役場",
+      "windowPhone": "0240-23-6847",
+      "noSubsidyNote": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。",
+      "notes": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%A5%A2%E8%91%89%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0240-23-6847"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "tomioka",
+    "cityName": "富岡町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "富岡町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "富岡町役場",
+      "windowPhone": "0240-22-2111",
+      "noSubsidyNote": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。",
+      "notes": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%AF%8C%E5%B2%A1%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0240-22-2111"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "kawauchi",
+    "cityName": "川内村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "川内村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "川内村役場",
+      "windowPhone": "0240-38-2111",
+      "noSubsidyNote": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。",
+      "notes": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B7%9D%E5%86%85%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0240-38-2111"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "okuma",
+    "cityName": "大熊町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "大熊町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "大熊町役場",
+      "windowPhone": "0240-23-7211",
+      "noSubsidyNote": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。",
+      "notes": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%A7%E7%86%8A%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0240-23-7211"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "futaba",
+    "cityName": "双葉町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "双葉町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "双葉町役場",
+      "windowPhone": "0240-33-2111",
+      "noSubsidyNote": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。",
+      "notes": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8F%8C%E8%91%89%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0240-33-2111"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "namie",
+    "cityName": "浪江町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "浪江町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "浪江町役場",
+      "windowPhone": "0240-34-0513",
+      "noSubsidyNote": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。",
+      "notes": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B5%AA%E6%B1%9F%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0240-34-0513"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "katsurao",
+    "cityName": "葛尾村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "葛尾村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "葛尾村役場",
+      "windowPhone": "0244-32-2111",
+      "noSubsidyNote": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。",
+      "notes": "※原発避難区域（双葉郡）のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%91%9B%E5%B0%BE%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0244-32-2111"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "shinchi",
+    "cityName": "新地町",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "新地町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "新地町役場",
+      "windowPhone": "0244-62-2111",
+      "noSubsidyNote": "※要確認。補助制度の有無については新地町役場へ直接お問い合わせください。",
+      "notes": "※要確認。補助制度の有無については新地町役場へ直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%96%B0%E5%9C%B0%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0244-62-2111"
+    }
+  },
+  {
+    "prefId": "fukushima",
+    "cityId": "iitate",
+    "cityName": "飯舘村",
+    "prefName": "福島県",
+    "mascot": {
+      "localRiskText": "飯舘村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "windowName": "飯舘村役場",
+      "windowPhone": "0244-42-1652",
+      "noSubsidyNote": "※原発避難区域のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。",
+      "notes": "※原発避難区域のため通常の補助制度とは異なる場合があります。詳細は各町村にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%A3%AF%E8%88%98%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0244-42-1652"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "takaoka",
+    "cityName": "高岡市",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "高岡市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "たかおか空き家除却支援事業補助金",
+      "maxAmount": "最大30万円（工事費の1/3以内、空き家バンク登録加算10万円含む）",
+      "conditions": [
+        "昭和56年5月31日以前に着工された空き家（旧耐震基準）",
+        "空き家の所有者等、または所有者等から委任を受けた者",
+        "工事着工前に申請が必要（着工済みは不可）",
+        "市税に滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.takaoka.toyama.jp/soshiki/kenchikuseisakuka/2/3/4/11700.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建築政策課",
+      "windowPhone": "0766-30-7291",
+      "notes": "まちなか区域の「高岡市まちなか空き家除却支援事業補助金」（最大30万円）も別途あり。最新状況は窓口へ要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.takaoka.toyama.jp/gyosei/kurashi_tetsuzuki/gomi/1/index.html",
+      "phone": "0766-20-1111"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "uozu",
+    "cityName": "魚津市",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "魚津市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "魚津市危険老朽空家対策支援事業補助金",
+      "maxAmount": "最大70万円（工事費の1/3以内）",
+      "conditions": [
+        "市が実施する老朽度調査で一定評点以上の空き家",
+        "市内業者による解体工事であること",
+        "空き家の所有者等であること",
+        "市税を滞納していないこと",
+        "着工前に申請が必要"
+      ],
+      "officialUrl": "https://www.city.uozu.toyama.jp/guide/svGuideDtl.aspx?servno=18100",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市計画課 建築住宅係",
+      "windowPhone": "0765-23-1031"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.uozu.toyama.jp/",
+      "phone": "0765-23-1011"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "himi",
+    "cityName": "氷見市",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "氷見市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "氷見市危険老朽空家対策事業（除却補助）",
+      "maxAmount": "最大50万円（対象除却費の一部）",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造建築物等（老朽空き家も対象）",
+        "市が危険老朽空家または老朽空家と認定したもの",
+        "市内業者との工事請負契約（能登半島地震の影響で市外業者も当分の間可）",
+        "着工前に移住定住推進課への窓口相談が必須（電話・メール不可）",
+        "市税を滞納していないこと"
+      ],
+      "officialUrl": "https://www.city.himi.toyama.jp/gyosei/soshiki/ijuteiju/1/7374.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "移住定住推進課",
+      "windowPhone": "0766-74-8190",
+      "notes": "窓口への直接相談が必須（電話・メール不可）。予算状況により受付停止あり"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.himi.toyama.jp/",
+      "phone": "0766-74-8056"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "namerikawa",
+    "cityName": "滑川市",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "滑川市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "滑川市危険老朽空き家除却支援補助金",
+      "maxAmount": "最大70万円（補助対象経費の1/2以内）",
+      "conditions": [
+        "一戸建て住宅（延べ床面積の過半数が居住用の併用住宅を含む）",
+        "市が実施する老朽度判定で一定以上の評点",
+        "物件（所有権を除く）または賃借権が設定されていないもの",
+        "固定資産税その他の市税を滞納していないこと",
+        "着工前に申請が必要"
+      ],
+      "officialUrl": "https://www.city.namerikawa.toyama.jp/soshiki/17/4/1/7701.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市計画課（建築住宅係）",
+      "windowPhone": "076-475-1453",
+      "notes": "除却後の固定資産税減免制度（令和5〜8年度）も併用可能"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.namerikawa.toyama.jp/",
+      "phone": "076-475-2111"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "kurobe",
+    "cityName": "黒部市",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "黒部市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "黒部市老朽危険空家解体補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "放置すれば倒壊等の危険性がある空家で、周辺生活環境の保全上不適切なもの",
+        "空家の所有者であること",
+        "世帯全員が市税を滞納していないこと",
+        "市内業者が解体する工事であること",
+        "着工前に都市計画課への相談・自己診断チェックが必要"
+      ],
+      "officialUrl": "https://www.city.kurobe.toyama.jp/category/page.aspx?servno=6254",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市計画課",
+      "windowPhone": "0765-54-2647",
+      "notes": "居住誘導区域内の空き家バンク登録物件は建替え条件付きで最大100万円の別補助あり。※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kurobe.toyama.jp/",
+      "phone": "0765-54-2111"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "tonami",
+    "cityName": "砺波市",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "砺波市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.city.tonami.lg.jp/",
+      "windowName": "砺波市役所 建設課",
+      "windowPhone": "0763-33-1111",
+      "noSubsidyNote": "※要確認：空き家解体に特化した独自補助金の公式情報が見当たりません。空き家活用・改修補助は存在します。建設課にご確認ください。",
+      "notes": "※要確認：空き家解体に特化した独自補助金の公式情報が見当たりません。空き家活用・改修補助は存在します。建設課にご確認ください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.tonami.lg.jp/",
+      "phone": "0763-33-1111"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "oyabe",
+    "cityName": "小矢部市",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "小矢部市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "小矢部市空き家活用促進事業補助金（解体）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "小矢部市空き家等の適正管理、活用等に関する条例に基づく対象空き家",
+        "危険空き家の解体が対象",
+        "市税を滞納していないこと",
+        "着工前に申請が必要"
+      ],
+      "officialUrl": "https://www.city.oyabe.toyama.jp/kurashi/1002358/1002359/1002362.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "定住支援課",
+      "windowPhone": "0766-67-1760",
+      "notes": "※要確認：補助金額・補助率は公式サイトで確認できませんでした。定住支援課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.oyabe.toyama.jp/",
+      "phone": "0766-67-1760"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "nanto",
+    "cityName": "南砺市",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "南砺市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "南砺市老朽危険空き家等除却支援事業補助金",
+      "maxAmount": "最大50万円（費用の一部）",
+      "conditions": [
+        "特定空家・倒壊空家・老朽危険空家として不良度判定が100点以上",
+        "着工前に事前調査の申込みが必要",
+        "補助金交付決定後に業者と工事請負契約を締結すること",
+        "原則として住宅全体を除却し更地にする工事",
+        "市税に滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.nanto.toyama.jp/soshiki/nantodekurashimasenka/3/5383.html",
+      "applicationPeriod": "令和7年4月1日〜予算枠に達するまで",
+      "windowName": "南砺で暮らしません課",
+      "windowPhone": "0763-23-2037"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.nanto.toyama.jp/",
+      "phone": "0763-23-2003"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "imizu",
+    "cityName": "射水市",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "射水市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "射水市老朽危険空き家対策支援事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "住宅の不良度の評点が100点以上（老朽空き家は70点以上）",
+        "空き家となって1年以上経過したもの",
+        "延べ床面積の1/2以上が居住用の住宅",
+        "市内業者が解体工事を行うこと",
+        "世帯全員が射水市の市税を滞納していないこと",
+        "解体後の跡地活用の方針を明確にしていること"
+      ],
+      "officialUrl": "https://www.city.imizu.toyama.jp/guide/svGuideDtl.aspx?servno=38545",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建築住宅課",
+      "windowPhone": "0766-51-6683",
+      "notes": "老朽危険空き家・老朽空き家・隣接空き家の3種類の補助区分あり。補助額・率は窓口に要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.imizu.toyama.jp/",
+      "phone": "0766-51-6600"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "funahashi",
+    "cityName": "舟橋村",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "舟橋村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.vill.funahashi.toyama.jp/",
+      "windowName": "舟橋村役場",
+      "windowPhone": "076-464-1771",
+      "noSubsidyNote": "※要確認：空き家解体補助金の公式情報が見当たりませんでした。役場にお問い合わせください。",
+      "notes": "※要確認：空き家解体補助金の公式情報が見当たりませんでした。役場にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.vill.funahashi.toyama.jp/",
+      "phone": "076-464-1771"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "kamiichi",
+    "cityName": "上市町",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "上市町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "上市町危険老朽空家対策事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町が認定した危険老朽空家",
+        "空家の所有者等であること",
+        "町税を滞納していないこと",
+        "着工前に申請が必要"
+      ],
+      "officialUrl": "https://www.town.kamiichi.toyama.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "上市町役場 建設課",
+      "windowPhone": "076-472-1111",
+      "notes": "※要確認：補助金額・補助率は公式サイトで確認できませんでした。建設課にご確認ください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.kamiichi.toyama.jp/",
+      "phone": "076-472-1111"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "tateyama",
+    "cityName": "立山町",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "立山町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "立山町空き家除却支援事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空家として認定されたもの",
+        "空き家の所有者等であること",
+        "町税を滞納していないこと",
+        "着工前に申請が必要"
+      ],
+      "officialUrl": "https://www.town.tateyama.toyama.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "立山町役場 建設課",
+      "windowPhone": "076-462-9974",
+      "notes": "※要確認：補助金額・補助率は公式サイトで確認できませんでした。建設課にご確認ください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.tateyama.toyama.jp/",
+      "phone": "076-462-9974"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "nyuzen",
+    "cityName": "入善町",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "入善町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "入善町空き家解体補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽化・危険な状態にある空き家",
+        "空き家の所有者等であること",
+        "町税を滞納していないこと",
+        "着工前に申請が必要"
+      ],
+      "officialUrl": "https://www.town.nyuzen.toyama.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "入善町役場 建設課",
+      "windowPhone": "0765-72-0454",
+      "notes": "※要確認：補助金額・補助率は公式サイトで確認できませんでした。建設課にご確認ください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.nyuzen.toyama.jp/",
+      "phone": "0765-72-0454"
+    }
+  },
+  {
+    "prefId": "toyama",
+    "cityId": "asahi",
+    "cityName": "朝日町",
+    "prefName": "富山県",
+    "mascot": {
+      "localRiskText": "朝日町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "朝日町空き家利活用促進対策事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "空き家の所有者等であること",
+        "老朽危険な状態の空き家",
+        "町税を滞納していないこと",
+        "着工前に申請が必要"
+      ],
+      "officialUrl": "https://www.town.asahi.toyama.jp/",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "朝日町役場 建設課",
+      "windowPhone": "0765-83-1100",
+      "notes": "※要確認：補助金額・補助率は公式サイトで確認できませんでした。建設課にご確認ください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.asahi.toyama.jp/",
+      "phone": "0765-83-1100"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "tsuruga",
+    "cityName": "敦賀市",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "敦賀市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "老朽危険空き家等除却支援事業",
+      "maxAmount": "最大100万円（費用の1/2以内）",
+      "conditions": [
+        "老朽危険空き家（不良度判定合計評点100点以上）または準老朽危険空き家（昭和56年5月末以前・木造）に該当すること",
+        "概ね1年以上居住または使用されていない状態にあること",
+        "市税に滞納がないこと",
+        "福井県内に事業所を置く解体撤去業者に請け負わせる工事であること",
+        "補助を受けようとする年度の3月25日までに工事完了報告書が提出できること"
+      ],
+      "officialUrl": "https://www.city.tsuruga.lg.jp/about_city/news_from_division/kensetsu_bu/jyuutaku_seisaku/akiya_jyokyaku.html",
+      "applicationPeriod": "令和7年4月22日〜予算額に達し次第終了",
+      "windowName": "建設部 住宅政策課",
+      "windowPhone": "0770-22-8109",
+      "notes": "老朽危険空き家：通常上限50万円（加算含め最大100万円）。準老朽危険空き家：通常上限30万円（加算含め最大60万円）。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.tsuruga.lg.jp/kurasi/gomi/index.html",
+      "phone": "0770-22-8135"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "obama",
+    "cityName": "小浜市",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "小浜市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "小浜市空家等除却支援事業補助金",
+      "maxAmount": "最大50万円（費用の1/3以内）",
+      "conditions": [
+        "特定空家等または老朽空家等（不良住宅）に該当すること",
+        "1年以上居住または使用されていないこと",
+        "市税に滞納がないこと",
+        "福井県内に事業所を置く解体撤去業者に請け負わせる工事であること",
+        "補助を受けようとする年度の3月25日までに工事完了報告書が提出できること"
+      ],
+      "officialUrl": "https://www1.city.obama.fukui.jp/kurashi/sumaiakiya/akiya/4604.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "まちづくり課",
+      "windowPhone": "0770-64-6062",
+      "notes": "特定空家等：上限50万円、その他老朽空家等：上限25万円、準老朽空家等：上限10万円（各費用の1/3以内）。加算条件あり。"
+    },
+    "garbage": {
+      "officialUrl": "https://www1.city.obama.fukui.jp/kurashi/eisei-kankyo/gominokaishu-dashikata/p005909.html",
+      "phone": "0770-64-6031"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "ono",
+    "cityName": "大野市",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "大野市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.city.ono.fukui.jp/kurashi/kankyo-sumai/akiya/index.html",
+      "windowName": "交通住宅まちづくり課",
+      "windowPhone": "0779-66-1111",
+      "noSubsidyNote": "※要確認。公式サイトでは空き家購入・リフォーム支援（暮らし住まいづくり支援事業）は確認できたが、解体単独の補助金制度は未確認。特別豪雪地帯のため独自制度がある可能性あり。詳細は交通住宅まちづくり課（0779-66-1111）に問い合わせを。",
+      "notes": "※要確認。公式サイトでは空き家購入・リフォーム支援（暮らし住まいづくり支援事業）は確認できたが、解体単独の補助金制度は未確認。特別豪雪地帯のため独自制度がある可能性あり。詳細は交通住宅まちづくり課（0779-66-1111）に問い合わせを。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.ono.fukui.jp/kurashi/kankyo-sumai/gomi/index.html",
+      "phone": "0779-66-1111"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "katsuyama",
+    "cityName": "勝山市",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "勝山市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "勝山市老朽危険空き家解体事業補助金",
+      "maxAmount": "最大100万円（費用の1/2以内）",
+      "conditions": [
+        "老朽空き家（特定空家等または不良住宅評点100点以上）または準老朽空き家（昭和56年5月31日以前・木造）に該当すること",
+        "市税に滞納がないこと",
+        "暴力団員または密接な関係を有しないこと",
+        "補助金の交付決定後に着工する工事であること",
+        "申請年度の令和7年12月19日までに交付申請を行うこと"
+      ],
+      "officialUrl": "https://www.city.katsuyama.fukui.jp/soshiki/16/31796.html",
+      "applicationPeriod": "令和7年4月1日〜12月19日（予算に達した場合は終了）",
+      "windowName": "営繕課",
+      "windowPhone": "0779-88-8128",
+      "notes": "老朽空き家：費用の1/2、上限50万円。景観形成地区内・非木造・200㎡以上・跡地活用等の条件に該当する場合は補助率・上限額ともに2倍（最大100万円）。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.katsuyama.fukui.jp/life/1/18/77/",
+      "phone": "0779-88-1111"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "sabae",
+    "cityName": "鯖江市",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "鯖江市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "鯖江市老朽危険空家等除却支援事業補助金",
+      "maxAmount": "最大100万円（費用の1/2以内）",
+      "conditions": [
+        "老朽危険空家等（特定空家等または不良住宅評点100点以上）または準老朽危険空家等（昭和56年5月末以前・木造）に該当すること",
+        "1年以上居住または使用されていない状態にあること",
+        "市税および料金を滞納していないこと",
+        "補助金の交付決定前に着工した工事でないこと",
+        "申請年度内に工事を完了すること"
+      ],
+      "officialUrl": "https://www.city.sabae.fukui.jp/anzen_anshin/akiya_akichi_taisaku/akiya_hojokin/akiya202306.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "防災危機管理課 空き家対策グループ",
+      "windowPhone": "0778-42-5104",
+      "notes": "老朽危険空き家：通常上限50万円（加算含め最大100万円）。準老朽危険空き家：通常上限30万円（加算含め最大60万円）。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.sabae.fukui.jp/kurashi_tetsuduki/gomi/index.html",
+      "phone": "0778-51-2200"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "awara",
+    "cityName": "あわら市",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "あわら市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.city.awara.lg.jp/mokuteki/life/jyutaku1/index.html",
+      "windowName": "市民協働課",
+      "windowPhone": "0776-73-8005",
+      "noSubsidyNote": "※要確認。公式サイトで空き家取得・リフォーム・家財処分支援は確認できたが、解体補助金の独自制度は現時点で未確認。詳細は市民協働課（0776-73-8005）に問い合わせを。",
+      "notes": "※要確認。公式サイトで空き家取得・リフォーム・家財処分支援は確認できたが、解体補助金の独自制度は現時点で未確認。詳細は市民協働課（0776-73-8005）に問い合わせを。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.awara.lg.jp/mokuteki/life/gomi/index.html",
+      "phone": "0776-73-8005"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "echizen",
+    "cityName": "越前市",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "越前市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "越前市老朽危険空家解体撤去事業補助金",
+      "maxAmount": "最大100万円（費用の1/3以内）",
+      "conditions": [
+        "老朽危険空家（特定空家等または倒壊・破損のおそれある危険な状態）または準老朽危険空家（昭和56年5月31日以前・木造）に該当すること",
+        "市税に滞納がないこと",
+        "補助金の交付決定前に着工した工事でないこと",
+        "越前市内に主たる営業所または従たる営業所を有する業者が施工すること",
+        "敷地内の全建築物・工作物・動産等を全て除去し更地にすること"
+      ],
+      "officialUrl": "http://www.city.echizen.lg.jp/office/010/060/roukyukikenakiyahojyokin.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設部 建築住宅課",
+      "windowPhone": "0778-22-3004",
+      "notes": "老朽危険空家：費用の1/3、上限50万円（加算含め最大70万円）。準老朽危険空家：費用の1/3、上限30万円（加算含め最大50万円）。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.echizen.lg.jp/office/010/040/index.html",
+      "phone": "0778-22-3004"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "sakai",
+    "cityName": "坂井市",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "坂井市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "坂井市空家除却支援事業",
+      "maxAmount": "最大50万円（費用の1/2以内）",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造の空家で不良度評点25点以上の準老朽空家に該当すること",
+        "市内に所在する空家の所有者もしくは処分の権利を有している者であること",
+        "公共事業の移転補償対象になっていないこと",
+        "市から空家等対策の特別措置法に基づく命令を受けていないこと",
+        "令和8年1月31日までに除却工事が完了する見込みのあること"
+      ],
+      "officialUrl": "https://www.city.fukui-sakai.lg.jp/iju/kurashi/sumai/sumai/hojo/akiya-jokyaku.html",
+      "applicationPeriod": "令和7年4月1日〜12月19日（予算上限に達し次第終了）",
+      "windowName": "建設部 建築住宅課",
+      "windowPhone": "0776-66-1500",
+      "notes": "坂井市には「空家策早期決断応援事業」「旧耐震住宅建替え除却支援事業」も別途あり。詳細は公式サイト参照。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.fukui-sakai.lg.jp/kurasi/gomi/index.html",
+      "phone": "0776-66-1500"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "eiheiji",
+    "cityName": "永平寺町",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "永平寺町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "永平寺町空き家等解体及び撤去事業補助金",
+      "maxAmount": "最大50万円（費用の1/3以内）",
+      "conditions": [
+        "老朽空き家または準老朽空き家に該当し、永平寺町空き家等対策検討委員会による審査を経ること",
+        "町税等に滞納がないこと",
+        "空き家の所有権の全部または委任を受けた者であること",
+        "暴力団員または密接な関係を有しないこと",
+        "補助金の交付決定前に着工していないこと"
+      ],
+      "officialUrl": "https://www.town.eiheiji.lg.jp/200/201/202/p010360.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "えい住支援課（建設整備担当）",
+      "windowPhone": "0776-61-3941",
+      "notes": "老朽空き家：上限50万円、準老朽空き家：上限30万円（各費用の1/3以内）。解体後2年以内に土地を売却・譲渡した場合、別途上限20万円の加算補助（空き家等跡地利用促進補助金）あり。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.eiheiji.lg.jp/200/206/216/index.html",
+      "phone": "0776-61-3941"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "ikeda",
+    "cityName": "池田町",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "池田町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.town.ikeda.fukui.jp/",
+      "windowName": "町民生活課",
+      "windowPhone": "0778-44-8000",
+      "noSubsidyNote": "※要確認。解体補助金制度の有無について公式サイトで情報が確認できなかった。詳細は池田町役場（0778-44-8000）に直接問い合わせを。",
+      "notes": "※要確認。解体補助金制度の有無について公式サイトで情報が確認できなかった。詳細は池田町役場（0778-44-8000）に直接問い合わせを。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.ikeda.fukui.jp/",
+      "phone": "0778-44-8000"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "minamiechizen",
+    "cityName": "南越前町",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "南越前町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "南越前町空き家等解体及び撤去事業補助金",
+      "maxAmount": "最大100万円（費用の1/3以内）",
+      "conditions": [
+        "南越前町空家等対策推進協議会において「特定空家」または「管理不全空家」に認定された空き家等（令和7年7月から管理不全空家を追加）",
+        "または雪害・地震・風水害・土砂災害等の自然災害により被害が生じ緊急的な除却を要するもの",
+        "個人の所有で公共事業等の補償対象となっていないこと",
+        "町税等を滞納していないこと",
+        "補助金の交付決定前に解体着手していないこと"
+      ],
+      "officialUrl": "https://www.town.minamiechizen.lg.jp/izyu/jyuutakuhojyokinn/p010677.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）。令和7年7月から管理不全空家追加・補助額拡充",
+      "windowName": "建設整備課",
+      "windowPhone": "0778-47-8005",
+      "notes": "費用の1/3以内、通常上限50万円（加算条件あり最大100万円）。令和7年7月から管理不全空家が対象追加・特定空家等の補助額が令和9年度まで拡充。豪雪地帯のため雪害被害も補助対象。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.minamiechizen.lg.jp/kurasi/101/116/index.html",
+      "phone": "0778-47-3000"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "echizenmachi",
+    "cityName": "越前町",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "越前町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "越前町空き家等除却支援事業補助金",
+      "maxAmount": "最大100万円（費用の1/2以内）",
+      "conditions": [
+        "老朽空き家（特定空家等または不良住宅）または準老朽空き家（昭和56年5月31日以前・木造・腐朽評点25点以上）に該当すること",
+        "おおむね1年以上無人または使用されていないこと",
+        "固定資産税台帳に登録されていること",
+        "差押えや抵当権など所有権以外の権利が設定されていないこと",
+        "補助金の交付決定後に業者と契約・着工すること（工事完了期限は申請年度の2月末日）"
+      ],
+      "officialUrl": "https://www.town.echizen.fukui.jp/kurashi/04/06/p005244.html",
+      "applicationPeriod": "令和7年4月1日〜随時（予算枠に達し次第終了）",
+      "windowName": "建設整備課",
+      "windowPhone": "0778-34-8711",
+      "notes": "老朽空き家：費用の1/2、上限50万円（加算含め最大100万円）。準老朽空き家：費用の1/2、上限30万円（加算含め最大60万円）。家財道具等の処分費も補助対象（令和5年度〜）、上限20万円。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.echizen.fukui.jp/kurashi/01/03/index.html",
+      "phone": "0778-34-8711"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "mihama",
+    "cityName": "美浜町",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "美浜町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "美浜町老朽危険空家等解体撤去事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "町特定空家等認定審査会にて認定された特定空家もしくは準特定空家であること",
+        "個人または法人が所有するものであること",
+        "所有権以外の権利が設定されていないこと",
+        "建設業法に基づく許可を受けた者が解体撤去を行うこと",
+        "町内業者が元請として解体撤去すること"
+      ],
+      "officialUrl": "https://www.town.fukui-mihama.lg.jp/soshiki/13/4311.html",
+      "applicationPeriod": "令和7年7月18日から先着順",
+      "windowName": "土木建築課",
+      "windowPhone": "0770-32-6707",
+      "notes": "※補助上限額は要綱PDFで要確認。令和7年7月18日から受付開始。補助金の交付決定前に着工した場合は対象外。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.fukui-mihama.lg.jp/site/kurashi/18.html",
+      "phone": "0770-32-6700"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "takahama",
+    "cityName": "高浜町",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "高浜町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "高浜町老朽危険空き家等除却支援事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家、準老朽危険空き家、またはその他空き家のいずれかに該当すること",
+        "所有関係が明確で、所有権以外の権利設定がされていないこと",
+        "権利者等が複数存在する場合は、解体撤去について全員の同意を得ていること",
+        "高浜町内の解体業者に請け負わせる工事であること",
+        "年度の3月15日までに工事完了報告書が提出できること"
+      ],
+      "officialUrl": "https://www.town.takahama.fukui.jp/page/kensetuseibi/p007414.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設整備課",
+      "windowPhone": "0770-72-7725",
+      "notes": "※補助率・上限額は要綱PDFで要確認。令和7年度から新設の制度。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.takahama.fukui.jp/page/sougouseisaku/gomi.html",
+      "phone": "0770-72-7711"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "ohi",
+    "cityName": "おおい町",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "おおい町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "おおい町空家等除却支援事業補助金",
+      "maxAmount": "最大50万円（費用の1/2以内）",
+      "conditions": [
+        "「空家等状態調査事業」で老朽空家（調査判定100点以上）または準老朽空家（調査判定25点以上）に判定されたこと（事前調査申請が必要）",
+        "空き家の所有権の全部または委任を受けた者であること",
+        "町税・使用料・負担金等を滞納していないこと",
+        "補助金の交付決定前に解体の契約・着手をしていないこと",
+        "空き家に抵当権その他の権利がある場合、解体の同意が得られること"
+      ],
+      "officialUrl": "http://www.town.ohi.fukui.jp/object/object05/p19961.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設課",
+      "windowPhone": "0770-77-4057",
+      "notes": "老朽空家：費用の1/2、上限50万円。申請前に「空家等状態調査事業」への申込が必須。準老朽空き家の補助額は窓口で確認を。"
+    },
+    "garbage": {
+      "officialUrl": "http://www.town.ohi.fukui.jp/1001/1204/index.html",
+      "phone": "0770-77-1111"
+    }
+  },
+  {
+    "prefId": "fukui",
+    "cityId": "wakasa",
+    "cityName": "若狭町",
+    "prefName": "福井県",
+    "mascot": {
+      "localRiskText": "若狭町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": false,
+      "officialUrl": "https://www.town.wakasa.fukui.jp/",
+      "windowName": "政策推進課",
+      "windowPhone": "0770-45-9112",
+      "noSubsidyNote": "※要確認。解体補助金制度の有無について公式サイトで情報が確認できなかった。詳細は若狭町役場政策推進課（0770-45-9112）に直接問い合わせを。",
+      "notes": "※要確認。解体補助金制度の有無について公式サイトで情報が確認できなかった。詳細は若狭町役場政策推進課（0770-45-9112）に直接問い合わせを。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.town.wakasa.fukui.jp/",
+      "phone": "0770-45-9112"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "ebetsu",
+    "cityName": "江別市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "江別市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B1%9F%E5%88%A5%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "chitose",
+    "cityName": "千歳市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "千歳市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%83%E6%AD%B3%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "eniwa",
+    "cityName": "恵庭市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "恵庭市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%81%B5%E5%BA%AD%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kitahiroshima",
+    "cityName": "北広島市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "北広島市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8C%97%E5%BA%83%E5%B3%B6%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "ishikari",
+    "cityName": "石狩市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "石狩市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%9F%B3%E7%8B%A9%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "tobetsu",
+    "cityName": "当別町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "当別町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%BD%93%E5%88%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shinshinotsu",
+    "cityName": "新篠津村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "新篠津村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%96%B0%E7%AF%A0%E6%B4%A5%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "iwamizawa",
+    "cityName": "岩見沢市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "岩見沢市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B2%A9%E8%A6%8B%E6%B2%A2%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "yubari",
+    "cityName": "夕張市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "夕張市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%95%E5%BC%B5%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "bibai",
+    "cityName": "美唄市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "美唄市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%BE%8E%E5%94%84%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "ashibetsu",
+    "cityName": "芦別市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "芦別市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%8A%A6%E5%88%A5%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "akabira",
+    "cityName": "赤平市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "赤平市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%B5%A4%E5%B9%B3%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "mikasa",
+    "cityName": "三笠市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "三笠市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%89%E7%AC%A0%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "takikawa",
+    "cityName": "滝川市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "滝川市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%BB%9D%E5%B7%9D%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "sunagawa",
+    "cityName": "砂川市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "砂川市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%A0%82%E5%B7%9D%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "utashinai",
+    "cityName": "歌志内市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "歌志内市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%AD%8C%E5%BF%97%E5%86%85%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "fukagawa",
+    "cityName": "深川市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "深川市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B7%B1%E5%B7%9D%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "furano",
+    "cityName": "富良野市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "富良野市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%AF%8C%E8%89%AF%E9%87%8E%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "nanporo",
+    "cityName": "南幌町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "南幌町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E5%B9%8C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "naie",
+    "cityName": "奈井江町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "奈井江町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A5%88%E4%BA%95%E6%B1%9F%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kamisunagawa",
+    "cityName": "上砂川町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "上砂川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8A%E7%A0%82%E5%B7%9D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "yuni",
+    "cityName": "由仁町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "由仁町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%94%B1%E4%BB%81%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "naganuma",
+    "cityName": "長沼町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "長沼町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%95%B7%E6%B2%BC%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kuriyama",
+    "cityName": "栗山町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "栗山町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%A0%97%E5%B1%B1%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "tsukigata",
+    "cityName": "月形町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "月形町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9C%88%E5%BD%A2%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "urausu",
+    "cityName": "浦臼町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "浦臼町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B5%A6%E8%87%BC%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shintotsu",
+    "cityName": "新十津川町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "新十津川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%96%B0%E5%8D%81%E6%B4%A5%E5%B7%9D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "moseushi",
+    "cityName": "妹背牛町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "妹背牛町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A6%B9%E8%83%8C%E7%89%9B%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "chippubetsu",
+    "cityName": "秩父別町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "秩父別町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%A7%A9%E7%88%B6%E5%88%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "uryu",
+    "cityName": "雨竜町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "雨竜町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%9B%A8%E7%AB%9C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "hokuryu",
+    "cityName": "北竜町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "北竜町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8C%97%E7%AB%9C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "numata",
+    "cityName": "沼田町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "沼田町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B2%BC%E7%94%B0%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "otaru",
+    "cityName": "小樽市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "小樽市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B0%8F%E6%A8%BD%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shimamaki",
+    "cityName": "島牧村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "島牧村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B3%B6%E7%89%A7%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "suttu",
+    "cityName": "寿都町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "寿都町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%AF%BF%E9%83%BD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kuromatsunai",
+    "cityName": "黒松内町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "黒松内町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%BB%92%E6%9D%BE%E5%86%85%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "rankoshi",
+    "cityName": "蘭越町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "蘭越町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%98%AD%E8%B6%8A%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "niseko",
+    "cityName": "ニセコ町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "ニセコ町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E3%83%8B%E3%82%BB%E3%82%B3%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "makkari",
+    "cityName": "真狩村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "真狩村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%9C%9F%E7%8B%A9%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "rusutsu",
+    "cityName": "留寿都村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "留寿都村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%95%99%E5%AF%BF%E9%83%BD%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kimobetsu",
+    "cityName": "喜茂別町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "喜茂別町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%96%9C%E8%8C%82%E5%88%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kyogoku",
+    "cityName": "京極町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "京極町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kutchan",
+    "cityName": "倶知安町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "倶知安町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%80%B6%E7%9F%A5%E5%AE%89%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kyowa",
+    "cityName": "共和町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "共和町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%85%B1%E5%92%8C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "iwanai",
+    "cityName": "岩内町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "岩内町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B2%A9%E5%86%85%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "furubira",
+    "cityName": "古平町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "古平町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8F%A4%E5%B9%B3%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "niki",
+    "cityName": "仁木町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "仁木町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%BB%81%E6%9C%A8%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "yoichi",
+    "cityName": "余市町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "余市町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%BD%99%E5%B8%82%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "akaigawa",
+    "cityName": "赤井川村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "赤井川村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%B5%A4%E4%BA%95%E5%B7%9D%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shakotan",
+    "cityName": "積丹町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "積丹町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%A9%8D%E4%B8%B9%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "tomari",
+    "cityName": "泊村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "泊村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B3%8A%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kamoenai",
+    "cityName": "神恵内村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "神恵内村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%A5%9E%E6%81%B5%E5%86%85%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shibetsu",
+    "cityName": "士別市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "士別市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A3%AB%E5%88%A5%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "nayoro",
+    "cityName": "名寄市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "名寄市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%90%8D%E5%AF%84%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "takasu",
+    "cityName": "鷹栖町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "鷹栖町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%B7%B9%E6%A0%96%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "higashikagura",
+    "cityName": "東神楽町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "東神楽町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9D%B1%E7%A5%9E%E6%A5%BD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "toma",
+    "cityName": "当麻町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "当麻町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%BD%93%E9%BA%BB%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "pippu",
+    "cityName": "比布町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "比布町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%AF%94%E5%B8%83%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "aibetsu",
+    "cityName": "愛別町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "愛別町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%84%9B%E5%88%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kamikawa",
+    "cityName": "上川町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "上川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8A%E5%B7%9D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "higashikawa",
+    "cityName": "東川町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "東川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9D%B1%E5%B7%9D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "biei",
+    "cityName": "美瑛町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "美瑛町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%BE%8E%E7%91%9B%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kamifurano",
+    "cityName": "上富良野町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "上富良野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8A%E5%AF%8C%E8%89%AF%E9%87%8E%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "nakafurano",
+    "cityName": "中富良野町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "中富良野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%AD%E5%AF%8C%E8%89%AF%E9%87%8E%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "minamifurano",
+    "cityName": "南富良野町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "南富良野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E5%AF%8C%E8%89%AF%E9%87%8E%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shimukappu",
+    "cityName": "占冠村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "占冠村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%A0%E5%86%A0%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "wassamu",
+    "cityName": "和寒町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "和寒町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%92%8C%E5%AF%92%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kembuchi",
+    "cityName": "剣淵町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "剣淵町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%89%A3%E6%B7%B5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shimokawa",
+    "cityName": "下川町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "下川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8B%E5%B7%9D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "bifuka",
+    "cityName": "美深町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "美深町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%BE%8E%E6%B7%B1%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "otoineppu",
+    "cityName": "音威子府村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "音威子府村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%9F%B3%E5%A8%81%E5%AD%90%E5%BA%9C%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "nakagawa",
+    "cityName": "中川町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "中川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%AD%E5%B7%9D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "rumoi",
+    "cityName": "留萌市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "留萌市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%95%99%E8%90%8C%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "mashike",
+    "cityName": "増毛町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "増毛町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A2%97%E6%AF%9B%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "obira",
+    "cityName": "小平町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "小平町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B0%8F%E5%B9%B3%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "tomamae",
+    "cityName": "苫前町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "苫前町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%8B%AB%E5%89%8D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "haboro",
+    "cityName": "羽幌町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "羽幌町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%BE%BD%E5%B9%8C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shosanbetsu",
+    "cityName": "初山別村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "初山別村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%88%9D%E5%B1%B1%E5%88%A5%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "enbetsu",
+    "cityName": "遠別町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "遠別町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%81%A0%E5%88%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "teshio",
+    "cityName": "天塩町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "天塩町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%A9%E5%A1%A9%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "wakkanai",
+    "cityName": "稚内市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "稚内市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%A8%9A%E5%86%85%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "sarufutsu",
+    "cityName": "猿払村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "猿払村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%8C%BF%E6%89%95%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "hamatonbetsu",
+    "cityName": "浜頓別町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "浜頓別町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B5%9C%E9%A0%93%E5%88%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "nakatombetsu",
+    "cityName": "中頓別町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "中頓別町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%AD%E9%A0%93%E5%88%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "esashi_soya",
+    "cityName": "枝幸町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "枝幸町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9E%9D%E5%B9%B8%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "toyotomi",
+    "cityName": "豊富町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "豊富町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%B1%8A%E5%AF%8C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "rebun",
+    "cityName": "礼文町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "礼文町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※離島のため制度詳細は礼文町役場に直接お問い合わせください。",
+      "notes": "※離島のため制度詳細は礼文町役場に直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%A4%BC%E6%96%87%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "rishiri",
+    "cityName": "利尻町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "利尻町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※離島のため制度詳細は利尻町役場に直接お問い合わせください。",
+      "notes": "※離島のため制度詳細は利尻町役場に直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%88%A9%E5%B0%BB%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "rishirifuji",
+    "cityName": "利尻富士町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "利尻富士町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※離島のため制度詳細は利尻富士町役場に直接お問い合わせください。",
+      "notes": "※離島のため制度詳細は利尻富士町役場に直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%88%A9%E5%B0%BB%E5%AF%8C%E5%A3%AB%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "horonobe",
+    "cityName": "幌延町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "幌延町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B9%8C%E5%BB%B6%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kitami",
+    "cityName": "北見市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "北見市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8C%97%E8%A6%8B%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "abashiri",
+    "cityName": "網走市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "網走市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%B6%B2%E8%B5%B0%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "mombetsu",
+    "cityName": "紋別市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "紋別市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%B4%8B%E5%88%A5%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "ozora",
+    "cityName": "大空町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "大空町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%A7%E7%A9%BA%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "bihoro",
+    "cityName": "美幌町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "美幌町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%BE%8E%E5%B9%8C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "tsubetsu",
+    "cityName": "津別町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "津別町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B4%A5%E5%88%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shari",
+    "cityName": "斜里町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "斜里町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%96%9C%E9%87%8C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kiyosato",
+    "cityName": "清里町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "清里町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B8%85%E9%87%8C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "koshimizu",
+    "cityName": "小清水町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "小清水町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B0%8F%E6%B8%85%E6%B0%B4%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kunneppu",
+    "cityName": "訓子府町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "訓子府町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%A8%93%E5%AD%90%E5%BA%9C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "oketo",
+    "cityName": "置戸町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "置戸町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%BD%AE%E6%88%B8%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "saroma",
+    "cityName": "佐呂間町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "佐呂間町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%BD%90%E5%91%82%E9%96%93%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "engaru",
+    "cityName": "遠軽町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "遠軽町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%81%A0%E8%BB%BD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "yubetsu",
+    "cityName": "湧別町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "湧別町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B9%A7%E5%88%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "takinoue",
+    "cityName": "滝上町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "滝上町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%BB%9D%E4%B8%8A%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "okoppe",
+    "cityName": "興部町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "興部町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%88%88%E9%83%A8%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "nishiokoppe",
+    "cityName": "西興部村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "西興部村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%A5%BF%E8%88%88%E9%83%A8%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "oumu",
+    "cityName": "雄武町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "雄武町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%9B%84%E6%AD%A6%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "obihiro",
+    "cityName": "帯広市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "帯広市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "帯広市特定空家解体補助金",
+      "maxAmount": "最大50万円（除却費用の10分の8以内）",
+      "conditions": [
+        "市内に所在する特定空家等かつ不良住宅と市が認定した建物",
+        "概ね1年以上使用実績がない空き家",
+        "個人所有（法人不可）",
+        "所有権以外の権利（抵当権等）が設定されていない",
+        "市内業者（建設業法許可または北海道知事登録済み）による施工"
+      ],
+      "officialUrl": "https://www.city.obihiro.hokkaido.jp/kurashi/sumai/akiya/1003027.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了、工事完了実績報告は令和8年3月16日が期限）",
+      "windowName": "都市環境部都市建築室建築開発課住まい宅地係",
+      "windowPhone": "0155-65-4179"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.obihiro.hokkaido.jp/kurashi/sumai/akiya/1003027.html",
+      "phone": "0155-65-4179"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "otofuke",
+    "cityName": "音更町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "音更町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%9F%B3%E6%9B%B4%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shihoro",
+    "cityName": "士幌町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "士幌町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A3%AB%E5%B9%8C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kamishihoro",
+    "cityName": "上士幌町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "上士幌町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8A%E5%A3%AB%E5%B9%8C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shikaoi",
+    "cityName": "鹿追町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "鹿追町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%B9%BF%E8%BF%BD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shintoku",
+    "cityName": "新得町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "新得町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%96%B0%E5%BE%97%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shimizu",
+    "cityName": "清水町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "清水町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B8%85%E6%B0%B4%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "memuro",
+    "cityName": "芽室町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "芽室町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%8A%BD%E5%AE%A4%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "nakasatsunai",
+    "cityName": "中札内村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "中札内村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%AD%E6%9C%AD%E5%86%85%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "sarabetsu",
+    "cityName": "更別村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "更別村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9B%B4%E5%88%A5%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "taiki",
+    "cityName": "大樹町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "大樹町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%A7%E6%A8%B9%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "hiroo",
+    "cityName": "広尾町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "広尾町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%BA%83%E5%B0%BE%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "makubetsu",
+    "cityName": "幕別町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "幕別町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B9%95%E5%88%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "ikeda",
+    "cityName": "池田町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "池田町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B1%A0%E7%94%B0%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "toyokoro",
+    "cityName": "豊頃町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "豊頃町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%B1%8A%E9%A0%83%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "honbetsu",
+    "cityName": "本別町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "本別町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9C%AC%E5%88%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "ashoro",
+    "cityName": "足寄町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "足寄町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%B6%B3%E5%AF%84%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "rikubetsu",
+    "cityName": "陸別町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "陸別町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%99%B8%E5%88%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "urahoro",
+    "cityName": "浦幌町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "浦幌町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B5%A6%E5%B9%8C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kushiro",
+    "cityName": "釧路市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "釧路市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "釧路市不良空家等除却費補助金",
+      "maxAmount": "最大30万円（除却工事費の1/3以内）",
+      "conditions": [
+        "1年以上居住者がいない空き家（市街化区域等対象地区内）",
+        "市の事前調査で不良住宅と判定された建物",
+        "所有権以外の権利が設定されていない",
+        "釧路市税の未納なし",
+        "市内業者（建設業法許可または北海道知事登録済み）による施工"
+      ],
+      "officialUrl": "https://www.city.kushiro.lg.jp/kurashi/sumai/akiya/071286.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市整備部住宅課",
+      "notes": "※要確認（最新情報は釧路市役所にお問い合わせください）"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kushiro.lg.jp/kurashi/sumai/akiya/071286.html"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kushirocho",
+    "cityName": "釧路町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "釧路町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%87%A7%E8%B7%AF%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "akkeshi",
+    "cityName": "厚岸町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "厚岸町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8E%9A%E5%B2%B8%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "hamanaka",
+    "cityName": "浜中町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "浜中町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B5%9C%E4%B8%AD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shibecha",
+    "cityName": "標茶町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "標茶町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%A8%99%E8%8C%B6%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "teshikaga",
+    "cityName": "弟子屈町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "弟子屈町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%BC%9F%E5%AD%90%E5%B1%88%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "tsurui",
+    "cityName": "鶴居村",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "鶴居村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%B6%B4%E5%B1%85%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shiranuka",
+    "cityName": "白糠町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "白糠町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%99%BD%E7%B3%A0%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "nemuro",
+    "cityName": "根室市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "根室市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%A0%B9%E5%AE%A4%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "betsukai",
+    "cityName": "別海町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "別海町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%88%A5%E6%B5%B7%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "nakashibetsu",
+    "cityName": "中標津町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "中標津町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%AD%E6%A8%99%E6%B4%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shibetsucho",
+    "cityName": "標津町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "標津町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%A8%99%E6%B4%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "rausu",
+    "cityName": "羅臼町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "羅臼町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%BE%85%E8%87%BC%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "muroran",
+    "cityName": "室蘭市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "室蘭市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%AE%A4%E8%98%AD%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "tomakomai",
+    "cityName": "苫小牧市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "苫小牧市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "空家等解体補助金",
+      "maxAmount": "最大50万円（工事費の1/2以内）",
+      "conditions": [
+        "昭和56年5月31日以前に建築された建物",
+        "共同住宅を除く個人所有の居住用建物（現在居住者なし）",
+        "所有権以外の権利（抵当権等）が設定されていない",
+        "他の補助金との重複不可",
+        "解体後、3親等以内の親族が建物を建築しないこと"
+      ],
+      "officialUrl": "https://www.city.tomakomai.hokkaido.jp/kurashi/akiyataisaku/hoziyo.html",
+      "applicationPeriod": "令和7年度（令和8年2月末日までに工事完了、予算がなくなり次第終了）",
+      "windowName": "市民生活部市民生活課地域担当",
+      "windowPhone": "0144-32-6303"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.tomakomai.hokkaido.jp/kurashi/akiyataisaku/hoziyo.html",
+      "phone": "0144-32-6303"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "noboribetsu",
+    "cityName": "登別市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "登別市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%99%BB%E5%88%A5%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "h_date",
+    "cityName": "伊達市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "伊達市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認（北海道の伊達市）",
+      "notes": "※要確認（北海道の伊達市）"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%BC%8A%E9%81%94%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "sobetsu",
+    "cityName": "壮瞥町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "壮瞥町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A3%AE%E7%9E%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "toyako",
+    "cityName": "洞爺湖町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "洞爺湖町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B4%9E%E7%88%BA%E6%B9%96%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "toyoura",
+    "cityName": "豊浦町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "豊浦町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%B1%8A%E6%B5%A6%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "atsuma",
+    "cityName": "厚真町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "厚真町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8E%9A%E7%9C%9F%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "mukawa",
+    "cityName": "むかわ町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "むかわ町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E3%82%80%E3%81%8B%E3%82%8F%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shiraoi",
+    "cityName": "白老町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "白老町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%99%BD%E8%80%81%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "hidaka",
+    "cityName": "日高町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "日高町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%97%A5%E9%AB%98%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "biratori",
+    "cityName": "平取町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "平取町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B9%B3%E5%8F%96%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "niikappu",
+    "cityName": "新冠町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "新冠町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%96%B0%E5%86%A0%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "urakawa",
+    "cityName": "浦河町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "浦河町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B5%A6%E6%B2%B3%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "samani",
+    "cityName": "様似町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "様似町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%A7%98%E4%BC%BC%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "erimo",
+    "cityName": "えりも町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "えりも町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E3%81%88%E3%82%8A%E3%82%82%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shinhidaka",
+    "cityName": "新ひだか町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "新ひだか町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%96%B0%E3%81%B2%E3%81%A0%E3%81%8B%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "hokuto",
+    "cityName": "北斗市",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "北斗市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "北斗市空家等解体補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "おおむね1年以上居住その他の使用実績がない特定空家等",
+        "市の調査により判断された建物",
+        "個人所有（法人不可）",
+        "市税に滞納がない",
+        "暴力団員等でない"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設部建設課",
+      "notes": "※要確認（最新情報は北斗市役所にお問い合わせください）"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8C%97%E6%96%97%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "matsumae",
+    "cityName": "松前町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "松前町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9D%BE%E5%89%8D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "h_fukushima",
+    "cityName": "福島町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "福島町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認（北海道渡島・松前郡福島町）",
+      "notes": "※要確認（北海道渡島・松前郡福島町）"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%A6%8F%E5%B3%B6%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shiriuchi",
+    "cityName": "知内町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "知内町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%9F%A5%E5%86%85%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kikonai",
+    "cityName": "木古内町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "木古内町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9C%A8%E5%8F%A4%E5%86%85%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "nanae",
+    "cityName": "七飯町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "七飯町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%83%E9%A3%AF%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "shikabe",
+    "cityName": "鹿部町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "鹿部町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%B9%BF%E9%83%A8%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "mori",
+    "cityName": "森町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "森町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%A3%AE%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "yakumo",
+    "cityName": "八雲町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "八雲町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%85%AB%E9%9B%B2%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "oshamanbe",
+    "cityName": "長万部町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "長万部町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%95%B7%E4%B8%87%E9%83%A8%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "h_esashi",
+    "cityName": "江差町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "江差町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認（檜山振興局・檜山郡江差町）",
+      "notes": "※要確認（檜山振興局・檜山郡江差町）"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B1%9F%E5%B7%AE%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "kaminokuni",
+    "cityName": "上ノ国町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "上ノ国町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8A%E3%83%8E%E5%9B%BD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "assabu",
+    "cityName": "厚沢部町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "厚沢部町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8E%9A%E6%B2%A2%E9%83%A8%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "otobe",
+    "cityName": "乙部町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "乙部町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B9%99%E9%83%A8%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "okushiri",
+    "cityName": "奥尻町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "奥尻町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※離島のため制度詳細は奥尻町役場に直接お問い合わせください。",
+      "notes": "※離島のため制度詳細は奥尻町役場に直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A5%A5%E5%B0%BB%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "imakane",
+    "cityName": "今金町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "今金町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%BB%8A%E9%87%91%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "hokkaido",
+    "cityId": "setana",
+    "cityName": "せたな町",
+    "prefName": "北海道",
+    "mascot": {
+      "localRiskText": "せたな町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": [],
+      "noSubsidyNote": "※要確認",
+      "notes": "※要確認"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E3%81%9B%E3%81%9F%E3%81%AA%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "ueda",
+    "cityName": "上田市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "上田市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8A%E7%94%B0%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "okaya",
+    "cityName": "岡谷市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "岡谷市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B2%A1%E8%B0%B7%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "iida",
+    "cityName": "飯田市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "飯田市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%A3%AF%E7%94%B0%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "suwa",
+    "cityName": "諏訪市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "諏訪市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%AB%8F%E8%A8%AA%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "suzaka",
+    "cityName": "須坂市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "須坂市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%A0%88%E5%9D%82%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "komoro",
+    "cityName": "小諸市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "小諸市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B0%8F%E8%AB%B8%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "ina",
+    "cityName": "伊那市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "伊那市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%BC%8A%E9%82%A3%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "komagane",
+    "cityName": "駒ヶ根市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "駒ヶ根市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%A7%92%E3%83%B6%E6%A0%B9%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "nakano",
+    "cityName": "中野市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "中野市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%AD%E9%87%8E%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "omachi",
+    "cityName": "大町市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "大町市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%A7%E7%94%BA%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "iyama",
+    "cityName": "飯山市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "飯山市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%A3%AF%E5%B1%B1%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "chino",
+    "cityName": "茅野市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "茅野市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%8C%85%E9%87%8E%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "shiojiri",
+    "cityName": "塩尻市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "塩尻市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A1%A9%E5%B0%BB%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "saku",
+    "cityName": "佐久市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "佐久市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%BD%90%E4%B9%85%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "chikuma",
+    "cityName": "千曲市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "千曲市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%83%E6%9B%B2%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "tomi",
+    "cityName": "東御市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "東御市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9D%B1%E5%BE%A1%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "azumino",
+    "cityName": "安曇野市",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "安曇野市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%AE%89%E6%9B%87%E9%87%8E%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "koumi",
+    "cityName": "小海町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "小海町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B0%8F%E6%B5%B7%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "kawakamimura",
+    "cityName": "川上村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "川上村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B7%9D%E4%B8%8A%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "minamimaki",
+    "cityName": "南牧村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "南牧村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E7%89%A7%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "minamiaiki",
+    "cityName": "南相木村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "南相木村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E7%9B%B8%E6%9C%A8%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "kitaaiki",
+    "cityName": "北相木村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "北相木村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8C%97%E7%9B%B8%E6%9C%A8%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "sakuho",
+    "cityName": "佐久穂町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "佐久穂町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%BD%90%E4%B9%85%E7%A9%82%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "karuizawa",
+    "cityName": "軽井沢町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "軽井沢町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%BB%BD%E4%BA%95%E6%B2%A2%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "miyota",
+    "cityName": "御代田町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "御代田町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%BE%A1%E4%BB%A3%E7%94%B0%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "tateshina",
+    "cityName": "立科町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "立科町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%AB%8B%E7%A7%91%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "aoki",
+    "cityName": "青木村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "青木村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%9D%92%E6%9C%A8%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "nagawa",
+    "cityName": "長和町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "長和町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%95%B7%E5%92%8C%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "shimosuwa",
+    "cityName": "下諏訪町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "下諏訪町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8B%E8%AB%8F%E8%A8%AA%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "fujimi",
+    "cityName": "富士見町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "富士見町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%AF%8C%E5%A3%AB%E8%A6%8B%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "hara",
+    "cityName": "原村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "原村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8E%9F%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "tatsuno",
+    "cityName": "辰野町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "辰野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%BE%B0%E9%87%8E%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "minowa",
+    "cityName": "箕輪町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "箕輪町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%AE%95%E8%BC%AA%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "iijima",
+    "cityName": "飯島町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "飯島町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%A3%AF%E5%B3%B6%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "minamiminowa",
+    "cityName": "南箕輪村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "南箕輪村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E7%AE%95%E8%BC%AA%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "nakagawa",
+    "cityName": "中川村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "中川村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%AD%E5%B7%9D%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "miyada",
+    "cityName": "宮田村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "宮田村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%AE%AE%E7%94%B0%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "matsukawa",
+    "cityName": "松川町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "松川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9D%BE%E5%B7%9D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "takamori",
+    "cityName": "高森町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "高森町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%AB%98%E6%A3%AE%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "anan",
+    "cityName": "阿南町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "阿南町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%98%BF%E5%8D%97%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "achi",
+    "cityName": "阿智村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "阿智村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%98%BF%E6%99%BA%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "hiraya",
+    "cityName": "平谷村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "平谷村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B9%B3%E8%B0%B7%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "neba",
+    "cityName": "根羽村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "根羽村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%A0%B9%E7%BE%BD%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "shimojo",
+    "cityName": "下條村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "下條村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8B%E6%A2%9D%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "urugi",
+    "cityName": "売木村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "売木村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A3%B2%E6%9C%A8%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "tenryu",
+    "cityName": "天龍村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "天龍村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%A9%E9%BE%8D%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "yasuhara",
+    "cityName": "泰阜村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "泰阜村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B3%B0%E9%98%9C%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "takagi",
+    "cityName": "喬木村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "喬木村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%96%AC%E6%9C%A8%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "toyooka",
+    "cityName": "豊丘村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "豊丘村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%B1%8A%E4%B8%98%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "okaga",
+    "cityName": "大鹿村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "大鹿村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%A7%E9%B9%BF%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "agematsu",
+    "cityName": "上松町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "上松町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8A%E6%9D%BE%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "nagiso",
+    "cityName": "南木曽町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "南木曽町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E6%9C%A8%E6%9B%BD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "kisoji",
+    "cityName": "木祖村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "木祖村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9C%A8%E7%A5%96%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "otaki",
+    "cityName": "王滝村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "王滝村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%8E%8B%E6%BB%9D%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "okawa",
+    "cityName": "大桑村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "大桑村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%A7%E6%A1%91%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "kiso",
+    "cityName": "木曽町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "木曽町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9C%A8%E6%9B%BD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "omi",
+    "cityName": "麻績村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "麻績村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%BA%BB%E7%B8%BE%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "ikusaka",
+    "cityName": "生坂村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "生坂村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%94%9F%E5%9D%82%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "yamagata",
+    "cityName": "山形村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "山形村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B1%B1%E5%BD%A2%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "asahi",
+    "cityName": "朝日村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "朝日村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9C%9D%E6%97%A5%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "chikuhoku",
+    "cityName": "筑北村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "筑北村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%AD%91%E5%8C%97%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "ikeda",
+    "cityName": "池田町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "池田町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B1%A0%E7%94%B0%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "matsukawamura",
+    "cityName": "松川村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "松川村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9D%BE%E5%B7%9D%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "hakuba",
+    "cityName": "白馬村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "白馬村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%99%BD%E9%A6%AC%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "otari",
+    "cityName": "小谷村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "小谷村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B0%8F%E8%B0%B7%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "sakaki",
+    "cityName": "坂城町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "坂城町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%9D%82%E5%9F%8E%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "obuse",
+    "cityName": "小布施町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "小布施町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B0%8F%E5%B8%83%E6%96%BD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "takayamamura",
+    "cityName": "高山村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "高山村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%AB%98%E5%B1%B1%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "yamanouchi",
+    "cityName": "山ノ内町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "山ノ内町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B1%B1%E3%83%8E%E5%86%85%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "kijimadaira",
+    "cityName": "木島平村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "木島平村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%9C%A8%E5%B3%B6%E5%B9%B3%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "nozawaonsen",
+    "cityName": "野沢温泉村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "野沢温泉村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%87%8E%E6%B2%A2%E6%B8%A9%E6%B3%89%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "shinano",
+    "cityName": "信濃町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "信濃町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%BF%A1%E6%BF%83%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "ogawa",
+    "cityName": "小川村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "小川村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B0%8F%E5%B7%9D%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "iizuna",
+    "cityName": "飯綱町",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "飯綱町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%A3%AF%E7%B6%B1%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "nagano",
+    "cityId": "sakae",
+    "cityName": "栄村",
+    "prefName": "長野県",
+    "mascot": {
+      "localRiskText": "栄村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": null,
+      "conditions": []
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%A0%84%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
   }
 ]
