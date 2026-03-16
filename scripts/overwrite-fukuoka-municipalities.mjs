@@ -681,11 +681,362 @@ const UPDATES = [
         "古賀市では老朽危険家屋等の解体補助金制度は確認できませんでした。詳細は都市整備課へお問い合わせください。",
       notes: null
     }
+  },
+
+  // ===== 補助なし（false）9件 追記 =====
+  {
+    cityId: "ogori",
+    subsidy: {
+      hasSubsidy: false,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "都市計画課 建築指導係",
+      windowPhone: "0942-72-2111",
+      windowUrl: "https://www.city.ogori.fukuoka.jp/197/796/2190",
+      noSubsidyNote: "小郡市では空き家解体補助金制度はありません。",
+      notes: null
+    }
+  },
+  {
+    cityId: "fukutsu",
+    subsidy: {
+      hasSubsidy: false,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "都市計画課 開発建築係",
+      windowPhone: "0940-62-5036",
+      windowUrl:
+        "https://www.city.fukutsu.lg.jp/soshiki/toshi_keikaku/kaihatsu_kenchiku/kurashi/seikatsu/1187.html",
+      noSubsidyNote: "福津市では空き家解体補助金制度はありません。",
+      notes: null
+    }
+  },
+  {
+    cityId: "sasaguri",
+    subsidy: {
+      hasSubsidy: false,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "都市整備課",
+      windowPhone: "092-947-1217",
+      windowUrl:
+        "https://www.town.sasaguri.fukuoka.jp/soshiki/toshi_seibi/2/4578.html",
+      noSubsidyNote:
+        "篠栗町では独立した空き家解体補助金制度はありません（耐震改修に伴う除却補助のみ）。",
+      notes: null
+    }
+  },
+  {
+    cityId: "sue",
+    subsidy: {
+      hasSubsidy: false,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "都市整備課",
+      windowPhone: "092-932-1450",
+      windowUrl: "https://www.town.sue.fukuoka.jp/soshiki/toshiseibika/index.html",
+      noSubsidyNote: "須恵町では空き家解体補助金制度はありません（ブロック塀撤去補助のみ）。",
+      notes: null
+    }
+  },
+  {
+    cityId: "shingu",
+    subsidy: {
+      hasSubsidy: false,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "地域協働課",
+      windowPhone: "092-963-1734",
+      windowUrl: "https://www.town.shingu.fukuoka.jp/",
+      noSubsidyNote: "新宮町では空き家解体補助金制度はありません（ブロック塀撤去補助のみ）。",
+      notes: null
+    }
+  },
+  {
+    cityId: "hisayama",
+    subsidy: {
+      hasSubsidy: false,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "経営デザイン課",
+      windowPhone: "092-976-1111",
+      windowUrl:
+        "https://www.town.hisayama.fukuoka.jp/soshiki/keiei_design/gyomu/sumai/3/index.html",
+      noSubsidyNote: "久山町では空き家解体補助金制度はありません（空き家バンクのみ）。",
+      notes: null
+    }
+  },
+  {
+    cityId: "kasuya",
+    subsidy: {
+      hasSubsidy: false,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "建設課",
+      windowPhone: "092-938-0173",
+      windowUrl: "https://www.town.kasuya.fukuoka.jp/",
+      noSubsidyNote: "粕屋町では空き家解体補助金制度はありません（ブロック塀撤去補助のみ）。",
+      notes: null
+    }
+  },
+  {
+    cityId: "miyako",
+    subsidy: {
+      hasSubsidy: false,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "行政経営課",
+      windowPhone: "0930-32-2511",
+      windowUrl: "https://www.town.miyako.lg.jp/",
+      noSubsidyNote:
+        "みやこ町では空き家解体補助金制度はありません（空き家バンク奨励金・ブロック塀撤去補助のみ）。",
+      notes: null
+    }
+  },
+  {
+    cityId: "soeda",
+    subsidy: {
+      hasSubsidy: false,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "まちづくり課まちづくり推進係",
+      windowPhone: "0947-82-5965",
+      windowUrl: "https://www.town.soeda.fukuoka.jp/site/soeda-life/1221.html",
+      noSubsidyNote: "添田町では空き家解体補助金制度はありません（空き家バンク活用支援のみ）。",
+      notes: null
+    }
+  },
+
+  // ===== 補助あり（true）6件 追記 =====
+  {
+    cityId: "shime",
+    subsidy: {
+      hasSubsidy: true,
+      name: "志免町老朽危険空き家除却費補助金",
+      maxAmount: "最大60万円（無接道等は120万円）（費用の1/2以内）",
+      conditions: [
+        "老朽化した危険な空き家であること（町が判定）",
+        "補助金交付決定前に工事契約・着工を行っていないこと",
+        "町税の滞納がないこと",
+        "募集5戸程度・先着順"
+      ],
+      applicationPeriod:
+        "令和7年4月7日〜令和7年12月26日（予算額達成次第終了）",
+      windowName: "生活安全課 安全安心係",
+      windowPhone: "092-935-1181",
+      windowUrl: "https://www.town.shime.lg.jp/web-koho/kouhou/63850.html",
+      noSubsidyNote: null,
+      notes: null
+    }
+  },
+  {
+    cityId: "okagaki",
+    subsidy: {
+      hasSubsidy: true,
+      name: "老朽化空き家解体費補助金",
+      maxAmount: "最大50万円（費用の1/2以内）",
+      conditions: [
+        "老朽化した危険な空き家を解体し更地にする工事",
+        "事前に町と協議が必要"
+      ],
+      applicationPeriod: "令和7年度（予算がなくなり次第終了）",
+      windowName: "都市建設課 建築住宅係",
+      windowPhone: "093-282-1211",
+      windowUrl:
+        "http://www.town.okagaki.lg.jp/s030/010/050/270/20200212133218.html",
+      noSubsidyNote: null,
+      notes: null
+    }
+  },
+  {
+    cityId: "kurate",
+    subsidy: {
+      hasSubsidy: true,
+      name: "老朽危険空家等解体撤去費補助金",
+      maxAmount: "最大50万円（費用の1/2以内）",
+      conditions: [
+        "倒壊等により人の生命・身体・財産に被害を及ぼすおそれのある空家等（町が調査・判定）",
+        "建築物に所有権以外の権利が設定されていないもの",
+        "町税・公共料金等の滞納がないこと"
+      ],
+      applicationPeriod: "令和7年度（毎年度予算成立を前提）",
+      windowName: "まちづくり課 安全安心係",
+      windowPhone: "0949-42-2111",
+      windowUrl:
+        "https://www.town.kurate.lg.jp/bousai/kikenakiya_kaitaihojo.html",
+      noSubsidyNote: null,
+      notes: null
+    }
+  },
+  {
+    cityId: "keisen",
+    subsidy: {
+      hasSubsidy: true,
+      name: "桂川町老朽家屋等解体費補助金",
+      maxAmount: "最大50万円（費用の1/2以内）",
+      conditions: [
+        "町内の老朽危険家屋等の解体撤去を行う方",
+        "令和7年度より新設"
+      ],
+      applicationPeriod: "令和7年度（予算がなくなり次第終了）",
+      windowName: "建設事業課 管理鉱害係",
+      windowPhone: "0948-65-3330",
+      windowUrl: "https://www.town.keisen.fukuoka.jp/kurashi/benri/roukyu.php",
+      noSubsidyNote: null,
+      notes: null
+    }
+  },
+  {
+    cityId: "fukuchi",
+    subsidy: {
+      hasSubsidy: true,
+      name: "福智町空き家等解消支援事業奨励金",
+      maxAmount: "最大50万円（費用の1/2以内）",
+      conditions: [
+        "概ね1年以上使用されていない建物",
+        "空き家バンクへの登録が原則必要（特定空家等・公有地所在物件を除く）",
+        "町内業者に解体工事を発注すること",
+        "町公共料金を滞納していないこと"
+      ],
+      applicationPeriod: "令和7年度（予算がなくなり次第終了）",
+      windowName: "住宅課",
+      windowPhone: "0947-22-7766",
+      windowUrl:
+        "https://www.town.fukuchi.lg.jp/soshiki/juutaku/aaaaa123/akiyainformation/4054.html",
+      noSubsidyNote: null,
+      notes: null
+    }
+  },
+  {
+    cityId: "kanda",
+    subsidy: {
+      hasSubsidy: true,
+      name: "苅田町老朽危険空き家等除却促進事業補助金",
+      maxAmount: "最大50万円（費用の50%以内）",
+      conditions: [
+        "老朽化して倒壊などの恐れのある老朽危険空き家等",
+        "所有者等であること",
+        "町税の滞納がないこと",
+        "5件程度・先着順"
+      ],
+      applicationPeriod: "令和7年度（予算がなくなり次第終了）",
+      windowName: "総務課 危機管理室 生活安全担当",
+      windowPhone: "093-588-1037",
+      windowUrl: "https://www.town.kanda.lg.jp/page/9159.html",
+      noSubsidyNote: null,
+      notes: null
+    }
+  },
+
+  // ===== 調査中（null）6件 追記 =====
+  {
+    cityId: "umi",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "宇美町役場（建設課）",
+      windowPhone: "092-932-1111",
+      windowUrl: "https://www.town.umi.fukuoka.jp/",
+      noSubsidyNote: null,
+      notes: null
+    }
+  },
+  {
+    cityId: "kotake",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "小竹町役場（建設課）",
+      windowPhone: "0949-72-2111",
+      windowUrl: "https://www.town.kotake.fukuoka.jp/",
+      noSubsidyNote: null,
+      notes: null
+    }
+  },
+  {
+    cityId: "toho",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "東峰村役場（建設課）",
+      windowPhone: "0946-72-2311",
+      windowUrl: "https://www.vill.toho.fukuoka.jp/",
+      noSubsidyNote: null,
+      notes: null
+    }
+  },
+  {
+    cityId: "kawasaki",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "川崎町役場（建設課）",
+      windowPhone: "0947-72-2111",
+      windowUrl: "https://www.town.kawasaki.fukuoka.jp/",
+      noSubsidyNote: null,
+      notes: null
+    }
+  },
+  {
+    cityId: "otani",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "大任町役場（建設課）",
+      windowPhone: "0947-63-1111",
+      windowUrl: "https://www.town.otani.fukuoka.jp/",
+      noSubsidyNote: null,
+      notes: null
+    }
+  },
+  {
+    cityId: "akamura",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "赤村役場（建設課）",
+      windowPhone: "0947-62-0001",
+      windowUrl: "https://www.vill.aka.fukuoka.jp/",
+      noSubsidyNote: null,
+      notes: null
+    }
   }
-  // ===== null維持（21件）=====
-  // ogori, fukutsu, umi, sasaguri, shime, sue, shingu, hisayama,
-  // kasuya, okagaki, kotake, kurate, keisen, toho, kawasaki,
-  // otani, akamura, fukuchi, kanda, miyako, soeda → 変更しない
 ];
 
 function main() {

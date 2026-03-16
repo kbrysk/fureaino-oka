@@ -194,6 +194,129 @@ const UPDATES = [
         "与那原町では空き家解体（除却）補助金制度は確認されていません。住宅リフォーム支援事業（改修補助）は実施中です。",
       notes: null
     }
+  },
+
+  // ── 追記: 補助なし・離島（8件）────────────────────────
+  {
+    cityId: "haebaru",
+    subsidy: {
+      hasSubsidy: false,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "経済建設部 まちづくり振興課 計画・建築班",
+      windowPhone: "098-889-4412",
+      windowUrl: "https://www.town.haebaru.lg.jp/soshiki/14/",
+      noSubsidyNote:
+        "南風原町では空き家解体補助金制度はありません（住宅リフォーム支援事業のみ）。",
+      notes: null
+    }
+  },
+  {
+    cityId: "tokashiki",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "渡嘉敷村役場",
+      windowPhone: "098-987-2311",
+      windowUrl: "https://www.vill.tokashiki.okinawa.jp/",
+      noSubsidyNote: null,
+      notes: "※離島のため制度詳細は各村役場に直接お問い合わせください。"
+    }
+  },
+  {
+    cityId: "zamami",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "座間味村役場",
+      windowPhone: "098-987-2311",
+      windowUrl: "https://www.vill.zamami.okinawa.jp/",
+      noSubsidyNote: null,
+      notes: "※離島のため制度詳細は各村役場に直接お問い合わせください。"
+    }
+  },
+  {
+    cityId: "tonaki",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "渡名喜村役場",
+      windowPhone: "098-989-2021",
+      windowUrl: "https://www.vill.tonaki.okinawa.jp/",
+      noSubsidyNote: null,
+      notes: "※離島のため制度詳細は各村役場に直接お問い合わせください。"
+    }
+  },
+  {
+    cityId: "minamidaito",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "南大東村役場",
+      windowPhone: "09802-2-2241",
+      windowUrl: "https://www.vill.minamidaito.okinawa.jp/",
+      noSubsidyNote: null,
+      notes: "※離島のため制度詳細は各村役場に直接お問い合わせください。"
+    }
+  },
+  {
+    cityId: "kitadaito",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "北大東村役場",
+      windowPhone: "09802-3-2011",
+      windowUrl: "https://www.vill.kitadaito.okinawa.jp/",
+      noSubsidyNote: null,
+      notes: "※離島のため制度詳細は各村役場に直接お問い合わせください。"
+    }
+  },
+  {
+    cityId: "iheya",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "伊平屋村役場",
+      windowPhone: "0980-46-2001",
+      windowUrl: "https://www.vill.iheya.okinawa.jp/",
+      noSubsidyNote: null,
+      notes: "※離島のため制度詳細は各村役場に直接お問い合わせください。"
+    }
+  },
+  {
+    cityId: "izena",
+    subsidy: {
+      hasSubsidy: null,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "伊是名村役場",
+      windowPhone: "0980-45-2001",
+      windowUrl: "https://www.vill.izena.okinawa.jp/",
+      noSubsidyNote: null,
+      notes: "※離島のため制度詳細は各村役場に直接お問い合わせください。"
+    }
   }
 ];
 

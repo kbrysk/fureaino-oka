@@ -123,6 +123,46 @@ const UPDATES = [
       noSubsidyNote: null,
     },
   },
+  // iwade（岩出市）
+  {
+    cityId: "iwade",
+    subsidy: {
+      hasSubsidy: false,
+      name: null,
+      maxAmount: null,
+      conditions: [],
+      applicationPeriod: null,
+      windowName: "事業部 都市計画課",
+      windowPhone: "0736-62-2141",
+      windowUrl: "https://www.city.iwade.lg.jp/toshikeikaku/akiyatounotaisakunituite.html",
+      noSubsidyNote:
+        "岩出市では空き家解体補助金制度はありません。空き家を市に寄附し市が除却する「地域土地再生事業」があります。",
+    },
+  },
+  // nachikatsuura（那智勝浦町）
+  {
+    cityId: "nachikatsuura",
+    subsidy: {
+      hasSubsidy: true,
+      name: "那智勝浦町不良空家等除去補助制度",
+      maxAmount: "最大50万円（解体費用の2/3以内）",
+      conditions: [
+        "那智勝浦町内にある空き家で、延べ面積の1/2以上が住宅用途であること",
+        "不良度基準を満たし役場建設課で「認定不良空家」の認定を受けた空き家",
+        "周辺環境に悪影響を与えているまたは与える恐れがある状態であること",
+        "申請者が町税（固定資産税・町民税等）を滞納していないこと",
+        "申請者が空き家の所有者、相続人、または所有者の同意を得た土地所有者であること",
+        "共有名義の場合は全共有者の同意が必要",
+        "補助件数は年間10件を予定（予算がなくなり次第終了）",
+      ],
+      applicationPeriod:
+        "令和7年5月7日〜12月1日（毎月末に審査、予算がなくなり次第終了）",
+      windowName: "建設課",
+      windowPhone: "0735-52-0560",
+      windowUrl: "https://www.town.nachikatsuura.wakayama.jp/info/705",
+      noSubsidyNote: null,
+    },
+  },
 ];
 
 function buildSubsidy(s) {
