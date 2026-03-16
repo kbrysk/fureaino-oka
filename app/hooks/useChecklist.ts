@@ -18,9 +18,11 @@ export function useChecklist() {
   const [items, setItems] = useState<CheckItem[]>([]);
 
   useEffect(() => {
-    const raw = getChecklist();
-    setItems(raw.map(normalizeItem));
-    setIsMounted(true);
+    queueMicrotask(() => {
+      const raw = getChecklist();
+      setItems(raw.map(normalizeItem));
+      setIsMounted(true);
+    });
   }, []);
 
   const persist = useCallback((next: CheckItem[]) => {

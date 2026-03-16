@@ -19,12 +19,14 @@ export default function SenryuCard({ id, text, solutionLink, onVote }: SenryuCar
   const [pressed, setPressed] = useState<"wakaru" | "zabuton" | null>(null);
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem(`senryu_${id}`);
-      if (raw === "wakaru" || raw === "zabuton") setPressed(raw);
-    } catch {
-      /* ignore */
-    }
+    queueMicrotask(() => {
+      try {
+        const raw = localStorage.getItem(`senryu_${id}`);
+        if (raw === "wakaru" || raw === "zabuton") setPressed(raw);
+      } catch {
+        /* ignore */
+      }
+    });
   }, [id]);
 
   const handleWakaru = () => {

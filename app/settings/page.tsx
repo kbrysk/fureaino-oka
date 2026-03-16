@@ -44,11 +44,13 @@ export default function SettingsPage() {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   useEffect(() => {
-    setReminder(getReminderSettings());
-    setShares(getFamilyShares());
-    setDms(getDeadManSwitchSettings());
-    setProfile(getUserProfile());
-    setIsMounted(true);
+    queueMicrotask(() => {
+      setReminder(getReminderSettings());
+      setShares(getFamilyShares());
+      setDms(getDeadManSwitchSettings());
+      setProfile(getUserProfile());
+      setIsMounted(true);
+    });
   }, []);
 
   const handleSaveReminder = () => {

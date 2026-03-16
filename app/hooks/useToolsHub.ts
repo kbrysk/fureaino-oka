@@ -20,9 +20,11 @@ export function useToolsHub() {
   const [triageAnswers, setTriageAnswersState] = useState<TriageAnswers>(DEFAULT_TRIAGE);
 
   useEffect(() => {
-    setCompletedToolsState(loadCompletedTools());
-    setTriageAnswersState(loadTriageAnswers());
-    setIsMounted(true);
+    queueMicrotask(() => {
+      setCompletedToolsState(loadCompletedTools());
+      setTriageAnswersState(loadTriageAnswers());
+      setIsMounted(true);
+    });
   }, []);
 
   const setCompletedTools = useCallback((ids: string[]) => {

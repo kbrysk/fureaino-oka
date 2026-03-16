@@ -123,6 +123,7 @@ export function SiteSearch() {
 
       {isOpen && query.trim() && (
         <div
+          id="search-results-listbox"
           className={[
             "absolute top-full left-0 right-0 mt-1 z-50",
             "bg-white border border-gray-200 rounded-lg shadow-lg",

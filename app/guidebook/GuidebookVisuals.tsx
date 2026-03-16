@@ -190,7 +190,7 @@ export function SectionIcon({ type }: { type: "document" | "kitchen" | "clothes"
 
 /** 写真・イラスト用のイラスト枠（キャプション付き・サイトカラーで表示される） */
 export function GuidebookImagePlaceholder({ caption, alt = "イメージ", variant = "default" }: { caption: string; alt?: string; variant?: "intro" | "mindset" | "family" | "asset" | "default" }) {
-  const Illustration = () => {
+  function renderIllustration() {
     const viewBox = "0 0 280 160";
     if (variant === "intro") {
       return (
@@ -248,13 +248,13 @@ export function GuidebookImagePlaceholder({ caption, alt = "イメージ", varia
         <path d="M155 65 L185 80 L155 95 Z" fill="var(--primary)" fillOpacity={0.3} stroke="var(--primary)" strokeWidth="1" />
       </svg>
     );
-  };
+  }
 
   return (
     <figure className="my-6 overflow-hidden rounded-xl border-2 border-border bg-primary-light/20">
       <div className="flex aspect-video min-h-[140px] w-full items-center justify-center overflow-hidden bg-primary-light/30" aria-label={alt}>
         <div className="h-full w-full max-w-md">
-          <Illustration />
+          {renderIllustration()}
         </div>
       </div>
       <figcaption className="border-t border-border bg-card px-4 py-2 text-center text-sm text-foreground/70">

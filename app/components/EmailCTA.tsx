@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 interface EmailCTAProps {
   variant: "inline" | "banner" | "floating";
@@ -86,7 +87,7 @@ export default function EmailCTA({
         </p>
         <ul className="flex flex-wrap justify-center gap-3 mt-2">
           <li>
-            <a
+            <Link
               href="/articles/master-guide"
               className={`inline-block px-4 py-2 rounded-lg font-medium text-sm transition ${
                 isBanner
@@ -95,7 +96,7 @@ export default function EmailCTA({
               }`}
             >
               進め方ガイドを見る
-            </a>
+            </Link>
           </li>
           <li>
             <a
@@ -124,7 +125,7 @@ export default function EmailCTA({
         </ul>
         <p className={`text-xs mt-3 ${isBanner ? "text-white/60" : "text-foreground/50"}`}>
           不用品の見積もり・買取の相談は
-          <a href="/articles/master-guide" className="underline ml-1">はじめかた</a>
+          <Link href="/articles/master-guide" className="underline ml-1">はじめかた</Link>
           からご案内しています。
         </p>
       </div>

@@ -101,15 +101,17 @@ export default function AssetsPage() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    const loadedAssets = getAssets();
-    setAssets(loadedAssets);
-    setConcernTags(getEndingNote().concernTags || []);
-    const profile = getUserProfile();
-    setFamilyMembers(profile.familyMembers);
-    setOverTax(isOverTaxThreshold());
-    setEstimatedDisposalCost(getEstimatedDisposalCost());
-    setTotalValue(getTotalEstimatedValue());
-    setIsMounted(true);
+    queueMicrotask(() => {
+      const loadedAssets = getAssets();
+      setAssets(loadedAssets);
+      setConcernTags(getEndingNote().concernTags || []);
+      const profile = getUserProfile();
+      setFamilyMembers(profile.familyMembers);
+      setOverTax(isOverTaxThreshold());
+      setEstimatedDisposalCost(getEstimatedDisposalCost());
+      setTotalValue(getTotalEstimatedValue());
+      setIsMounted(true);
+    });
   }, []);
 
   const isRealEstate = form.category === "不動産";

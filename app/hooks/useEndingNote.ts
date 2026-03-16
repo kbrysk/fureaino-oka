@@ -31,11 +31,13 @@ export function useEndingNote() {
   const [taxThreshold, setTaxThreshold] = useState(0);
 
   useEffect(() => {
-    setNote(getEndingNote());
-    setAllAssets(getAssets());
-    setTotalValue(getTotalEstimatedValue());
-    setTaxThreshold(getInheritanceTaxThreshold());
-    setIsMounted(true);
+    queueMicrotask(() => {
+      setNote(getEndingNote());
+      setAllAssets(getAssets());
+      setTotalValue(getTotalEstimatedValue());
+      setTaxThreshold(getInheritanceTaxThreshold());
+      setIsMounted(true);
+    });
   }, []);
 
   const saveNote = useCallback((payload: EndingNote) => {

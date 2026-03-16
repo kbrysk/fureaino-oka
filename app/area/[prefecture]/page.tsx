@@ -166,7 +166,7 @@ export default async function AreaPrefecturePage({ params }: Props) {
         <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
           市区町村ごとの補助金情報
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
           {sorted.map((city) => {
             const statusLabel =
               city.status === "has" ? "補助金あり" : city.status === "none" ? "制度なし" : "調査中";
@@ -183,19 +183,19 @@ export default async function AreaPrefecturePage({ params }: Props) {
               <Link
                 key={city.cityId}
                 href={`/area/${city.prefId}/${city.cityId}/subsidy`}
-                className="block border border-gray-200 rounded-xl p-4 bg-white hover:shadow-md hover:border-primary/40 transition focus:outline-none focus:ring-2 focus:ring-primary"
+                className="block border border-gray-200 rounded-xl p-4 bg-white hover:shadow-md hover:border-primary/40 transition focus:outline-none focus:ring-2 focus:ring-primary h-full"
               >
                 <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <p className="font-semibold text-base text-gray-900">
                       {city.cityName}
                     </p>
-                    <p className="mt-1 text-sm text-gray-500 truncate">
+                    <p className="mt-1 text-sm text-gray-500">
                       {subsidyName ?? `${city.cityName}の空き家解体補助金`}
                     </p>
                   </div>
-                  <div className="flex flex-col items-end gap-1 shrink-0">
-                    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold ${badgeClass}`}>
+                  <div className="flex flex-col items-end gap-1 shrink-0 max-w-[55%]">
+                    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${badgeClass}`}>
                       {statusLabel}
                     </span>
                     {city.status === "has" && maxAmount && (

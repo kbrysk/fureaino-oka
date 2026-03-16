@@ -28,7 +28,7 @@ export default function SearchBar({
       setQuery("");
       setIsExpanded(false);
     },
-    [onSearch, router]
+    [onSearch, router, setQuery, setIsExpanded]
   );
 
   const filtered =
@@ -51,7 +51,7 @@ export default function SearchBar({
         <input
           id="dispose-search-input"
           type="search"
-          role="searchbox"
+          role="combobox"
           aria-label={ariaLabel}
           aria-expanded={isExpanded && filtered.length > 0}
           aria-autocomplete="list"
@@ -79,7 +79,7 @@ export default function SearchBar({
             className="absolute z-10 top-full left-0 right-0 mt-1 max-w-xl mx-auto bg-card border-2 border-primary/30 rounded-xl shadow-lg overflow-hidden divide-y divide-border"
           >
             {filtered.map((s) => (
-              <li key={s.slug} role="option">
+              <li key={s.slug} role="option" aria-selected="false">
                 <button
                   type="button"
                   className="w-full text-left px-5 py-3 text-sm font-medium text-foreground hover:bg-primary-light/40 transition"

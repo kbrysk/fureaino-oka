@@ -43,8 +43,10 @@ export function useSenryu() {
   const [userVotes, setUserVotes] = useState<Record<string, SenryuVoteType>>({});
 
   useEffect(() => {
-    setUserVotes(loadUserVotes());
-    setIsMounted(true);
+    queueMicrotask(() => {
+      setUserVotes(loadUserVotes());
+      setIsMounted(true);
+    });
   }, []);
 
   const setUserVote = useCallback((id: string, type: SenryuVoteType | null) => {

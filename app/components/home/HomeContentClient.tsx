@@ -151,34 +151,36 @@ export default function HomeContentClient() {
   });
 
   useEffect(() => {
-    const checklist = getChecklist();
-    const assets = getAssets();
-    const note = getEndingNote();
-    const reminder = getReminderSettings();
+    queueMicrotask(() => {
+      const checklist = getChecklist();
+      const assets = getAssets();
+      const note = getEndingNote();
+      const reminder = getReminderSettings();
 
-    const noteFilled = [note.message, note.medicalWishes, note.funeralWishes, note.importantDocs].filter(
-      (v) => v.trim().length > 0
-    ).length;
+      const noteFilled = [note.message, note.medicalWishes, note.funeralWishes, note.importantDocs].filter(
+        (v) => v.trim().length > 0
+      ).length;
 
-    let needsReview = false;
-    if (reminder.enabled && reminder.lastReviewDate) {
-      const last = new Date(reminder.lastReviewDate);
-      const now = new Date();
-      const diffDays = (now.getTime() - last.getTime()) / (1000 * 60 * 60 * 24);
-      const thresholds = { monthly: 30, quarterly: 90, yearly: 365 };
-      needsReview = diffDays > thresholds[reminder.frequency];
-    }
+      let needsReview = false;
+      if (reminder.enabled && reminder.lastReviewDate) {
+        const last = new Date(reminder.lastReviewDate);
+        const now = new Date();
+        const diffDays = (now.getTime() - last.getTime()) / (1000 * 60 * 60 * 24);
+        const thresholds = { monthly: 30, quarterly: 90, yearly: 365 };
+        needsReview = diffDays > thresholds[reminder.frequency];
+      }
 
-    setStats({
-      checkTotal: checklist.length,
-      checkDone: checklist.filter((i) => i.checked).length,
-      assetCount: assets.length,
-      totalValue: getTotalEstimatedValue(),
-      completionRate: getCompletionRate(),
-      appraisalCount: assets.filter((a) => a.wantsAppraisal).length,
-      noteProgress: Math.round((noteFilled / 4) * 100),
-      needsReview,
-      lastReviewDate: reminder.lastReviewDate,
+      setStats({
+        checkTotal: checklist.length,
+        checkDone: checklist.filter((i) => i.checked).length,
+        assetCount: assets.length,
+        totalValue: getTotalEstimatedValue(),
+        completionRate: getCompletionRate(),
+        appraisalCount: assets.filter((a) => a.wantsAppraisal).length,
+        noteProgress: Math.round((noteFilled / 4) * 100),
+        needsReview,
+        lastReviewDate: reminder.lastReviewDate,
+      });
     });
   }, []);
 

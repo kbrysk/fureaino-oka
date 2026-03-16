@@ -14,7 +14,9 @@ export default function GuidebookGate() {
   const [alreadyRegistered, setAlreadyRegistered] = useState<boolean | null>(null);
 
   useEffect(() => {
-    setAlreadyRegistered(typeof window !== "undefined" && !!localStorage.getItem(EMAIL_STORAGE_KEY));
+    queueMicrotask(() => {
+      setAlreadyRegistered(typeof window !== "undefined" && !!localStorage.getItem(EMAIL_STORAGE_KEY));
+    });
   }, []);
 
   return (
