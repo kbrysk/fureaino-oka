@@ -38915,5 +38915,1095 @@
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E5%8D%81%E5%B3%B6%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
     }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "yatsushiro",
+    "cityName": "八代市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "八代市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "八代市老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "最大60万円（費用の2/3以内）",
+      "conditions": [
+        "1年以上使用の実態がない空き家",
+        "老朽危険空き家と判定された住宅・兼用住宅",
+        "所有者・相続権利者であること",
+        "市税の滞納がないこと",
+        "熊本県内または八代市内の解体業者が施工すること"
+      ],
+      "officialUrl": "https://www.city.yatsushiro.lg.jp/kiji00314778/index.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は市役所へお問い合わせください）",
+      "windowPhone": "0965-33-4101"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.yatsushiro.lg.jp/kiji00314778/index.html",
+      "phone": "0965-33-4101"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "hitoyoshi",
+    "cityName": "人吉市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "人吉市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "人吉市老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "おおむね1年以上使用されておらず今後も使用の見込みがない空き家",
+        "不良度判定基準による評点が100点以上の老朽危険空き家",
+        "倒壊・外壁落下等の危険性があり近隣・道路等に影響を及ぼす状態",
+        "所有者・相続人であること",
+        "市税等の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.hitoyoshi.lg.jp/toppage/kurashi_nav/nav_hikkoshi/32654",
+      "applicationPeriod": "令和7年度（令和6年度は5件程度・要事前確認）",
+      "windowName": "市民部地域コミュニティ課自治支援係",
+      "windowPhone": "0966-22-2111",
+      "notes": "※令和2年7月豪雨の被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.hitoyoshi.lg.jp/toppage/kurashi_nav/nav_hikkoshi/32654",
+      "phone": "0966-22-2111"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "arao",
+    "cityName": "荒尾市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "荒尾市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "荒尾市老朽危険空家等除却促進事業補助金",
+      "maxAmount": "最大60万円（費用の1/2以内）",
+      "conditions": [
+        "1年以上使用の実態がない住宅・兼用住宅",
+        "不良住宅判定基準での評点が100点以上のもの",
+        "所有者・相続権利者であること",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.arao.lg.jp/kurashi/sumai/akiya/akiya-seido/page15896.html",
+      "applicationPeriod": "令和7年度（6件程度・予算枠に達した時点で終了）",
+      "windowName": "担当窓口（詳細は市役所へお問い合わせください）",
+      "windowPhone": "0968-63-1111"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.arao.lg.jp/kurashi/sumai/akiya/akiya-seido/page15896.html",
+      "phone": "0968-63-1111"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "tamana",
+    "cityName": "玉名市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "玉名市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "玉名市老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "1年以上住居として使用がなく今後も使用の見込みがない住宅",
+        "事前調査による不良度判定で評点が100点以上のもの",
+        "所有者・相続人であること（法人は対象外）",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.tamana.lg.jp/q/aview/592/21680.html",
+      "applicationPeriod": "令和7年度（国交省交付金事業・予算がなくなり次第終了）",
+      "windowName": "建設部住宅課",
+      "windowPhone": "0968-75-1311",
+      "notes": "※要確認。詳細補助額は市ホームページのPDF資料をご確認ください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.tamana.lg.jp/q/aview/592/21680.html",
+      "phone": "0968-75-1311"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "yamaga",
+    "cityName": "山鹿市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "山鹿市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "山鹿市危険な空家等除却費用補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽化し危険な状態にある空き家",
+        "所有者・相続人であること",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.yamaga.kumamoto.jp/kiji0032042/index.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は市役所へお問い合わせください）",
+      "windowPhone": "0968-43-1111",
+      "notes": "※要確認。最新情報は市役所担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.yamaga.kumamoto.jp/kiji0032042/index.html",
+      "phone": "0968-43-1111"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "kikuchi",
+    "cityName": "菊池市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "菊池市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "菊池市空家等撤去補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.kikuchi.lg.jp/article/list/1043.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は市役所へお問い合わせください）",
+      "windowPhone": "0968-25-7111",
+      "notes": "※要確認。詳細は市役所担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.kikuchi.lg.jp/article/list/1043.html",
+      "phone": "0968-25-7111"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "uto",
+    "cityName": "宇土市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "宇土市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "宇土市老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "1年以上使用の実態がない空き家",
+        "老朽危険空き家と判定された建物",
+        "所有者・相続人であること",
+        "市税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は市役所へお問い合わせください）",
+      "windowPhone": "0964-23-0111",
+      "notes": "※熊本地震被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%AE%87%E5%9C%9F%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0964-23-0111"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "kamiamakusa",
+    "cityName": "上天草市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "上天草市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "上天草市老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "市税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は市役所へお問い合わせください）",
+      "windowPhone": "0969-22-3111",
+      "notes": "※半島・離島部のため制度詳細は各市町役場に直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%B8%8A%E5%A4%A9%E8%8D%89%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0969-22-3111"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "uki",
+    "cityName": "宇城市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "宇城市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "宇城市老朽危険空き家等除却推進事業補助金",
+      "maxAmount": "最大50万円（費用の2/5以内）",
+      "conditions": [
+        "1年以上使用の実態がない老朽危険空き家",
+        "老朽危険空き家と判定された建物（事前調査必要）",
+        "所有者・相続権利者であること",
+        "市税の滞納がないこと",
+        "申請前1年以上同一所有者であること"
+      ],
+      "officialUrl": "https://www.city.uki.kumamoto.jp/kurashi/hikkoshi/2302195",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は市役所へお問い合わせください）",
+      "windowPhone": "0964-32-1111",
+      "notes": "※熊本地震被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.uki.kumamoto.jp/kurashi/hikkoshi/2302195",
+      "phone": "0964-32-1111"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "aso",
+    "cityName": "阿蘇市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "阿蘇市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "阿蘇市老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "市税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は市役所へお問い合わせください）",
+      "windowPhone": "0967-22-3111",
+      "notes": "※要確認。最新情報は市役所担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%98%BF%E8%98%87%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "0967-22-3111"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "amakusa",
+    "cityName": "天草市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "天草市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "天草市老朽危険家屋等除却促進事業補助金",
+      "maxAmount": "最大50万円（費用の1/2以内）",
+      "conditions": [
+        "市が老朽危険家屋と判定した住宅・兼用住宅",
+        "老朽化し倒壊等の恐れがあり道路や隣家等に危険を及ぼす可能性がある建物",
+        "所有者・相続人であること",
+        "市税の滞納がないこと"
+      ],
+      "officialUrl": "https://www.city.amakusa.kumamoto.jp/kiji0037184/index.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は市役所へお問い合わせください）",
+      "windowPhone": "0969-23-1111",
+      "notes": "※半島・離島部のため制度詳細は各市町役場に直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.city.amakusa.kumamoto.jp/kiji0037184/index.html",
+      "phone": "0969-23-1111"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "koshi",
+    "cityName": "合志市",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "合志市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "合志市老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "市税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は市役所へお問い合わせください）",
+      "windowPhone": "096-248-1111",
+      "notes": "※要確認。最新情報は市役所担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%90%88%E5%BF%97%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F",
+      "phone": "096-248-1111"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "gyokuto",
+    "cityName": "玉東町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "玉東町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "玉東町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%8E%89%E6%9D%B1%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "nankan",
+    "cityName": "南関町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "南関町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "南関町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E9%96%A2%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "nagasu",
+    "cityName": "長洲町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "長洲町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "長洲町老朽危険空家等除去事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%95%B7%E6%B4%B2%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "nagomi",
+    "cityName": "和水町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "和水町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "和水町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%92%8C%E6%B0%B4%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "ozu",
+    "cityName": "大津町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "大津町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "大津町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%A7%E6%B4%A5%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "kikuyo",
+    "cityName": "菊陽町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "菊陽町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "菊陽町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%8F%8A%E9%99%BD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "minamioguni",
+    "cityName": "南小国町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "南小国町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "南小国町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E5%B0%8F%E5%9B%BD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "oguni",
+    "cityName": "小国町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "小国町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "小国町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B0%8F%E5%9B%BD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "ubuyama",
+    "cityName": "産山村",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "産山村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "産山村老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "村税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%94%A3%E5%B1%B1%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "takamori",
+    "cityName": "高森町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "高森町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "高森町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%AB%98%E6%A3%AE%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "nishihara",
+    "cityName": "西原村",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "西原村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "西原村老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "村税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※熊本地震被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%A5%BF%E5%8E%9F%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "minamiaso",
+    "cityName": "南阿蘇村",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "南阿蘇村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "南阿蘇村老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "村税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※熊本地震被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E9%98%BF%E8%98%87%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "mifune",
+    "cityName": "御船町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "御船町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "御船町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%BE%A1%E8%88%B9%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "kashima",
+    "cityName": "嘉島町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "嘉島町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "嘉島町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%98%89%E5%B3%B6%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "mashiki",
+    "cityName": "益城町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "益城町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "益城町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※熊本地震被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%9B%8A%E5%9F%8E%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "kosa",
+    "cityName": "甲佐町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "甲佐町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "甲佐町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%94%B2%E4%BD%90%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "yamato",
+    "cityName": "山都町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "山都町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "山都町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B1%B1%E9%83%BD%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "hikawa",
+    "cityName": "氷川町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "氷川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "氷川町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B0%B7%E5%B7%9D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "ashikita",
+    "cityName": "芦北町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "芦北町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "芦北町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%8A%A6%E5%8C%97%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "tsunagi",
+    "cityName": "津奈木町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "津奈木町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "津奈木町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※要確認。最新情報は役場担当課にお問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B4%A5%E5%A5%88%E6%9C%A8%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "nishiki",
+    "cityName": "錦町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "錦町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "錦町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※令和2年7月豪雨の被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E9%8C%A6%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "taragi",
+    "cityName": "多良木町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "多良木町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "多良木町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※令和2年7月豪雨の被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%A4%9A%E8%89%AF%E6%9C%A8%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "yunomae",
+    "cityName": "湯前町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "湯前町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "湯前町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※令和2年7月豪雨の被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B9%AF%E5%89%8D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "mizukami",
+    "cityName": "水上村",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "水上村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "水上村老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "村税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※令和2年7月豪雨の被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E6%B0%B4%E4%B8%8A%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "sagara",
+    "cityName": "相良村",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "相良村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "相良村老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "村税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※令和2年7月豪雨の被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%9B%B8%E8%89%AF%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "itsuki",
+    "cityName": "五木村",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "五木村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "五木村老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "村税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※令和2年7月豪雨の被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E4%BA%94%E6%9C%A8%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "yamae",
+    "cityName": "山江村",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "山江村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "山江村老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "村税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※令和2年7月豪雨の被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E5%B1%B1%E6%B1%9F%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "kuma",
+    "cityName": "球磨村",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "球磨村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "球磨村老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "村税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※令和2年7月豪雨の被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E7%90%83%E7%A3%A8%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "asagiri",
+    "cityName": "あさぎり町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "あさぎり町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "あさぎり町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※令和2年7月豪雨の被災地域のため制度内容が変更されている場合があります。要確認。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E3%81%82%E3%81%95%E3%81%8E%E3%82%8A%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
+  },
+  {
+    "prefId": "kumamoto",
+    "cityId": "reihoku",
+    "cityName": "苓北町",
+    "prefName": "熊本県",
+    "mascot": {
+      "localRiskText": "苓北町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
+    },
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "苓北町老朽危険空き家等除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等に該当する建物",
+        "所有者・相続人であること",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "担当窓口（詳細は役場へお問い合わせください）",
+      "notes": "※半島・離島部のため制度詳細は各市町役場に直接お問い合わせください。"
+    },
+    "garbage": {
+      "officialUrl": "https://www.google.com/search?q=%E8%8B%93%E5%8C%97%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
+    }
   }
 ]
