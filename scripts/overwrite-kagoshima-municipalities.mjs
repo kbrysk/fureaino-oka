@@ -1,0 +1,51 @@
+// scripts/overwrite-kagoshima-municipalities.mjs
+import { readFileSync, writeFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const dataPath = join(__dirname, '../app/lib/data/municipalities.json');
+
+const kagoshimaUpdates = [
+  { cityId: "makurazaki", hasSubsidy: true, name: "危険空家等の解体撤去事業補助制度", maxAmount: "最大30万円（費用の30/100以内）", conditions: ["市内に存する危険空家等の所有者または委任を受けた者", "市税に滞納がないこと", "解体撤去経費が30万円以上で市内業者が行う工事"], applicationPeriod: "令和7年度（予算がなくなり次第終了）", windowName: "総務課 危機管理対策係", windowPhone: "0993-76-1086", windowUrl: "https://www.city.makurazaki.lg.jp/soshiki/soumu/11057.html", noSubsidyNote: null },
+  { cityId: "akune", hasSubsidy: true, name: "危険空家等解体撤去事業補助金", maxAmount: "最大60万円（費用の2/3以内）", conditions: ["危険空き家の所有者または委任を受けた者", "市内の解体撤去業者を利用すること", "市税等の滞納がないこと", "危険度判定表による評点が100点以上", "解体撤去経費が30万円以上"], applicationPeriod: "令和7年度（予算がなくなり次第終了）", windowName: "都市建設課 住宅対策係", windowPhone: "0996-73-1189", windowUrl: "https://www.city.akune.lg.jp/soshikikarasagasu/toshikensetsuka/zyutakutaisakukakari/2/1/1117.html", noSubsidyNote: null },
+  { cityId: "ibusuki", hasSubsidy: true, name: "危険空家等解体撤去工事補助金", maxAmount: "最大30万円（住宅：費用の1/3以内、非住宅は15万円）", conditions: ["市の調査で不良度が基準を超えた空家の所有者または相続人", "市税等を滞納していないこと", "市内業者による解体工事で費用が30万円以上", "全部解体のみ対象"], applicationPeriod: "令和7年度（予算がなくなり次第終了）", windowName: "建設部 建築課", windowPhone: "0993-22-2111", windowUrl: "https://www.city.ibusuki.lg.jp/main/kyosei/bosai/kiken-akiya/page027827.html", noSubsidyNote: null },
+  { cityId: "nishinoomote", hasSubsidy: null, name: null, maxAmount: null, conditions: [], applicationPeriod: null, windowName: null, windowPhone: null, windowUrl: "https://www.city.nishinoomote.lg.jp", noSubsidyNote: "※離島のため制度詳細は各市町役場に直接お問い合わせください。" },
+  { cityId: "tarumizu", hasSubsidy: true, name: "垂水市空き家解体撤去事業補助金", maxAmount: "最大30万円（一般解体：費用の30%以内）／新築目的解体は最大50万円（費用の50%以内）", conditions: ["市内にある個人所有の空き家の所有者", "市内業者による工事", "住宅のみ対象（工事費30万円以上）"], applicationPeriod: "令和7年4月1日〜12月26日（予算に到達した時点で終了）", windowName: "土木課 建築係", windowPhone: "0994-32-1111", windowUrl: "https://www.city.tarumizu.lg.jp/kensetsu/kurashi/machi/akiya/akiyakaitai.html", noSubsidyNote: null },
+  { cityId: "hioki", hasSubsidy: true, name: "危険空家等除却事業費補助金", maxAmount: "最大30万円（費用の30/100以内）", conditions: ["特定空家等または不良住宅の所有者または相続人", "市税その他市の徴収金に滞納がないこと", "市内解体工事業者による工事で補助対象経費30万円以上"], applicationPeriod: "令和7年度（予算がなくなり次第終了）", windowName: "総務企画部 総務課 防災係", windowPhone: "099-248-9401", windowUrl: "https://www.city.hioki.kagoshima.jp/bousai/kurashi/tetsuzuki/bousai/kaitaihojokin.html", noSubsidyNote: null },
+  { cityId: "soo", hasSubsidy: true, name: "危険廃屋解体撤去補助金", maxAmount: "最大40万円（費用の30%以内）", conditions: ["所有者が居住していないまたは使用していない家屋", "工事経費が30万円以上の市内業者による工事", "特定空家等に指定されている建物は対象外"], applicationPeriod: "令和7年度（予算に到達した時点で終了）", windowName: "まちづくり推進課", windowPhone: "0986-76-8874", windowUrl: "https://www.city.soo.kagoshima.jp/kurashi/kurashisumai/zyuutakuhozyo/kikennhaioku.html", noSubsidyNote: null },
+  { cityId: "ichikikushikino", hasSubsidy: true, name: "危険廃屋等解体撤去工事補助金", maxAmount: "最大30万円（危険廃屋認定：費用の1/3以内）／一般空き家は最大15万円", conditions: ["1年以上使用されていない住宅または危険廃屋認定物件の所有者", "解体費用が30万円以上", "市内業者による工事"], applicationPeriod: "令和7年度（予算がなくなり次第終了）", windowName: "企画政策課 企画調整係", windowPhone: "0996-33-5628", windowUrl: "https://www.city.ichikikushikino.lg.jp/seisaku1/akiya_sien.html", noSubsidyNote: null },
+  { cityId: "minamisatsuma", hasSubsidy: true, name: "危険廃屋等解体補助事業補助金", maxAmount: "最大30万円（費用の1/3以内）", conditions: ["廃屋または家屋の所有者等（解体経費10万円以上）", "住宅以外の建物のみは対象外", "市内業者による工事", "解体後1年間は土地の売却・建物建設不可"], applicationPeriod: "令和7年度（予算がなくなり次第終了）", windowName: "総務課 自治防災係", windowPhone: "0993-76-1501", windowUrl: "https://www.city.minamisatsuma.lg.jp/living/bosai-kotsu/e022367.html", noSubsidyNote: null },
+  { cityId: "shibushi", hasSubsidy: true, name: "危険廃屋解体撤去補助事業補助金", maxAmount: "最大30万円（住宅：費用の1/3以内）／附属家屋は最大15万円", conditions: ["居住・使用されておらず周囲に危険な恐れのある市内個人所有建物", "工事費30万円以上で市内の登録解体事業者による工事", "市税・市への債務に滞納がないこと", "申請前に着工していないこと"], applicationPeriod: "令和7年4月1日〜（予算額に達し次第終了）", windowName: "建設課 都市計画グループ", windowPhone: "099-474-1111", windowUrl: "https://www.city.shibushi.lg.jp/soshiki/12/index-2.html", noSubsidyNote: null },
+  { cityId: "minamikyushu", hasSubsidy: true, name: "空家等適正管理支援事業費（除却）補助金", maxAmount: "最大30万円（費用の1/3以内）", conditions: ["空家法の特定空家（勧告を受けた特定空家等を除く）", "空家の所有者（個人）または所有者の承諾を受けた者", "市内施工業者による工事"], applicationPeriod: "令和7年度（予算がなくなり次第終了）", windowName: "防災安全課", windowPhone: "0993-83-2511", windowUrl: "https://www.city.minamikyushu.lg.jp/soshikikarasagasu/bosaianzenka/kotsuubosai/4/153.html", noSubsidyNote: null },
+  { cityId: "aira", hasSubsidy: true, name: "危険空家の解体撤去工事に係る補助金", maxAmount: "最大30万円（費用の1/3以内）", conditions: ["不良度評点100点以上の市内木造危険空家の所有者または相続人", "市税等の滞納がないこと", "市内業者による解体工事で費用30万円以上（先着順）", "年度内に申請・実績報告が完了すること"], applicationPeriod: "令和7年度（予算がなくなり次第終了）", windowName: "建設部 建築住宅課 建築係", windowPhone: "0995-66-3409", windowUrl: "https://www.city.aira.lg.jp/kenchiku/kurashi/sumai/kenchiku/akiyakaitaihojo.html", noSubsidyNote: null },
+  { cityId: "satsuma", hasSubsidy: true, name: "危険家屋解体撤去補助金", maxAmount: "最大20万円（費用の1/3以内、特に危険なものは最大40万円）", conditions: ["屋根・柱などの主要構造部が朽ちる等により使用不能な危険家屋", "解体撤去費用が30万円以上", "町内の解体撤去登録業者を利用すること", "申請者に町税等の滞納がないこと"], applicationPeriod: "令和7年度（〜2025年9月10日頃、予算がなくなり次第終了）", windowName: "建設課 建築係", windowPhone: "0996-26-1829", windowUrl: "https://www.satsuma-net.jp/kenchi/kurashi/machi/sumai/sesaku/hojokin.html", noSubsidyNote: null },
+  { cityId: "nagashima", hasSubsidy: true, name: "危険空家等解体撤去事業補助金", maxAmount: "費用の80%以内（上限額は現地調査後に決定）", conditions: ["老朽化等により危険な状態にある空き家", "公共事業などの補助対象になっていないこと", "火災が原因でないこと", "町税等の滞納がないこと"], applicationPeriod: "令和7年度（予算の範囲内）", windowName: "景観推進課 建設係", windowPhone: "0996-86-1136", windowUrl: "https://www.town.nagashima.lg.jp", noSubsidyNote: null },
+  { cityId: "yusui", hasSubsidy: true, name: "湧水町空家リフォーム支援事業補助金（解体撤去）", maxAmount: "詳細は窓口にお問い合わせください", conditions: ["湧水町空家・空地バンクに登録し売買または賃貸借契約を締結した物件", "解体撤去工事費用が30万円以上", "公共工事による補償対象外"], applicationPeriod: "令和7年度（予算がなくなり次第終了）", windowName: "商工観光PR課 移住定住推進室", windowPhone: "0995-74-3111", windowUrl: "https://www.town.yusui.kagoshima.jp/soshiki/34/768.html", noSubsidyNote: null },
+  { cityId: "osaki", hasSubsidy: true, name: "危険家屋解体補助金", maxAmount: "最大30万円（費用の1/2以内）", conditions: ["町内の木造建築物で居住していない常態（公道に面し人家密集地にある）", "特定空家等でないこと", "家屋の所有者（相続人含む）または委任を受けた者", "町税等を滞納していないこと"], applicationPeriod: "令和7年度（予算がなくなり次第終了）", windowName: "建設課 管理係", windowPhone: "099-476-1111", windowUrl: "https://www.town.kagoshima-osaki.lg.jp", noSubsidyNote: null },
+  { cityId: "higashikushira", hasSubsidy: true, name: "危険空き家等解体撤去事業補助金", maxAmount: "最大30万円（費用の一部）", conditions: ["危険度判定で評価点数100点以上の危険空き家", "町内に事務所または事業所を有する業者に依頼すること", "所有権以外の権利が設定されていないこと"], applicationPeriod: "令和7年度（予算の範囲内）", windowName: "東串良町役場", windowPhone: "0994-63-3111", windowUrl: "https://www.higashikushira.com/docs/2025010700014", noSubsidyNote: null },
+  { cityId: "kinko", hasSubsidy: true, name: "空き家解体撤去事業補助金", maxAmount: "最大30万円（費用の30%以内）", conditions: ["建築後10年以上かつ1年以上未居住の住宅（工事費30万円以上）", "錦江町建設業者等級別表登録業者による工事", "町税等の未納がないこと", "抵当権等が設定されていないこと"], applicationPeriod: "令和7年4月1日〜（予算がなくなり次第終了）", windowName: "政策企画課 政策企画チーム", windowPhone: "0994-22-3032", windowUrl: "https://www.town.kinko.lg.jp/seisaku-h/kurashi/tochi/shisaku/kaitainitsuite.html", noSubsidyNote: null },
+  { cityId: "minamiohsumi", hasSubsidy: true, name: "空き家等解体撤去事業補助金", maxAmount: "最大30万円（住宅：費用の30%以内）", conditions: ["建築後10年以上かつ1年以上未居住の住宅（工事費30万円以上）", "町内業者による工事", "申請者に町税等の滞納がないこと", "解体後に建物の一部や産業廃棄物等を残置しないこと"], applicationPeriod: "令和7年度（予算がなくなり次第終了）", windowName: "建設課 住宅係", windowPhone: "0994-24-3129", windowUrl: "https://www.town.minamiosumi.lg.jp/kensetsu/kurashi/sumai/jutakujosei/akiyakaitai.html", noSubsidyNote: null },
+  { cityId: "kimotsuki", hasSubsidy: true, name: "危険廃屋解体撤去工事助成金", maxAmount: "最大30万円（費用の1/3以内）", conditions: ["所有者等が現に居住その他の用に供しない廃屋で周囲に危険を及ぼすおそれがあるもの", "主要構造部が朽ちる等により使用不能となった建物", "抵当権その他第三者の権利が設定されていないもの", "申請前の着手は対象外"], applicationPeriod: "令和7年度（予算の範囲内）", windowName: "建設課 住宅係", windowPhone: "0994-65-8424", windowUrl: "https://kimotsuki-town.jp/soshiki/kensetsuka/jutaku/1_1/1255.html", noSubsidyNote: null },
+  { cityId: "nakatane", hasSubsidy: null, name: null, maxAmount: null, conditions: [], applicationPeriod: null, windowName: null, windowPhone: null, windowUrl: "https://www.town.nakatane.kagoshima.jp", noSubsidyNote: "※離島のため制度詳細は各市町役場に直接お問い合わせください。" },
+  { cityId: "minamitane", hasSubsidy: null, name: null, maxAmount: null, conditions: [], applicationPeriod: null, windowName: null, windowPhone: null, windowUrl: "https://www.town.minamitane.kagoshima.jp", noSubsidyNote: "※離島のため制度詳細は各市町役場に直接お問い合わせください。" }
+];
+
+const data = JSON.parse(readFileSync(dataPath, 'utf-8'));
+
+let updatedCount = 0;
+for (const update of kagoshimaUpdates) {
+  const idx = data.findIndex(
+    m => m.prefId === 'kagoshima' && m.cityId === update.cityId
+  );
+  if (idx === -1) {
+    console.warn(`⚠️ cityId not found: ${update.cityId}`);
+    continue;
+  }
+  const { cityId, ...subsidyFields } = update;
+  data[idx].subsidy = { ...data[idx].subsidy, ...subsidyFields };
+  updatedCount++;
+}
+
+writeFileSync(dataPath, JSON.stringify(data, null, 2), 'utf-8');
+console.log(`✅ Updated ${updatedCount} entries`);

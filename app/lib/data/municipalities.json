@@ -26663,7 +26663,11 @@
       "localRiskText": "高野町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": null
+      "hasSubsidy": false,
+      "officialUrl": "https://www.town.koya.wakayama.jp/sangyo/chiikisinnkou/19765.html",
+      "windowName": "観光振興課 移住定住地域振興室",
+      "windowPhone": "0736-56-2780",
+      "noSubsidyNote": "高野町では空き家解体補助金制度はありません。移住定住補助・空き家改修補助があります（観光振興課 移住定住地域振興室 0736-56-2780）。"
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E9%AB%98%E9%87%8E%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -27005,7 +27009,11 @@
       "localRiskText": "すさみ町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": null
+      "hasSubsidy": false,
+      "officialUrl": "https://www.town.susami.lg.jp/kurashi/09/2021093000041.html",
+      "windowName": "地域未来課",
+      "windowPhone": "0739-55-4801",
+      "noSubsidyNote": "すさみ町では空き家解体補助金制度はありません。空き家改修補助（上限50万円）・家財撤去補助（上限8万円）があります（地域未来課 0739-55-4801）。"
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E3%81%99%E3%81%95%E3%81%BF%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -27041,7 +27049,11 @@
       "localRiskText": "太地町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": null
+      "hasSubsidy": false,
+      "officialUrl": "https://www.town.taiji.wakayama.jp/lifestage/sumai/sumai003.html",
+      "windowName": "太地町役場 総務課",
+      "windowPhone": "0735-59-2335",
+      "noSubsidyNote": "太地町では空き家解体補助金制度はありません。詳細は総務課（0735-59-2335）へお問い合わせください。"
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E5%A4%AA%E5%9C%B0%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -27056,7 +27068,11 @@
       "localRiskText": "古座川町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": null
+      "hasSubsidy": false,
+      "officialUrl": "https://www.town.kozagawa.lg.jp/",
+      "windowName": "古座川町役場 地域振興課",
+      "windowPhone": "0735-72-0180",
+      "noSubsidyNote": "古座川町では空き家解体補助金制度はありません。詳細は地域振興課（0735-72-0180）へお問い合わせください。"
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E5%8F%A4%E5%BA%A7%E5%B7%9D%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -27071,8 +27087,21 @@
       "localRiskText": "北山村の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": false,
-      "noSubsidyNote": "公式サイトに空き家改修事業補助金は存在するが、解体専用補助金は確認できない。詳細は政策推進室（0735-49-2331）に要確認。"
+      "hasSubsidy": true,
+      "name": "北山村老朽空き家解体事業補助金",
+      "maxAmount": "最大100万円（費用の4/5以内）※不用空き家除却の場合は最大50万円（費用の1/2以内）",
+      "conditions": [
+        "村内の一戸建て住宅（居住用部分が床面積の1/2以上）",
+        "1年以上居住その他の使用がなされていない空き家",
+        "建設業許可または和歌山県登録の解体工事業者が施工",
+        "補助金交付決定前に除却工事に未着手であること",
+        "村税等の滞納がないこと",
+        "公共事業等の補償対象でないこと"
+      ],
+      "officialUrl": "https://www.vill.kitayama.wakayama.jp/jumin/2018-0910-1125-15.html",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "北山村役場 地域事業課",
+      "windowPhone": "0735-49-8020"
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E5%8C%97%E5%B1%B1%E6%9D%91%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -27089,21 +27118,19 @@
     "subsidy": {
       "hasSubsidy": true,
       "name": "串本町不良空家等除却補助金",
-      "maxAmount": 500000,
+      "maxAmount": "最大50万円（費用の2/3以内）",
       "conditions": [
-        "おおむね1年以上使用されていない建物",
-        "延べ面積の1/2以上が住宅用",
-        "不良度測定評点合計100点以上",
-        "公共補償費対象外かつ重複補助なし",
-        "故意な損壊でないこと",
-        "所有権以外の権利設定なし（同意あれば可）",
-        "串本町内に事業所を有する建設業者・解体工事業者による全体除却（門・塀は含まず）",
-        "交付決定後着手・年度内完了",
-        "町税滞納なし・暴力団員でないこと"
+        "串本町内の1年以上未使用の住宅（延べ面積の1/2以上が住宅用途）",
+        "建物の不良度測定による評点合計が100点以上",
+        "串本町内に事業所を有する建設業者・解体工事業者が施工",
+        "補助金交付決定後に工事着手すること",
+        "令和8年2月27日までに除却工事完了すること",
+        "町税の滞納がないこと",
+        "暴力団員等でないこと"
       ],
       "officialUrl": "https://www.town.kushimoto.wakayama.jp/sangyo/kensetsu/akiya-tekkyo-hojyo.html",
-      "applicationPeriod": "年度ごとに設定（令和7年度の受付期間は役場に要確認）",
-      "windowName": "建設課 空き家対策担当",
+      "applicationPeriod": "令和7年4月28日〜11月28日（認定申請受付）／募集15戸程度",
+      "windowName": "串本町役場 建設課 空き家対策担当",
       "windowPhone": "0735-67-7262"
     },
     "garbage": {
@@ -34538,19 +34565,19 @@
     "subsidy": {
       "hasSubsidy": true,
       "name": "直方市老朽危険家屋等解体撤去費補助金",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "maxAmount": "最大50万円（費用の1/2以内）",
       "conditions": [
-        "老朽危険家屋等の所有者等",
-        "老朽危険度調査で一定基準以上と判定されたもの",
-        "契約及び着工前に申請すること",
-        "市税等の滞納がないこと"
+        "昭和56年5月31日以前に竣工した木造または軽量鉄骨造の居住用建築物",
+        "老朽危険度調査で評点100点以上",
+        "市税等の滞納がないこと",
+        "市内の解体業者に工事を依頼すること"
       ],
-      "applicationPeriod": "令和7年度（予算枠に達し次第終了）",
-      "windowName": "都市計画課",
-      "windowPhone": "0949-25-2139",
+      "applicationPeriod": "令和7年4月1日から（予算枠に達した時点で終了）",
+      "windowName": "都市計画課 住宅政策係",
+      "windowPhone": "0949-25-2050",
       "windowUrl": "https://www.city.nogata.fukuoka.jp/kurashi/_1203/_9953.html",
       "noSubsidyNote": null,
-      "notes": "オンライン申請（事前相談）も可能。"
+      "notes": null
     },
     "garbage": {
       "hasService": true,
@@ -34568,16 +34595,14 @@
     "subsidy": {
       "hasSubsidy": true,
       "name": "飯塚市老朽危険家屋解体撤去補助金制度",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "maxAmount": "最大50万円（費用の1/2以内）",
       "conditions": [
-        "居住その他の使用をしていないことが常態",
-        "老朽危険度調査で評点100点以上のもの",
-        "法人を除く個人が対象",
-        "市税等の滞納がない者",
-        "家財道具処分費等は対象外"
+        "市内に所在する老朽危険家屋の所有者等で市税の滞納がない者",
+        "居住その他の使用をしていないことが常態であること",
+        "老朽危険度調査で基準を満たすこと"
       ],
-      "applicationPeriod": "令和7年度（予算の範囲内）",
-      "windowName": "都市環境部 住宅課",
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "都市建設部 建設政策課 空家対策係",
       "windowPhone": "0948-22-5500",
       "windowUrl": "https://www.city.iizuka.lg.jp/jyutakusoumu/roukyuukaoku.html",
       "noSubsidyNote": null,
@@ -34599,18 +34624,19 @@
     "subsidy": {
       "hasSubsidy": true,
       "name": "田川市老朽危険家屋等解体撤去補助金制度",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "maxAmount": "最大20万円（費用の1/3以内）",
       "conditions": [
-        "市内の老朽危険家屋（空き家）の所有者等",
-        "市税等の滞納がないこと",
-        "工事着手前に申請すること"
+        "昭和56年5月31日以前に建築された木造の建築物",
+        "居住の用に供していないことが常態であること",
+        "市税の滞納がないこと",
+        "市内の解体業者に工事を依頼すること"
       ],
-      "applicationPeriod": "令和7年度（予算の範囲内）",
-      "windowName": "都市整備課",
+      "applicationPeriod": "令和7年度（毎年度3月末までに手続き完了）",
+      "windowName": "建設課（都市整備担当）",
       "windowPhone": "0947-44-2000",
       "windowUrl": "https://www.joho.tagawa.fukuoka.jp/kiji0037318/index.html",
       "noSubsidyNote": null,
-      "notes": "炭鉱閉山後の空き家問題が深刻な地域。詳細は市へ直接確認を。"
+      "notes": null
     },
     "garbage": {
       "hasService": true,
@@ -34626,16 +34652,20 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "柳川市役所 都市計画課",
-      "windowPhone": "0944-77-8515",
-      "windowUrl": "https://www.city.yanagawa.fukuoka.jp/",
+      "hasSubsidy": true,
+      "name": "柳川市老朽危険家屋等除却促進事業",
+      "maxAmount": "最大45万円（費用の1/2以内）",
+      "conditions": [
+        "周辺の住環境等を悪化させ放置されている木造若しくは軽量鉄骨造の建築物",
+        "柳川市の定める判定基準値を超えるもの",
+        "倉庫は対象外"
+      ],
+      "applicationPeriod": "令和7年度（予算額に達した場合終了）",
+      "windowName": "都市計画課 建築係",
+      "windowPhone": "0944-77-8544",
+      "windowUrl": "https://www.city.yanagawa.fukuoka.jp/kurashi/jutaku/jutaku_rokyukikenkaoku.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -34651,16 +34681,21 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "八女市役所 都市整備課",
-      "windowPhone": "0943-23-1111",
-      "windowUrl": "https://www.city.yame.fukuoka.jp/",
+      "hasSubsidy": true,
+      "name": "八女市老朽危険家屋等除却促進事業補助金",
+      "maxAmount": "最大50万円（費用の1/2以内）",
+      "conditions": [
+        "木造若しくは軽量鉄骨造で不良度判定基準の点数が一定以上であること",
+        "居住の用に供していた空き家であること",
+        "市内事業者が施工する家屋全ての除却工事であること",
+        "市税等の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（交付決定年度2月末までに完工）",
+      "windowName": "防災安全課 生活安全係",
+      "windowPhone": "0943-24-8146",
+      "windowUrl": "https://www.city.yame.fukuoka.jp/soshiki/12/6/2/anzenanshinmachidukuri/akiyataisaku/1559196597153.html",
       "noSubsidyNote": null,
-      "notes": "※要確認：筑後地域のため補助制度が整備されている可能性あり。"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -34677,20 +34712,20 @@
     "mascot": null,
     "subsidy": {
       "hasSubsidy": true,
-      "name": "筑後市老朽危険家屋等解体撤去補助金",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "name": "筑後市老朽危険家屋等除却促進事業補助金",
+      "maxAmount": "最大30万円（費用の1/3以内）",
       "conditions": [
-        "老朽危険家屋等の所有者または相続人",
-        "市税等を滞納していない者",
-        "法人でないこと",
-        "補助事業完了後に当該敷地を筑後市空き家バンクに登録または利活用すること"
+        "老朽危険家屋等の所有者または所有者の相続人",
+        "市税等の滞納がないこと",
+        "老朽危険家屋等が法人所有でないこと",
+        "補助事業完了後に当該敷地を空き家バンクに登録または利活用を図る者"
       ],
-      "applicationPeriod": "令和7年度（予算の範囲内）",
-      "windowName": "都市対策課",
-      "windowPhone": "0942-53-4213",
-      "windowUrl": "https://www.city.chikugo.lg.jp/shimin/_2299/_13109/_27158.html",
+      "applicationPeriod": "令和7年度",
+      "windowName": "防災安全課",
+      "windowPhone": "0942-53-4141",
+      "windowUrl": "https://www.city.chikugo.lg.jp/kurashi/_2299/_13109/_27158.html",
       "noSubsidyNote": null,
-      "notes": "解体後の空き家バンク登録が条件。"
+      "notes": null
     },
     "garbage": {
       "hasService": true,
@@ -34706,16 +34741,21 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "大川市役所 都市建設課",
-      "windowPhone": "0944-87-2111",
-      "windowUrl": "https://www.city.okawa.fukuoka.jp/",
+      "hasSubsidy": true,
+      "name": "大川市老朽危険家屋等除却促進事業",
+      "maxAmount": "最大30万円（費用の1/3以内）",
+      "conditions": [
+        "市内に所在する木造等の建築物（RC造等除く）",
+        "不良度の判定基準の評点が100点以上",
+        "個人の所有物で所有権以外の権利が設定されていない",
+        "市税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（先着順、予算額達成次第終了）",
+      "windowName": "都市計画課 住宅政策係",
+      "windowPhone": "0944-85-5604",
+      "windowUrl": "https://www.city.okawa.lg.jp/s049/010/010/010/20150203140820.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -34733,18 +34773,17 @@
     "subsidy": {
       "hasSubsidy": true,
       "name": "行橋市老朽危険家屋除却補助",
-      "maxAmount": "最大30万円（費用の1/2以内）",
+      "maxAmount": "最大30万円（費用の50%以内）",
       "conditions": [
-        "市内に存在する現に使用されていない建築物",
-        "木造または鉄骨造の建築物",
-        "過半が居住用であった建築物",
-        "老朽度判定評点100点以上のもの",
-        "行橋市内業者が除却工事を行うこと"
+        "現に使用されていない建築物",
+        "木造または鉄骨造で過半が居住用途",
+        "老朽度判定基準の評点が100点以上かつ耐用年数超過",
+        "市内業者による除却工事"
       ],
-      "applicationPeriod": "令和7年度（予算の範囲内）",
-      "windowName": "都市整備部 建設政策課",
+      "applicationPeriod": "令和7年度 先着15件",
+      "windowName": "建築政策課 建築政策係",
       "windowPhone": "0930-25-1111",
-      "windowUrl": "https://www.city.yukuhashi.fukuoka.jp/",
+      "windowUrl": "https://www.city.yukuhashi.fukuoka.jp/soshiki/24/20311.html",
       "noSubsidyNote": null,
       "notes": null
     },
@@ -34762,16 +34801,20 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "豊前市役所 建設課",
+      "hasSubsidy": true,
+      "name": "豊前市老朽危険家屋等除却促進事業",
+      "maxAmount": "最大30万円（費用の1/3以内）",
+      "conditions": [
+        "周辺の環境を悪化させている建築物で老朽危険家屋と判定されたもの",
+        "建物所有者（または相続関係者）",
+        "市税を滞納していないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算の範囲内）",
+      "windowName": "生活環境課 生活環境係",
       "windowPhone": "0979-82-1111",
-      "windowUrl": "https://www.city.buzen.fukuoka.jp/",
+      "windowUrl": "https://www.city.buzen.lg.jp/kankyo/hojo/roukyuukaoku.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -34787,16 +34830,20 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "中間市役所 都市整備課",
-      "windowPhone": "093-246-6000",
-      "windowUrl": "https://www.city.nakama.lg.jp/",
+      "hasSubsidy": true,
+      "name": "中間市老朽危険家屋等解体補助金制度",
+      "maxAmount": "最大50万円（費用の1/2以内）",
+      "conditions": [
+        "家屋等の老朽度の判定基準による評点の合計が100点超",
+        "昭和56年5月31日以前にしゅん工した木造または軽量鉄骨造",
+        "市内業者による解体工事"
+      ],
+      "applicationPeriod": "令和7年度（先着順、予算額達成次第終了）",
+      "windowName": "建設産業部 都市計画課 定住促進係",
+      "windowPhone": "093-246-6155",
+      "windowUrl": "https://www.city.nakama.lg.jp/soshiki/19/1269.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -34837,16 +34884,16 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
+      "hasSubsidy": false,
       "name": null,
       "maxAmount": null,
       "conditions": [],
       "applicationPeriod": null,
-      "windowName": "筑紫野市役所 都市計画課",
+      "windowName": "建設部建築課",
       "windowPhone": "092-923-1111",
-      "windowUrl": "https://www.city.chikushino.fukuoka.jp/",
-      "noSubsidyNote": null,
-      "notes": "※要確認"
+      "windowUrl": "https://www.city.chikushino.fukuoka.jp/soshiki/25/3167.html",
+      "noSubsidyNote": "筑紫野市では老朽危険家屋等の解体補助金制度は設けられていません。空き家の適正管理・活用相談は建設部建築課へ。",
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -34862,16 +34909,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "春日市役所 都市計画課",
-      "windowPhone": "092-584-1111",
-      "windowUrl": "https://www.city.kasuga.fukuoka.jp/",
+      "hasSubsidy": true,
+      "name": "春日市旧耐震基準木造建築物除却補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "昭和56年5月31日以前に建築された木造建築物",
+        "耐震診断で耐震性不足と判定されたもの"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "都市計画課 計画担当",
+      "windowPhone": "092-584-1135",
+      "windowUrl": "https://www.city.kasuga.fukuoka.jp/kurashi/seikatsu/jutaku/1001327.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -34887,16 +34937,20 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "大野城市役所 都市整備部 建築住宅課",
-      "windowPhone": "092-580-1883",
-      "windowUrl": "https://www.city.onojo.fukuoka.jp/",
+      "hasSubsidy": true,
+      "name": "大野城市老朽危険空き家等除却促進事業",
+      "maxAmount": "最大50万円（費用の1/2以内）",
+      "conditions": [
+        "老朽危険度判定基準の評定100点以上の建物",
+        "建物の所有者・相続人",
+        "法人・市税滞納者は対象外"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "経済産業部 生活安全課 生活安全担当",
+      "windowPhone": "092-501-2211",
+      "windowUrl": "https://www.city.onojo.fukuoka.jp/s059/020/020/060/13500.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -34912,16 +34966,20 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "宗像市役所 都市計画課",
+      "hasSubsidy": true,
+      "name": "宗像市老朽空き家等除却促進事業補助金",
+      "maxAmount": "最大60万円（空家等対策促進区域）または最大30万円（費用の1/3以内）",
+      "conditions": [
+        "昭和56年5月31日以前に建築された老朽空き家等",
+        "1年以上居住などの使用がなされていないこと",
+        "倒壊や部材の落下のおそれがあるなど市の要件を満たすもの"
+      ],
+      "applicationPeriod": "令和7年5月12日〜令和8年1月30日（予算枠到達次第終了）",
+      "windowName": "建設部 建築指導課",
       "windowPhone": "0940-36-1111",
-      "windowUrl": "https://www.city.munakata.lg.jp/",
+      "windowUrl": "https://www.city.munakata.lg.jp/w059/030/010/010/20210719112337.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -34937,16 +34995,16 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
+      "hasSubsidy": false,
       "name": null,
       "maxAmount": null,
       "conditions": [],
       "applicationPeriod": null,
-      "windowName": "太宰府市役所 都市整備部 建設課",
+      "windowName": "都市計画課",
       "windowPhone": "092-921-2121",
-      "windowUrl": "https://www.city.dazaifu.lg.jp/",
-      "noSubsidyNote": null,
-      "notes": "※要確認"
+      "windowUrl": "https://www.city.dazaifu.lg.jp/soshiki/20/3566.html",
+      "noSubsidyNote": "太宰府市では老朽危険家屋等の解体補助金制度は設けられていません。空き家相談は都市計画課へ。",
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -34962,16 +35020,16 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
+      "hasSubsidy": false,
       "name": null,
       "maxAmount": null,
       "conditions": [],
       "applicationPeriod": null,
-      "windowName": "古賀市役所 都市計画課",
-      "windowPhone": "092-942-1111",
-      "windowUrl": "https://www.city.koga.fukuoka.jp/",
-      "noSubsidyNote": null,
-      "notes": "※要確認"
+      "windowName": "都市整備課",
+      "windowPhone": "092-942-1119",
+      "windowUrl": "https://www.city.koga.fukuoka.jp/cityhall/work/toshikeikaku/031.php",
+      "noSubsidyNote": "古賀市では老朽危険家屋等の解体補助金制度は確認できませんでした。詳細は都市整備課へお問い合わせください。",
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35012,16 +35070,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "うきは市役所 建設課",
-      "windowPhone": "0943-75-3000",
-      "windowUrl": "https://www.city.ukiha.fukuoka.jp/",
+      "hasSubsidy": true,
+      "name": "うきは市老朽危険家屋等除却促進事業費補助金",
+      "maxAmount": "最大50万円（費用の1/2以内）",
+      "conditions": [
+        "老朽危険家屋等の所有者または相続人",
+        "市税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
+      "windowPhone": "0943-75-3111",
+      "windowUrl": "https://www.city.ukiha.fukuoka.jp/kiji0036274/index.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35039,19 +35100,18 @@
     "subsidy": {
       "hasSubsidy": true,
       "name": "宮若市老朽危険空家等解体撤去補助金",
-      "maxAmount": "最大50万円（費用の一部）",
+      "maxAmount": "最大50万円",
       "conditions": [
-        "市内の老朽危険空家の所有者等",
-        "事前に建築都市課へ相談が必要",
-        "解体工事着手前の申請であること",
-        "市税等の滞納がないこと"
+        "市内の老朽危険空家の所有者または相続人",
+        "事前（申請前）に建築都市課へ相談",
+        "事後（解体工事着手済み）の申請は不可"
       ],
-      "applicationPeriod": "令和7年度（予算の範囲内）",
-      "windowName": "建築都市課",
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設都市部 建築都市課",
       "windowPhone": "0949-32-0510",
       "windowUrl": "https://www.city.miyawaka.lg.jp/teiju/kiji003447008/index.html",
       "noSubsidyNote": null,
-      "notes": "筑豊地域・炭鉱閉山後の空き家問題が深刻な地域。"
+      "notes": null
     },
     "garbage": {
       "hasService": true,
@@ -35071,17 +35131,15 @@
       "name": "嘉麻市特定空家等解体撤去補助金",
       "maxAmount": "詳細は窓口にお問い合わせください",
       "conditions": [
-        "倒壊等著しく保安上危険な特定空家等",
-        "老朽度評点100点以上と測定されるもの",
-        "建築物に所有権以外の権利が設定されていないこと（承諾があれば可）",
-        "市税等の滞納がないこと"
+        "特定空家等の所有者または相続人",
+        "市税の滞納がないこと"
       ],
-      "applicationPeriod": "令和7年度（予算の範囲内）",
-      "windowName": "防災対策課 消防安全係",
-      "windowPhone": "0948-42-7418",
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
+      "windowPhone": "0948-42-0914",
       "windowUrl": "https://www.city.kama.lg.jp/soshiki/4/3376.html",
       "noSubsidyNote": null,
-      "notes": "特定空家等のみが対象（すべての空き家が対象ではない）。"
+      "notes": null
     },
     "garbage": {
       "hasService": true,
@@ -35101,14 +35159,12 @@
       "name": "朝倉市不良空家等解体撤去補助金",
       "maxAmount": "詳細は窓口にお問い合わせください",
       "conditions": [
-        "市内に所在し、居住その他の使用がなされていない空家等",
-        "不良度判定の結果、不良空家等に該当するもの",
-        "申請前に都市計画課への事前相談が必要",
-        "市税等の滞納がないこと"
+        "不良空家等の所有者または相続人",
+        "市税の滞納がないこと"
       ],
-      "applicationPeriod": "令和7年度（予算の範囲内）",
-      "windowName": "都市計画課",
-      "windowPhone": "0946-22-1111",
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
+      "windowPhone": "0946-52-1111",
       "windowUrl": "https://www.city.asakura.lg.jp/www/contents/1522298697526/index.html",
       "noSubsidyNote": null,
       "notes": null
@@ -35127,16 +35183,20 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "みやま市役所 都市建設課",
-      "windowPhone": "0944-64-1500",
-      "windowUrl": "https://www.city.miyama.lg.jp/",
+      "hasSubsidy": true,
+      "name": "みやま市老朽危険家屋等除去促進事業",
+      "maxAmount": "最大45万円（費用の1/2以内）",
+      "conditions": [
+        "老朽危険家屋等の所有者若しくは所有者相続関係者等またはその委任を受けた者",
+        "暴力団等でないこと",
+        "対象物件が法人所有でないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
+      "windowPhone": "0944-64-1520",
+      "windowUrl": "https://www.city.miyama.lg.jp/s041/kurashi/080/030/20200108150000.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35154,14 +35214,13 @@
     "subsidy": {
       "hasSubsidy": true,
       "name": "糸島市老朽空き家等解体撤去費補助金",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "maxAmount": "最大50万円（費用の1/2以内）",
       "conditions": [
-        "市内に所在し、おおむね1年以上居住その他の使用がなされていない建築物",
-        "老朽空き家等の測定基準で評点100点以上",
-        "申請前に事前協議が必要",
-        "市税等の滞納がないこと"
+        "市内に所在し概ね1年以上居住使用がなされていない建築物",
+        "糸島市税の滞納がないこと",
+        "補助金の交付決定前に工事着手していないこと"
       ],
-      "applicationPeriod": "令和7年度（予算の範囲内）",
+      "applicationPeriod": "令和7年度（例年6月頃募集）",
       "windowName": "総務部 危機管理課 生活安全係",
       "windowPhone": "092-332-2110",
       "windowUrl": "https://www.city.itoshima.lg.jp/s004/010/010/030/040/20230307132444.html",
@@ -35183,21 +35242,18 @@
     "mascot": null,
     "subsidy": {
       "hasSubsidy": true,
-      "name": "大牟田市老朽危険家屋等除却促進事業補助金",
-      "maxAmount": "最大60万円（費用の1/2以内）※中心市街地RC造は最大150万円",
+      "name": "大牟田市老朽危険家屋等除却促進事業",
+      "maxAmount": "詳細は窓口にお問い合わせください",
       "conditions": [
-        "市内の老朽危険家屋等の所有者等",
-        "使用されていない建築物（空き家）",
-        "市が定める危険度基準を満たすもの",
-        "原則として全部を除却し更地にする工事であること",
-        "市税等の滞納がないこと"
+        "老朽危険家屋等の所有者または相続人",
+        "市税の滞納がないこと"
       ],
-      "applicationPeriod": "令和7年度（予算の範囲内）",
-      "windowName": "都市整備部 都市計画課",
-      "windowPhone": "0944-41-2222",
-      "windowUrl": "https://www.city.omuta.lg.jp/kiji003506/index.html",
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設政策課",
+      "windowPhone": "0944-41-2716",
+      "windowUrl": "https://www.city.omuta.lg.jp/hpkiji/pub/detail.aspx?c_id=5&id=506",
       "noSubsidyNote": null,
-      "notes": "炭鉱産業を背景とした密集地向けに中心市街地老朽建築物除却促進事業（最大150万円）も別途あり。"
+      "notes": null
     },
     "garbage": {
       "hasService": true,
@@ -35388,16 +35444,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "芦屋町役場 建設課",
-      "windowPhone": "093-223-0881",
-      "windowUrl": "https://www.town.ashiya.lg.jp/",
+      "hasSubsidy": true,
+      "name": "芦屋町老朽危険家屋等解体補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険家屋等の所有者または相続人",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
+      "windowPhone": "093-223-3551",
+      "windowUrl": "https://www.town.ashiya.lg.jp/soshiki/7/1233.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35413,16 +35472,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "水巻町役場 都市整備課",
+      "hasSubsidy": true,
+      "name": "水巻町老朽危険家屋等解体補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険家屋等の所有者または相続人",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
       "windowPhone": "093-201-4321",
-      "windowUrl": "https://www.town.mizumaki.lg.jp/",
+      "windowUrl": "https://www.town.mizumaki.lg.jp/s022/kurashi/080/070/20200109180000.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35463,16 +35525,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "遠賀町役場 まちづくり推進課",
+      "hasSubsidy": true,
+      "name": "遠賀町危険老朽家屋等解体補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険家屋等の所有者または相続人",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
       "windowPhone": "093-293-1234",
-      "windowUrl": "https://www.town.onga.lg.jp/",
+      "windowUrl": "https://www.town.onga.lg.jp/soshiki/12/1361.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35563,16 +35628,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "筑前町役場 まちづくり課",
-      "windowPhone": "0946-42-6605",
-      "windowUrl": "https://www.town.chikuzen.fukuoka.jp/",
+      "hasSubsidy": true,
+      "name": "筑前町老朽危険空家除却促進事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空家の所有者または相続人",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
+      "windowPhone": "0946-42-6810",
+      "windowUrl": "https://www.town.chikuzen.fukuoka.jp/S015/akiya/20210719143121.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35613,16 +35681,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "大刀洗町役場 建設課",
-      "windowPhone": "0942-77-2781",
-      "windowUrl": "https://www.town.tachiarai.fukuoka.jp/",
+      "hasSubsidy": true,
+      "name": "大刀洗町不良空家等除却補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "不良空家等の所有者または相続人",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
+      "windowPhone": "0942-77-2141",
+      "windowUrl": "https://www.town.tachiarai.fukuoka.jp/page/page_02210.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35638,16 +35709,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "大木町役場 地域づくり課",
+      "hasSubsidy": true,
+      "name": "大木町老朽空家除却補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽空家の所有者または相続人",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
       "windowPhone": "0944-32-1111",
-      "windowUrl": "https://www.town.oguki.fukuoka.jp/",
+      "windowUrl": "https://www.town.ooki.lg.jp/soshiki/sangyo/suishin/akiya/4166.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35663,16 +35737,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "広川町役場 建設産業課",
+      "hasSubsidy": true,
+      "name": "広川町老朽危険家屋等除却促進事業",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険家屋等の所有者または相続人",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
       "windowPhone": "0943-32-1111",
-      "windowUrl": "https://www.town.hirokawa.fukuoka.jp/",
+      "windowUrl": "https://www.town.hirokawa.fukuoka.jp/kurashi_tetsuzuki/machizukuri_kotsu/2/1855.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35688,16 +35765,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "香春町役場 建設課",
-      "windowPhone": "0947-32-8002",
-      "windowUrl": "https://www.town.kawara.fukuoka.jp/",
+      "hasSubsidy": true,
+      "name": "香春町空き家解体補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "空き家の所有者または相続人",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
+      "windowPhone": "0947-32-8401",
+      "windowUrl": "https://www.town.kawara.fukuoka.jp/s001/090/010/010/20240307164923.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35738,16 +35818,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "糸田町役場 総務課",
-      "windowPhone": "0947-26-0001",
-      "windowUrl": "https://www.town.itoda.fukuoka.jp/",
+      "hasSubsidy": true,
+      "name": "糸田町老朽危険空き家等解体撤去工事補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家等の所有者または相続人",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
+      "windowPhone": "0947-26-2011",
+      "windowUrl": "https://www.town.itoda.lg.jp/news/detail/1064/year:2023/back:1",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35913,16 +35996,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "吉富町役場 建設課",
-      "windowPhone": "0979-22-1111",
-      "windowUrl": "https://www.town.yoshitomi.fukuoka.jp/",
+      "hasSubsidy": true,
+      "name": "吉富町老朽危険空家等除却事業補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空家等の所有者または相続人",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
+      "windowPhone": "0979-24-3511",
+      "windowUrl": "https://www.town.yoshitomi.lg.jp/gyosei/chosei/v995/y209/jumin/g864/",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35938,16 +36024,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "上毛町役場 建設課",
+      "hasSubsidy": true,
+      "name": "上毛町老朽危険家屋等除去促進事業",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険家屋等の所有者または相続人",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
       "windowPhone": "0979-72-2111",
-      "windowUrl": "https://www.town.kamitsue.fukuoka.jp/",
+      "windowUrl": "https://www.town.koge.lg.jp/soshiki/chocho/6/gomi/3244.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -35963,16 +36052,19 @@
     "prefName": "福岡県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "築上町役場 建設課",
+      "hasSubsidy": true,
+      "name": "築上町老朽危険空き家除却費補助金",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "老朽危険空き家の所有者または相続人",
+        "町税の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度",
+      "windowName": "建設課",
       "windowPhone": "0930-56-0300",
-      "windowUrl": "https://www.town.chikujo.fukuoka.jp/",
+      "windowUrl": "https://www.town.chikujo.fukuoka.jp/s038/010/080/030/070/akiya_hojo.html",
       "noSubsidyNote": null,
-      "notes": "※要確認"
+      "notes": null
     },
     "garbage": {
       "hasService": null,
@@ -36646,7 +36738,7 @@
     "prefName": "沖縄県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
+      "hasSubsidy": false,
       "name": null,
       "maxAmount": null,
       "conditions": [],
@@ -36696,15 +36788,15 @@
     "prefName": "沖縄県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
+      "hasSubsidy": false,
       "name": null,
       "maxAmount": null,
       "conditions": [],
       "applicationPeriod": null,
-      "windowName": "浦添市役所",
-      "windowPhone": null,
-      "windowUrl": "https://www.city.urasoe.okinawa.jp",
-      "noSubsidyNote": null,
+      "windowName": "都市計画部住宅課",
+      "windowPhone": "098-876-1234",
+      "windowUrl": "https://www.city.urasoe.lg.jp/",
+      "noSubsidyNote": "浦添市では空き家解体（除却）補助金制度は確認されていません。",
       "notes": null
     },
     "garbage": {
@@ -36726,10 +36818,10 @@
       "maxAmount": null,
       "conditions": [],
       "applicationPeriod": null,
-      "windowName": "建設部 建築住宅課 建築相談係",
+      "windowName": "建設部建築住宅課建築相談係",
       "windowPhone": "0980-53-1212",
       "windowUrl": "https://www.city.nago.okinawa.jp/kurashi/2018102500029/",
-      "noSubsidyNote": "名護市では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修（リフォーム）補助制度はあります。詳細は建築住宅課にお問い合わせください。",
+      "noSubsidyNote": "名護市では空き家解体（除却）補助金制度は確認されていません。空き家住宅改修支援事業（リフォーム補助・上限50万円）は実施中です。",
       "notes": null
     },
     "garbage": {
@@ -36806,10 +36898,10 @@
       "maxAmount": null,
       "conditions": [],
       "applicationPeriod": null,
-      "windowName": "豊見城市役所",
-      "windowPhone": null,
-      "windowUrl": "https://www.city.tomigusuku.okinawa.jp",
-      "noSubsidyNote": "豊見城市では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修補助制度があります。詳細は市役所担当課にお問い合わせください。",
+      "windowName": "都市計画部都市計画課",
+      "windowPhone": "098-850-5332",
+      "windowUrl": "https://www.city.tomigusuku.lg.jp/",
+      "noSubsidyNote": "豊見城市では空き家解体（除却）補助金制度は確認されていません。住宅リフォーム支援事業（改修補助・上限20万円）は実施中です。",
       "notes": null
     },
     "garbage": {
@@ -36831,10 +36923,10 @@
       "maxAmount": null,
       "conditions": [],
       "applicationPeriod": null,
-      "windowName": "うるま市役所",
-      "windowPhone": null,
-      "windowUrl": "https://www.city.uruma.lg.jp",
-      "noSubsidyNote": "うるま市では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修補助に関する制度が一部あります。詳細は市役所担当課にお問い合わせください。",
+      "windowName": "都市建設部住宅課",
+      "windowPhone": "098-898-1111",
+      "windowUrl": "https://www.city.uruma.lg.jp/",
+      "noSubsidyNote": "うるま市では空き家解体（除却）補助金制度は確認されていません。島しょ地域空き家改修補助金（改修のみ・上限50万円）は存在します。",
       "notes": null
     },
     "garbage": {
@@ -36851,15 +36943,15 @@
     "prefName": "沖縄県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
+      "hasSubsidy": false,
       "name": null,
       "maxAmount": null,
       "conditions": [],
       "applicationPeriod": null,
-      "windowName": "宮古島市役所",
-      "windowPhone": null,
-      "windowUrl": "https://www.city.miyakojima.lg.jp",
-      "noSubsidyNote": null,
+      "windowName": "建設部建築課",
+      "windowPhone": "0980-79-9671",
+      "windowUrl": "https://www.city.miyakojima.lg.jp/soshiki/shityo/kensetsu/kenchiku/",
+      "noSubsidyNote": "宮古島市では空き家解体（除却）補助金制度は確認されていません。緊急経済対策住宅ストック活用支援事業（リフォーム補助・工事費20%・上限40万円）は実施中です。",
       "notes": null
     },
     "garbage": {
@@ -36881,10 +36973,10 @@
       "maxAmount": null,
       "conditions": [],
       "applicationPeriod": null,
-      "windowName": "南城市役所",
-      "windowPhone": null,
-      "windowUrl": "https://www.city.nanjo.okinawa.jp",
-      "noSubsidyNote": "南城市では現在、空き家解体を対象とした独自の補助金制度は設けられていません。詳細は市役所担当課にお問い合わせください。",
+      "windowName": "まちづくり推進課",
+      "windowPhone": "098-917-5394",
+      "windowUrl": "https://www.city.nanjo.okinawa.jp/kurashi/sumai/",
+      "noSubsidyNote": "南城市では空き家解体（除却）補助金制度は確認されていません。",
       "notes": null
     },
     "garbage": {
@@ -37131,10 +37223,10 @@
       "maxAmount": null,
       "conditions": [],
       "applicationPeriod": null,
-      "windowName": "読谷村役場",
-      "windowPhone": null,
-      "windowUrl": "https://www.vill.yomitan.okinawa.jp",
-      "noSubsidyNote": "読谷村では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修補助制度があります。詳細は村役場担当課にお問い合わせください。",
+      "windowName": "土木建築課 施設整備係",
+      "windowPhone": "098-982-9217",
+      "windowUrl": "https://www.vill.yomitan.okinawa.jp/soshiki/dobokukenchiku/gyomu/sumai/",
+      "noSubsidyNote": "読谷村では空き家解体（除却）補助金制度は確認されていません。住宅リフォーム支援事業（改修補助）は実施中です。",
       "notes": null
     },
     "garbage": {
@@ -37151,15 +37243,22 @@
     "prefName": "沖縄県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": false,
-      "name": null,
-      "maxAmount": null,
-      "conditions": [],
-      "applicationPeriod": null,
-      "windowName": "嘉手納町役場",
-      "windowPhone": null,
-      "windowUrl": "https://www.town.kadena.okinawa.jp",
-      "noSubsidyNote": "嘉手納町では現在、空き家解体を対象とした独自の補助金制度は設けられていません。空き家改修補助制度があります。詳細は町役場担当課にお問い合わせください。",
+      "hasSubsidy": true,
+      "name": "嘉手納町住宅除却支援補助金",
+      "maxAmount": "最大50万円",
+      "conditions": [
+        "税制上の耐用年数（RC造47年・木造22年）を経過した住宅",
+        "町課税台帳に登録されている住宅",
+        "除却建物に所有権以外の権利が設定されていないこと",
+        "原則として門・塀等を含めた敷地全体を更地にする工事",
+        "町税を滞納していないこと",
+        "店舗・事務所・共同住宅は対象外"
+      ],
+      "applicationPeriod": "令和7年度（令和7年6月2日〜11月28日、先着順・予算終了次第締切）",
+      "windowName": "企画財政課 定住対策係",
+      "windowPhone": "098-956-1111",
+      "windowUrl": "https://www.town.kadena.okinawa.jp/life/kur8040.html",
+      "noSubsidyNote": null,
       "notes": null
     },
     "garbage": {
@@ -37251,15 +37350,15 @@
     "prefName": "沖縄県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
+      "hasSubsidy": false,
       "name": null,
       "maxAmount": null,
       "conditions": [],
       "applicationPeriod": null,
-      "windowName": "西原町役場",
-      "windowPhone": null,
-      "windowUrl": "https://www.town.nishihara.okinawa.jp",
-      "noSubsidyNote": null,
+      "windowName": "建設課",
+      "windowPhone": "098-945-5033",
+      "windowUrl": "https://www.town.nishihara.okinawa.jp/",
+      "noSubsidyNote": "西原町では空き家解体（除却）補助金制度は確認されていません。",
       "notes": null
     },
     "garbage": {
@@ -37276,15 +37375,15 @@
     "prefName": "沖縄県",
     "mascot": null,
     "subsidy": {
-      "hasSubsidy": null,
+      "hasSubsidy": false,
       "name": null,
       "maxAmount": null,
       "conditions": [],
       "applicationPeriod": null,
-      "windowName": "与那原町役場",
-      "windowPhone": null,
-      "windowUrl": "https://www.town.yonabaru.okinawa.jp",
-      "noSubsidyNote": null,
+      "windowName": "まちづくり課",
+      "windowPhone": "098-945-7244",
+      "windowUrl": "https://www.town.yonabaru.okinawa.jp/soshiki/13/1505.html",
+      "noSubsidyNote": "与那原町では空き家解体（除却）補助金制度は確認されていません。住宅リフォーム支援事業（改修補助）は実施中です。",
       "notes": null
     },
     "garbage": {
@@ -37689,18 +37788,20 @@
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "危険空家等の解体撤去事業補助金",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "name": "危険空家等の解体撤去事業補助制度",
+      "maxAmount": "最大30万円（費用の30/100以内）",
       "conditions": [
-        "空家等対策推進特別措置法・市条例に基づく助言・指導を受けた空き家",
-        "市内の解体撤去業者（市内に事業所を有する業者）を利用すること",
-        "解体撤去費用が30万円以上であること",
-        "市税の滞納がないこと"
+        "市内に存する危険空家等の所有者または委任を受けた者",
+        "市税に滞納がないこと",
+        "解体撤去経費が30万円以上で市内業者が行う工事"
       ],
       "officialUrl": "https://www.city.makurazaki.lg.jp/soshiki/soumu/11057.html",
       "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
-      "windowName": "まちづくり課",
-      "notes": "※要確認：補助率・上限額は枕崎市役所窓口に直接お問い合わせください。"
+      "windowName": "総務課 危機管理対策係",
+      "notes": "※要確認：補助率・上限額は枕崎市役所窓口に直接お問い合わせください。",
+      "windowPhone": "0993-76-1086",
+      "windowUrl": "https://www.city.makurazaki.lg.jp/soshiki/soumu/11057.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.city.makurazaki.lg.jp/soshiki/soumu/11057.html"
@@ -37716,19 +37817,21 @@
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "阿久根市危険空家等解体撤去事業補助金",
+      "name": "危険空家等解体撤去事業補助金",
       "maxAmount": "最大60万円（費用の2/3以内）",
       "conditions": [
-        "現在空き家であり主要構造部が朽ちて周囲に危険を及ぼすおそれがある建物",
-        "危険度判定表による評点が100点以上の建物",
-        "抵当権その他第三者の権利が設定されていないこと",
-        "解体撤去費用が30万円以上であること",
-        "市税の滞納がないこと"
+        "危険空き家の所有者または委任を受けた者",
+        "市内の解体撤去業者を利用すること",
+        "市税等の滞納がないこと",
+        "危険度判定表による評点が100点以上",
+        "解体撤去経費が30万円以上"
       ],
       "officialUrl": "https://www.city.akune.lg.jp/soshikikarasagasu/toshikensetsuka/zyutakutaisakukakari/2/1/1117.html",
       "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
       "windowName": "都市建設課 住宅対策係",
-      "windowPhone": "0996-73-1189"
+      "windowPhone": "0996-73-1189",
+      "windowUrl": "https://www.city.akune.lg.jp/soshikikarasagasu/toshikensetsuka/zyutakutaisakukakari/2/1/1117.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.city.akune.lg.jp/soshikikarasagasu/toshikensetsuka/zyutakutaisakukakari/2/1/1117.html",
@@ -37774,18 +37877,21 @@
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "危険空家等の解体撤去工事補助金",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "name": "危険空家等解体撤去工事補助金",
+      "maxAmount": "最大30万円（住宅：費用の1/3以内、非住宅は15万円）",
       "conditions": [
-        "危険空家等の解体撤去工事に係る費用の一部補助",
-        "市税の滞納がないこと",
-        "工事着手前に申請すること"
+        "市の調査で不良度が基準を超えた空家の所有者または相続人",
+        "市税等を滞納していないこと",
+        "市内業者による解体工事で費用が30万円以上",
+        "全部解体のみ対象"
       ],
       "officialUrl": "https://www.city.ibusuki.lg.jp/main/kyosei/bosai/kiken-akiya/page027827.html",
       "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
-      "windowName": "建築課",
+      "windowName": "建設部 建築課",
       "windowPhone": "0993-22-2111",
-      "notes": "※要確認：補助率・上限額は指宿市役所窓口に直接お問い合わせください。"
+      "notes": "※要確認：補助率・上限額は指宿市役所窓口に直接お問い合わせください。",
+      "windowUrl": "https://www.city.ibusuki.lg.jp/main/kyosei/bosai/kiken-akiya/page027827.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.city.ibusuki.lg.jp/main/kyosei/bosai/kiken-akiya/page027827.html",
@@ -37802,8 +37908,15 @@
     },
     "subsidy": {
       "hasSubsidy": null,
-      "noSubsidyNote": "※種子島の離島のため制度詳細は各市役所に直接お問い合わせください。",
-      "notes": "※種子島の離島のため制度詳細は各市役所に直接お問い合わせください。"
+      "noSubsidyNote": "※離島のため制度詳細は各市町役場に直接お問い合わせください。",
+      "notes": "※種子島の離島のため制度詳細は各市役所に直接お問い合わせください。",
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": null,
+      "windowPhone": null,
+      "windowUrl": "https://www.city.nishinoomote.lg.jp"
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E8%A5%BF%E4%B9%8B%E8%A1%A8%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -37819,16 +37932,19 @@
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "危険空き家解体撤去補助金",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "name": "垂水市空き家解体撤去事業補助金",
+      "maxAmount": "最大30万円（一般解体：費用の30%以内）／新築目的解体は最大50万円（費用の50%以内）",
       "conditions": [
-        "危険な状態の空き家であること",
-        "市税の滞納がないこと",
-        "工事着手前に申請すること"
+        "市内にある個人所有の空き家の所有者",
+        "市内業者による工事",
+        "住宅のみ対象（工事費30万円以上）"
       ],
-      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
-      "windowName": "担当課（建築・まちづくり関連）",
-      "notes": "※要確認：制度詳細・補助率・上限額は垂水市役所に直接お問い合わせください。"
+      "applicationPeriod": "令和7年4月1日〜12月26日（予算に到達した時点で終了）",
+      "windowName": "土木課 建築係",
+      "notes": "※要確認：制度詳細・補助率・上限額は垂水市役所に直接お問い合わせください。",
+      "windowPhone": "0994-32-1111",
+      "windowUrl": "https://www.city.tarumizu.lg.jp/kensetsu/kurashi/machi/akiya/akiyakaitai.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E5%9E%82%E6%B0%B4%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -37872,7 +37988,19 @@
       "localRiskText": "日置市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": null
+      "hasSubsidy": true,
+      "name": "危険空家等除却事業費補助金",
+      "maxAmount": "最大30万円（費用の30/100以内）",
+      "conditions": [
+        "特定空家等または不良住宅の所有者または相続人",
+        "市税その他市の徴収金に滞納がないこと",
+        "市内解体工事業者による工事で補助対象経費30万円以上"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "総務企画部 総務課 防災係",
+      "windowPhone": "099-248-9401",
+      "windowUrl": "https://www.city.hioki.kagoshima.jp/bousai/kurashi/tetsuzuki/bousai/kaitaihojokin.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E6%97%A5%E7%BD%AE%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -37888,19 +38016,20 @@
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "曽於市危険廃屋解体撤去補助金",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "name": "危険廃屋解体撤去補助金",
+      "maxAmount": "最大40万円（費用の30%以内）",
       "conditions": [
-        "倒壊のおそれがある危険な廃屋であること",
-        "市税の滞納がないこと",
-        "工事着手前に事前審査申請が必要",
-        "予算の範囲内で交付（申請1回限り）"
+        "所有者が居住していないまたは使用していない家屋",
+        "工事経費が30万円以上の市内業者による工事",
+        "特定空家等に指定されている建物は対象外"
       ],
       "officialUrl": "https://www.city.soo.kagoshima.jp/kurashi/kurashisumai/zyuutakuhozyo/kikennhaioku.html",
-      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "applicationPeriod": "令和7年度（予算に到達した時点で終了）",
       "windowName": "まちづくり推進課",
       "windowPhone": "0986-76-8874",
-      "notes": "※要確認：補助率・上限額は曽於市役所窓口に直接お問い合わせください。"
+      "notes": "※要確認：補助率・上限額は曽於市役所窓口に直接お問い合わせください。",
+      "windowUrl": "https://www.city.soo.kagoshima.jp/kurashi/kurashisumai/zyuutakuhozyo/kikennhaioku.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.city.soo.kagoshima.jp/kurashi/kurashisumai/zyuutakuhozyo/kikennhaioku.html",
@@ -37945,7 +38074,19 @@
       "localRiskText": "いちき串木野市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": null
+      "hasSubsidy": true,
+      "name": "危険廃屋等解体撤去工事補助金",
+      "maxAmount": "最大30万円（危険廃屋認定：費用の1/3以内）／一般空き家は最大15万円",
+      "conditions": [
+        "1年以上使用されていない住宅または危険廃屋認定物件の所有者",
+        "解体費用が30万円以上",
+        "市内業者による工事"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "企画政策課 企画調整係",
+      "windowPhone": "0996-33-5628",
+      "windowUrl": "https://www.city.ichikikushikino.lg.jp/seisaku1/akiya_sien.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E3%81%84%E3%81%A1%E3%81%8D%E4%B8%B2%E6%9C%A8%E9%87%8E%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -37961,18 +38102,20 @@
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "南さつま市危険廃屋等解体補助事業",
+      "name": "危険廃屋等解体補助事業補助金",
       "maxAmount": "最大30万円（費用の1/3以内）",
       "conditions": [
-        "老朽により危険となった廃屋等の所有者等（自然災害による全壊・半壊等も対象）",
-        "解体経費が10万円以上であること",
-        "住宅以外の建物単独の解体は原則対象外（住宅との同時解体は可）",
-        "市税の滞納がないこと",
-        "工事着手前に申請すること"
+        "廃屋または家屋の所有者等（解体経費10万円以上）",
+        "住宅以外の建物のみは対象外",
+        "市内業者による工事",
+        "解体後1年間は土地の売却・建物建設不可"
       ],
       "officialUrl": "https://www.city.minamisatsuma.lg.jp/living/bosai-kotsu/e022367.html",
       "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
-      "windowName": "建築住宅課"
+      "windowName": "総務課 自治防災係",
+      "windowPhone": "0993-76-1501",
+      "windowUrl": "https://www.city.minamisatsuma.lg.jp/living/bosai-kotsu/e022367.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.city.minamisatsuma.lg.jp/living/bosai-kotsu/e022367.html"
@@ -37987,7 +38130,20 @@
       "localRiskText": "志布志市の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": null
+      "hasSubsidy": true,
+      "name": "危険廃屋解体撤去補助事業補助金",
+      "maxAmount": "最大30万円（住宅：費用の1/3以内）／附属家屋は最大15万円",
+      "conditions": [
+        "居住・使用されておらず周囲に危険な恐れのある市内個人所有建物",
+        "工事費30万円以上で市内の登録解体事業者による工事",
+        "市税・市への債務に滞納がないこと",
+        "申請前に着工していないこと"
+      ],
+      "applicationPeriod": "令和7年4月1日〜（予算額に達し次第終了）",
+      "windowName": "建設課 都市計画グループ",
+      "windowPhone": "099-474-1111",
+      "windowUrl": "https://www.city.shibushi.lg.jp/soshiki/12/index-2.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E5%BF%97%E5%B8%83%E5%BF%97%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -38020,16 +38176,19 @@
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "危険空き家解体撤去補助金",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "name": "空家等適正管理支援事業費（除却）補助金",
+      "maxAmount": "最大30万円（費用の1/3以内）",
       "conditions": [
-        "危険な状態の空き家であること",
-        "市税の滞納がないこと",
-        "工事着手前に申請すること"
+        "空家法の特定空家（勧告を受けた特定空家等を除く）",
+        "空家の所有者（個人）または所有者の承諾を受けた者",
+        "市内施工業者による工事"
       ],
       "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
-      "windowName": "担当課（建築・まちづくり関連）",
-      "notes": "※要確認：制度詳細・補助率・上限額は南九州市役所に直接お問い合わせください。"
+      "windowName": "防災安全課",
+      "notes": "※要確認：制度詳細・補助率・上限額は南九州市役所に直接お問い合わせください。",
+      "windowPhone": "0993-83-2511",
+      "windowUrl": "https://www.city.minamikyushu.lg.jp/soshikikarasagasu/bosaianzenka/kotsuubosai/4/153.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E4%B9%9D%E5%B7%9E%E5%B8%82%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -38070,18 +38229,20 @@
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "姶良市危険空家の解体撤去工事に係る補助制度",
+      "name": "危険空家の解体撤去工事に係る補助金",
       "maxAmount": "最大30万円（費用の1/3以内）",
       "conditions": [
-        "不良度評点が100点以上の危険空き家",
-        "抵当権その他権利が設定されていないこと",
-        "1年以上未使用の建物",
-        "市税の滞納がないこと",
-        "工事着手前に申請すること（単年度内に完了が必要）"
+        "不良度評点100点以上の市内木造危険空家の所有者または相続人",
+        "市税等の滞納がないこと",
+        "市内業者による解体工事で費用30万円以上（先着順）",
+        "年度内に申請・実績報告が完了すること"
       ],
       "officialUrl": "https://www.city.aira.lg.jp/kenchiku/kurashi/sumai/kenchiku/akiyakaitaihojo.html",
-      "applicationPeriod": "令和7年度（年度内のできるだけ早い時期に申請すること）",
-      "windowName": "建築住宅課"
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設部 建築住宅課 建築係",
+      "windowPhone": "0995-66-3409",
+      "windowUrl": "https://www.city.aira.lg.jp/kenchiku/kurashi/sumai/kenchiku/akiyakaitaihojo.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.city.aira.lg.jp/kenchiku/kurashi/sumai/kenchiku/akiyakaitaihojo.html"
@@ -38097,20 +38258,21 @@
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "さつま町危険家屋解体撤去補助金",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "name": "危険家屋解体撤去補助金",
+      "maxAmount": "最大20万円（費用の1/3以内、特に危険なものは最大40万円）",
       "conditions": [
-        "屋根・柱などの主要構造物が朽ちるなどにより使用不能な建物",
-        "他の公共事業等の補償対象となっていないこと",
-        "解体撤去費用が30万円以上の工事",
+        "屋根・柱などの主要構造部が朽ちる等により使用不能な危険家屋",
+        "解体撤去費用が30万円以上",
         "町内の解体撤去登録業者を利用すること",
-        "工事着手前に事前審査申請書を提出すること"
+        "申請者に町税等の滞納がないこと"
       ],
       "officialUrl": "https://www.satsuma-net.jp/kenchi/kurashi/machi/sumai/sesaku/hojokin.html",
-      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "applicationPeriod": "令和7年度（〜2025年9月10日頃、予算がなくなり次第終了）",
       "windowName": "建設課 建築係",
       "windowPhone": "0996-26-1829",
-      "notes": "※要確認：補助率・上限額は窓口に直接お問い合わせください。"
+      "notes": "※要確認：補助率・上限額は窓口に直接お問い合わせください。",
+      "windowUrl": "https://www.satsuma-net.jp/kenchi/kurashi/machi/sumai/sesaku/hojokin.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.satsuma-net.jp/kenchi/kurashi/machi/sumai/sesaku/hojokin.html",
@@ -38126,7 +38288,20 @@
       "localRiskText": "長島町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": null
+      "hasSubsidy": true,
+      "name": "危険空家等解体撤去事業補助金",
+      "maxAmount": "費用の80%以内（上限額は現地調査後に決定）",
+      "conditions": [
+        "老朽化等により危険な状態にある空き家",
+        "公共事業などの補助対象になっていないこと",
+        "火災が原因でないこと",
+        "町税等の滞納がないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算の範囲内）",
+      "windowName": "景観推進課 建設係",
+      "windowPhone": "0996-86-1136",
+      "windowUrl": "https://www.town.nagashima.lg.jp",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E9%95%B7%E5%B3%B6%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -38141,7 +38316,19 @@
       "localRiskText": "湧水町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": null
+      "hasSubsidy": true,
+      "name": "湧水町空家リフォーム支援事業補助金（解体撤去）",
+      "maxAmount": "詳細は窓口にお問い合わせください",
+      "conditions": [
+        "湧水町空家・空地バンクに登録し売買または賃貸借契約を締結した物件",
+        "解体撤去工事費用が30万円以上",
+        "公共工事による補償対象外"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "商工観光PR課 移住定住推進室",
+      "windowPhone": "0995-74-3111",
+      "windowUrl": "https://www.town.yusui.kagoshima.jp/soshiki/34/768.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E6%B9%A7%E6%B0%B4%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -38156,7 +38343,20 @@
       "localRiskText": "大崎町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": null
+      "hasSubsidy": true,
+      "name": "危険家屋解体補助金",
+      "maxAmount": "最大30万円（費用の1/2以内）",
+      "conditions": [
+        "町内の木造建築物で居住していない常態（公道に面し人家密集地にある）",
+        "特定空家等でないこと",
+        "家屋の所有者（相続人含む）または委任を受けた者",
+        "町税等を滞納していないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "建設課 管理係",
+      "windowPhone": "099-476-1111",
+      "windowUrl": "https://www.town.kagoshima-osaki.lg.jp",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E5%A4%A7%E5%B4%8E%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -38171,7 +38371,19 @@
       "localRiskText": "東串良町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": null
+      "hasSubsidy": true,
+      "name": "危険空き家等解体撤去事業補助金",
+      "maxAmount": "最大30万円（費用の一部）",
+      "conditions": [
+        "危険度判定で評価点数100点以上の危険空き家",
+        "町内に事務所または事業所を有する業者に依頼すること",
+        "所有権以外の権利が設定されていないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算の範囲内）",
+      "windowName": "東串良町役場",
+      "windowPhone": "0994-63-3111",
+      "windowUrl": "https://www.higashikushira.com/docs/2025010700014",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E6%9D%B1%E4%B8%B2%E8%89%AF%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -38186,7 +38398,20 @@
       "localRiskText": "錦江町の補助金・粗大ゴミの詳細は自治体の案内で確認してみてね。"
     },
     "subsidy": {
-      "hasSubsidy": null
+      "hasSubsidy": true,
+      "name": "空き家解体撤去事業補助金",
+      "maxAmount": "最大30万円（費用の30%以内）",
+      "conditions": [
+        "建築後10年以上かつ1年以上未居住の住宅（工事費30万円以上）",
+        "錦江町建設業者等級別表登録業者による工事",
+        "町税等の未納がないこと",
+        "抵当権等が設定されていないこと"
+      ],
+      "applicationPeriod": "令和7年4月1日〜（予算がなくなり次第終了）",
+      "windowName": "政策企画課 政策企画チーム",
+      "windowPhone": "0994-22-3032",
+      "windowUrl": "https://www.town.kinko.lg.jp/seisaku-h/kurashi/tochi/shisaku/kaitainitsuite.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E9%8C%A6%E6%B1%9F%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -38202,16 +38427,20 @@
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "危険空き家解体撤去補助金",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "name": "空き家等解体撤去事業補助金",
+      "maxAmount": "最大30万円（住宅：費用の30%以内）",
       "conditions": [
-        "危険な状態の空き家であること",
-        "町税の滞納がないこと",
-        "工事着手前に申請すること"
+        "建築後10年以上かつ1年以上未居住の住宅（工事費30万円以上）",
+        "町内業者による工事",
+        "申請者に町税等の滞納がないこと",
+        "解体後に建物の一部や産業廃棄物等を残置しないこと"
       ],
       "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
-      "windowName": "担当課（建築・まちづくり関連）",
-      "notes": "※要確認：制度詳細・補助率・上限額は南大隅町役場に直接お問い合わせください。"
+      "windowName": "建設課 住宅係",
+      "notes": "※要確認：制度詳細・補助率・上限額は南大隅町役場に直接お問い合わせください。",
+      "windowPhone": "0994-24-3129",
+      "windowUrl": "https://www.town.minamiosumi.lg.jp/kensetsu/kurashi/sumai/jutakujosei/akiyakaitai.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E5%A4%A7%E9%9A%85%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -38227,16 +38456,20 @@
     },
     "subsidy": {
       "hasSubsidy": true,
-      "name": "危険空き家解体撤去補助金",
-      "maxAmount": "詳細は窓口にお問い合わせください",
+      "name": "危険廃屋解体撤去工事助成金",
+      "maxAmount": "最大30万円（費用の1/3以内）",
       "conditions": [
-        "危険な状態の空き家であること",
-        "町税の滞納がないこと",
-        "工事着手前に申請すること"
+        "所有者等が現に居住その他の用に供しない廃屋で周囲に危険を及ぼすおそれがあるもの",
+        "主要構造部が朽ちる等により使用不能となった建物",
+        "抵当権その他第三者の権利が設定されていないもの",
+        "申請前の着手は対象外"
       ],
-      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
-      "windowName": "担当課（建築・まちづくり関連）",
-      "notes": "※要確認：制度詳細・補助率・上限額は肝付町役場に直接お問い合わせください。"
+      "applicationPeriod": "令和7年度（予算の範囲内）",
+      "windowName": "建設課 住宅係",
+      "notes": "※要確認：制度詳細・補助率・上限額は肝付町役場に直接お問い合わせください。",
+      "windowPhone": "0994-65-8424",
+      "windowUrl": "https://kimotsuki-town.jp/soshiki/kensetsuka/jutaku/1_1/1255.html",
+      "noSubsidyNote": null
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E8%82%9D%E4%BB%98%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -38252,8 +38485,15 @@
     },
     "subsidy": {
       "hasSubsidy": null,
-      "noSubsidyNote": "※種子島の離島のため制度詳細は各町役場に直接お問い合わせください。",
-      "notes": "※種子島の離島のため制度詳細は各町役場に直接お問い合わせください。"
+      "noSubsidyNote": "※離島のため制度詳細は各市町役場に直接お問い合わせください。",
+      "notes": "※種子島の離島のため制度詳細は各町役場に直接お問い合わせください。",
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": null,
+      "windowPhone": null,
+      "windowUrl": "https://www.town.nakatane.kagoshima.jp"
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E4%B8%AD%E7%A8%AE%E5%AD%90%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
@@ -38269,8 +38509,15 @@
     },
     "subsidy": {
       "hasSubsidy": null,
-      "noSubsidyNote": "※種子島の離島のため制度詳細は各町役場に直接お問い合わせください。",
-      "notes": "※種子島の離島のため制度詳細は各町役場に直接お問い合わせください。"
+      "noSubsidyNote": "※離島のため制度詳細は各市町役場に直接お問い合わせください。",
+      "notes": "※種子島の離島のため制度詳細は各町役場に直接お問い合わせください。",
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": null,
+      "windowPhone": null,
+      "windowUrl": "https://www.town.minamitane.kagoshima.jp"
     },
     "garbage": {
       "officialUrl": "https://www.google.com/search?q=%E5%8D%97%E7%A8%AE%E5%AD%90%E7%94%BA%20%E7%B2%97%E5%A4%A7%E3%82%B4%E3%83%9F"
