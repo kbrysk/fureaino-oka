@@ -1,0 +1,259 @@
+[
+  {
+    "cityId": "nagahama",
+    "cityName": "長浜市",
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "住宅課",
+      "windowPhone": "0749-65-6533",
+      "windowUrl": "https://www.city.nagahama.lg.jp/0000011356.html",
+      "noSubsidyNote": "長浜市では現在、個人向けの空き家解体補助金制度はありません。空き家の活用・改修補助金制度はあります。",
+      "notes": null
+    }
+  },
+  {
+    "cityId": "omihachiman",
+    "cityName": "近江八幡市",
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "都市整備部 住宅施策推進室",
+      "windowPhone": "0748-36-5787",
+      "windowUrl": "https://www.city.omihachiman.lg.jp/soshiki/jyutakusesaku/akiyataisaku/20501.html",
+      "noSubsidyNote": null,
+      "notes": "※公式サイトで解体補助金の記載が確認できず。要確認"
+    }
+  },
+  {
+    "cityId": "moriyama",
+    "cityName": "守山市",
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "都市建設部 建築課",
+      "windowPhone": "077-583-2525",
+      "windowUrl": "https://www.city.moriyama.lg.jp/kurashitetsuzuki/juken/1001868/index.html",
+      "noSubsidyNote": "守山市では現在、空き家専用の解体補助金制度はありません。旧耐震木造住宅の耐震対策除却補助（昭和56年以前・耐震評点0.7未満）のみあります。",
+      "notes": null
+    }
+  },
+  {
+    "cityId": "ritto",
+    "cityName": "栗東市",
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "住宅課（住宅係）",
+      "windowPhone": "077-551-0347",
+      "windowUrl": "https://www.city.ritto.lg.jp/soshiki/kensetsu/jutaku/gyoumu/akiya/index.html",
+      "noSubsidyNote": "栗東市では現在、空き家解体補助金制度はありません。",
+      "notes": null
+    }
+  },
+  {
+    "cityId": "koka",
+    "cityName": "甲賀市",
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "甲賀市空き家住宅等除却事業補助金",
+      "maxAmount": "最大80万円（費用の10分の8以内）",
+      "conditions": [
+        "不良住宅（住宅地区改良法施行規則による評点100以上）、または除却後の跡地を地域活性化のため10年以上利用する空き家住宅であること",
+        "除却対象建築物の名義人（または相続人）であること",
+        "市税の滞納がないこと",
+        "除却工事を令和8年2月28日までに完了する見込みのあること",
+        "市内に本店・営業所を置く建設業許可取得の法人または個人事業主が施工すること"
+      ],
+      "applicationPeriod": "令和7年6月2日〜6月20日（予算がなくなり次第終了）",
+      "windowName": "建設部 住宅建築課 空家対策室",
+      "windowPhone": "0748-69-2214",
+      "windowUrl": "https://www.city.koka.lg.jp/13175.htm",
+      "noSubsidyNote": null,
+      "notes": "令和7年度受付は終了済"
+    }
+  },
+  {
+    "cityId": "yasu",
+    "cityName": "野洲市",
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "野洲市空家等解体支援補助金",
+      "maxAmount": "最大10万円（費用の3分の1以内）",
+      "conditions": [
+        "昭和56年5月31日以前に建築された空家であること",
+        "市内に存する住居または店舗で1年以上使用されていないこと",
+        "個人が所有する空家であること",
+        "空家の所有者または相続人（他に相続人がいる場合は全員の委任状が必要）",
+        "市税の滞納がないこと",
+        "解体後に敷地を更地にすること（建築リサイクル法に基づく工事）"
+      ],
+      "applicationPeriod": "令和7年5月1日〜9月30日（予定件数に達し次第終了）",
+      "windowName": "都市建設部 建築住宅課",
+      "windowPhone": "077-587-6322",
+      "windowUrl": "https://www.city.yasu.lg.jp/soshiki/juutaku/akiya/1681267068214.html",
+      "noSubsidyNote": null,
+      "notes": "令和7年度は予定件数に達し受付終了済"
+    }
+  },
+  {
+    "cityId": "konan",
+    "cityName": "湖南市",
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "湖南市特定空家等除却支援事業補助金",
+      "maxAmount": "要確認（特定空家等限定）",
+      "conditions": [
+        "市長が特定空家等と認定した空家等、またはそれに準ずる空家等であること",
+        "所有者または相続人であること",
+        "市税の滞納がないこと"
+      ],
+      "applicationPeriod": "要確認",
+      "windowName": "都市建設部 住宅課 住宅・空家対策係",
+      "windowPhone": "0748-71-2349",
+      "windowUrl": "https://www.city.shiga-konan.lg.jp/soshiki/kensetsu_keizai/jyuutaku/2_1/akiyataisaku/index.html",
+      "noSubsidyNote": null,
+      "notes": "※特定空家等に限定された制度。一般空き家の解体補助金は不明。要確認"
+    }
+  },
+  {
+    "cityId": "takashima",
+    "cityName": "高島市",
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "市民協働課",
+      "windowPhone": "0740-25-8526",
+      "windowUrl": "https://www.city.takashima.lg.jp/kurashi_tetsuzuki/sumai/1/index.html",
+      "noSubsidyNote": null,
+      "notes": "※公式サイトで解体補助金の記載が確認できず。要確認"
+    }
+  },
+  {
+    "cityId": "higashiomi",
+    "cityName": "東近江市",
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "東近江市空家等解体費補助金",
+      "maxAmount": "最大50万円（工事費用の5分の1以内）",
+      "conditions": [
+        "築40年を超える老朽化した空家等であること",
+        "住居や倉庫などとして使用されていないことが常態であること",
+        "東近江市内の解体事業者が施工する工事であること",
+        "敷地内の建築物・動産などのすべてを解体・撤去し、原則として更地にすること",
+        "解体しようとする建築物の所有者（共有者等がいる場合は全員の同意が必要）"
+      ],
+      "applicationPeriod": "令和7年度（毎年7月頃・予算がなくなり次第終了）",
+      "windowName": "都市整備部 住宅課 空家対策推進係",
+      "windowPhone": "0748-24-5669",
+      "windowUrl": "https://www.city.higashiomi.shiga.jp/kurashi_tetsuzuki/sumai/1003600/1003605.html",
+      "noSubsidyNote": null,
+      "notes": "※令和6年度確認済。令和7年度継続の可能性が高いが公式発表要確認"
+    }
+  },
+  {
+    "cityId": "maibara",
+    "cityName": "米原市",
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "米原市空家等除却支援補助金",
+      "maxAmount": "要確認",
+      "conditions": [
+        "将来的に周辺に悪影響を及ぼすおそれのある空家であること",
+        "所有者等であること",
+        "市税の滞納がないこと"
+      ],
+      "applicationPeriod": "要確認",
+      "windowName": "まち整備部 シティセールス課",
+      "windowPhone": "0749-53-5140",
+      "windowUrl": "https://www.city.maibara.lg.jp/soshiki/keizai_kankyo/shoko_kanko/ijyu/20931.html",
+      "noSubsidyNote": null,
+      "notes": "※制度の存在は令和7年度一覧で確認済。補助額・申請期間の詳細は担当課に要確認"
+    }
+  },
+  {
+    "cityId": "hino",
+    "cityName": "日野町",
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "企画振興課",
+      "windowPhone": "0748-52-6552",
+      "windowUrl": "https://www.town.shiga-hino.lg.jp/0000003099.html",
+      "noSubsidyNote": "日野町では現在、空き家解体補助金制度はありません。空き家・空き店舗活用支援事業補助金（改修）はあります。",
+      "notes": null
+    }
+  },
+  {
+    "cityId": "ryuo",
+    "cityName": "竜王町",
+    "subsidy": {
+      "hasSubsidy": null,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "建設計画課",
+      "windowPhone": "0748-58-3716",
+      "windowUrl": "https://www.town.ryuoh.shiga.jp/life/sumai/jyouhou_bank.html",
+      "noSubsidyNote": null,
+      "notes": "※公式サイトで解体補助金の記載が確認できず。要確認"
+    }
+  },
+  {
+    "cityId": "aisho",
+    "cityName": "愛荘町",
+    "subsidy": {
+      "hasSubsidy": false,
+      "name": null,
+      "maxAmount": null,
+      "conditions": [],
+      "applicationPeriod": null,
+      "windowName": "みらい創生課",
+      "windowPhone": "0749-29-9046",
+      "windowUrl": "https://www.town.aisho.shiga.jp/soshiki/mirai/2/1_1/1/7496.html",
+      "noSubsidyNote": "愛荘町では現在、空き家解体補助金制度はありません。空き家バンク登録物件に限り改修補助（上限200万円）・家財処分補助（上限10万円）があります。",
+      "notes": null
+    }
+  },
+  {
+    "cityId": "taga",
+    "cityName": "多賀町",
+    "subsidy": {
+      "hasSubsidy": true,
+      "name": "多賀町空き家住宅等除却支援事業補助金",
+      "maxAmount": "最大50万円（補助基本額の2分の1以内）",
+      "conditions": [
+        "現に使用されておらず今後も居住の見込みがない住宅であること",
+        "除却後の跡地を地元自治会へ10年以上貸与または多賀町に寄付すること、または不良住宅（住宅地区改良法による評点100以上）であること",
+        "所有者または相続人であること（法人は対象外）",
+        "申請年度内に工事を完了すること",
+        "補助金交付決定前に着工していないこと"
+      ],
+      "applicationPeriod": "令和7年度（予算がなくなり次第終了）",
+      "windowName": "企画課",
+      "windowPhone": "0749-48-8122",
+      "windowUrl": "https://www.town.taga.lg.jp/contents_detail.php?frmId=159",
+      "noSubsidyNote": null,
+      "notes": null
+    }
+  }
+]
