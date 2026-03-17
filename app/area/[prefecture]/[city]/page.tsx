@@ -68,12 +68,12 @@ export async function generateMetadata({ params }: Props) {
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
   const canonical = getCanonicalUrl(`/area/${prefecture}/${city}`);
   if (!area) return { title: pageTitle("地域情報"), alternates: { canonical } };
-  const title = `【2026年最新】${data.cityName}の実家じまい・遺品整理｜補助金・粗大ゴミ・費用相場`;
+  const currentYear = new Date().getFullYear();
+  const title = `${data.cityName}の実家じまい完全ガイド【${currentYear}年】費用・補助金・手順を一括解説`;
   const description = `${data.cityName}の実家じまい・遺品整理を徹底解説。空き家解体補助金の条件と金額、粗大ゴミの申込方法、遺品整理業者の費用相場（1K〜3LDK）まで。無料の費用シミュレーターで今すぐ概算を確認。`;
-  if (data._isDefault) {
-    return { title: pageTitle(title), description, alternates: { canonical } };
-  }
-  return { title: pageTitle(title), description, alternates: { canonical } };
+  const titleFinal = title.length > 50 ? title.slice(0, 49) + "…" : title;
+  const descriptionFinal = description.length > 120 ? description.slice(0, 119) + "…" : description;
+  return { title: pageTitle(titleFinal), description: descriptionFinal, alternates: { canonical } };
 }
 
 export default async function AreaPage({ params, searchParams }: Props) {
@@ -165,11 +165,11 @@ export default async function AreaPage({ params, searchParams }: Props) {
         <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="main" />
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug">
-            {data.cityName}の実家じまい・空き家処分
-            <span className="block text-lg sm:text-xl text-gray-600 mt-2 font-normal">
-              （粗大ゴミ・実家の片付け費用とルール）
-            </span>
+            {data.cityName}で実家じまいをするには？費用・補助金・手順を完全解説【{new Date().getFullYear()}年版】
           </h1>
+          <p className="mt-4 text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl">
+            {data.cityName}の実家が空き家になった、または親が高齢で管理が難しくなってきた方へ。このページでは「何から手をつければいいか」から、解体・売却・補助金申請の実務手順まで、{data.cityName}在住者・遠方在住者どちらの方でも使える情報をまとめています。
+          </p>
         </div>
         <RegionalFacts prefName={data.prefName} cityName={data.cityName} prefId={prefecture} cityId={city} />
         <LocalSubsidyFaq
@@ -271,11 +271,11 @@ export default async function AreaPage({ params, searchParams }: Props) {
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="main" />
       <div>
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug">
-          {area.city}の実家じまい・空き家処分
-          <span className="block text-lg sm:text-xl text-gray-600 mt-2 font-normal">
-            （粗大ゴミ・実家の片付け費用とルール）
-          </span>
+          {area.city}で実家じまいをするには？費用・補助金・手順を完全解説【{new Date().getFullYear()}年版】
         </h1>
+        <p className="mt-4 text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl">
+          {area.city}の実家が空き家になった、または親が高齢で管理が難しくなってきた方へ。このページでは「何から手をつければいいか」から、解体・売却・補助金申請の実務手順まで、{area.city}在住者・遠方在住者どちらの方でも使える情報をまとめています。
+        </p>
       </div>
 
       {areaData?.subsidyInfo && (() => {

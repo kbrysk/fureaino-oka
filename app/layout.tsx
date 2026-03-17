@@ -99,6 +99,8 @@ export default function RootLayout({
         <meta name="twitter:title" content={SITE_TITLE_TOP} />
         <meta name="twitter:description" content={DEFAULT_DESCRIPTION} />
         <meta name="twitter:image" content={`${canonicalOrigin}${OG_IMAGE_PATH}`} />
+        <meta name="date" content="2026-03-17" />
+        <meta property="article:modified_time" content="2026-03-17T00:00:00+09:00" />
         {/* 全ページ共通: Organization Schema（E-E-A-T・ナレッジパネル用） */}
         <script
           type="application/ld+json"

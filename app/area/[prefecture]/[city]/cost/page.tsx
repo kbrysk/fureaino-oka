@@ -36,17 +36,18 @@ export async function generateMetadata({ params }: Props) {
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
   if (!area) return { title: pageTitle("費用相場") };
+  const currentYear = new Date().getFullYear();
   const canonicalUrl = getCanonicalUrl(`/area/${prefecture}/${city}/cost`);
-  const title = `${data.cityName}の実家じまい・解体費用の目安｜間取り別相場と補助金【無料確認】`;
+  const title = `${data.cityName}の解体費用相場【${currentYear}年最新】坪単価・構造別・補助金込みで解説`;
   const description = `${data.cityName}の実家じまい・空き家解体にかかる費用の目安を間取り別（1K〜4LDK以上）で掲載。解体補助金を使えばさらに費用を抑えられます。無料で相場を確認できます。`;
-  const fullTitle = pageTitle(title);
+  const fullTitle = pageTitle(title.length > 50 ? title.slice(0, 49) + "…" : title);
   return {
     title: fullTitle,
-    description,
+    description: description.length > 120 ? description.slice(0, 119) + "…" : description,
     alternates: { canonical: canonicalUrl },
     openGraph: {
       title: fullTitle,
-      description,
+      description: description.length > 120 ? description.slice(0, 119) + "…" : description,
       url: canonicalUrl,
     },
   };

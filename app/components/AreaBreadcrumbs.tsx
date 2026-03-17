@@ -18,7 +18,7 @@ interface AreaBreadcrumbsProps {
 
 const PAGE_LABELS: Record<AreaBreadcrumbPage, string> = {
   main: "",
-  subsidy: "補助金を探す",
+  subsidy: "補助金情報",
   cleanup: "遺品整理・相場",
   garbage: "粗大ゴミ・遺品整理",
   cost: "費用相場を見る",

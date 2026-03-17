@@ -32,19 +32,23 @@ export interface FaqPageSchema {
 /**
  * FaqItem 配列から、Google ガイドライン準拠の 1 つの FAQPage オブジェクトを生成する。
  * 捨て方辞典・記事ページなど、どのルートからでも利用可能。
+ * Rich Results 無効化を防ぐため、name または text が空の項目は除外する。
  */
 export function generateFaqSchema(items: FaqItem[], options?: FaqSchemaOptions): FaqPageSchema {
+  const mainEntity = items
+    .filter((item) => typeof item.question === "string" && item.question.trim() !== "" && typeof item.answer === "string" && item.answer.trim() !== "")
+    .map((item) => ({
+      "@type": "Question" as const,
+      name: item.question.trim(),
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: item.answer.trim(),
+      },
+    }));
   const schema: FaqPageSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: items.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
+    mainEntity,
   };
   if (options?.url) {
     schema.url = options.url;

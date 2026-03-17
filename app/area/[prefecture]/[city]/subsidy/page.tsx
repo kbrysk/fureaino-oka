@@ -28,6 +28,7 @@ import { RelatedCitiesInPrefecture } from "../../../../components/RelatedCitiesI
 import JsonLd from "../../../../components/JsonLd";
 import { SubsidyCostSection } from "../../../../components/SubsidyCostSection";
 import { DirectAnswerFaq } from "../../../../components/DirectAnswerFaq";
+import UpdateBanner from "../../../../components/UpdateBanner";
 import { pageTitle } from "../../../../lib/site-brand";
 import type { FaqItem, FaqPageSchema } from "../../../../lib/faq/schema";
 // S1: _isDefaultページ CTR改善 メタ修正 2026-03（Search Console CTR=0%改善）
@@ -90,35 +91,19 @@ export async function generateMetadata({ params }: Props) {
   const canonicalSubsidy = `${base}/area/${prefecture}/${city}/subsidy`;
 
   const currentYear = new Date().getFullYear();
-  const hasSubsidy = data.subsidy?.hasSubsidy;
-  const maxAmountRaw = data.subsidy?.maxAmount;
-  const maxAmountShort = extractMaxAmount(maxAmountRaw ?? null);
-  const applicationPeriod = data.subsidy?.applicationPeriod;
-
-  let title: string;
-  let description: string;
-
-  if (hasSubsidy === true) {
-    title = maxAmountShort
-      ? `【${currentYear}年最新】${cityName}の空き家解体補助金｜${maxAmountShort}・申請条件まとめ`
-      : `【${currentYear}年最新】${cityName}の空き家解体補助金｜申請条件・対象者まとめ`;
-    if (applicationPeriod && maxAmountRaw) {
-      description = `${cityName}の空き家解体補助金（${maxAmountRaw}）の申請条件・対象者・申請方法を詳しく解説。${applicationPeriod}受付中。補助金が使えるか無料でご確認いただけます。`;
-    } else if (maxAmountRaw) {
-      description = `${cityName}では空き家解体補助金（${maxAmountRaw}）を実施中。申請条件・対象建物・窓口情報をまとめています。解体費用を抑えたい方はまずご確認ください。`;
-    } else {
-      description = `${cityName}の空き家解体補助金の申請条件・対象者・窓口情報をまとめています。補助金を活用して解体費用を抑えたい方はまずご確認ください。`;
-    }
-  } else if (hasSubsidy === false) {
-    title = `${cityName}の空き家解体補助金｜${currentYear}年度の制度情報と解体費用の目安`;
-    description = `${cityName}では現在、独自の空き家解体補助金制度は設けられていません。解体費用の目安や利用できる関連制度、専門業者への相談方法をご案内します。`;
-  } else {
-    title = `${cityName}の空き家解体補助金｜制度情報・解体費用の目安まとめ`;
-    description = `${cityName}の空き家解体補助金情報を調査中です。解体費用の相場や補助金申請のポイント、専門家への無料相談方法についてご案内します。`;
+  const maxAmountShort = extractMaxAmount(data.subsidy?.maxAmount ?? null);
+  const maxLabel = maxAmountShort ?? "最大補助金あり";
+  let title =
+    `【${currentYear}年度版】${cityName}の空き家・解体補助金｜${maxLabel}・申請条件・手順を図解`;
+  if (title.length > 40) {
+    title = `【${currentYear}年度版】${cityName}の空き家・解体補助金｜${maxLabel}`;
   }
+  if (title.length > 50) title = title.slice(0, 49) + "…";
 
-  const titleFinal = title.length > 50 ? title.slice(0, 49) + "…" : title;
+  const description =
+    `${cityName}で使える空き家・解体補助金を${currentYear}年度最新情報でまとめています。補助金額・申請条件・必要書類・申請期間を図解で解説。無料で解体費用の見積もりも取得できます。`;
   const descriptionFinal = description.length > 120 ? description.slice(0, 119) + "…" : description;
+  const titleFinal = title;
 
   const fullTitle = pageTitle(titleFinal);
   return {
@@ -197,30 +182,37 @@ export default async function AreaSubsidyPage({ params }: Props) {
   ];
   const faqSchema = generateFaqSchema(faqItems, { url: pageUrl });
   const directFaqItems = getSubsidyDirectAnswerFaq(cityName, maxSubsidyAmount);
-  const directFaqSchemaEntries = directFaqItems.map((item) => ({
-    "@type": "Question" as const,
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer" as const,
-      text: item.supplement ? `${item.directAnswer} ${item.supplement}` : item.directAnswer,
-    },
-  }));
+  const directFaqSchemaEntries = directFaqItems
+    .map((item) => {
+      const text = item.supplement ? `${item.directAnswer ?? ""} ${item.supplement}`.trim() : (item.directAnswer ?? "").trim();
+      return {
+        "@type": "Question" as const,
+        name: (item.question ?? "").trim(),
+        acceptedAnswer: {
+          "@type": "Answer" as const,
+          text,
+        },
+      };
+    })
+    .filter((entry) => entry.name !== "" && entry.acceptedAnswer.text !== "");
+  const costQuestionText = maxSubsidyAmount
+    ? `${cityName}の補助金上限は${(maxSubsidyAmount / 10000).toFixed(0)}万円です。木造30〜40坪の解体費用（90〜150万円）に適用すると、実質${Math.max(0, 90 - maxSubsidyAmount / 10000).toFixed(0)}〜${Math.max(0, 150 - maxSubsidyAmount / 10000).toFixed(0)}万円程度になります。補助金の申請条件を満たしているか必ず確認してください。`
+    : `${cityName}の補助金（最大100万円程度）を活用すると、木造30〜40坪の解体費用（90〜150万円）から補助金分を差し引いた実質負担を大幅に抑えられます。詳細はページ内の費用目安テーブルをご確認ください。`;
   const costQuestionEntry = {
     "@type": "Question" as const,
     name: `${cityName}で解体費用に補助金を使うといくら節約できますか？`,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: maxSubsidyAmount
-        ? `${cityName}の補助金上限は${(maxSubsidyAmount / 10000).toFixed(0)}万円です。木造30〜40坪の解体費用（90〜150万円）に適用すると、実質${Math.max(0, 90 - maxSubsidyAmount / 10000).toFixed(0)}〜${Math.max(0, 150 - maxSubsidyAmount / 10000).toFixed(0)}万円程度になります。補助金の申請条件を満たしているか必ず確認してください。`
-        : `${cityName}の補助金（最大100万円程度）を活用すると、木造30〜40坪の解体費用（90〜150万円）から補助金分を差し引いた実質負担を大幅に抑えられます。詳細はページ内の費用目安テーブルをご確認ください。`,
-    },
+    acceptedAnswer: { "@type": "Answer" as const, text: costQuestionText },
   };
-  faqSchema.mainEntity = [
+  const regionalEntities = generateFaqSchema(buildRegionalFaqItems(cityName), { url: pageUrl }).mainEntity;
+  const allEntities = [
     ...faqSchema.mainEntity,
     ...directFaqSchemaEntries,
     costQuestionEntry,
-    ...(generateFaqSchema(buildRegionalFaqItems(cityName), { url: pageUrl }).mainEntity),
-  ] as FaqPageSchema["mainEntity"];
+    ...regionalEntities,
+  ];
+  faqSchema.mainEntity = allEntities.filter(
+    (e) => typeof e.name === "string" && e.name.trim() !== "" && typeof e.acceptedAnswer?.text === "string" && e.acceptedAnswer.text.trim() !== ""
+  ) as FaqPageSchema["mainEntity"];
   const localBizSchema = generateLocalBusinessSchema({
     cityName,
     prefectureName: prefName,
@@ -232,30 +224,40 @@ export default async function AreaSubsidyPage({ params }: Props) {
   if (data._isDefault && !areaContent) {
     const fallbackFaqSchema = generateFaqSchema(getSubsidyFaq(cityName), { url: pageUrl });
     const fallbackDirectFaq = getSubsidyDirectAnswerFaq(cityName, null);
-    const fallbackDirectEntries = fallbackDirectFaq.map((item) => ({
-      "@type": "Question" as const,
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer" as const,
-        text: item.supplement ? `${item.directAnswer} ${item.supplement}` : item.directAnswer,
-      },
-    }));
-    fallbackFaqSchema.mainEntity = [
+    const fallbackDirectEntries = fallbackDirectFaq
+      .map((item) => {
+        const text = item.supplement ? `${item.directAnswer ?? ""} ${item.supplement}`.trim() : (item.directAnswer ?? "").trim();
+        return {
+          "@type": "Question" as const,
+          name: (item.question ?? "").trim(),
+          acceptedAnswer: { "@type": "Answer" as const, text },
+        };
+      })
+      .filter((e) => e.name !== "" && e.acceptedAnswer.text !== "");
+    const fallbackCostText = `${cityName}の補助金（最大100万円程度）を活用すると、木造30〜40坪の解体費用（90〜150万円）から補助金分を差し引いた実質負担を大幅に抑えられます。詳細はページ内の費用目安テーブルをご確認ください。`;
+    const fallbackAll = [
       ...fallbackFaqSchema.mainEntity,
       ...fallbackDirectEntries,
       {
         "@type": "Question" as const,
         name: `${cityName}で解体費用に補助金を使うといくら節約できますか？`,
-        acceptedAnswer: {
-          "@type": "Answer" as const,
-          text: `${cityName}の補助金（最大100万円程度）を活用すると、木造30〜40坪の解体費用（90〜150万円）から補助金分を差し引いた実質負担を大幅に抑えられます。詳細はページ内の費用目安テーブルをご確認ください。`,
-        },
+        acceptedAnswer: { "@type": "Answer" as const, text: fallbackCostText },
       },
     ];
+    fallbackFaqSchema.mainEntity = fallbackAll.filter(
+      (e) => typeof e.name === "string" && e.name.trim() !== "" && typeof e.acceptedAnswer?.text === "string" && e.acceptedAnswer.text.trim() !== ""
+    ) as FaqPageSchema["mainEntity"];
+    const fallbackWebPageSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      datePublished: "2026-02-15",
+      dateModified: "2026-03-17",
+    };
     return (
       <div className="space-y-10">
         <JsonLd data={breadcrumb} />
-        <JsonLd data={fallbackFaqSchema} />
+        {fallbackFaqSchema.mainEntity.length > 0 && <JsonLd data={fallbackFaqSchema} />}
+        <JsonLd data={fallbackWebPageSchema} />
         <JsonLd data={localBizSchema} />
         <AreaBreadcrumbs
           prefecture={prefName}
@@ -264,6 +266,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
           cityId={data.cityId}
           page="subsidy"
         />
+        <UpdateBanner />
         <div>
           <h1 className="text-2xl font-bold text-primary">
             【{CURRENT_YEAR}年最新】{cityName}の空き家補助金・遺品整理の公式窓口
@@ -323,10 +326,18 @@ export default async function AreaSubsidyPage({ params }: Props) {
     );
   }
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    datePublished: "2026-02-15",
+    dateModified: "2026-03-17",
+  };
+
   return (
     <div className="space-y-10 pb-24">
       <JsonLd data={breadcrumb} />
-      <JsonLd data={faqSchema} />
+      {faqSchema.mainEntity.length > 0 && <JsonLd data={faqSchema} />}
+      <JsonLd data={webPageSchema} />
       <JsonLd data={localBizSchema} />
       <AreaBreadcrumbs
         prefecture={prefName}
@@ -335,6 +346,9 @@ export default async function AreaSubsidyPage({ params }: Props) {
         cityId={ids.cityId}
         page="subsidy"
       />
+
+      {/* 2026年度版バナー（全 subsidy ページで表示） */}
+      <UpdateBanner />
 
       {/* A. ヒーローセクション（制度ありの場合のみ） */}
       {!hasNoSubsidy && (
@@ -506,6 +520,30 @@ export default async function AreaSubsidyPage({ params }: Props) {
         cityName={cityName}
         currentSpoke="subsidy"
       />
+
+      <section className="rounded-2xl border border-border bg-card overflow-hidden">
+        <div className="px-6 py-4 border-b border-border bg-primary-light/30">
+          <h2 className="font-bold text-primary">{cityName}の関連情報</h2>
+        </div>
+        <ul className="px-6 py-4 space-y-2 list-none">
+          <li>
+            <Link href={`/area/${ids.prefectureId}/${ids.cityId}/cost`} className="text-primary hover:underline">
+              {cityName}の解体費用相場
+            </Link>
+          </li>
+          <li>
+            <Link href={`/area/${ids.prefectureId}/${ids.cityId}/cleanup`} className="text-primary hover:underline">
+              {cityName}の空き家片付け
+            </Link>
+          </li>
+          <li>
+            <Link href={`/area/${ids.prefectureId}`} className="text-primary hover:underline">
+              {prefName}の補助金一覧に戻る
+            </Link>
+          </li>
+        </ul>
+      </section>
+
       <OperatorTrustBlock />
 
       <div className="flex flex-wrap gap-3">

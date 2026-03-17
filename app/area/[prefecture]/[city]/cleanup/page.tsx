@@ -35,17 +35,15 @@ export async function generateMetadata({ params }: Props) {
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
   if (!area) return { title: pageTitle("遺品整理・片付け相場"), alternates: { canonical: getCanonicalUrl(`/area/${prefecture}/${city}/cleanup`) } };
+  const currentYear = new Date().getFullYear();
   const canonical = getCanonicalUrl(`/area/${prefecture}/${city}/cleanup`);
-  if (data._isDefault) {
-    return {
-      title: pageTitle(`${data.cityName}の空き家補助金・実家整理ガイド【2026年最新版】`),
-      description: `${data.cityName}で空き家整理や売却を検討中の方へ。自治体の窓口情報や、相続時に役立つ3,000万円控除の特例、おすすめの査定サービスをまとめています。`,
-      alternates: { canonical },
-    };
-  }
+  const title = `${data.cityName}の空き家片付け費用と補助金【${currentYear}年度】業者選びのポイントも`;
+  const description = `${data.cityName}の空き家片付け・遺品整理の費用相場と補助金情報をまとめています。業者選びのポイントや無料見積もりの取り方も解説。`;
+  const titleFinal = title.length > 50 ? title.slice(0, 49) + "…" : title;
+  const descriptionFinal = description.length > 120 ? description.slice(0, 119) + "…" : description;
   return {
-    title: pageTitle(`${data.cityName}（${data.prefName}）遺品整理 相場・実家 片付け 業者 おすすめ`),
-    description: `${data.prefName}${data.cityName}の遺品整理・実家の片付けの相場（1K〜4LDK）と業者選びのポイント。`,
+    title: pageTitle(titleFinal),
+    description: descriptionFinal,
     alternates: { canonical },
   };
 }
