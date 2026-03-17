@@ -129,7 +129,12 @@ export default async function AreaPage({ params, searchParams }: Props) {
   });
   const cases = generateCases(cityIdForCases, displayCityName, landPriceVal);
   const caseStudyFaqItems = generateCaseStudyFaqItems(displayCityName, cases);
-  const allFaqItems = [...localSubsidyItems, ...caseStudyFaqItems, ...dynamicFaqItems];
+  const allFaqItems = [
+    ...localSubsidyItems,
+    ...caseStudyFaqItems,
+    ...dynamicFaqItems,
+    ...(areaData?.faqs?.map((f) => ({ question: f.question, answer: f.answer })) ?? []),
+  ];
   const faqPageSchema = generateFaqSchema(allFaqItems, {
     url: `${base.replace(/\/$/, "")}/area/${prefecture}/${city}`,
   });
@@ -255,8 +260,6 @@ export default async function AreaPage({ params, searchParams }: Props) {
     pageType: "city",
   });
 
-  const faqs = areaData?.faqs ?? [];
-
   return (
     <div className="space-y-8">
       <AreaBodyMeta cityName={data.cityName} />
@@ -265,25 +268,6 @@ export default async function AreaPage({ params, searchParams }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
-      {faqs && faqs.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: faqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: faq.answer,
-                },
-              })),
-            }),
-          }}
-        />
-      )}
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="main" />
       <div>
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug">

@@ -42,13 +42,11 @@ interface Props {
   params: Promise<{ prefecture: string; city: string }>;
 }
 
-/** 補助金額テキストからタイトル用「上限〇〇万円」を抽出。無い場合は null */
-function extractMaxAmountForTitle(maxAmountRaw: string | undefined): string | null {
-  if (!maxAmountRaw || /詳細確認中|お問い合わせ|—|－/.test(maxAmountRaw)) return null;
-  const matches = maxAmountRaw.match(/(\d+)\s*万/g);
-  if (!matches?.length) return null;
-  const maxVal = Math.max(...matches.map((m) => parseInt(m.replace(/\D/g, ""), 10)));
-  return maxVal ? `${maxVal}万円` : null;
+/** maxAmountから「最大○○万円」部分のみ抽出（title用）。例: "最大50万円（費用の1/2以内）" → "最大50万円" */
+function extractMaxAmount(maxAmount: string | null | undefined): string | null {
+  if (!maxAmount || /詳細確認中|お問い合わせ|—|－/.test(maxAmount)) return null;
+  const match = maxAmount.match(/最大[\d,]+万円/);
+  return match ? match[0] : maxAmount.split("（")[0].trim() || null;
 }
 
 /** S4: 補助金上限額テキストから円換算の数値を取得（SubsidyCostSection・FAQ用） */
@@ -91,26 +89,45 @@ export async function generateMetadata({ params }: Props) {
   const base = getCanonicalBase();
   const canonicalSubsidy = `${base}/area/${prefecture}/${city}/subsidy`;
 
-  // _isDefault時のみCTR改善用のtitle・description（実データありは変更しない）
-  const isDefaultSubsidy = data._isDefault && !areaContent;
-  const title = isDefaultSubsidy
-    ? `${cityName}の空き家解体補助金｜申請条件と上限額を確認【無料】`
-    : `【2026年最新】${cityName}の解体補助金｜受給条件・申請方法・上限額を解説`;
-  let description = isDefaultSubsidy
-    ? `${cityName}（${prefName}）で空き家・実家の解体に使える補助金の申請条件・上限額・窓口をまとめています。補助金の対象か無料でチェックできます。`
-    : `${cityName}の空き家解体補助金について、受給条件・申請方法・上限額をわかりやすく解説。固定資産税が最大6倍になるリスクも。補助金を活用した解体費用の実質負担額を今すぐ無料で試算できます。`;
-  if (isDefaultSubsidy && description.length < 120) {
-    description += "昭和56年以前の建物をお持ちの方はぜひご確認ください。";
+  const currentYear = new Date().getFullYear();
+  const hasSubsidy = data.subsidy?.hasSubsidy;
+  const maxAmountRaw = data.subsidy?.maxAmount;
+  const maxAmountShort = extractMaxAmount(maxAmountRaw ?? null);
+  const applicationPeriod = data.subsidy?.applicationPeriod;
+
+  let title: string;
+  let description: string;
+
+  if (hasSubsidy === true) {
+    title = maxAmountShort
+      ? `【${currentYear}年最新】${cityName}の空き家解体補助金｜${maxAmountShort}・申請条件まとめ`
+      : `【${currentYear}年最新】${cityName}の空き家解体補助金｜申請条件・対象者まとめ`;
+    if (applicationPeriod && maxAmountRaw) {
+      description = `${cityName}の空き家解体補助金（${maxAmountRaw}）の申請条件・対象者・申請方法を詳しく解説。${applicationPeriod}受付中。補助金が使えるか無料でご確認いただけます。`;
+    } else if (maxAmountRaw) {
+      description = `${cityName}では空き家解体補助金（${maxAmountRaw}）を実施中。申請条件・対象建物・窓口情報をまとめています。解体費用を抑えたい方はまずご確認ください。`;
+    } else {
+      description = `${cityName}の空き家解体補助金の申請条件・対象者・窓口情報をまとめています。補助金を活用して解体費用を抑えたい方はまずご確認ください。`;
+    }
+  } else if (hasSubsidy === false) {
+    title = `${cityName}の空き家解体補助金｜${currentYear}年度の制度情報と解体費用の目安`;
+    description = `${cityName}では現在、独自の空き家解体補助金制度は設けられていません。解体費用の目安や利用できる関連制度、専門業者への相談方法をご案内します。`;
+  } else {
+    title = `${cityName}の空き家解体補助金｜制度情報・解体費用の目安まとめ`;
+    description = `${cityName}の空き家解体補助金情報を調査中です。解体費用の相場や補助金申請のポイント、専門家への無料相談方法についてご案内します。`;
   }
 
-  const fullTitle = pageTitle(title);
+  const titleFinal = title.length > 50 ? title.slice(0, 49) + "…" : title;
+  const descriptionFinal = description.length > 120 ? description.slice(0, 119) + "…" : description;
+
+  const fullTitle = pageTitle(titleFinal);
   return {
     title: fullTitle,
-    description,
+    description: descriptionFinal,
     alternates: { canonical: canonicalSubsidy },
     openGraph: {
       title: fullTitle,
-      description,
+      description: descriptionFinal,
       url: canonicalSubsidy,
     },
   };
@@ -202,9 +219,8 @@ export default async function AreaSubsidyPage({ params }: Props) {
     ...faqSchema.mainEntity,
     ...directFaqSchemaEntries,
     costQuestionEntry,
+    ...(generateFaqSchema(buildRegionalFaqItems(cityName), { url: pageUrl }).mainEntity),
   ] as FaqPageSchema["mainEntity"];
-  const regionalFaqItems = buildRegionalFaqItems(cityName);
-  const regionalFaqSchema = generateFaqSchema(regionalFaqItems, { url: pageUrl });
   const localBizSchema = generateLocalBusinessSchema({
     cityName,
     prefectureName: prefName,
@@ -310,7 +326,6 @@ export default async function AreaSubsidyPage({ params }: Props) {
   return (
     <div className="space-y-10 pb-24">
       <JsonLd data={breadcrumb} />
-      <JsonLd data={regionalFaqSchema} />
       <JsonLd data={faqSchema} />
       <JsonLd data={localBizSchema} />
       <AreaBreadcrumbs

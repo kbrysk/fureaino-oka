@@ -42,13 +42,21 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props) {
   const { prefecture } = await params;
+  const currentYear = new Date().getFullYear();
+  const prefIdNorm = prefecture.toLowerCase().trim();
+  const citiesInPref = municipalities.filter((m) => m.prefId.toLowerCase() === prefIdNorm);
+  const totalCities = citiesInPref.length;
+  const withSubsidyCount = citiesInPref.filter((r) => r.subsidy?.hasSubsidy === true).length;
   const prefName = getPrefectureName(prefecture);
-  const baseTitle = prefName ? `${prefName}の空き家解体補助金一覧` : "都道府県別 空き家解体補助金一覧";
+  const baseTitle = prefName
+    ? `【${currentYear}年最新】${prefName}の空き家解体補助金一覧｜市区町村ごとに比較`
+    : "都道府県別 空き家解体補助金一覧";
+  const description = prefName
+    ? `${prefName}全${totalCities}市区町村の空き家解体補助金を一覧で比較。補助金あり${withSubsidyCount}市区町村の上限額・申請条件・窓口情報をまとめています。`
+    : "全国の都道府県ごとに、空き家解体補助金・解体費用補助制度を一覧で確認できます。補助金の有無・上限額・申請条件を市区町村ごとにまとめています。";
   return {
     title: pageTitle(baseTitle),
-    description: prefName
-      ? `${prefName}全市区町村の空き家解体補助金・解体費用補助制度を一覧で確認できます。補助金の有無・上限額・申請条件を市区町村ごとにまとめています。`
-      : "全国の都道府県ごとに、空き家解体補助金・解体費用補助制度を一覧で確認できます。補助金の有無・上限額・申請条件を市区町村ごとにまとめています。",
+    description,
     alternates: { canonical: getCanonicalUrl(`/area/${prefecture}/`) },
   };
 }
