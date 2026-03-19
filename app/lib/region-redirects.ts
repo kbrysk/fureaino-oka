@@ -5,6 +5,7 @@
 import { getRegions } from "./regions";
 import { getAreaIds } from "./area-data";
 import { AREA_ID_MAP } from "./area-id-map.generated";
+import municipalities from "./data/municipalities.json";
 
 export interface RegionRedirectRule {
   source: string;
@@ -21,9 +22,32 @@ function getPrefectureIdMap(): Map<string, string> {
   return m;
 }
 
+type MunicipalitySubsidy = {
+  hasSubsidy: boolean | null;
+};
+
+type MunicipalityRow = {
+  prefId: string;
+  cityId: string;
+  subsidy?: MunicipalitySubsidy;
+};
+
+const SUBSIDY_EXISTS_BY_AREA_KEY: Map<string, boolean> = (() => {
+  const m = new Map<string, boolean>();
+  for (const row of municipalities as unknown as MunicipalityRow[]) {
+    const key = `${row.prefId}`.toLowerCase().trim() + "/" + `${row.cityId}`.toLowerCase().trim();
+    m.set(key, row.subsidy?.hasSubsidy === true);
+  }
+  return m;
+})();
+
 /**
  * 全 /region/ 用 301 リダイレクトルールを生成する。
- * 対応する /area/ がある場合は /area/{prefId}/{cityId}、ない場合は /area/{prefId}、それもなければ /area へ。
+ * 優先順位：
+ * 1) /area/{prefId}/{cityId}/subsidy が「補助金あり」なら subsidy へ
+ * 2) subsidy がなければ 市区町村トップ /area/{prefId}/{cityId} へ
+ * 3) 市区町村トップがない場合（AREA_ID_MAP にない）都道府県トップ /area/{prefId} へ
+ * 4) それもない場合 /area へ
  */
 export function getRegionRedirects(): RegionRedirectRule[] {
   const regions = getRegions();
@@ -34,7 +58,11 @@ export function getRegionRedirects(): RegionRedirectRule[] {
     const areaIds = getAreaIds(r.prefecture, r.city);
     let destination: string;
     if (areaIds) {
-      destination = `/area/${areaIds.prefectureId}/${areaIds.cityId}`;
+      const subsidyKey = `${areaIds.prefectureId}/${areaIds.cityId}`.toLowerCase();
+      const hasSubsidy = SUBSIDY_EXISTS_BY_AREA_KEY.get(subsidyKey) === true;
+      destination = hasSubsidy
+        ? `/area/${areaIds.prefectureId}/${areaIds.cityId}/subsidy`
+        : `/area/${areaIds.prefectureId}/${areaIds.cityId}`;
     } else {
       const prefId = prefIdMap.get(r.prefecture);
       destination = prefId ? `/area/${prefId}` : "/area";
