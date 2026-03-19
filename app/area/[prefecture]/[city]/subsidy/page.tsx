@@ -91,7 +91,7 @@ function buildSubsidyFaqPageEntities(
   }
 
   if (!isEmptyOrUnknown(conditions)) {
-    const conditionsStr = typeof conditions === "string" ? conditions : Array.isArray(conditions) ? conditions.join("。") : "";
+    const conditionsStr = typeof conditions === "string" ? conditions : "";
     if (conditionsStr.trim()) {
       entities.push({
         "@type": "Question",
@@ -257,6 +257,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
     ...localFaqs.map((f) => ({ question: f.question, answer: f.answer })),
     ...commonSubsidyFaqs.filter((c) => c.question !== "空き家を放置すると固定資産税はどうなりますか？"),
   ];
+  const directFaqItems = getSubsidyDirectAnswerFaq(cityName, maxSubsidyAmount);
 
   // FAQPage JSON-LD: 1ページ1スキーマ（PDF指示の5項目・データありの項目のみ出力）
   const conditionsStr =
