@@ -62,6 +62,4 @@
 
 ## 4. デプロイ済みのコミットID
 
-（プッシュ後に記載）
-
-例: `xxxxxxxx 補助金ページ title・meta description 最適化`
+`24c5032` 補助金ページ title・meta description 最適化（32文字/120文字・申請条件サブタイトル）
