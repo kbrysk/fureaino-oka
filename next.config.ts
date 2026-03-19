@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { getRegionRedirects } from "./app/lib/region-redirects";
 
 const nextConfig: NextConfig = {
   images: {
@@ -16,18 +15,12 @@ const nextConfig: NextConfig = {
   },
   // SEO: 正規化・重複コンテンツ防止（GSC クロールバジェット回復）
   async redirects() {
-    const regionRedirects = getRegionRedirects();
     return [
       { source: "/index.html", destination: "/", permanent: true },
       { source: "/:path+/index.html", destination: "/:path+", permanent: true },
       // 旧ガイドパス → マスターガイド（404防止・リンクジュース集約）
       { source: "/guide", destination: "/articles/master-guide", permanent: true },
       { source: "/guide/:path*", destination: "/articles/master-guide", permanent: true },
-      // /region/ 完全廃止 → /area/ へ 301（個別マッピングを先に評価）
-      ...regionRedirects,
-      // フォールバック（対応 /area/ が存在しない /region/ URL）
-      { source: "/region/:pref/:city", destination: "/area", permanent: true },
-      { source: "/region/:pref/:city/", destination: "/area", permanent: true },
     ];
   },
   // GSC 用: generateSitemaps は /sitemap/[id].xml のみ生成するため /sitemap.xml は 404 になる。インデックスを返す API へ転送。

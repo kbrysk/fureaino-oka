@@ -32,6 +32,13 @@ const SUBSIDY_EXISTS_BY_AREA_KEY: Map<string, boolean> = (() => {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  // /region/ トップは /area へ恒久リダイレクト
+  if (pathname === "/region" || pathname === "/region/") {
+    const url = new URL("/area", request.url);
+    url.search = ""; // クエリ除去
+    return NextResponse.redirect(url, 301);
+  }
+
   // 0. 運営者情報 → 会社概要ページへ恒久リダイレクト（SEO 評価の引き継ぎ）
   if (pathname === "/about" || pathname === "/about/") {
     return NextResponse.redirect(new URL("/company", request.url), 301);
