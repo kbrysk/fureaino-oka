@@ -113,11 +113,11 @@ export default async function AreaCleanupPage({ params }: Props) {
         </p>
       </section>
 
-      <MascotAdviceBlock localRiskText={data.mascot.localRiskText} cityName={area.city} />
+      <MascotAdviceBlock localRiskText={data.mascot?.localRiskText} cityName={area.city} />
       <LocalConsultationCard
         cityName={area.city}
         prefName={data.prefName}
-        localRiskText={data.mascot.localRiskText}
+        localRiskText={data.mascot?.localRiskText ?? ""}
       />
 
       <div className="bg-card rounded-2xl border border-border overflow-hidden">
@@ -142,7 +142,7 @@ export default async function AreaCleanupPage({ params }: Props) {
       <RealEstateAppraisalCard
         cityName={area.city}
         cityId={ids.cityId}
-        localRiskText={data?.mascot.localRiskText}
+        localRiskText={data.mascot?.localRiskText}
       />
 
       {/* PLG導線: 荷物量で費用シミュレーション */}
