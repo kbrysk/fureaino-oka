@@ -91,19 +91,24 @@ export async function generateMetadata({ params }: Props) {
   const canonicalSubsidy = `${base}/area/${prefecture}/${city}/subsidy`;
 
   const currentYear = new Date().getFullYear();
-  const maxAmountShort = extractMaxAmount(data.subsidy?.maxAmount ?? null);
-  const maxLabel = maxAmountShort ?? "最大補助金あり";
-  let title =
-    `【${currentYear}年度版】${cityName}の空き家・解体補助金｜${maxLabel}・申請条件・手順を図解`;
-  if (title.length > 40) {
-    title = `【${currentYear}年度版】${cityName}の空き家・解体補助金｜${maxLabel}`;
-  }
-  if (title.length > 50) title = title.slice(0, 49) + "…";
+  const maxAmountShort = extractMaxAmount(subsidyInfo?.maxAmount ?? data.subsidy?.maxAmount ?? null);
+  const amountText = maxAmountShort ? ` ${maxAmountShort}` : "";
+  const amountSentence = maxAmountShort
+    ? `${maxAmountShort}の補助が受けられる可能性があります。`
+    : "";
 
+  // title: 【{year}年最新】{市区町村名} 空き家解体補助金{金額テキスト} | 申請条件・方法を解説（32文字目標）
+  let titleBase = `【${currentYear}年最新】${cityName} 空き家解体補助金${amountText}`;
+  const suffix = " | 申請条件・方法を解説";
+  let titleFinal =
+    titleBase.length + suffix.length <= 32
+      ? `${titleBase}${suffix}`
+      : titleBase;
+
+  // meta description: 120文字以内厳守
   const description =
-    `${cityName}で使える空き家・解体補助金を${currentYear}年度最新情報でまとめています。補助金額・申請条件・必要書類・申請期間を図解で解説。無料で解体費用の見積もりも取得できます。`;
+    `${cityName}の空き家・老朽家屋の解体に使える補助金を解説。${amountSentence}対象条件・必要書類・申請の流れをわかりやすくまとめています。無料で補助金診断もできます。`;
   const descriptionFinal = description.length > 120 ? description.slice(0, 119) + "…" : description;
-  const titleFinal = title;
 
   const fullTitle = pageTitle(titleFinal);
   return {
