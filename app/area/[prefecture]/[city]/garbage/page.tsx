@@ -26,8 +26,6 @@ import { getCanonicalUrl, getCanonicalBase } from "../../../../lib/site-url";
 // S1: _isDefaultページ CTR改善 メタ修正 2026-03（Search Console CTR=0%改善）
 import { generateBreadcrumbSchema } from "../../../../lib/schema/breadcrumb";
 import { generateLocalBusinessSchema } from "../../../../lib/schema/local-business";
-import { generateFaqSchema } from "../../../../lib/faq/schema";
-import { getGarbageFaq } from "../../../../lib/faq/area-subsidy-garbage-faq";
 import { getGarbageDirectAnswerFaq } from "../../../../lib/faq/direct-answer-faq";
 
 interface Props {
@@ -85,18 +83,7 @@ export default async function AreaGarbagePage({ params }: Props) {
       { name: data.cityName, url: `${base}/area/${prefecture}/${city}` },
       { name: `${data.cityName}の粗大ゴミ・遺品整理`, url: `${base}/area/${prefecture}/${city}/garbage` },
     ]);
-    const garbagePageUrl = `${base}/area/${prefecture}/${city}/garbage`;
-    const faqSchema = generateFaqSchema(getGarbageFaq(data.cityName), { url: garbagePageUrl });
     const garbageFaqItems = getGarbageDirectAnswerFaq(data.cityName);
-    const garbageFaqSchemaEntries = garbageFaqItems.map((item) => ({
-      "@type": "Question" as const,
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer" as const,
-        text: item.supplement ? `${item.directAnswer} ${item.supplement}` : item.directAnswer,
-      },
-    }));
-    faqSchema.mainEntity = [...faqSchema.mainEntity, ...garbageFaqSchemaEntries];
     const localBizSchema = generateLocalBusinessSchema({
       cityName: data.cityName,
       prefectureName: data.prefName,
@@ -107,7 +94,6 @@ export default async function AreaGarbagePage({ params }: Props) {
     return (
       <div className="space-y-10">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
         <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="garbage" />
         <div>
@@ -152,18 +138,7 @@ export default async function AreaGarbagePage({ params }: Props) {
     { name: area.city, url: `${base}/area/${prefecture}/${city}` },
     { name: `${area.city}の粗大ゴミ・遺品整理`, url: `${base}/area/${prefecture}/${city}/garbage` },
   ]);
-  const garbagePageUrl = `${base}/area/${prefecture}/${city}/garbage`;
-  const faqSchema = generateFaqSchema(getGarbageFaq(area.city), { url: garbagePageUrl });
   const garbageFaqItems = getGarbageDirectAnswerFaq(area.city);
-  const garbageFaqSchemaEntries = garbageFaqItems.map((item) => ({
-    "@type": "Question" as const,
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer" as const,
-      text: item.supplement ? `${item.directAnswer} ${item.supplement}` : item.directAnswer,
-    },
-  }));
-  faqSchema.mainEntity = [...faqSchema.mainEntity, ...garbageFaqSchemaEntries];
   const localBizSchema = generateLocalBusinessSchema({
     cityName: area.city,
     prefectureName: data.prefName,
@@ -175,7 +150,6 @@ export default async function AreaGarbagePage({ params }: Props) {
   return (
     <div className="space-y-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="garbage" />
       <div>

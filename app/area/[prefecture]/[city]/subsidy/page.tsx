@@ -59,6 +59,77 @@ function parseMaxSubsidyAmountYen(maxAmountRaw: string | undefined): number | nu
   return maxVal ? maxVal * 10000 : null;
 }
 
+/** 空・不明扱いの文字列か */
+function isEmptyOrUnknown(s: string | null | undefined): boolean {
+  if (s == null || typeof s !== "string") return true;
+  const t = s.trim();
+  return t === "" || t === "—" || t === "－" || /不明|情報なし/.test(t);
+}
+
+/**
+ * FAQPage 用の mainEntity を生成（1ページ1スキーマ・PDF指示の5項目）。
+ * Q1〜Q3 はデータがある場合のみ、Q4・Q5 は常に出力。
+ */
+function buildSubsidyFaqPageEntities(
+  cityName: string,
+  maxAmountRaw: string | null | undefined,
+  conditions: string | null | undefined,
+  period: string | null | undefined
+): FaqPageSchema["mainEntity"] {
+  const entities: FaqPageSchema["mainEntity"] = [];
+
+  const maxAmount = extractMaxAmount(maxAmountRaw ?? undefined);
+  if (maxAmount) {
+    entities.push({
+      "@type": "Question",
+      name: `${cityName}の空き家解体補助金はいくらもらえますか？`,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: `${cityName}の空き家解体補助金は${maxAmount}です。補助の対象となる工事内容や申請条件は年度によって変わるため、最新情報は${cityName}の担当窓口へご確認ください。`,
+      },
+    });
+  }
+
+  if (!isEmptyOrUnknown(conditions)) {
+    const conditionsStr = typeof conditions === "string" ? conditions : Array.isArray(conditions) ? conditions.join("。") : "";
+    if (conditionsStr.trim()) {
+      entities.push({
+        "@type": "Question",
+        name: `${cityName}の空き家解体補助金の申請条件は何ですか？`,
+        acceptedAnswer: { "@type": "Answer", text: conditionsStr.trim() },
+      });
+    }
+  }
+
+  if (!isEmptyOrUnknown(period)) {
+    entities.push({
+      "@type": "Question",
+      name: `${cityName}の解体補助金の申請時期はいつですか？`,
+      acceptedAnswer: { "@type": "Answer", text: period!.trim() },
+    });
+  }
+
+  entities.push({
+    "@type": "Question",
+    name: "解体工事の費用の目安はいくらですか？",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "木造住宅の解体費用は坪単価3万〜5万円が目安です。30坪の場合で90万〜150万円程度になります。建物の構造・立地・付帯工事の有無によって異なります。無料見積もりで正確な費用を確認することをおすすめします。",
+    },
+  });
+
+  entities.push({
+    "@type": "Question",
+    name: "補助金を使って解体する手順を教えてください。",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "①市区町村の担当窓口で補助金の申請受付を確認する、②解体業者から見積もりを取得する、③補助金の事前申請を行う（着工前の申請が必須）、④工事完了後に実績報告書を提出する、⑤補助金が交付される、という流れが一般的です。自治体によって手順が異なるため、必ず事前に窓口へ確認してください。",
+    },
+  });
+
+  return entities;
+}
+
 export async function generateStaticParams() {
   return getAreaContentsStaticParams().map(({ prefecture, city }) => ({
     prefecture,
@@ -91,6 +162,7 @@ export async function generateMetadata({ params }: Props) {
   const canonicalSubsidy = `${base}/area/${prefecture}/${city}/subsidy`;
 
   const currentYear = new Date().getFullYear();
+  // 金額は「最大○万円」がデータに存在する場合のみ表示（デフォルト値は使わない。municipalities の未登録は maxAmount なし、area-contents の "—" は extractMaxAmount で null）
   const maxAmountShort = extractMaxAmount(subsidyInfo?.maxAmount ?? data.subsidy?.maxAmount ?? null);
   const amountText = maxAmountShort ? ` ${maxAmountShort}` : "";
   const amountSentence = maxAmountShort
@@ -165,7 +237,7 @@ export default async function AreaSubsidyPage({ params }: Props) {
     { name: `${cityName}の補助金・助成金`, url: `${base}/area/${prefecture}/${city}/subsidy` },
   ]);
 
-  // FAQ: 地域JSONの「解体補助金」関連 + 共通補助金FAQ
+  // UI用FAQ（アコーディオン・TOC用。JSON-LDとは別）
   const localFaqs = (areaContent?.faqs ?? []).filter(
     (f) => f.question.includes("解体補助金") || f.question.includes("補助金")
   );
@@ -185,39 +257,23 @@ export default async function AreaSubsidyPage({ params }: Props) {
     ...localFaqs.map((f) => ({ question: f.question, answer: f.answer })),
     ...commonSubsidyFaqs.filter((c) => c.question !== "空き家を放置すると固定資産税はどうなりますか？"),
   ];
-  const faqSchema = generateFaqSchema(faqItems, { url: pageUrl });
-  const directFaqItems = getSubsidyDirectAnswerFaq(cityName, maxSubsidyAmount);
-  const directFaqSchemaEntries = directFaqItems
-    .map((item) => {
-      const text = item.supplement ? `${item.directAnswer ?? ""} ${item.supplement}`.trim() : (item.directAnswer ?? "").trim();
-      return {
-        "@type": "Question" as const,
-        name: (item.question ?? "").trim(),
-        acceptedAnswer: {
-          "@type": "Answer" as const,
-          text,
-        },
-      };
-    })
-    .filter((entry) => entry.name !== "" && entry.acceptedAnswer.text !== "");
-  const costQuestionText = maxSubsidyAmount
-    ? `${cityName}の補助金上限は${(maxSubsidyAmount / 10000).toFixed(0)}万円です。木造30〜40坪の解体費用（90〜150万円）に適用すると、実質${Math.max(0, 90 - maxSubsidyAmount / 10000).toFixed(0)}〜${Math.max(0, 150 - maxSubsidyAmount / 10000).toFixed(0)}万円程度になります。補助金の申請条件を満たしているか必ず確認してください。`
-    : `${cityName}の補助金（最大100万円程度）を活用すると、木造30〜40坪の解体費用（90〜150万円）から補助金分を差し引いた実質負担を大幅に抑えられます。詳細はページ内の費用目安テーブルをご確認ください。`;
-  const costQuestionEntry = {
-    "@type": "Question" as const,
-    name: `${cityName}で解体費用に補助金を使うといくら節約できますか？`,
-    acceptedAnswer: { "@type": "Answer" as const, text: costQuestionText },
+
+  // FAQPage JSON-LD: 1ページ1スキーマ（PDF指示の5項目・データありの項目のみ出力）
+  const conditionsStr =
+    areaContent?.subsidyInfo?.condition ??
+    (Array.isArray(data.subsidy?.conditions) ? data.subsidy.conditions.join("。") : data.subsidy?.conditions ?? null);
+  const periodStr = data.subsidy?.applicationPeriod ?? (areaContent?.subsidyInfo as { period?: string } | undefined)?.period ?? null;
+  const faqPageEntities = buildSubsidyFaqPageEntities(
+    cityName,
+    subsidyInfo?.maxAmount ?? data.subsidy?.maxAmount ?? null,
+    conditionsStr,
+    periodStr
+  );
+  const faqSchema: FaqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqPageEntities,
   };
-  const regionalEntities = generateFaqSchema(buildRegionalFaqItems(cityName), { url: pageUrl }).mainEntity;
-  const allEntities = [
-    ...faqSchema.mainEntity,
-    ...directFaqSchemaEntries,
-    costQuestionEntry,
-    ...regionalEntities,
-  ];
-  faqSchema.mainEntity = allEntities.filter(
-    (e) => typeof e.name === "string" && e.name.trim() !== "" && typeof e.acceptedAnswer?.text === "string" && e.acceptedAnswer.text.trim() !== ""
-  ) as FaqPageSchema["mainEntity"];
   const localBizSchema = generateLocalBusinessSchema({
     cityName,
     prefectureName: prefName,
@@ -227,31 +283,19 @@ export default async function AreaSubsidyPage({ params }: Props) {
   });
 
   if (data._isDefault && !areaContent) {
-    const fallbackFaqSchema = generateFaqSchema(getSubsidyFaq(cityName), { url: pageUrl });
-    const fallbackDirectFaq = getSubsidyDirectAnswerFaq(cityName, null);
-    const fallbackDirectEntries = fallbackDirectFaq
-      .map((item) => {
-        const text = item.supplement ? `${item.directAnswer ?? ""} ${item.supplement}`.trim() : (item.directAnswer ?? "").trim();
-        return {
-          "@type": "Question" as const,
-          name: (item.question ?? "").trim(),
-          acceptedAnswer: { "@type": "Answer" as const, text },
-        };
-      })
-      .filter((e) => e.name !== "" && e.acceptedAnswer.text !== "");
-    const fallbackCostText = `${cityName}の補助金（最大100万円程度）を活用すると、木造30〜40坪の解体費用（90〜150万円）から補助金分を差し引いた実質負担を大幅に抑えられます。詳細はページ内の費用目安テーブルをご確認ください。`;
-    const fallbackAll = [
-      ...fallbackFaqSchema.mainEntity,
-      ...fallbackDirectEntries,
-      {
-        "@type": "Question" as const,
-        name: `${cityName}で解体費用に補助金を使うといくら節約できますか？`,
-        acceptedAnswer: { "@type": "Answer" as const, text: fallbackCostText },
-      },
-    ];
-    fallbackFaqSchema.mainEntity = fallbackAll.filter(
-      (e) => typeof e.name === "string" && e.name.trim() !== "" && typeof e.acceptedAnswer?.text === "string" && e.acceptedAnswer.text.trim() !== ""
-    ) as FaqPageSchema["mainEntity"];
+    const fallbackConditions =
+      Array.isArray(data.subsidy?.conditions) ? data.subsidy.conditions.join("。") : data.subsidy?.conditions ?? null;
+    const fallbackFaqEntities = buildSubsidyFaqPageEntities(
+      cityName,
+      data.subsidy?.maxAmount ?? null,
+      fallbackConditions,
+      data.subsidy?.applicationPeriod ?? null
+    );
+    const fallbackFaqSchema: FaqPageSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: fallbackFaqEntities,
+    };
     const fallbackWebPageSchema = {
       "@context": "https://schema.org",
       "@type": "WebPage",

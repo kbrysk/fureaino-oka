@@ -42,7 +42,6 @@ import {
   generateCases,
   generateCaseStudyFaqItems,
 } from "../../../lib/faq/area-faq-data";
-import { generateFaqSchema } from "../../../lib/faq/schema";
 import { getAreaContent } from "../../../lib/getAreaContent";
 import { generateBreadcrumbSchema } from "../../../lib/schema/breadcrumb";
 import { generateLocalBusinessSchema } from "../../../lib/schema/local-business";
@@ -129,15 +128,6 @@ export default async function AreaPage({ params, searchParams }: Props) {
   });
   const cases = generateCases(cityIdForCases, displayCityName, landPriceVal);
   const caseStudyFaqItems = generateCaseStudyFaqItems(displayCityName, cases);
-  const allFaqItems = [
-    ...localSubsidyItems,
-    ...caseStudyFaqItems,
-    ...dynamicFaqItems,
-    ...(areaData?.faqs?.map((f) => ({ question: f.question, answer: f.answer })) ?? []),
-  ];
-  const faqPageSchema = generateFaqSchema(allFaqItems, {
-    url: `${base.replace(/\/$/, "")}/area/${prefecture}/${city}`,
-  });
 
   if (showFallback) {
     const bulkySearchUrl = `https://www.google.com/search?q=${encodeURIComponent(data.prefName + " " + data.cityName + " 粗大ゴミ")}`;
@@ -160,7 +150,6 @@ export default async function AreaPage({ params, searchParams }: Props) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
         <BreadcrumbJsonLd itemListElements={breadcrumbItems} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
         <AreaBreadcrumbs prefecture={data.prefName} city={data.cityName} prefectureId={data.prefId} cityId={data.cityId} page="main" />
         <div>
@@ -266,7 +255,6 @@ export default async function AreaPage({ params, searchParams }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <BreadcrumbJsonLd itemListElements={richBreadcrumbItems} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(optimizerJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="main" />
       <div>
