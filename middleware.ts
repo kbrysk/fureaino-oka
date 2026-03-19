@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { AREA_ID_MAP } from "./app/lib/area-id-map.generated";
+import municipalities from "./app/lib/data/municipalities.json";
 
 /** 日本語（ひらがな・カタカナ・漢字）が含まれるか */
 function containsJapanese(str: string): boolean {
@@ -10,6 +11,23 @@ function containsJapanese(str: string): boolean {
 /** 中古ドメイン時代の残骸：410 Gone で「永久に消滅」を伝えインデックス削除を促す */
 const LEGACY_410_PREFIXES = ["/tenmon", "/shizen", "/search"] as const;
 const LEGACY_410_EXACT = "/parking.php";
+
+type MunicipalityRow = {
+  prefId: string;
+  cityId: string;
+  subsidy?: {
+    hasSubsidy: boolean | null;
+  };
+};
+
+const SUBSIDY_EXISTS_BY_AREA_KEY: Map<string, boolean> = (() => {
+  const m = new Map<string, boolean>();
+  for (const row of municipalities as unknown as MunicipalityRow[]) {
+    const key = `${row.prefId}`.toLowerCase().trim() + "/" + `${row.cityId}`.toLowerCase().trim();
+    m.set(key, row.subsidy?.hasSubsidy === true);
+  }
+  return m;
+})();
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
@@ -34,7 +52,7 @@ export function middleware(request: NextRequest) {
   if (segments.length < 3) return NextResponse.next();
 
   const base = segments[0];
-  if (base !== "area" && base !== "tax-simulator") return NextResponse.next();
+  if (base !== "area" && base !== "tax-simulator" && base !== "region") return NextResponse.next();
 
   let pRaw: string;
   let cRaw: string;
@@ -50,6 +68,27 @@ export function middleware(request: NextRequest) {
   }
 
   const entry = AREA_ID_MAP.find((e) => e.prefecture === pRaw && e.city === cRaw);
+  const prefEntry = !entry ? AREA_ID_MAP.find((e) => e.prefecture === pRaw) : null;
+
+  if (base === "region") {
+    let newPath: string;
+    if (entry) {
+      const subsidyKey = `${entry.prefectureId}/${entry.cityId}`.toLowerCase();
+      const hasSubsidy = SUBSIDY_EXISTS_BY_AREA_KEY.get(subsidyKey) === true;
+      newPath = hasSubsidy
+        ? `/area/${entry.prefectureId}/${entry.cityId}/subsidy`
+        : `/area/${entry.prefectureId}/${entry.cityId}`;
+    } else if (prefEntry) {
+      newPath = `/area/${prefEntry.prefectureId}`;
+    } else {
+      newPath = `/area`;
+    }
+
+    const url = new URL(newPath, request.url);
+    url.search = ""; // /region/ はクエリを除去して 301
+    return NextResponse.redirect(url, 301);
+  }
+
   if (!entry) return NextResponse.next();
 
   let newPath = `/${base}/${entry.prefectureId}/${entry.cityId}`;
@@ -65,6 +104,7 @@ export const config = {
     "/about",
     "/about/",
     "/area/:path*",
+    "/region/:path*",
     "/tax-simulator/:path*",
     "/tenmon/:path*",
     "/shizen/:path*",
