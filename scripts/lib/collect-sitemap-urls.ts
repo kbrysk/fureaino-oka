@@ -6,7 +6,6 @@
 import path from "path";
 import { getCanonicalBase } from "../../app/lib/site-url";
 import { getPrefectureIds, getCityPathsByPrefecture } from "../../app/lib/utils/city-loader";
-import { getRegionSlugs } from "../../app/lib/regions";
 import { getBlogPostIds } from "../../app/lib/microcms";
 import { getLayoutSlugs } from "../../app/lib/cost-by-layout";
 import { getDisposeSlugs } from "../../app/lib/dispose-items";
@@ -90,12 +89,7 @@ export async function collectAllUrlsWithPriority(): Promise<UrlWithPriority[]> {
     add(`${base}/dispose/${encodeURIComponent(slug)}`);
   }
 
-  // 5. region
-  for (const { slug } of getRegionSlugs()) {
-    add(`${base}/region/${slug.map((s) => encodeURIComponent(s)).join("/")}`);
-  }
-
-  // 6. 記事（microCMS）
+  // 5. 記事（microCMS）
   const articleIds = await getBlogPostIds().catch(() => []);
   for (const id of articleIds) {
     add(`${base}/articles/${encodeURIComponent(id)}`);

@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { getPrefectureIds, getCityPathsByPrefecture } from "./lib/utils/city-loader";
-import { getRegionSlugs } from "./lib/regions";
 import { getBlogPostIds } from "./lib/microcms";
 import { getLayoutSlugs } from "./lib/cost-by-layout";
 import { getDisposeSlugs } from "./lib/dispose-items";
@@ -12,7 +11,7 @@ const SITEMAP_BASE = getCanonicalBase();
 
 /**
  * サイトマップ分割IDを生成（Sitemap Index 用）。
- * id "main" = トップ・固定ページ・cost/dispose/region/articles
+ * id "main" = トップ・固定ページ・cost/dispose/articles
  * id "tokyo" | "osaka" | ... = 都道府県ごとの area Hub/Spoke（Vercel タイムアウト・メモリ対策）
  */
 export async function generateSitemaps(): Promise<{ id: string }[]> {
@@ -28,7 +27,7 @@ export async function generateSitemaps(): Promise<{ id: string }[]> {
 
 /**
  * 動的XMLサイトマップ（Next.js generateSitemaps 利用）。
- * id === "main" のとき固定ページ＋region/articles 等、それ以外は都道府県IDとして area URL を返す。
+ * id === "main" のとき固定ページ＋articles 等、それ以外は都道府県IDとして area URL を返す。
  * エラー時は有効なURLのみ返し、500 を防ぐ。
  */
 export default async function sitemap(props: {
@@ -103,14 +102,6 @@ export default async function sitemap(props: {
         priority: 0.7,
       }));
 
-      const regionSlugs = getRegionSlugs();
-      const regionRoutes: MetadataRoute.Sitemap = regionSlugs.map(({ slug }) => ({
-        url: `${base}/region/${slug.map((s) => encodeURIComponent(s)).join("/")}`,
-        lastModified,
-        changeFrequency: "weekly" as const,
-        priority: 0.7,
-      }));
-
       const articleIds = await getBlogPostIds().catch(() => []);
       const articleRoutes: MetadataRoute.Sitemap = articleIds.map((articleId) => ({
         url: `${base}/articles/${encodeURIComponent(articleId)}`,
@@ -124,7 +115,6 @@ export default async function sitemap(props: {
         ...costLayoutRoutes,
         ...disposeCategoryRoutes,
         ...disposeItemRoutes,
-        ...regionRoutes,
         ...articleRoutes,
       ];
     } catch {
