@@ -37,10 +37,10 @@ export async function generateMetadata({ params }: Props) {
   if (!area) return { title: pageTitle("遺品整理・片付け相場"), alternates: { canonical: getCanonicalUrl(`/area/${prefecture}/${city}/cleanup`) } };
   const currentYear = new Date().getFullYear();
   const canonical = getCanonicalUrl(`/area/${prefecture}/${city}/cleanup`);
-  const title = `${data.cityName}の空き家片付け費用と補助金【${currentYear}年度】業者選びのポイントも`;
-  const description = `${data.cityName}の空き家片付け・遺品整理の費用相場と補助金情報をまとめています。業者選びのポイントや無料見積もりの取り方も解説。`;
-  const titleFinal = title.length > 50 ? title.slice(0, 49) + "…" : title;
-  const descriptionFinal = description.length > 120 ? description.slice(0, 119) + "…" : description;
+  const titleBase = `【${currentYear}年】${data.cityName}の実家じまい・遺品整理｜粗大ゴミ回収・空き家片付け`;
+  const titleFinal = titleBase.length > 32 ? titleBase.slice(0, 32) + "…" : titleBase;
+  const descriptionBase = `${data.cityName}の実家じまい・遺品整理業者の選び方と費用相場を解説。粗大ゴミの収集・持ち込み方法、不用品回収業者への依頼方法まで、${data.cityName}の実家片付けに必要な情報をまとめています。`;
+  const descriptionFinal = descriptionBase.length > 120 ? descriptionBase.slice(0, 119) + "…" : descriptionBase;
   return {
     title: pageTitle(titleFinal),
     description: descriptionFinal,

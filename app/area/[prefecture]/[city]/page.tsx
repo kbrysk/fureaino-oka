@@ -68,10 +68,10 @@ export async function generateMetadata({ params }: Props) {
   const canonical = getCanonicalUrl(`/area/${prefecture}/${city}`);
   if (!area) return { title: pageTitle("地域情報"), alternates: { canonical } };
   const currentYear = new Date().getFullYear();
-  const title = `${data.cityName}の実家じまい完全ガイド【${currentYear}年】費用・補助金・手順を一括解説`;
-  const description = `${data.cityName}の実家じまい・遺品整理を徹底解説。空き家解体補助金の条件と金額、粗大ゴミの申込方法、遺品整理業者の費用相場（1K〜3LDK）まで。無料の費用シミュレーターで今すぐ概算を確認。`;
-  const titleFinal = title.length > 50 ? title.slice(0, 49) + "…" : title;
-  const descriptionFinal = description.length > 120 ? description.slice(0, 119) + "…" : description;
+  const titleBase = `${data.cityName}の実家じまい・空き家対策｜粗大ゴミ・遺品整理・解体補助金【${currentYear}年】`;
+  const titleFinal = titleBase.length > 32 ? titleBase.slice(0, 32) + "…" : titleBase;
+  const descriptionBase = `${data.cityName}の実家じまい・遺品整理・空き家解体補助金の情報をまとめています。粗大ゴミの捨て方から解体費用の相場、補助金の申請方法まで、${data.cityName}で実家じまいを進めるための情報を無料で提供しています。`;
+  const descriptionFinal = descriptionBase.length > 120 ? descriptionBase.slice(0, 119) + "…" : descriptionBase;
   return { title: pageTitle(titleFinal), description: descriptionFinal, alternates: { canonical } };
 }
 
