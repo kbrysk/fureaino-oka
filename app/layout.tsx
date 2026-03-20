@@ -74,6 +74,9 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     images: OG_IMAGE_PATH,
   },
+  verification: {
+    google: "zOwBHOu45jJefGRiWRkgSPnV2TwzK0j6URDJ9NyeiNU",
+  },
 };
 
 export default function RootLayout({
