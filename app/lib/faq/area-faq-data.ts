@@ -22,7 +22,7 @@ export interface DynamicFaqDataParams {
   cityName: string;
   hasData: boolean;
   municipalityData?: {
-    subsidy?: { name?: string; maxAmount?: string };
+    subsidy?: { name?: string; maxAmount?: string; windowName?: string; windowPhone?: string };
     garbage?: { officialUrl?: string; phone?: string };
   } | null;
 }
@@ -114,12 +114,20 @@ function buildGenericLocalSubsidyFaqItems(cityName: string, prefName: string): F
 export function buildDynamicFaqItems(params: DynamicFaqDataParams): FaqItem[] {
   const { prefName, cityName, hasData, municipalityData } = params;
   const subsidyName = municipalityData?.subsidy?.name ?? "空き家除却等の補助金";
-  const subsidyMaxAmount = municipalityData?.subsidy?.maxAmount ?? "補助金";
+  const subsidyMaxAmount = municipalityData?.subsidy?.maxAmount;
+  const subsidyWindowName = municipalityData?.subsidy?.windowName ?? "自治体窓口";
+  const subsidyWindowPhone = municipalityData?.subsidy?.windowPhone ?? "電話番号は公式サイトをご確認ください";
+  const isPlaceholderAmount =
+    subsidyMaxAmount == null
+    || subsidyMaxAmount.includes("詳細は窓口にお問い合わせください")
+    || subsidyMaxAmount.includes("要確認");
   const garbageUrl = municipalityData?.garbage?.officialUrl ?? "";
   const garbagePhone = municipalityData?.garbage?.phone;
 
   const q1 = `${prefName}${cityName}で実家を解体・処分する際、補助金や助成金はもらえますか？`;
-  const a1WithData = `はい、${cityName}には『${subsidyName}』などの制度があり、条件を満たすと${subsidyMaxAmount}が支給される可能性があります。申請条件や募集枠の最新状況については、本ページに設置している公式窓口へのリンクから${cityName}の担当課へ直接ご確認ください。`;
+  const a1WithData = isPlaceholderAmount
+    ? `${cityName}では補助制度が設けられています。支給額・申請条件の詳細は${subsidyWindowName}（${subsidyWindowPhone}）にお問い合わせください。`
+    : `はい、${cityName}には『${subsidyName}』などの制度があり、条件を満たすと最大${subsidyMaxAmount}が支給される可能性があります。申請条件は${subsidyWindowName}（${subsidyWindowPhone}）にご確認ください。`;
   const a1WithoutData = `実家の解体に関する補助金（老朽空家等除却補助金など）の有無や予算枠は、${prefName}内の各自治体によって毎年変動します。${cityName}における現在の制度適用については、本ページに設置している『公式窓口で確認する』ボタンから、市の担当窓口（建築指導課など）へ直接お問い合わせいただくのが最も確実です。`;
 
   const q2 = `${cityName}にある空き家となった実家を売却する場合、税金の優遇措置はありますか？`;
