@@ -53,6 +53,14 @@ export function buildLocalSubsidyFaqItems(props: LocalSubsidyFaqDataParams): Faq
   const subsidyName = municipalityData.subsidy?.name ?? "";
   const maxAmount = municipalityData.subsidy?.maxAmount ?? "";
   const conditions = municipalityData.subsidy?.conditions ?? "";
+  const hasConditions = Array.isArray(conditions)
+    ? conditions.length > 0
+    : String(conditions).trim().length > 0;
+  const conditionsText = hasConditions ? `${conditions}が主な要件です。` : "";
+  const isPlaceholderAmount =
+    maxAmount.trim().length === 0
+    || maxAmount.includes("詳細は窓口にお問い合わせください")
+    || maxAmount.includes("要確認");
   const garbageUrl =
     municipalityData.garbage?.officialUrl ??
     `https://www.google.com/search?q=${encodeURIComponent(prefName + " " + cityName + " 粗大ゴミ 申し込み")}`;
@@ -61,7 +69,11 @@ export function buildLocalSubsidyFaqItems(props: LocalSubsidyFaqDataParams): Faq
   const q1: FaqItem = {
     question: `${cityName}で実家じまいの補助金はありますか？`,
     answer: hasSubsidy
-      ? `はい、${cityName}では「${subsidyName}」が実施されており、${maxAmount}を上限に支援が受けられます。${conditions}が主な要件です。`
+      ? (
+        isPlaceholderAmount
+          ? `はい、${cityName}では「${subsidyName}」が実施されています。支給額・詳細条件は窓口にお問い合わせください。${conditionsText}`
+          : `はい、${cityName}では「${subsidyName}」が実施されており、最大${maxAmount}を上限に支援が受けられます。${conditionsText}`
+      )
       : `現在、${cityName}独自の直接的な解体補助金は確認されていませんが、空き家対策の相談窓口が設置されています。国の税制優遇措置（3,000万円控除等）が適用できるか確認をおすすめします。`,
   };
 
