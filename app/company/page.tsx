@@ -64,19 +64,6 @@ export default function CompanyPage() {
           <p className="text-2xl font-bold text-foreground mt-1">
             Ryosuke Okubo
           </p>
-          <dl className="mt-3 space-y-1 text-sm text-foreground/80 leading-relaxed">
-            <div>
-              <dt className="inline font-medium text-foreground">趣味：</dt>
-              <dd className="inline">町中華の食べ歩き、読書、休日の家族でのお出かけ、スポーツ観戦。</dd>
-            </div>
-            <div>
-              <dt className="inline font-medium text-foreground">好きなもの：</dt>
-              <dd className="inline">コーヒー、落ち着いて食べるごはん、子どもと過ごす時間。</dd>
-            </div>
-          </dl>
-          <p className="mt-3 text-sm text-foreground/70 italic">
-            穏やかめのお父さんです。相談は堅苦しくなく、お気軽に。
-          </p>
         </div>
       </div>
 
