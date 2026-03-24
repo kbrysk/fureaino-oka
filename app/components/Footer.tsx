@@ -6,7 +6,7 @@ import OwlCharacter from "./OwlCharacter";
 const REQUIRED_LINKS: { href: string; label: string }[] = [
   { href: "/about", label: "運営者情報" },
   { href: "/editorial-policy", label: "編集指針" },
-  { href: "/company", label: "運営会社情報" },
+  { href: "/corporate", label: "運営会社情報" },
   { href: "/contact", label: "お問い合わせ" },
   { href: "/privacy", label: "プライバシーポリシー" },
   { href: "/terms", label: "利用規約" },
