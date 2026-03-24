@@ -30,8 +30,8 @@ export default function CompanyPage() {
       <div className="mb-10 flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
         <div className="relative w-[200px] sm:w-[220px] md:w-[180px] flex-shrink-0 flex items-end">
           <Image
-            src="/images/operator.png"
-            alt="運営者（ふれあいの丘 センター長）"
+            src="/images/ryosuke-okubo.png"
+            alt="株式会社Kogera 代表取締役社長 Ryosuke Okubo"
             width={400}
             height={400}
             className="w-full h-auto object-contain object-bottom drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
@@ -41,7 +41,10 @@ export default function CompanyPage() {
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-primary font-bold text-lg">
-            生前整理支援センター ふれあいの丘 センター長
+            株式会社Kogera 代表取締役社長
+          </p>
+          <p className="text-2xl font-bold text-foreground mt-1">
+            Ryosuke Okubo
           </p>
           <dl className="mt-3 space-y-1 text-sm text-foreground/80 leading-relaxed">
             <div>
@@ -143,6 +146,10 @@ export default function CompanyPage() {
           <div className="flex flex-col sm:flex-row sm:py-2 border-b border-gray-200 last:border-0">
             <dt className="sm:w-36 flex-shrink-0 font-medium text-foreground/80">運営法人</dt>
             <dd className="text-foreground mt-0.5 sm:mt-0">{organization.name}</dd>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:py-2 border-b border-gray-200 last:border-0">
+            <dt className="sm:w-36 flex-shrink-0 font-medium text-foreground/80">代表者</dt>
+            <dd className="text-foreground mt-0.5 sm:mt-0">代表取締役社長 Ryosuke Okubo</dd>
           </div>
           <div className="flex flex-col sm:flex-row sm:py-2 border-b border-gray-200 last:border-0">
             <dt className="sm:w-36 flex-shrink-0 font-medium text-foreground/80">サービス名</dt>
