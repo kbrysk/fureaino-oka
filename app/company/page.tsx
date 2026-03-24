@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { pageTitle, SITE_NAME_FULL } from "../lib/site-brand";
 import { siteName, organization } from "../lib/constants/site-metadata";
 import { getCanonicalUrl } from "../lib/site-url";
@@ -12,8 +13,25 @@ export const metadata: Metadata = {
 };
 
 export default function CompanyPage() {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Ryosuke Okubo",
+    jobTitle: "代表取締役社長",
+    worksFor: {
+      "@type": "Organization",
+      name: "株式会社Kogera",
+    },
+  };
+
   return (
     <div className="max-w-3xl mx-auto py-8">
+      <Script
+        id="company-person-schema"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <p className="text-sm text-foreground/60 mb-6">
         <Link href="/" className="hover:text-primary transition">トップ</Link>
         <span className="mx-2">/</span>
