@@ -15,8 +15,62 @@ import MascotAdviceBlock from "../../../../components/MascotAdviceBlock";
 import LocalConsultationCard from "../../../../components/LocalConsultationCard";
 import NearbySubsidyLinks from "../../../../components/NearbySubsidyLinks";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
+import { buildCleanupSeoDescription, buildCleanupSeoTitlePart } from "../../../../lib/cleanup-seo-metadata";
 import { pageTitle } from "../../../../lib/site-brand";
 import { getCanonicalUrl } from "../../../../lib/site-url";
+import JsonLd from "../../../../components/JsonLd";
+
+/**
+ * 遺品整理・実家じまいの追記セクション（流れ・FAQ・FAQPage）を出す対象。
+ * `prefId/cityId` のみを列挙し、条件は `showExtraSection` 1 箇所で判定する。
+ */
+const CLEANUP_EXTRA_CITY_KEYS: readonly string[] = [
+  "chiba/choshi",
+  "chiba/isumi",
+  "chiba/asahi",
+  "chiba/sosa",
+  "chiba/tateyama",
+  "chiba/minamiboso",
+  "chiba/inzai",
+  "chiba/sakura",
+  "saitama/hasuda",
+  "saitama/kitamoto",
+];
+
+const CLEANUP_EXTRA_CITIES = new Set(CLEANUP_EXTRA_CITY_KEYS);
+
+function buildCleanupExtraFaqJsonLd(cityName: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `遠方から${cityName}の実家を片付けるにはどうすればよいですか？`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "遠方にお住まいの方でも、オンラインで見積もり・相談に対応している業者に依頼することができます。現地への立ち会いが難しい場合は、鍵の受け渡し方法や作業報告の方法を事前に確認しておきましょう。",
+        },
+      },
+      {
+        "@type": "Question",
+        name: `${cityName}での遺品整理の費用はどのくらいですか？`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "部屋数・荷物の量・作業内容によって大きく異なります。1LDKの場合は5万円〜15万円程度、3LDK以上になると30万円を超えることもあります。まずは複数業者に無料見積もりを依頼し、比較することをおすすめします。",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "遺品整理と実家じまいは同じ業者に頼めますか？",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "遺品整理から不用品処分、清掃まで一括で対応している業者があります。ただし、解体工事や不動産売却には別の専門業者が必要になります。まずはそれぞれに見積もりを依頼することをおすすめします。",
+        },
+      },
+    ],
+  };
+}
 
 interface Props {
   params: Promise<{ prefecture: string; city: string }>;
@@ -35,15 +89,11 @@ export async function generateMetadata({ params }: Props) {
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
   if (!area) return { title: pageTitle("遺品整理・片付け相場"), alternates: { canonical: getCanonicalUrl(`/area/${prefecture}/${city}/cleanup`) } };
-  const currentYear = new Date().getFullYear();
   const canonical = getCanonicalUrl(`/area/${prefecture}/${city}/cleanup`);
-  const titleBase = `【${currentYear}年】${data.cityName}の実家じまい・遺品整理｜粗大ゴミ回収・空き家片付け`;
-  const titleFinal = titleBase.length > 32 ? titleBase.slice(0, 32) + "…" : titleBase;
-  const descriptionBase = `${data.cityName}の実家じまい・遺品整理業者の選び方と費用相場を解説。粗大ゴミの収集・持ち込み方法、不用品回収業者への依頼方法まで、${data.cityName}の実家片付けに必要な情報をまとめています。`;
-  const descriptionFinal = descriptionBase.length > 120 ? descriptionBase.slice(0, 119) + "…" : descriptionBase;
+  const titlePart = buildCleanupSeoTitlePart(data.cityName);
   return {
-    title: pageTitle(titleFinal),
-    description: descriptionFinal,
+    title: pageTitle(titlePart),
+    description: buildCleanupSeoDescription(data.cityName),
     alternates: { canonical },
   };
 }
@@ -90,8 +140,11 @@ export default async function AreaCleanupPage({ params }: Props) {
 
   const cleanupText = area.cleanupPriceNote || `${area.city}では、遺品整理・実家の片付けは、部屋数・荷物量・立地により相場が異なります。1Kで十数万円〜、2LDKで20〜40万円程度、3LDK以上で40万円〜が目安となることが多いです。複数社の無料見積もりで比較することをおすすめします。`;
 
+  const showExtraSection = CLEANUP_EXTRA_CITIES.has(`${prefecture}/${city}`);
+
   return (
     <div className="space-y-8">
+      {showExtraSection ? <JsonLd data={buildCleanupExtraFaqJsonLd(area.city)} /> : null}
       <AreaBreadcrumbs prefecture={area.prefecture} city={area.city} prefectureId={ids.prefectureId} cityId={ids.cityId} page="cleanup" />
       <div>
         <h1 className="text-2xl font-bold text-primary">
@@ -184,6 +237,83 @@ export default async function AreaCleanupPage({ params }: Props) {
           ← {area.city}の粗大ゴミ・遺品整理ページへ
         </Link>
       </div>
+
+      {showExtraSection ? (
+        <>
+          <section className="jikka-steps">
+            <h2>{area.city}で実家じまいをするときの流れ</h2>
+            <p>
+              {area.city}で実家じまいに取り組む方のために、一般的な流れをご説明します。
+              状況によって順序が変わる場合がありますが、まずは全体像を把握することが大切です。
+            </p>
+
+            <h3>ステップ1：現状の把握</h3>
+            <p>
+              実家の荷物の量、建物の状態（築年数・雨漏りなど）、
+              相続登記の状況を確認します。
+              遠方にお住まいの方は、帰省のタイミングで写真を撮っておくと業者への説明がスムーズです。
+            </p>
+
+            <h3>ステップ2：処分方法の検討</h3>
+            <p>
+              荷物の整理（遺品整理）を先に行うか、建物ごと売却するかを検討します。
+              {area.city}では空き家の解体補助金が利用できる場合があります。
+              まずは補助金の有無を確認してから業者選びをすると費用を抑えられます。
+            </p>
+
+            <h3>ステップ3：業者の選定と見積もり</h3>
+            <p>
+              遺品整理・解体・不動産売却それぞれの専門業者に相談します。
+              複数社から見積もりを取り、内容と金額を比較することをおすすめします。
+              オンラインで対応している業者も多いため、遠方にお住まいでも相談できます。
+            </p>
+
+            <h3>ステップ4：作業の実施</h3>
+            <p>
+              業者が決まったら、日程を調整して作業を進めます。
+              立ち会いが難しい場合は、写真や動画での報告に対応している業者を選ぶと安心です。
+            </p>
+          </section>
+
+          <section className="faq-section">
+            <h2>{area.city}の遺品整理・実家じまいに関するよくある質問</h2>
+
+            <div className="faq-item">
+              <h3>Q. 遠方から{area.city}の実家を片付けるにはどうすればよいですか？</h3>
+              <p>
+                A. 遠方にお住まいの方でも、オンラインで見積もり・相談に対応している業者に依頼することができます。
+                現地への立ち会いが難しい場合は、鍵の受け渡し方法や作業報告の方法を事前に確認しておきましょう。
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Q. 遺品整理と実家じまいは同じ業者に頼めますか？</h3>
+              <p>
+                A. 遺品整理から不用品処分、清掃まで一括で対応している業者があります。
+                ただし、解体工事や不動産売却には別の専門業者が必要になります。
+                まずはそれぞれに見積もりを依頼することをおすすめします。
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Q. {area.city}での遺品整理の費用はどのくらいですか？</h3>
+              <p>
+                A. 部屋数・荷物の量・作業内容によって大きく異なります。
+                1LDKの場合は5万円〜15万円程度、3LDK以上になると30万円を超えることもあります。
+                まずは複数業者に無料見積もりを依頼し、比較することをおすすめします。
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Q. 親が存命中でも遺品整理・実家じまいの準備はできますか？</h3>
+              <p>
+                A. できます。「生前整理」として親本人と一緒に進める方法があります。
+                本人の意思を確認しながら不要なものを整理することで、後の負担を大きく減らせます。
+              </p>
+            </div>
+          </section>
+        </>
+      ) : null}
 
       <footer className="pt-8 mt-8 border-t border-border text-sm text-foreground/60">
         <p className="font-medium text-foreground/80 mb-1">監修</p>

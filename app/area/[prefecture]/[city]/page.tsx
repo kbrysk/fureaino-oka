@@ -111,6 +111,10 @@ export default async function AreaPage({ params, searchParams }: Props) {
   const displayCityName = showFallback ? data.cityName : area!.city;
   const cityIdForCases = showFallback ? city : ids.cityId;
   const hasMunicipalityData = !data._isDefault;
+  const areaDisposalRules = areaData?.localDisposalRules ?? [];
+  const areaFacilities = areaData?.facilities ?? [];
+  const areaFaqs = areaData?.faqs ?? [];
+  const areaMarketPriceText = areaData?.marketPriceText ?? "";
 
   const localSubsidyItems = buildLocalSubsidyFaqItems({
     municipalityData: data,
@@ -229,6 +233,11 @@ export default async function AreaPage({ params, searchParams }: Props) {
     );
   }
 
+  const areaCityName = areaData?.cityName ?? area!.city;
+  const bulkyWasteUrl =
+    area!.bulkyWasteUrl ||
+    `https://www.google.com/search?q=${encodeURIComponent(area!.prefecture + " " + area!.city + " 粗大ゴミ")}`;
+
   const richBreadcrumbItems = [
     { name: "ホーム", item: `${base}/` },
     { name: area.prefecture, item: `${base}/area#${prefecture}` },
@@ -334,10 +343,10 @@ export default async function AreaPage({ params, searchParams }: Props) {
           </div>
 
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mt-10 mb-6 border-b-2 border-blue-500 pb-2">
-            {areaData.cityName}の粗大ゴミ出し方・ルール
+            {areaCityName}の粗大ゴミ出し方・ルール
           </h2>
           <ul className="space-y-4">
-            {areaData.localDisposalRules.map((rule, i) => (
+            {areaDisposalRules.map((rule, i) => (
               <li key={i} className="flex items-start text-base sm:text-lg leading-relaxed text-gray-800">
                 <span className="mr-3 text-green-500 text-xl flex-shrink-0">✅</span>
                 {rule}
@@ -349,7 +358,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
             持ち込み可能な施設
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {areaData.facilities.map((facility, i) => (
+            {areaFacilities.map((facility, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
                 <h4 className="font-bold text-gray-900 text-lg mb-2">{facility.name}</h4>
                 <p className="text-base text-gray-800">{facility.address}</p>
@@ -366,10 +375,10 @@ export default async function AreaPage({ params, searchParams }: Props) {
           </div>
 
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mt-10 mb-6 border-b-2 border-blue-500 pb-2">
-            {areaData.cityName}の生前整理・遺品整理の費用相場
+            {areaCityName}の生前整理・遺品整理の費用相場
           </h2>
           <p className="text-base sm:text-lg leading-loose text-gray-800 mb-8">
-            {areaData.marketPriceText}
+            {areaMarketPriceText}
           </p>
           <RealEstateAppraisalCard
             cityName={area.city}
@@ -379,7 +388,7 @@ export default async function AreaPage({ params, searchParams }: Props) {
           <CleanupAffiliateCard cityName={area.city} cityId={ids.cityId} />
 
           <dl className="space-y-6 mt-10">
-            {areaData.faqs.map((faq, i) => (
+            {areaFaqs.map((faq, i) => (
               <div key={i}>
                 <dt className="font-bold text-lg text-gray-900 bg-gray-100 p-4 rounded-t-lg flex items-center">
                   Q. {faq.question}
@@ -436,13 +445,13 @@ export default async function AreaPage({ params, searchParams }: Props) {
             {area.city}の粗大ゴミは、自治体の案内に従って申し込みます。
           </p>
           <AreaBulkyWasteLink
-            href={area.bulkyWasteUrl}
+            href={bulkyWasteUrl}
             prefecture={area.prefecture}
             city={area.city}
           >
-            {area.bulkyWasteUrl.startsWith("https://www.google.com/search")
+            {bulkyWasteUrl.startsWith("https://www.google.com/search")
               ? `${area.prefecture}${area.city}の粗大ゴミ案内を検索`
-              : area.bulkyWasteUrl}
+              : bulkyWasteUrl}
           </AreaBulkyWasteLink>
         </div>
       </div>
