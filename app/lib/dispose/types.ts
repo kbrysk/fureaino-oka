@@ -9,7 +9,7 @@ export interface SearchBarProps {
   suggestions?: { slug: string; name: string }[];
   /** アクセシビリティ用ラベル */
   ariaLabel?: string;
-  /** 検索実行時のコールバック（例: 品目詳細へ遷移）。未指定時はフォーム送信で /dispose?q= 等の簡易挙動も可 */
+  /** 検索実行時のコールバック（例: 品目詳細へ遷移） */
   onSearch?: (slug: string) => void;
   /** 入力中のサジェスト表示有無（今回は簡易モックのため true でクライアント絞り込み） */
   showSuggestions?: boolean;

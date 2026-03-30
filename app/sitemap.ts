@@ -2,8 +2,6 @@ import type { MetadataRoute } from "next";
 import { getPrefectureIds, getCityPathsByPrefecture } from "./lib/utils/city-loader";
 import { getBlogPostIds } from "./lib/microcms";
 import { getLayoutSlugs } from "./lib/cost-by-layout";
-import { getDisposeSlugs } from "./lib/dispose-items";
-import { DISPOSE_CATEGORIES } from "./lib/dispose-categories";
 import { getCanonicalBase } from "./lib/site-url";
 
 /** 正規ベースURL（絶対URL）。未設定時は https://www.fureaino-oka.com */
@@ -11,7 +9,7 @@ const SITEMAP_BASE = getCanonicalBase();
 
 /**
  * サイトマップ分割IDを生成（Sitemap Index 用）。
- * id "main" = トップ・固定ページ・cost/dispose/articles
+ * id "main" = トップ・固定ページ・cost/articles
  * id "tokyo" | "osaka" | ... = 都道府県ごとの area Hub/Spoke（Vercel タイムアウト・メモリ対策）
  */
 export async function generateSitemaps(): Promise<{ id: string }[]> {
@@ -54,7 +52,6 @@ export default async function sitemap(props: {
         { url: `${base}/area`, lastModified, changeFrequency: "daily", priority: 0.9 },
         { url: `${base}/company`, lastModified, changeFrequency: "monthly", priority: 0.6 },
         { url: `${base}/cost`, lastModified, changeFrequency: "weekly", priority: 0.85 },
-        { url: `${base}/dispose`, lastModified, changeFrequency: "weekly", priority: 0.85 },
         { url: `${base}/tools`, lastModified, changeFrequency: "weekly", priority: 0.9 },
         { url: `${base}/articles/master-guide`, lastModified, changeFrequency: "weekly", priority: 0.85 },
         { url: `${base}/guidebook`, lastModified, changeFrequency: "weekly", priority: 0.8 },
@@ -88,20 +85,6 @@ export default async function sitemap(props: {
         priority: 0.75,
       }));
 
-      const disposeCategoryRoutes: MetadataRoute.Sitemap = DISPOSE_CATEGORIES.map((cat) => ({
-        url: `${base}/dispose/category/${encodeURIComponent(cat.slug)}`,
-        lastModified,
-        changeFrequency: "monthly" as const,
-        priority: 0.7,
-      }));
-
-      const disposeItemRoutes: MetadataRoute.Sitemap = getDisposeSlugs().map((slug) => ({
-        url: `${base}/dispose/${encodeURIComponent(slug)}`,
-        lastModified,
-        changeFrequency: "monthly" as const,
-        priority: 0.7,
-      }));
-
       const articleIds = await getBlogPostIds().catch(() => []);
       const articleRoutes: MetadataRoute.Sitemap = articleIds.map((articleId) => ({
         url: `${base}/articles/${encodeURIComponent(articleId)}`,
@@ -113,8 +96,6 @@ export default async function sitemap(props: {
       return [
         ...staticEntries,
         ...costLayoutRoutes,
-        ...disposeCategoryRoutes,
-        ...disposeItemRoutes,
         ...articleRoutes,
       ];
     } catch {

@@ -36,7 +36,6 @@ const FOOTER_GUIDE_AND_CONTENT: { href: string; label: string }[] = [
   { href: "/guidebook", label: "ガイドブック（無料PDF）" },
   { href: "/articles", label: "記事一覧" },
   { href: "/cost", label: "間取り別 片付け費用" },
-  { href: "/dispose", label: "捨て方辞典" },
   { href: "/senryu", label: "実家じまい川柳" },
 ];
 

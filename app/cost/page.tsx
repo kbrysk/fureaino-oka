@@ -95,7 +95,7 @@ export default function CostIndexPage() {
         <ul className="space-y-3">
           <li>
             <Link
-              href="/dispose/butsudan"
+              href="/articles/master-guide"
               className="block py-2 px-4 rounded-xl border border-border hover:border-primary/50 hover:bg-primary-light/30 transition font-medium text-foreground/90"
             >
               仏壇がある場合（供養・処分の費用と方法）

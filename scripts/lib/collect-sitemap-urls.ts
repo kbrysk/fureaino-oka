@@ -3,14 +3,10 @@
  * app/sitemap.ts のロジックを Node 単体実行用に再現し、
  * Google Indexing API 用の「優先度付きURLリスト」を返す。
  */
-import path from "path";
 import { getCanonicalBase } from "../../app/lib/site-url";
 import { getPrefectureIds, getCityPathsByPrefecture } from "../../app/lib/utils/city-loader";
 import { getBlogPostIds } from "../../app/lib/microcms";
 import { getLayoutSlugs } from "../../app/lib/cost-by-layout";
-import { getDisposeSlugs } from "../../app/lib/dispose-items";
-import { DISPOSE_CATEGORIES } from "../../app/lib/dispose-categories";
-
 export type UrlPriority = "High" | "Normal";
 
 export interface UrlWithPriority {
@@ -28,7 +24,6 @@ function getStaticUrls(): string[] {
     `${base}/area`,
     `${base}/company`,
     `${base}/cost`,
-    `${base}/dispose`,
     `${base}/tools`,
     `${base}/articles/master-guide`,
     `${base}/guidebook`,
@@ -79,23 +74,13 @@ export async function collectAllUrlsWithPriority(): Promise<UrlWithPriority[]> {
     add(`${base}/cost/layout/${encodeURIComponent(slug)}`);
   }
 
-  // 3. dispose/category
-  for (const cat of DISPOSE_CATEGORIES) {
-    add(`${base}/dispose/category/${encodeURIComponent(cat.slug)}`);
-  }
-
-  // 4. dispose 品目
-  for (const slug of getDisposeSlugs()) {
-    add(`${base}/dispose/${encodeURIComponent(slug)}`);
-  }
-
-  // 5. 記事（microCMS）
+  // 3. 記事（microCMS）
   const articleIds = await getBlogPostIds().catch(() => []);
   for (const id of articleIds) {
     add(`${base}/articles/${encodeURIComponent(id)}`);
   }
 
-  // 7. 都道府県別 area（地域ノード + 補助金LP 等）
+  // 4. 都道府県別 area（地域ノード + 補助金LP 等）
   const prefIds = getPrefectureIds();
   for (const prefId of prefIds) {
     const cities = getCityPathsByPrefecture(prefId);

@@ -5,7 +5,7 @@ module.exports = {
       url: [
         "http://localhost:3000/",
         "http://localhost:3000/area",
-        "http://localhost:3000/dispose",
+        "http://localhost:3000/cost",
       ],
       numberOfRuns: 1,
     },

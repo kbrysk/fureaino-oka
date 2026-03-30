@@ -112,7 +112,7 @@ export default async function ArticlesPage() {
       <section className="bg-card rounded-2xl border border-border p-6">
         <h2 className="font-bold text-primary mb-3">あわせて役立つコンテンツ</h2>
         <p className="text-sm text-foreground/70 mb-4">
-          間取り別の費用相場、品目別の捨て方、進め方の全体像、無料診断ができます。
+          間取り別の費用相場、進め方の全体像、チェックリスト、無料診断ができます。
         </p>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <li>
@@ -125,10 +125,10 @@ export default async function ArticlesPage() {
           </li>
           <li>
             <Link
-              href="/dispose"
+              href="/checklist"
               className="block py-3 px-4 rounded-xl border border-border hover:border-primary/50 hover:bg-primary-light/30 transition font-medium text-foreground/90 text-sm"
             >
-              捨て方辞典（品目別）
+              生前整理チェックリスト
             </Link>
           </li>
           <li>

@@ -48,12 +48,12 @@ export const COST_BREAKDOWN_DATA: CostCategory[] = [
       {
         label: "物置の解体・撤去",
         priceRange: "15,000円〜",
-        url: "/dispose/category/outdoor-garage",
+        url: "/cost",
       },
       {
         label: "仏壇の供養・処分",
         priceRange: "20,000円〜",
-        url: "/dispose/category/memorial",
+        url: "/articles/master-guide",
       },
       { label: "庭木の剪定・草刈り", priceRange: "10,000円〜/時", url: "/cost/garden" },
     ],

@@ -115,8 +115,8 @@ export const ARTICLE_TAGS: ArticleTag[] = [
     title: "罪悪感があって捨てられない方のためのガイド",
     leadText:
       "親の思い出の品をゴミ袋に入れることに抵抗がある方へ。供養サービスや寄付・リサイクルの選択肢、写真に残してから手放す方法、心を整える考え方をまとめました。「捨てる」以外の道もたくさんあります。",
-    toolHref: "/dispose",
-    toolLabel: "捨て方辞典（品目別）",
+    toolHref: "/articles/master-guide",
+    toolLabel: "実家じまい完全ガイド",
     shortLabel: "罪悪感・捨てられない",
   },
 ];

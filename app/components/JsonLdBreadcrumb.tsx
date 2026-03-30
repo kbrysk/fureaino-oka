@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 const SEGMENT_LABELS: Record<string, string> = {
   area: "地域別 粗大ゴミ・遺品整理",
   cost: "間取り別 片付け費用",
-  dispose: "捨て方辞典",
   tools: "無料ツール一覧",
   guide: "生前整理のはじめかた",
   guidebook: "ガイドブック",
@@ -41,7 +40,6 @@ function getLabel(segment: string, index: number, segments: string[]): string {
   if (SEGMENT_LABELS[segment]) return SEGMENT_LABELS[segment];
   if (SEGMENT_LABELS[decoded]) return SEGMENT_LABELS[decoded];
   if (segments[0] === "articles" && index === 1) return "記事";
-  if (segments[0] === "dispose" && index === 1) return "捨て方";
   if (segments[0] === "cost" && segments[1] === "layout" && index === 2) return decoded;
   if (segments[0] === "area" && index >= 1) return decoded;
   if (segments[0] === "region" && index >= 1) return decoded;

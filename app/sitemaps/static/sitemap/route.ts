@@ -21,7 +21,6 @@ const STATIC_PAGES: { path: string; priority: number; changeFrequency: SitemapEn
   { path: "/assets", priority: 0.7, changeFrequency: "monthly" },
   { path: "/guidebook", priority: 0.7, changeFrequency: "monthly" },
   { path: "/cost", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/dispose", priority: 0.6, changeFrequency: "monthly" },
   { path: "/about", priority: 0.5, changeFrequency: "yearly" },
   { path: "/contact", priority: 0.5, changeFrequency: "yearly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },

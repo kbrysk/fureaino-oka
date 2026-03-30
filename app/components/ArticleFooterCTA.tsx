@@ -87,14 +87,6 @@ export default function ArticleFooterCTA({ slug, category = "" }: ArticleFooterC
           </li>
           <li>
             <Link
-              href="/dispose"
-              className="inline-block px-4 py-2 rounded-lg bg-card border border-border hover:border-primary/40 hover:text-primary transition text-sm font-medium"
-            >
-              捨て方辞典
-            </Link>
-          </li>
-          <li>
-            <Link
               href="/tools/jikka-diagnosis"
               className="inline-block px-4 py-2 rounded-lg bg-primary text-white hover:opacity-90 transition text-sm font-medium"
             >
