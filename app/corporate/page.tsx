@@ -27,7 +27,7 @@ export default function CorporatePage() {
     },
     employee: {
       "@type": "Person",
-      name: "Ryosuke Okubo",
+      name: "大久保亮佑",
       jobTitle: "代表取締役社長",
     },
   };
@@ -65,7 +65,7 @@ export default function CorporatePage() {
           </div>
           <div className="flex flex-col sm:flex-row sm:py-2 border-b border-gray-200 last:border-0">
             <dt className="sm:w-36 flex-shrink-0 font-medium text-foreground/80">代表者</dt>
-            <dd className="text-foreground mt-0.5 sm:mt-0">代表取締役社長 Ryosuke Okubo</dd>
+            <dd className="text-foreground mt-0.5 sm:mt-0">代表取締役社長 大久保亮佑</dd>
           </div>
           <div className="flex flex-col sm:flex-row sm:py-2 border-b border-gray-200 last:border-0">
             <dt className="sm:w-36 flex-shrink-0 font-medium text-foreground/80">設立</dt>

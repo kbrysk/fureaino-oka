@@ -16,7 +16,7 @@ export default function CompanyPage() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Ryosuke Okubo",
+    name: "大久保亮佑",
     jobTitle: "代表取締役社長",
     worksFor: {
       "@type": "Organization",
@@ -49,7 +49,7 @@ export default function CompanyPage() {
         <div className="relative w-[200px] sm:w-[220px] md:w-[180px] flex-shrink-0 flex items-end">
           <Image
             src="/images/ryosuke-okubo.png"
-            alt="株式会社Kogera 代表取締役社長 Ryosuke Okubo"
+            alt="株式会社Kogera 代表取締役社長 大久保亮佑"
             width={400}
             height={400}
             className="w-full h-auto object-contain object-bottom drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
@@ -62,7 +62,7 @@ export default function CompanyPage() {
             株式会社Kogera 代表取締役社長
           </p>
           <p className="text-2xl font-bold text-foreground mt-1">
-            Ryosuke Okubo
+            大久保亮佑
           </p>
         </div>
       </div>
@@ -138,7 +138,7 @@ export default function CompanyPage() {
         </section>
 
         <p className="text-right font-medium text-foreground pt-4">
-          <span className="block">Ryosuke Okubo</span>
+          <span className="block">大久保亮佑</span>
           <span className="block">株式会社Kogera 代表取締役社長</span>
         </p>
       </article>
@@ -153,7 +153,7 @@ export default function CompanyPage() {
           </div>
           <div className="flex flex-col sm:flex-row sm:py-2 border-b border-gray-200 last:border-0">
             <dt className="sm:w-36 flex-shrink-0 font-medium text-foreground/80">代表者</dt>
-            <dd className="text-foreground mt-0.5 sm:mt-0">代表取締役社長 Ryosuke Okubo</dd>
+            <dd className="text-foreground mt-0.5 sm:mt-0">代表取締役社長 大久保亮佑</dd>
           </div>
           <div className="flex flex-col sm:flex-row sm:py-2 border-b border-gray-200 last:border-0">
             <dt className="sm:w-36 flex-shrink-0 font-medium text-foreground/80">サービス名</dt>
