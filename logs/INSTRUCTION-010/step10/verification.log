@@ -42,3 +42,23 @@
 
 ## 補足
 - `feature/cleanup-noindex` ブランチは、本番で 24 時間以上問題なしを確認し、運営者の明示指示があるまで削除しない（ADDENDUM-A 指示）
+
+---
+
+## 再検証（本番 Vercel Production Ready 反映後）
+実行日時: 2026-05-04 21:03:33 +09:00（検証端末ローカルから curl / PowerShell）
+前提: 運営者確認 — `view-source` にて komae cleanup の `robots` / `googlebot` の noindex 出力および Vercel でコミット `6c42a3d` Ready Latest 確認済み
+
+### チェックリスト（期待どおり）
+1. `/area/tokyo/komae/cleanup` — `meta name="robots"` / `meta name="googlebot"` に **noindex, nofollow** を検出（正規表現で HTML 取得確認）✅（運営者 view-source 確認と整合）
+2. `/area/tokyo/nonexistentcity999/cleanup`（フォールバック `!area` 相当）— 上記と同様に **両メタで noindex** 検出 ✅
+3. `/area/tokyo/komae/subsidy` — `robots` / `googlebot` の **noindex メタなし** ✅
+4. `/area/tokyo/komae/cost` — 同上 **noindex メタなし** ✅
+5. `/area/tokyo/komae`（ハブ）— 同上 **noindex メタなし** ✅
+6. `/company` — 同上 **noindex メタなし**（INSTRUCTION-007 内容保持）✅
+7. 全子サイトマップの `/cleanup` 出現合算 — **`0`**（`/sitemap.xml` から `<loc>` 列挙し各子 XML を取得して集計。子サイトマップ数 **48**）✅
+8. `/sitemaps/area/sitemap.xml` — `/subsidy` 出現 **`844`**、`/cleanup` 出現 **`0`** ✅
+
+### 総合判定（再検証）
+- **すべて期待どおり**（ADDENDUM-A Step 10 本番検証完了）
+- 初回 Step 10 記載の「旧ビルド未反映」は解消済み
