@@ -1,4 +1,5 @@
 // import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAreaById, getAreaIds } from "../../../../lib/area-data";
 import { getSampleCityPaths } from "../../../../lib/utils/city-loader";
@@ -19,6 +20,18 @@ import { buildCleanupSeoDescription, buildCleanupSeoTitlePart } from "../../../.
 import { pageTitle } from "../../../../lib/site-brand";
 import { getCanonicalUrl } from "../../../../lib/site-url";
 import JsonLd from "../../../../components/JsonLd";
+
+/** INSTRUCTION-010 ADDENDUM-A: cleanup 全ページ noindex（generateMetadata の各 return で同一を付与） */
+const cleanupRobotsNoindex: NonNullable<Metadata["robots"]> = {
+  // INSTRUCTION-010: noindex で検索結果から除外
+  // 両分岐(通常+フォールバック)に必ず付与する
+  index: false,
+  follow: false,
+  googleBot: {
+    index: false,
+    follow: false,
+  },
+};
 
 /**
  * 遺品整理・実家じまいの追記セクション（流れ・FAQ・FAQPage）を出す対象。
@@ -917,18 +930,27 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { prefecture, city } = await params;
   const area = getAreaById(prefecture, city);
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
-  if (!area) return { title: pageTitle("遺品整理・片付け相場"), alternates: { canonical: getCanonicalUrl(`/area/${prefecture}/${city}/cleanup`) } };
+  if (!area) {
+    return {
+      title: pageTitle("遺品整理・片付け相場"),
+      alternates: { canonical: getCanonicalUrl(`/area/${prefecture}/${city}/cleanup`) },
+      // INSTRUCTION-010: noindex で検索結果から除外（フォールバック分岐: !area）
+      robots: cleanupRobotsNoindex,
+    };
+  }
   const canonical = getCanonicalUrl(`/area/${prefecture}/${city}/cleanup`);
   const titlePart = buildCleanupSeoTitlePart(data.cityName);
   return {
     title: pageTitle(titlePart),
     description: buildCleanupSeoDescription(data.cityName),
     alternates: { canonical },
+    // INSTRUCTION-010: noindex で検索結果から除外（通常分岐）
+    robots: cleanupRobotsNoindex,
   };
 }
 
