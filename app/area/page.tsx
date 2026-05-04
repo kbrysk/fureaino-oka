@@ -82,12 +82,6 @@ export default function AreaIndexPage() {
                     >
                       {r.city}の補助金・助成金を調べる
                     </Link>
-                    <Link
-                      href={`/area/${ids.prefectureId}/${ids.cityId}/cleanup`}
-                      className="block w-full text-center bg-primary-light text-primary border border-primary/30 rounded-lg px-4 py-2.5 text-sm font-medium hover:bg-primary/10 transition"
-                    >
-                      {r.city}の片付け相場を見る
-                    </Link>
                   </div>
                 </li>
               );})}
