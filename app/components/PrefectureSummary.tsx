@@ -144,9 +144,7 @@ export default function PrefectureSummary({ prefId, prefName: prefNameProp }: Pr
                   <Link href={`/area/${m.prefId}/${m.cityId}/subsidy`} className="text-primary hover:underline">
                     補助金
                   </Link>
-                  <Link href={`/area/${m.prefId}/${m.cityId}/cleanup`} className="text-primary hover:underline">
-                    相場
-                  </Link>
+                  {/* INSTRUCTION-010: cleanup へのリンクは一覧から除去（noindex 方針） */}
                 </div>
               </li>
             ))}

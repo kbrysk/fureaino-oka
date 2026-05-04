@@ -20,8 +20,8 @@ export async function GET() {
           { url: `${base}/area/${p}/${cityId}`, lastModified, changeFrequency: "weekly", priority: 0.6 },
           { url: `${base}/area/${p}/${cityId}/subsidy`, lastModified, changeFrequency: "monthly", priority: 0.7 },
           { url: `${base}/area/${p}/${cityId}/garbage`, lastModified, changeFrequency: "monthly", priority: 0.5 },
-          { url: `${base}/area/${p}/${cityId}/cost`, lastModified, changeFrequency: "monthly", priority: 0.5 },
-          { url: `${base}/area/${p}/${cityId}/cleanup`, lastModified, changeFrequency: "monthly", priority: 0.6 }
+          { url: `${base}/area/${p}/${cityId}/cost`, lastModified, changeFrequency: "monthly", priority: 0.5 }
+          // INSTRUCTION-010: cleanup excluded (noindex)
         );
       }
     }

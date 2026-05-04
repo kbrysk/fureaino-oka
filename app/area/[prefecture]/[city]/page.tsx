@@ -213,7 +213,12 @@ export default async function AreaPage({ params, searchParams }: Props) {
           <Link href={`/area/${data.prefId}/${data.cityId}/subsidy`} className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition">
             {data.cityName}の空き家・補助金
           </Link>
-          <Link href={`/area/${data.prefId}/${data.cityId}/cleanup`} className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition">
+          {/* INSTRUCTION-010: cleanup is noindexed; nofollow to break PageRank flow */}
+          <Link
+            href={`/area/${data.prefId}/${data.cityId}/cleanup`}
+            rel="nofollow"
+            className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition"
+          >
             {data.cityName}の遺品整理・相場
           </Link>
           <Link href="/tools" className="inline-block text-primary font-medium hover:underline">
@@ -543,8 +548,10 @@ export default async function AreaPage({ params, searchParams }: Props) {
         >
           {area.city}の空き家・補助金
         </Link>
+        {/* INSTRUCTION-010: cleanup is noindexed; nofollow to break PageRank flow */}
         <Link
           href={`/area/${ids.prefectureId}/${ids.cityId}/cleanup`}
+          rel="nofollow"
           className="inline-block bg-card border border-border px-4 py-2 rounded-xl text-sm font-medium hover:bg-primary-light hover:text-primary transition"
         >
           {area.city}の遺品整理・相場

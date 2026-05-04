@@ -582,11 +582,6 @@ export default async function AreaSubsidyPage({ params }: Props) {
             </Link>
           </li>
           <li>
-            <Link href={`/area/${ids.prefectureId}/${ids.cityId}/cleanup`} className="text-primary hover:underline">
-              {cityName}の空き家片付け
-            </Link>
-          </li>
-          <li>
             <Link href={`/area/${ids.prefectureId}`} className="text-primary hover:underline">
               {prefName}の補助金一覧に戻る
             </Link>

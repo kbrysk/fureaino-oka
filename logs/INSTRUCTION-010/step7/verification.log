@@ -1,0 +1,22 @@
+=== INSTRUCTION-010 ADDENDUM-A Step 7 Verification ===
+Date: 2026-05-04 (local npm run start + curl)
+
+## cleanup noindex (normal)
+/area/tokyo/komae/cleanup: meta name="robots" content="noindex, nofollow" confirmed
+
+## cleanup noindex (fallback !area)
+/area/tokyo/nonexistentcity999/cleanup: meta name="robots" content="noindex, nofollow" confirmed
+
+## Other pages (no universal noindex robots on these URLs)
+/area/tokyo/komae/subsidy: no name="robots" in streamed HTML sample (OK)
+/company: no name="robots" in streamed HTML sample (OK)
+
+## Sitemap
+main /sitemap.xml: cleanup substring count = 0
+/sitemaps/area/sitemap.xml: cleanup = 0, subsidy = 844
+
+## Build
+npm run build: success (Next.js 16.1.6)
+
+## robots.ts
+Not modified in this branch (ADDENDUM-A: no Disallow for cleanup).

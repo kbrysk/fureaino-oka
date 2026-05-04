@@ -111,8 +111,8 @@ export default async function sitemap(props: {
         { url: `${base}/area/${prefId}/${cityId}`, lastModified, changeFrequency: "weekly", priority: 0.9 },
         { url: `${base}/area/${prefId}/${cityId}/subsidy`, lastModified, changeFrequency: "weekly", priority: 0.8 },
         { url: `${base}/area/${prefId}/${cityId}/garbage`, lastModified, changeFrequency: "weekly", priority: 0.8 },
-        { url: `${base}/area/${prefId}/${cityId}/cost`, lastModified, changeFrequency: "weekly", priority: 0.8 },
-        { url: `${base}/area/${prefId}/${cityId}/cleanup`, lastModified, changeFrequency: "weekly", priority: 0.8 }
+        { url: `${base}/area/${prefId}/${cityId}/cost`, lastModified, changeFrequency: "weekly", priority: 0.8 }
+        // INSTRUCTION-010: cleanup excluded (noindex)
       );
     }
     return areaRoutes;

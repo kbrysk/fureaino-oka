@@ -71,7 +71,6 @@ export default async function AreaJikkaPage({ params }: Props) {
   const hasArea = hasInternalAreaRoutes(prefecture, city);
 
   const subsidyHref = hasArea ? `/area/${prefecture}/${city}/subsidy` : null;
-  const cleanupHref = hasArea ? `/area/${prefecture}/${city}/cleanup` : null;
   const costHref = hasArea ? `/area/${prefecture}/${city}/cost` : null;
   const taxSimulatorHref = hasArea ? `/tax-simulator/${prefecture}/${city}` : null;
 
@@ -232,14 +231,9 @@ export default async function AreaJikkaPage({ params }: Props) {
 
           <h2 className="text-xl font-bold text-foreground">{cityName}の実家じまいに関連するページ</h2>
           <ul className="list-disc list-inside space-y-2 text-base text-foreground/90">
-            <li>
-              {cleanupHref ? (
-                <Link href={cleanupHref} className="text-primary underline">
-                  {cityName}の遺品整理ガイド
-                </Link>
-              ) : (
-                <>{cityName}の遺品整理ガイド</>
-              )}
+            <li className="text-foreground/90">
+              {/* INSTRUCTION-010: cleanup は noindex のため内部リンクを除去 */}
+              {cityName}の遺品整理ガイド
             </li>
             <li>
               {costHref ? (
