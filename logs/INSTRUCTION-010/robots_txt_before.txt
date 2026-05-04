@@ -1,0 +1,24 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /settings
+Disallow: /_next/
+Disallow: /contact/thanks
+Disallow: /senryu/submit
+
+User-Agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /settings
+Disallow: /_next/
+Disallow: /contact/thanks
+Disallow: /senryu/submit
+
+Host: https://www.fureaino-oka.com
+Sitemap: https://www.fureaino-oka.com/sitemap.xml
+Sitemap: https://www.fureaino-oka.com/sitemaps/static/sitemap.xml
+Sitemap: https://www.fureaino-oka.com/sitemaps/area/sitemap.xml
+Sitemap: https://www.fureaino-oka.com/sitemaps/tools/sitemap.xml
+Sitemap: https://www.fureaino-oka.com/sitemaps/articles/sitemap.xml

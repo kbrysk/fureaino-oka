@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Age: 0
+Cache-Control: public, max-age=0, must-revalidate
+Content-Length: 82099
+Content-Type: text/html; charset=utf-8
+Date: Mon, 04 May 2026 11:02:22 GMT
+Etag: "abtf0hnvwh1lqr"
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+Vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+X-Matched-Path: /area/[prefecture]/[city]/cleanup
+X-Nextjs-Prerender: 1
+X-Nextjs-Stale-Time: 300
+X-Powered-By: Next.js
+X-Vercel-Cache: MISS
+X-Vercel-Id: kix1::iad1::fxhb2-1777892541822-1947f9d2829d
+
