@@ -1,0 +1,44 @@
+=== INSTRUCTION-010 ADDENDUM-A Step 10 本番検証 ===
+実行日時: 2026-05-04 (検証端末ローカルから curl / PowerShell)
+対象ドメイン: https://www.fureaino-oka.com/
+
+## Step 9 マージ（参照）
+- `main` へ `feature/cleanup-noindex` を `--no-ff` マージ済み（リモート push 済み）
+- マージコミット: `b98d6f3` — Merge: cleanup pages noindex (INSTRUCTION-010 ADDENDUM-A)
+
+## 1. 本番 HTML: cleanup の noindex
+- URL: `/area/tokyo/komae/cleanup`
+- 結果: **未確認（旧ビルドのまま）**
+  - 取得 HTML に `noindex` 文字列なし
+  - 静的チャンクの `dpl_` プレフィックス: `dpl_E7eKoMyXuEGmQvMWSATrCzXgJDPi`（Step 7 ローカル検証時点の本番と同一系の可能性）
+  - レスポンス: `X-Vercel-Cache: HIT`, `Age` 大（エッジキャッシュ）
+- 期待（マージ内容反映後）: `meta name="robots" content="noindex, nofollow"` 相当
+
+## 2. サイトマップ上の cleanup 件数（全子サイトマップ合算）
+- `/sitemap.xml` から `<loc>` 列挙し、各子 XML を取得して `/cleanup` 出現回数を合算
+- 結果: **844**（ベースラインと同水準＝**新実装未反映**）
+- 期待（反映後）: **0**
+
+## 3. 集約エリアサイトマップ
+- `/sitemaps/area/sitemap.xml`
+- `/cleanup` 出現: **844**（未反映）
+- `/subsidy` 出現: **844**（5兄弟スポークの subsidy 本数は現状維持）
+
+## 4. robots.txt とベースライン比較
+- ベースライン: `logs/INSTRUCTION-010/robots_txt_before.txt`
+- 本番取得: `logs/INSTRUCTION-010/step10/robots_txt_prod.txt`
+- 比較: UTF-8 BOM および改行（CRLF/LF）を正規化したうえで **本文一致（MATCH）**
+- バイト完全一致は行末形式の差で不一致になり得るため、意味的一致で判定
+
+## 5. 他ページへの副作用（スポット）
+- `/area/tokyo/komae/subsidy`: `name="robots"` メタなし（OK）
+
+## 総合判定
+- **本番デプロイがマージ内容をまだ配信していない**（cleanup の noindex・サイトマップ除外のいずれも本番で未確認）
+- **運営者アクション**: Vercel Production のデプロイ完了を確認。INSTRUCTION-008 と同様に Cancel 等の場合は **手動 Redeploy**（**Use existing Build Cache をオフ**）
+- 反映後の再検証コマンド例:
+  - `curl -s https://www.fureaino-oka.com/area/tokyo/komae/cleanup | findstr noindex`（または grep）
+  - サイトマップ合算で cleanup **0**、area 集約で subsidy **844** を再確認
+
+## 補足
+- `feature/cleanup-noindex` ブランチは、本番で 24 時間以上問題なしを確認し、運営者の明示指示があるまで削除しない（ADDENDUM-A 指示）
