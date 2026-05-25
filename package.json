@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "og:generate": "node scripts/generate-ogp-image.mjs",
-    "index:run": "tsx scripts/google-indexing-api.ts"
+    "index:run": "tsx scripts/google-indexing-api.ts",
+    "gsc:report": "tsx scripts/gsc-report.ts",
+    "ga4:report": "tsx scripts/ga4-report.ts"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.6",

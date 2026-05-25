@@ -15,6 +15,9 @@ interface Props {
   params: Promise<{ id: string }>;
 }
 
+// ISR: microCMSの新規記事を10分ごとに自動反映（再デプロイ不要）
+export const revalidate = 600;
+
 export async function generateStaticParams() {
   const ids = (await getBlogPostIds()) ?? [];
   return ids.map((id) => ({ id }));

@@ -13,6 +13,9 @@ export const metadata = {
   alternates: { canonical: getCanonicalUrl("/articles") },
 };
 
+// ISR: microCMSの記事公開を10分ごとに自動反映（再デプロイ不要）
+export const revalidate = 600;
+
 const INFEED_AD_POSITIONS = [3, 7];
 
 type GridItem =

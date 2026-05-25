@@ -31,6 +31,9 @@ interface Props {
   params: Promise<{ categorySlug: string }>;
 }
 
+// ISR: microCMSの記事更新を10分ごとに自動反映
+export const revalidate = 600;
+
 export async function generateStaticParams() {
   const categories = await getCategories();
   return categories.map((c) => ({ categorySlug: c.id }));
