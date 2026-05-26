@@ -1,0 +1,94 @@
+{
+  "kw_id": "P4-018",
+  "keyword": "親の介護 兄弟 不公平",
+  "generated_at": "2026-05-26",
+  "sources": [
+    {
+      "id": "mhlw-chiiki-houkatsu",
+      "title": "地域包括ケアシステム｜厚生労働省",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/index.html",
+      "type": "public_official",
+      "use_for": "地域包括支援センターの案内・介護相談窓口の公的根拠。H2-4で一般案内として引用候補。"
+    },
+    {
+      "id": "mhlw-kaigo-koureisha",
+      "title": "介護・高齢者福祉｜厚生労働省",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/index.html",
+      "type": "public_official",
+      "use_for": "介護の社会的背景・介護保険制度の概説。H2-1の社会的文脈の裏付け用。"
+    },
+    {
+      "id": "mhlw-kaigo-gaiyo",
+      "title": "介護保険制度の概要｜厚生労働省",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/gaiyo/index.html",
+      "type": "public_official",
+      "use_for": "介護保険サービス（ショートステイ・デイサービス等）の一般案内根拠。H2-4で活用候補。"
+    },
+    {
+      "id": "mhlw-family-caregiver-manual",
+      "title": "家族介護者支援マニュアル｜厚生労働省（PDF）",
+      "url": "https://www.mhlw.go.jp/content/12300000/001236476.pdf",
+      "type": "public_official_pdf",
+      "use_for": "家族介護者への支援の公的根拠。介護者が一人で抱えないことの推奨根拠として参照候補。"
+    },
+    {
+      "id": "kaigokensaku-about",
+      "title": "介護保険とは｜介護サービス情報公表システム（厚生労働省）",
+      "url": "https://www.kaigokensaku.mhlw.go.jp/commentary/about.html",
+      "type": "public_official",
+      "use_for": "介護保険制度の説明・サービス検索案内。H2-4のサービス説明根拠。"
+    },
+    {
+      "id": "serp-caresul-brothers",
+      "title": "「親の介護を兄弟が手伝わない…」不公平を感じた時の対処法｜ケアスル介護",
+      "url": "https://caresul-kaigo.jp/column/articles/10923/",
+      "type": "competitor",
+      "use_for": "SERP上位記事。table-stakes分析用（不公平の原因・対処法の共通構成把握）。本記事には丸写しせず独自切り口で差別化。"
+    },
+    {
+      "id": "serp-ichirou-unfair",
+      "title": "親の介護で不公平感・イライラを感じた場合の解決策｜イチロウ",
+      "url": "https://ichirou.co.jp/column/1651",
+      "type": "competitor",
+      "use_for": "SERP上位記事。介護負担偏在の解決策の共通論点把握用。"
+    },
+    {
+      "id": "serp-lifull-caresharing",
+      "title": "【トラブル回避】親の介護｜兄弟姉妹の役割分担｜LIFULL介護",
+      "url": "https://kaigo.homes.co.jp/manual/money/kaigo_preparation/caresharing/",
+      "type": "competitor",
+      "use_for": "SERP上位記事。役割分担・キーパーソン制度の共通論点把握用。"
+    },
+    {
+      "id": "serp-lifull-wife",
+      "title": "「介護は長男の嫁の仕事」は過去の話！どう拒否する？｜LIFULL介護",
+      "url": "https://kaigo.homes.co.jp/manual/homecare/basic/care_obligation/wife/",
+      "type": "competitor",
+      "use_for": "副次KW「嫁に丸投げ」対応の上位記事。本記事のH2-1で「義理の親介護・嫁問題」への言及根拠として参照。"
+    },
+    {
+      "id": "serp-sykz-buntan",
+      "title": "親の介護で揉めないためには兄弟分担が鍵｜そよ風",
+      "url": "https://www.sykz.co.jp/media/parents-care-brother/",
+      "type": "competitor",
+      "use_for": "SERP上位記事。兄弟分担の4つの対策・法的観点の共通論点把握用。"
+    }
+  ],
+  "notes": {
+    "non_nen_compliance": "相続関連（寄与分）は専門家誘導のみ。金額・計算・手続き代行に関する記述は一切不要。",
+    "public_sources_status": "mhlw-chiiki-houkatsu / mhlw-kaigo-koureisha / mhlw-kaigo-gaiyo はWebSearch確認済みの実在URL。mhlw-family-caregiver-manual はWebSearch結果で実在確認済みPDF。",
+    "serp_top_common_elements": [
+      "不公平が生まれる理由（役割期待・距離・家庭事情）",
+      "法的な扶養義務は兄弟全員に等しくある旨（民法877条）",
+      "話し合いの進め方・役割分担の具体策",
+      "介護サービス（ショートステイ等）の活用",
+      "相続と介護（寄与分）への言及"
+    ],
+    "differentiation_gaps": [
+      "感情の正当化（不公平を感じること自体への共感）を独立H2で置く記事が少ない",
+      "生前整理・家族の合意形成（実家の将来）と介護を接続する視点は上位記事に不在",
+      "自己犠牲しすぎない・バーンアウト前に立ち止まる視点が薄い",
+      "嫁への丸投げ問題に感情面から寄り添った記事が少ない"
+    ]
+  }
+}

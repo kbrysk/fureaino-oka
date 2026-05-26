@@ -1,0 +1,75 @@
+{
+  "kw_id": "C5-029",
+  "keyword": "終活いつから",
+  "generated_at": "2026-05-26",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "令和7年版高齢社会白書（全体版）第1章 健康・福祉",
+      "url": "https://www8.cao.go.jp/kourei/whitepaper/w-2025/html/zenbun/s1_2_2.html",
+      "publisher": "内閣府",
+      "use_in_section": "H2-1（健康寿命・平均寿命ギャップで「元気なうちの準備」の重要性を示す）",
+      "key_data": "健康寿命（令和4年）男性72.57歳・女性75.45歳。平均寿命（令和5年）男性81.09歳・女性87.14歳。高齢化率29.3%（令和6年10月）",
+      "verified": true
+    },
+    {
+      "id": "S2",
+      "title": "令和7年版高齢社会白書（全体版）第1節 高齢化の現状と将来像",
+      "url": "https://www8.cao.go.jp/kourei/whitepaper/w-2025/html/zenbun/s1_1_1.html",
+      "publisher": "内閣府",
+      "use_in_section": "H2-1（高齢化率・高齢化の背景データとして補足利用可）",
+      "key_data": "高齢化率29.3%（令和6年10月現在）",
+      "verified": true
+    },
+    {
+      "id": "S3",
+      "title": "「人生会議」してみませんか｜厚生労働省",
+      "url": "https://www.mhlw.go.jp/stf/newpage_02783.html",
+      "publisher": "厚生労働省",
+      "use_in_section": "H2-3（やること7項目のうち「医療・介護の希望を整理する」パートで、人生会議/ACPへの誘導として参照）",
+      "key_data": "ACP（アドバンス・ケア・プランニング）＝自らが希望する医療やケアについて前もって考え、家族等や医療・ケアチームと繰り返し話し合い共有する取り組み",
+      "verified": true
+    },
+    {
+      "id": "S4",
+      "title": "人生会議（ACP：アドバンス・ケア・プランニング）してみませんか？｜厚生労働省",
+      "url": "https://www.mhlw.go.jp/stf/web_magazine/closeup/23.html",
+      "publisher": "厚生労働省",
+      "use_in_section": "H2-3（ACPの概要説明の補足参照先として）",
+      "key_data": "人生会議の概要・目的・普及活動の背景",
+      "verified": true
+    },
+    {
+      "id": "S5",
+      "title": "今から考えておきたい「デジタル終活」―スマホの中の"見えない契約"で遺された家族が困らないために―",
+      "url": "https://www.kokusen.go.jp/news/data/n-20241120_1.html",
+      "publisher": "国民生活センター",
+      "published_date": "2024-11-20",
+      "use_in_section": "H3-3c（デジタル資産整理のパートで「ID・パスワード不明で遺族がサブスク解約できないトラブル」の根拠として引用）",
+      "key_data": "スマートフォンでインターネットを利用する人が60代で78.3%、70代で49.4%。ID・パスワード情報がなく遺族が困るトラブルが増加。",
+      "verified": true
+    },
+    {
+      "id": "S6",
+      "title": "始めましょう！デジタル終活（見守り新鮮情報）",
+      "url": "https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen505.html",
+      "publisher": "国民生活センター",
+      "use_in_section": "H3-3c（補足：デジタル遺品整理の推奨行動を簡潔に示す際の参照先）",
+      "key_data": "デジタル終活の推奨事項：利用中サービスの一覧化・信頼できる家族への情報共有",
+      "verified": true
+    }
+  ],
+  "serp_references": [
+    {
+      "type": "competitor_analysis",
+      "note": "「終活 いつから」上位記事の共通論点として確認: (1)年齢の目安（60代が最多）(2)始めるきっかけ(3)やることリスト7〜10項目(4)エンディングノートの重要性。差別化余地: 優先度付きリスト・抵抗感への共感・健康寿命ギャップの数値化・続けるコツ",
+      "urls_checked": [
+        "https://chester-tax.com/encyclopedia/15978.html",
+        "https://www.lifedot.jp/ending-time/",
+        "https://so-zo-ku.com/article/prenatal-measures/other/16352",
+        "https://www.sonylife.co.jp/media/manavi/37/",
+        "https://www.hasegawa.jp/blogs/shukatsu/shukatsu-meaning"
+      ]
+    }
+  ]
+}
