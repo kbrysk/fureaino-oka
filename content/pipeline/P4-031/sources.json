@@ -1,0 +1,86 @@
+{
+  "kw_id": "P4-031",
+  "keyword": "親の終活",
+  "generated_at": "2026-05-26",
+  "sources": [
+    {
+      "id": "mhlw-acp",
+      "title": "「人生会議」してみませんか｜厚生労働省",
+      "url": "https://www.mhlw.go.jp/stf/newpage_02783.html",
+      "publisher": "厚生労働省",
+      "category": "public",
+      "use_in_article": "H2-3（医療・介護の希望節）で人生会議（ACP）の概念・重要性に言及する際に引用",
+      "notes": "アドバンス・ケア・プランニング（ACP）の公式解説ページ。延命治療等の個別判断は医師等の専門家が担う旨を記事内で明示すること"
+    },
+    {
+      "id": "cao-whitepaper-2025",
+      "title": "令和7年版高齢社会白書（全体版）1 高齢化の現状と将来像｜内閣府",
+      "url": "https://www8.cao.go.jp/kourei/whitepaper/w-2025/html/zenbun/s1_1_1.html",
+      "publisher": "内閣府",
+      "category": "public",
+      "use_in_article": "リードまたはH2-4で「なぜ今、親の終活を考えるべきか」のマクロ背景として引用。高齢化率29.3%・健康寿命と平均寿命の差（男性約8年・女性約12年）",
+      "notes": "令和6年10月1日現在の高齢化率=29.3%。健康寿命データはC5-013でも使用済み。引用する場合は数値の年次（令和6年・令和4年等）を明記"
+    },
+    {
+      "id": "kokusen-digital-shukatsu-2024",
+      "title": "今から考えておきたい「デジタル終活」｜国民生活センター（2024年11月20日）",
+      "url": "https://www.kokusen.go.jp/news/data/n-20241120_1.html",
+      "publisher": "国民生活センター",
+      "category": "public",
+      "use_in_article": "H2-3（デジタル資産・連絡先節）でデジタル終活の重要性に言及する際に引用。スマホ・サブスク等のデジタル遺品が家族の負担になることの根拠として",
+      "notes": "発表日2024年11月20日。PDFは https://www.kokusen.go.jp/pdf/n-20241120_1.pdf"
+    },
+    {
+      "id": "mhlw-chiiki-houkatsu",
+      "title": "地域包括ケアシステム｜厚生労働省",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/index.html",
+      "publisher": "厚生労働省",
+      "category": "public",
+      "use_in_article": "H2-4（無理しないコツ章）またはまとめで、介護の悩み・認知機能低下が心配な場合の相談先として案内",
+      "notes": "P4-039でも引用済み。同一URLで問題なし"
+    },
+    {
+      "id": "sms-survey-2022",
+      "title": "親と終活について話したいと思っている人は約4割｜株式会社エス・エム・エス（2022年3月）",
+      "url": "https://www.bm-sms.co.jp/news-press/prs_20220322_ansinsougi_research/",
+      "publisher": "株式会社エス・エム・エス（民間調査）",
+      "category": "survey",
+      "use_in_article": "H2-1（親が嫌がる心理節）で「切り出しにくい・話しにくいが最多理由」の裏付けとして使用可。民間調査のため「〇〇の調査によると」と出典を明記",
+      "notes": "「親と生前に話しておきたいことベスト3は、1位介護・2位葬儀・3位延命治療」のデータも含む。調査年次（2022年）を明記すること"
+    },
+    {
+      "id": "ansinsougi-survey-2024",
+      "title": "2024年「親の終活」に関するアンケート結果｜安心葬儀",
+      "url": "https://ansinsougi.jp/p-371",
+      "publisher": "安心葬儀（民間調査）",
+      "category": "survey",
+      "use_in_article": "H2-1（終活しない理由の傾向）の補足データとして利用可。民間調査のため「〇〇の調査によると」と出典を明記",
+      "notes": "「面倒に感じる」「まだ早い」が終活しない理由の上位。記事での断定利用は避け、傾向の例示として使うこと"
+    },
+    {
+      "id": "allabout-kisei-money",
+      "title": "帰省時に親とお金の話をする上手い切り出し方｜All About",
+      "url": "https://allabout.co.jp/gm/gc/405222/",
+      "publisher": "All About（参考・リンク不可）",
+      "category": "reference_only",
+      "use_in_article": "SERP調査用参考。記事本文へのリンクは不要。「1月2日あたりが切り出しチャンス」「他人事の話題から入る」等の着眼点をブリーフ構成に反映済み",
+      "notes": "外部サイトへのリンクは不要。アイデアの参考として収録"
+    }
+  ],
+  "serp_analysis": {
+    "table_stakes": [
+      "親が終活を嫌がる・避ける心理の解説",
+      "切り出すタイミング（帰省・節目・ニュースの話題）",
+      "NGワードと言い換えフレーズ",
+      "元気なうちに親と確認しておくことリスト（財産所在・医療希望・葬儀希望）",
+      "エンディングノートを一緒に書く提案"
+    ],
+    "differentiation_gaps": [
+      "親の自己決定の尊重という家族コミュニケーション論的視点（上位記事は「こうすれば動く」テクニック止まり）",
+      "「急かすことで関係が壊れ、進まなくなる」という逆説的なリスクの明示",
+      "生前整理アドバイザー視点の実例エピソード（expert-angle スロット）",
+      "デジタル資産をPII非保存原則に沿って「所在・サービス名の把握まで」と切り分けた安全な確認法",
+      "P4クラスタ（親への切り出し方）に特化した実家じまいハブとの相互送客設計"
+    ]
+  }
+}

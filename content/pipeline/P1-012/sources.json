@@ -1,0 +1,71 @@
+{
+  "kw_id": "P1-012",
+  "keyword": "実家を片付ける",
+  "generated_at": "2026-05-26",
+  "sources": [
+    {
+      "label": "国民生活センター - 不用品回収サービスのトラブル（2022年11月2日発表）",
+      "url": "https://www.kokusen.go.jp/news/data/n-20221102_1.html",
+      "use": "H2-3 不用品回収業者の選び方。一般廃棄物処理業の無許可業者とのトラブル件数・事例の根拠",
+      "category": "public_agency",
+      "verified": true
+    },
+    {
+      "label": "国民生活センター - 訪問購入（訪問買い取り）のトラブルを防ぐには",
+      "url": "https://www.kokusen.go.jp/t_box/data/t_box-faq_qa2017_26.html",
+      "use": "H2-3 買取セクション。クーリング・オフ8日間の根拠",
+      "category": "public_agency",
+      "verified": true
+    },
+    {
+      "label": "環境省 - 廃棄物の処分に「無許可」の回収業者を利用しないでください",
+      "url": "https://www.env.go.jp/recycle/kaden/tv-recycle/qa.html",
+      "use": "H2-3 不用品回収業者。一般廃棄物処理業の許可が必要である根拠",
+      "category": "public_agency",
+      "verified": true
+    },
+    {
+      "label": "環境省 - 廃棄物の処理及び清掃に関する法律（廃棄物処理法）",
+      "url": "https://www.env.go.jp/recycle/waste/laws.html",
+      "use": "H2-3 廃棄物処理法の根拠法令として補足参照",
+      "category": "public_agency",
+      "verified": true
+    },
+    {
+      "label": "横浜市 - 粗大ごみの申込み（自治体lg.jpの代表例）",
+      "url": "https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushu/sodaigomi/dashikata/sodaigomi.html",
+      "use": "H2-3 自治体粗大ごみセクション。自治体ごとのルール確認が必要な例示として参照。本文中は /area へ誘導するため直接リンクはしない",
+      "category": "municipality",
+      "verified": true
+    },
+    {
+      "label": "さいたま市 - 粗大ごみ・特定適正処理困難物の出し方",
+      "url": "https://www.city.saitama.lg.jp/001/006/010/003/p072165.html",
+      "use": "H2-3 自治体粗大ごみセクション。複数自治体でルールが異なる事実の補足例",
+      "category": "municipality",
+      "verified": true
+    },
+    {
+      "label": "SERP参考 - 実家の片付けに疲れた・うんざり（kaiketu-akiya.com）",
+      "url": "https://kaiketu-akiya.com/column/10477/",
+      "use": "SERP調査用。table stakesの確認のみ。記事本文には引用しない",
+      "category": "serp_reference",
+      "verified": false
+    },
+    {
+      "label": "SERP参考 - 実家の片付けは何から始める？（b-clean.jp）",
+      "url": "https://b-clean.jp/owned/parents-home-cleaning/",
+      "use": "SERP調査用。場所別手順のtable stakes確認のみ。記事本文には引用しない",
+      "category": "serp_reference",
+      "verified": false
+    },
+    {
+      "label": "SERP参考 - 実家の片付け費用はいくら？（m-ihinseiri.jp）",
+      "url": "https://m-ihinseiri.jp/article-1/jikka/cost/",
+      "use": "SERP調査用。費用相場のtable stakes確認のみ。記事本文には引用しない",
+      "category": "serp_reference",
+      "verified": false
+    }
+  ],
+  "notes": "公的出典は国民生活センター・環境省の実在URLを優先。自治体URLは本文内に直接リンクせず /area ページへ誘導する設計。serp_referenceは競合調査用のみで本文引用不可。"
+}
