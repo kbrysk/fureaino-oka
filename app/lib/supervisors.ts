@@ -36,7 +36,7 @@ export const SUPERVISORS: Record<SupervisorKey, Supervisor> = {
     key: "okubo",
     name: "大久保 亮佑",
     role: "総合監修者（編集方針）",
-    credentials: ["生前整理アドバイザー2級", "株式会社Kogera 代表取締役"],
+    credentials: ["生前整理アドバイザー2級", "株式会社Kogera 代表取締役社長"],
     profileHref: "/supervisor/okubo",
     badgeTitle: "生前整理アドバイザー2級",
     note: "当サイトの編集方針・トーンの総合監修です。個別の法務・税務・不動産・解体に関する内容は、それぞれの分野の専門家が監修します。",
