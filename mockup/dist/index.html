@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ふれあいの丘｜監修者の見せ方 確認デモ</title>
+<meta name="robots" content="noindex, nofollow" />
+<style>
+  :root{
+    --background:#f8f6f3; --foreground:#2d2d2d;
+    --primary:#5b8a72; --primary-light:#e8f0ec;
+    --accent:#e85d04; --danger:#c75c5c;
+    --card:#ffffff; --border:#e0dcd7;
+    --muted:#f0ede9;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--background); color:var(--foreground);
+    font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",Arial,sans-serif;
+    font-size:16px; line-height:1.8; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--primary); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:920px; margin:0 auto; padding:0 16px;}
+
+  /* demo notice */
+  .demo-bar{background:#2d2d2d; color:#fff; font-size:12px; text-align:center; padding:6px 12px;}
+  .demo-bar b{color:#ffd27a;}
+
+  /* header */
+  header.site{position:sticky; top:0; z-index:20; background:rgba(255,255,255,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(6px);}
+  .site-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 16px; max-width:920px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:800; color:var(--primary); font-size:18px;}
+  .brand .logo{width:34px; height:34px; flex:0 0 auto;}
+  .brand small{display:block; font-weight:500; color:var(--foreground); opacity:.6; font-size:11px; margin-top:2px;}
+  nav.site-nav{display:flex; gap:16px; font-size:14px;}
+  nav.site-nav span{color:var(--foreground); opacity:.7; cursor:default;}
+  @media(max-width:640px){ nav.site-nav{display:none;} }
+
+  /* tabs */
+  .tabs{position:sticky; top:59px; z-index:15; background:var(--primary-light); border-bottom:1px solid var(--border);}
+  .tabs-inner{display:flex; gap:4px; max-width:920px; margin:0 auto; padding:8px 12px; overflow-x:auto;}
+  .tab-btn{flex:0 0 auto; border:1px solid var(--border); background:#fff; color:var(--foreground);
+    border-radius:999px; padding:8px 14px; font-size:13px; cursor:pointer; white-space:nowrap;}
+  .tab-btn.active{background:var(--primary); color:#fff; border-color:var(--primary); font-weight:700;}
+
+  .panel{display:none; padding:28px 0 40px;}
+  .panel.active{display:block; animation:fade .25s ease;}
+  @keyframes fade{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;}}
+
+  h1.art{font-size:26px; line-height:1.5; margin:10px 0 6px;}
+  h2.art{font-size:20px; color:var(--primary); border-left:5px solid var(--primary); padding-left:10px; margin:30px 0 12px;}
+  h3.art{font-size:17px; margin:20px 0 8px;}
+  .breadcrumb{font-size:12px; color:var(--foreground); opacity:.6; margin-bottom:6px;}
+
+  .card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:20px; margin:16px 0;}
+  .pill{display:inline-block; background:var(--primary-light); color:var(--primary); border-radius:999px; padding:3px 12px; font-size:12px; font-weight:700; margin:2px 4px 2px 0;}
+
+  /* supervisor badge */
+  .sv-badge{display:flex; align-items:center; gap:12px; background:var(--primary-light); border:1px solid #cfe0d6; border-radius:14px; padding:12px 14px; margin:14px 0;}
+  .sv-badge .ava{width:44px;height:44px;border-radius:50%;flex:0 0 auto;background:#cfe0d6;display:flex;align-items:center;justify-content:center;}
+  .sv-badge .t{font-size:13px;}
+  .sv-badge .t b{font-size:15px;}
+
+  /* annotation callout (for 村上さんへの注記) */
+  .note{border:1px dashed var(--accent); background:#fff7f0; color:#8a3b00; border-radius:12px; padding:10px 14px; font-size:13px; margin:14px 0;}
+  .note b{color:var(--accent);}
+
+  /* owl bubble */
+  .owl{display:flex; align-items:flex-start; gap:10px; margin:16px 0; justify-content:flex-end;}
+  .owl .bubble{background:#fff; border:1px solid var(--border); border-radius:14px 14px 2px 14px; padding:10px 14px; font-size:14px; max-width:75%; box-shadow:0 1px 4px rgba(0,0,0,.04);}
+  .owl .face{width:40px;height:40px;flex:0 0 auto;}
+
+  /* line cta mock */
+  .line-cta{background:linear-gradient(180deg,#fffbe6,#fff3c4); border:1px solid #f0d98a; border-radius:16px; padding:18px; text-align:center; margin:22px 0;}
+  .line-cta .btn{display:inline-block; background:#06c755; color:#fff!important; font-weight:800; padding:12px 26px; border-radius:999px; margin-top:8px; text-decoration:none;}
+  .line-cta small{display:block; color:#8a7400; font-size:12px; margin-top:8px;}
+
+  .src{font-size:13px; color:var(--foreground); opacity:.75; border-top:1px dashed var(--border); padding-top:10px; margin-top:18px;}
+  .inlink{background:var(--muted); border-radius:12px; padding:12px 14px; font-size:14px; margin:16px 0;}
+  .inlink b{color:var(--primary);}
+
+  table.sv{width:100%; border-collapse:collapse; font-size:14px; margin:12px 0;}
+  table.sv th,table.sv td{border:1px solid var(--border); padding:10px; text-align:left; vertical-align:top;}
+  table.sv th{background:var(--primary-light); color:var(--primary);}
+  .yes{color:var(--primary); font-weight:700;}
+  .no{color:var(--danger); font-weight:700;}
+
+  /* option cards */
+  .opt-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px;}
+  .opt{background:#fff; border:1px solid var(--border); border-radius:14px; padding:16px; position:relative;}
+  .opt .lab{font-weight:800; color:var(--primary); margin-bottom:8px;}
+  .opt .rec{position:absolute; top:10px; right:10px; background:var(--accent); color:#fff; font-size:11px; padding:2px 8px; border-radius:999px;}
+  .opt .sample{background:var(--muted); border-radius:10px; padding:10px; font-size:13px; margin-top:8px;}
+
+  /* footer */
+  footer.site{border-top:1px solid var(--border); background:#f0ede9; padding:26px 16px; margin-top:10px;}
+  .foot-sv{max-width:920px; margin:0 auto 18px; background:#fff; border:1px solid var(--border); border-radius:14px; padding:14px 16px;}
+  .foot-sv .t{font-size:14px;}
+  .foot-sv .t b{color:var(--primary);}
+  .foot-sv .dis{font-size:11.5px; color:var(--foreground); opacity:.6; margin-top:6px;}
+  .foot-links{max-width:920px; margin:0 auto; display:flex; flex-wrap:wrap; gap:12px; font-size:13px; justify-content:center; opacity:.8;}
+  .foot-copy{text-align:center; margin-top:16px; font-size:12px; opacity:.7;}
+  .foot-owl{width:38px;height:38px;display:block;margin:0 auto 6px;}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">これは <b>監修者の見せ方を確認するためのデモ画面</b> です（実際の記事・データではありません。文面・お写真・ふりがなは村上様にご確認いただく前提のたたき台です）。</div>
+
+<!-- ===== HEADER ===== -->
+<header class="site">
+  <div class="site-inner">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" fill="#e8f0ec" stroke="#5b8a72" stroke-width="2"/>
+        <ellipse cx="17" cy="22" rx="6" ry="7" fill="#fff" stroke="#5b8a72" stroke-width="1.5"/>
+        <ellipse cx="31" cy="22" rx="6" ry="7" fill="#fff" stroke="#5b8a72" stroke-width="1.5"/>
+        <circle cx="17" cy="23" r="2.4" fill="#2d2d2d"/><circle cx="31" cy="23" r="2.4" fill="#2d2d2d"/>
+        <path d="M21 30 l3 3 l3 -3 z" fill="#e85d04"/>
+      </svg>
+      <div>生前整理支援センター ふれあいの丘
+        <small>実家じまい・遺品整理の無料相談</small>
+      </div>
+    </div>
+    <nav class="site-nav"><span>記事</span><span>無料ツール</span><span>地域から探す</span><span>会社概要</span></nav>
+  </div>
+</header>
+
+<!-- ===== TABS ===== -->
+<div class="tabs">
+  <div class="tabs-inner">
+    <button class="tab-btn active" data-tab="profile">① 監修者プロフィール</button>
+    <button class="tab-btn" data-tab="sv-article">② 監修記事の例</button>
+    <button class="tab-btn" data-tab="non-sv">③ 専門外の記事の例</button>
+    <button class="tab-btn" data-tab="policy">④ 編集方針・監修体制</button>
+  </div>
+</div>
+
+<main class="wrap">
+
+<!-- ===== 1. PROFILE ===== -->
+<section class="panel active" id="profile">
+  <div class="breadcrumb">ホーム ＞ 監修者紹介</div>
+  <div class="card" style="display:flex; gap:20px; flex-wrap:wrap; align-items:center;">
+    <div style="width:110px;height:110px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex:0 0 auto;">
+      <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="24" r="13" fill="#cfe0d6"/><path d="M12 56 a20 18 0 0 1 40 0 z" fill="#cfe0d6"/></svg>
+    </div>
+    <div style="flex:1; min-width:220px;">
+      <div style="font-size:13px;color:var(--accent);font-weight:700;">総合監修者（編集方針）</div>
+      <h1 class="art" style="margin:2px 0;">村上 充恵</h1>
+      <div style="margin-top:8px;">
+        <span class="pill">生前整理普及協会 認定指導員</span>
+        <span class="pill">AFP</span>
+        <span class="pill">介護離職防止対策アドバイザー</span>
+        <span class="pill">神奈川大学エクステンション講座 講師</span>
+        <span class="pill">ル・リアン横浜 主宰</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p>生前整理という分野に、私は専門家としてだけでなく、一人の家族として向き合ってきました。</p>
+    <p>親の認知症の気配に気づいたとき、私は介護離職という大きな決断をしました。そこから1年弱をかけて実家を片づけ、有料老人ホームへの入居、家族信託の契約、そして叔母と両親3名の見送りを経験しました。これらは、どれだけ知識を積んでも、本やセミナーだけでは決して分からない、人生をかけて通り抜けてきた時間です。</p>
+    <p>その経験を社会に還元したいという想いから、(一社)生前整理普及協会の認定指導員として、また神奈川大学エクステンション講座の講師として、生前整理の考え方をお伝えしています。AFP（ファイナンシャル・プランナー）、介護離職防止対策アドバイザーとしての視点も交え、「ル・リアン横浜」では実際にご家族のご相談にも向き合っています。</p>
+    <p>「ふれあいの丘」では、生前整理から実家じまいへと続くご家族の歩みに、当事者の気持ちと専門家の知見の両面から寄り添えるよう、サイト全体の編集方針を総合監修しています。今、親のこと・実家のことで迷っている方が、「まずは一歩から」踏み出せるように——そんなメディアになることを願っています。</p>
+  </div>
+
+  <div class="card">
+    <h3 class="art" style="margin-top:0;">監修している領域</h3>
+    <p>生前整理全般／介護離職予防／親子コミュニケーション・家族会議／生前整理普及協会メソッド（思い入れ箱・ベストショットアルバム・4分類シート 等）／サイト全体の編集方針・トーン</p>
+    <div style="margin-top:12px;">
+      <a class="pill" style="background:var(--accent);color:#fff;" href="#" onclick="return false">▸ ル・リアン横浜のご相談はこちら</a>
+      <a class="pill" href="#" onclick="return false">▸ 村上が監修した記事一覧</a>
+    </div>
+  </div>
+  <div class="note"><b>村上様へ：</b>このプロフィールページが「監修者紹介」として恒久的に掲載され、全ページのフッターと各監修記事からリンクされます。ル・リアン横浜への導線（オレンジのボタン）も常設します。お写真・ふりがな・文面はご確認・ご修正いただけます。</div>
+</section>
+
+<!-- ===== 2. SUPERVISED ARTICLE ===== -->
+<section class="panel" id="sv-article">
+  <div class="breadcrumb">ホーム ＞ 記事 ＞ 生前整理の進め方</div>
+  <h1 class="art">親に生前整理を切り出すには？こじらせない家族会議の進め方</h1>
+
+  <div class="sv-badge">
+    <div class="ava"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="24" r="13" fill="#a9c8b6"/><path d="M14 54 a18 16 0 0 1 36 0 z" fill="#a9c8b6"/></svg></div>
+    <div class="t"><b>監修：村上 充恵</b>（生前整理アドバイザー指導員）<br><a href="#" onclick="return false">▸ プロフィール</a></div>
+  </div>
+
+  <p>「親に生前整理の話を切り出したいけれど、機嫌を損ねそうで言い出せない」——そんなお悩みは、40〜50代の方からとても多く寄せられます。この記事では、親子の関係をこじらせずに、自然に片づけの話を始めるための考え方と、家族会議の進め方をお伝えします。結論から言えば、大切なのは「片づけて」ではなく「一緒に振り返ろう」という入り口です。</p>
+
+  <h2 class="art">なぜ「片づけて」は反発されやすいのか</h2>
+  <p>親世代にとって、家の物はひとつひとつが思い出と結びついています。いきなり「処分しよう」と言われると、自分の人生を否定されたように感じてしまうこともあります。まずはその気持ちに寄り添うことが第一歩です。</p>
+
+  <div class="owl">
+    <div class="bubble">いきなり「捨てよう」じゃなくて、「この写真、いつのころ？」から始めるといいホー。</div>
+    <svg class="face" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#e8f0ec" stroke="#5b8a72" stroke-width="2"/><ellipse cx="17" cy="22" rx="6" ry="7" fill="#fff"/><ellipse cx="31" cy="22" rx="6" ry="7" fill="#fff"/><circle cx="17" cy="23" r="2.4" fill="#2d2d2d"/><circle cx="31" cy="23" r="2.4" fill="#2d2d2d"/><path d="M21 30 l3 3 l3 -3 z" fill="#e85d04"/></svg>
+  </div>
+
+  <h2 class="art">最初の一歩は「思い出の整理」から</h2>
+  <p>生前整理普及協会では、写真やアルバムを一緒に見返しながら気持ちを整理していく方法が知られています。物の要不要を決める前に、まず「振り返る時間」を共有することで、親も前向きに片づけに向き合いやすくなります。</p>
+
+  <div class="inlink">あわせて読みたい：<b>▸ 生前整理のはじめかた（完全ガイド）</b> ／ <b>▸ 実家じまい力診断（無料）</b></div>
+
+  <h2 class="art">家族会議は「役割分担」までセットで</h2>
+  <p>兄弟姉妹がいる場合は、誰が何を担当するかまで決めておくと、後のトラブルを防げます。遠方に住む方も、連絡係や情報整理など、関われる役割があります。</p>
+
+  <div class="line-cta">
+    <div style="font-weight:800;">無料ガイドブック「実家じまいのはじめかた」をプレゼント</div>
+    <a class="btn" href="#" onclick="return false">LINEで友だち追加して受け取る</a>
+    <small>※このCTAはテンプレートが自動表示します（記事本文には含めません）</small>
+  </div>
+
+  <div class="sv-badge">
+    <div class="ava"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="24" r="13" fill="#a9c8b6"/><path d="M14 54 a18 16 0 0 1 36 0 z" fill="#a9c8b6"/></svg></div>
+    <div class="t"><b>この記事の監修者：村上 充恵</b><br>生前整理アドバイザー指導員／AFP／介護離職防止対策アドバイザー。介護離職・実家じまいを自ら経験。<a href="#" onclick="return false">▸ プロフィール全文</a></div>
+  </div>
+  <div class="note"><b>村上様へ：</b>この記事は「生前整理・家族会議」という<b>ご専門の領域</b>なので、冒頭と末尾に監修クレジットが入ります。本文中の「フクロウの相槌」「LINE CTA」「監修バッジ」はすべてサイト側が自動表示し、記事本文には混入しません。</div>
+</section>
+
+<!-- ===== 3. NON-SUPERVISED ARTICLE ===== -->
+<section class="panel" id="non-sv">
+  <div class="breadcrumb">ホーム ＞ 記事 ＞ 相続・お金</div>
+  <h1 class="art">相続税の基礎控除のしくみ｜「3,000万円＋600万円×法定相続人」とは</h1>
+
+  <div class="card" style="border-color:#d9c9a8; background:#fbf7ee;">
+    <div class="t" style="font-size:14px;"><b>監修：税理士（確保予定）</b></div>
+    <div style="font-size:13px; opacity:.8; margin-top:4px;">現在は一般的な制度の情報提供です。具体的な税額の計算は、税理士にご相談ください。</div>
+  </div>
+
+  <p>相続税には「基礎控除」という非課税の枠があり、相続財産がこの枠以内であれば原則として相続税はかかりません。この記事では、基礎控除の基本的な考え方を、一般的な情報としてご紹介します。</p>
+  <h2 class="art">基礎控除の計算式（一般的な制度の説明）</h2>
+  <p>基礎控除額は「3,000万円＋600万円×法定相続人の数」で計算されるのが一般的な制度の枠組みです。具体的な適用や個別の税額は、ご家族の状況によって異なります。</p>
+  <p class="src">出典：国税庁「相続税の計算」（公的情報）。制度は改正される場合があります。最新の内容は国税庁の公表資料および税理士にご確認ください。</p>
+
+  <div class="note" style="border-color:var(--danger); background:#fdf3f3; color:#7a2b2b;"><b>村上様へ（重要）：</b>このように、<b>相続税・不動産・解体など村上様のご専門外の記事には、村上様のお名前は一切出ません。</b>該当分野の専門家（税理士・司法書士・宅建士等）のクレジット、または専門家確保まで「一般情報＋専門家へのご相談案内」のみを表示します。これが提案書5章「監修範囲の線引き」を画面で実現したものです。</div>
+</section>
+
+<!-- ===== 4. EDITORIAL POLICY ===== -->
+<section class="panel" id="policy">
+  <div class="breadcrumb">ホーム ＞ 編集方針</div>
+  <h1 class="art">当サイトの監修体制</h1>
+  <p>ふれあいの丘は、ご家族の人生に深く関わる情報を扱うため、分野ごとにその分野の専門家が監修する体制をとっています。</p>
+  <table class="sv">
+    <tr><th>領域</th><th>監修</th><th>村上様クレジット</th></tr>
+    <tr><td>サイト全体の編集方針・トーン</td><td>村上 充恵（総合監修）</td><td class="yes">掲載</td></tr>
+    <tr><td>生前整理全般・親子コミュニケーション・家族会議・協会メソッド</td><td>村上 充恵</td><td class="yes">掲載</td></tr>
+    <tr><td>介護離職予防（フェーズ0）</td><td>村上 充恵</td><td class="yes">掲載</td></tr>
+    <tr><td>相続登記・遺言・家族信託の制度</td><td>司法書士（確保予定）</td><td class="no">非掲載</td></tr>
+    <tr><td>相続税・譲渡所得税</td><td>税理士（確保予定）</td><td class="no">非掲載</td></tr>
+    <tr><td>解体工事の技術</td><td>解体業界専門家（確保予定）</td><td class="no">非掲載</td></tr>
+    <tr><td>不動産取引</td><td>宅地建物取引士（確保予定）</td><td class="no">非掲載</td></tr>
+  </table>
+  <div class="note"><b>村上様へ：</b>この「監修体制」ページを公開すること自体が、読者とGoogle双方への信頼の証明になります。家族信託は「制度解説＝司法書士監修」ですが、村上様の<b>実体験のご寄稿</b>は別価値のコンテンツとして歓迎です（その場合は体験談として明示）。</div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER (always visible) ===== -->
+<footer class="site">
+  <div class="foot-sv">
+    <div class="t">総合監修（編集方針）：<b>村上 充恵</b>（生前整理アドバイザー指導員／AFP／介護離職防止対策アドバイザー）　<a href="#" onclick="document.querySelector('[data-tab=profile]').click();return false;">▸ 監修者プロフィール</a></div>
+    <div class="dis">※当サイトの編集方針・トーンの総合監修です。個別の法務・税務・不動産・解体に関する内容は、それぞれの分野の専門家が監修します。</div>
+  </div>
+  <div class="foot-links"><span>無料ツール一覧</span><span>生前整理のはじめかた</span><span>記事一覧</span><span>編集方針</span><span>会社概要</span><span>お問い合わせ</span><span>プライバシーポリシー</span></div>
+  <div class="foot-copy">
+    <svg class="foot-owl" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#e8f0ec" stroke="#5b8a72" stroke-width="2"/><ellipse cx="17" cy="22" rx="6" ry="7" fill="#fff"/><ellipse cx="31" cy="22" rx="6" ry="7" fill="#fff"/><circle cx="17" cy="23" r="2.4" fill="#2d2d2d"/><circle cx="31" cy="23" r="2.4" fill="#2d2d2d"/><path d="M21 30 l3 3 l3 -3 z" fill="#e85d04"/></svg>
+    &copy; 2026 株式会社Kogera All Rights Reserved.<br>実家じまい・遺品整理の無料相談
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.tab-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var id = btn.getAttribute('data-tab');
+      document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById(id).classList.add('active');
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>

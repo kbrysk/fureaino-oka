@@ -42,3 +42,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ローカル成果物・ログ（gitに含めない）
+/logs/
+# ラッコキーワードの生CSV（大量・再取得可能なため非追跡）
+/content/pipeline/rakko/
+# 台帳のバックアップ
+/content/pipeline/keywords.seed.bak.csv
