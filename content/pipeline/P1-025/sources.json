@@ -1,0 +1,97 @@
+{
+  "kw_id": "P1-025",
+  "keyword": "実家じまい費用",
+  "retrieved_at": "2026-05-26",
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "不用品回収サービスのトラブル（国民生活センター）",
+      "url": "https://www.kokusen.go.jp/news/data/n-20221102_1.html",
+      "organization": "独立行政法人 国民生活センター",
+      "type": "public",
+      "use_in": ["H2-2 家財整理・不用品回収費", "法務チェック 無許可業者注意"],
+      "note": "2022年11月2日発表。無許可業者による高額請求トラブル2000件超。廃棄物処理法に基づく一般廃棄物処理業許可の説明に使用。"
+    },
+    {
+      "id": "src-002",
+      "title": "訪問購入（訪問買い取り）のトラブルを防ぐには（国民生活センター）",
+      "url": "https://www.kokusen.go.jp/t_box/data/t_box-faq_qa2017_26.html",
+      "organization": "独立行政法人 国民生活センター",
+      "type": "public",
+      "use_in": ["H2-2 売れるものは買取に回す 注意書き"],
+      "note": "クーリング・オフ8日間の根拠。訪問買取の強引な勧誘トラブル。"
+    },
+    {
+      "id": "src-003",
+      "title": "廃品回収を依頼したら高額な請求をされた（国民生活センター 見守り情報）",
+      "url": "https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen208.html",
+      "organization": "独立行政法人 国民生活センター",
+      "type": "public",
+      "use_in": ["H2-2 「無料回収」巡回業者への注意"],
+      "note": "高齢者向けの注意喚起。巡回「無料回収」後の高額請求事例。"
+    },
+    {
+      "id": "src-004",
+      "title": "住宅：空き家再生等推進事業について（国土交通省）",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000011.html",
+      "organization": "国土交通省 住宅局",
+      "type": "public",
+      "use_in": ["H2-4 解体補助金の説明", "H2-1 パターンB 解体費用"],
+      "note": "空き家再生等推進事業（除却・活用）の制度概要。市区町村経由補助の根拠。"
+    },
+    {
+      "id": "src-005",
+      "title": "空家等対策の推進に関する特別措置法関連情報（国土交通省）",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000035.html",
+      "organization": "国土交通省 住宅局",
+      "type": "public",
+      "use_in": ["H2-4 補助金・空き家対策の背景説明"],
+      "note": "空家特措法の根拠情報。老朽危険家屋への自治体対応の法的背景。"
+    },
+    {
+      "id": "src-006",
+      "title": "国土交通省における空き家対策支援メニュー等（令和２年度末時点）",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/content/001423378.pdf",
+      "organization": "国土交通省 住宅局",
+      "type": "public",
+      "use_in": ["H2-4 補助金制度の補足"],
+      "note": "空き家対策総合支援事業の補助率（国2/5・市区町村3/5）等の根拠。PDF。"
+    },
+    {
+      "id": "src-007",
+      "title": "実家じまいにかかる費用の相場と費用を抑えるため意識したいこと（空き家ゼロ）",
+      "url": "https://akiyazero.jp/column/vacanthouse/parentshouse-expenses/",
+      "organization": "民間メディア",
+      "type": "competitor",
+      "use_in": ["SERP調査 上位コンテンツ参考"],
+      "note": "上位SERP競合。費用の相場・総額・内訳・抑えるポイントを網羅。きょうだい分担の論点は薄い。"
+    },
+    {
+      "id": "src-008",
+      "title": "実家の片付け費用はいくら？誰が支払うかも解説（みんなの遺品整理）",
+      "url": "https://m-ihinseiri.jp/article-1/jikka/cost/",
+      "organization": "民間メディア",
+      "type": "competitor",
+      "use_in": ["SERP調査 「誰が払う」論点の競合調査"],
+      "note": "「誰が払う」に言及あり。法的根拠なし・合意形成の観点が弱い。本記事の差別化余地を確認。"
+    },
+    {
+      "id": "src-009",
+      "title": "実家じまいとは？費用から手順、補助制度・税金控除まで徹底解説（アットホーム）",
+      "url": "https://www.athome.co.jp/contents/for-sellers/sellers-kiso/jikka-disposal/",
+      "organization": "民間メディア（不動産ポータル）",
+      "type": "competitor",
+      "use_in": ["SERP調査 総合的な競合記事"],
+      "note": "補助制度・税金控除に言及あり。3,000万円特別控除の記載。本記事は税は専門家誘導のみ。"
+    },
+    {
+      "id": "src-010",
+      "title": "実家じまいに使える補助金制度3選（AlbaLink 訳あり物件買取ナビ）",
+      "url": "https://albalink.co.jp/realestate/subsidy-for-closing-down-family-home/",
+      "organization": "民間メディア",
+      "type": "competitor",
+      "use_in": ["SERP調査 補助金論点の競合調査"],
+      "note": "老朽危険家屋解体補助金・景観形成補助金・利活用改修補助金の3分類。「解体前申請が必須」の注意はあり。"
+    }
+  ]
+}

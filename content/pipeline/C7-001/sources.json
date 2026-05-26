@@ -1,0 +1,84 @@
+{
+  "kw_id": "C7-001",
+  "keyword": "仏壇処分",
+  "retrieved_at": "2026-05-26",
+  "sources": [
+    {
+      "category": "public_authority",
+      "label": "環境省 — 廃棄物の処分に「無許可」の回収業者を利用しないでください",
+      "url": "https://www.env.go.jp/recycle/kaden/tv-recycle/qa.html",
+      "use_in_article": "H3「専門の仏壇回収・処分業者を利用する」内で無許可業者への注意喚起として引用"
+    },
+    {
+      "category": "public_authority",
+      "label": "国民生活センター — 訪問購入（訪問買い取り）のトラブルを防ぐには",
+      "url": "https://www.kokusen.go.jp/t_box/data/t_box-faq_qa2017_26.html",
+      "use_in_article": "H3「仏具・骨董品の価値確認」および訪問買取注意喚起として引用。消費者ホットライン188も合わせて案内"
+    },
+    {
+      "category": "public_authority",
+      "label": "国民生活センター — 訪問購入（各種相談の件数や傾向）",
+      "url": "https://www.kokusen.go.jp/soudan_topics/data/doorstep_purchase.html",
+      "use_in_article": "訪問買取トラブルの件数・傾向の補足参照用（本文に直接引用する場合の根拠として保持）"
+    },
+    {
+      "category": "public_authority",
+      "label": "国民生活センター — 遺品整理サービスの契約トラブル（発表情報）",
+      "url": "https://www.kokusen.go.jp/news/data/n-20180719_1.html",
+      "use_in_article": "遺品整理業者に一括依頼する際の注意喚起の根拠として保持（本文で必要に応じて参照）"
+    },
+    {
+      "category": "public_authority",
+      "label": "e-Gov 法令検索 — 廃棄物の処理及び清掃に関する法律",
+      "url": "https://laws.e-gov.go.jp/law/345AC0000000137",
+      "use_in_article": "無許可業者への注意喚起の法的根拠として保持（本文では「廃棄物処理法」と一般名称で言及）"
+    },
+    {
+      "category": "reference_serp",
+      "label": "大野屋 — 仏壇処分の方法・費用完全ガイド（お焚き上げ・供養の流れ）",
+      "url": "https://www.ohnoya-buddhist.com/services/otakiage/",
+      "use_in_article": "SERP分析用。記事本文には引用しない"
+    },
+    {
+      "category": "reference_serp",
+      "label": "小さなお葬式 — 仏壇処分は無料でできる？方法別の費用目安や注意点",
+      "url": "https://www.osohshiki.jp/column/article/2216/",
+      "use_in_article": "SERP分析用。記事本文には引用しない"
+    },
+    {
+      "category": "reference_serp",
+      "label": "みんなの仏壇処分 — 【2025年版】仏壇処分の費用と相場がすべて分かる",
+      "url": "https://www.minna-no-butsudan.com/column/2554/",
+      "use_in_article": "SERP分析用（費用相場の傾向確認）。記事本文には引用しない"
+    },
+    {
+      "category": "reference_serp",
+      "label": "閉眼供養 お布施 費用相場（ご遺骨サポートこころ）",
+      "url": "https://152cocoro.jp/eyes-closed-memorial-price/",
+      "use_in_article": "SERP分析用（お布施相場3〜10万円の目安確認）。記事本文には引用しない"
+    },
+    {
+      "category": "reference_serp",
+      "label": "仏壇供養の一休堂 — 浄土真宗では魂抜き・閉眼供養は必要？",
+      "url": "https://butsudankuyou-ikkyuu.com/blog/news/zyoudosinnsyuu-tamasiinuki/",
+      "use_in_article": "SERP分析用（浄土真宗の遷仏法要の取り扱い確認）。記事本文には引用しない"
+    },
+    {
+      "category": "reference_serp",
+      "label": "長谷川仏壇 — お位牌の処分方法と閉眼供養",
+      "url": "https://www.hasegawa.jp/blogs/butsudan/ihai-dispose",
+      "use_in_article": "SERP分析用（位牌の処分方法確認）。記事本文には引用しない"
+    },
+    {
+      "category": "reference_serp",
+      "label": "永代供養ナビ — 跡継ぎがいない仏壇はどうすればいい",
+      "url": "https://www.yasiro.co.jp/eitaikuyo/media/archives/5473",
+      "use_in_article": "SERP分析用（継承者なし・家族合意の論点確認）。記事本文には引用しない"
+    }
+  ],
+  "notes": {
+    "municipality_links": "自治体の仏壇粗大ごみ分別は市区町村ごとに異なるため、記事内では '各市区町村の公式サイト（.lg.jp）でご確認ください' と案内する。特定自治体URLは掲載しない。",
+    "ofuse_range": "閉眼供養のお布施は3〜10万円程度が複数の参照元に共通して確認された目安。記事内では '目安として3万〜10万円程度と言われることが多い' ＋ '地域・寺院によって大きく異なる' の留保を必ず付ける。",
+    "religious_neutrality": "浄土真宗の遷仏法要など宗派固有の作法は '〜の場合が多い' として断定しない。特定宗派・特定寺院の推奨は行わない。"
+  }
+}
