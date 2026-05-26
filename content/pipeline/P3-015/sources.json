@@ -1,0 +1,76 @@
+{
+  "kw_id": "P3-015",
+  "keyword": "空き家解体費用",
+  "retrieved_at": "2026-05-26",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "総務省｜地方税制度｜固定資産税の概要（住宅用地特例）",
+      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/149767_08.html",
+      "publisher": "総務省",
+      "category": "固定資産税・住宅用地特例",
+      "use_in_section": "H2-3",
+      "note": "住宅用地特例（小規模200m²以下で1/6軽減）の根拠。解体後に特例が外れることの説明に使用"
+    },
+    {
+      "id": "S02",
+      "title": "国土交通省「固定資産税等の住宅用地特例に係る空き家対策上の措置」（PDF）",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/content/001712029.pdf",
+      "publisher": "国土交通省",
+      "category": "固定資産税・空き家対策",
+      "use_in_section": "H2-3",
+      "note": "空き家認定・勧告と住宅用地特例除外の関係を整理した公式資料"
+    },
+    {
+      "id": "S03",
+      "title": "国土交通省「空き家対策総合支援事業」支援メニュー等（PDF）",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/content/001423378.pdf",
+      "publisher": "国土交通省",
+      "category": "解体補助金・空き家対策",
+      "use_in_section": "H2-2",
+      "note": "国が財源を提供し市区町村が補助金を運用する根拠資料。解体・撤去の支援スキームの概要"
+    },
+    {
+      "id": "S04",
+      "title": "国土交通省「住宅：空き家再生等推進事業について」",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000011.html",
+      "publisher": "国土交通省",
+      "category": "解体補助金・空き家再生",
+      "use_in_section": "H2-2",
+      "note": "空き家再生等推進事業（除却事業タイプ）の制度概要ページ"
+    },
+    {
+      "id": "S05",
+      "title": "国土交通省「建設リサイクル法の手続き（解体工事のチェックリスト）」（PDF）",
+      "url": "https://www.mlit.go.jp/sogoseisaku/region/recycle/d03project/d0305/tyekkulistkaitaitetuduki.pdf",
+      "publisher": "国土交通省",
+      "category": "建設リサイクル法・解体手続き",
+      "use_in_section": "H2-1",
+      "note": "80m²以上の建築物解体工事は7日前までの届出が必要。分別解体義務の根拠"
+    },
+    {
+      "id": "S06",
+      "title": "国民生活センター「訪問販売によるリフォーム工事・点検商法（各種相談の件数や傾向）」",
+      "url": "https://www.kokusen.go.jp/soudan_topics/data/reformtenken.html",
+      "publisher": "国民生活センター",
+      "category": "悪質業者・消費者トラブル",
+      "use_in_section": "H2-2",
+      "note": "解体・リフォームトラブルの相談先として言及。消費者ホットライン188の紹介に活用"
+    }
+  ],
+  "serp_notes": {
+    "table_stakes": [
+      "木造・鉄骨・RC構造別の坪単価目安",
+      "解体費用に影響する要因（立地・残置物・アスベスト・付帯工事）",
+      "解体補助金の概要と申請条件",
+      "解体後の固定資産税増（住宅用地特例が外れる）",
+      "相見積もりの重要性・業者選びの注意点"
+    ],
+    "differentiation_gaps": [
+      "「解体 vs 古家付き売却」の判断フレーム（出口判断の視点。上位記事の多くが費用相場止まり）",
+      "解体タイミング（1月1日基準）と固定資産税増の具体的なリスクシナリオ",
+      "地中埋設物などの追加請求リスクと契約前の確認ポイント",
+      "相続した子世代向けの心理・状況に合わせた共感軸（親目線でなく子世代の判断悩みに応える）"
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "kw_id": "C10-041",
+  "keyword": "生前整理 50代",
+  "retrieved_at": "2026-05-26",
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "1 高齢化の現状と将来像｜令和7年版高齢社会白書（全体版）",
+      "url": "https://www8.cao.go.jp/kourei/whitepaper/w-2025/html/zenbun/s1_1_1.html",
+      "publisher": "内閣府",
+      "type": "official_government",
+      "use_in_article": true,
+      "note": "高齢化率29.3%（令和6年10月現在）・健康寿命・将来推計の背景データ。H2「まだ早いは間違い」節の根拠として言及。"
+    },
+    {
+      "id": "src-02",
+      "title": "今から考えておきたい「デジタル終活」（2024年11月20日発表）",
+      "url": "https://www.kokusen.go.jp/news/data/n-20241120_1.html",
+      "publisher": "国民生活センター",
+      "type": "official_consumer_agency",
+      "use_in_article": true,
+      "note": "サブスク・コード決済の解約困難トラブルが増加。デジタル資産の棚卸し必要性の根拠。H3「デジタルの棚卸し」節で引用。"
+    },
+    {
+      "id": "src-03",
+      "title": "生前整理 デジタル遺品リストを作りましょう（見守り情報）",
+      "url": "https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen430.html",
+      "publisher": "国民生活センター",
+      "type": "official_consumer_agency",
+      "use_in_article": true,
+      "note": "デジタル遺品リスト作成の推奨。src-02の補足資料として活用可。"
+    },
+    {
+      "id": "src-04",
+      "title": "人口推計（2024年（令和6年）10月1日現在）",
+      "url": "https://www.soumu.go.jp/menu_news/s-news/01toukei03_01000130.html",
+      "publisher": "総務省",
+      "type": "official_government",
+      "use_in_article": false,
+      "note": "50代人口・年代別人口構成のデータ。記事本文への直接引用は必須ではないが、編集上の背景データとして参照。"
+    },
+    {
+      "id": "src-05",
+      "title": "統計局ホームページ／人口推計（2024年10月1日現在）",
+      "url": "https://www.stat.go.jp/data/jinsui/2024np/index.html",
+      "publisher": "総務省統計局",
+      "type": "official_government",
+      "use_in_article": false,
+      "note": "src-04の詳細版。年齢別・男女別人口データ。"
+    },
+    {
+      "id": "src-06",
+      "title": "生前整理は50代から始めよう！今すぐ取り組むべき理由と具体的な方法",
+      "url": "https://www.sairyouichiba.co.jp/column/prenatal-arrangement-in-your-50s/",
+      "publisher": "再良市場コラム",
+      "type": "competitor_serp",
+      "use_in_article": false,
+      "note": "SERP上位競合。table stakesの確認用。体力論・やること3分類が典型的パターン。差別化分析に使用。"
+    },
+    {
+      "id": "src-07",
+      "title": "50代から始める生前整理は「まだ早い」は間違い！体力と気力があるうちにやるべき理由と進め方",
+      "url": "https://proassist-east.com/during-life/6817/",
+      "publisher": "プロアシスト東日本",
+      "type": "competitor_serp",
+      "use_in_article": false,
+      "note": "SERP上位競合。「まだ早いは間違い」フレーミングが定着していることを確認。"
+    },
+    {
+      "id": "src-08",
+      "title": "【50代のための生前整理ガイド】やっておきたいことのまとめ",
+      "url": "https://kobe-kaitorecycle.jp/estateclearing/fiftys/",
+      "publisher": "神戸買取リサイクル",
+      "type": "competitor_serp",
+      "use_in_article": false,
+      "note": "SERP上位競合。やること5分類（物・書類・財産・デジタル・エンディングノート）がtable stakesとして定着を確認。"
+    },
+    {
+      "id": "src-09",
+      "title": "生前整理はいつから始めるかで差がつく！年代別のポイントや賢い進め方を紹介",
+      "url": "https://www.sairyouichiba.co.jp/column/when-to-start-organizing-your-affairs/",
+      "publisher": "再良市場コラム",
+      "type": "competitor_serp",
+      "use_in_article": false,
+      "note": "SERP上位競合。年代別の始め方・40代〜60代のやることが整理されている。table stakes確認に使用。"
+    },
+    {
+      "id": "src-10",
+      "title": "始めましょう！デジタル終活（見守り情報）",
+      "url": "https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen505.html",
+      "publisher": "国民生活センター",
+      "type": "official_consumer_agency",
+      "use_in_article": false,
+      "note": "デジタル終活の推奨情報。src-02・src-03の補足。記事内での引用はsrc-02を優先。"
+    }
+  ]
+}
