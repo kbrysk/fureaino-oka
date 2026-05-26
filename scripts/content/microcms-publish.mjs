@@ -119,19 +119,39 @@ async function main() {
 
   console.log(`投入: kw_id=${kwId} / ${live ? "公開(live)" : "下書き(draft)"} / category=${meta.category || "-"} / tags=${(meta.tags || []).join(",") || "-"}`);
 
-  // microCMSスキーマに未定義のフィールドは自動で除外して再投入（堅牢化）
+  // microCMSスキーマに未定義のフィールドは自動で除外して再投入（堅牢化）。
+  // 既存コンテンツ（同一contentID）の場合は create(PUT) が 400 を返すため update(PATCH) にフォールバック。
   let payload = { ...content };
   let res = null;
-  for (let attempt = 0; attempt < 6 && !res; attempt++) {
+  let useUpdate = false; // true なら既存コンテンツへの上書き更新（PATCH）
+  for (let attempt = 0; attempt < 8 && !res; attempt++) {
     try {
-      res = await writeClient.create({
-        endpoint: "blogs",
-        content: payload,
-        isDraft: !live,
-        ...(meta.slug ? { contentId: meta.slug } : {}), // slug指定時は意味のあるURL（要: microCMSでコンテンツID指定を許可＋キーにPUT権限）
-      });
+      if (useUpdate) {
+        // 既存コンテンツの本文・フィールドを上書き更新（PATCH）。
+        // 注意: PATCH は公開ステータスを変更しない（下書きは下書きのまま）。
+        // --live で「下書き→公開」に切り替える場合は microCMS 管理画面の「公開」操作、
+        // または下書きを削除してから本スクリプトを --live で再実行してください。
+        res = await writeClient.update({
+          endpoint: "blogs",
+          contentId: meta.slug,
+          content: payload,
+        });
+      } else {
+        res = await writeClient.create({
+          endpoint: "blogs",
+          content: payload,
+          isDraft: !live,
+          ...(meta.slug ? { contentId: meta.slug } : {}), // slug指定時は意味のあるURL（要: microCMSでコンテンツID指定を許可＋キーにPUT権限）
+        });
+      }
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
+      // 既存コンテンツ → PATCH へ切替（contentId 指定時のみ）
+      if (!useUpdate && meta.slug && /already exists/i.test(msg)) {
+        console.warn(`[既存コンテンツ] contentId「${meta.slug}」は既に存在します。update(PATCH)で上書き更新します。`);
+        useUpdate = true;
+        continue;
+      }
       const m = msg.match(/'([^']+)' is unexpected key/);
       if (m && payload[m[1]] !== undefined) {
         const key = m[1];
@@ -144,13 +164,23 @@ async function main() {
         delete payload[key];
         continue;
       }
+      if (/PATCH is forbidden/i.test(msg)) {
+        console.error("\n【中止】既存コンテンツの更新に必要な PATCH 権限が APIキーにありません。");
+        console.error("対処1: microCMS 管理画面 → API設定 → APIキー で書き込みキーに『PATCH』権限を付与し、再実行。");
+        console.error(`対処2: 管理画面でコンテンツ「${meta.slug}」を削除してから本スクリプトを再実行（PUTで再作成）。\n`);
+        process.exit(1);
+      }
       console.error("【投入エラー】", msg);
-      console.error("APIキーの書き込み権限（blogs に POST）、本文フィールド名（content）をご確認ください。");
+      console.error("APIキーの書き込み権限（blogs に POST/PUT/PATCH）、本文フィールド名（content）をご確認ください。");
       process.exit(1);
     }
   }
   if (!res) { console.error("【中止】再投入の上限に達しました。"); process.exit(1); }
-  console.log(`完了: microCMS contentId = ${res.id}（${live ? "公開" : "下書き"}）`);
+  if (useUpdate && live) {
+    console.warn("【注意】既存コンテンツを update(PATCH) で更新しました。公開ステータスは変更されていません。");
+    console.warn("        本番公開する場合は microCMS 管理画面で「公開」操作を行うか、下書きを削除してから --live で再実行してください。");
+  }
+  console.log(`完了: microCMS contentId = ${res.id}（${useUpdate ? "既存を更新" : live ? "公開" : "下書き"}）`);
   console.log(`記事URL（公開後）: https://www.fureaino-oka.com/articles/${res.id}`);
   console.log("※ 台帳 content/pipeline/keywords.csv の article_id / status を更新してください。");
 }

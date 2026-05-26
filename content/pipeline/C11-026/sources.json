@@ -1,0 +1,143 @@
+{
+  "kw_id": "C11-026",
+  "keyword": "親が亡くなったらやること",
+  "generated_at": "2026-05-26",
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "年金を受けている方が亡くなったとき（日本年金機構）",
+      "url": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140731-01.html",
+      "org": "日本年金機構",
+      "type": "public",
+      "use_in_section": "フェーズ2 年金受給停止・フェーズ4 年金手続き",
+      "note": "年金受給権者死亡届の提出期限（厚生年金10日以内・国民年金14日以内）の公式案内"
+    },
+    {
+      "id": "src-002",
+      "title": "亡くなった方の未支給年金を受け取れるとき（日本年金機構）",
+      "url": "https://www.nenkin.go.jp/shinsei/jukyu/kyotsu/20140731-02.html",
+      "org": "日本年金機構",
+      "type": "public",
+      "use_in_section": "フェーズ4 未支給年金請求",
+      "note": "未支給年金の請求手続き・請求できる遺族の優先順位・5年以内の請求期限"
+    },
+    {
+      "id": "src-003",
+      "title": "相続登記の申請義務化に関するQ&A（法務省）",
+      "url": "https://www.moj.go.jp/MINJI/minji05_00565.html",
+      "org": "法務省",
+      "type": "public",
+      "use_in_section": "フェーズ5 相続登記",
+      "note": "2024年4月施行・3年以内義務・10万円以下の過料のQ&A"
+    },
+    {
+      "id": "src-004",
+      "title": "相続登記の申請義務化について（法務省）",
+      "url": "https://www.moj.go.jp/MINJI/minji05_00599.html",
+      "org": "法務省",
+      "type": "public",
+      "use_in_section": "フェーズ5 相続登記",
+      "note": "義務化の概要説明ページ"
+    },
+    {
+      "id": "src-005",
+      "title": "相続登記が義務化されました（令和6年4月）（法務局・法務省）",
+      "url": "https://houmukyoku.moj.go.jp/tokyo/page000275.html",
+      "org": "法務省（法務局）",
+      "type": "public",
+      "use_in_section": "フェーズ5 相続登記",
+      "note": "東京法務局による義務化の周知ページ。平易な説明"
+    },
+    {
+      "id": "src-006",
+      "title": "No.2022 納税者が死亡したときの確定申告（準確定申告）（国税庁）",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2022.htm",
+      "org": "国税庁",
+      "type": "public",
+      "use_in_section": "フェーズ5 準確定申告",
+      "note": "相続開始を知った翌日から4ヶ月以内・申告方法の公式案内"
+    },
+    {
+      "id": "src-007",
+      "title": "No.4205 相続税の申告と納税（国税庁）",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4205.htm",
+      "org": "国税庁",
+      "type": "public",
+      "use_in_section": "フェーズ5 相続税申告",
+      "note": "相続開始を知った翌日から10ヶ月以内の申告・納税期限の公式案内"
+    },
+    {
+      "id": "src-008",
+      "title": "今から考えておきたい「デジタル終活」（国民生活センター）",
+      "url": "https://www.kokusen.go.jp/news/data/n-20241120_1.html",
+      "org": "国民生活センター",
+      "type": "public",
+      "use_in_section": "フェーズ3 デジタル遺品・サブスク整理",
+      "note": "2024年11月20日発表。スマホロック・ネット銀行・サブスク解約困難事例の公的根拠"
+    },
+    {
+      "id": "src-009",
+      "title": "口座名義人の死亡後に必要な銀行の相続手続き（三菱UFJ銀行）",
+      "url": "https://www.bk.mufg.jp/sonaeru/souzoku/column/006/index.html",
+      "org": "三菱UFJ銀行",
+      "type": "private_financial",
+      "use_in_section": "フェーズ3 銀行口座凍結解除",
+      "note": "大手銀行公式の相続手続き説明。必要書類・手順の参考として使用。民間出典のため「〇〇銀行の案内によると」と明記"
+    },
+    {
+      "id": "src-010",
+      "title": "相続手続き（ゆうちょ銀行）",
+      "url": "https://www.jp-bank.japanpost.jp/tetuzuki/souzoku/tzk_szk_flow.html",
+      "org": "ゆうちょ銀行（日本郵政グループ）",
+      "type": "quasi_public",
+      "use_in_section": "フェーズ3 ゆうちょ銀行相続手続き",
+      "note": "準公的機関としての信頼性。ゆうちょ銀行固有の手順説明"
+    },
+    {
+      "id": "src-011",
+      "title": "未支給年金 お手続きガイド（厚生労働省・年金局）",
+      "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-12500000-Nenkinkyoku/0000084217.pdf",
+      "org": "厚生労働省年金局",
+      "type": "public",
+      "use_in_section": "フェーズ4 未支給年金",
+      "note": "PDFのため記事内では参照元として日本年金機構URLを優先。補足根拠として記録"
+    },
+    {
+      "id": "src-012",
+      "title": "相続登記義務化 特設ページ（法務省）",
+      "url": "https://www.moj.go.jp/MINJI/minji05_00590.html",
+      "org": "法務省",
+      "type": "public",
+      "use_in_section": "フェーズ5 相続登記",
+      "note": "特設ページ。専門家相談先（法務局）の案内を含む"
+    },
+    {
+      "id": "src-013",
+      "title": "年金受給権者死亡届（報告書）兼 未支給年金・未支払給付金請求書の提出について（日本年金機構）",
+      "url": "https://www.nenkin.go.jp/tokusetsu/seikeidouitsu.html",
+      "org": "日本年金機構",
+      "type": "public",
+      "use_in_section": "フェーズ2 年金受給停止",
+      "note": "マイナンバー収録済みの場合に死亡届不要の根拠ページ"
+    },
+    {
+      "id": "src-014",
+      "title": "（競合調査参考）【2026年版】親や家族の死亡後手続き一覧（遺産相続手続まごころ代行センター）",
+      "url": "https://www.souzoku-isan.net/tetsuzuki/",
+      "org": "民間（競合）",
+      "type": "competitor",
+      "use_in_section": "SERP調査（競合分析のみ・本文引用しない）",
+      "note": "競合構成分析用。本文への引用・参照は不可"
+    },
+    {
+      "id": "src-015",
+      "title": "（競合調査参考）親が亡くなったら必要な手続き（税理士法人チェスター）",
+      "url": "https://chester-tax.com/encyclopedia/13726.html",
+      "org": "民間（競合）",
+      "type": "competitor",
+      "use_in_section": "SERP調査（競合分析のみ・本文引用しない）",
+      "note": "競合構成分析用。本文への引用・参照は不可"
+    }
+  ],
+  "sources_verification_note": "src-001〜src-013はWebSearch（2026-05-26実施）で実在を確認済み。src-014〜src-015は競合分析用のみでコンテンツ内には引用しない。法務省・国税庁・日本年金機構・国民生活センターURLは公的機関の正規ドメインとして信頼性確認済み。"
+}
