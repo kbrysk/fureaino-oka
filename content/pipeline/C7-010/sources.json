@@ -1,0 +1,67 @@
+{
+  "kw_id": "C7-010",
+  "keyword": "ぬいぐるみ 捨てられない",
+  "retrieved_at": "2026-05-26",
+  "sources": [
+    {
+      "category": "public_authority",
+      "label": "国民生活センター：訪問購入（訪問買い取り）のトラブルを防ぐには",
+      "url": "https://www.kokusen.go.jp/t_box/data/t_box-faq_qa2017_26.html",
+      "note": "訪問購入トラブルの注意喚起に使用。H2「リサイクルショップ・買取」節内でさりげなく言及。消費者ホットライン188の根拠。"
+    },
+    {
+      "category": "public_authority",
+      "label": "国民生活センター：訪問購入（各種相談の件数や傾向）",
+      "url": "https://www.kokusen.go.jp/soudan_topics/data/doorstep_purchase.html",
+      "note": "訪問購入相談件数の傾向。60歳以上が約8割というデータ。補足資料として。"
+    },
+    {
+      "category": "public_authority",
+      "label": "消費者庁：訪問購入（特定商取引法ガイド）",
+      "url": "https://www.no-trouble.caa.go.jp/what/doortodoorpurchases/",
+      "note": "特定商取引法の訪問購入規制・クーリングオフ8日間の根拠。補足として参照可。"
+    },
+    {
+      "category": "public_authority",
+      "label": "消費者ホットライン（消費者庁）",
+      "url": "https://www.caa.go.jp/policies/policy/consumer_research/research_report/",
+      "note": "消費者ホットライン 188 の案内。記事内では電話番号を目立つ形でなく、文中に自然に記載（tel:リンクは非推奨のためテキスト表記のみ）。"
+    },
+    {
+      "category": "general_information",
+      "label": "済生会：ブランケット症候群（移行対象）の説明",
+      "url": "https://www.saiseikai.or.jp/medical/column/blanket_syndrome/",
+      "note": "移行対象・ブランケット症候群の一般的説明。医療機関サイトだが一般的な心理解説として参照。断定ではなく「〜と言われています」で使用。"
+    },
+    {
+      "category": "npo_reference",
+      "label": "NPO法人グッドライフ（セカンドライフ）：ぬいぐるみ寄付",
+      "url": "https://goodlife-npo.org/stuffed/",
+      "note": "寄付先NPOの一例として参照。記事内では「一例として」明示し、事前に各団体の受付状況確認を促す。"
+    },
+    {
+      "category": "serp_competitor_reference",
+      "label": "ミニクラ：ぬいぐるみを捨てられないと思う理由",
+      "url": "https://minikura.com/article/knowhow/1427/",
+      "note": "SERP上位記事。table stakes確認用。丸写し禁止。"
+    },
+    {
+      "category": "serp_competitor_reference",
+      "label": "ehaiki：いらないぬいぐるみの捨て方6選（NPO監修）",
+      "url": "https://www.ehaiki.jp/second/disposal/stuffed/",
+      "note": "SERP上位記事。table stakes確認用。丸写し禁止。"
+    },
+    {
+      "category": "serp_competitor_reference",
+      "label": "再良市場コラム：ぬいぐるみを捨てられない人必見｜罪悪感ゼロで手放せる方法",
+      "url": "https://www.sairyouichiba.co.jp/column/i-cant-throw-away-my-stuffed-toy/",
+      "note": "SERP上位記事。table stakes確認用。丸写し禁止。"
+    },
+    {
+      "category": "serp_competitor_reference",
+      "label": "ぬいぐるみ断捨離の方法（サブクロ）",
+      "url": "https://www.subclo.jp/column/1961/",
+      "note": "SERP上位記事。table stakes確認用。丸写し禁止。"
+    }
+  ]
+}
