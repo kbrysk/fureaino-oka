@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-25T08:35:05.708Z",
+  "generatedAt": "2026-05-25T21:39:16.238Z",
   "totals": {
-    "uniq": 45679,
-    "articles": 46,
-    "pseoHubs": 9
+    "uniq": 45457,
+    "articles": 49,
+    "pseoHubs": 10
   },
   "clusterMeta": {
     "P1": {
@@ -77,6 +77,14 @@
       "cv": "lead_pdf",
       "sup": "general",
       "ymyl": 1
+    },
+    "C11": {
+      "name": "死後の手続き・諸手続きロードマップ",
+      "phase": "F3",
+      "journey": "P3",
+      "cv": "lead_pdf",
+      "sup": "none",
+      "ymyl": 1.3
     }
   },
   "articles": [
@@ -91,7 +99,7 @@
       "comp": 17,
       "priority": 100,
       "rank": "S",
-      "count": 1488,
+      "count": 1487,
       "phase": "F2",
       "journey": "P2",
       "cv": "kaitori_soukyaku",
@@ -256,31 +264,6 @@
       ]
     },
     {
-      "cluster": "C7",
-      "bucket": "katami",
-      "label": "形見分けのマナー・進め方",
-      "headKw": "形見分けとは",
-      "volMax": 1900,
-      "volSum": 12540,
-      "diff": 31,
-      "comp": 3,
-      "priority": 89,
-      "rank": "A",
-      "count": 422,
-      "phase": "F2",
-      "journey": "P2",
-      "cv": "kaitori_soukyaku",
-      "sup": "general",
-      "subs": [
-        "形見分け とは(1900)",
-        "形見分け と は(1900)",
-        "形見分け(1000)",
-        "形見分けいつ(480)",
-        "形見分け いつ(480)",
-        "形見分け 現金(320)"
-      ]
-    },
-    {
       "cluster": "C10",
       "bucket": "misc",
       "label": "生前整理 総合ハブ",
@@ -290,7 +273,7 @@
       "diff": 29,
       "comp": 12,
       "priority": 84,
-      "rank": "A",
+      "rank": "S",
       "count": 571,
       "phase": "F1",
       "journey": "P1",
@@ -331,28 +314,28 @@
       ]
     },
     {
-      "cluster": "C8",
-      "bucket": "gomi_yashiki",
-      "label": "ゴミ屋敷の片付け・費用・業者",
-      "headKw": "ゴミ屋敷の片付け",
-      "volMax": 6600,
-      "volSum": 56880,
-      "diff": 35,
-      "comp": 21,
+      "cluster": "C7",
+      "bucket": "ningyo",
+      "label": "人形・ぬいぐるみの供養・処分",
+      "headKw": "捨てられないぬいぐるみ",
+      "volMax": 880,
+      "volSum": 3350,
+      "diff": 31,
+      "comp": 2,
       "priority": 80,
       "rank": "A",
-      "count": 618,
+      "count": 39,
       "phase": "F2",
       "journey": "P2",
-      "cv": "fuyohin_soukyaku",
+      "cv": "kaitori_soukyaku",
       "sup": "general",
       "subs": [
-        "ゴミ屋敷を片付ける(6600)",
-        "ゴミ屋敷片付け(6600)",
-        "ゴミ屋敷 片付ける(6600)",
-        "ゴミ屋敷 片付け(6600)",
-        "ゴミ屋敷片付け費用(2900)",
-        "ゴミ屋敷 片付け 費用(2900)"
+        "ぬいぐるみ捨てられない(880)",
+        "ぬいぐるみ 捨てられない(880)",
+        "ぬいぐるみ 捨てられない 大人(170)",
+        "ぬいぐるみ 捨てられない 病気(90)",
+        "ぬいぐるみ 捨てられない かわいそう(90)",
+        "ぬいぐるみ 捨てられない なんj(50)"
       ]
     },
     {
@@ -431,6 +414,31 @@
       ]
     },
     {
+      "cluster": "C8",
+      "bucket": "gomi_yashiki",
+      "label": "ゴミ屋敷の片付け・費用・業者",
+      "headKw": "ゴミ屋敷の片付け",
+      "volMax": 6600,
+      "volSum": 56930,
+      "diff": 35,
+      "comp": 22,
+      "priority": 79,
+      "rank": "A",
+      "count": 619,
+      "phase": "F2",
+      "journey": "P2",
+      "cv": "fuyohin_soukyaku",
+      "sup": "general",
+      "subs": [
+        "ゴミ屋敷を片付ける(6600)",
+        "ゴミ屋敷片付け(6600)",
+        "ゴミ屋敷 片付ける(6600)",
+        "ゴミ屋敷 片付け(6600)",
+        "ゴミ屋敷片付け費用(2900)",
+        "ゴミ屋敷 片付け 費用(2900)"
+      ]
+    },
+    {
       "cluster": "P3",
       "bucket": "demolition",
       "label": "空き家・実家の解体費用と流れ",
@@ -453,6 +461,31 @@
         "空き家解体 ローン(260)",
         "空き家解体固定資産税減免(170)",
         "空き家解体 固定資産税減免(170)"
+      ]
+    },
+    {
+      "cluster": "C11",
+      "bucket": "bank",
+      "label": "故人の銀行口座 凍結解除・相続手続き",
+      "headKw": "銀行口座凍結解除",
+      "volMax": 1300,
+      "volSum": 5660,
+      "diff": 41,
+      "comp": 6,
+      "priority": 74,
+      "rank": "A",
+      "count": 109,
+      "phase": "F3",
+      "journey": "P3",
+      "cv": "lead_pdf",
+      "sup": "none",
+      "subs": [
+        "銀行口座の凍結解除(1300)",
+        "銀行口座凍結解除 必要書類(480)",
+        "銀行口座不正利用 凍結解除(480)",
+        "銀行口座凍結解除方法(320)",
+        "ゆうちょ銀行口座凍結解除(210)",
+        "三井住友銀行口座凍結 解除(170)"
       ]
     },
     {
@@ -536,23 +569,23 @@
       "label": "デジタル遺品・スマホ/PCの死後手続き",
       "headKw": "デジタル遺品",
       "volMax": 390,
-      "volSum": 2800,
-      "diff": 28,
-      "comp": 6,
+      "volSum": 4510,
+      "diff": 29,
+      "comp": 5,
       "priority": 71,
       "rank": "A",
-      "count": 197,
+      "count": 221,
       "phase": "F2",
       "journey": "P2",
       "cv": "ihin_soukyaku",
       "sup": "general",
       "subs": [
+        "故人 スマホ ロック解除業者(390)",
+        "故人 スマホ ロック解除 業者(390)",
         "死後 スマホ 見られたくない(320)",
         "デジタル遺品整理業者(260)",
         "デジタル遺品整理(170)",
-        "デジタル遺品 整理(170)",
-        "デジタル遺品 パスワード解除(140)",
-        "死後 スマホ 見られたくない 知恵袋(110)"
+        "故人 スマホ ロック解除(170)"
       ]
     },
     {
@@ -665,7 +698,7 @@
       "diff": 32,
       "comp": 14,
       "priority": 66,
-      "rank": "B",
+      "rank": "A",
       "count": 80,
       "phase": "F1",
       "journey": "P1",
@@ -678,6 +711,31 @@
         "実家片付け費用(480)",
         "実家 片付け 費用(480)",
         "実家 の 片付け 費用(480)"
+      ]
+    },
+    {
+      "cluster": "C11",
+      "bucket": "checklist",
+      "label": "親が亡くなったらやること一覧【手続きロードマップ】",
+      "headKw": "親が亡くなったらやること",
+      "volMax": 2400,
+      "volSum": 3630,
+      "diff": 34,
+      "comp": 31,
+      "priority": 66,
+      "rank": "B",
+      "count": 15,
+      "phase": "F3",
+      "journey": "P3",
+      "cv": "lead_pdf",
+      "sup": "none",
+      "subs": [
+        "死後の手続き一覧(320)",
+        "死後手続き 一覧(320)",
+        "父親が亡くなったらやること(320)",
+        "親が亡くなったらやることリスト(140)",
+        "親が亡くなったらやること 順番(70)",
+        "死後の手続き一覧表(30)"
       ]
     },
     {
@@ -761,12 +819,12 @@
       "label": "着物の買取・処分・相場",
       "headKw": "着物買取",
       "volMax": 49500,
-      "volSum": 373160,
+      "volSum": 373120,
       "diff": 36,
       "comp": 51,
       "priority": 60,
       "rank": "B",
-      "count": 1904,
+      "count": 1897,
       "phase": "F2",
       "journey": "P2",
       "cv": "kaitori_soukyaku",
@@ -887,11 +945,11 @@
       "headKw": "遺品整理の費用",
       "volMax": 4400,
       "volSum": 23470,
-      "diff": 30,
-      "comp": 49,
+      "diff": 29,
+      "comp": 50,
       "priority": 53,
       "rank": "B",
-      "count": 80,
+      "count": 82,
       "phase": "F2",
       "journey": "P2",
       "cv": "ihin_soukyaku",
@@ -911,23 +969,23 @@
       "label": "実家じまいの後悔・トラブル・進まない",
       "headKw": "実家じまい やってはいけない 失敗",
       "volMax": 110,
-      "volSum": 540,
+      "volSum": 630,
       "diff": 30,
       "comp": 2,
       "priority": 52,
       "rank": "B",
-      "count": 39,
+      "count": 40,
       "phase": "F1",
       "journey": "P1",
       "cv": "lead_pdf",
       "sup": "general",
       "subs": [
         "実家片付け 疲れた(90)",
+        "実家 物が多い ストレス(90)",
         "実家 片付け 疲れ た(90)",
         "実家 片付け 疲れた(90)",
         "実家の片付け 疲れる(40)",
-        "実家の片付け進まない(20)",
-        "実家片付け 揉める(20)"
+        "実家の片付け進まない(20)"
       ]
     },
     {
@@ -953,6 +1011,31 @@
         "生前整理 相場(140)",
         "生前整理優良業者(90)",
         "生前整理アドバイザー 収入(90)"
+      ]
+    },
+    {
+      "cluster": "C11",
+      "bucket": "pension",
+      "label": "年金の死後手続き(遺族年金・未支給)",
+      "headKw": "死後年金手続き",
+      "volMax": 50,
+      "volSum": 120,
+      "diff": 33,
+      "comp": 8,
+      "priority": 45,
+      "rank": "B",
+      "count": 12,
+      "phase": "F3",
+      "journey": "P3",
+      "cv": "lead_pdf",
+      "sup": "none",
+      "subs": [
+        "死後 の 年金 手続き(30)",
+        "死後の手続き 年金(20)",
+        "年金 死後 手続き(10)",
+        "年金 死後 の 手続き(10)",
+        "死後手続き 年金(0)",
+        "厚生年金 死後手続き(0)"
       ]
     },
     {
@@ -1063,8 +1146,8 @@
       "volMax": 1600,
       "volSum": 14170,
       "diff": 38,
-      "comp": 54,
-      "priority": 37,
+      "comp": 53,
+      "priority": 38,
       "rank": "B",
       "count": 93,
       "phase": "F2",
@@ -1181,31 +1264,6 @@
       ]
     },
     {
-      "cluster": "C7",
-      "bucket": "misc",
-      "label": "品目別 処分・買取 その他(人形・神棚等)",
-      "headKw": "目 整形 見分け",
-      "volMax": 10,
-      "volSum": 20,
-      "diff": 50,
-      "comp": 3,
-      "priority": 21,
-      "rank": "B",
-      "count": 11,
-      "phase": "F2",
-      "journey": "P2",
-      "cv": "kaitori_soukyaku",
-      "sup": "general",
-      "subs": [
-        "古着 物 処分(10)",
-        "二重整形 見分け(0)",
-        "動名詞 現在進行形 見分け(0)",
-        "完了形 見分け(0)",
-        "顔の形 見分け(0)",
-        "直角三角形 見分け(0)"
-      ]
-    },
-    {
       "cluster": "C9",
       "bucket": "proc",
       "label": "相続の手続き・登記・遺産分割・遺言",
@@ -1229,6 +1287,24 @@
         "実家 相続 名義 変更(260)",
         "実家の名義変更 相続(90)"
       ]
+    },
+    {
+      "cluster": "C7",
+      "bucket": "misc",
+      "label": "品目別 処分・買取 その他(神棚・遺品等)",
+      "headKw": "古着 物 処分",
+      "volMax": 10,
+      "volSum": 10,
+      "diff": 50,
+      "comp": 29,
+      "priority": 15,
+      "rank": "B",
+      "count": 1,
+      "phase": "F2",
+      "journey": "P2",
+      "cv": "kaitori_soukyaku",
+      "sup": "general",
+      "subs": []
     }
   ],
   "pseo": [
@@ -1238,8 +1314,8 @@
       "title": "地域×粗大ごみ・不用品 pSEO",
       "route": "/area/[都道府県]/[市区町村]/cleanup",
       "routeStatus": "既存pSEO",
-      "cities": 3429,
-      "volSum": 2619870,
+      "cities": 3430,
+      "volSum": 2619880,
       "headKw": "横浜市粗大ごみ",
       "headVol": 60500,
       "cv": "fuyohin_soukyaku",
@@ -1251,7 +1327,7 @@
       "title": "地域×遺品整理・デジタル遺品 pSEO拡充候補",
       "route": "(新規pSEOルート候補)",
       "routeStatus": "拡充候補",
-      "cities": 968,
+      "cities": 969,
       "volSum": 99920,
       "headKw": "遺品整理大阪",
       "headVol": 1900,
@@ -1264,7 +1340,7 @@
       "title": "地域×品目別 処分・供養・買取 pSEO拡充候補",
       "route": "(新規pSEOルート候補)",
       "routeStatus": "拡充候補",
-      "cities": 2563,
+      "cities": 2561,
       "volSum": 80900,
       "headKw": "買取 着物 大阪",
       "headVol": 720,
@@ -1335,6 +1411,19 @@
       "headVol": 40,
       "cv": "lead_pdf",
       "sup": "general"
+    },
+    {
+      "cluster": "C11",
+      "id": "pseo-area-c11",
+      "title": "地域×死後の手続き・諸手続きロードマップ pSEO拡充候補",
+      "route": "(新規pSEOルート候補)",
+      "routeStatus": "拡充候補",
+      "cities": 15,
+      "volSum": 90,
+      "headKw": "福岡銀行 口座凍結 解除",
+      "headVol": 40,
+      "cv": "lead_pdf",
+      "sup": "none"
     },
     {
       "cluster": "P1",
