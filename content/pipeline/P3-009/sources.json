@@ -1,0 +1,129 @@
+{
+  "kw_id": "P3-009",
+  "keyword": "空き家活用",
+  "retrieved_at": "2026-05-26",
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "令和5年住宅・土地統計調査 調査の結果（総務省統計局）",
+      "url": "https://www.stat.go.jp/data/jyutaku/2023/tyousake.html",
+      "publisher": "総務省統計局",
+      "use_in_section": "H2:空き家活用の意味",
+      "fact": "空き家数900万2千戸・空き家率13.8%（2023年10月1日現在・過去最高）",
+      "verified": true
+    },
+    {
+      "id": "src-002",
+      "title": "建設産業・不動産業：空き家・空き地バンク総合情報ページ（国土交通省）",
+      "url": "https://www.mlit.go.jp/totikensangyo/const/sosei_const_tk3_000131.html",
+      "publisher": "国土交通省",
+      "use_in_section": "H3:空き家バンクに登録する",
+      "fact": "全国版空き家・空き地バンクの概要・参画自治体数・運営事業者（LIFULL・アットホーム）",
+      "verified": true
+    },
+    {
+      "id": "src-003",
+      "title": "住宅：空き家再生等推進事業について（国土交通省）",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000011.html",
+      "publisher": "国土交通省",
+      "use_in_section": "H2:補助金・支援制度",
+      "fact": "空き家再生等推進事業の概要（市区町村への補助・活用支援）",
+      "verified": true
+    },
+    {
+      "id": "src-004",
+      "title": "国土交通省における空き家対策支援メニュー等（空き家対策総合支援事業）",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/content/001423378.pdf",
+      "publisher": "国土交通省",
+      "use_in_section": "H2:補助金・支援制度",
+      "fact": "空き家対策総合支援事業の支援メニュー（市区町村向け除却・活用支援）",
+      "verified": true,
+      "note": "PDFファイル。引用時は出典として「国土交通省 空き家対策総合支援事業 支援メニュー等」と表記する"
+    },
+    {
+      "id": "src-005",
+      "title": "住宅：空家等対策の推進に関する特別措置法関連情報（国土交通省）",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000035.html",
+      "publisher": "国土交通省",
+      "use_in_section": "H2:活用の意味（放置リスク言及時）・P3-011へのリンク補強",
+      "fact": "空家等対策の推進に関する特別措置法（空家法）の根拠・改正情報",
+      "verified": true
+    },
+    {
+      "id": "src-006",
+      "title": "「全国版空き家・空き地バンク」の更なる情報の充実化について（国土交通省 報道発表）",
+      "url": "https://www.mlit.go.jp/report/press/totikensangyo16_hh_000189.html",
+      "publisher": "国土交通省",
+      "use_in_section": "H3:空き家バンクに登録する",
+      "fact": "全国版空き家・空き地バンクの拡充・マッチング促進の取り組み内容",
+      "verified": true
+    },
+    {
+      "id": "src-007",
+      "title": "総務省「固定資産税の概要」（住宅用地特例の仕組み）",
+      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/149767_08.html",
+      "publisher": "総務省",
+      "use_in_section": "H3:駐車場として活用する（解体後の固定資産税注記）",
+      "fact": "小規模住宅用地（200㎡以下）の課税標準6分の1軽減。更地にすると特例が外れる",
+      "verified": true,
+      "note": "P3-011・P3-015でも引用済み。本記事では駐車場H3の注記と判断セクションで使用する"
+    },
+    {
+      "id": "src-008",
+      "title": "空き家の活用アイデア事例14選 補助金や固定資産税、注意点についても解説（HOME4Uオーナーズ）",
+      "url": "https://home4u-owners.jp/contents/revenue-111-12708",
+      "publisher": "NTTデータグループ（HOME4Uオーナーズ）",
+      "use_in_section": "SERP競合調査参照（本文引用不可）",
+      "fact": "上位競合記事。活用方法14選の列挙構成。2025年1月更新確認",
+      "verified": true,
+      "note": "競合記事のため本文での直接引用・言及は不可。構成調査・差別化分析のみに使用"
+    },
+    {
+      "id": "src-009",
+      "title": "空き家活用ビジネス・空き家対策の成功事例25選（アキサポ）",
+      "url": "https://www.akisapo.jp/column/6258/",
+      "publisher": "アキサポ（株式会社AZUMI）",
+      "use_in_section": "SERP競合調査参照（本文引用不可）",
+      "fact": "上位競合記事。成功事例25選の列挙構成",
+      "verified": true,
+      "note": "競合記事のため本文での直接引用・言及は不可"
+    },
+    {
+      "id": "src-010",
+      "title": "令和7年度「空き家対策モデル事業」の採択対象を決定（国土交通省 報道発表・2025年）",
+      "url": "https://www.mlit.go.jp/report/press/house03_hh_000233.html",
+      "publisher": "国土交通省",
+      "use_in_section": "補助金セクションの補足（必要に応じて）",
+      "fact": "2025年度の空き家対策モデル事業採択。国の空き家対策が継続的に強化されていることの根拠",
+      "verified": true
+    }
+  ],
+  "internal_links": [
+    {
+      "path": "/area",
+      "purpose": "地域別の補助金・空き家情報（自治体pSEOページ）",
+      "section": "H2:補助金・支援制度"
+    },
+    {
+      "path": "/articles/jikka-jimai-guide",
+      "purpose": "実家じまいの全体ロードマップ（P1-004・公開済）",
+      "section": "リード文またはH2:活用の意味"
+    },
+    {
+      "path": "/tools/akiya-risk",
+      "purpose": "空き家リスク診断ツール",
+      "section": "H2:コスト・リスク、まとめCTA"
+    },
+    {
+      "path": "/tools/empty-house-tax",
+      "purpose": "空き家税シミュレーターツール",
+      "section": "H2:コスト・リスク"
+    },
+    {
+      "path": "/checklist",
+      "purpose": "死後・相続後の手続きチェックリスト",
+      "section": "まとめCTA"
+    }
+  ],
+  "notes": "P3-011（tokutei-akiya）・P3-015（akiya-kaitai-hiyou）へのリンクは、記事公開後にslugが確定次第 article-writer が実URLに置き換えること。2026年5月26日現在 human_review ステータスのため実URLは未確定。"
+}
