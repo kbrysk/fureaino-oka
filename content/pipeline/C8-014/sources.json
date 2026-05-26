@@ -1,0 +1,71 @@
+{
+  "kw_id": "C8-014",
+  "keyword": "ゴミ屋敷の片付け",
+  "retrieved_at": "2026-05-26",
+  "sources": [
+    {
+      "id": "env-01",
+      "publisher": "環境省",
+      "title": "廃棄物の処分に「無許可」の回収業者を利用しないでください！",
+      "url": "https://www.env.go.jp/recycle/kaden/tv-recycle/qa.html",
+      "use_in_section": "H2:業者選びで後悔しないための注意点 / 一般廃棄物処理業の許可確認",
+      "note": "家庭ごみの回収には市区町村の一般廃棄物処理業許可が必要。産業廃棄物許可のみでは不可。"
+    },
+    {
+      "id": "kokusen-01",
+      "publisher": "国民生活センター",
+      "title": "不用品回収サービスのトラブル——市区町村から一般廃棄物処理業の許可を受けず、違法に回収を行う事業者に注意！",
+      "url": "https://www.kokusen.go.jp/news/data/n-20221102_1.html",
+      "use_in_section": "H2:業者選びで後悔しないための注意点 / 「無料回収」「積み放題」のリスク",
+      "note": "2022年11月2日発表。2021年度の相談件数2,000件超。追加請求トラブル・無許可業者の手口。"
+    },
+    {
+      "id": "kokusen-02",
+      "publisher": "国民生活センター",
+      "title": "消費生活相談は「188」へ！（消費者ホットライン）",
+      "url": "https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen225.html",
+      "use_in_section": "H2:業者選びで後悔しないための注意点 / 消費者ホットライン188の案内",
+      "note": "全国共通3桁番号「188（いやや）」。最寄りの消費生活センターを案内。"
+    },
+    {
+      "id": "mhlw-01",
+      "publisher": "厚生労働省",
+      "title": "地域包括ケアシステム（地域包括支援センターについて）",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/index.html",
+      "use_in_section": "H2:背景にある心理と、家族としての関わり方 / ためこみ症・認知機能低下が心配な場合の相談先",
+      "note": "全国5,451か所（2024年4月時点）。市区町村設置。保健師・社会福祉士・主任ケアマネ等が支援。"
+    },
+    {
+      "id": "serp-ref-01",
+      "publisher": "みんなの遺品整理",
+      "title": "ゴミ屋敷の片付け費用はいくら？間取り・トラックサイズごとの相場や事例価格も紹介",
+      "url": "https://m-ihinseiri.jp/article-1/gomiyashiki/cost/",
+      "use_in_section": "SERP調査参照（競合分析用・記事本文に引用しない）",
+      "note": "上位記事。費用相場・間取り別・トラック別。table stakesの一つ。"
+    },
+    {
+      "id": "serp-ref-02",
+      "publisher": "ブルークリーン株式会社",
+      "title": "ゴミ屋敷のレベルは6段階！自力で片付けられるか？限界別の対処法をプロが解説",
+      "url": "https://b-clean.jp/owned/revel/",
+      "use_in_section": "SERP調査参照（競合分析用・記事本文に引用しない）",
+      "note": "自分でvsプロ判断基準の上位記事。レベル分類が table stakes になっている。"
+    },
+    {
+      "id": "serp-ref-03",
+      "publisher": "お助けうさぎ",
+      "title": "ゴミ屋敷の片付けを自力でできる範囲とは？業者依頼を判断する基準と片付けのコツを解説",
+      "url": "https://otasukeusagi.jp/gomiyashiki/how-to-clean-a-hoarding-house/",
+      "use_in_section": "SERP調査参照（競合分析用・記事本文に引用しない）",
+      "note": "判断基準・コツの上位記事。table stakes分析に使用。"
+    },
+    {
+      "id": "serp-ref-04",
+      "publisher": "みんなの遺品整理",
+      "title": "実家がゴミ屋敷化したらどうする？片付け方と費用、事例から見る片付け日数",
+      "url": "https://m-ihinseiri.jp/article-1/gomiyashiki/jikka/",
+      "use_in_section": "SERP調査参照（競合分析用・記事本文に引用しない）",
+      "note": "実家ゴミ屋敷の記事。家族の費用負担・誰が払うかの論点が不足している点を差別化根拠として確認。"
+    }
+  ]
+}

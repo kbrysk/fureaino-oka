@@ -1,0 +1,105 @@
+{
+  "kw_id": "P3-017",
+  "keyword": "空き家の解体補助金",
+  "generated_at": "2026-05-26",
+  "sources": [
+    {
+      "id": "mlit-akiya-sougou-shien",
+      "title": "国土交通省「空き家対策総合支援事業 支援メニュー等（令和２年度末時点）」",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/content/001423378.pdf",
+      "type": "government",
+      "used_in": ["H2:空き家の解体補助金はどこから出るのか"],
+      "notes": "国の財源→自治体制度の根拠。PDF。P3-015でも引用済み。"
+    },
+    {
+      "id": "mlit-akiya-saisei",
+      "title": "国土交通省「空き家再生等推進事業について」",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000011.html",
+      "type": "government",
+      "used_in": ["H2:空き家の解体補助金はどこから出るのか"],
+      "notes": "除却事業タイプ（不良住宅・空き家の除却）の根拠ページ。P3-015でも引用済み。"
+    },
+    {
+      "id": "mlit-akiya-taisaku-jouhou",
+      "title": "国土交通省「空家等対策の推進に関する特別措置法関連情報」",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000035.html",
+      "type": "government",
+      "used_in": ["H2:補助金の対象条件"],
+      "notes": "空家等対策特別措置法の根拠。特定空き家・管理不全空き家との関連で言及する場合に使用。"
+    },
+    {
+      "id": "soumu-kotei-shisan",
+      "title": "総務省「固定資産税の概要」",
+      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/149767_08.html",
+      "type": "government",
+      "used_in": ["H2:申請前に知っておくべき注意点 / H3:解体後に固定資産税が増加することがある"],
+      "notes": "住宅用地特例（1/6軽減）の根拠。P3-011・P3-015でも引用済み。"
+    },
+    {
+      "id": "nagano-roukyukiken",
+      "title": "長野市「老朽危険空き家の解体工事補助金（補助額拡大中）」",
+      "url": "https://www.city.nagano.nagano.jp/n183500/contents/p003369.html",
+      "type": "local_government",
+      "used_in": ["H2:解体補助金の主な種類 / H2:申請の流れ"],
+      "notes": "老朽危険空き家除却補助の自治体実例。申請フローの参考。実在確認済。"
+    },
+    {
+      "id": "oita-roukyukiken",
+      "title": "大分市「老朽および準老朽危険空き家等除却補助について」",
+      "url": "https://www.city.oita.oita.jp/o168/kurashi/sumaijoho/roukyukikenakiya_hojo_r1.html",
+      "type": "local_government",
+      "used_in": ["H2:申請の流れ"],
+      "notes": "自治体実例。着工前申請プロセスの参考。実在確認済。"
+    },
+    {
+      "id": "utsunomiya-roukyukiken",
+      "title": "宇都宮市「老朽危険空き家除却費補助金」",
+      "url": "https://www.city.utsunomiya.lg.jp/kurashi/anshin/1016717/1023258/1013763.html",
+      "type": "local_government",
+      "used_in": ["H2:解体補助金の主な種類"],
+      "notes": "老朽危険空き家除却補助の自治体実例。実在確認済。"
+    },
+    {
+      "id": "matsuyama-roukyukiken",
+      "title": "松山市「令和7年度 老朽危険空家除却事業」",
+      "url": "https://www.city.matsuyama.ehime.jp/kurashi/kurashi/hojokin/akiyajokyaku.html",
+      "type": "local_government",
+      "used_in": ["H2:申請の流れ"],
+      "notes": "老朽危険空き家除却補助の自治体実例（令和7年度版）。実在確認済。"
+    },
+    {
+      "id": "hitachi-riyou",
+      "title": "日立市「空き家解体補助金（利活用型）令和7年度版」",
+      "url": "https://www.city.hitachi.lg.jp/machizukuri_kankyo/hojokin_joseikin/1007381/1002708.html",
+      "type": "local_government",
+      "used_in": ["H2:解体補助金の主な種類 / H3:利活用・跡地活用と連動した補助"],
+      "notes": "跡地利活用型補助の自治体実例。実在確認済。"
+    },
+    {
+      "id": "sumida-roukyukaoku",
+      "title": "墨田区「老朽危険家屋除却費等助成制度」",
+      "url": "https://www.city.sumida.lg.jp/anzen_anshin/kurasinoanzen_ansin/akiya-taisaku/roukyuukaokuzyokyaku.html",
+      "type": "local_government",
+      "used_in": ["H2:解体補助金の主な種類"],
+      "notes": "都市部（墨田区）の老朽危険家屋除却補助実例。実在確認済。"
+    }
+  ],
+  "serp_research_queries": [
+    "空き家 解体 補助金 種類 条件 申請 2025 2026",
+    "老朽危険空き家 除却補助金 申請の流れ 着工前 自治体",
+    "国土交通省 空き家対策総合支援事業 解体補助 自治体 2025",
+    "空き家 解体補助金 申請できない 注意点 対象外 予算切れ 固定資産税",
+    "空き家解体補助金 相続 子世代 実務 必要書類 共有名義 注意点",
+    "site:mlit.go.jp 空き家対策総合支援事業 除却 補助"
+  ],
+  "serp_top_competitors_observed": [
+    "https://www.akisapo.jp/column/26684/",
+    "https://hojyokin-concierge.com/media/2025/11/28/kaitai-hojyokin",
+    "https://rehome-navi.com/articles/2760",
+    "https://akiya.duskin.jp/column/012.html",
+    "https://www.repark.jp/parking_owner/column/article55.html",
+    "https://funds.jp/sell-guide/vacant-house-demolition-cost-subsidy/",
+    "https://genba-mado.com/subsidy"
+  ],
+  "cannibalization_note": "P3-015（akiya-kaitai-hiyou）は解体費用の構造別相場・固定資産税特例解除の仕組み・解体vs古家付き売却の判断が主軸。本記事P3-017は補助金の種類/対象条件/補助額目安/申請フロー/注意点に特化することでカニバリを回避。両記事は相互内部リンクで補完関係を構築する。"
+}
