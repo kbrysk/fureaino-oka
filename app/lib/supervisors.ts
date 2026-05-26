@@ -67,3 +67,23 @@ export const CURRENT_GENERAL_SUPERVISOR: SupervisorKey = "okubo";
 export function getGeneralSupervisor(): Supervisor {
   return SUPERVISORS[CURRENT_GENERAL_SUPERVISOR];
 }
+
+/**
+ * 記事の supervisor 区分から、表示すべき監修者を解決する。
+ *
+ * - "none" … 専門家領域（相続税・年金・登記・不動産など総合監修の対象外）。
+ *            人物監修バイラインを出してはいけないため null を返す
+ *            （呼び出し側で中立の運営者表記に切り替える）。
+ * - "okubo" / "murakami" … 指定した人物を返す。
+ * - "general" / 未設定 / 不明な値 … 現・総合監修者を返す（後方互換）。
+ *
+ * 虚偽の監修表示を防ぐためのガードであり、YMYL記事の信頼性保護に直結する。
+ */
+export function resolveArticleSupervisor(supervisor?: string): Supervisor | null {
+  if (supervisor === "none") return null;
+  if (supervisor === "okubo" || supervisor === "murakami") {
+    return SUPERVISORS[supervisor];
+  }
+  // "general" / undefined / 想定外の値 はすべて現・総合監修者にフォールバック
+  return getGeneralSupervisor();
+}

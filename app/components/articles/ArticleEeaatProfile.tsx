@@ -1,13 +1,39 @@
 import Link from "next/link";
-import { getGeneralSupervisor } from "../../lib/supervisors";
+import { resolveArticleSupervisor } from "../../lib/supervisors";
 
 /**
  * E-E-A-T: 記事末尾の監修者ブロック。
- * 監修者は app/lib/supervisors.ts の現・総合監修者を参照（現＝大久保亮佑/生前整理アドバイザー2級、
- * 村上充恵 様の許諾取得後は CURRENT_GENERAL_SUPERVISOR を切り替えるだけで全記事の表示が更新される）。
+ *
+ * 記事の supervisor 区分（microCMS の supervisor フィールド）に応じて表示を切り替える:
+ *  - 人物（general/okubo/murakami・未設定）… 現・総合監修者の人物バイラインを表示
+ *    （現＝大久保亮佑/生前整理アドバイザー2級。村上充恵 様の許諾取得後は
+ *      CURRENT_GENERAL_SUPERVISOR を切り替えるだけで全記事の表示が更新される）。
+ *  - "none"（相続税・年金・登記・不動産など総合監修の対象外の専門家領域）…
+ *    人物監修バイラインを出さず、中立の運営者表記＋一般情報の注記に切り替える。
+ *    2級アドバイザーが法務・税務を監修したかのような誤認を防ぐためのガード。
  */
-export default function ArticleEeaatProfile() {
-  const s = getGeneralSupervisor();
+export default function ArticleEeaatProfile({ supervisor }: { supervisor?: string }) {
+  const s = resolveArticleSupervisor(supervisor);
+
+  // supervisor="none": 専門家領域。人物監修バイラインを出さず中立の運営者表記にする。
+  if (!s) {
+    return (
+      <div className="mt-10 pt-8 border-t border-border rounded-2xl bg-card border border-border p-5">
+        <p className="text-sm font-medium text-foreground/70 mb-3">この記事について</p>
+        <p className="text-sm text-foreground/70 leading-relaxed">
+          本記事は一般的な情報提供を目的としたものです。相続・年金・税・登記などの手続きは、
+          個別の状況や法改正によって取り扱いが異なります。具体的な手続きや判断は、各市区町村窓口・
+          年金事務所・法務局・税務署、および司法書士・税理士・弁護士などの専門家に必ずご確認ください。
+        </p>
+        <p className="text-sm text-foreground/60 mt-3 leading-relaxed">
+          編集・運営：株式会社Kogera「生前整理支援センター ふれあいの丘」。
+          実家じまい・遺品整理・生前整理の進め方を、当事者とご家族の目線でわかりやすくお届けしています。
+        </p>
+      </div>
+    );
+  }
+
+  // 人物監修バイライン（従来表示）
   return (
     <div className="mt-10 pt-8 border-t border-border rounded-2xl bg-card border border-border p-5">
       <p className="text-sm font-medium text-foreground/70 mb-3">この記事の監修者</p>

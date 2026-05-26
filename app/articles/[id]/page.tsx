@@ -156,7 +156,7 @@ export default async function ArticleDetailPage({ params }: Props) {
       <ArticleLineCTABanner />
 
       <footer className="mt-10">
-        <ArticleEeaatProfile />
+        <ArticleEeaatProfile supervisor={post.supervisor} />
         <div className="mt-8 pt-6 border-t border-border">
           <Link href="/articles" className="text-primary font-medium hover:underline">
             ← 記事一覧へ戻る

@@ -111,6 +111,10 @@ async function main() {
     ...(meta.description ? { description: meta.description } : {}),
     ...(categoryId ? { category: categoryId } : {}),
     ...(tagIds.length ? { tags: tagIds } : {}),
+    // 監修区分（記事末尾バイラインの表示制御）。microCMS の blogs スキーマに
+    // "supervisor" フィールド（テキスト or セレクト: general/okubo/murakami/none）が
+    // 必要。未定義の場合は下の自動除外ロジックでスキップされる。
+    ...(meta.supervisor ? { supervisor: meta.supervisor } : {}),
   };
 
   console.log(`投入: kw_id=${kwId} / ${live ? "公開(live)" : "下書き(draft)"} / category=${meta.category || "-"} / tags=${(meta.tags || []).join(",") || "-"}`);
