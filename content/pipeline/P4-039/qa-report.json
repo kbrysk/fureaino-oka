@@ -1,0 +1,127 @@
+{
+  "file": "content/pipeline/P4-039/draft.html",
+  "ymyl": true,
+  "generatedAt": "2026-05-26T09:53:55.964Z",
+  "summary": {
+    "pass": 17,
+    "warn": 2,
+    "fail": 0,
+    "skip": 0
+  },
+  "results": [
+    {
+      "id": "L1",
+      "name": "遺言の具体文案",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "L2",
+      "name": "遺産分割の代行/交渉示唆",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "L3",
+      "name": "個別相続税の金額断定",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "L4",
+      "name": "節税スキーム推奨",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "L5",
+      "name": "断定的判断の多用",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "L6",
+      "name": "押し買い/煽り勧誘",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S1",
+      "name": "公的出典の引用",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S2",
+      "name": "専門家相談の明記(YMYL)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S3",
+      "name": "虚偽資格表示",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S4",
+      "name": "監修クレジットのドメイン整合",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T1",
+      "name": "文字数",
+      "status": "WARN",
+      "detail": "3851字（推奨2000〜3000の範囲外）"
+    },
+    {
+      "id": "T2",
+      "name": "構成(H2/リード)",
+      "status": "WARN",
+      "detail": "リード194字（120〜180目安）／H2:5"
+    },
+    {
+      "id": "T3",
+      "name": "トーン(断定/命令の多用)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "C1",
+      "name": "内部リンク(2〜3本)",
+      "status": "PASS",
+      "detail": "内部リンク4本"
+    },
+    {
+      "id": "C2",
+      "name": "LINE CTAの本文混入",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "C3",
+      "name": "相槌の地書き",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "C4",
+      "name": "tel/自治体電話の露出",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "C5",
+      "name": "PII保存誘導",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "M1",
+      "name": "メタ(カテゴリ/タグ)整合",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

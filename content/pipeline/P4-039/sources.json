@@ -1,0 +1,67 @@
+{
+  "kw_id": "P4-039",
+  "keyword": "高齢の親 物を捨てない",
+  "recorded_at": "2026-05-26",
+  "sources": [
+    {
+      "type": "public_official",
+      "label": "厚生労働省 地域包括支援センター",
+      "url": "https://www.mhlw.go.jp/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/",
+      "note": "地域包括支援センターの設置目的・役割。ためこみ症や認知機能低下が疑われる場合の相談先として案内。"
+    },
+    {
+      "type": "public_official",
+      "label": "厚生労働省 認知症に関する相談について",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000076236_00003.html",
+      "note": "認知症が背景にある場合の相談先案内。医療断定しない一般情報として参照。"
+    },
+    {
+      "type": "public_official",
+      "label": "国民生活センター 訪問購入トラブル（訪問買取）",
+      "url": "https://www.kokusen.go.jp/t_box/data/t_box-faq_qa2017_26.html",
+      "note": "押し買い被害の注意喚起。物を溜め込む高齢者宅を狙う業者トラブルの根拠として引用。"
+    },
+    {
+      "type": "public_official",
+      "label": "国民生活センター 高齢者の消費者被害（テーマ別特集）",
+      "url": "https://www.kokusen.go.jp/soudan_now/data/koureisha.html",
+      "note": "高齢者を対象とした消費者トラブル全般。訪問購入被害の件数・傾向の根拠として補足。"
+    },
+    {
+      "type": "public_official",
+      "label": "厚生労働省 地域包括支援センター業務マニュアル（PDF）",
+      "url": "https://www.mhlw.go.jp/stf/shingi/2r98520000026b0a-att/2r98520000026b5k.pdf",
+      "note": "センターの業務内容の詳細。参照用。記事本文では簡潔なURL（chiiki-houkatsu）を使用。"
+    },
+    {
+      "type": "reference_serp",
+      "label": "高齢者の親が片付けられない理由と解決策（一上ライフ）",
+      "url": "https://one-up-life.com/dirty-room/old-parents-cant-throw-away/",
+      "note": "SERP上位競合。table stakesの確認に使用。本文への引用はしない。"
+    },
+    {
+      "type": "reference_serp",
+      "label": "高齢者が物を捨てない理由を知って歩み寄った話し合いを（ihinseiri.world）",
+      "url": "https://ihinseiri.world/koureika/oyanoie/suterenairiyuu/",
+      "note": "SERP上位競合。理由の列挙パターンの確認に使用。本文への引用はしない。"
+    },
+    {
+      "type": "reference_serp",
+      "label": "物が多い実家がストレス（実家じまい完全攻略ブログ）",
+      "url": "https://jikka-jimai.com/jikka-mono-ooi/",
+      "note": "SERP上位競合。感情ロングテールの読者心理・構成確認に使用。本文への引用はしない。"
+    },
+    {
+      "type": "reference_serp",
+      "label": "老親が実家を片付けられないのにはワケがある（東洋経済オンライン）",
+      "url": "https://toyokeizai.net/articles/-/606859",
+      "note": "SERP参考。生前整理専門家インタビュー記事。競合上位コンテンツとして差別化点の確認に使用。"
+    },
+    {
+      "type": "reference_serp",
+      "label": "片づけられないのは「ためこみ症」という病気？（お助けうさぎ）",
+      "url": "https://otasukeusagi.jp/gomiyashiki/hoarding-disorder-cannot-tidy/",
+      "note": "ためこみ症の一般的説明を確認。本記事では断定せず地域包括への橋渡しに留める。"
+    }
+  ]
+}
