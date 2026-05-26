@@ -1,0 +1,121 @@
+{
+  "kw_id": "C10-022",
+  "keyword": "生前整理とは",
+  "retrieved_at": "2026-05-26",
+  "sources": [
+    {
+      "id": "S01",
+      "label": "内閣府 令和7年版高齢社会白書（健康・福祉）",
+      "url": "https://www8.cao.go.jp/kourei/whitepaper/w-2025/html/zenbun/s1_2_2.html",
+      "publisher": "内閣府",
+      "published_at": "2025-06",
+      "used_in": ["H2:いつから（健康寿命データ）"],
+      "data_points": [
+        "健康寿命：男性72.57歳・女性75.45歳（令和4年）",
+        "平均寿命との差：男性約8年・女性約12年"
+      ],
+      "verified": true
+    },
+    {
+      "id": "S02",
+      "label": "内閣府 令和7年版高齢社会白書（高齢化の現状と将来像）",
+      "url": "https://www8.cao.go.jp/kourei/whitepaper/w-2025/html/zenbun/s1_1_1.html",
+      "publisher": "内閣府",
+      "published_at": "2025-06",
+      "used_in": ["H2:いつから（高齢化率の背景データ）"],
+      "data_points": [
+        "高齢化率：令和6年10月時点で29.3%"
+      ],
+      "verified": true
+    },
+    {
+      "id": "S03",
+      "label": "国民生活センター「今から考えておきたい『デジタル終活』——スマホの中の"見えない契約"で遺された家族が困らないために——」",
+      "url": "https://www.kokusen.go.jp/news/data/n-20241120_1.html",
+      "publisher": "国民生活センター（独立行政法人）",
+      "published_at": "2024-11-20",
+      "used_in": ["H2:やること（デジタル棚卸し節）"],
+      "data_points": [
+        "60代のインターネット利用率78.3%",
+        "パスワード不明でサブスク解約・口座確認できないトラブルの増加"
+      ],
+      "verified": true
+    },
+    {
+      "id": "S04",
+      "label": "国民生活センター「きっかけは訪問購入？犯罪まがいの深刻なトラブルにご注意を！——大切な貴金属が持ち去られたなどの事例が寄せられています——」",
+      "url": "https://www.kokusen.go.jp/news/data/n-20240918_1.html",
+      "publisher": "国民生活センター（独立行政法人）",
+      "published_at": "2024-09-18",
+      "used_in": ["H2:メリット・デメリット（デメリット/訪問買取注意喚起）", "スロットB"],
+      "data_points": [
+        "訪問購入をきっかけとした犯罪まがいの深刻なトラブル事例（貴金属持ち去り等）",
+        "2024年消費者問題10大項目に選定",
+        "80歳以上の女性が当事者になるケースが多い"
+      ],
+      "verified": true
+    },
+    {
+      "id": "S05",
+      "label": "国民生活センター 訪問購入（各種相談の件数や傾向）",
+      "url": "https://www.kokusen.go.jp/soudan_topics/data/doorstep_purchase.html",
+      "publisher": "国民生活センター（独立行政法人）",
+      "published_at": "随時更新",
+      "used_in": ["H2:メリット・デメリット（補足参照）"],
+      "data_points": [
+        "訪問購入の相談件数推移"
+      ],
+      "verified": true
+    },
+    {
+      "id": "S06",
+      "label": "国民生活センター「生前整理 デジタル遺品リストを作りましょう」（見守り情報）",
+      "url": "https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen430.html",
+      "publisher": "国民生活センター（独立行政法人）",
+      "published_at": "不明（見守り情報シリーズ）",
+      "used_in": ["H2:やること（デジタル棚卸し節）（補足参照）"],
+      "data_points": [
+        "デジタル遺品リストの作成推奨"
+      ],
+      "verified": true
+    }
+  ],
+  "serp_reference_urls": [
+    {
+      "label": "バイセル「生前整理とは？7つのメリットや進め方、やるうえで大切なことを解説」",
+      "url": "https://buysell-kaitori.com/column/organization-before-life/",
+      "note": "上位記事（table stakes調査）"
+    },
+    {
+      "label": "ALSOK「生前整理とは？始める時期や今すぐできる進め方」",
+      "url": "https://www.alsok.co.jp/person/recommend/2261/",
+      "note": "上位記事（table stakes調査）"
+    },
+    {
+      "label": "チェスター税理士法人「今から始める生前整理 メリットやデメリット・進め方・業者を解説」",
+      "url": "https://chester-tax.com/encyclopedia/16162.html",
+      "note": "上位記事（table stakes調査）"
+    },
+    {
+      "label": "小さなお葬式「今からできる！生前整理の意味とやり方・進め方」",
+      "url": "https://www.osohshiki.jp/column/article/318/",
+      "note": "上位記事（table stakes調査）"
+    },
+    {
+      "label": "終活協議会「生前整理が大切な理由を業界関係者が紹介。メリット・デメリットや進め方を解説」",
+      "url": "https://shukatsu-kyougikai.com/column/1093/",
+      "note": "上位記事（table stakes調査）"
+    },
+    {
+      "label": "みんなの遺品整理「生前整理とは？進め方や費用、業者利用についてやメリットなど」",
+      "url": "https://m-ihinseiri.jp/article-1/seizenseiri/",
+      "note": "上位記事（table stakes調査）"
+    },
+    {
+      "label": "日本クレアス相続サポートセンター「生前整理とは遺品・老前整理との違いや流れ・メリット・デメリットを解説」",
+      "url": "https://creas-souzoku.com/columns/souzoku/inheritance-tax/organizing-before-death/",
+      "note": "上位記事（table stakes調査・老前整理との違い）"
+    }
+  ],
+  "notes": "公的出典はすべてWebSearch（2026-05-26）にて実在URLを確認済。架空URL・推測URLは含まない。"
+}
