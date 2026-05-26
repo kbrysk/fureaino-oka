@@ -1,0 +1,85 @@
+{
+  "kw_id": "C6-020",
+  "keyword": "デジタル遺品",
+  "generated_at": "2026-05-26",
+  "sources": [
+    {
+      "id": "src-001",
+      "type": "public_authority",
+      "publisher": "国民生活センター",
+      "title": "今から考えておきたい「デジタル終活」−スマホの中の"見えない契約"で遺された家族が困らないために−",
+      "url": "https://www.kokusen.go.jp/news/data/n-20241120_1.html",
+      "published": "2024-11-20",
+      "verified": true,
+      "note": "本記事の主要公的出典。スマホロック解除の困難・ネット銀行相続手続きの複雑さ・サブスク自動更新の問題を公的に裏付ける。H2「デジタル遺品とは」「サブスク解約」で引用予定。"
+    },
+    {
+      "id": "src-002",
+      "type": "public_authority",
+      "publisher": "国民生活センター",
+      "title": "今から考えておきたい「デジタル終活」（PDF版）",
+      "url": "https://www.kokusen.go.jp/pdf/n-20241120_1.pdf",
+      "published": "2024-11-20",
+      "verified": true,
+      "note": "src-001の詳細資料PDF。具体的な相談事例を含む。"
+    },
+    {
+      "id": "src-003",
+      "type": "public_authority",
+      "publisher": "国民生活センター",
+      "title": "生前整理 デジタル遺品リストを作りましょう（見守り情報）",
+      "url": "https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen430.html",
+      "published": "2023-12-01",
+      "verified": true,
+      "note": "デジタル遺品リストの生前整理に関する公的情報。H2「デジタル終活」での引用候補。"
+    },
+    {
+      "id": "src-004",
+      "type": "reference",
+      "publisher": "デジタルデータフォレンジック（DDF）",
+      "title": "故人のスマホロックは解除できる？自分で確認すべき方法と専門業者に頼む判断基準を解説",
+      "url": "https://digitaldata-forensics.com/column/digital_properties/23826/",
+      "published": "2025",
+      "verified": true,
+      "note": "競合上位記事。スマホロック解除業者の種類・費用・法的注意点の参考情報。本記事での直接引用はしない（民間企業サイトのため）。"
+    },
+    {
+      "id": "src-005",
+      "type": "reference",
+      "publisher": "みんなの遺品整理",
+      "title": "デジタル遺品のパスワードが解除できない！故人のスマホのロック解除や業者利用について",
+      "url": "https://m-ihinseiri.jp/article-1/ihinseiri/digital/pass/",
+      "published": "2025",
+      "verified": true,
+      "note": "競合上位記事。table stakesの構成把握のため調査。直接引用なし。"
+    },
+    {
+      "id": "src-006",
+      "type": "reference",
+      "publisher": "手続きプランナー",
+      "title": "故人のSNS追悼アカウント完全ガイド - デジタル終活の申請手順",
+      "url": "https://tetsuzuki-planner.jp/plan/sns-memorial-account",
+      "published": "2025",
+      "verified": true,
+      "note": "SNS追悼アカウントの申請手順の参考情報。競合調査用。直接引用なし。"
+    },
+    {
+      "id": "src-007",
+      "type": "reference",
+      "publisher": "出張買取サービス 買いクル",
+      "title": "デジタル遺品整理業者のサービス内容や料金は？メリット・デメリットと選び方も紹介",
+      "url": "https://kaikuru.com/column/digitallegacy-dealer",
+      "published": "2025",
+      "verified": true,
+      "note": "デジタル遺品整理業者の費用相場（2万〜15万円）の参考情報。競合調査用。直接引用なし。"
+    }
+  ],
+  "internal_links_required": [
+    "/articles/shigo-tetsuzuki-checklist",
+    "/checklist",
+    "/guidebook/jikka-jimai",
+    "/articles/master-guide",
+    "/articles/jikka-jimai-guide",
+    "/area"
+  ]
+}
