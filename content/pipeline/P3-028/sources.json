@@ -1,0 +1,96 @@
+{
+  "kw_id": "P3-028",
+  "keyword": "空き家処分",
+  "generated_at": "2026-05-27",
+  "sources": [
+    {
+      "id": "S01",
+      "label": "総務省「令和5年住宅・土地統計調査」",
+      "url": "https://www.stat.go.jp/data/jyutaku/2023/tyousake.html",
+      "used_in": "H2-1（空き家数・空き家率の最新値）",
+      "type": "public_official",
+      "verified": true
+    },
+    {
+      "id": "S02",
+      "label": "国土交通省「空き家・空き地バンク総合情報ページ」",
+      "url": "https://www.mlit.go.jp/totikensangyo/const/sosei_const_tk3_000131.html",
+      "used_in": "H2-2 H3-2-4（空き家バンクの説明）",
+      "type": "public_official",
+      "verified": true
+    },
+    {
+      "id": "S03",
+      "label": "国土交通省「空き家対策総合支援事業 支援メニュー等」",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/content/001423378.pdf",
+      "used_in": "H2-2 H3-2-2（解体補助金の根拠）",
+      "type": "public_official",
+      "verified": true
+    },
+    {
+      "id": "S04",
+      "label": "国土交通省「空家等対策の推進に関する特別措置法関連情報」",
+      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000035.html",
+      "used_in": "H2-1（特定空き家リスクへの言及）",
+      "type": "public_official",
+      "verified": true
+    },
+    {
+      "id": "S05",
+      "label": "総務省「固定資産税の概要」",
+      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/149767_08.html",
+      "used_in": "H2-2 H3-2-2（住宅用地特例・更地後の固定資産税増加）",
+      "type": "public_official",
+      "verified": true
+    },
+    {
+      "id": "S06",
+      "label": "法務省「相続土地国庫帰属制度の概要」",
+      "url": "https://www.moj.go.jp/MINJI/minji05_00457.html",
+      "used_in": "H2-2 H3-2-6（国庫帰属制度の概要）",
+      "type": "public_official",
+      "verified": true
+    },
+    {
+      "id": "S07",
+      "label": "法務省「相続土地国庫帰属制度において引き取ることができない土地の要件」",
+      "url": "https://www.moj.go.jp/MINJI/minji05_00461.html",
+      "used_in": "H2-2 H3-2-6（建物がある土地は事前解体が必要等の要件）",
+      "type": "public_official",
+      "verified": true
+    },
+    {
+      "id": "S08",
+      "label": "法務省「相続登記の義務化について」",
+      "url": "https://www.moj.go.jp/MINJI/minji05_00343.html",
+      "used_in": "H2-4（相続登記義務化2024年4月への言及）",
+      "type": "public_official",
+      "verified": true
+    },
+    {
+      "id": "S09",
+      "label": "裁判所「相続の放棄の申述」",
+      "url": "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13/index.html",
+      "used_in": "H2-5（相続放棄の手続き概要・3ヶ月・家庭裁判所）",
+      "type": "public_official",
+      "verified": true
+    },
+    {
+      "id": "S10",
+      "label": "政府広報オンライン「相続した土地を手放したいときの『相続土地国庫帰属制度』」",
+      "url": "https://www.gov-online.go.jp/article/202303/entry-10064.html",
+      "used_in": "H2-2 H3-2-6（国庫帰属制度の補足説明）",
+      "type": "public_official",
+      "verified": true
+    },
+    {
+      "id": "S11",
+      "label": "国土交通省「全国地方公共団体空き家・空き地情報サイトリンク集」",
+      "url": "https://www.mlit.go.jp/totikensangyo/const/akiyabank_link.html",
+      "used_in": "H2-2 H3-2-4（空き家バンク登録の参考リンク）",
+      "type": "public_official",
+      "verified": true
+    }
+  ],
+  "notes": "全件、WebSearch（2026-05-27実施）で存在確認済み。自治体個別ページ（.lg.jp）は/areaページへ委譲するため個別掲載なし。民間メディアURLはbrief.mdに記載なし（公的出典のみ採用）。"
+}

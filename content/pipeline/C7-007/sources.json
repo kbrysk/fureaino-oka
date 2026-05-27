@@ -1,0 +1,64 @@
+{
+  "kw_id": "C7-007",
+  "keyword": "骨董品買取",
+  "retrieved_at": "2026-05-27",
+  "sources": [
+    {
+      "id": "S01",
+      "url": "https://www.kokusen.go.jp/news/data/n-20230927_1.html",
+      "title": "不用なお皿の買い取りのはずが、大切な貴金属も強引に買い取られた！－訪問購入のトラブルが増えています－",
+      "publisher": "国民生活センター",
+      "published": "2023-09-27",
+      "use_in": ["H2:業者選びと訪問購入トラブル", "まとめ"],
+      "note": "訪問購入相談件数の増加・60歳以上が約8割・貴金属・骨董品トラブル事例。確認済み実在URL。"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.kokusen.go.jp/t_box/data/t_box-faq_qa2017_26.html",
+      "title": "訪問購入（訪問買い取り）のトラブルを防ぐには",
+      "publisher": "国民生活センター",
+      "published": "2017年（逐次更新）",
+      "use_in": ["H2:業者選びと訪問購入トラブル"],
+      "note": "消費者トラブル解説集。クーリングオフ・188ホットライン・業者の義務を解説。確認済み実在URL。"
+    },
+    {
+      "id": "S03",
+      "url": "https://www.no-trouble.caa.go.jp/what/doortodoorpurchases/",
+      "title": "訪問購入 - 特定商取引法ガイド",
+      "publisher": "消費者庁",
+      "published": "逐次更新",
+      "use_in": ["H2:業者選びと訪問購入トラブル"],
+      "note": "訪問購入の規制根拠（特定商取引法2013年改正）・クーリングオフ8日間の法的根拠。確認済み実在URL。"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.kokusen.go.jp/soudan_topics/data/doorstep_purchase.html",
+      "title": "訪問購入（各種相談の件数や傾向）",
+      "publisher": "国民生活センター",
+      "published": "逐次更新",
+      "use_in": ["H2:業者選びと訪問購入トラブル（補足統計）"],
+      "note": "訪問購入相談件数の年度別推移データ。本文での具体的な件数言及が必要な場合に参照。確認済み実在URL。"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.kokusen.go.jp/news/data/n-20240918_1.html",
+      "title": "きっかけは訪問購入？犯罪まがいの深刻なトラブルにご注意を！",
+      "publisher": "国民生活センター",
+      "published": "2024-09-18",
+      "use_in": ["H2:業者選びと訪問購入トラブル（補足・より深刻な事例）"],
+      "note": "2024年最新の訪問購入トラブル報告。大切な貴金属が持ち去られた事例。必要に応じてS01と合わせて引用可。確認済み実在URL。"
+    }
+  ],
+  "rejected_sources": [
+    {
+      "url": "各買取業者サイト（バイセル・福ちゃん・日晃堂等）",
+      "reason": "事業者自身の商業サイトのため公的出典として不採用。業者選びの参考情報として調査のみに使用。"
+    }
+  ],
+  "internal_links_confirmed": [
+    "/articles/jikka-jimai-guide",
+    "/checklist",
+    "/area",
+    "/articles/master-guide"
+  ]
+}
