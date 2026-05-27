@@ -1,0 +1,45 @@
+name: X 予約投稿
+
+# 1時間ごとに起動し、social/x-queue.json の approved かつ予約時刻到来済みを公式X API v2で投稿する。
+# 手動実行(workflow_dispatch)も可。投稿後はキューの status を posted に更新してコミットし直す。
+on:
+  schedule:
+    - cron: "0 * * * *" # 毎時0分（UTC）。JSTの予約時刻に対し、最大1時間以内に投稿される
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: x-auto-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 予約投稿を実行
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: node scripts/social/x-post.mjs
+
+      - name: 投稿結果(キュー)をコミット
+        run: |
+          if [[ -n "$(git status --porcelain social/x-queue.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add social/x-queue.json
+            git commit -m "chore(social): X予約投稿をpostedに更新 [skip ci]"
+            git push
+          else
+            echo "更新なし（投稿対象がなかった or 失敗）"
+          fi

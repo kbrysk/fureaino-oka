@@ -1,0 +1,221 @@
+{
+  "_readme": "X(旧Twitter)自動投稿キュー。status遷移: draft → approved → posted（または skipped）。承認は status を approved に書き換えてコミットするだけ。投稿は scripts/social/x-post.mjs（GitHub Actionsが1時間毎に実行）が scheduledAt 到来 & status=approved のものを公式X API v2で投稿する。ハッシュタグは付けない。LINE/友だち追加/URL羅列の勧誘は本文に入れない（CLAUDE.md準拠）。",
+  "posts": [
+    {
+      "id": "2026-05-28-2000-senryu-01",
+      "status": "approved",
+      "scheduledAt": "2026-05-28T20:00:00+09:00",
+      "text": "【生前整理川柳】\n減らすほど　思い出だけが　増えていく\n\n手は軽くなっていくのに、胸はだんだん、いっぱいになる。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-05-29-0745-aruaru-01",
+      "status": "approved",
+      "scheduledAt": "2026-05-29T07:45:00+09:00",
+      "text": "【生前整理あるある】\n押し入れの奥から、未開封の引き出物。\n「いつか使う」と仕舞われたまま、箱だけが日に焼けていた。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-05-30-1230-iyashi-01",
+      "status": "approved",
+      "scheduledAt": "2026-05-30T12:30:00+09:00",
+      "text": "親の家を片づけるのは、思い出をもう一度、最初から最後まで読み返すような時間。\n手が止まるのは、きっとサボっているからじゃない。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-05-31-1930-senryu-02",
+      "status": "approved",
+      "scheduledAt": "2026-05-31T19:30:00+09:00",
+      "text": "【生前整理川柳】\n「片づけろ」　言ってた父が　散らかして\n\n怒鳴っていた頃の父に、もう一度だけ、会いたくなる。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-01-2100-aruaru-02",
+      "status": "approved",
+      "scheduledAt": "2026-06-01T21:00:00+09:00",
+      "text": "【生前整理あるある】\n実家の冷蔵庫。賞味期限は、私が嫁ぐ前の日付だった。\n「まだいける」と笑う、母の横顔。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-02-0815-iyashi-02",
+      "status": "approved",
+      "scheduledAt": "2026-06-02T08:15:00+09:00",
+      "text": "「捨てて」と言われても、捨てられない。\nそれは親不孝じゃなくて、それだけ大切にされてきた、という証拠なんだと思う。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-03-1245-aruaru-03",
+      "status": "approved",
+      "scheduledAt": "2026-06-03T12:45:00+09:00",
+      "text": "【生前整理あるある】\n紙袋の中に、紙袋。その中にも、また紙袋。\n「上等なやつ」は、なぜか一生、使われない。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-04-2000-senryu-03",
+      "status": "approved",
+      "scheduledAt": "2026-06-04T20:00:00+09:00",
+      "text": "【生前整理川柳】\n父の椅子　だけが知ってる　晩酌を\n\n処分する前に、もう一度だけ、座ってみた。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-05-0745-iyashi-03",
+      "status": "approved",
+      "scheduledAt": "2026-06-05T07:45:00+09:00",
+      "text": "モノを一つ手放すたび、なぜか親の声を一つ、思い出す。\n生前整理は、別れの練習なんかじゃない。思い出の、確認作業だ。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-06-1230-senryu-04",
+      "status": "approved",
+      "scheduledAt": "2026-06-06T12:30:00+09:00",
+      "text": "【生前整理川柳】\n「もったいない」　母が遺した　もったいない\n\n捨てられなかった物が、いま、私の前に積まれている。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-07-1930-aruaru-04",
+      "status": "approved",
+      "scheduledAt": "2026-06-07T19:30:00+09:00",
+      "text": "【生前整理あるある】\n取扱説明書だけが、几帳面に全部そろっている。\nもう家にない家電のぶんまで、きちんと、ファイルに。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-08-2100-iyashi-04",
+      "status": "approved",
+      "scheduledAt": "2026-06-08T21:00:00+09:00",
+      "text": "元気なうちに、と人は言う。\nでも本当は、元気なうちにしか、笑いながら片づけられないのかもしれない。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-09-0815-aruaru-05",
+      "status": "approved",
+      "scheduledAt": "2026-06-09T08:15:00+09:00",
+      "text": "【生前整理あるある】\n古い年賀状の束。\n住所も、その人の暮らしも、もう変わってしまったのに、ゴムで律儀に留めてある。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-10-1245-senryu-05",
+      "status": "approved",
+      "scheduledAt": "2026-06-10T12:45:00+09:00",
+      "text": "【生前整理川柳】\n形見分け　取り合うほどの　物もなく\n\nそれでも、どれ一つ、捨てられなかった。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-11-2000-iyashi-05",
+      "status": "approved",
+      "scheduledAt": "2026-06-11T20:00:00+09:00",
+      "text": "通帳のありか、保険のこと。\n聞きづらいけれど、聞けるのは、まだ二人で笑える今のうち。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-12-0745-senryu-06",
+      "status": "approved",
+      "scheduledAt": "2026-06-12T07:45:00+09:00",
+      "text": "【生前整理川柳】\n実家には　出た日のままの　私の部屋\n\n時間だけが、ここで、止まっていた。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-13-1230-aruaru-06",
+      "status": "approved",
+      "scheduledAt": "2026-06-13T12:30:00+09:00",
+      "text": "【生前整理あるある】\nタンスの奥の礼服。防虫剤の匂いの中で、一度も袖を通されないまま、出番を待っている。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-14-1930-iyashi-06",
+      "status": "approved",
+      "scheduledAt": "2026-06-14T19:30:00+09:00",
+      "text": "「もったいない」が口癖だった人ほど、たくさんの「もったいない」を遺していく。\nその一つひとつに、つましく生きた人生がある。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-15-2100-aruaru-07",
+      "status": "approved",
+      "scheduledAt": "2026-06-15T21:00:00+09:00",
+      "text": "【生前整理あるある】\n「これ捨てていい?」「いる」。\n中身も見ずに、母は即答した。きっと、見たら、捨てられなくなるから。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-16-0815-senryu-07",
+      "status": "approved",
+      "scheduledAt": "2026-06-16T08:15:00+09:00",
+      "text": "【生前整理川柳】\nゴミ袋　母の一生　詰めきれず\n\n燃えるゴミに、入れていいはずが、なかった。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-17-1245-iyashi-07",
+      "status": "approved",
+      "scheduledAt": "2026-06-17T12:45:00+09:00",
+      "text": "実家の片づけに、正解はない。\n早すぎる日も、遅すぎる日もある。ただ、始めた人だけが、少しだけ、楽になる。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-18-2000-senryu-08",
+      "status": "approved",
+      "scheduledAt": "2026-06-18T20:00:00+09:00",
+      "text": "【生前整理川柳】\nアルバムを　開いて今日も　進まない\n\n片づけのはずが、気づけば、思い出の中へ。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-19-0745-aruaru-08",
+      "status": "approved",
+      "scheduledAt": "2026-06-19T07:45:00+09:00",
+      "text": "【生前整理あるある】\n粗品のタオル。一生ぶんの、タオル。\n新品のまま、また引き出しの奥へ、そっと戻されていく。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-20-1230-iyashi-08",
+      "status": "approved",
+      "scheduledAt": "2026-06-20T12:30:00+09:00",
+      "text": "いちばん捨てにくいのは、高価な物じゃない。\n値段のつかない、思い出のほうだ。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-21-1930-aruaru-09",
+      "status": "approved",
+      "scheduledAt": "2026-06-21T19:30:00+09:00",
+      "text": "【生前整理あるある】\n仏壇のまわりだけ、誰も手をつけられない。\n埃さえ、そっとしておきたくなる場所がある。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-22-2100-senryu-09",
+      "status": "approved",
+      "scheduledAt": "2026-06-22T21:00:00+09:00",
+      "text": "【生前整理川柳】\n生きてると　物がこんなに　残るのか\n\n一つひとつに、覚えのある重さが、ある。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-23-0815-iyashi-09",
+      "status": "approved",
+      "scheduledAt": "2026-06-23T08:15:00+09:00",
+      "text": "片づけ終えた部屋に、夕日が差していた。\n何もなくなった畳の上で、ふと、ここで過ごした日々を思った。",
+      "postedAt": null,
+      "tweetId": null
+    }
+  ]
+}
