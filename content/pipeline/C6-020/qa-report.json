@@ -1,10 +1,10 @@
 {
   "file": "content/pipeline/C6-020/draft.html",
   "ymyl": false,
-  "generatedAt": "2026-05-26T06:29:25.809Z",
+  "generatedAt": "2026-05-27T04:11:33.682Z",
   "summary": {
-    "pass": 18,
-    "warn": 0,
+    "pass": 17,
+    "warn": 1,
     "fail": 0,
     "skip": 1
   },
@@ -72,8 +72,8 @@
     {
       "id": "T1",
       "name": "文字数",
-      "status": "PASS",
-      "detail": "2994字"
+      "status": "WARN",
+      "detail": "3037字（推奨2000〜3000の範囲外）"
     },
     {
       "id": "T2",
@@ -91,7 +91,7 @@
       "id": "C1",
       "name": "内部リンク(2〜3本)",
       "status": "PASS",
-      "detail": "内部リンク6本"
+      "detail": "内部リンク7本"
     },
     {
       "id": "C2",

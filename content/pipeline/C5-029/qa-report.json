@@ -1,10 +1,10 @@
 {
   "file": "content/pipeline/C5-029/draft.html",
   "ymyl": true,
-  "generatedAt": "2026-05-26T10:26:08.586Z",
+  "generatedAt": "2026-05-27T04:09:21.008Z",
   "summary": {
-    "pass": 18,
-    "warn": 1,
+    "pass": 17,
+    "warn": 2,
     "fail": 0,
     "skip": 0
   },
@@ -73,13 +73,13 @@
       "id": "T1",
       "name": "文字数",
       "status": "WARN",
-      "detail": "3877字（推奨2000〜3000の範囲外）"
+      "detail": "3995字（推奨2000〜3000の範囲外）"
     },
     {
       "id": "T2",
       "name": "構成(H2/リード)",
-      "status": "PASS",
-      "detail": "H2:5 / リード:156字"
+      "status": "WARN",
+      "detail": "リード204字（120〜180目安）／H2:5"
     },
     {
       "id": "T3",
@@ -91,7 +91,7 @@
       "id": "C1",
       "name": "内部リンク(2〜3本)",
       "status": "PASS",
-      "detail": "内部リンク7本"
+      "detail": "内部リンク10本"
     },
     {
       "id": "C2",

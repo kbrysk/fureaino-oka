@@ -1,7 +1,7 @@
 {
   "file": "content/pipeline/P1-004/draft.html",
   "ymyl": true,
-  "generatedAt": "2026-05-25T21:38:25.531Z",
+  "generatedAt": "2026-05-27T04:14:03.808Z",
   "summary": {
     "pass": 19,
     "warn": 0,
@@ -73,7 +73,7 @@
       "id": "T1",
       "name": "文字数",
       "status": "PASS",
-      "detail": "7034字（ピラー）"
+      "detail": "7332字（ピラー）"
     },
     {
       "id": "T2",
@@ -91,7 +91,7 @@
       "id": "C1",
       "name": "内部リンク(2〜3本)",
       "status": "PASS",
-      "detail": "内部リンク8本"
+      "detail": "内部リンク13本"
     },
     {
       "id": "C2",

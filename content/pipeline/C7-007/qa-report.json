@@ -1,7 +1,7 @@
 {
   "file": "content/pipeline/C7-007/draft.html",
   "ymyl": false,
-  "generatedAt": "2026-05-27T00:03:22.936Z",
+  "generatedAt": "2026-05-27T04:14:02.513Z",
   "summary": {
     "pass": 18,
     "warn": 0,
@@ -73,7 +73,7 @@
       "id": "T1",
       "name": "文字数",
       "status": "PASS",
-      "detail": "2856字"
+      "detail": "2964字"
     },
     {
       "id": "T2",
@@ -91,7 +91,7 @@
       "id": "C1",
       "name": "内部リンク(2〜3本)",
       "status": "PASS",
-      "detail": "内部リンク5本"
+      "detail": "内部リンク7本"
     },
     {
       "id": "C2",
