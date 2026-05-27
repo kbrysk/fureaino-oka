@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
+      // microCMS 画像配信（記事アイキャッチ＝thumbnail / OGP）
+      { protocol: "https", hostname: "images.microcms-assets.io", pathname: "/**" },
       { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
       { protocol: "https", hostname: "picsum.photos", pathname: "/**" },
       { protocol: "https", hostname: "www11.a8.net", pathname: "/**" },
