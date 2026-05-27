@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { getBlogList, getCategories, getTags } from "../lib/microcms";
-import type { MicroCmsBlogPost } from "../lib/microcms-types";
 import { pageTitle } from "../lib/site-brand";
 import { getCanonicalUrl } from "../lib/site-url";
 import ArticleCardMicroCms from "../components/articles/ArticleCardMicroCms";
-import AdSlotInfeed from "../components/articles/AdSlotInfeed";
 
 export const metadata = {
   title: pageTitle("記事一覧"),
@@ -16,26 +14,6 @@ export const metadata = {
 // ISR: microCMSの記事公開を10分ごとに自動反映（再デプロイ不要）
 export const revalidate = 600;
 
-const INFEED_AD_POSITIONS = [3, 7];
-
-type GridItem =
-  | { type: "card"; post: MicroCmsBlogPost }
-  | { type: "ad"; key: string };
-
-function buildGridItems(contents: MicroCmsBlogPost[]): GridItem[] {
-  const items: GridItem[] = [];
-  let cardIndex = 0;
-  for (let pos = 1; pos <= contents.length + INFEED_AD_POSITIONS.length; pos++) {
-    if (INFEED_AD_POSITIONS.includes(pos)) {
-      items.push({ type: "ad", key: `ad-${pos}` });
-    } else if (cardIndex < contents.length) {
-      items.push({ type: "card", post: contents[cardIndex] });
-      cardIndex++;
-    }
-  }
-  return items;
-}
-
 export default async function ArticlesPage() {
   const [listRes, categories, tags] = await Promise.all([
     getBlogList(100, 0),
@@ -44,7 +22,6 @@ export default async function ArticlesPage() {
   ]);
   const contents = listRes.contents ?? [];
   console.log("取得された記事数:", contents.length, "totalCount:", listRes.totalCount);
-  const gridItems = buildGridItems(contents);
 
   return (
     <div className="space-y-8">
@@ -97,15 +74,9 @@ export default async function ArticlesPage() {
       )}
 
       <ul className="grid gap-6 md:grid-cols-2">
-        {gridItems.map((item) =>
-          item.type === "ad" ? (
-            <li key={item.key} className="md:col-span-2">
-              <AdSlotInfeed />
-            </li>
-          ) : (
-            <ArticleCardMicroCms key={item.post.id} post={item.post} />
-          )
-        )}
+        {contents.map((post) => (
+          <ArticleCardMicroCms key={post.id} post={post} />
+        ))}
       </ul>
       {contents.length === 0 && (
         <p className="text-foreground/50">記事は準備中です。</p>
