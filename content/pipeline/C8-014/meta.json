@@ -3,7 +3,10 @@
   "title": "ゴミ屋敷の片付け方｜自分でできる手順・業者の費用・再発を防ぐコツ",
   "description": "ゴミ屋敷を片付けたいけれど、どこから手をつければいいか分からない方へ。自分で片付ける手順と判断基準、業者に頼む場合の費用の目安と選び方、再発を防ぐコツを、ご本人やご家族の気持ちに配慮しながら解説します。",
   "category": "cleanup",
-  "tags": ["gomi-yashiki"],
+  "tags": [
+    "gomi-yashiki",
+    "parent-stubborn"
+  ],
   "supervisor": "general",
   "journey_phase": "P2",
   "phase": "F2",

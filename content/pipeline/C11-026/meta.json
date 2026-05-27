@@ -2,9 +2,13 @@
   "slug": "shigo-tetsuzuki-checklist",
   "title": "親が亡くなったらやること｜死後の手続き完全チェックリスト（期限・書類・順番）",
   "description": "親が亡くなった後に必要な手続きを期限順に整理したチェックリストです。死亡届から銀行口座凍結解除・年金停止・相続登記・相続税申告まで、いつ・どこで・何を行うかを一覧で確認できます。印刷・保存用の無料PDFもご用意しています。",
-  "category": "guide",
+  "category": "inheritance",
   "pillar": true,
-  "tags": ["inheritance-deadline", "digital-worry", "no-time"],
+  "tags": [
+    "inheritance-deadline",
+    "digital-worry",
+    "no-time"
+  ],
   "supervisor": "none",
   "journey_phase": "P3",
   "phase": "F3",

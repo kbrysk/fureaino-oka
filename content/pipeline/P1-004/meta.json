@@ -4,7 +4,11 @@
   "description": "実家じまいは『費用』より『親とどう進めるか』でつまずきます。経験者の半数以上が後悔。生前整理アドバイザー監修で、親への切り出し方・きょうだいで揉めないコツ・手順・費用・補助金まで、後悔しない進め方を解説します。",
   "category": "guide",
   "pillar": true,
-  "tags": ["no-time", "parent-stubborn", "family-conflict"],
+  "tags": [
+    "long-distance",
+    "family-conflict",
+    "parent-stubborn"
+  ],
   "supervisor": "general",
   "journey_phase": "P1",
   "phase": "F1",

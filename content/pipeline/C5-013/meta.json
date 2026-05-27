@@ -3,7 +3,9 @@
   "title": "終活とは？何をする・いつから始める・生前整理との違いを解説",
   "description": "終活とは何かを知りたい方へ。終活の意味と目的、具体的に何をするのか（身辺整理・医療や介護の希望・エンディングノートなど）、いつから始めるか、生前整理との違いまで、前向きに取り組むためのヒントとあわせて解説します。",
   "category": "guide",
-  "tags": [],
+  "tags": [
+    "inheritance-deadline"
+  ],
   "supervisor": "general",
   "journey_phase": "P1",
   "phase": "F1",

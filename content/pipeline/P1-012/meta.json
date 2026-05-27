@@ -2,8 +2,12 @@
   "slug": "jikka-katazuke",
   "title": "実家の片付けは何から？進まない・疲れたを乗り越える手順とコツ",
   "description": "実家の片付けにうんざり・疲れていませんか。何から始めるかの手順、場所別の進め方、不用品の処分方法、進まないときの対処、業者に頼む判断まで、親の気持ちに配慮しながら進めるコツをやさしく解説します。",
-  "category": "guide",
-  "tags": ["no-time"],
+  "category": "cleanup",
+  "tags": [
+    "long-distance",
+    "no-time",
+    "parent-stubborn"
+  ],
   "supervisor": "general",
   "journey_phase": "P1",
   "phase": "F1",
