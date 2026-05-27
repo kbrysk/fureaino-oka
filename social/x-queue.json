@@ -2,6 +2,14 @@
   "_readme": "X(旧Twitter)自動投稿キュー。status遷移: draft → approved → posted（または skipped）。承認は status を approved に書き換えてコミットするだけ。投稿は scripts/social/x-post.mjs（GitHub Actionsが1時間毎に実行）が scheduledAt 到来 & status=approved のものを公式X API v2で投稿する。ハッシュタグは付けない。LINE/友だち追加/URL羅列の勧誘は本文に入れない（CLAUDE.md準拠）。",
   "posts": [
     {
+      "id": "test-2026-05-27-setup",
+      "status": "approved",
+      "scheduledAt": "2026-05-26T09:00:00+09:00",
+      "text": "アカウント運用を本格的に始めました。\nこれから「生前整理あるある」と「生前整理川柳」を、毎日すこしずつお届けします。\nどうぞよろしくお願いいたします。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
       "id": "2026-05-28-2000-senryu-01",
       "status": "approved",
       "scheduledAt": "2026-05-28T20:00:00+09:00",
