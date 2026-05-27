@@ -2,14 +2,6 @@
   "_readme": "X(旧Twitter)自動投稿キュー。status遷移: draft → approved → posted（または skipped）。承認は status を approved に書き換えてコミットするだけ。投稿は scripts/social/x-post.mjs（GitHub Actionsが1時間毎に実行）が scheduledAt 到来 & status=approved のものを公式X API v2で投稿する。ハッシュタグは付けない。LINE/友だち追加/URL羅列の勧誘は本文に入れない（CLAUDE.md準拠）。",
   "posts": [
     {
-      "id": "test-2026-05-27-setup",
-      "status": "posted",
-      "scheduledAt": "2026-05-26T09:00:00+09:00",
-      "text": "アカウント運用を本格的に始めました。\nこれから「生前整理あるある」と「生前整理川柳」を、毎日すこしずつお届けします。\nどうぞよろしくお願いいたします。",
-      "postedAt": "2026-05-27T07:18:58.303Z",
-      "tweetId": "2059534812294021232"
-    },
-    {
       "id": "2026-05-28-2000-senryu-01",
       "status": "approved",
       "scheduledAt": "2026-05-28T20:00:00+09:00",
@@ -222,6 +214,558 @@
       "status": "approved",
       "scheduledAt": "2026-06-23T08:15:00+09:00",
       "text": "片づけ終えた部屋に、夕日が差していた。\n何もなくなった畳の上で、ふと、ここで過ごした日々を思った。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-24-1245-senryu-10",
+      "status": "approved",
+      "scheduledAt": "2026-06-24T12:45:00+09:00",
+      "text": "【生前整理川柳】\n片づけや　梅雨の合間に　また明日\n\n晴れたら、と思っているうちに、夏が来る。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-25-2000-aruaru-10",
+      "status": "approved",
+      "scheduledAt": "2026-06-25T20:00:00+09:00",
+      "text": "【生前整理あるある】\n押し入れを開けたら、カチカチに固まった除湿剤がずらり。いつ替えたのかも、もう誰も覚えていない。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-26-0745-iyashi-10",
+      "status": "approved",
+      "scheduledAt": "2026-06-26T07:45:00+09:00",
+      "text": "片づけは、未来の家族への手紙のようなもの。「ここに大事なものがあるよ」と、そっと残しておく作業。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-27-1230-senryu-11",
+      "status": "approved",
+      "scheduledAt": "2026-06-27T12:30:00+09:00",
+      "text": "【生前整理川柳】\n衣替え　もう着ぬ服に　また「いつか」\n\n「痩せたら着る」の春は、なかなか巡ってこない。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-28-1930-aruaru-11",
+      "status": "approved",
+      "scheduledAt": "2026-06-28T19:30:00+09:00",
+      "text": "【生前整理あるある】\n物置から扇風機が三台。どれも「まだ回る」。でも今年使うのは、結局いつもの一台だけ。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-29-2100-iyashi-11",
+      "status": "approved",
+      "scheduledAt": "2026-06-29T21:00:00+09:00",
+      "text": "親の家には、その家の匂いがある。畳と、線香と、少しの古い本の匂い。いつか無くなると思うと、急に愛おしくなる。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-06-30-0815-senryu-12",
+      "status": "approved",
+      "scheduledAt": "2026-06-30T08:15:00+09:00",
+      "text": "【生前整理川柳】\n気がつけば　今年も半分　手つかずで\n\nカレンダーをめくる手だけは、ちゃんと進む。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-01-1245-aruaru-12",
+      "status": "approved",
+      "scheduledAt": "2026-07-01T12:45:00+09:00",
+      "text": "【生前整理あるある】\n古いレコードの山。プレーヤーはとっくに壊れているのに、ジャケットだけは大事にとってある。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-02-2000-iyashi-12",
+      "status": "approved",
+      "scheduledAt": "2026-07-02T20:00:00+09:00",
+      "text": "捨てられないのは、モノに「あの頃」が住んでいるから。手放すのは、その時間ごと見送ること。だから、ゆっくりでいい。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-03-0745-senryu-13",
+      "status": "approved",
+      "scheduledAt": "2026-07-03T07:45:00+09:00",
+      "text": "【生前整理川柳】\n母のミシン　もう踏む人は　いないけど\n\n体操着に名前を縫ってくれた、夜なべの音を思い出す。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-04-1230-aruaru-13",
+      "status": "approved",
+      "scheduledAt": "2026-07-04T12:30:00+09:00",
+      "text": "【生前整理あるある】\n天袋から、誰の何の表彰状か分からないトロフィー。栄光は、埃をかぶっても栄光のまま。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-05-1930-iyashi-13",
+      "status": "approved",
+      "scheduledAt": "2026-07-05T19:30:00+09:00",
+      "text": "「片づけ」と聞くと身構えるけれど、本当は「これからどう暮らすか」を考える時間。減らすのは、これからの身軽さのため。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-06-2100-senryu-14",
+      "status": "approved",
+      "scheduledAt": "2026-07-06T21:00:00+09:00",
+      "text": "【生前整理川柳】\n短冊に　「健康」とだけ　書く齢\n\n願いごとが、だんだんシンプルになっていく。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-07-0815-aruaru-14",
+      "status": "approved",
+      "scheduledAt": "2026-07-07T08:15:00+09:00",
+      "text": "【生前整理あるある】\n古い箱から、子供の頃の短冊。「およめさんになりたい」。願いは叶ったり叶わなかったり。それでも捨てられない。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-08-1245-iyashi-14",
+      "status": "approved",
+      "scheduledAt": "2026-07-08T12:45:00+09:00",
+      "text": "笹の願いは、たいてい自分のことじゃない。「家族が健やかに」。親はいつも、そう書いていた気がする。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-09-2000-senryu-15",
+      "status": "approved",
+      "scheduledAt": "2026-07-09T20:00:00+09:00",
+      "text": "【生前整理川柳】\n父の竿　魚より子を　待っていた\n\n「今度一緒に」が果たせないまま、になる前に。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-10-0745-aruaru-15",
+      "status": "approved",
+      "scheduledAt": "2026-07-10T07:45:00+09:00",
+      "text": "【生前整理あるある】\n引き出しを開けるたび、老眼鏡が出てくる。家じゅうに、たぶん七つくらい。探すたびに、また増える。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-11-1230-iyashi-15",
+      "status": "approved",
+      "scheduledAt": "2026-07-11T12:30:00+09:00",
+      "text": "モノを減らすと、家の中に風が通る。その風はきっと、これからの暮らしの分だけ空けた、スペース。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-12-1930-senryu-16",
+      "status": "approved",
+      "scheduledAt": "2026-07-12T19:30:00+09:00",
+      "text": "【生前整理川柳】\n黒電話　もう鳴らないが　捨てられず\n\nあの頃は、この前で正座して話したものだ。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-13-2100-aruaru-16",
+      "status": "approved",
+      "scheduledAt": "2026-07-13T21:00:00+09:00",
+      "text": "【生前整理あるある】\n運動会のビデオテープ。再生する機械はもう家にない。中身が見られないのに、いちばん捨てられない。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-14-0815-iyashi-16",
+      "status": "approved",
+      "scheduledAt": "2026-07-14T08:15:00+09:00",
+      "text": "デジタルの写真も、立派な「遺すもの」。スマホの中で眠ったままより、たまに開いて、家族で笑う時間に。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-15-1245-senryu-17",
+      "status": "approved",
+      "scheduledAt": "2026-07-15T12:45:00+09:00",
+      "text": "【生前整理川柳】\n桐箱に　一度も出ない　いい着物\n\n「もったいない」が、いちばん袖を通させなかった。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-16-2000-aruaru-17",
+      "status": "approved",
+      "scheduledAt": "2026-07-16T20:00:00+09:00",
+      "text": "【生前整理あるある】\n物干しになっている、ぶら下がり健康器。買った日の「これで健康」の決意は、洗濯物の重みの下に。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-17-0745-iyashi-17",
+      "status": "approved",
+      "scheduledAt": "2026-07-17T07:45:00+09:00",
+      "text": "片づけに、正しい順番はない。けれど写真と手紙だけは、最後に。手が止まって、前に進めなくなるから。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-18-1230-senryu-18",
+      "status": "approved",
+      "scheduledAt": "2026-07-18T12:30:00+09:00",
+      "text": "【生前整理川柳】\nこの鍵は　どこの鍵だか　誰も知らず\n\n開けるべき扉は、もうどこにもないのかもしれない。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-19-1930-aruaru-18",
+      "status": "approved",
+      "scheduledAt": "2026-07-19T19:30:00+09:00",
+      "text": "【生前整理あるある】\n戸棚の奥に、お揃いの来客用の湯呑みが十個。最後にお客さんが来たのは、いつだったろう。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-20-2100-iyashi-18",
+      "status": "approved",
+      "scheduledAt": "2026-07-20T21:00:00+09:00",
+      "text": "実家を片づけていると、知らない親の顔に出会う。若い頃の写真、誰かへの手紙。親にも、親である前の人生があった。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-21-0815-senryu-19",
+      "status": "approved",
+      "scheduledAt": "2026-07-21T08:15:00+09:00",
+      "text": "【生前整理川柳】\n風鈴の　音だけ昔の　ままだった\n\n縁側の景色は変わっても、夏の音は変わらない。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-22-1245-aruaru-19",
+      "status": "approved",
+      "scheduledAt": "2026-07-22T12:45:00+09:00",
+      "text": "【生前整理あるある】\nお中元のそうめんが、棚に何箱も。「いいやつだから」ととっておいて、安いのから先に食べる。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-23-2000-iyashi-19",
+      "status": "approved",
+      "scheduledAt": "2026-07-23T20:00:00+09:00",
+      "text": "急がなくていい。一日ひとつ、手に取って「ありがとう」と言って手放す。それだけで、家も心も、少しずつ片づく。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-24-0745-senryu-20",
+      "status": "approved",
+      "scheduledAt": "2026-07-24T07:45:00+09:00",
+      "text": "【生前整理川柳】\n写真には　母の字で日付　昭和とある\n\n裏の鉛筆書きが、いちばんの宝物だったりする。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-25-1230-aruaru-20",
+      "status": "approved",
+      "scheduledAt": "2026-07-25T12:30:00+09:00",
+      "text": "【生前整理あるある】\n物置から、蚊取り線香の豚が三匹。誰も使っていないのに、夏になると、なぜか存在感を増す。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-26-1930-iyashi-20",
+      "status": "approved",
+      "scheduledAt": "2026-07-26T19:30:00+09:00",
+      "text": "親の「いつかやる」を、責めないであげてください。元気なうちは、終わりの準備なんて、誰だって後回しにしたいものだから。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-27-2100-senryu-21",
+      "status": "approved",
+      "scheduledAt": "2026-07-27T21:00:00+09:00",
+      "text": "【生前整理川柳】\n画用紙の　へたな似顔絵　額に入れ\n\n上手な絵より、その下手が、ずっと飾られている。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-28-0815-aruaru-21",
+      "status": "approved",
+      "scheduledAt": "2026-07-28T08:15:00+09:00",
+      "text": "【生前整理あるある】\n本棚にずらりと百科事典。一度も開かれた形跡がないのに、家の「教養」として鎮座している。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-29-1245-iyashi-21",
+      "status": "approved",
+      "scheduledAt": "2026-07-29T12:45:00+09:00",
+      "text": "モノには、買った日の気持ちが残っている。だから手放すのは、少し痛い。でもその痛みは、大切にした証拠でもある。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-30-2000-senryu-22",
+      "status": "approved",
+      "scheduledAt": "2026-07-30T20:00:00+09:00",
+      "text": "【生前整理川柳】\n止まったまま　父の時計が　時を指す\n\n動かそうか、このままにしようか、まだ決められない。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-07-31-0745-aruaru-22",
+      "status": "approved",
+      "scheduledAt": "2026-07-31T07:45:00+09:00",
+      "text": "【生前整理あるある】\n壁のカレンダーが、何ヶ月も前のまま。めくる人がいなくなった部屋は、そこで時間が止まっている。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-01-1230-iyashi-22",
+      "status": "approved",
+      "scheduledAt": "2026-08-01T12:30:00+09:00",
+      "text": "夏は、なぜか実家を思い出す季節。涼しい部屋でふと、「あの家の片づけ、そろそろかな」と頭をよぎる。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-02-1930-senryu-23",
+      "status": "approved",
+      "scheduledAt": "2026-08-02T19:30:00+09:00",
+      "text": "【生前整理川柳】\n盆休み　帰る実家の　多すぎる物\n\n顔を見るのが先か、片づけが先か。まずは、顔を見に。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-03-2100-aruaru-23",
+      "status": "approved",
+      "scheduledAt": "2026-08-03T21:00:00+09:00",
+      "text": "【生前整理あるある】\n仏壇の引き出しを開けたら、歴代の家族写真と、古いお守りと、なぜか印鑑。家の歴史が、ぜんぶ詰まっている。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-04-0815-iyashi-23",
+      "status": "approved",
+      "scheduledAt": "2026-08-04T08:15:00+09:00",
+      "text": "帰省は、実家の「今」を知るいい機会。親の体の動き、冷蔵庫の中、家の段差。片づけの前に、まず一緒に過ごす時間を。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-05-1245-senryu-24",
+      "status": "approved",
+      "scheduledAt": "2026-08-05T12:45:00+09:00",
+      "text": "【生前整理川柳】\n久しぶり　親の背中の　小さくて\n\n会わない時間の分だけ、確かに歳をとっていた。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-06-2000-aruaru-24",
+      "status": "approved",
+      "scheduledAt": "2026-08-06T20:00:00+09:00",
+      "text": "【生前整理あるある】\n引き出しから、数珠が三つ、お守りが十いくつ。神様も仏様も、まとめて大切にしまわれている。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-07-0745-iyashi-24",
+      "status": "approved",
+      "scheduledAt": "2026-08-07T07:45:00+09:00",
+      "text": "片づけながら、親と昔話をする。「これ覚えてる?」その一言から、聞いたことのない家族の物語が、ぽろぽろこぼれてくる。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-08-1230-senryu-25",
+      "status": "approved",
+      "scheduledAt": "2026-08-08T12:30:00+09:00",
+      "text": "【生前整理川柳】\n茶碗二つ　いつしか一つ　洗う朝\n\n食卓の景色は、こんなにも静かに変わっていく。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-09-1930-aruaru-25",
+      "status": "approved",
+      "scheduledAt": "2026-08-09T19:30:00+09:00",
+      "text": "【生前整理あるある】\n桐の箱に、色あせた母子手帳とへその緒。何十年も前のあなたを、親はずっと大事にとっていた。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-10-2100-iyashi-25",
+      "status": "approved",
+      "scheduledAt": "2026-08-10T21:00:00+09:00",
+      "text": "「捨てる」が冷たく感じるなら、「お返しする」「次へ渡す」でもいい。役目を終えたものを、そっと送り出すだけ。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-11-0815-senryu-26",
+      "status": "approved",
+      "scheduledAt": "2026-08-11T08:15:00+09:00",
+      "text": "【生前整理川柳】\n盆提灯　灯せば父も　帰る家\n\nモノを片づけても、迎える場所だけは残しておきたい。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-12-1245-aruaru-26",
+      "status": "approved",
+      "scheduledAt": "2026-08-12T12:45:00+09:00",
+      "text": "【生前整理あるある】\nタンスの上に、行った先々の提灯と木刀とペナント。家族旅行の地図が、埃をかぶって並んでいる。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-13-2000-iyashi-26",
+      "status": "approved",
+      "scheduledAt": "2026-08-13T20:00:00+09:00",
+      "text": "お盆は、家族が集まる数少ない日。仏壇の前で手を合わせながら、いつか来る「その日」のことを、少しだけ話してみる。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-14-0745-senryu-27",
+      "status": "approved",
+      "scheduledAt": "2026-08-14T07:45:00+09:00",
+      "text": "【生前整理川柳】\n仏間にて　孫まで揃う　盆の昼\n\nにぎやかな声を、ご先祖もきっと聞いている。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-15-1230-aruaru-27",
+      "status": "approved",
+      "scheduledAt": "2026-08-15T12:30:00+09:00",
+      "text": "【生前整理あるある】\nお盆に親戚が集まると、必ず誰かが言う。「この家、どうするの?」。誰も答えないまま、スイカを切る。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-16-1930-iyashi-27",
+      "status": "approved",
+      "scheduledAt": "2026-08-16T19:30:00+09:00",
+      "text": "送り火を見送ると、夏が少し終わる。にぎやかだった家が、また二人に戻る。その静けさの中で、考えることがある。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-17-2100-senryu-28",
+      "status": "approved",
+      "scheduledAt": "2026-08-17T21:00:00+09:00",
+      "text": "【生前整理川柳】\n子が帰り　また広すぎる　家になる\n\n笑い声の余韻が、かえって部屋を大きく感じさせる。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-18-0815-aruaru-28",
+      "status": "approved",
+      "scheduledAt": "2026-08-18T08:15:00+09:00",
+      "text": "【生前整理あるある】\n押し入れから、色あせたランドセル。もう使わないのに、親はずっととっておく。子の小ささを覚えておきたくて。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-19-1245-iyashi-28",
+      "status": "approved",
+      "scheduledAt": "2026-08-19T12:45:00+09:00",
+      "text": "生前整理は、ひとりで抱えなくていい。家族で、少しずつ。「どうする?」と話せること自体が、もう立派な一歩です。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-20-2000-senryu-29",
+      "status": "approved",
+      "scheduledAt": "2026-08-20T20:00:00+09:00",
+      "text": "【生前整理川柳】\nアルバムで　いい笑顔だけ　選り分ける\n\n元気なうちに「これがいい」と笑って選べるのが一番。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-21-0745-aruaru-29",
+      "status": "approved",
+      "scheduledAt": "2026-08-21T07:45:00+09:00",
+      "text": "【生前整理あるある】\n古い箱に、茶色くなった給料袋。中身は空でも、家族を養った日々の重みが、まだ少し残っている。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-22-1230-iyashi-29",
+      "status": "approved",
+      "scheduledAt": "2026-08-22T12:30:00+09:00",
+      "text": "片づけは、思い出を捨てる作業じゃない。残すものを選び直す作業。本当に大切なものが、終わる頃に、見えてくる。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-23-1930-senryu-30",
+      "status": "approved",
+      "scheduledAt": "2026-08-23T19:30:00+09:00",
+      "text": "【生前整理川柳】\n蝉の声　止んで気づいた　夏の果て\n\n過ぎてしまう前に、できることから少しずつ。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-24-2100-aruaru-30",
+      "status": "approved",
+      "scheduledAt": "2026-08-24T21:00:00+09:00",
+      "text": "【生前整理あるある】\n引き出しに、歴代の携帯電話が一列。充電器はもうない。でも、中の連絡先が、捨てさせてくれない。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-25-0815-iyashi-30",
+      "status": "approved",
+      "scheduledAt": "2026-08-25T08:15:00+09:00",
+      "text": "連絡先や大事な書類の「ありか」だけでも、家族と共有を。中身は見せなくていい。場所が分かるだけで、もしもの時ずいぶん違う。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-26-1245-senryu-31",
+      "status": "approved",
+      "scheduledAt": "2026-08-26T12:45:00+09:00",
+      "text": "【生前整理川柳】\n母の鏡台　今は誰も　映さない\n\n紅の一本に、出かけた日の朝が残っている。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-27-2000-aruaru-31",
+      "status": "approved",
+      "scheduledAt": "2026-08-27T20:00:00+09:00",
+      "text": "【生前整理あるある】\n押し入れに、編みかけのセーターと大量の毛糸玉。「いつか続きを」のまま、何度目かの夏を越している。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-28-0745-iyashi-31",
+      "status": "approved",
+      "scheduledAt": "2026-08-28T07:45:00+09:00",
+      "text": "完璧に片づけ終える必要はない。「あの引き出し、片づいたな」。その小さな達成感を、何度も。それが、続けるコツ。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-29-1230-senryu-32",
+      "status": "approved",
+      "scheduledAt": "2026-08-29T12:30:00+09:00",
+      "text": "【生前整理川柳】\n夏終わる　来年こそはと　また仕舞う\n\n「来年こそ」を、今年の一歩に変えてみませんか。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-30-1930-aruaru-32",
+      "status": "approved",
+      "scheduledAt": "2026-08-30T19:30:00+09:00",
+      "text": "【生前整理あるある】\n縁側に、手入れの止まった鉢植え。父がいた頃は毎朝水をやっていた。植木鉢だけが、その習慣を覚えている。",
+      "postedAt": null,
+      "tweetId": null
+    },
+    {
+      "id": "2026-08-31-2100-iyashi-32",
+      "status": "approved",
+      "scheduledAt": "2026-08-31T21:00:00+09:00",
+      "text": "夏が終わる。実家の片づけは、まだ途中かもしれない。でも、焦らなくていい。向き合おうとしている、それだけで十分です。",
       "postedAt": null,
       "tweetId": null
     }
