@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { resolveArticleSupervisor } from "../../lib/supervisors";
 
 /**
@@ -38,15 +39,32 @@ export default function ArticleEeaatProfile({ supervisor }: { supervisor?: strin
     <div className="mt-10 pt-8 border-t border-border rounded-2xl bg-card border border-border p-5">
       <p className="text-sm font-medium text-foreground/70 mb-3">この記事の監修者</p>
       <div className="flex items-start gap-4">
-        <div
-          className="w-16 h-16 rounded-full bg-primary-light flex items-center justify-center shrink-0"
-          aria-hidden
-        >
-          <svg width="36" height="36" viewBox="0 0 64 64">
-            <circle cx="32" cy="24" r="13" fill="#cfe0d6" />
-            <path d="M14 54 a18 16 0 0 1 36 0 z" fill="#cfe0d6" />
-          </svg>
-        </div>
+        {s.photoSrc ? (
+          <Link
+            href={s.profileHref}
+            className="w-16 h-16 rounded-full overflow-hidden shrink-0 ring-2 ring-primary-light hover:ring-primary transition-colors"
+            aria-label={`${s.name}の監修者プロフィールへ`}
+          >
+            <Image
+              src={s.photoSrc}
+              alt={s.photoAlt ?? `${s.name}の顔写真`}
+              width={64}
+              height={64}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </Link>
+        ) : (
+          <div
+            className="w-16 h-16 rounded-full bg-primary-light flex items-center justify-center shrink-0"
+            aria-hidden
+          >
+            <svg width="36" height="36" viewBox="0 0 64 64">
+              <circle cx="32" cy="24" r="13" fill="#cfe0d6" />
+              <path d="M14 54 a18 16 0 0 1 36 0 z" fill="#cfe0d6" />
+            </svg>
+          </div>
+        )}
         <div>
           <p className="font-bold text-primary text-lg leading-tight">
             <Link href={s.profileHref} className="hover:underline">

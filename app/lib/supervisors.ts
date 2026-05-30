@@ -29,6 +29,10 @@ export interface Supervisor {
   badgeTitle: string;
   /** フッター注記 */
   note: string;
+  /** プロフィール写真のパス（public/配下からの絶対パス）。未設定時はSVGプレースホルダー。 */
+  photoSrc?: string;
+  /** プロフィール写真のalt（SEO/アクセシビリティ）。運営者の人物像を明示する。 */
+  photoAlt?: string;
 }
 
 export const SUPERVISORS: Record<SupervisorKey, Supervisor> = {
@@ -40,6 +44,8 @@ export const SUPERVISORS: Record<SupervisorKey, Supervisor> = {
     profileHref: "/supervisor/okubo",
     badgeTitle: "生前整理アドバイザー2級",
     note: "当サイトの編集方針・トーンの総合監修です。個別の法務・税務・不動産・解体に関する内容は、それぞれの分野の専門家が監修します。",
+    photoSrc: "/images/ryosuke-okubo.png",
+    photoAlt: "ふれあいの丘 総合監修者・大久保亮佑（株式会社Kogera 代表取締役社長／生前整理アドバイザー2級）の顔写真",
   },
   murakami: {
     key: "murakami",
@@ -54,6 +60,7 @@ export const SUPERVISORS: Record<SupervisorKey, Supervisor> = {
     profileHref: "/supervisor/murakami",
     badgeTitle: "生前整理アドバイザー指導員",
     note: "当サイトの編集方針・トーンの総合監修です。個別の法務・税務・不動産・解体に関する内容は、それぞれの分野の専門家が監修します。",
+    // 村上様の写真は未提供のためプレースホルダー継続
   },
 };
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { SUPERVISORS } from "../../lib/supervisors";
 
 /**
@@ -22,6 +23,8 @@ const personJsonLd = {
   name: "大久保亮佑",
   alternateName: "Ryosuke Okubo",
   jobTitle: "生前整理アドバイザー2級",
+  image: "https://www.fureaino-oka.com/images/ryosuke-okubo.png",
+  url: "https://www.fureaino-oka.com/supervisor/okubo",
   worksFor: { "@type": "Organization", name: "株式会社Kogera" },
   address: { "@type": "PostalAddress", addressRegion: "大阪府", addressCountry: "JP" },
   knowsAbout: ["実家じまい", "生前整理", "空き家対策", "解体補助金", "相続登記", "遺品整理"],
@@ -49,12 +52,25 @@ export default function OkuboSupervisorPage() {
 
       {/* ヘッダー */}
       <header className="bg-card border border-border rounded-2xl p-6 flex flex-wrap gap-5 items-center mt-3">
-        <div className="w-28 h-28 rounded-full bg-primary-light flex items-center justify-center shrink-0" aria-hidden>
-          <svg width="64" height="64" viewBox="0 0 64 64">
-            <circle cx="32" cy="24" r="13" fill="#cfe0d6" />
-            <path d="M12 56 a20 18 0 0 1 40 0 z" fill="#cfe0d6" />
-          </svg>
-        </div>
+        {S.photoSrc ? (
+          <div className="w-28 h-28 rounded-full overflow-hidden shrink-0 ring-4 ring-primary-light">
+            <Image
+              src={S.photoSrc}
+              alt={S.photoAlt ?? `${S.name}の顔写真`}
+              width={112}
+              height={112}
+              className="w-full h-full object-cover"
+              priority
+            />
+          </div>
+        ) : (
+          <div className="w-28 h-28 rounded-full bg-primary-light flex items-center justify-center shrink-0" aria-hidden>
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <circle cx="32" cy="24" r="13" fill="#cfe0d6" />
+              <path d="M12 56 a20 18 0 0 1 40 0 z" fill="#cfe0d6" />
+            </svg>
+          </div>
+        )}
         <div className="flex-1 min-w-[220px]">
           <p className="text-sm font-bold text-accent">{S.role}</p>
           <h1 className="text-2xl font-bold mt-1">{S.name}</h1>
