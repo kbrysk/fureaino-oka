@@ -2,92 +2,92 @@ import Link from "next/link";
 import { ARTICLE_SITUATIONS, SITUATION_ACCENT_CLASSES } from "../../lib/article-situations";
 
 /**
- * シナリオベース・エントリー（記事一覧のヒーロー）
+ * シナリオベース・エントリー v2
  *
- * 「あなたは今どんな状況？」の5パターンで、ユーザーのジャーニー段階に
- * 応じたシナリオページへ誘導する。
+ * v1の致命欠点を修正：
+ * - 5列横並びでテキスト折り返し崩壊 → 3列+2列の2行構成に
+ * - カード高さ不足 → min-height 240px
+ * - 文字小さすぎ → text-lg sm:text-xl に拡大
+ * - 「STEP 1」事務的バッジ削除
  *
- * UI/UX設計：
- * - モバイル: 横スクロールカルーセル（1.2枚見せ）
- * - タブレット: 2列グリッド
- * - デスクトップ: 5列の横並び（同等の重要度を視覚化）
- *
- * シニア配慮:
- * - タップ領域 64px以上
- * - フォント16px以上
- * - 高コントラスト
- * - ホバーに依存しない明示UI
+ * デバイス別：
+ * - モバイル(< 640px): 1列縦並び
+ * - タブレット(640-1024px): 2列グリッド
+ * - デスクトップ(> 1024px): 3列+2列の2段組（最後の2枚を中央揃え）
  */
 export default function SituationNavigator() {
+  // 上段3枚 + 下段2枚に分割
+  const topRow = ARTICLE_SITUATIONS.slice(0, 3);
+  const bottomRow = ARTICLE_SITUATIONS.slice(3);
+
   return (
-    <section
-      aria-labelledby="situation-nav-heading"
-      className="bg-gradient-to-br from-primary-light/40 to-card border-2 border-primary/20 rounded-3xl p-5 sm:p-8"
-    >
-      <header className="mb-5 sm:mb-7 text-center">
-        <p className="text-xs font-bold text-primary tracking-wider uppercase mb-2">
-          STEP 1：あなたの状況に合わせて
-        </p>
+    <section aria-labelledby="situation-nav-heading">
+      <header className="mb-6 sm:mb-8 text-center">
         <h2
           id="situation-nav-heading"
-          className="text-xl sm:text-2xl font-bold text-foreground"
+          className="text-2xl sm:text-3xl font-bold text-foreground"
         >
           いま、どんなお気持ちですか？
         </h2>
-        <p className="text-sm text-foreground/70 mt-2 max-w-xl mx-auto">
-          5つのシナリオから、あなたに今いちばん必要な情報をまとめてお届けします。
+        <p className="text-sm sm:text-base text-foreground/70 mt-3 max-w-xl mx-auto leading-relaxed">
+          5つの状況から、あなたに今いちばん必要な情報を<br className="hidden sm:inline" />
+          まとめてお届けします。
         </p>
       </header>
 
-      {/* モバイル: 横スクロール / タブレット〜: グリッド */}
-      <ul
-        className="flex sm:grid gap-3 sm:gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none -mx-2 px-2 sm:mx-0 sm:px-0 pb-2 sm:pb-0 sm:grid-cols-2 lg:grid-cols-5"
-        style={{ scrollbarWidth: "thin" }}
-      >
-        {ARTICLE_SITUATIONS.map((s) => {
-          const c = SITUATION_ACCENT_CLASSES[s.accentColor];
-          return (
-            <li
-              key={s.slug}
-              className="snap-start shrink-0 w-[78%] sm:w-auto"
-            >
-              <Link
-                href={`/articles/situation/${s.slug}`}
-                aria-label={`${s.shortLabel}のおすすめ記事を見る`}
-                className={`group flex flex-col h-full ${c.cardBg} border-2 border-transparent hover:border-primary hover:shadow-lg active:scale-[0.98] rounded-2xl p-4 sm:p-5 transition-all duration-200 min-h-[200px]`}
-              >
-                <div className="flex items-start gap-3 mb-3">
-                  <span
-                    className="text-3xl sm:text-4xl leading-none shrink-0 select-none"
-                    aria-hidden="true"
-                  >
-                    {s.iconEmoji}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <p className={`text-xs font-bold ${c.text} mb-1`}>
-                      {s.emotionalHook}
-                    </p>
-                    <h3 className="text-base sm:text-lg font-bold text-foreground leading-snug">
-                      {s.shortLabel}
-                    </h3>
-                  </div>
-                </div>
-                <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed line-clamp-3 flex-1">
-                  {s.leadText.slice(0, 90)}…
-                </p>
-                <div className="mt-3 pt-3 border-t border-foreground/10 flex items-center justify-between">
-                  <span className="text-xs text-foreground/60">
-                    {s.curatedArticleIds.length}本の記事
-                  </span>
-                  <span className="text-sm font-bold text-primary group-hover:translate-x-1 transition-transform">
-                    詳しく見る →
-                  </span>
-                </div>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="space-y-4 sm:space-y-5">
+        {/* 上段：3枚 */}
+        <ul className="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {topRow.map((s) => (
+            <SituationCard key={s.slug} situation={s} />
+          ))}
+        </ul>
+        {/* 下段：2枚（中央寄せのため max-w を制限） */}
+        <ul className="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-[66.66%] lg:mx-auto">
+          {bottomRow.map((s) => (
+            <SituationCard key={s.slug} situation={s} />
+          ))}
+        </ul>
+      </div>
     </section>
+  );
+}
+
+function SituationCard({ situation: s }: { situation: typeof ARTICLE_SITUATIONS[number] }) {
+  const c = SITUATION_ACCENT_CLASSES[s.accentColor];
+  return (
+    <li>
+      <Link
+        href={`/articles/situation/${s.slug}`}
+        aria-label={`${s.shortLabel}のおすすめ記事を見る`}
+        className={`group flex flex-col h-full ${c.cardBg} border-2 border-foreground/5 hover:border-primary hover:shadow-lg active:scale-[0.99] rounded-2xl p-6 transition-all duration-200 min-h-[240px]`}
+      >
+        {/* アイコン */}
+        <div className="text-5xl mb-3 leading-none select-none" aria-hidden="true">
+          {s.iconEmoji}
+        </div>
+        {/* 感情フック */}
+        <p className={`text-xs font-bold ${c.text} mb-2 tracking-wide`}>
+          {s.emotionalHook}
+        </p>
+        {/* タイトル：2行までで切れる */}
+        <h3 className="text-lg sm:text-xl font-bold text-foreground leading-snug mb-3">
+          {s.shortLabel}
+        </h3>
+        {/* 説明 */}
+        <p className="text-sm text-foreground/70 leading-relaxed flex-1">
+          {s.leadText.slice(0, 65)}…
+        </p>
+        {/* フッター */}
+        <div className="mt-4 pt-3 border-t border-foreground/10 flex items-center justify-between">
+          <span className="text-xs text-foreground/55">
+            {s.curatedArticleIds.length}本の厳選記事
+          </span>
+          <span className="text-sm font-bold text-primary group-hover:translate-x-1 transition-transform">
+            見る →
+          </span>
+        </div>
+      </Link>
+    </li>
   );
 }

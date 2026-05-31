@@ -1,25 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ARTICLE_CATEGORIES } from "../../lib/article-categories";
 import type { MicroCmsCategory, MicroCmsBlogPost } from "../../lib/microcms-types";
 
 interface Props {
-  /** microCMS から取得した実カテゴリ */
   categories: MicroCmsCategory[];
-  /** カテゴリ別の代表記事マップ（カテゴリslug -> 上位N記事） */
   articlesByCategory: Map<string, MicroCmsBlogPost[]>;
 }
-
-/**
- * カテゴリ別ショーケース（記事一覧の2階層目）
- *
- * シナリオで「自分の状況」を見つけられなかったユーザー向けに、
- * 6カテゴリ × 代表記事3本 でテーマ別の入口を提供する。
- *
- * UI/UX設計：
- * - 各カテゴリパネル：カテゴリ名 + 説明 + 代表記事3本 + 「もっと見る」
- * - モバイル: 1列、タブレット: 2列、デスクトップ: 3列
- * - アイコン (絵文字) でカテゴリを視認しやすく
- */
 
 const CATEGORY_ICON_MAP: Record<string, string> = {
   guide: "🧭",
@@ -32,21 +19,27 @@ const CATEGORY_ICON_MAP: Record<string, string> = {
 };
 
 const CATEGORY_DESCRIPTION_MAP: Record<string, string> = {
-  guide: "実家じまいや生前整理の進め方・親への切り出し方・家族会議",
-  cleanup: "モノの仕分け・処分・買取・お焚き上げ・業者選び",
-  inheritance: "相続手続き・口座凍結・税金・補助金などお金まわり",
-  "real-estate": "空き家管理・売却・解体・固定資産税・住み替え",
-  digital: "スマホ・パスワード・サブスク解約などデジタル遺品",
-  mental: "心の整理・介護・終活・供養・家族との対話",
-  shukatsu: "自分の終活・エンディングノート・葬儀・お墓・お焚き上げ",
+  guide: "実家じまい・生前整理の進め方・家族会議",
+  cleanup: "モノの仕分け・処分・買取・お焚き上げ",
+  inheritance: "相続手続き・口座凍結・税金・補助金",
+  "real-estate": "空き家管理・売却・解体・固定資産税",
+  digital: "スマホ・パスワード・サブスク解約",
+  mental: "心の整理・介護・終活・供養",
+  shukatsu: "自分の終活・エンディングノート・葬儀",
 };
 
+/**
+ * カテゴリショーケース v2
+ *
+ * v1欠点修正：
+ * - 代表記事3本を「点表示」→「サムネ付き」に変更（視認性UP）
+ * - カード高さを揃える
+ * - 「もっと見る」ボタン大型化
+ */
 export default function CategoryShowcase({ categories, articlesByCategory }: Props) {
-  // 表示順をARTICLE_CATEGORIES（編集者推奨順）に揃える
   const orderedCategories = ARTICLE_CATEGORIES.map((ac) =>
     categories.find((c) => c.id === ac.slug)
   ).filter((c): c is MicroCmsCategory => Boolean(c));
-  // 既知の編集者順序に含まれない microCMS カテゴリも末尾に
   for (const c of categories) {
     if (!orderedCategories.find((oc) => oc.id === c.id)) {
       orderedCategories.push(c);
@@ -55,80 +48,94 @@ export default function CategoryShowcase({ categories, articlesByCategory }: Pro
 
   return (
     <section aria-labelledby="category-showcase-heading">
-      <header className="mb-5 sm:mb-7">
-        <p className="text-xs font-bold text-primary tracking-wider uppercase mb-2">
-          STEP 2：テーマで深掘り
-        </p>
+      <header className="mb-6 sm:mb-8 text-center">
         <h2
           id="category-showcase-heading"
-          className="text-xl sm:text-2xl font-bold text-foreground"
+          className="text-2xl sm:text-3xl font-bold text-foreground"
         >
-          知りたいテーマから探す
+          テーマで深掘りする
         </h2>
-        <p className="text-sm text-foreground/70 mt-2">
+        <p className="text-sm sm:text-base text-foreground/70 mt-2">
           6つのテーマで、必要な記事をまとめてご覧いただけます。
         </p>
       </header>
 
-      <ul className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {orderedCategories.map((cat) => {
           const articles = articlesByCategory.get(cat.id) ?? [];
           const icon = CATEGORY_ICON_MAP[cat.id] ?? "📄";
           const desc = CATEGORY_DESCRIPTION_MAP[cat.id] ?? "";
           return (
             <li key={cat.id}>
-              <article className="bg-card border border-border rounded-2xl p-5 h-full flex flex-col hover:border-primary/40 hover:shadow-md transition-all">
+              <article className="bg-card border border-border rounded-2xl p-5 sm:p-6 h-full flex flex-col hover:border-primary/40 hover:shadow-md transition-all">
                 {/* カテゴリヘッダー */}
                 <Link
                   href={`/articles/category/${cat.id}`}
-                  className="group block mb-4"
-                  aria-label={`${cat.name}カテゴリの全記事を見る`}
+                  className="group block mb-4 pb-4 border-b border-border"
                 >
-                  <div className="flex items-center gap-3 mb-1">
-                    <span
-                      className="text-2xl select-none"
-                      aria-hidden="true"
-                    >
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-3xl select-none" aria-hidden="true">
                       {icon}
                     </span>
-                    <h3 className="text-lg font-bold text-primary group-hover:underline">
-                      {cat.name}
-                    </h3>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg sm:text-xl font-bold text-primary group-hover:underline leading-tight">
+                        {cat.name}
+                      </h3>
+                      <p className="text-xs text-foreground/55 mt-0.5">
+                        {articles.length}本の記事
+                      </p>
+                    </div>
                   </div>
                   {desc && (
-                    <p className="text-xs text-foreground/60 leading-relaxed">
+                    <p className="text-sm text-foreground/65 leading-relaxed">
                       {desc}
                     </p>
                   )}
                 </Link>
 
-                {/* このカテゴリの代表記事3本 */}
+                {/* 代表記事3本（サムネ付き） */}
                 {articles.length > 0 ? (
-                  <ul className="space-y-2 mb-3 flex-1">
+                  <ul className="space-y-3 mb-5 flex-1">
                     {articles.slice(0, 3).map((a) => (
                       <li key={a.id}>
                         <Link
                           href={`/articles/${a.id}`}
-                          className="block py-2 px-3 rounded-lg hover:bg-primary-light/30 transition text-sm text-foreground/80 hover:text-primary leading-snug line-clamp-2"
+                          className="flex gap-3 group/article hover:bg-primary-light/20 -mx-2 px-2 py-2 rounded-lg transition"
                         >
-                          <span className="inline-block w-1.5 h-1.5 bg-primary/40 rounded-full mr-2 align-middle" />
-                          {a.title}
+                          {a.thumbnail?.url ? (
+                            <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden bg-border shrink-0">
+                              <Image
+                                src={a.thumbnail.url}
+                                alt=""
+                                fill
+                                className="object-cover"
+                                sizes="80px"
+                              />
+                            </div>
+                          ) : (
+                            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg bg-primary-light/40 shrink-0 flex items-center justify-center text-2xl">
+                              📄
+                            </div>
+                          )}
+                          <p className="text-sm font-medium text-foreground/85 group-hover/article:text-primary line-clamp-3 leading-snug flex-1">
+                            {a.title}
+                          </p>
                         </Link>
                       </li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-sm text-foreground/50 mb-3 flex-1">
+                  <p className="text-sm text-foreground/50 mb-5 flex-1">
                     記事を準備中です
                   </p>
                 )}
 
-                {/* もっと見るボタン */}
+                {/* もっと見る */}
                 <Link
                   href={`/articles/category/${cat.id}`}
-                  className="mt-auto inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl bg-primary-light/40 hover:bg-primary hover:text-white border border-primary/20 hover:border-primary text-sm font-bold text-primary transition"
+                  className="mt-auto inline-flex items-center justify-center w-full py-3 px-4 rounded-xl bg-primary-light/40 hover:bg-primary hover:text-white border-2 border-primary/20 hover:border-primary text-sm font-bold text-primary transition"
                 >
-                  {cat.name}の記事をすべて見る →
+                  {cat.name}をすべて見る →
                 </Link>
               </article>
             </li>
