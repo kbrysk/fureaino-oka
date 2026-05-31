@@ -133,7 +133,7 @@ export default async function ArticlesPage() {
               編集部が選ぶ、いま読んでおきたい記事
             </h2>
             <p className="text-sm text-foreground/65 mt-2 max-w-xl mx-auto">
-              生前整理アドバイザー2級・大久保亮佑が、まず読んでいただきたい3本を厳選しました。
+              生前整理アドバイザー2級の運営がまず読んでいただきたい3本を厳選しました。
             </p>
           </header>
           {/* 1本目を大型、残り2本を中サイズに */}
