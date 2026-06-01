@@ -9,6 +9,7 @@
     "lint": "eslint",
     "og:generate": "node scripts/generate-ogp-image.mjs",
     "index:run": "tsx scripts/google-indexing-api.ts",
+    "index:run:oauth": "tsx scripts/google-indexing-api-oauth.ts",
     "gsc:report": "tsx scripts/gsc-report.ts",
     "ga4:report": "tsx scripts/ga4-report.ts",
     "x:post": "node scripts/social/x-post.mjs"
