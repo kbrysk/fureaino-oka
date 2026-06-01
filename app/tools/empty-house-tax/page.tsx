@@ -1,5 +1,6 @@
 import Link from "next/link";
 import EmptyHouseTaxSimulator from "../../components/EmptyHouseTaxSimulator";
+import ArticleInlineAppraisalCTA from "../../components/articles/ArticleInlineAppraisalCTA";
 import { RegionalCTASelector } from "../../components/RegionalCTASelector";
 import { getPrefectureIds } from "../../lib/utils/city-loader";
 import { PREFECTURE_ID_TO_NAME } from "../../lib/prefecture-ids";
@@ -7,11 +8,13 @@ import { pageTitle } from "../../lib/site-brand";
 import { getCanonicalUrl, getCanonicalBase } from "../../lib/site-url";
 import { generateBreadcrumbSchema } from "../../lib/schema/breadcrumb";
 
+const CURRENT_YEAR = new Date().getFullYear();
 const TOOL_TITLE = "空き家税金シミュレーター";
-const TOOL_DESCRIPTION = "空き家の固定資産税・維持費の目安を無料でシミュレーション。";
+// CTR最適化: 検索意図「いくら？」を直撃 + 特定空家リスク明記
+const TOOL_DESCRIPTION = `空き家・実家の固定資産税を1分で無料試算。特定空家指定で最大6倍になる前に、売却・解体・補助金の選択肢を比較。${CURRENT_YEAR}年最新の自治体データに対応、野村不動産の無料査定も。`;
 
 export const metadata = {
-  title: pageTitle("空き家税金シミュレーター"),
+  title: pageTitle(`【${CURRENT_YEAR}年最新】空き家の固定資産税はいくら？1分で無料試算｜空き家税金シミュレーター`),
   description: TOOL_DESCRIPTION,
   alternates: { canonical: getCanonicalUrl("/tools/empty-house-tax") },
   openGraph: {
@@ -47,6 +50,10 @@ export default function EmptyHouseTaxPage() {
         </p>
       </div>
       <EmptyHouseTaxSimulator compact={false} />
+
+      {/* シミュレーション結果が「想定より高い」と感じた人向けの売却査定CTA（ノムコム A8） */}
+      <ArticleInlineAppraisalCTA variant="akiya" />
+
       <div className="bg-card rounded-xl p-5 border border-border">
         <p className="text-sm text-foreground/60">
           実際の税額は評価額・自治体により異なります。空き家の場合は特例措置（更地より軽減など）の対象になる場合もあります。売却・活用のご相談は

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { getBlogPost, getBlogPostIds } from "../../lib/microcms";
+import { getBlogPost, getBlogPostIds, getBlogList } from "../../lib/microcms";
 import { pageTitle, SITE_NAME_FULL } from "../../lib/site-brand";
 import { getCanonicalBase, getCanonicalUrl } from "../../lib/site-url";
 import { format } from "date-fns";
@@ -10,6 +10,24 @@ import { ja } from "date-fns/locale";
 import ArticleLineCTABanner from "../../components/articles/ArticleLineCTABanner";
 import ArticleEeaatProfile from "../../components/articles/ArticleEeaatProfile";
 import ArticleBodyContentMicroCms from "../../components/articles/ArticleBodyContentMicroCms";
+import ArticleRelatedPosts from "../../components/articles/ArticleRelatedPosts";
+import ArticleInlineAppraisalCTA from "../../components/articles/ArticleInlineAppraisalCTA";
+
+/**
+ * 記事カテゴリ/タグに応じて、ノムコム査定CTAの文脈バリアントを決定。
+ * 例: 「相続」「実家じまい」「空き家」関連は、それぞれ刺さる見出しに差し替える。
+ */
+function pickAppraisalVariant(
+  categoryId?: string,
+  tagIds?: string[]
+): "default" | "inheritance" | "jikka" | "akiya" {
+  const tagSet = new Set(tagIds ?? []);
+  const cat = categoryId ?? "";
+  if (cat === "inheritance" || tagSet.has("inheritance-deadline")) return "inheritance";
+  if (cat === "real-estate" || tagSet.has("akiya-long")) return "akiya";
+  if (cat === "guide" || cat === "cleanup" || tagSet.has("hajimete")) return "jikka";
+  return "default";
+}
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -65,6 +83,9 @@ export default async function ArticleDetailPage({ params }: Props) {
   const post = await getBlogPost(id);
   if (!post) notFound();
 
+  // 関連記事の候補プール（最新40件から関連度スコアで3件抽出）
+  const relatedCandidates = (await getBlogList(40, 0)).contents;
+
   const base = getCanonicalBase();
   const dateStr = post.publishedAt
     ? format(new Date(post.publishedAt), "yyyy年M月d日", { locale: ja })
@@ -72,6 +93,10 @@ export default async function ArticleDetailPage({ params }: Props) {
   const thumb = post.thumbnail?.url;
   const tags = post.tags ?? [];
   const category = post.category;
+  const appraisalVariant = pickAppraisalVariant(
+    category?.id,
+    (tags ?? []).map((t) => t.id)
+  );
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -153,7 +178,19 @@ export default async function ArticleDetailPage({ params }: Props) {
         <ArticleBodyContentMicroCms body={post.content ?? post.body ?? ""} />
       </div>
 
+      {/* 本文直後：文脈別の不動産査定アフィCTA（ノムコム A8 実証済） */}
+      <ArticleInlineAppraisalCTA variant={appraisalVariant} />
+
+      {/* LINE誘導はガイドラインで本文外固定（ArticleLineCTABannerが担当） */}
       <ArticleLineCTABanner />
+
+      {/* 回遊率3倍化：全記事ページに関連記事3本を固定表示 */}
+      <ArticleRelatedPosts
+        currentId={id}
+        currentCategoryId={category?.id}
+        currentTagIds={(tags ?? []).map((t) => t.id)}
+        candidates={relatedCandidates}
+      />
 
       <footer className="mt-10">
         <ArticleEeaatProfile supervisor={post.supervisor} />
