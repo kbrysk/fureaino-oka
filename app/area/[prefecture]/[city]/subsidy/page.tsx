@@ -22,6 +22,7 @@ import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback"
 import RegionalFaq from "../../../../components/RegionalFaq";
 import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalCard";
 import { TableOfContents } from "../../../../components/TableOfContents";
+import SubsidyNationalContext from "../../../../components/SubsidyNationalContext";
 import { SubsidySummaryBox } from "../../../../components/SubsidySummaryBox";
 import { PageLead } from "../../../../components/PageLead";
 import { RelatedCitiesInPrefecture } from "../../../../components/RelatedCitiesInPrefecture";
@@ -431,6 +432,13 @@ export default async function AreaSubsidyPage({ params }: Props) {
         </section>
       )}
 
+      {/* 【収束3：データの堀】全国比較ウィジェット。
+          この市の補助金が全国何位か／全国平均との差／補助金がある自治体の割合を、
+          全1,726自治体の独自集計（municipalities.json）から表示。
+          市名を差し替えると数値が変わる固有データ＝「市名差し替えテスト」に合格し、
+          doorway/thin判定を回避する。 */}
+      <SubsidyNationalContext prefId={ids.prefectureId} cityId={ids.cityId} />
+
       {(() => {
         const ctx = areaContent?.subsidyContext;
         const hasSubsidyContext = !!(
@@ -712,6 +720,11 @@ export default async function AreaSubsidyPage({ params }: Props) {
           <li>
             <Link href={`/area/${ids.prefectureId}`} className="text-primary hover:underline">
               {prefName}の補助金一覧に戻る
+            </Link>
+          </li>
+          <li>
+            <Link href="/data/akiya-hojokin-ranking" className="text-primary hover:underline">
+              【全国調査】空き家解体補助金ランキング（1,726自治体）
             </Link>
           </li>
         </ul>
