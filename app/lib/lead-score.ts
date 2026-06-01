@@ -21,6 +21,7 @@ export function getAnonymousId(): string {
 
 export type LeadEventType =
   | "empty_house_sim_10y_loss_100_plus"
+  | "empty_house_sim_akiya_risk_high"
   | "appraisal_button_click"
   | "area_bulky_waste_click"
   | "asset_high_value_category_3_plus"

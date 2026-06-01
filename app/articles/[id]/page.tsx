@@ -12,6 +12,8 @@ import ArticleEeaatProfile from "../../components/articles/ArticleEeaatProfile";
 import ArticleBodyContentMicroCms from "../../components/articles/ArticleBodyContentMicroCms";
 import ArticleRelatedPosts from "../../components/articles/ArticleRelatedPosts";
 import ArticleInlineAppraisalCTA from "../../components/articles/ArticleInlineAppraisalCTA";
+import ArticleContextualLinks from "../../components/articles/ArticleContextualLinks";
+import { resolveArticleSupervisor } from "../../lib/supervisors";
 
 /**
  * 記事カテゴリ/タグに応じて、ノムコム査定CTAの文脈バリアントを決定。
@@ -98,6 +100,28 @@ export default async function ArticleDetailPage({ params }: Props) {
     (tags ?? []).map((t) => t.id)
   );
 
+  // 【PANEL_03 P0修正】Article schema の著者を Organization → Person に。
+  // 監修者(supervisor)が解決できる記事は、その人物を author として渡し、
+  // Googleの「Authors」評価・E-E-A-Tに人物の専門性を伝える。
+  // supervisor="none"（相続税など専門家領域・総合監修対象外）は人物を出さず法人著者にフォールバック。
+  const supervisorPerson = resolveArticleSupervisor(post.supervisor);
+  const authorSchema = supervisorPerson
+    ? {
+        "@type": "Person",
+        name: supervisorPerson.name,
+        jobTitle: supervisorPerson.badgeTitle,
+        url: `${base}${supervisorPerson.profileHref}`,
+        "@id": `${base}${supervisorPerson.profileHref}#person`,
+        ...(supervisorPerson.credentials.length > 0 && {
+          hasCredential: supervisorPerson.credentials.map((c) => ({
+            "@type": "EducationalOccupationalCredential",
+            name: c,
+          })),
+        }),
+        worksFor: { "@type": "Organization", name: SITE_NAME_FULL },
+      }
+    : { "@type": "Organization", name: "株式会社Kogera 生前整理支援センター ふれあいの丘" };
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -105,8 +129,19 @@ export default async function ArticleDetailPage({ params }: Props) {
     description: post.description ?? undefined,
     datePublished: post.publishedAt,
     dateModified: post.revisedAt ?? post.publishedAt,
-    author: { "@type": "Organization", name: "株式会社Kogera 生前整理支援センター ふれあいの丘" },
-    publisher: { "@type": "Organization", name: SITE_NAME_FULL },
+    author: authorSchema,
+    ...(supervisorPerson && {
+      reviewedBy: {
+        "@type": "Person",
+        name: supervisorPerson.name,
+        url: `${base}${supervisorPerson.profileHref}`,
+      },
+    }),
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME_FULL,
+      url: base,
+    },
     ...(thumb && { image: thumb }),
     mainEntityOfPage: { "@type": "WebPage", "@id": `${base}/articles/${id}` },
   };
@@ -180,6 +215,10 @@ export default async function ArticleDetailPage({ params }: Props) {
 
       {/* 本文直後：文脈別の不動産査定アフィCTA（ノムコム A8 実証済） */}
       <ArticleInlineAppraisalCTA variant={appraisalVariant} />
+
+      {/* 【収束2：3つの孤立島の結合】記事→/area・/tax-simulator・ツールへの動的内部リンク。
+          カテゴリ別に「次の一歩」を提示し、収益ページへPageRankと回遊を流す。 */}
+      <ArticleContextualLinks categoryId={category?.id} />
 
       {/* LINE誘導はガイドラインで本文外固定（ArticleLineCTABannerが担当） */}
       <ArticleLineCTABanner />

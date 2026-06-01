@@ -664,11 +664,46 @@ export default async function AreaSubsidyPage({ params }: Props) {
         currentSpoke="subsidy"
       />
 
+      {/* 【収束2：subsidy → tax-simulator 最重要欠落リンクの接続】
+          「解体補助金を調べた人」は「解体後に土地の固定資産税が上がる」という
+          連続した意思決定の途中にいる。最強CTRの tax-simulator へ橋渡しする。 */}
+      <section
+        className="rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-primary-light/20 to-amber-50/40 p-6 sm:p-7"
+        aria-labelledby="subsidy-to-taxsim-heading"
+      >
+        <p className="text-xs font-bold text-amber-700 mb-2 tracking-wide">
+          解体を検討する前に、知っておきたい税金のこと
+        </p>
+        <h2
+          id="subsidy-to-taxsim-heading"
+          className="text-lg sm:text-xl font-bold text-foreground mb-3 leading-snug"
+        >
+          {cityName}で解体すると、土地の固定資産税が最大6倍になることも
+        </h2>
+        <p className="text-sm sm:text-base text-foreground/75 leading-relaxed mb-5">
+          建物を解体すると「住宅用地の特例」が外れ、更地の土地にかかる固定資産税が大きく上がるケースがあります。
+          補助金で解体費用を抑えても、その後の税負担で損をしないために——
+          <strong>{cityName}の固定資産税が今いくらか・解体後どう変わるか</strong>を、1分で試算しておきましょう。
+        </p>
+        <Link
+          href={`/tax-simulator/${ids.prefectureId}/${ids.cityId}`}
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-white px-6 py-3.5 font-bold text-sm sm:text-base hover:opacity-90 transition shadow-sm"
+        >
+          {cityName}の固定資産税を1分で試算する
+          <span aria-hidden>→</span>
+        </Link>
+      </section>
+
       <section className="rounded-2xl border border-border bg-card overflow-hidden">
         <div className="px-6 py-4 border-b border-border bg-primary-light/30">
           <h2 className="font-bold text-primary">{cityName}の関連情報</h2>
         </div>
         <ul className="px-6 py-4 space-y-2 list-none">
+          <li>
+            <Link href={`/tax-simulator/${ids.prefectureId}/${ids.cityId}`} className="text-primary hover:underline font-medium">
+              {cityName}の固定資産税シミュレーター（解体前後の比較）
+            </Link>
+          </li>
           <li>
             <Link href={`/area/${ids.prefectureId}/${ids.cityId}/cost`} className="text-primary hover:underline">
               {cityName}の解体費用相場
