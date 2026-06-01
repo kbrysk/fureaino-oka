@@ -49,11 +49,13 @@ export default function ArticleInlineAppraisalCTA({
   return (
     <aside
       className="relative my-8 rounded-2xl border-2 border-orange-400 bg-orange-50 shadow-sm p-6 overflow-hidden"
-      aria-label="不動産無料査定（広告）"
+      aria-label="不動産無料査定（PR）"
     >
-      <p className="text-xs font-bold text-foreground/60 uppercase tracking-wide mb-2">
-        広告 / 提携サービス
-      </p>
+      {/* A8.net規約＋景品表示法ステマ規制(2023/10〜)対応:
+          広告であることが明瞭に分かる表示は必須。小さく上品に。 */}
+      <span className="inline-block text-[10px] font-bold text-foreground/45 uppercase tracking-widest mb-2 bg-foreground/5 px-1.5 py-0.5 rounded">
+        PR
+      </span>
       <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3 leading-tight">
         {heading}
       </h3>
@@ -74,7 +76,7 @@ export default function ArticleInlineAppraisalCTA({
           実家・空き家の相場を無料で確認 👉
         </a>
         <span className="text-gray-500 text-xs mt-3 text-center">
-          ※ノムコム（野村不動産ソリューションズ）の公式サイトへ移動します。完全無料・60秒入力。
+          ※外部サイトに移動します
         </span>
       </div>
 
