@@ -7,7 +7,13 @@ import { getCanonicalBase } from "../../app/lib/site-url";
 import { getPrefectureIds, getCityPathsByPrefecture } from "../../app/lib/utils/city-loader";
 import { getBlogPostIds } from "../../app/lib/microcms";
 import { getLayoutSlugs } from "../../app/lib/cost-by-layout";
-export type UrlPriority = "High" | "Normal";
+/**
+ * 送信優先度:
+ * - Top: 記事(/articles/[id])。100記事一括公開後の即時インデックス促進のため最優先化（2026-06-01）。
+ * - High: 補助金LP(/area/[pref]/[city]/subsidy)。事業収益直結のため第2優先。
+ * - Normal: その他。
+ */
+export type UrlPriority = "Top" | "High" | "Normal";
 
 export interface UrlWithPriority {
   url: string;
@@ -53,14 +59,22 @@ function getStaticUrls(): string[] {
 
 /**
  * 全URLをサイトマップと同様に収集し、優先度を付与して返す。
- * /subsidy を含むURL = 補助金LP → High、それ以外 = Normal。
- * 並び順: High を先に、その後 Normal。
+ * - /articles/[id] = Top（記事インデックス浸透を最優先・2026-06-01より）
+ * - /subsidy を含むURL = 補助金LP → High
+ * - それ以外 = Normal
+ * 並び順: Top → High → Normal。
  */
 export async function collectAllUrlsWithPriority(): Promise<UrlWithPriority[]> {
   const result: UrlWithPriority[] = [];
 
   function add(url: string): void {
-    const priority: UrlPriority = url.includes("/subsidy") ? "High" : "Normal";
+    // 「/articles/master-guide」「/articles」TOPは Normal にとどめ、個別記事 (/articles/{id}) のみ Top
+    const isArticleDetail = /\/articles\/[^/]+$/.test(url) && !url.endsWith("/articles/master-guide");
+    const priority: UrlPriority = isArticleDetail
+      ? "Top"
+      : url.includes("/subsidy")
+      ? "High"
+      : "Normal";
     result.push({ url, priority });
   }
 
@@ -92,12 +106,9 @@ export async function collectAllUrlsWithPriority(): Promise<UrlWithPriority[]> {
     }
   }
 
-  // 優先度でソート: High → Normal
-  result.sort((a, b) => {
-    if (a.priority === "High" && b.priority !== "High") return -1;
-    if (a.priority !== "High" && b.priority === "High") return 1;
-    return 0;
-  });
+  // 優先度でソート: Top → High → Normal
+  const rank = (p: UrlPriority): number => (p === "Top" ? 0 : p === "High" ? 1 : 2);
+  result.sort((a, b) => rank(a.priority) - rank(b.priority));
 
   return result;
 }

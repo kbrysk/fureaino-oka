@@ -432,10 +432,18 @@ export default async function AreaSubsidyPage({ params }: Props) {
       )}
 
       {(() => {
+        const ctx = areaContent?.subsidyContext;
+        const hasSubsidyContext = !!(
+          ctx?.comparison ||
+          ctx?.localContext ||
+          ctx?.pitfalls ||
+          ctx?.localBusinessCount
+        );
         const tocItems = [
           { id: "cost-simulator-section", label: "費用シミュレーター" },
           ...(subsidyInfo?.condition ? [{ id: "conditions", label: "申請条件" }] : []),
           { id: "tax-risk", label: "放置のリスク" },
+          ...(hasSubsidyContext ? [{ id: "local-subsidy-context", label: `${cityName}の補助金事情` }] : []),
           { id: "cost-estimate", label: "解体費用の目安" },
           { id: "regional-faq-heading", label: "よくある質問" },
           ...(faqItems.length > 0 ? [{ id: "faq-other", label: "その他の質問" }] : []),
@@ -511,6 +519,91 @@ export default async function AreaSubsidyPage({ params }: Props) {
           <span aria-hidden>→</span>
         </Link>
       </section>
+
+      {/* C-2. 地域固有の補助金事情（subsidyContext）— Striking Distance 22 対応 */}
+      {(() => {
+        const ctx = areaContent?.subsidyContext;
+        if (!ctx) return null;
+        const hasAny = !!(ctx.comparison || ctx.localContext || ctx.pitfalls || ctx.localBusinessCount);
+        if (!hasAny) return null;
+        return (
+          <section
+            id="local-subsidy-context"
+            className="rounded-2xl border border-border bg-card overflow-hidden"
+            aria-label={`${cityName}の解体補助金の地域事情`}
+          >
+            <div className="px-6 py-4 border-b border-border bg-primary-light/30">
+              <h2 className="font-bold text-primary">
+                {cityName}の解体補助金・空き家事情をもう一歩深く
+              </h2>
+              <p className="text-xs text-foreground/60 mt-1">
+                （公的データ・市区町村窓口の公表情報をもとにまとめています。最新は必ず自治体窓口でご確認ください）
+              </p>
+            </div>
+            <div className="p-6 space-y-6">
+              {ctx.comparison && (
+                <div>
+                  <h3 className="font-bold text-foreground/90 mb-2">
+                    なぜ{cityName}の補助金はこの水準なのか
+                  </h3>
+                  <p className="text-base text-foreground/80 leading-relaxed">
+                    {ctx.comparison}
+                  </p>
+                </div>
+              )}
+              {ctx.localContext && (
+                <div>
+                  <h3 className="font-bold text-foreground/90 mb-2">
+                    {cityName}特有の空き家事情（人口・歴史・気候）
+                  </h3>
+                  <p className="text-base text-foreground/80 leading-relaxed">
+                    {ctx.localContext}
+                  </p>
+                </div>
+              )}
+              {ctx.pitfalls && (
+                <div className="rounded-xl bg-amber-50/80 border border-amber-200/60 p-5">
+                  <h3 className="font-bold text-amber-900/90 mb-2 flex items-center gap-2">
+                    <span aria-hidden>⚠️</span> 申請の落とし穴（事前にチェック）
+                  </h3>
+                  <p className="text-base text-foreground/80 leading-relaxed">
+                    {ctx.pitfalls}
+                  </p>
+                </div>
+              )}
+              {ctx.localBusinessCount && (
+                <div>
+                  <h3 className="font-bold text-foreground/90 mb-2">
+                    {cityName}の解体業者数・坪単価の目安
+                  </h3>
+                  <p className="text-base text-foreground/80 leading-relaxed">
+                    {ctx.localBusinessCount}
+                  </p>
+                </div>
+              )}
+              {(ctx.sourceUrl || ctx.updatedAt) && (
+                <p className="text-xs text-foreground/50 pt-2 border-t border-border">
+                  {ctx.sourceUrl && (
+                    <>
+                      出典：
+                      <a
+                        href={ctx.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline break-all"
+                      >
+                        {ctx.sourceUrl}
+                      </a>
+                      {ctx.updatedAt && "　／　"}
+                    </>
+                  )}
+                  {ctx.updatedAt && <>情報更新日：{ctx.updatedAt}</>}
+                </p>
+              )}
+            </div>
+          </section>
+        );
+      })()}
 
       {/* 売却・査定の選択肢 */}
       <RealEstateAppraisalCard

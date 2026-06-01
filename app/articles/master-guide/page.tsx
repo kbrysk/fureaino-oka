@@ -8,6 +8,7 @@ import { generateFaqSchema } from "../../lib/faq/schema";
 import type { FaqItem } from "../../lib/faq/schema";
 import MasterGuideFaqAccordion from "../../components/MasterGuideFaqAccordion";
 import { PageLead } from "../../components/PageLead";
+import ArticleInlineAppraisalCTA from "../../components/articles/ArticleInlineAppraisalCTA";
 import { LINE_ADD_URL } from "../../lib/site-brand";
 
 export const metadata: Metadata = {
@@ -267,6 +268,9 @@ export default function MasterGuidePage() {
           地域を選んで調べる <span aria-hidden>→</span>
         </Link>
       </section>
+
+      {/* 大型導線：不動産無料査定（ノムコム A8） — 全記事の集約地点で配置 */}
+      <ArticleInlineAppraisalCTA variant="jikka" />
 
       {/* セクション5：よくある質問 */}
       <MasterGuideFaqAccordion items={FAQ_ITEMS} heading="よくある質問" />
