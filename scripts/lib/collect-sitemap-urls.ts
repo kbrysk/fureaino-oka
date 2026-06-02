@@ -26,6 +26,8 @@ const base = getCanonicalBase();
 function getStaticUrls(): string[] {
   return [
     base,
+    `${base}/akiya`, // 空き家ハブ（収益ピラー・2026-06新設）
+    `${base}/data/akiya-hojokin-ranking`, // データの堀（被リンク/AI引用源・2026-06新設）
     `${base}/tool/optimizer`,
     `${base}/area`,
     `${base}/company`,
@@ -70,11 +72,15 @@ export async function collectAllUrlsWithPriority(): Promise<UrlWithPriority[]> {
   function add(url: string): void {
     // 「/articles/master-guide」「/articles」TOPは Normal にとどめ、個別記事 (/articles/{id}) のみ Top
     const isArticleDetail = /\/articles\/[^/]+$/.test(url) && !url.endsWith("/articles/master-guide");
-    const priority: UrlPriority = isArticleDetail
-      ? "Top"
-      : url.includes("/subsidy")
-      ? "High"
-      : "Normal";
+    // 新設の収益ピラー・データの堀は最優先（インデックス浸透を急ぐ）
+    const isPriorityHub =
+      url.endsWith("/akiya") || url.endsWith("/data/akiya-hojokin-ranking");
+    const priority: UrlPriority =
+      isArticleDetail || isPriorityHub
+        ? "Top"
+        : url.includes("/subsidy")
+        ? "High"
+        : "Normal";
     result.push({ url, priority });
   }
 
