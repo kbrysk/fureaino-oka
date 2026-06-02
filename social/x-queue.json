@@ -2491,11 +2491,11 @@
     },
     {
       "id": "2026-06-02-2100-promo-articles-01",
-      "status": "approved",
+      "status": "posted",
       "scheduledAt": "2026-06-02T21:00:00+09:00",
       "text": "「生前整理、何から始めよう…」\nそんな迷いに寄り添う記事を、ふれあいの丘で公開中だホー！\n\n『生前整理とは』『親への切り出し方』『エンディングノート』など、はじめての方にもやさしい内容になってるホー！\n\n▼ 記事一覧はこちら\nhttps://www.fureaino-oka.com/articles",
-      "postedAt": null,
-      "tweetId": null
+      "postedAt": "2026-06-02T14:01:37.323Z",
+      "tweetId": "2061810469296296323"
     },
     {
       "id": "2026-06-03-1700-promo-article-01",
