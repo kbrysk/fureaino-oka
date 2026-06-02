@@ -1,10 +1,10 @@
 {
   "file": "content/pipeline/souzoku-jikka-sumanai/draft.html",
   "ymyl": true,
-  "generatedAt": "2026-06-02T01:17:30.980Z",
+  "generatedAt": "2026-06-02T01:31:49.971Z",
   "summary": {
-    "pass": 18,
-    "warn": 1,
+    "pass": 17,
+    "warn": 2,
     "fail": 0,
     "skip": 0
   },
@@ -73,13 +73,13 @@
       "id": "T1",
       "name": "文字数",
       "status": "WARN",
-      "detail": "3699字（推奨2000〜3000の範囲外）"
+      "detail": "3887字（推奨2000〜3000の範囲外）"
     },
     {
       "id": "T2",
       "name": "構成(H2/リード)",
-      "status": "PASS",
-      "detail": "H2:5 / リード:138字"
+      "status": "WARN",
+      "detail": "リード229字（120〜180目安）／H2:5"
     },
     {
       "id": "T3",
