@@ -44,12 +44,12 @@ export default function HeroSection() {
                 />
               </div>
               <h1 className="w-full max-w-[18em] min-w-0 text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight tracking-tighter text-balance [filter:drop-shadow(0_1px_1px_rgba(255,255,255,0.9))]">
-                <span className="whitespace-nowrap">生前整理のすべてを</span>
+                <span className="whitespace-nowrap">実家じまい・空き家、</span>
                 <br />
-                これひとつで
+                どうする？
               </h1>
               <p className="mt-2 md:mt-5 text-slate-700 text-xs sm:text-sm md:text-base w-full max-w-md font-normal leading-snug md:leading-relaxed text-left">
-                実家の片付けから不動産・相続まで。AIと専門家が丸ごと一括サポート。
+                片付け・売却・解体・補助金まで、無料でサポート。固定資産税が今いくらか、特定空家で6倍になる前に1分で試算できます。
               </p>
               <ul className="flex flex-wrap gap-1.5 md:gap-3 justify-start mt-3 md:mt-8" aria-label="対応範囲">
                 <li><span className="inline-block px-2.5 py-0.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs text-slate-700 tracking-wide bg-white/50 backdrop-blur-sm border border-slate-200/80 hover:bg-white/80 transition-colors cursor-default whitespace-nowrap leading-tight">実家の片付け・実家じまい</span></li>

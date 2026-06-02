@@ -2,24 +2,23 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 type LayoutSlug = "1K" | "2DK" | "3LDK" | "4LDK+";
 
-/** 30秒診断用：間取り選択で診断専用ページへ遷移 */
+/** 30秒診断用：間取りを選んで空き家ハブ（収益の心臓部）へ誘導 */
 export default function HeroJikkaCta() {
-  const router = useRouter();
   const [layout, setLayout] = useState<LayoutSlug>("2DK");
 
-  const optimizerUrl = `/tool/optimizer?layout=${layout}`;
+  // 収益ハブ /akiya へ送客（戦略：空き家×固定資産税×補助金×査定の心臓部）。
+  // 間取りは「実家じまい総額」の文脈として保持し、空き家ハブのツール群へ誘導する。
+  const optimizerUrl = `/akiya?layout=${layout}`;
 
   const handleLayoutChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
       const value = e.target.value as LayoutSlug;
       setLayout(value);
-      router.push(`/tool/optimizer?layout=${value}`);
     },
-    [router]
+    []
   );
 
   return (

@@ -123,7 +123,7 @@ function TestimonialCard({ case_: c }: { case_: Case }) {
           {c.id === "case3" && <Case3Image />}
         </div>
         <p className="text-xs text-foreground/50 mb-3">
-          ※個人の感想です　※特定を避けるため一部内容を加工しています
+          ※実在の特定個人ではなく、よくあるご相談をもとにした利用イメージです
         </p>
         <h3 className="text-base font-bold text-primary mb-2">{c.label}</h3>
         <p className="text-xs text-foreground/60 mb-3">（{c.persona}）</p>
@@ -156,10 +156,13 @@ function TestimonialCard({ case_: c }: { case_: Case }) {
 
 export default function UserTestimonialsSlider() {
   return (
-    <section className="space-y-4" aria-label="利用者事例">
+    <section className="space-y-4" aria-label="よくあるご利用ケース">
       <h2 className="text-center text-lg sm:text-xl font-bold text-primary">
-        これまで数多くの方が、家族の未来を整理されました
+        こんな方に、よくあるケース
       </h2>
+      <p className="text-center text-xs text-foreground/55 -mt-2">
+        ※下記は実在の特定個人ではなく、よくあるご相談をもとにした利用イメージです
+      </p>
 
       {/* PC：3列横並び / スマホ：横スクロール */}
       <div className="overflow-x-auto md:overflow-visible -mx-4 px-4 md:mx-0 md:px-0">
