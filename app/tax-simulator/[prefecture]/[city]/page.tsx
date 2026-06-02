@@ -195,6 +195,22 @@ export default async function TaxSimulatorAreaPage({ params }: Props) {
         </p>
       </div>
 
+      {/* 【収束2：tax-simulator → 空き家ハブへの逆リンク】最強ページから上位ピラーへ権威を戻す */}
+      <section className="rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-primary-light/20 to-amber-50/40 p-6 text-center">
+        <h2 className="text-lg sm:text-xl font-bold text-foreground mb-2">
+          試算したら、次は「どうするか」を決める
+        </h2>
+        <p className="text-sm text-foreground/75 leading-relaxed mb-4">
+          売る・貸す・解体する・管理する——{area.city}の空き家・実家の4つの選択肢を、損しない判断軸で整理しています。
+        </p>
+        <Link
+          href="/akiya"
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-white px-6 py-3.5 font-bold text-sm sm:text-base hover:opacity-90 transition shadow-sm"
+        >
+          空き家・実家「どうする？」完全ガイド <span aria-hidden>→</span>
+        </Link>
+      </section>
+
       <nav aria-label="関連ページ" className="flex flex-wrap gap-3 pt-2">
         <Link
           href={`/area/${ids.prefectureId}/${ids.cityId}/subsidy`}
@@ -215,10 +231,10 @@ export default async function TaxSimulatorAreaPage({ params }: Props) {
           {area.city}の費用相場
         </Link>
         <Link
-          href="/tools/empty-house-tax"
-          className="inline-block text-foreground/60 text-sm hover:text-primary hover:underline self-center"
+          href="/data/akiya-hojokin-ranking"
+          className="inline-block rounded-lg border border-border text-foreground/80 px-4 py-2 text-sm hover:bg-primary-light/20 transition"
         >
-          シミュレーターTOP
+          全国の補助金ランキング
         </Link>
       </nav>
     </div>

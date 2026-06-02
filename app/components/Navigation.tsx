@@ -6,16 +6,16 @@ import { usePathname } from "next/navigation";
 import OwlCharacter from "./OwlCharacter";
 import { SiteSearch } from "./ui/SiteSearch";
 
+// MASTER_STRATEGY_2026 / PANEL_02：最大の資産 /area・/tax-simulator がナビに無く、
+// 全ページから3クリック以内が保証されていなかった。収益ピラーをナビへ昇格する。
 const navItems: { href: string; label: string }[] = [
   { href: "/", label: "ホーム" },
-  { href: "/guidebook", label: "ガイドブック" },
+  { href: "/articles/master-guide", label: "実家じまい" },
+  { href: "/akiya", label: "空き家・不動産" }, // 収益の心臓部（新ピラー）
+  { href: "/area", label: "地域から探す" }, // pSEO（補助金・費用）への入口
   { href: "/articles", label: "記事" },
   { href: "/tools", label: "ツール" },
-  { href: "/articles/master-guide", label: "はじめかた" },
-  { href: "/checklist", label: "チェックリスト" },
-  { href: "/assets", label: "資産・持ち物" },
   { href: "/ending-note", label: "エンディングノート" },
-  { href: "/settings", label: "設定" },
   { href: "/contact", label: "お問い合わせ" },
 ];
 
