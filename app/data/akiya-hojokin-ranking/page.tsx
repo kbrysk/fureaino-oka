@@ -108,7 +108,18 @@ export default function Page() {
     isAccessibleForFree: true,
     dateModified: LAST_UPDATED,
     temporalCoverage: "2026-06",
-    spatialCoverage: { "@type": "Country", name: "日本" },
+    // Googleの Dataset 検証器は spatialCoverage に Place 型を期待する
+    // （Country は schema.org 上は Place のサブタイプだが Google が認識せず警告になる）。
+    // 日本全体を表す Place ＋ 緯度経度の外接ボックスで明示する。
+    spatialCoverage: {
+      "@type": "Place",
+      name: "日本",
+      geo: {
+        "@type": "GeoShape",
+        // 日本のおおよその外接矩形（南西端〜北東端）
+        box: "24.0 122.9 45.6 153.9",
+      },
+    },
     keywords: ["空き家 解体 補助金", "空き家 補助金 ランキング", "老朽家屋 除却 助成", "解体費用 補助"],
     measurementTechnique: "各自治体公式サイトの公表情報を収集・正規化・集計",
     variableMeasured: ["補助金の有無", "補助金上限額", "都道府県別カバレッジ"],
