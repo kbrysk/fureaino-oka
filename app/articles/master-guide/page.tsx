@@ -190,6 +190,132 @@ export default function MasterGuidePage() {
         </div>
       </section>
 
+      {/* セクション2.5：生前整理アドバイザー2級が教える「進め方」（監修者の専門性を本文で示す） */}
+      <section aria-labelledby="seizenseiri-method-heading" className="rounded-2xl border border-primary/15 bg-gradient-to-b from-primary-light/10 to-transparent p-6 sm:p-8">
+        <p className="text-xs font-bold text-primary/70 mb-2 tracking-wide">生前整理アドバイザー2級 監修</p>
+        <h2 id="seizenseiri-method-heading" className="text-xl sm:text-2xl font-bold text-primary mb-3">
+          そもそも「生前整理」とは？後悔しない進め方の基本
+        </h2>
+        <p className="text-foreground/85 leading-relaxed mb-6">
+          生前整理は、元気なうちに<strong>「モノ・心・情報」</strong>を整理し、これからの人生をより豊かにするための前向きな活動です。
+          「人生の終わりの準備」ではありません。大切なのは、片付けそのものより
+          <strong>「自分にとって何が必要かを見つめ直す時間」</strong>を持つことです。生前整理アドバイザー協会で学ぶ基本の考え方を、順にご紹介します。
+        </p>
+
+        {/* 3領域 */}
+        <div className="grid gap-4 sm:grid-cols-3 mb-7">
+          <div className="rounded-xl bg-white border border-primary/15 p-4">
+            <p className="text-2xl mb-1" aria-hidden>📦</p>
+            <h3 className="font-bold text-foreground mb-1">モノの整理</h3>
+            <p className="text-sm text-foreground/70 leading-relaxed">家財・日用品・思い出の品。「量」を減らすことより、自分の基準で選び直すことが目的です。</p>
+          </div>
+          <div className="rounded-xl bg-white border border-primary/15 p-4">
+            <p className="text-2xl mb-1" aria-hidden>💝</p>
+            <h3 className="font-bold text-foreground mb-1">心の整理</h3>
+            <p className="text-sm text-foreground/70 leading-relaxed">モノを通して人生を振り返り、これからどう生きたいかを考える。生前整理のいちばん大切な部分です。</p>
+          </div>
+          <div className="rounded-xl bg-white border border-primary/15 p-4">
+            <p className="text-2xl mb-1" aria-hidden>🗂️</p>
+            <h3 className="font-bold text-foreground mb-1">情報の整理</h3>
+            <p className="text-sm text-foreground/70 leading-relaxed">預貯金・保険・契約・スマホのIDなど。家族が困らないよう「在りか」をまとめておきます。</p>
+          </div>
+        </div>
+
+        {/* 使う・使わない */}
+        <div className="rounded-xl bg-amber-50/60 border border-amber-200/60 p-5 mb-7">
+          <h3 className="font-bold text-amber-900/90 mb-2">コツ：「いる・いらない」ではなく「使う・使わない」で分ける</h3>
+          <p className="text-sm text-foreground/80 leading-relaxed">
+            「いるか・いらないか」で考えると、手が止まり、罪悪感も生まれます。生前整理では
+            <strong>「今の自分が使っているか・使っていないか」</strong>という事実で分けます。
+            判断がぐっと軽くなり、後悔も減ります。使っていないけれど手放せない思い出の品は、無理に捨てず「残す」と決めてよいのです。
+          </p>
+        </div>
+
+        {/* 5つの実践法 */}
+        <h3 className="font-bold text-foreground mb-3">生前整理アドバイザー協会で学ぶ「5つの実践法」</h3>
+        <ol className="space-y-2.5 mb-2">
+          {[
+            ["①分ける（4分類）", "全部を一度に片付けようとせず、まず「使う・使わない・移す・保留」のように分けるだけ。判断と作業を切り分けます。"],
+            ["②思い入れ箱", "捨てられない思い出の品は、決めた大きさの箱1つに入る分だけ残す。「全部捨てる」でなく「選んで残す」ことで心が軽くなります。"],
+            ["③ベストショットアルバム", "大量の写真は、お気に入りだけを選んで1冊に。残った人にとっても見やすく、思い出が引き継がれます。"],
+            ["④人生振り返りノート", "自分の歩みを年表のように書き出す。これからやりたいことが見え、整理の目的がはっきりします。"],
+            ["⑤お焚き上げ", "人形・手紙など、ゴミとして手放しにくい物は供養して手放す方法も。気持ちの区切りになります。"],
+          ].map(([t, d]) => (
+            <li key={t} className="flex gap-3">
+              <span className="shrink-0 font-bold text-primary">{t}</span>
+              <span className="text-sm text-foreground/75 leading-relaxed">{d}</span>
+            </li>
+          ))}
+        </ol>
+        <p className="text-sm text-foreground/70 leading-relaxed mt-4">
+          そして何より<strong>「小さく始める」</strong>こと。1日5分、引き出し1つからで十分です。完璧を目指さず、続けられる範囲で進めるのが、後悔しない生前整理のいちばんのコツです。
+        </p>
+      </section>
+
+      {/* セクション2.6：運営者・大久保の現場視点（Experience＝一次体験の明示） */}
+      <section aria-labelledby="okubo-voice-heading" className="rounded-2xl border-l-4 border-primary bg-card p-6 sm:p-7">
+        <h2 id="okubo-voice-heading" className="text-base sm:text-lg font-bold text-primary mb-3">
+          運営者・大久保からのひとこと
+        </h2>
+        <div className="space-y-3 text-foreground/85 leading-relaxed text-sm sm:text-base">
+          <p>
+            生前整理の相談を受けていて、いちばん多いのが<strong>「何から手をつければいいか分からない」</strong>という声です。
+            実は、多くの方がつまずくのは「片付けの技術」ではなく、<strong>親子で話を切り出すこと</strong>と、
+            <strong>判断の基準が決まっていないこと</strong>の2つです。
+          </p>
+          <p>
+            だから私たちは、いきなり「捨てましょう」とは言いません。まずは
+            <strong>「使っているか・使っていないか」だけ</strong>を一緒に確認し、思い出の品は無理に手放さなくていいとお伝えします。
+            親御さんが「これはまだ使う」と言うなら、それは残してよいのです。整理は喧嘩のためではなく、家族が安心するために行うものだからです。
+          </p>
+          <p>
+            そして、片付けが進むと必ず出てくるのが<strong>「空き家になった実家をどうするか」「固定資産税はいくらか」</strong>といった、
+            お金と不動産の悩みです。生前整理は、片付けだけで終わりません。だからこのサイトでは、片付けの先にある
+            税金・補助金・売却の判断材料まで、ひとつなぎでご用意しています。
+          </p>
+        </div>
+        <p className="mt-4 text-xs text-foreground/55">
+          ふれあいの丘 総合監修・運営者　大久保 亮佑（株式会社Kogera 代表取締役／生前整理アドバイザー2級）
+          <br />
+          ※相続税・不動産・登記など専門領域は、各分野の有資格者・公的情報に基づいてご案内しています。
+        </p>
+      </section>
+
+      {/* セクション2.7：このサイトだからできること（独自性＝information gain） */}
+      <section aria-labelledby="unique-heading" className="rounded-2xl border border-border bg-card overflow-hidden">
+        <div className="px-5 py-4 sm:px-6 sm:py-5 border-b border-border bg-primary-light/30">
+          <h2 id="unique-heading" className="font-bold text-primary text-lg sm:text-xl">
+            ふれあいの丘だからできること
+          </h2>
+        </div>
+        <div className="p-5 sm:p-6 grid gap-4 sm:grid-cols-3">
+          <div>
+            <p className="text-2xl mb-1" aria-hidden>📊</p>
+            <h3 className="font-bold text-foreground mb-1">全国1,726自治体の独自調査</h3>
+            <p className="text-sm text-foreground/70 leading-relaxed mb-2">
+              空き家の解体補助金がある自治体は全体の<strong>48.9%</strong>。市区町村ごとの補助額を独自に調べて公開しています。
+            </p>
+            <Link href="/data/akiya-hojokin-ranking" className="text-sm font-bold text-primary hover:underline">補助金ランキングを見る →</Link>
+          </div>
+          <div>
+            <p className="text-2xl mb-1" aria-hidden>🧮</p>
+            <h3 className="font-bold text-foreground mb-1">独自の試算ツール</h3>
+            <p className="text-sm text-foreground/70 leading-relaxed mb-2">
+              「今の固定資産税」「特定空家になった場合」「解体した場合」を<strong>3パターンで比較</strong>。営業されずに自分で数字を確かめられます。
+            </p>
+            <Link href="/tools/empty-house-tax" className="text-sm font-bold text-primary hover:underline">固定資産税を試算する →</Link>
+          </div>
+          <div>
+            <p className="text-2xl mb-1" aria-hidden>🔗</p>
+            <h3 className="font-bold text-foreground mb-1">片付け〜売却まで横断</h3>
+            <p className="text-sm text-foreground/70 leading-relaxed mb-2">
+              片付け・補助金・相続・空き家売却を<strong>1か所で</strong>。葬儀・査定・解体がバラバラな大手と違い、連続した悩みに伴走します。
+            </p>
+            <Link href="/akiya" className="text-sm font-bold text-primary hover:underline">空き家・不動産の判断へ →</Link>
+          </div>
+        </div>
+      </section>
+
       {/* セクション3：無料診断ツール一覧 */}
       <section className="rounded-2xl border border-border bg-card overflow-hidden" aria-labelledby="master-guide-tools-heading">
         <div className="px-5 py-4 sm:px-6 sm:py-5 border-b border-border bg-primary-light/30">
