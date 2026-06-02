@@ -46,64 +46,104 @@ const UserTestimonialsSlider = dynamic(
   }
 );
 
+/** 診断ツール用：低・中・高のリスクメーター（出力プレビュー） */
+function RiskMeterPreview({ meta }: { meta: string }) {
+  return (
+    <div className="rounded-xl bg-slate-50 px-3 py-2.5 ring-1 ring-slate-100">
+      <div className="mb-1.5 flex items-center justify-between text-xs">
+        <span className="font-semibold text-slate-600">リスク度を判定</span>
+        <span className="text-slate-500">{meta}</span>
+      </div>
+      <div className="flex h-2.5 gap-0.5 overflow-hidden rounded-full">
+        <div className="flex-1 bg-emerald-400" />
+        <div className="flex-1 bg-amber-400" />
+        <div className="flex-1 bg-rose-400" />
+      </div>
+      <div className="mt-1 flex justify-between text-[11px] font-medium text-slate-400">
+        <span>低</span>
+        <span>中</span>
+        <span>高</span>
+      </div>
+    </div>
+  );
+}
+
+/** 単純な情報プレビュー（数値・対応範囲などを濃く見せる） */
+function InfoPreview({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="rounded-xl bg-slate-50 px-3 py-2.5 text-[13px] leading-relaxed text-slate-600 ring-1 ring-slate-100">
+      {children}
+    </div>
+  );
+}
+
 /**
- * 無料ツールカード（洗練リデザイン 2026-06）
- * 方針：ベタ塗りの重いカード＋ラウドなオレンジボタンの「テンプレ感」を排し、
- * 白基調・ヘアライン・柔らかな多層シャドウ・左揃え・線画アイコン・静かなテキストCTAで
- * Apple／西海岸スタートアップ的な"意図のある余白"の質感に。アクセント色は要所のみ。
+ * 無料ツールカード（"使えるツール"が一目で伝わる版 2026-06）
+ * 50〜70代でも「これは診断/試算ツールだ」と即わかるよう、
+ *  ①大きく濃いアイコン ②ツール種別チップ ③出力プレビュー（結果の見える化）
+ *  ④押せると分かる明確なボタン ⑤高コントラストの文字 を備える。
+ * 白基調・ヘアライン・柔らかな影でApple的な上質さは維持。
  */
 function ToolCard({
   slug,
+  kindLabel,
   lead,
   title,
   sub,
   ctaLabel,
+  preview,
   children,
 }: {
   slug: string;
+  kindLabel: string;
   lead: string;
   title: string;
   sub: string;
   ctaLabel: string;
+  preview?: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
     <Link
       href={slug}
-      className="group relative flex h-full flex-col rounded-[20px] bg-white p-5 sm:p-6 ring-1 ring-slate-200/70 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-300 ease-out hover:-translate-y-1 hover:ring-primary/25 hover:shadow-[0_18px_40px_-16px_rgba(15,23,42,0.18)]"
+      className="group relative flex h-full flex-col rounded-[20px] bg-white p-5 ring-1 ring-slate-200/70 shadow-[0_1px_3px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:-translate-y-1 hover:ring-primary/30 hover:shadow-[0_18px_40px_-16px_rgba(15,23,42,0.22)]"
     >
-      <span
-        className="absolute right-4 top-4 inline-flex items-center rounded-full bg-primary/[0.07] px-2.5 py-0.5 text-[11px] font-semibold tracking-wide text-primary/80 ring-1 ring-inset ring-primary/10"
-        aria-label="無料で利用可能"
-      >
-        無料
-      </span>
+      {/* 上段：大きく濃いアイコン ＋ ツール種別チップ */}
+      <div className="mb-3.5 flex items-start justify-between gap-2">
+        <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary ring-1 ring-inset ring-primary/15 transition-all duration-300 ease-out group-hover:scale-105 group-hover:bg-primary group-hover:text-white group-hover:ring-primary/40 group-hover:shadow-[0_10px_22px_-10px_rgba(15,23,42,0.3)]">
+          {children}
+        </span>
+        <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-primary/[0.08] px-2.5 py-1 text-[11px] font-bold tracking-wide text-primary ring-1 ring-inset ring-primary/15">
+          {kindLabel}
+        </span>
+      </div>
 
-      {/* アイコンタイル：静止時はクリーンな淡color、ホバーでprimaryにふわっと反転＋微スケール（プロダクト的な触感） */}
-      <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-[14px] bg-gradient-to-br from-primary/[0.12] to-primary/[0.03] text-primary ring-1 ring-inset ring-primary/10 transition-all duration-300 ease-out group-hover:scale-105 group-hover:bg-none group-hover:bg-primary group-hover:text-white group-hover:ring-primary/40 group-hover:shadow-[0_10px_22px_-10px_rgba(15,23,42,0.28)]">
-        {children}
-      </span>
-
-      <p className="mb-1 text-xs font-medium leading-snug text-slate-400">{lead}</p>
-      <h3 className="text-base sm:text-[17px] font-bold leading-snug tracking-tight text-slate-900">
+      <p className="text-[13px] font-medium text-slate-500">{lead}</p>
+      <h3 className="mt-0.5 text-lg font-bold leading-snug tracking-tight text-slate-900">
         {title}
       </h3>
-      <p className="mt-1.5 flex-1 text-sm leading-relaxed text-slate-500">{sub}</p>
+      <p className="mt-1.5 text-[15px] leading-relaxed text-slate-600">{sub}</p>
 
-      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
-        {ctaLabel}
-        <svg
-          viewBox="0 0 20 20"
-          className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden
-        >
-          <path d="M4 10h12M11 5l5 5-5 5" />
-        </svg>
+      {/* 出力プレビュー：何が得られるかを"結果の見える化"で示す＝ツール感の核 */}
+      {preview && <div className="mt-3">{preview}</div>}
+
+      {/* 押せると分かる明確なボタン（ブランドカラー・タップ領域44px以上） */}
+      <span className="mt-auto pt-4">
+        <span className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-[15px] font-bold text-white shadow-[0_4px_12px_-4px_rgba(15,23,42,0.25)] transition group-hover:brightness-110">
+          {ctaLabel}
+          <svg
+            viewBox="0 0 20 20"
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden
+          >
+            <path d="M4 10h12M11 5l5 5-5 5" />
+          </svg>
+        </span>
       </span>
     </Link>
   );
@@ -230,23 +270,100 @@ export default function HomeContentClient() {
         </div>
         <p className="text-base text-foreground/80">実家・生前整理の診断やシミュレーターなど、<strong className="text-foreground/90">無料で使えるツール</strong>がたくさんあります。</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
-          <ToolCard slug="/assets" lead="持ち物を登録すると総額がわかる" title="資産・査定の見える化" sub="無料査定・買取相場へそのまま導線" ctaLabel="見える化する">
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M3 16l5-5 4 4 8-8" /><path d="M16 7h5v5" /></svg>
+          <ToolCard
+            slug="/assets"
+            kindLabel="無料ツール"
+            lead="持ち物を登録すると総額がわかる"
+            title="資産・査定の見える化"
+            sub="無料査定・買取相場へそのまま導線"
+            ctaLabel="見える化する"
+            preview={
+              <InfoPreview>
+                <div className="flex items-center justify-between">
+                  <span>査定額の目安</span>
+                  <span className="font-bold text-primary">例：120万円</span>
+                </div>
+                <div className="mt-1.5 h-2.5 w-full overflow-hidden rounded-full bg-slate-200">
+                  <div className="h-2.5 rounded-full bg-primary" style={{ width: "68%" }} />
+                </div>
+              </InfoPreview>
+            }
+          >
+            <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M3 16l5-5 4 4 8-8" /><path d="M16 7h5v5" /></svg>
           </ToolCard>
-          <ToolCard slug="/area" lead="全国の市区町村ごとに掲載" title="地域別・粗大ゴミ・遺品整理" sub="検索→見積もり・回収業者導線" ctaLabel="地域を調べる">
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11z" /><circle cx="12" cy="10" r="2.5" /></svg>
+          <ToolCard
+            slug="/area"
+            kindLabel="無料検索"
+            lead="全国の市区町村ごとに掲載"
+            title="地域別・粗大ゴミ・遺品整理"
+            sub="検索→見積もり・回収業者導線"
+            ctaLabel="地域を調べる"
+            preview={
+              <InfoPreview>
+                <span className="font-bold text-primary">全国1,741</span> 市区町村の補助金・粗大ゴミ・費用相場に対応
+              </InfoPreview>
+            }
+          >
+            <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11z" /><circle cx="12" cy="10" r="2.5" /></svg>
           </ToolCard>
-          <ToolCard slug="/articles/master-guide" lead="相続・不動産・デジタル遺品など" title="専門家への無料相談" sub="匿名で質問→税理士・司法書士紹介" ctaLabel="相談先を見る">
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M21 11.5a8 8 0 0 1-11.5 7.2L4 20.5l1.8-5.2A8 8 0 1 1 21 11.5z" /><path d="M9 11h6M9 8h4" /></svg>
+          <ToolCard
+            slug="/articles/master-guide"
+            kindLabel="無料相談"
+            lead="相続・不動産・デジタル遺品など"
+            title="専門家への無料相談"
+            sub="匿名で質問→税理士・司法書士紹介"
+            ctaLabel="相談先を見る"
+            preview={
+              <InfoPreview>
+                <span className="font-bold text-primary">匿名でOK</span>　税理士・司法書士・宅建士へ無料でつなぎます
+              </InfoPreview>
+            }
+          >
+            <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M21 11.5a8 8 0 0 1-11.5 7.2L4 20.5l1.8-5.2A8 8 0 1 1 21 11.5z" /><path d="M9 11h6M9 8h4" /></svg>
           </ToolCard>
-          <ToolCard slug="/tools/jikka-diagnosis" lead="家族会議にそのまま使える" title="実家じまい力診断" sub="約10問でリスク度がわかる" ctaLabel="診断する">
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden><rect x="6" y="4" width="12" height="17" rx="2" /><path d="M9.5 4V3h5v1" /><path d="M9 13l2 2 4-4" /></svg>
+          <ToolCard
+            slug="/tools/jikka-diagnosis"
+            kindLabel="無料診断"
+            lead="家族会議にそのまま使える"
+            title="実家じまい力診断"
+            sub="質問に答えるだけでリスク度がわかる"
+            ctaLabel="診断する"
+            preview={<RiskMeterPreview meta="全10問・約3分" />}
+          >
+            <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><rect x="6" y="4" width="12" height="17" rx="2" /><path d="M9.5 4V3h5v1" /><path d="M9 13l2 2 4-4" /></svg>
           </ToolCard>
-          <ToolCard slug="/tools/akiya-risk" lead="空き家予備軍かがわかる" title="空き家リスク診断" sub="約8問でリスクをチェック" ctaLabel="診断する">
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M4 11.5 12 4l8 7.5" /><path d="M6 10v10h12V10" /><path d="M12 14v3" /><path d="M12 20h.01" /></svg>
+          <ToolCard
+            slug="/tools/akiya-risk"
+            kindLabel="無料診断"
+            lead="空き家予備軍かがわかる"
+            title="空き家リスク診断"
+            sub="質問に答えるだけでリスクをチェック"
+            ctaLabel="診断する"
+            preview={<RiskMeterPreview meta="全8問・約2分" />}
+          >
+            <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M4 11.5 12 4l8 7.5" /><path d="M6 10v10h12V10" /><path d="M12 14v3" /><path d="M12 20h.01" /></svg>
           </ToolCard>
-          <ToolCard slug="/tools/inheritance-share" lead="家族構成で割合がわかる" title="法定相続分シミュレーター" sub="円グラフで相続分を可視化" ctaLabel="計算する">
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M21 12A9 9 0 1 1 12 3v9z" /><path d="M12 3a9 9 0 0 1 9 9h-9z" /></svg>
+          <ToolCard
+            slug="/tools/inheritance-share"
+            kindLabel="無料シミュレーター"
+            lead="家族構成で割合がわかる"
+            title="法定相続分シミュレーター"
+            sub="家族構成を選ぶだけで相続分を可視化"
+            ctaLabel="計算する"
+            preview={
+              <div className="flex items-center gap-3 rounded-xl bg-slate-50 px-3 py-2.5 ring-1 ring-slate-100">
+                <svg viewBox="0 0 36 36" className="h-10 w-10 shrink-0 text-primary" aria-hidden>
+                  <circle cx="18" cy="18" r="16" fill="#e2e8f0" />
+                  <path d="M18 18 L18 2 A16 16 0 0 1 34 18 Z" fill="currentColor" />
+                  <path d="M18 18 L34 18 A16 16 0 0 1 26 31.9 Z" fill="currentColor" opacity="0.5" />
+                </svg>
+                <span className="text-[13px] leading-relaxed text-slate-600">
+                  配偶者・子の<span className="font-bold text-primary">相続割合</span>を円グラフで表示
+                </span>
+              </div>
+            }
+          >
+            <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M21 12A9 9 0 1 1 12 3v9z" /><path d="M12 3a9 9 0 0 1 9 9h-9z" /></svg>
           </ToolCard>
         </div>
         <div className="flex justify-center pt-1">
