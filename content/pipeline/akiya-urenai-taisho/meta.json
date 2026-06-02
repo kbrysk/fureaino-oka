@@ -1,0 +1,25 @@
+{
+  "slug": "akiya-urenai-taisho",
+  "title": "空き家が売れない…どうする？5つの理由と売るための対処法",
+  "category": "real-estate",
+  "tags": ["akiya-long", "save-money", "inheritance-deadline"],
+  "supervisor": "none",
+  "ymyl": "limited",
+  "cluster": "P3",
+  "kw": "空き家 売れない どうする",
+  "cv": "fudosan_satei",
+  "internalLinks": [
+    "/articles/akiya-souzoku-4sentakushi",
+    "/articles/fudosan-satei",
+    "/articles/akiya-kaitai-hiyou",
+    "/akiya",
+    "/data/akiya-hojokin-ranking",
+    "/tools/empty-house-tax",
+    "/articles/tokutei-akiya"
+  ],
+  "publicSources": [
+    "https://www.stat.go.jp/data/jyutaku/2023/tyousake.html",
+    "https://www.mlit.go.jp/totikensangyo/const/sosei_const_tk3_000131.html",
+    "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3306.htm"
+  ]
+}

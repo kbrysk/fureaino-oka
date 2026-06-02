@@ -1,0 +1,24 @@
+{
+  "slug": "souzoku-jikka-sumanai",
+  "title": "相続した実家に住まないと維持費はいくら？費用内訳と選択肢",
+  "category": "real-estate",
+  "tags": ["akiya-long", "save-money", "inheritance-deadline"],
+  "supervisor": "none",
+  "ymyl": "limited",
+  "cluster": "P3",
+  "kw": "相続した実家 住まない 維持費",
+  "cv": "fudosan_satei",
+  "internalLinks": [
+    "/articles/akiya-kanri",
+    "/articles/akiya-souzoku-4sentakushi",
+    "/articles/fudosan-satei",
+    "/akiya",
+    "/tools/empty-house-tax",
+    "/data/akiya-hojokin-ranking"
+  ],
+  "publicSources": [
+    "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/150790_15.html",
+    "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000035.html",
+    "https://www.stat.go.jp/data/jyutaku/2023/tyousake.html"
+  ]
+}
