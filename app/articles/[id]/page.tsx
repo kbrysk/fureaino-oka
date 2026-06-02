@@ -13,6 +13,7 @@ import ArticleBodyContentMicroCms from "../../components/articles/ArticleBodyCon
 import ArticleRelatedPosts from "../../components/articles/ArticleRelatedPosts";
 import ArticleInlineAppraisalCTA from "../../components/articles/ArticleInlineAppraisalCTA";
 import ArticleContextualLinks from "../../components/articles/ArticleContextualLinks";
+import ArticleSellVsHoldComparison from "../../components/articles/ArticleSellVsHoldComparison";
 import { resolveArticleSupervisor } from "../../lib/supervisors";
 
 /**
@@ -212,6 +213,10 @@ export default async function ArticleDetailPage({ params }: Props) {
       <div className="mt-8">
         <ArticleBodyContentMicroCms body={post.content ?? post.body ?? ""} />
       </div>
+
+      {/* 空き家・不動産系記事：「持ち続ける税金 vs 売却」比較で査定へ橋渡し（PANEL_04）。
+          論理（保有コストの可視化）→ 直後の査定CTA で自然にCVへつなぐ。 */}
+      {category?.id === "real-estate" && <ArticleSellVsHoldComparison />}
 
       {/* 本文直後：文脈別の不動産査定アフィCTA（ノムコム A8 実証済） */}
       <ArticleInlineAppraisalCTA variant={appraisalVariant} />
