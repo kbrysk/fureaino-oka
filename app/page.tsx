@@ -4,6 +4,16 @@ import { SituationSelector } from "./components/top/SituationSelector";
 import HomeContentClient from "./components/home/HomeContentClient";
 import { pageTitle } from "./lib/site-brand";
 import { getCanonicalUrl } from "./lib/site-url";
+import { baseUrl, siteName } from "./lib/constants/site-metadata";
+
+/**
+ * トップページの公開日・更新日（WebPage 構造化データ用）。
+ * Ahrefs / Google で「公開日・更新日が不足」と検出されていたため明示する。
+ * ※ HOME_PUBLISHED は実際のサイト公開日に合わせて調整してよい（暫定値）。
+ * ※ HOME_MODIFIED はトップページの内容を大きく更新したら手動で更新する。
+ */
+const HOME_PUBLISHED = "2025-05-01";
+const HOME_MODIFIED = "2026-06-03";
 
 export const metadata = {
   title: pageTitle("生前整理・実家じまいを無料でサポート【ふれあいの丘】診断・補助金・業者紹介まで"),
@@ -18,8 +28,29 @@ export const metadata = {
 };
 
 export default function Home() {
+  // WebPage 構造化データ（公開日・更新日を明示し、Organization と連結）
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${baseUrl}/#webpage`,
+    url: `${baseUrl}/`,
+    name: siteName,
+    description:
+      "実家じまい・生前整理・空き家の悩みを、無料の診断ツール・全国の補助金情報・専門家監修コンテンツでサポートする情報メディア。",
+    inLanguage: "ja",
+    isPartOf: { "@id": `${baseUrl}/#website` },
+    about: { "@id": `${baseUrl}/#organization` },
+    publisher: { "@id": `${baseUrl}/#organization` },
+    datePublished: HOME_PUBLISHED,
+    dateModified: HOME_MODIFIED,
+  };
+
   return (
     <div className="space-y-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
       <HeroSection />
 
       <section
@@ -126,6 +157,41 @@ export default function Home() {
       </section>
 
       <HomeContentClient />
+
+      {/* サイトの専門性・独自性を伝える本文ブロック（E-E-A-T／エンティティ確立／本文量の確保） */}
+      <section
+        aria-labelledby="about-fureaino"
+        className="w-full max-w-3xl mx-auto px-4 py-8 text-left"
+      >
+        <h2
+          id="about-fureaino"
+          className="text-lg sm:text-xl font-bold text-foreground mb-4"
+        >
+          「ふれあいの丘」について ― 実家じまい・生前整理・空き家の総合情報サイト
+        </h2>
+        <div className="space-y-4 text-base leading-relaxed text-foreground/85">
+          <p>
+            「ふれあいの丘」は、<strong>実家じまい・生前整理・遺品整理・空き家の活用や処分</strong>に悩むご家族のための情報メディアです。
+            親御さまの住まいをどうするか、何から手をつければいいのか、費用はどれくらいかかるのか——
+            多くの方がつまずきやすいポイントを、はじめての方にもわかりやすく整理してお届けしています。
+            「〜すべき」と急かすのではなく、それぞれのご事情に寄り添うことを大切にしています。
+          </p>
+          <p>
+            最大の特長は、<strong>全国1,726自治体の補助金・粗大ゴミ・空き家対策の独自データベース</strong>です。
+            お住まいの市区町村ごとに、空き家の解体補助金の有無や粗大ゴミの出し方などを横断的に調べられます。
+            あわせて、<Link href="/tools/empty-house-tax" className="text-primary font-medium hover:underline">空き家の固定資産税シミュレーター</Link>や
+            <Link href="/ending-note" className="text-primary font-medium hover:underline">エンディングノート</Link>、
+            相続の概算シミュレーターなど、<strong>無料で使える診断・計算ツール</strong>を多数ご用意しています。
+          </p>
+          <p>
+            記事は<strong>生前整理アドバイザー2級の運営者（大久保亮佑）</strong>の視点を交え、
+            公的機関（厚生労働省・総務省・国民生活センター・各自治体）の情報を出典として作成しています。
+            なお、相続税の個別計算や登記・遺産分割などの専門的なご相談は、税理士・司法書士・弁護士など各分野の専門家へのご相談をおすすめしています。
+            まずは気になるテーマから、<Link href="/articles/master-guide" className="text-primary font-medium hover:underline">生前整理のはじめかたガイド</Link>や
+            <Link href="/akiya" className="text-primary font-medium hover:underline">空き家対策の総合ページ</Link>をご覧ください。
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
