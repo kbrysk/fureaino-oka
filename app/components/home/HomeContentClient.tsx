@@ -79,7 +79,8 @@ function ToolCard({
         無料
       </span>
 
-      <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-[14px] bg-gradient-to-br from-primary/[0.12] to-primary/[0.03] text-primary ring-1 ring-inset ring-primary/10 transition-colors duration-300 group-hover:from-primary/[0.18]">
+      {/* アイコンタイル：静止時はクリーンな淡color、ホバーでprimaryにふわっと反転＋微スケール（プロダクト的な触感） */}
+      <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-[14px] bg-gradient-to-br from-primary/[0.12] to-primary/[0.03] text-primary ring-1 ring-inset ring-primary/10 transition-all duration-300 ease-out group-hover:scale-105 group-hover:bg-none group-hover:bg-primary group-hover:text-white group-hover:ring-primary/40 group-hover:shadow-[0_10px_22px_-10px_rgba(15,23,42,0.28)]">
         {children}
       </span>
 
