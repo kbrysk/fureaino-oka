@@ -176,10 +176,13 @@ async function main() {
   fs.writeFileSync(csvPath, rowsToCsv(rows), "utf8");
   fs.writeFileSync(readmePath, buildReadme(dataset.summary.totalMunicipalities), "utf8");
 
-  // 配布用インフォグラフィック（SVG＋PNG）。PNG は本機（フォントあり）でラスタライズして同梱する。
+  // 自動生成インフォグラフィック（SVG＋PNG・データ正確版）。
+  // ※ OGP/「画像で引用」の本番ヒーロー画像は手動デザイン版
+  //   public/opendata/akiya-hojokin-infographic.png（別途差し替え）を使用しているため、
+  //   この自動生成は -auto ファイル名に出力し、ヒーロー画像を上書きしない。
   const svg = buildInfographicSvg(dataset.summary);
-  const svgPath = path.join(OUT_DIR, "akiya-hojokin-infographic.svg");
-  const pngPath = path.join(OUT_DIR, "akiya-hojokin-infographic.png");
+  const svgPath = path.join(OUT_DIR, "akiya-hojokin-infographic-auto.svg");
+  const pngPath = path.join(OUT_DIR, "akiya-hojokin-infographic-auto.png");
   fs.writeFileSync(svgPath, svg, "utf8");
   await sharp(Buffer.from(svg)).png().toFile(pngPath);
 
