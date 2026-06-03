@@ -27,6 +27,17 @@ export const STATS_CREDIT = "ふれあいの丘調べ";
 export const STATS_SOURCE = "各自治体公式サイト";
 
 /**
+ * 全国の市区町村総数（母数の明示・カバー率算出用）。
+ * 出典: 総務省「統計でみる市区町村のすがた2025」/ 全国市区町村数 = 1,741
+ * （市町村1,718 + 東京都特別区23）。データ更新時に追随する。
+ * これを明示することで「全国の◯%」表現の母集団を誠実に示し、
+ * 引用メディアのファクトチェックに耐える（＝被リンクの信頼性）。
+ */
+export const NATIONAL_MUNICIPALITY_TOTAL: number = 1741;
+/** 全国総数の出典表記。 */
+export const NATIONAL_TOTAL_SOURCE = "総務省「統計でみる市区町村のすがた2025」";
+
+/**
  * 各統計に添付する共通メタ情報。
  * ページ側で「いつ・誰が・何を根拠に」を必ず明示できるようにする。
  */
@@ -183,13 +194,17 @@ function amountEntries(): AmountEntry[] {
 
 /** 補助金カバレッジの全国サマリ。 */
 export interface CoverageSummary {
-  /** 集計対象の自治体総数（= 全1,726） */
+  /** 集計対象（調査済み）の自治体総数（= 全1,726） */
   total: number;
-  /** 補助金ありの自治体数 */
+  /** 全国の市区町村総数（母数の明示用 = 1,741） */
+  nationalTotal: number;
+  /** 全国に対する調査カバー率（%・小数1桁。例: 99.1） */
+  coveragePercent: number;
+  /** 解体補助金を「確認できた」自治体数（hasSubsidy=true） */
   withSubsidy: number;
-  /** 補助金なし（または「詳細確認中」扱い）の自治体数 */
+  /** 確認できなかった自治体数（＝不在の断定ではなく「確認できず」） */
   withoutSubsidy: number;
-  /** 補助金ありの割合（%・小数1桁） */
+  /** 調査済み自治体のうち補助金を確認できた割合（%・小数1桁） */
   withSubsidyPercent: number;
   /** うち金額を数値抽出できた自治体数 */
   withParsedAmount: number;
@@ -197,8 +212,13 @@ export interface CoverageSummary {
 }
 
 /**
- * 補助金がある自治体の総数・割合を集計する。
+ * 解体補助金を「確認できた」自治体の総数・割合を集計する。
  * AI Overview / ページ冒頭の「主要数値」として最初に提示する基幹サマリ。
+ *
+ * 【誠実性の原則】hasSubsidy=false は「補助金が無い」の断定ではなく
+ * 「公式情報で確認できなかった」を意味する。表現は必ず「確認できた」に統一し、
+ * 不在の断定（◯%には無い）を避ける。母数は調査済み総数（=total）であり、
+ * 全国1,741市区町村に対するカバー率（coveragePercent）も併記する。
  */
 export function getCoverageSummary(): CoverageSummary {
   const total = STORE.length;
@@ -206,6 +226,11 @@ export function getCoverageSummary(): CoverageSummary {
   const withParsedAmount = amountEntries().length;
   return {
     total,
+    nationalTotal: NATIONAL_MUNICIPALITY_TOTAL,
+    coveragePercent:
+      NATIONAL_MUNICIPALITY_TOTAL === 0
+        ? 0
+        : Math.round((total / NATIONAL_MUNICIPALITY_TOTAL) * 1000) / 10,
     withSubsidy,
     withoutSubsidy: total - withSubsidy,
     withSubsidyPercent: total === 0 ? 0 : Math.round((withSubsidy / total) * 1000) / 10,
@@ -661,14 +686,21 @@ export function getOpenDataset() {
       asOf: STATS_AS_OF,
       credit: STATS_CREDIT,
       source: STATS_SOURCE,
+      nationalTotal: coverage.nationalTotal,
+      nationalTotalSource: NATIONAL_TOTAL_SOURCE,
+      coveragePercent: coverage.coveragePercent,
       license: "CC BY 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
       note: STATS_NOTE,
+      definitionNote:
+        "withSubsidy は『公式情報で解体補助金を確認できた自治体数』。確認できなかった自治体は補助金の不在を意味しない。amount 統計は金額を一意に数値抽出できた自治体（withParsedAmount）のみが母数。",
     },
     summary: {
       totalMunicipalities: coverage.total,
-      withSubsidy: coverage.withSubsidy,
-      withSubsidyPercent: coverage.withSubsidyPercent,
+      nationalMunicipalityTotal: coverage.nationalTotal,
+      coveragePercent: coverage.coveragePercent,
+      withSubsidyConfirmed: coverage.withSubsidy,
+      withSubsidyConfirmedPercent: coverage.withSubsidyPercent,
       withParsedAmount: coverage.withParsedAmount,
       averageYen: amountSummary.averageYen,
       medianYen: amountSummary.medianYen,

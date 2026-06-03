@@ -121,7 +121,7 @@ function main() {
   console.log(`  ${path.relative(ROOT, csvPath)}`);
   console.log(`  ${path.relative(ROOT, readmePath)}`);
   console.log(
-    `Summary: withSubsidy=${dataset.summary.withSubsidy}/${dataset.summary.totalMunicipalities} (${dataset.summary.withSubsidyPercent}%), avg=${dataset.summary.averageYen ?? "—"}yen`
+    `Summary: confirmed=${dataset.summary.withSubsidyConfirmed}/${dataset.summary.totalMunicipalities} (${dataset.summary.withSubsidyConfirmedPercent}%), coverage=${dataset.summary.coveragePercent}% of ${dataset.summary.nationalMunicipalityTotal}, avg=${dataset.summary.averageYen ?? "—"}yen`
   );
 }
 

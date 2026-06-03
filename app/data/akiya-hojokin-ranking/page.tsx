@@ -9,6 +9,7 @@ import {
   STATS_AS_OF,
   STATS_CREDIT,
   STATS_SOURCE,
+  NATIONAL_TOTAL_SOURCE,
 } from "@/app/lib/data/municipality-stats";
 import { DistributionChart } from "./DistributionChart";
 import { CitationKit } from "./CitationKit";
@@ -30,20 +31,24 @@ import { CitationKit } from "./CitationKit";
 
 const PAGE_PATH = "/data/akiya-hojokin-ranking";
 const LAST_UPDATED = "2026-06-01"; // データ調査の最終更新日（手動更新）
+const NEXT_UPDATE = "2026-09"; // 次回更新予定（四半期データドロップ運用）。継続更新の信頼シグナル。
+const DATA_VERSION = "2026.06"; // データ版（引用時のバージョン明示用）
 
 export function generateMetadata(): Metadata {
   const base = getCanonicalBase();
   const url = `${base}${PAGE_PATH}`;
   const { coverage, amountSummary } = getRankingPageData();
-  const avgMan = amountSummary.averageYen ? formatYenAsMan(amountSummary.averageYen) : "—";
+  const medianMan = amountSummary.medianYen ? formatYenAsMan(amountSummary.medianYen) : "—";
   const title = `【2026年最新】全国空き家解体補助金ランキング｜${coverage.total.toLocaleString(
     "ja-JP"
   )}自治体 独自調査｜ふれあいの丘`;
-  const description = `全国${coverage.total.toLocaleString(
+  const description = `全国${coverage.nationalTotal.toLocaleString("ja-JP")}市区町村の約${
+    coverage.coveragePercent
+  }%にあたる${coverage.total.toLocaleString(
     "ja-JP"
-  )}自治体を独自調査。空き家・老朽家屋の解体補助金がある自治体は${
+  )}自治体を独自調査。空き家・老朽家屋の解体補助金を確認できたのは${
     coverage.withSubsidy
-  }自治体（${coverage.withSubsidyPercent}%）、上限額の平均は約${avgMan}。補助金額ランキングTOP30・都道府県別の充実度・金額分布を無料公開（${STATS_AS_OF}・${STATS_CREDIT}）。`;
+  }自治体（${coverage.withSubsidyPercent}%）、上限額の中央値は${medianMan}。補助金額ランキングTOP30・都道府県別・金額分布を無料公開（${STATS_AS_OF}・${STATS_CREDIT}）。`;
   return {
     title,
     description,
@@ -100,7 +105,7 @@ export default function Page() {
     "@context": "https://schema.org/",
     "@type": "Dataset",
     name: `全国 空き家解体補助金 調査データ（${coverage.total}自治体）`,
-    description: `全国${coverage.total}自治体の空き家・老朽家屋の解体補助金（有無・上限額・制度名）を集計した独自データセット。補助金あり${coverage.withSubsidy}自治体（${coverage.withSubsidyPercent}%）、上限額の全国平均${avgMan}・中央値${medianMan}。補助金額ランキング・都道府県別充実度・金額分布を含む。`,
+    description: `全国${coverage.nationalTotal}市区町村の約${coverage.coveragePercent}%にあたる${coverage.total}自治体を調査し、空き家・老朽家屋の解体補助金（有無・上限額・制度名・公式URL）を集計した独自データセット。解体補助金を確認できたのは${coverage.withSubsidy}自治体（調査対象の${coverage.withSubsidyPercent}%）。金額を数値化できた${coverage.withParsedAmount}自治体で上限額の中央値${medianMan}・平均${avgMan}。補助金額ランキング・都道府県別充実度・金額分布を含む。各数値は出典（自治体公式）にひも付け。`,
     url,
     sameAs: url,
     creator: { "@type": "Organization", name: SITE_NAME_LOGO, url: base },
@@ -176,7 +181,12 @@ export default function Page() {
         <dl className="mt-5 grid grid-cols-2 gap-3 text-sm md:grid-cols-4">
           <div>
             <dt className="text-foreground/50">調査対象</dt>
-            <dd className="mt-0.5 font-bold">{coverage.total.toLocaleString("ja-JP")}自治体</dd>
+            <dd className="mt-0.5 font-bold">
+              {coverage.total.toLocaleString("ja-JP")}自治体
+              <span className="ml-1 text-xs font-normal text-foreground/50">
+                （全国の約{coverage.coveragePercent}%）
+              </span>
+            </dd>
           </div>
           <div>
             <dt className="text-foreground/50">調査時点</dt>
@@ -187,68 +197,83 @@ export default function Page() {
             <dd className="mt-0.5 font-bold">{STATS_SOURCE}</dd>
           </div>
           <div>
-            <dt className="text-foreground/50">最終更新</dt>
-            <dd className="mt-0.5 font-bold">{LAST_UPDATED}</dd>
+            <dt className="text-foreground/50">最終更新／次回</dt>
+            <dd className="mt-0.5 font-bold">
+              {LAST_UPDATED}
+              <span className="ml-1 text-xs font-normal text-foreground/50">
+                （次回 {NEXT_UPDATE} 予定）
+              </span>
+            </dd>
           </div>
         </dl>
+        <p className="mt-3 text-xs text-foreground/45">
+          母数の全国市区町村数（{coverage.nationalTotal.toLocaleString("ja-JP")}）の出典: {NATIONAL_TOTAL_SOURCE}。
+          データ版 v{DATA_VERSION}。
+        </p>
       </header>
 
-      {/* AI Overview 想定: 冒頭で主要数値を直接回答（約200字） */}
+      {/* AI Overview 想定: 冒頭で主要数値を直接回答（約200字）。
+          ※ 誠実性: 「ある/ない」の断定を避け「確認できた」で統一。母数と中央値を明示。 */}
       <section className="mb-10 rounded-2xl bg-primary/5 p-6" aria-label="調査の要点">
         <p className="text-base leading-relaxed text-foreground/90">
-          {SITE_NAME_LOGO}が全国
+          {SITE_NAME_LOGO}が全国{coverage.nationalTotal.toLocaleString("ja-JP")}市区町村の約
+          <strong>{coverage.coveragePercent}%</strong>にあたる
           <strong>{coverage.total.toLocaleString("ja-JP")}自治体</strong>
-          を独自に調査したところ、空き家・老朽家屋の<strong>解体補助金がある自治体は{coverage.withSubsidy}自治体（全体の約{coverage.withSubsidyPercent}%）</strong>
-          でした。金額を確認できた{coverage.withParsedAmount}自治体では、補助金<strong>上限額の全国平均は約{avgMan}</strong>、
-          <strong>中央値は{medianMan}</strong>。最高額は
+          を調査したところ、空き家・老朽家屋の<strong>解体補助金を確認できたのは{coverage.withSubsidy}自治体（調査対象の約{coverage.withSubsidyPercent}%）</strong>
+          でした。金額を数値で確認できた{coverage.withParsedAmount}自治体では、上限額の
+          <strong>中央値は{medianMan}</strong>（平均は約{avgMan}）。
           {topEntry && (
             <>
-              <strong>
-                {topEntry.prefName}{topEntry.cityName}の{maxMan}
-              </strong>
+              最高額は<strong>{topEntry.prefName}{topEntry.cityName}の{maxMan}</strong>
+              （不燃化特区など都市部の特例制度を含む）
             </>
           )}
           でした（{STATS_AS_OF}・{STATS_CREDIT}）。金額は目安であり、最新・正確な額は各自治体公式でご確認ください。
         </p>
       </section>
 
-      {/* ヒーロー指標（大きな数字） */}
+      {/* ヒーロー指標（大きな数字）。中央値=典型値を主役に、最高額は特例注記。 */}
       <section className="mb-12" aria-label="主要指標">
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
           <StatNumber
             value={`${coverage.withSubsidyPercent}`}
             unit="%"
-            label="解体補助金がある自治体の割合"
+            label={`解体補助金を確認できた割合（調査${coverage.total.toLocaleString("ja-JP")}自治体中）`}
             accent
           />
-          <StatNumber
-            value={coverage.withSubsidy.toLocaleString("ja-JP")}
-            unit="自治体"
-            label={`補助金あり（全${coverage.total.toLocaleString("ja-JP")}自治体中）`}
-          />
-          <StatNumber value={avgMan} label="上限額の全国平均（目安）" accent />
-          <StatNumber value={maxMan} label="補助金額の最高（全国1位）" />
+          <StatNumber value={medianMan} label="上限額の中央値（典型値・目安）" accent />
+          <StatNumber value={avgMan} label="上限額の平均（目安）" />
+          <StatNumber value={maxMan} label="最高額（不燃化特区など特例を含む）" />
         </div>
       </section>
 
-      {/* 調査方法 */}
-      <section className="mb-12">
+      {/* 調査方法（メソドロジー）。母数・定義・除外・検証可能性・更新頻度を明示し、引用に耐える。 */}
+      <section className="mb-12" id="methodology">
         <h2 className="mb-4 border-l-4 border-primary pl-3 text-xl font-bold sm:text-2xl">
-          この調査データはどうやって作られていますか？
+          この調査データはどうやって作られていますか？（調査方法）
         </h2>
-        <div className="rounded-xl border border-border bg-card p-5 text-sm leading-relaxed">
+        <div className="space-y-3 rounded-xl border border-border bg-card p-5 text-sm leading-relaxed">
           <p>
-            {SITE_NAME_LOGO}が運営する地域別ページのために収集している、全国
-            {coverage.total.toLocaleString("ja-JP")}
-            自治体の「空き家・老朽家屋の解体（除却）補助金」情報を集計しました。各自治体の公式サイトで公表されている制度名・上限額をもとに正規化し、上限額が数値で読み取れる
-            {coverage.withParsedAmount}
-            自治体について金額統計を算出しています。
+            <strong>母集団と調査範囲：</strong>全国の市区町村は
+            {coverage.nationalTotal.toLocaleString("ja-JP")}（{NATIONAL_TOTAL_SOURCE}）。本調査はそのうち
+            {coverage.total.toLocaleString("ja-JP")}自治体（約{coverage.coveragePercent}%）をカバーし、各自治体の公式サイトで公表されている「空き家・老朽家屋の解体（除却）補助金」の制度名・上限額・申請窓口を収集・正規化しています。
           </p>
-          <p className="mt-2">
-            「費用の○分の1以内」「○○円/㎡」「詳細は窓口へ」のように上限額が一意に定まらない制度は、件数（補助金の有無）には含めつつ、金額統計（平均・中央値・ランキング・分布）からは除外しています。
+          <p>
+            <strong>「確認できた」の定義：</strong>本ページの「解体補助金を確認できた{coverage.withSubsidy}自治体」は、
+            <strong>公式情報で制度の存在を確認できた件数</strong>です。残りの自治体は「補助金が無い」ことを断定するものではなく、
+            <strong>調査時点で公式情報からは確認できなかった</strong>ことを意味します（制度の新設・改廃・予算枠の終了により変動します）。
           </p>
-          <p className="mt-2 text-foreground/60">
-            出典: {STATS_SOURCE}　／　集計・整形: {STATS_CREDIT}　／　基準時点: {STATS_AS_OF}
+          <p>
+            <strong>金額統計の母数：</strong>上限額が金額として一意に読み取れた{coverage.withParsedAmount}自治体のみを平均・中央値・ランキング・分布の母数としています。「費用の○分の1以内」「○○円/㎡」「詳細は窓口へ」のように一意に定まらない制度は、件数には含めつつ金額統計からは除外しています。最高額帯には不燃化特区など都市部の特例制度が含まれるため、典型額としては<strong>中央値（{medianMan}）</strong>を併記しています。
+          </p>
+          <p>
+            <strong>検証可能性：</strong>配布データ（CSV/JSON）には<strong>全自治体に出典となる公式URLを付与</strong>しており、各数値はその場でファクトチェックできます。
+          </p>
+          <p className="text-foreground/60">
+            出典: {STATS_SOURCE}　／　集計・整形: {STATS_CREDIT}　／　基準時点: {STATS_AS_OF}　／　次回更新: {NEXT_UPDATE} 予定（四半期更新）　／　データ版: v{DATA_VERSION}
+          </p>
+          <p className="text-foreground/60">
+            データの誤り・更新のご指摘は <Link href="/contact" className="text-primary hover:underline">お問い合わせ</Link> からお寄せください。確認のうえ速やかに反映します。
           </p>
         </div>
       </section>
@@ -305,10 +330,10 @@ export default function Page() {
       {/* 都道府県別の充実度 */}
       <section className="mb-12">
         <h2 className="mb-2 border-l-4 border-emerald-500 pl-3 text-xl font-bold sm:text-2xl">
-          補助金が充実している都道府県はどこ？
+          解体補助金を確認できた市区町村が多い都道府県は？
         </h2>
         <p className="mb-4 text-sm text-foreground/60">
-          都道府県別に「補助金がある市区町村数」が多い順のTOP15。割合は各都道府県でデータを把握している自治体に対する比率です。
+          都道府県別に「解体補助金を確認できた市区町村数」が多い順のTOP15。割合は各都道府県で調査した自治体に対する比率です（未確認＝補助金なしの断定ではありません）。
         </p>
         <div className="overflow-x-auto rounded-xl border border-border">
           <table className="w-full text-sm">
@@ -317,7 +342,7 @@ export default function Page() {
               <tr className="text-left">
                 <th scope="col" className="px-3 py-2 font-bold">順位</th>
                 <th scope="col" className="px-3 py-2 font-bold">都道府県</th>
-                <th scope="col" className="px-3 py-2 text-right font-bold">補助金あり</th>
+                <th scope="col" className="px-3 py-2 text-right font-bold">確認できた数</th>
                 <th scope="col" className="px-3 py-2 text-right font-bold">割合</th>
                 <th scope="col" className="px-3 py-2 text-right font-bold">平均上限額（目安）</th>
               </tr>
@@ -479,14 +504,19 @@ export default function Page() {
           jsonUrl={`${base}/opendata/akiya-hojokin-2026.json`}
           stats={{
             total: coverage.total.toLocaleString("ja-JP"),
+            nationalTotal: coverage.nationalTotal.toLocaleString("ja-JP"),
+            coveragePercent: String(coverage.coveragePercent),
             withSubsidy: coverage.withSubsidy.toLocaleString("ja-JP"),
             withSubsidyPercent: String(coverage.withSubsidyPercent),
+            parsedN: coverage.withParsedAmount.toLocaleString("ja-JP"),
+            medianMan: medianMan,
             averageMan: avgMan,
             maxMan: maxMan,
             topPref: topEntry?.prefName ?? "",
             topCity: topEntry?.cityName ?? "",
             asOf: STATS_AS_OF,
             credit: STATS_CREDIT,
+            version: DATA_VERSION,
           }}
         />
         <p className="mt-4 rounded-lg border border-border bg-card p-4 text-xs leading-relaxed text-foreground/70">
