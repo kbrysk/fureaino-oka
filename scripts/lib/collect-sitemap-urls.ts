@@ -7,6 +7,7 @@ import { getCanonicalBase } from "../../app/lib/site-url";
 import { getPrefectureIds, getCityPathsByPrefecture } from "../../app/lib/utils/city-loader";
 import { getBlogPostIds } from "../../app/lib/microcms";
 import { getLayoutSlugs } from "../../app/lib/cost-by-layout";
+import { getAllPrefectureSlugs } from "../../app/lib/data/municipality-stats";
 /**
  * 送信優先度:
  * - Top: 記事(/articles/[id])。100記事一括公開後の即時インデックス促進のため最優先化（2026-06-01）。
@@ -27,7 +28,9 @@ function getStaticUrls(): string[] {
   return [
     base,
     `${base}/akiya`, // 空き家ハブ（収益ピラー・2026-06新設）
+    `${base}/data`, // データ室ハブ（被リンク発見性・2026-06新設）
     `${base}/data/akiya-hojokin-ranking`, // データの堀（被リンク/AI引用源・2026-06新設）
+    `${base}/data/seizen-seiri-trends`, // 検索トレンドデータ
     `${base}/tool/optimizer`,
     `${base}/area`,
     `${base}/company`,
@@ -72,9 +75,8 @@ export async function collectAllUrlsWithPriority(): Promise<UrlWithPriority[]> {
   function add(url: string): void {
     // 「/articles/master-guide」「/articles」TOPは Normal にとどめ、個別記事 (/articles/{id}) のみ Top
     const isArticleDetail = /\/articles\/[^/]+$/.test(url) && !url.endsWith("/articles/master-guide");
-    // 新設の収益ピラー・データの堀は最優先（インデックス浸透を急ぐ）
-    const isPriorityHub =
-      url.endsWith("/akiya") || url.endsWith("/data/akiya-hojokin-ranking");
+    // 新設の収益ピラー・データ室（全/data配下）は最優先（インデックス浸透を急ぐ）
+    const isPriorityHub = url.endsWith("/akiya") || url.includes(`${base}/data`);
     const priority: UrlPriority =
       isArticleDetail || isPriorityHub
         ? "Top"
@@ -87,6 +89,11 @@ export async function collectAllUrlsWithPriority(): Promise<UrlWithPriority[]> {
   // 1. 固定ページ
   for (const url of getStaticUrls()) {
     add(url);
+  }
+
+  // 1.5 都道府県別 空き家解体補助金 データ（47面・2026-06新設・データの堀）
+  for (const { prefId } of getAllPrefectureSlugs()) {
+    add(`${base}/data/akiya-hojokin-ranking/${prefId}`);
   }
 
   // 2. cost/layout

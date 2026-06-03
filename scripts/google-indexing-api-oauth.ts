@@ -233,7 +233,7 @@ function appendToReportCsv(results: SendResult[]): void {
 }
 
 // ========== メイン ==========
-async function run(dryRun: boolean): Promise<void> {
+async function run(dryRun: boolean, matches: string[] = []): Promise<void> {
   console.log("========================================");
   console.log("  Google Indexing API 自動送信 (OAuth)");
   console.log("========================================\n");
@@ -249,8 +249,16 @@ async function run(dryRun: boolean): Promise<void> {
     `       合計 ${allUrls.length} 件（記事=Top: ${topCount} / 補助金LP=High: ${highCount} / その他: ${normalCount}）\n`
   );
 
+  // --match <substr> 指定時は、その文字列を含むURLだけに絞って優先送信する
+  // （新規ページ群を狙って即インデックス申請したいとき用。例: --match /data/）
+  const pool =
+    matches.length > 0 ? allUrls.filter((u) => matches.some((m) => u.url.includes(m))) : allUrls;
+  if (matches.length > 0) {
+    console.log(`       フィルタ(--match=${matches.join(", ")}): ${pool.length} 件に限定\n`);
+  }
+
   const statusMap = loadIndexingStatus().urls;
-  const toSend = getUrlsToSend(allUrls, statusMap, DAILY_QUOTA);
+  const toSend = getUrlsToSend(pool, statusMap, DAILY_QUOTA);
   const toSendTop = toSend.filter((u) => u.priority === "Top").length;
   const toSendHigh = toSend.filter((u) => u.priority === "High").length;
   const toSendNormal = toSend.length - toSendTop - toSendHigh;
@@ -316,7 +324,15 @@ async function run(dryRun: boolean): Promise<void> {
 }
 
 const dryRun = process.argv.includes("--dry-run");
-run(dryRun).catch((e) => {
+// --match <substr> を複数指定可能（指定文字列を含むURLだけに絞って送信）
+const matches: string[] = [];
+{
+  const argv = process.argv.slice(2);
+  for (let i = 0; i < argv.length; i += 1) {
+    if (argv[i] === "--match" && argv[i + 1]) matches.push(argv[i + 1]);
+  }
+}
+run(dryRun, matches).catch((e) => {
   console.error("実行エラー:", e);
   process.exit(1);
 });
