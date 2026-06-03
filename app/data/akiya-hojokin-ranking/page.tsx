@@ -11,6 +11,7 @@ import {
   STATS_SOURCE,
 } from "@/app/lib/data/municipality-stats";
 import { DistributionChart } from "./DistributionChart";
+import { CitationKit } from "./CitationKit";
 
 /**
  * 【データジャーナリズム型ページ】全国の空き家解体補助金ランキング・調査データ
@@ -123,6 +124,19 @@ export default function Page() {
     keywords: ["空き家 解体 補助金", "空き家 補助金 ランキング", "老朽家屋 除却 助成", "解体費用 補助"],
     measurementTechnique: "各自治体公式サイトの公表情報を収集・正規化・集計",
     variableMeasured: ["補助金の有無", "補助金上限額", "都道府県別カバレッジ"],
+    // Google Dataset Search 用: 機械可読データの配布先（CSV / JSON）。
+    distribution: [
+      {
+        "@type": "DataDownload",
+        encodingFormat: "text/csv",
+        contentUrl: `${base}/opendata/akiya-hojokin-2026.csv`,
+      },
+      {
+        "@type": "DataDownload",
+        encodingFormat: "application/json",
+        contentUrl: `${base}/opendata/akiya-hojokin-2026.json`,
+      },
+    ],
   };
 
   // 構造化データ: Organization（提供元）
@@ -451,23 +465,33 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 引用・出典・免責 */}
+      {/* 引用・データ提供キット（被リンク獲得） */}
       <section className="mb-10">
-        <h2 className="mb-4 border-l-4 border-foreground/40 pl-3 text-xl font-bold sm:text-2xl">
-          このデータの引用・利用について
+        <h2 className="mb-2 border-l-4 border-foreground/40 pl-3 text-xl font-bold sm:text-2xl">
+          このデータを引用・利用する（出典明記で自由利用OK）
         </h2>
-        <div className="space-y-3 rounded-xl border border-border bg-card p-5 text-sm leading-relaxed">
-          <p>
-            本調査データは、出典を明記の上で記事執筆・報道・自治体や研究機関の資料などに自由にご利用いただけます（CC BY 4.0）。
-          </p>
-          <p className="rounded bg-primary-light/20 p-3 text-xs text-foreground/70">
-            出典表記例：「全国{coverage.total.toLocaleString("ja-JP")}自治体 空き家解体補助金 調査データ（{STATS_AS_OF}・{STATS_CREDIT}） / {SITE_NAME_LOGO}」
-          </p>
-          <p className="text-foreground/70">
-            本データは各自治体公式の公表情報をもとに集計した
-            <strong>目安</strong>です。補助金の有無・上限額・申請条件は年度や予算により変更されます。実際の申請・金額については、必ず各自治体の公式窓口で最新情報をご確認ください。介護・相続・税務など個別の判断は、該当領域の専門家へご相談ください。
-          </p>
-        </div>
+        <p className="mb-5 text-sm text-foreground/60">
+          記事・報道・研究・自治体資料などに、出典を明記の上で自由にご利用いただけます（CC BY 4.0）。引用・埋め込み・データDLの3つの形をご用意しています。
+        </p>
+        <CitationKit
+          reportUrl={url}
+          csvUrl={`${base}/opendata/akiya-hojokin-2026.csv`}
+          jsonUrl={`${base}/opendata/akiya-hojokin-2026.json`}
+          stats={{
+            total: coverage.total.toLocaleString("ja-JP"),
+            withSubsidy: coverage.withSubsidy.toLocaleString("ja-JP"),
+            withSubsidyPercent: String(coverage.withSubsidyPercent),
+            averageMan: avgMan,
+            maxMan: maxMan,
+            topPref: topEntry?.prefName ?? "",
+            topCity: topEntry?.cityName ?? "",
+            asOf: STATS_AS_OF,
+            credit: STATS_CREDIT,
+          }}
+        />
+        <p className="mt-4 rounded-lg border border-border bg-card p-4 text-xs leading-relaxed text-foreground/70">
+          本データは各自治体公式の公表情報をもとに集計した<strong>目安</strong>です。補助金の有無・上限額・申請条件は年度や予算により変更されます。実際の申請・金額については、必ず各自治体の公式窓口で最新情報をご確認ください。介護・相続・税務など個別の判断は、該当領域の専門家へご相談ください。
+        </p>
       </section>
 
       {/* フッター（メタ情報） */}

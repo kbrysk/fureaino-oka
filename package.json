@@ -12,6 +12,7 @@
     "index:run:oauth": "tsx --env-file=.env.local scripts/google-indexing-api-oauth.ts",
     "gsc:report": "tsx scripts/gsc-report.ts",
     "ga4:report": "tsx scripts/ga4-report.ts",
+    "data:opendata": "tsx scripts/data-reports/build-subsidy-opendata.ts",
     "x:post": "node scripts/social/x-post.mjs"
   },
   "dependencies": {

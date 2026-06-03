@@ -608,6 +608,87 @@ export function getNationalContextForCity(prefId: string, cityId: string): Natio
 }
 
 /* ============================================================
+ * 9.5 オープンデータ書き出し（被リンク獲得用・CC BY 4.0）
+ * ============================================================ */
+
+/** オープンデータ1行（全自治体・CSV/JSON 書き出し用）。 */
+export interface OpenDataRow {
+  prefId: string;
+  prefName: string;
+  cityId: string;
+  cityName: string;
+  /** 補助金あり=true */
+  hasSubsidy: boolean;
+  /** 制度名（あれば） */
+  subsidyName: string;
+  /** 元の上限額表記（例: "最大300万円（費用の1/2以内）"） */
+  maxAmountRaw: string;
+  /** 機械抽出した上限額（円。抽出できない/補助金なしは null） */
+  maxAmountYen: number | null;
+  /** 公式URL（あれば） */
+  officialUrl: string;
+}
+
+/**
+ * 全自治体（1,726件）を1行=1自治体のフラットな配列で返す。
+ * オープンデータ（CSV/JSON）書き出しの基礎データ。捏造なし・実データのみ。
+ */
+export function getFullSubsidyRows(): OpenDataRow[] {
+  return STORE.map((m) => ({
+    prefId: m.prefId,
+    prefName: m.prefName,
+    cityId: m.cityId,
+    cityName: m.cityName,
+    hasSubsidy: m.subsidy?.hasSubsidy === true,
+    subsidyName: m.subsidy?.name ?? "",
+    maxAmountRaw: m.subsidy?.maxAmount != null ? String(m.subsidy.maxAmount) : "",
+    maxAmountYen: parseMaxAmount(m.subsidy?.maxAmount),
+    officialUrl: m.subsidy?.officialUrl ?? "",
+  }));
+}
+
+/**
+ * 引用・報道・研究用に配布するオープンデータ一式（JSON 書き出し用）。
+ * 「メタ＋全国サマリ＋分布＋都道府県別＋TOP30＋全自治体明細」を1オブジェクトにまとめる。
+ * ライセンスは CC BY 4.0（出典明記で自由利用可）。
+ */
+export function getOpenDataset() {
+  const coverage = getCoverageSummary();
+  const amountSummary = getAmountStatsSummary();
+  return {
+    meta: {
+      title: "全国 空き家解体補助金 調査データ（1,726自治体）",
+      asOf: STATS_AS_OF,
+      credit: STATS_CREDIT,
+      source: STATS_SOURCE,
+      license: "CC BY 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+      note: STATS_NOTE,
+    },
+    summary: {
+      totalMunicipalities: coverage.total,
+      withSubsidy: coverage.withSubsidy,
+      withSubsidyPercent: coverage.withSubsidyPercent,
+      withParsedAmount: coverage.withParsedAmount,
+      averageYen: amountSummary.averageYen,
+      medianYen: amountSummary.medianYen,
+      maxYen: amountSummary.maxYen,
+      minYen: amountSummary.minYen,
+    },
+    distribution: getAmountDistribution().buckets,
+    prefectureCoverage: getPrefectureCoverageRanking().rows,
+    nationalRankingTop30: getNationalAmountRanking(30).rows.map((r) => ({
+      rank: r.rank,
+      prefName: r.prefName,
+      cityName: r.cityName,
+      amountYen: r.amountYen,
+      subsidyName: r.subsidyName ?? "",
+    })),
+    rows: getFullSubsidyRows(),
+  };
+}
+
+/* ============================================================
  * 10. ページ一括取得ヘルパー
  * ============================================================ */
 
