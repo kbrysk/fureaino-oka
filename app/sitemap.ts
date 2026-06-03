@@ -3,6 +3,7 @@ import { getPrefectureIds, getCityPathsByPrefecture } from "./lib/utils/city-loa
 import { getBlogPostIds } from "./lib/microcms";
 import { getLayoutSlugs } from "./lib/cost-by-layout";
 import { getCanonicalBase } from "./lib/site-url";
+import { getAllPrefectureSlugs } from "./lib/data/municipality-stats";
 
 /** 正規ベースURL（絶対URL）。未設定時は https://www.fureaino-oka.com */
 const SITEMAP_BASE = getCanonicalBase();
@@ -76,7 +77,19 @@ export default async function sitemap(props: {
         { url: `${base}/terms`, lastModified, changeFrequency: "yearly", priority: 0.5 },
         { url: `${base}/privacy`, lastModified, changeFrequency: "yearly", priority: 0.5 },
         { url: `${base}/contact`, lastModified, changeFrequency: "monthly", priority: 0.5 },
+        // データ室（独自調査データ・被リンク資産）
+        { url: `${base}/data`, lastModified, changeFrequency: "weekly", priority: 0.8 },
+        { url: `${base}/data/akiya-hojokin-ranking`, lastModified, changeFrequency: "weekly", priority: 0.85 },
+        { url: `${base}/data/seizen-seiri-trends`, lastModified, changeFrequency: "monthly", priority: 0.6 },
       ];
+
+      // 都道府県別 空き家解体補助金 データ（47面）
+      const dataPrefRoutes: MetadataRoute.Sitemap = getAllPrefectureSlugs().map((p) => ({
+        url: `${base}/data/akiya-hojokin-ranking/${p.prefId}`,
+        lastModified,
+        changeFrequency: "weekly" as const,
+        priority: 0.75,
+      }));
 
       const costLayoutRoutes: MetadataRoute.Sitemap = getLayoutSlugs().map((slug) => ({
         url: `${base}/cost/layout/${encodeURIComponent(slug)}`,
@@ -95,6 +108,7 @@ export default async function sitemap(props: {
 
       return [
         ...staticEntries,
+        ...dataPrefRoutes,
         ...costLayoutRoutes,
         ...articleRoutes,
       ];

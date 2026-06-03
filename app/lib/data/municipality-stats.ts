@@ -721,6 +721,111 @@ export function getOpenDataset() {
 }
 
 /* ============================================================
+ * 9.7 都道府県別レポート（pSEO 47面・地方メディア引用面）
+ * ============================================================ */
+
+/** 都道府県スラッグ一覧（generateStaticParams / sitemap / ハブ用）。prefName昇順。 */
+export function getAllPrefectureSlugs(): { prefId: string; prefName: string }[] {
+  const seen = new Map<string, string>();
+  for (const m of STORE) {
+    if (!seen.has(m.prefId)) seen.set(m.prefId, m.prefName);
+  }
+  return Array.from(seen.entries())
+    .map(([prefId, prefName]) => ({ prefId, prefName }))
+    .sort((a, b) => a.prefName.localeCompare(b.prefName, "ja"));
+}
+
+/** 数値配列の中央値（円）。空なら null。 */
+function medianOf(values: number[]): number | null {
+  if (values.length === 0) return null;
+  const v = [...values].sort((a, b) => a - b);
+  const n = v.length;
+  return n % 2 === 1 ? v[(n - 1) / 2] : Math.round((v[n / 2 - 1] + v[n / 2]) / 2);
+}
+
+/** 都道府県レポート1件分のデータ。 */
+export interface PrefectureReport {
+  prefId: string;
+  prefName: string;
+  /** 県内で調査した自治体数 */
+  total: number;
+  /** うち解体補助金を確認できた数 */
+  withSubsidy: number;
+  /** 確認できた割合（県内調査数に対する%） */
+  withSubsidyPercent: number;
+  /** 金額を数値化できた自治体数（金額統計の母数） */
+  withParsedAmount: number;
+  /** 県内の上限額：中央値/平均/最高/最低（円。母数0なら null） */
+  medianYen: number | null;
+  averageYen: number | null;
+  maxYen: number | null;
+  minYen: number | null;
+  /** 県内の最高額自治体 */
+  topEntry: AmountEntry | null;
+  /** 県内の市区町村 金額ランキング（金額化できたもの） */
+  cityRanking: RankingRow[];
+  /** 全国比較コンテキスト */
+  national: {
+    withSubsidyPercent: number;
+    medianYen: number | null;
+    averageYen: number | null;
+    coveragePercent: number;
+    /** 県の平均額が全国の都道府県中 何位か（金額母数3以上の県内での順位。対象外は null） */
+    prefAmountRank: number | null;
+    prefAmountTotalRanked: number;
+  };
+  meta: StatsMeta;
+}
+
+/**
+ * 指定都道府県の「空き家解体補助金」レポートデータを返す（pSEO 47面用）。
+ * 各県の実統計（確認できた数・中央値・市区町村ランキング・全国比較）で裏付け、
+ * テンプレだけの薄いページにしない。誠実性の原則（「確認できた」表現）を踏襲。
+ */
+export function getPrefectureReport(prefId: string): PrefectureReport | null {
+  const norm = prefId.toLowerCase().trim();
+  const inPref = STORE.filter((m) => m.prefId.toLowerCase() === norm);
+  if (inPref.length === 0) return null;
+  const prefName = inPref[0].prefName;
+
+  const withSubsidyList = inPref.filter((m) => m.subsidy?.hasSubsidy === true);
+  const ranking = getCitiesAmountRankingInPrefecture(prefId, 50);
+  const amounts = ranking.rows.map((r) => r.amountYen);
+
+  const coverage = getCoverageSummary();
+  const amountSummary = getAmountStatsSummary();
+  const prefAmountRanking = getPrefectureAmountRanking(5, 3);
+  // 金額母数3以上の県のみで（平均額降順の）順位を付け直す。
+  const rankedPrefs = prefAmountRanking.rows.filter((r) => r.sampleSize >= 3);
+  const prefRankIdx = rankedPrefs.findIndex((r) => r.prefId.toLowerCase() === norm);
+
+  return {
+    prefId: inPref[0].prefId,
+    prefName,
+    total: inPref.length,
+    withSubsidy: withSubsidyList.length,
+    withSubsidyPercent:
+      inPref.length === 0 ? 0 : Math.round((withSubsidyList.length / inPref.length) * 1000) / 10,
+    withParsedAmount: amounts.length,
+    medianYen: medianOf(amounts),
+    averageYen: amounts.length === 0 ? null : Math.round(amounts.reduce((s, n) => s + n, 0) / amounts.length),
+    maxYen: amounts.length === 0 ? null : Math.max(...amounts),
+    minYen: amounts.length === 0 ? null : Math.min(...amounts),
+    topEntry: ranking.rows[0] ?? null,
+    cityRanking: ranking.rows,
+    national: {
+      withSubsidyPercent: coverage.withSubsidyPercent,
+      medianYen: amountSummary.medianYen,
+      averageYen: amountSummary.averageYen,
+      coveragePercent: coverage.coveragePercent,
+      prefAmountRank: prefRankIdx >= 0 ? prefRankIdx + 1 : null,
+      prefAmountTotalRanked: rankedPrefs.length,
+    },
+    meta: buildMeta(),
+  };
+}
+
+/* ============================================================
  * 10. ページ一括取得ヘルパー
  * ============================================================ */
 

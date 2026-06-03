@@ -168,6 +168,11 @@ export default async function AreaPrefecturePage({ params }: Props) {
             全{totalCities}市区町村中
           </span>
         </p>
+        <p className="mt-2 text-sm text-foreground/70">
+          <Link href={`/data/akiya-hojokin-ranking/${prefId}`} className="font-medium text-primary hover:underline">
+            {prefectureName}の補助金額ランキング・全国比較データを見る →
+          </Link>
+        </p>
       </section>
 
       <section aria-label={`${prefectureName}の市区町村別 空き家解体補助金一覧`} className="space-y-4">

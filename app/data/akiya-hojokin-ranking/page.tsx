@@ -5,6 +5,7 @@ import { SITE_NAME_LOGO } from "@/app/lib/site-brand";
 import JsonLd from "@/app/components/JsonLd";
 import {
   getRankingPageData,
+  getAllPrefectureSlugs,
   formatYenAsMan,
   STATS_AS_OF,
   STATS_CREDIT,
@@ -58,6 +59,7 @@ export function generateMetadata(): Metadata {
       description,
       type: "article",
       url,
+      images: [`${base}/opendata/akiya-hojokin-infographic.png`],
     },
   };
 }
@@ -464,6 +466,27 @@ export default function Page() {
         </div>
       </section>
 
+      {/* 都道府県別の詳細データ（47面への内部リンク・発見性/回遊） */}
+      <section className="mb-12">
+        <h2 className="mb-2 border-l-4 border-emerald-500 pl-3 text-xl font-bold sm:text-2xl">
+          都道府県別の詳細データ・市区町村ランキング
+        </h2>
+        <p className="mb-4 text-sm text-foreground/60">
+          各都道府県の市区町村別ランキング・中央値・全国比較を、県別ページで確認できます。
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {getAllPrefectureSlugs().map((p) => (
+            <Link
+              key={p.prefId}
+              href={`${PAGE_PATH}/${p.prefId}`}
+              className="rounded-lg border border-border bg-card px-3 py-1.5 text-sm text-foreground/80 transition hover:border-primary/40 hover:text-primary"
+            >
+              {p.prefName}
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* CTA: あなたの市区町村を調べる */}
       <section className="mb-8 rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-primary-light/20 to-amber-50/40 p-6 sm:p-7">
         <h2 className="mb-3 text-lg font-bold sm:text-xl">
@@ -502,6 +525,8 @@ export default function Page() {
           reportUrl={url}
           csvUrl={`${base}/opendata/akiya-hojokin-2026.csv`}
           jsonUrl={`${base}/opendata/akiya-hojokin-2026.json`}
+          imageUrl={`${base}/opendata/akiya-hojokin-infographic.png`}
+          region={{ name: "全国", isNational: true }}
           stats={{
             total: coverage.total.toLocaleString("ja-JP"),
             nationalTotal: coverage.nationalTotal.toLocaleString("ja-JP"),

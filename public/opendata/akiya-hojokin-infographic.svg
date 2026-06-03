@@ -1,0 +1,19 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#fffdf8"/>
+  <rect x="0" y="0" width="1200" height="14" fill="#2f7d5b"/>
+  <text x="70" y="92" font-family="sans-serif" font-size="30" fill="#6b5f51">独自調査 2026年6月時点・ふれあいの丘調べ</text>
+  <text x="70" y="150" font-family="sans-serif" font-size="46" font-weight="bold" fill="#33312e">全国 空き家解体補助金 調査 2026</text>
+
+  <text x="70" y="298" font-family="sans-serif" font-size="140" font-weight="bold" fill="#2f7d5b">48.9%</text>
+  <text x="540" y="236" font-family="sans-serif" font-size="34" fill="#33312e">の自治体で</text>
+  <text x="540" y="292" font-family="sans-serif" font-size="42" font-weight="bold" fill="#33312e">解体補助金を確認</text>
+  <text x="540" y="340" font-family="sans-serif" font-size="28" fill="#6b5f51">（調査1,726自治体のうち844自治体）</text>
+
+  <rect x="70" y="380" width="1060" height="26" rx="13" fill="#eee7da"/>
+  <rect x="70" y="380" width="518" height="26" rx="13" fill="#2f7d5b"/>
+
+  <text x="70" y="478" font-family="sans-serif" font-size="36" fill="#33312e">上限額の中央値 <tspan font-weight="bold" fill="#2f7d5b">50万円</tspan>（平均 約64万円）</text>
+  <text x="70" y="524" font-family="sans-serif" font-size="28" fill="#6b5f51">調査範囲：全国1,741市区町村の約99.1%（1,726自治体）／ 出典：各自治体公式サイト</text>
+
+  <text x="70" y="596" font-family="sans-serif" font-size="24" fill="#6b5f51">生前整理支援センター ふれあいの丘 ｜ CC BY 4.0 ｜ www.fureaino-oka.com/data/akiya-hojokin-ranking</text>
+</svg>

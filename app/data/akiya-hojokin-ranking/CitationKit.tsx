@@ -39,6 +39,10 @@ type Props = {
   csvUrl: string;
   jsonUrl: string;
   stats: Stats;
+  /** 引用文・カードの地域スコープ。全国＝{name:"全国", isNational:true}、県別＝{name:"東京都", isNational:false} */
+  region?: { name: string; isNational: boolean };
+  /** 配布インフォグラフィック画像URL（あれば「画像で引用」を表示）。 */
+  imageUrl?: string;
 };
 
 const SITE_LABEL = "生前整理支援センター ふれあいの丘";
@@ -89,30 +93,63 @@ function CopyButton({
   );
 }
 
-export function CitationKit({ reportUrl, csvUrl, jsonUrl, stats }: Props) {
+export function CitationKit({
+  reportUrl,
+  csvUrl,
+  jsonUrl,
+  stats,
+  region = { name: "全国", isNational: true },
+  imageUrl,
+}: Props) {
+  // 地域スコープに応じた見出し・出典名・調査名
+  const surveyName = region.isNational
+    ? `全国${stats.total}自治体 空き家解体補助金 調査`
+    : `${region.name} 空き家解体補助金 調査`;
+  const scopePrefix = region.isNational
+    ? `全国${stats.nationalTotal}市区町村の約${stats.coveragePercent}%にあたる${stats.total}自治体`
+    : `${region.name}の${stats.total}自治体`;
+  const headline = region.isNational
+    ? `調査した${stats.total}自治体のうち、解体補助金を確認できたのは`
+    : `${region.name}で調査した${stats.total}自治体のうち、解体補助金を確認できたのは`;
+
   // 用途別の引用文（誠実な母数・定義つき）
   const citeInline =
-    `全国${stats.nationalTotal}市区町村の約${stats.coveragePercent}%にあたる${stats.total}自治体を調査したところ、` +
+    `${scopePrefix}を調査したところ、` +
     `空き家の解体補助金を確認できたのは${stats.withSubsidy}自治体（${stats.withSubsidyPercent}%）で、` +
     `上限額の中央値は${stats.medianMan}だった（${stats.credit}・${stats.asOf}）。`;
-  const citeCaption = `出典：全国${stats.total}自治体 空き家解体補助金 調査（${stats.credit}・${stats.asOf}）／ ${SITE_LABEL}`;
-  const citeReference = `${SITE_LABEL}（2026）「全国${stats.total}自治体 空き家解体補助金 調査データ」v${stats.version}. ${reportUrl}`;
+  const citeCaption = `出典：${surveyName}（${stats.credit}・${stats.asOf}）／ ${SITE_LABEL}`;
+  const citeReference = `${SITE_LABEL}（2026）「${surveyName}データ」v${stats.version}. ${reportUrl}`;
+
+  // 最高額の注記（県別では特例の有無が一概でないため簡潔に）
+  const maxNote = region.isNational
+    ? `（平均 約${stats.averageMan}／最高は${stats.topPref}${stats.topCity}・特例含む ${stats.maxMan}）`
+    : `（平均 約${stats.averageMan}／県内最高 ${stats.maxMan}）`;
 
   // 自己完結の埋め込みカード（インラインスタイルのみ・外部CSS/JS不要・実 <a> リンク入り・ビジュアルバー付き）
   const embedHtml =
     `<div style="max-width:540px;margin:16px 0;padding:16px 18px;border:1px solid #e5e1d8;border-radius:14px;` +
     `font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',Meiryo,sans-serif;line-height:1.7;color:#33312e;background:#fffdf8;">` +
-    `<div style="font-size:12px;color:#9a8f7d;margin-bottom:6px;">空き家の解体補助金 全国調査（${stats.asOf}・${stats.credit}）</div>` +
-    `<div style="font-size:16px;font-weight:700;">調査した${stats.total}自治体のうち、解体補助金を確認できたのは` +
+    `<div style="font-size:12px;color:#9a8f7d;margin-bottom:6px;">${surveyName}（${stats.asOf}・${stats.credit}）</div>` +
+    `<div style="font-size:16px;font-weight:700;">${headline}` +
     `<span style="color:#2f7d5b;">${stats.withSubsidy}自治体（${stats.withSubsidyPercent}%）</span>。</div>` +
     `<div style="margin:10px 0 6px;height:10px;border-radius:5px;background:#eee7da;overflow:hidden;">` +
     `<div style="width:${stats.withSubsidyPercent}%;height:100%;background:#2f7d5b;"></div></div>` +
     `<div style="font-size:13px;color:#5b574f;">上限額の中央値 <strong>${stats.medianMan}</strong>` +
-    `（平均 約${stats.averageMan}／最高は${stats.topPref}${stats.topCity}・特例含む ${stats.maxMan}）。金額確認 ${stats.parsedN}自治体。</div>` +
+    `${maxNote}。金額確認 ${stats.parsedN}自治体。</div>` +
     `<div style="font-size:12px;color:#9a8f7d;margin-top:10px;">出典：` +
-    `<a href="${reportUrl}" target="_blank" rel="noopener" style="color:#2f7d5b;text-decoration:underline;">全国${stats.total}自治体 空き家解体補助金 調査（${stats.credit}）</a>` +
+    `<a href="${reportUrl}" target="_blank" rel="noopener" style="color:#2f7d5b;text-decoration:underline;">${surveyName}（${stats.credit}）</a>` +
     `｜${SITE_LABEL}</div>` +
     `</div>`;
+
+  // 画像で引用する場合の埋め込みコード（img＋出典リンク）
+  const imageEmbedHtml = imageUrl
+    ? `<figure style="max-width:600px;margin:16px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',Meiryo,sans-serif;">` +
+      `<a href="${reportUrl}" target="_blank" rel="noopener">` +
+      `<img src="${imageUrl}" alt="${surveyName}（${stats.asOf}・${stats.credit}）" style="width:100%;height:auto;border:1px solid #e5e1d8;border-radius:12px;" loading="lazy"></a>` +
+      `<figcaption style="font-size:12px;color:#9a8f7d;margin-top:6px;">出典：` +
+      `<a href="${reportUrl}" target="_blank" rel="noopener" style="color:#2f7d5b;">${surveyName}（${stats.credit}）</a>｜${SITE_LABEL}</figcaption>` +
+      `</figure>`
+    : "";
 
   return (
     <div className="space-y-6">
@@ -185,9 +222,49 @@ export function CitationKit({ reportUrl, csvUrl, jsonUrl, stats }: Props) {
         </div>
       </div>
 
-      {/* 3. オープンデータDL */}
+      {/* 2.5 画像で引用（インフォグラフィック）。imageUrl がある場合のみ表示。 */}
+      {imageUrl && (
+        <div className="rounded-xl border border-border bg-card p-5">
+          <h3 className="mb-1 text-base font-bold">③ 画像で引用する（インフォグラフィック）</h3>
+          <p className="mb-3 text-sm text-foreground/70">
+            記事に"図版"として置けるインフォグラフィックです。画像クリックで出典ページに戻るリンク付き。下のHTMLを貼るか、画像を直接ダウンロードしてご利用ください（出典明記でCC BY 4.0）。
+          </p>
+          <div className="mb-3">
+            <a href={imageUrl} target="_blank" rel="noopener">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={imageUrl}
+                alt={`${surveyName}（${stats.asOf}・${stats.credit}）`}
+                className="w-full max-w-md rounded-lg border border-border"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <div className="mb-1 text-xs font-semibold text-foreground/50">画像の埋め込みコード（HTML）</div>
+          <textarea
+            readOnly
+            value={imageEmbedHtml}
+            onFocus={(e) => e.currentTarget.select()}
+            rows={4}
+            className="w-full resize-y rounded-lg border border-border bg-muted/30 p-3 font-mono text-[11px] leading-relaxed text-foreground/80"
+          />
+          <div className="mt-3 flex flex-wrap gap-2">
+            <CopyButton text={imageEmbedHtml} label="画像の埋め込みコードをコピー" primary />
+            <a
+              href={imageUrl}
+              download
+              className="inline-flex items-center gap-2 rounded-lg border border-primary px-4 py-2 text-sm font-bold text-primary transition hover:bg-primary/5"
+            >
+              画像をダウンロード
+              <span aria-hidden>↓</span>
+            </a>
+          </div>
+        </div>
+      )}
+
+      {/* 4. オープンデータDL */}
       <div className="rounded-xl border border-border bg-card p-5">
-        <h3 className="mb-1 text-base font-bold">③ データで使う（オープンデータDL）</h3>
+        <h3 className="mb-1 text-base font-bold">{imageUrl ? "④" : "③"} データで使う（オープンデータDL）</h3>
         <p className="mb-3 text-sm text-foreground/70">
           全{stats.total}自治体の明細を機械可読データで配布しています（CC BY 4.0／全件に出典の公式URL付き）。表計算・分析・再配布にどうぞ。
         </p>
