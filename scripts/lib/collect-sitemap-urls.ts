@@ -28,6 +28,9 @@ function getStaticUrls(): string[] {
   return [
     base,
     `${base}/akiya`, // 空き家ハブ（収益ピラー・2026-06新設）
+    `${base}/akiya/kaitai-hojokin`, // リッチ・ピラー 解体補助金 完全ガイド（2026-06新設）
+    `${base}/news`, // ニュース・プレスリリース（一次ソース・2026-06新設）
+    `${base}/news/akiya-hojokin-survey-2026`, // 調査発表（一次ソース・2026-06新設）
     `${base}/data`, // データ室ハブ（被リンク発見性・2026-06新設）
     `${base}/data/akiya-hojokin-ranking`, // データの堀（被リンク/AI引用源・2026-06新設）
     `${base}/data/seizen-seiri-trends`, // 検索トレンドデータ
@@ -75,8 +78,12 @@ export async function collectAllUrlsWithPriority(): Promise<UrlWithPriority[]> {
   function add(url: string): void {
     // 「/articles/master-guide」「/articles」TOPは Normal にとどめ、個別記事 (/articles/{id}) のみ Top
     const isArticleDetail = /\/articles\/[^/]+$/.test(url) && !url.endsWith("/articles/master-guide");
-    // 新設の収益ピラー・データ室（全/data配下）は最優先（インデックス浸透を急ぐ）
-    const isPriorityHub = url.endsWith("/akiya") || url.includes(`${base}/data`);
+    // 新設の収益ピラー・データ室（全/data配下）・リッチガイド・ニュースは最優先（インデックス浸透を急ぐ）
+    const isPriorityHub =
+      url.endsWith("/akiya") ||
+      url.includes("/akiya/kaitai-hojokin") ||
+      url.includes(`${base}/data`) ||
+      url.includes(`${base}/news`);
     const priority: UrlPriority =
       isArticleDetail || isPriorityHub
         ? "Top"
