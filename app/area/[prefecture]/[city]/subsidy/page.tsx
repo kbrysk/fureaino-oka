@@ -737,6 +737,11 @@ export default async function AreaSubsidyPage({ params }: Props) {
             </Link>
           </li>
           <li>
+            <Link href={`/data/akiya-hojokin-ranking/${ids.prefectureId}`} className="text-primary hover:underline">
+              【{prefName}の調査データ】市区町村別ランキング・中央値・全国比較
+            </Link>
+          </li>
+          <li>
             <Link href="/data/akiya-hojokin-ranking" className="text-primary hover:underline">
               【全国調査】空き家解体補助金ランキング（1,726自治体）
             </Link>
