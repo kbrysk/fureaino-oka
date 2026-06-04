@@ -21,6 +21,7 @@ import AreaSurveyCredit from "../../../../components/AreaSurveyCredit";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import RegionalFaq from "../../../../components/RegionalFaq";
 import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalCard";
+import EmailCTA from "../../../../components/EmailCTA";
 import { TableOfContents } from "../../../../components/TableOfContents";
 import SubsidyNationalContext from "../../../../components/SubsidyNationalContext";
 import { SubsidySummaryBox } from "../../../../components/SubsidySummaryBox";
@@ -613,11 +614,20 @@ export default async function AreaSubsidyPage({ params }: Props) {
         );
       })()}
 
-      {/* 売却・査定の選択肢 */}
+      {/* 売却・査定の選択肢（今すぐ売る高intent向け） */}
       <RealEstateAppraisalCard
         cityName={cityName}
         cityId={ids.cityId}
         localRiskText={data.mascot?.localRiskText}
+      />
+
+      {/* Zero-Party Data 捕捉（情報段階の補助金探索者をリード化。査定に至らない層を取りこぼさない） */}
+      <EmailCTA
+        variant="inline"
+        heading="空き家・解体補助金の進め方ガイドを無料でお届け"
+        description="補助金の申請の流れ・必要書類・解体前の注意点をまとめた無料PDFと、空き家の費用・税金の最新情報をメールでお送りします（いつでも配信停止できます）。"
+        source="area_subsidy"
+        sourceSlug={`${ids.prefectureId}/${ids.cityId}`}
       />
 
       {/* S5: 直接回答型FAQ（AI Overview対策・40文字以内の直接回答） */}
