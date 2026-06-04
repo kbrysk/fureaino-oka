@@ -81,6 +81,9 @@ export default async function sitemap(props: {
         { url: `${base}/data`, lastModified, changeFrequency: "weekly", priority: 0.8 },
         { url: `${base}/data/akiya-hojokin-ranking`, lastModified, changeFrequency: "weekly", priority: 0.85 },
         { url: `${base}/data/seizen-seiri-trends`, lastModified, changeFrequency: "monthly", priority: 0.6 },
+        // ニュース・プレスリリース（一次ソース・被リンク資産）
+        { url: `${base}/news`, lastModified, changeFrequency: "weekly", priority: 0.7 },
+        { url: `${base}/news/akiya-hojokin-survey-2026`, lastModified, changeFrequency: "monthly", priority: 0.75 },
       ];
 
       // 都道府県別 空き家解体補助金 データ（47面）

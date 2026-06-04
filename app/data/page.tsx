@@ -134,6 +134,7 @@ export default function Page() {
         <h2 className="mb-2 text-lg font-bold">報道・引用される方へ</h2>
         <p className="text-sm leading-relaxed text-foreground/80">
           各データページに、引用文（本文・図表キャプション・参考文献）のワンクリックコピー、埋め込みカード、オープンデータ（CSV/JSON・全件に公式URL付き）をご用意しています。
+          最新の調査発表は <Link href="/news" className="text-primary underline hover:no-underline">ニュース・プレスリリース</Link>、
           取材・データのご相談は <Link href="/contact" className="text-primary underline hover:no-underline">お問い合わせ</Link> へお気軽にどうぞ。
         </p>
       </section>

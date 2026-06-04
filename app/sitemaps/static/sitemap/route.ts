@@ -20,6 +20,8 @@ const STATIC_PAGES: { path: string; priority: number; changeFrequency: SitemapEn
   { path: "/data", priority: 0.8, changeFrequency: "weekly" },
   { path: "/data/akiya-hojokin-ranking", priority: 0.85, changeFrequency: "weekly" },
   { path: "/data/seizen-seiri-trends", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/news", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/news/akiya-hojokin-survey-2026", priority: 0.75, changeFrequency: "monthly" },
   { path: "/checklist", priority: 0.7, changeFrequency: "monthly" },
   { path: "/assets", priority: 0.7, changeFrequency: "monthly" },
   { path: "/guidebook", priority: 0.7, changeFrequency: "monthly" },
