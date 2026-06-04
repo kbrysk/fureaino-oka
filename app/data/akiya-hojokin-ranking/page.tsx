@@ -211,6 +211,10 @@ export default function Page() {
         <p className="mt-3 text-xs text-foreground/45">
           母数の全国市区町村数（{coverage.nationalTotal.toLocaleString("ja-JP")}）の出典: {NATIONAL_TOTAL_SOURCE}。
           データ版 v{DATA_VERSION}。
+          {" "}
+          <Link href="/news/akiya-hojokin-survey-2026" className="text-primary hover:underline">
+            調査発表（プレスリリース）
+          </Link>
         </p>
       </header>
 

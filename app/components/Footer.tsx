@@ -33,6 +33,9 @@ const FOOTER_TOOLS: { href: string; label: string }[] = [
 const FOOTER_GUIDE_AND_CONTENT: { href: string; label: string }[] = [
   { href: "/about-site", label: "ふれあいの丘とは" },
   { href: "/articles/master-guide", label: "生前整理のはじめかた" },
+  { href: "/data", label: "独自調査データ室" },
+  { href: "/data/akiya-hojokin-ranking", label: "空き家解体補助金 全国調査" },
+  { href: "/news", label: "ニュース・プレスリリース" },
   { href: "/guidebook", label: "ガイドブック（無料PDF）" },
   { href: "/articles", label: "記事一覧" },
   { href: "/cost", label: "間取り別 片付け費用" },
