@@ -21,6 +21,7 @@ import AreaSurveyCredit from "../../../../components/AreaSurveyCredit";
 import AreaDirectoryFallback from "../../../../components/AreaDirectoryFallback";
 import RegionalFaq from "../../../../components/RegionalFaq";
 import RealEstateAppraisalCard from "../../../../components/RealEstateAppraisalCard";
+import DemolitionEstimateCard from "../../../../components/DemolitionEstimateCard";
 import EmailCTA from "../../../../components/EmailCTA";
 import { TableOfContents } from "../../../../components/TableOfContents";
 import SubsidyNationalContext from "../../../../components/SubsidyNationalContext";
@@ -613,6 +614,9 @@ export default async function AreaSubsidyPage({ params }: Props) {
           </section>
         );
       })()}
+
+      {/* 解体一括見積もり（解体する人 intent向け。補助金ページに最も意図一致） */}
+      <DemolitionEstimateCard cityName={cityName} cityId={ids.cityId} />
 
       {/* 売却・査定の選択肢（今すぐ売る高intent向け） */}
       <RealEstateAppraisalCard
