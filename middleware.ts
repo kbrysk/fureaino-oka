@@ -44,6 +44,16 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("/company", request.url), 301);
   }
 
+  // 0-b. 「空き家 解体 補助金」のカニバリ統合：旧CMS記事 → 新リッチ・ピラーへ301
+  //      （同一KWで競合する2ページを1本化し、評価を集約。データ統合・FAQ・47県ハブを持つ
+  //        /akiya/kaitai-hojokin を唯一の正規ページにする）
+  if (
+    pathname === "/articles/akiya-kaitai-hojokin" ||
+    pathname === "/articles/akiya-kaitai-hojokin/"
+  ) {
+    return NextResponse.redirect(new URL("/akiya/kaitai-hojokin", request.url), 301);
+  }
+
   // 1. 中古ドメイン遺物 → 410 Gone（Search Console でインデックス削除を促す）
   if (pathname === LEGACY_410_EXACT) {
     return new NextResponse(null, { status: 410 });

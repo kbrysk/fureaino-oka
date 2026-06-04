@@ -60,7 +60,7 @@ const CHOICES = [
     lead: "木造30坪で90万〜150万円が目安。自治体の解体補助金で自己負担を減らせる場合も。ただし更地は住宅用地特例が外れ固定資産税が上がる。",
     pros: ["危険・倒壊リスクを解消", "更地は売りやすくなることも", "補助金で費用を圧縮できる場合"],
     cons: ["解体費用がかかる", "更地化で固定資産税が最大6倍に"],
-    next: { label: "地域の解体補助金を調べる", href: "/area" },
+    next: { label: "解体補助金 完全ガイドを読む", href: "/akiya/kaitai-hojokin" },
   },
   {
     icon: "🔑",
@@ -87,7 +87,7 @@ const CLUSTER_ARTICLES = [
   { href: "/articles/tokutei-akiya", title: "特定空き家とは？指定基準・固定資産税6倍への影響と今できる対策", tag: "リスク" },
   { href: "/articles/jikka-kotei-shisanzei-taisaku", title: "実家の固定資産税対策ガイド｜住宅用地特例・改正空家法の影響", tag: "税金" },
   { href: "/articles/akiya-kaitai-hiyou", title: "空き家の解体費用はいくら？相場・補助金・解体後の固定資産税", tag: "費用" },
-  { href: "/articles/akiya-kaitai-hojokin", title: "空き家の解体補助金とは？対象条件・補助額の目安・申請の流れ", tag: "補助金" },
+  { href: "/akiya/kaitai-hojokin", title: "空き家の解体補助金 完全ガイド｜相場・対象条件・申請の流れと全国データ", tag: "補助金" },
   { href: "/articles/akiya-shobun", title: "空き家の処分方法まとめ｜売却・解体・譲渡の選び方と対処", tag: "処分" },
   { href: "/articles/fudosan-baikyaku-nagare", title: "不動産売却の流れ完全ガイド｜査定〜引き渡しの全7ステップ", tag: "売却" },
   { href: "/articles/fudosan-satei", title: "実家・空き家の不動産査定｜机上査定と訪問査定の違い・複数社比較のコツ", tag: "査定" },

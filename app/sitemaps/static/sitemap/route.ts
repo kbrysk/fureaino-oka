@@ -7,6 +7,8 @@ const STATIC_PAGES: { path: string; priority: number; changeFrequency: SitemapEn
   { path: "/area", priority: 0.9, changeFrequency: "weekly" },
   { path: "/articles", priority: 0.9, changeFrequency: "weekly" },
   { path: "/articles/master-guide", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/akiya", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/akiya/kaitai-hojokin", priority: 0.85, changeFrequency: "monthly" },
   { path: "/tools", priority: 0.8, changeFrequency: "monthly" },
   { path: "/tools/jikka-diagnosis", priority: 0.8, changeFrequency: "monthly" },
   { path: "/tools/akiya-risk", priority: 0.8, changeFrequency: "monthly" },

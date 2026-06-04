@@ -66,6 +66,9 @@ export default async function sitemap(props: {
         { url: `${base}/assets`, lastModified, changeFrequency: "monthly", priority: 0.7 },
         { url: `${base}/ending-note`, lastModified, changeFrequency: "monthly", priority: 0.7 },
         { url: `${base}/articles`, lastModified, changeFrequency: "weekly", priority: 0.8 },
+        // 空き家・不動産ピラー（収益の心臓部）＋リッチ・ガイド
+        { url: `${base}/akiya`, lastModified, changeFrequency: "weekly", priority: 0.9 },
+        { url: `${base}/akiya/kaitai-hojokin`, lastModified, changeFrequency: "monthly", priority: 0.85 },
         { url: `${base}/tools/jikka-diagnosis`, lastModified, changeFrequency: "monthly", priority: 0.8 },
         { url: `${base}/tools/akiya-risk`, lastModified, changeFrequency: "monthly", priority: 0.8 },
         { url: `${base}/tools/souzoku-prep`, lastModified, changeFrequency: "monthly", priority: 0.8 },
