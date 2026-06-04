@@ -120,6 +120,8 @@ export const config = {
   matcher: [
     "/about",
     "/about/",
+    "/articles/akiya-kaitai-hojokin",
+    "/articles/akiya-kaitai-hojokin/",
     "/area/:path*",
     "/region/:path*",
     "/tax-simulator/:path*",
