@@ -746,6 +746,11 @@ export default async function AreaSubsidyPage({ params }: Props) {
               【全国調査】空き家解体補助金ランキング（1,726自治体）
             </Link>
           </li>
+          <li>
+            <Link href="/akiya/kaitai-hojokin" className="text-primary hover:underline">
+              空き家の解体補助金 完全ガイド｜相場・対象条件・申請の流れ
+            </Link>
+          </li>
         </ul>
       </section>
 

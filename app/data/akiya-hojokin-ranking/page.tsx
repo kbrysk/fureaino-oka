@@ -497,7 +497,9 @@ export default function Page() {
           あなたの市区町村の解体補助金を調べる
         </h2>
         <p className="mb-5 text-sm leading-relaxed text-foreground/75 sm:text-base">
-          補助金の有無・上限額・申請条件は市区町村ごとに大きく異なります。お住まい（または実家）の地域ページで、最新の制度と「全国での位置づけ」を確認できます。
+          補助金の有無・上限額・申請条件は市区町村ごとに大きく異なります。お住まい（または実家）の地域ページで、最新の制度と「全国での位置づけ」を確認できます。制度の基礎から申請の流れまでは
+          <Link href="/akiya/kaitai-hojokin" className="font-medium text-primary underline hover:no-underline">解体補助金 完全ガイド</Link>
+          にまとめています。
         </p>
         <div className="flex flex-wrap gap-3">
           <Link
