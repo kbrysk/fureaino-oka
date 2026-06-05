@@ -1,0 +1,29 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#fffdf8"/>
+  <rect x="0" y="0" width="1200" height="14" fill="#2f7d5b"/>
+  <text x="70" y="86" font-family="sans-serif" font-size="28" fill="#6b5f51">独自調査 2026年6月時点・ふれあいの丘調べ</text>
+  <text x="70" y="142" font-family="sans-serif" font-size="44" font-weight="bold" fill="#33312e">空き家の解体補助金「申請条件」の全国実態</text>
+  <text x="70" y="184" font-family="sans-serif" font-size="28" fill="#6b5f51">補助金を確認できた 844自治体の公式な申請条件を分析（条件文に記載がある割合）</text>
+  
+  <text x="70" y="222" font-family="sans-serif" font-size="30" fill="#33312e">税の滞納がないこと</text>
+  <text x="1130" y="222" text-anchor="end" font-family="sans-serif" font-size="34" font-weight="bold" fill="#2f7d5b">75.2%</text>
+  <rect x="70" y="234" width="1060" height="20" rx="10" fill="#eee7da"/>
+  <rect x="70" y="234" width="797" height="20" rx="10" fill="#2f7d5b"/>
+  <text x="70" y="298" font-family="sans-serif" font-size="30" fill="#33312e">予算・先着順（早い者勝ち）</text>
+  <text x="1130" y="298" text-anchor="end" font-family="sans-serif" font-size="34" font-weight="bold" fill="#2f7d5b">74.8%</text>
+  <rect x="70" y="310" width="1060" height="20" rx="10" fill="#eee7da"/>
+  <rect x="70" y="310" width="793" height="20" rx="10" fill="#2f7d5b"/>
+  <text x="70" y="374" font-family="sans-serif" font-size="30" fill="#33312e">危険・老朽であること</text>
+  <text x="1130" y="374" text-anchor="end" font-family="sans-serif" font-size="34" font-weight="bold" fill="#2f7d5b">72%</text>
+  <rect x="70" y="386" width="1060" height="20" rx="10" fill="#eee7da"/>
+  <rect x="70" y="386" width="763" height="20" rx="10" fill="#2f7d5b"/>
+  <text x="70" y="450" font-family="sans-serif" font-size="30" fill="#33312e">市内・指定業者での施工</text>
+  <text x="1130" y="450" text-anchor="end" font-family="sans-serif" font-size="34" font-weight="bold" fill="#2f7d5b">39.7%</text>
+  <rect x="70" y="462" width="1060" height="20" rx="10" fill="#eee7da"/>
+  <rect x="70" y="462" width="421" height="20" rx="10" fill="#2f7d5b"/>
+  <text x="70" y="526" font-family="sans-serif" font-size="30" fill="#33312e">所有者・相続人であること</text>
+  <text x="1130" y="526" text-anchor="end" font-family="sans-serif" font-size="34" font-weight="bold" fill="#2f7d5b">35.4%</text>
+  <rect x="70" y="538" width="1060" height="20" rx="10" fill="#eee7da"/>
+  <rect x="70" y="538" width="375" height="20" rx="10" fill="#2f7d5b"/>
+  <text x="70" y="600" font-family="sans-serif" font-size="23" fill="#6b5f51">生前整理支援センター ふれあいの丘 ｜ CC BY 4.0 ｜ www.fureaino-oka.com/data/akiya-hojokin-joken</text>
+</svg>

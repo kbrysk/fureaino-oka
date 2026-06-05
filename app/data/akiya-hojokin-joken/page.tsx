@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import EmailCTA from "../../components/EmailCTA";
 import JsonLd from "../../components/JsonLd";
 import { pageTitle, SITE_NAME_LOGO } from "../../lib/site-brand";
@@ -44,7 +45,7 @@ export function generateMetadata(): Metadata {
       description,
       type: "article",
       url: getCanonicalUrl(PAGE_PATH),
-      images: [`${getCanonicalBase()}/opendata/akiya-hojokin-infographic.png`],
+      images: [`${getCanonicalBase()}/opendata/akiya-hojokin-joken-infographic.png`],
     },
   };
 }
@@ -64,7 +65,7 @@ export default function Page() {
     headline: `空き家解体補助金「申請条件」の全国実態調査（${s.sampleSize}自治体分析）`,
     datePublished: PUBLISHED,
     dateModified: MODIFIED,
-    image: [`${base}/opendata/akiya-hojokin-infographic.png`],
+    image: [`${base}/opendata/akiya-hojokin-joken-infographic.png`],
     author: { "@type": "Organization", name: SITE_NAME_LOGO, url: base },
     publisher: {
       "@type": "Organization",
@@ -208,13 +209,30 @@ export default function Page() {
       {/* 引用について */}
       <section className="mb-12">
         <h2 className="mb-3 border-l-4 border-emerald-500 pl-3 text-xl font-bold sm:text-2xl">このデータの引用について</h2>
-        <p className="mb-3 text-base text-foreground/85">
-          本データは出典を明記の上、記事・報道・研究・自治体資料などに自由にご利用いただけます（CC BY 4.0）。コピペ用の引用文です。
+        <p className="mb-4 text-base text-foreground/85">
+          本データは出典を明記の上、記事・報道・研究・自治体資料などに自由にご利用いただけます（CC BY 4.0）。下記の図版・引用文・CSVをご活用ください。
         </p>
-        <blockquote className="rounded-xl border border-border bg-card p-4 text-sm text-foreground/80">
+
+        <Image
+          src="/opendata/akiya-hojokin-joken-infographic.png"
+          alt="空き家解体補助金 申請条件の全国実態（ふれあいの丘調べ・2026年6月時点）"
+          width={1200}
+          height={630}
+          className="mb-2 w-full rounded-xl border border-border"
+        />
+        <p className="mb-4 text-xs text-foreground/50">▲ 出典明記でそのまま記事・資料に貼り付けてご利用いただけます（CC BY 4.0）。</p>
+
+        <p className="mb-1 text-sm font-medium text-foreground/80">コピペ用の引用文</p>
+        <blockquote className="mb-4 rounded-xl border border-border bg-card p-4 text-sm text-foreground/80">
           {citationText}
         </blockquote>
-        <p className="mt-3 text-sm">
+
+        <p className="mb-1 text-sm font-medium text-foreground/80">図版の埋め込みコード（HTML）</p>
+        <pre className="mb-4 overflow-x-auto rounded-xl border border-border bg-muted/30 p-4 text-xs text-foreground/70">
+          <code>{`<a href="${url}"><img src="${base}/opendata/akiya-hojokin-joken-infographic.png" alt="空き家解体補助金 申請条件の全国実態（ふれあいの丘調べ）" width="600"></a>`}</code>
+        </pre>
+
+        <p className="text-sm">
           元データ（CSV・全自治体の制度名・上限額・公式URL付き）：
           <a href={`${base}/opendata/akiya-hojokin-2026.csv`} className="text-primary hover:underline">akiya-hojokin-2026.csv</a>
         </p>
