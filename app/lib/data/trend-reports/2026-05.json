@@ -1,0 +1,1945 @@
+{
+  "generated_at": "2026-05-29T01:09:58.935Z",
+  "report_month": "2026-05",
+  "source_generated_at": "2026-05-29T01:04:06.521Z",
+  "geo": "JP",
+  "hl": "ja-JP",
+  "keyword_count": 20,
+  "success_count": 20,
+  "summary": {
+    "averagePeriodInterest": 41.3,
+    "averageLiftPercent": 98.1,
+    "trendingCount": 6,
+    "decliningCount": 1
+  },
+  "trending_top10": [
+    {
+      "keyword": "生前整理",
+      "label": "生前整理",
+      "cluster": "core",
+      "kwId": "C10-008",
+      "monthlyVolume": 3600,
+      "ymylSensitive": false,
+      "periodAverage": 38.6,
+      "recent30Avg": 16,
+      "prior60Avg": 1.7,
+      "liftRatio": 9.58,
+      "liftPercent": 858,
+      "topRelated": [
+        {
+          "query": "生前 整理",
+          "value": 100
+        },
+        {
+          "query": "生前 遺品 整理",
+          "value": 26
+        },
+        {
+          "query": "遺品 整理",
+          "value": 25
+        },
+        {
+          "query": "生前 整理 買取",
+          "value": 15
+        },
+        {
+          "query": "生前 整理 業者",
+          "value": 8
+        }
+      ],
+      "risingRelated": [
+        {
+          "query": "生前 整理",
+          "value": 9999900
+        },
+        {
+          "query": "生前 遺品 整理",
+          "value": 2563500
+        },
+        {
+          "query": "遺品 整理",
+          "value": 2530400
+        },
+        {
+          "query": "生前 整理 買取",
+          "value": 1450050
+        },
+        {
+          "query": "生前 整理 業者",
+          "value": 847950
+        }
+      ],
+      "topRegions": [
+        {
+          "name": "石川県",
+          "value": 100
+        },
+        {
+          "name": "奈良県",
+          "value": 88
+        },
+        {
+          "name": "岡山県",
+          "value": 74
+        },
+        {
+          "name": "富山県",
+          "value": 71
+        },
+        {
+          "name": "北海道",
+          "value": 65
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": true,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "訪問購入",
+      "label": "押し買い（訪問購入）",
+      "cluster": "trouble",
+      "kwId": null,
+      "monthlyVolume": null,
+      "ymylSensitive": false,
+      "periodAverage": 26.4,
+      "recent30Avg": 10.7,
+      "prior60Avg": 1.7,
+      "liftRatio": 6.44,
+      "liftPercent": 544,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "佐賀県",
+          "value": 100
+        },
+        {
+          "name": "徳島県",
+          "value": 75
+        },
+        {
+          "name": "島根県",
+          "value": 75
+        },
+        {
+          "name": "香川県",
+          "value": 75
+        },
+        {
+          "name": "和歌山県",
+          "value": 75
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "ゴミ屋敷 片付け",
+      "label": "ゴミ屋敷 片付け",
+      "cluster": "disposal",
+      "kwId": "C8-014",
+      "monthlyVolume": 6600,
+      "ymylSensitive": false,
+      "periodAverage": 46.7,
+      "recent30Avg": 18.4,
+      "prior60Avg": 3.3,
+      "liftRatio": 5.62,
+      "liftPercent": 462.2,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "岡山県",
+          "value": 100
+        },
+        {
+          "name": "鹿児島県",
+          "value": 85
+        },
+        {
+          "name": "奈良県",
+          "value": 85
+        },
+        {
+          "name": "島根県",
+          "value": 67
+        },
+        {
+          "name": "埼玉県",
+          "value": 65
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "親の介護 兄弟",
+      "label": "親の介護 兄弟",
+      "cluster": "parent_struggle",
+      "kwId": "P4-018",
+      "monthlyVolume": 480,
+      "ymylSensitive": false,
+      "periodAverage": 14.5,
+      "recent30Avg": 2.5,
+      "prior60Avg": 1.7,
+      "liftRatio": 1.48,
+      "liftPercent": 48,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "徳島県",
+          "value": 100
+        },
+        {
+          "name": "鳥取県",
+          "value": 75
+        },
+        {
+          "name": "鹿児島県",
+          "value": 75
+        },
+        {
+          "name": "福井県",
+          "value": 75
+        },
+        {
+          "name": "山梨県",
+          "value": 75
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "空き家 補助金",
+      "label": "空き家 補助金",
+      "cluster": "money_law",
+      "kwId": "P3-017",
+      "monthlyVolume": 1600,
+      "ymylSensitive": false,
+      "periodAverage": 64.5,
+      "recent30Avg": 38.7,
+      "prior60Avg": 27.5,
+      "liftRatio": 1.4,
+      "liftPercent": 40.5,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "香川県",
+          "value": 100
+        },
+        {
+          "name": "鳥取県",
+          "value": 88
+        },
+        {
+          "name": "高知県",
+          "value": 81
+        },
+        {
+          "name": "福井県",
+          "value": 75
+        },
+        {
+          "name": "大分県",
+          "value": 72
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "エンディングノート",
+      "label": "エンディングノート",
+      "cluster": "core",
+      "kwId": "C5-003",
+      "monthlyVolume": 22200,
+      "ymylSensitive": false,
+      "periodAverage": 64.4,
+      "recent30Avg": 46.1,
+      "prior60Avg": 37.5,
+      "liftRatio": 1.23,
+      "liftPercent": 23,
+      "topRelated": [
+        {
+          "query": "エンディング ノート おすすめ",
+          "value": 100
+        }
+      ],
+      "risingRelated": [
+        {
+          "query": "エンディング ノート おすすめ",
+          "value": 239550
+        }
+      ],
+      "topRegions": [
+        {
+          "name": "宮崎県",
+          "value": 100
+        },
+        {
+          "name": "広島県",
+          "value": 93
+        },
+        {
+          "name": "神奈川県",
+          "value": 88
+        },
+        {
+          "name": "東京都",
+          "value": 88
+        },
+        {
+          "name": "奈良県",
+          "value": 84
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": true,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "家族信託",
+      "label": "家族信託",
+      "cluster": "money_law",
+      "kwId": "C9-045",
+      "monthlyVolume": 12100,
+      "ymylSensitive": true,
+      "periodAverage": 56.9,
+      "recent30Avg": 55.9,
+      "prior60Avg": 52.7,
+      "liftRatio": 1.06,
+      "liftPercent": 6.2,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "神奈川県",
+          "value": 100
+        },
+        {
+          "name": "東京都",
+          "value": 92
+        },
+        {
+          "name": "千葉県",
+          "value": 90
+        },
+        {
+          "name": "沖縄県",
+          "value": 87
+        },
+        {
+          "name": "埼玉県",
+          "value": 87
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "遺品整理",
+      "label": "遺品整理",
+      "cluster": "disposal",
+      "kwId": "C6-002",
+      "monthlyVolume": 27100,
+      "ymylSensitive": false,
+      "periodAverage": 54.6,
+      "recent30Avg": 56,
+      "prior60Avg": 53.9,
+      "liftRatio": 1.04,
+      "liftPercent": 3.9,
+      "topRelated": [
+        {
+          "query": "遺品 整理",
+          "value": 100
+        },
+        {
+          "query": "遺品",
+          "value": 100
+        },
+        {
+          "query": "遺品 整理 買取",
+          "value": 11
+        },
+        {
+          "query": "遺品 買取",
+          "value": 11
+        },
+        {
+          "query": "大阪 遺品 整理",
+          "value": 8
+        }
+      ],
+      "risingRelated": [
+        {
+          "query": "遺品 整理 買取",
+          "value": 1135100
+        },
+        {
+          "query": "遺品 整理 士",
+          "value": 722150
+        },
+        {
+          "query": "東京 遺品 整理",
+          "value": 719950
+        },
+        {
+          "query": "不 用品 回収",
+          "value": 706900
+        },
+        {
+          "query": "片付け",
+          "value": 498150
+        }
+      ],
+      "topRegions": [
+        {
+          "name": "奈良県",
+          "value": 100
+        },
+        {
+          "name": "埼玉県",
+          "value": 92
+        },
+        {
+          "name": "北海道",
+          "value": 76
+        },
+        {
+          "name": "岡山県",
+          "value": 73
+        },
+        {
+          "name": "大阪府",
+          "value": 67
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": true,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "親 片付け 嫌がる",
+      "label": "親が片付けを嫌がる",
+      "cluster": "parent_child_gap",
+      "kwId": null,
+      "monthlyVolume": null,
+      "ymylSensitive": false,
+      "periodAverage": 100,
+      "recent30Avg": 0,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "岩手県",
+          "value": 100
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "不用品回収 トラブル",
+      "label": "不用品回収 トラブル",
+      "cluster": "trouble",
+      "kwId": null,
+      "monthlyVolume": null,
+      "ymylSensitive": false,
+      "periodAverage": 100,
+      "recent30Avg": 3.3,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "静岡県",
+          "value": 100
+        },
+        {
+          "name": "岡山県",
+          "value": 25
+        },
+        {
+          "name": "京都府",
+          "value": 25
+        },
+        {
+          "name": "東京都",
+          "value": 25
+        },
+        {
+          "name": "群馬県",
+          "value": 25
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    }
+  ],
+  "declining_top5": [
+    {
+      "keyword": "不用品回収",
+      "label": "不用品回収",
+      "cluster": "disposal",
+      "kwId": "C8-021",
+      "monthlyVolume": 49500,
+      "ymylSensitive": false,
+      "periodAverage": 68.3,
+      "recent30Avg": 61.2,
+      "prior60Avg": 71.8,
+      "liftRatio": 0.85,
+      "liftPercent": -14.8,
+      "topRelated": [
+        {
+          "query": "不 用品 回収 相場",
+          "value": 100
+        },
+        {
+          "query": "不 用品 回収 川崎 市",
+          "value": 51
+        }
+      ],
+      "risingRelated": [
+        {
+          "query": "不 用品 回収 相場",
+          "value": 186750
+        },
+        {
+          "query": "不 用品 回収 川崎 市",
+          "value": 95300
+        }
+      ],
+      "topRegions": [
+        {
+          "name": "埼玉県",
+          "value": 100
+        },
+        {
+          "name": "東京都",
+          "value": 95
+        },
+        {
+          "name": "岡山県",
+          "value": 89
+        },
+        {
+          "name": "奈良県",
+          "value": 85
+        },
+        {
+          "name": "京都府",
+          "value": 77
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": true,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "親の介護",
+      "label": "親の介護",
+      "cluster": "parent_struggle",
+      "kwId": "P4-006",
+      "monthlyVolume": 6600,
+      "ymylSensitive": true,
+      "periodAverage": 56,
+      "recent30Avg": 52.5,
+      "prior60Avg": 55,
+      "liftRatio": 0.95,
+      "liftPercent": -4.6,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "岩手県",
+          "value": 100
+        },
+        {
+          "name": "福島県",
+          "value": 95
+        },
+        {
+          "name": "兵庫県",
+          "value": 89
+        },
+        {
+          "name": "埼玉県",
+          "value": 86
+        },
+        {
+          "name": "宮崎県",
+          "value": 84
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "相続放棄",
+      "label": "相続放棄",
+      "cluster": "money_law",
+      "kwId": "C9-048",
+      "monthlyVolume": 390,
+      "ymylSensitive": true,
+      "periodAverage": 64.3,
+      "recent30Avg": 62.9,
+      "prior60Avg": 65,
+      "liftRatio": 0.97,
+      "liftPercent": -3.2,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "青森県",
+          "value": 100
+        },
+        {
+          "name": "新潟県",
+          "value": 98
+        },
+        {
+          "name": "岩手県",
+          "value": 94
+        },
+        {
+          "name": "鳥取県",
+          "value": 93
+        },
+        {
+          "name": "山口県",
+          "value": 91
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "生前贈与",
+      "label": "生前贈与",
+      "cluster": "money_law",
+      "kwId": "C9-044",
+      "monthlyVolume": 5400,
+      "ymylSensitive": true,
+      "periodAverage": 71.7,
+      "recent30Avg": 70.9,
+      "prior60Avg": 72.1,
+      "liftRatio": 0.98,
+      "liftPercent": -1.7,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "神奈川県",
+          "value": 100
+        },
+        {
+          "name": "香川県",
+          "value": 98
+        },
+        {
+          "name": "徳島県",
+          "value": 96
+        },
+        {
+          "name": "愛知県",
+          "value": 93
+        },
+        {
+          "name": "兵庫県",
+          "value": 93
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "親 片付け 嫌がる",
+      "label": "親が片付けを嫌がる",
+      "cluster": "parent_child_gap",
+      "kwId": null,
+      "monthlyVolume": null,
+      "ymylSensitive": false,
+      "periodAverage": 100,
+      "recent30Avg": 0,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "岩手県",
+          "value": 100
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    }
+  ],
+  "clusters": [
+    {
+      "cluster": "core",
+      "label": "生前整理コア",
+      "description": "生前整理・終活・実家じまい・エンディングノートなど、業界の基幹キーワード",
+      "keywordCount": 4,
+      "averagePeriodInterest": 25.8,
+      "averageLiftPercent": 220.3,
+      "topKeyword": {
+        "keyword": "エンディングノート",
+        "periodAverage": 64.4
+      }
+    },
+    {
+      "cluster": "parent_struggle",
+      "label": "親世代の悩み",
+      "description": "親の介護・終活・きょうだい関係など、子世代が抱える親世代起点の悩み",
+      "keywordCount": 4,
+      "averagePeriodInterest": 17.6,
+      "averageLiftPercent": 10.9,
+      "topKeyword": {
+        "keyword": "親の介護",
+        "periodAverage": 56
+      }
+    },
+    {
+      "cluster": "parent_child_gap",
+      "label": "親子の温度差",
+      "description": "「親が片付けを嫌がる」「実家が片付かない」など、親子のすれ違いを示すシグナル",
+      "keywordCount": 3,
+      "averagePeriodInterest": 33.3,
+      "averageLiftPercent": 0,
+      "topKeyword": {
+        "keyword": "親 片付け 嫌がる",
+        "periodAverage": 100
+      }
+    },
+    {
+      "cluster": "money_law",
+      "label": "制度・お金・法律",
+      "description": "生前贈与・相続放棄・空き家補助金など、制度や金銭が絡む領域（YMYL高）",
+      "keywordCount": 4,
+      "averagePeriodInterest": 64.4,
+      "averageLiftPercent": 10.5,
+      "topKeyword": {
+        "keyword": "生前贈与",
+        "periodAverage": 71.7
+      }
+    },
+    {
+      "cluster": "disposal",
+      "label": "処分・買取・整理",
+      "description": "遺品整理・不用品回収・粗大ごみなど、実務的な処分まわり",
+      "keywordCount": 3,
+      "averagePeriodInterest": 56.5,
+      "averageLiftPercent": 150.4,
+      "topKeyword": {
+        "keyword": "不用品回収",
+        "periodAverage": 68.3
+      }
+    },
+    {
+      "cluster": "trouble",
+      "label": "トラブル・消費者保護",
+      "description": "押し買い・不用品回収トラブルなど、消費者保護文脈で自治体に刺さる切り口",
+      "keywordCount": 2,
+      "averagePeriodInterest": 63.2,
+      "averageLiftPercent": 272,
+      "topKeyword": {
+        "keyword": "不用品回収 トラブル",
+        "periodAverage": 100
+      }
+    }
+  ],
+  "parent_child_gap_signals": [
+    {
+      "keyword": "親 片付け 嫌がる",
+      "label": "親が片付けを嫌がる",
+      "cluster": "parent_child_gap",
+      "kwId": null,
+      "monthlyVolume": null,
+      "ymylSensitive": false,
+      "periodAverage": 100,
+      "recent30Avg": 0,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "岩手県",
+          "value": 100
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "実家 片付かない",
+      "label": "実家 片付かない",
+      "cluster": "parent_child_gap",
+      "kwId": "P1-036",
+      "monthlyVolume": 90,
+      "ymylSensitive": false,
+      "periodAverage": 0,
+      "recent30Avg": 0,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [],
+      "dataAvailability": {
+        "timeline": false,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "高齢の親 物を捨てない",
+      "label": "高齢の親 物を捨てない",
+      "cluster": "parent_child_gap",
+      "kwId": "P4-039",
+      "monthlyVolume": 70,
+      "ymylSensitive": false,
+      "periodAverage": 0,
+      "recent30Avg": 0,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [],
+      "dataAvailability": {
+        "timeline": false,
+        "related": false,
+        "regions": true
+      }
+    }
+  ],
+  "regions_top": [
+    {
+      "name": "奈良県",
+      "averageValue": 72.3,
+      "topKeywords": [
+        "遺品整理",
+        "生前整理",
+        "不用品回収"
+      ]
+    },
+    {
+      "name": "香川県",
+      "averageValue": 71.2,
+      "topKeywords": [
+        "空き家 補助金",
+        "生前贈与",
+        "終活"
+      ]
+    },
+    {
+      "name": "島根県",
+      "averageValue": 69.7,
+      "topKeywords": [
+        "実家じまい",
+        "エンディングノート",
+        "相続放棄"
+      ]
+    },
+    {
+      "name": "埼玉県",
+      "averageValue": 69.4,
+      "topKeywords": [
+        "不用品回収",
+        "遺品整理",
+        "家族信託"
+      ]
+    },
+    {
+      "name": "広島県",
+      "averageValue": 68.2,
+      "topKeywords": [
+        "終活",
+        "親の終活",
+        "エンディングノート"
+      ]
+    },
+    {
+      "name": "岡山県",
+      "averageValue": 67,
+      "topKeywords": [
+        "ゴミ屋敷 片付け",
+        "不用品回収",
+        "相続放棄"
+      ]
+    },
+    {
+      "name": "兵庫県",
+      "averageValue": 65.7,
+      "topKeywords": [
+        "生前贈与",
+        "親の介護",
+        "相続放棄"
+      ]
+    },
+    {
+      "name": "鳥取県",
+      "averageValue": 63.8,
+      "topKeywords": [
+        "実家じまい",
+        "相続放棄",
+        "空き家 補助金"
+      ]
+    },
+    {
+      "name": "神奈川県",
+      "averageValue": 63,
+      "topKeywords": [
+        "生前贈与",
+        "家族信託",
+        "エンディングノート"
+      ]
+    },
+    {
+      "name": "千葉県",
+      "averageValue": 62.9,
+      "topKeywords": [
+        "生前贈与",
+        "家族信託",
+        "親の介護"
+      ]
+    },
+    {
+      "name": "鹿児島県",
+      "averageValue": 62.1,
+      "topKeywords": [
+        "ゴミ屋敷 片付け",
+        "親の介護",
+        "生前贈与"
+      ]
+    },
+    {
+      "name": "石川県",
+      "averageValue": 61.8,
+      "topKeywords": [
+        "生前整理",
+        "家族信託",
+        "生前贈与"
+      ]
+    },
+    {
+      "name": "富山県",
+      "averageValue": 60.8,
+      "topKeywords": [
+        "高齢の親 一人暮らし",
+        "生前贈与",
+        "生前整理"
+      ]
+    },
+    {
+      "name": "愛知県",
+      "averageValue": 60.7,
+      "topKeywords": [
+        "生前贈与",
+        "家族信託",
+        "エンディングノート"
+      ]
+    },
+    {
+      "name": "高知県",
+      "averageValue": 60.7,
+      "topKeywords": [
+        "生前贈与",
+        "相続放棄",
+        "空き家 補助金"
+      ]
+    }
+  ],
+  "rising_related_queries": [
+    {
+      "query": "生前 整理",
+      "sourceKeyword": "生前整理",
+      "value": 9999900
+    },
+    {
+      "query": "生前 遺品 整理",
+      "sourceKeyword": "生前整理",
+      "value": 2563500
+    },
+    {
+      "query": "遺品 整理",
+      "sourceKeyword": "生前整理",
+      "value": 2530400
+    },
+    {
+      "query": "生前 整理 買取",
+      "sourceKeyword": "生前整理",
+      "value": 1450050
+    },
+    {
+      "query": "遺品 整理 買取",
+      "sourceKeyword": "遺品整理",
+      "value": 1135100
+    },
+    {
+      "query": "生前 整理 業者",
+      "sourceKeyword": "生前整理",
+      "value": 847950
+    },
+    {
+      "query": "遺品 整理 士",
+      "sourceKeyword": "遺品整理",
+      "value": 722150
+    },
+    {
+      "query": "東京 遺品 整理",
+      "sourceKeyword": "遺品整理",
+      "value": 719950
+    },
+    {
+      "query": "不 用品 回収",
+      "sourceKeyword": "遺品整理",
+      "value": 706900
+    },
+    {
+      "query": "片付け",
+      "sourceKeyword": "遺品整理",
+      "value": 498150
+    },
+    {
+      "query": "エンディング ノート おすすめ",
+      "sourceKeyword": "エンディングノート",
+      "value": 239550
+    },
+    {
+      "query": "不 用品 回収 相場",
+      "sourceKeyword": "不用品回収",
+      "value": 186750
+    },
+    {
+      "query": "不 用品 回収 川崎 市",
+      "sourceKeyword": "不用品回収",
+      "value": 95300
+    }
+  ],
+  "keyword_details": [
+    {
+      "keyword": "生前整理",
+      "label": "生前整理",
+      "cluster": "core",
+      "kwId": "C10-008",
+      "monthlyVolume": 3600,
+      "ymylSensitive": false,
+      "periodAverage": 38.6,
+      "recent30Avg": 16,
+      "prior60Avg": 1.7,
+      "liftRatio": 9.58,
+      "liftPercent": 858,
+      "topRelated": [
+        {
+          "query": "生前 整理",
+          "value": 100
+        },
+        {
+          "query": "生前 遺品 整理",
+          "value": 26
+        },
+        {
+          "query": "遺品 整理",
+          "value": 25
+        },
+        {
+          "query": "生前 整理 買取",
+          "value": 15
+        },
+        {
+          "query": "生前 整理 業者",
+          "value": 8
+        }
+      ],
+      "risingRelated": [
+        {
+          "query": "生前 整理",
+          "value": 9999900
+        },
+        {
+          "query": "生前 遺品 整理",
+          "value": 2563500
+        },
+        {
+          "query": "遺品 整理",
+          "value": 2530400
+        },
+        {
+          "query": "生前 整理 買取",
+          "value": 1450050
+        },
+        {
+          "query": "生前 整理 業者",
+          "value": 847950
+        }
+      ],
+      "topRegions": [
+        {
+          "name": "石川県",
+          "value": 100
+        },
+        {
+          "name": "奈良県",
+          "value": 88
+        },
+        {
+          "name": "岡山県",
+          "value": 74
+        },
+        {
+          "name": "富山県",
+          "value": 71
+        },
+        {
+          "name": "北海道",
+          "value": 65
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": true,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "終活",
+      "label": "終活",
+      "cluster": "core",
+      "kwId": "C5-003",
+      "monthlyVolume": 18100,
+      "ymylSensitive": false,
+      "periodAverage": 0,
+      "recent30Avg": 0,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "広島県",
+          "value": 100
+        },
+        {
+          "name": "香川県",
+          "value": 86
+        },
+        {
+          "name": "山梨県",
+          "value": 85
+        },
+        {
+          "name": "福岡県",
+          "value": 79
+        },
+        {
+          "name": "島根県",
+          "value": 78
+        }
+      ],
+      "dataAvailability": {
+        "timeline": false,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "実家じまい",
+      "label": "実家じまい",
+      "cluster": "core",
+      "kwId": "P1-004",
+      "monthlyVolume": 5400,
+      "ymylSensitive": false,
+      "periodAverage": 0,
+      "recent30Avg": 0,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "鳥取県",
+          "value": 100
+        },
+        {
+          "name": "島根県",
+          "value": 100
+        },
+        {
+          "name": "香川県",
+          "value": 75
+        },
+        {
+          "name": "愛媛県",
+          "value": 75
+        },
+        {
+          "name": "埼玉県",
+          "value": 75
+        }
+      ],
+      "dataAvailability": {
+        "timeline": false,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "エンディングノート",
+      "label": "エンディングノート",
+      "cluster": "core",
+      "kwId": "C5-003",
+      "monthlyVolume": 22200,
+      "ymylSensitive": false,
+      "periodAverage": 64.4,
+      "recent30Avg": 46.1,
+      "prior60Avg": 37.5,
+      "liftRatio": 1.23,
+      "liftPercent": 23,
+      "topRelated": [
+        {
+          "query": "エンディング ノート おすすめ",
+          "value": 100
+        }
+      ],
+      "risingRelated": [
+        {
+          "query": "エンディング ノート おすすめ",
+          "value": 239550
+        }
+      ],
+      "topRegions": [
+        {
+          "name": "宮崎県",
+          "value": 100
+        },
+        {
+          "name": "広島県",
+          "value": 93
+        },
+        {
+          "name": "神奈川県",
+          "value": 88
+        },
+        {
+          "name": "東京都",
+          "value": 88
+        },
+        {
+          "name": "奈良県",
+          "value": 84
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": true,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "親の介護",
+      "label": "親の介護",
+      "cluster": "parent_struggle",
+      "kwId": "P4-006",
+      "monthlyVolume": 6600,
+      "ymylSensitive": true,
+      "periodAverage": 56,
+      "recent30Avg": 52.5,
+      "prior60Avg": 55,
+      "liftRatio": 0.95,
+      "liftPercent": -4.6,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "岩手県",
+          "value": 100
+        },
+        {
+          "name": "福島県",
+          "value": 95
+        },
+        {
+          "name": "兵庫県",
+          "value": 89
+        },
+        {
+          "name": "埼玉県",
+          "value": 86
+        },
+        {
+          "name": "宮崎県",
+          "value": 84
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "親の介護 兄弟",
+      "label": "親の介護 兄弟",
+      "cluster": "parent_struggle",
+      "kwId": "P4-018",
+      "monthlyVolume": 480,
+      "ymylSensitive": false,
+      "periodAverage": 14.5,
+      "recent30Avg": 2.5,
+      "prior60Avg": 1.7,
+      "liftRatio": 1.48,
+      "liftPercent": 48,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "徳島県",
+          "value": 100
+        },
+        {
+          "name": "鳥取県",
+          "value": 75
+        },
+        {
+          "name": "鹿児島県",
+          "value": 75
+        },
+        {
+          "name": "福井県",
+          "value": 75
+        },
+        {
+          "name": "山梨県",
+          "value": 75
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "親の終活",
+      "label": "親の終活",
+      "cluster": "parent_struggle",
+      "kwId": "P4-031",
+      "monthlyVolume": 260,
+      "ymylSensitive": false,
+      "periodAverage": 0,
+      "recent30Avg": 0,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "広島県",
+          "value": 100
+        }
+      ],
+      "dataAvailability": {
+        "timeline": false,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "高齢の親 一人暮らし",
+      "label": "高齢の親 一人暮らし",
+      "cluster": "parent_struggle",
+      "kwId": null,
+      "monthlyVolume": null,
+      "ymylSensitive": true,
+      "periodAverage": 0,
+      "recent30Avg": 0,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "富山県",
+          "value": 100
+        },
+        {
+          "name": "沖縄県",
+          "value": 100
+        }
+      ],
+      "dataAvailability": {
+        "timeline": false,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "親 片付け 嫌がる",
+      "label": "親が片付けを嫌がる",
+      "cluster": "parent_child_gap",
+      "kwId": null,
+      "monthlyVolume": null,
+      "ymylSensitive": false,
+      "periodAverage": 100,
+      "recent30Avg": 0,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "岩手県",
+          "value": 100
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "実家 片付かない",
+      "label": "実家 片付かない",
+      "cluster": "parent_child_gap",
+      "kwId": "P1-036",
+      "monthlyVolume": 90,
+      "ymylSensitive": false,
+      "periodAverage": 0,
+      "recent30Avg": 0,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [],
+      "dataAvailability": {
+        "timeline": false,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "高齢の親 物を捨てない",
+      "label": "高齢の親 物を捨てない",
+      "cluster": "parent_child_gap",
+      "kwId": "P4-039",
+      "monthlyVolume": 70,
+      "ymylSensitive": false,
+      "periodAverage": 0,
+      "recent30Avg": 0,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [],
+      "dataAvailability": {
+        "timeline": false,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "生前贈与",
+      "label": "生前贈与",
+      "cluster": "money_law",
+      "kwId": "C9-044",
+      "monthlyVolume": 5400,
+      "ymylSensitive": true,
+      "periodAverage": 71.7,
+      "recent30Avg": 70.9,
+      "prior60Avg": 72.1,
+      "liftRatio": 0.98,
+      "liftPercent": -1.7,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "神奈川県",
+          "value": 100
+        },
+        {
+          "name": "香川県",
+          "value": 98
+        },
+        {
+          "name": "徳島県",
+          "value": 96
+        },
+        {
+          "name": "愛知県",
+          "value": 93
+        },
+        {
+          "name": "兵庫県",
+          "value": 93
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "家族信託",
+      "label": "家族信託",
+      "cluster": "money_law",
+      "kwId": "C9-045",
+      "monthlyVolume": 12100,
+      "ymylSensitive": true,
+      "periodAverage": 56.9,
+      "recent30Avg": 55.9,
+      "prior60Avg": 52.7,
+      "liftRatio": 1.06,
+      "liftPercent": 6.2,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "神奈川県",
+          "value": 100
+        },
+        {
+          "name": "東京都",
+          "value": 92
+        },
+        {
+          "name": "千葉県",
+          "value": 90
+        },
+        {
+          "name": "沖縄県",
+          "value": 87
+        },
+        {
+          "name": "埼玉県",
+          "value": 87
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "空き家 補助金",
+      "label": "空き家 補助金",
+      "cluster": "money_law",
+      "kwId": "P3-017",
+      "monthlyVolume": 1600,
+      "ymylSensitive": false,
+      "periodAverage": 64.5,
+      "recent30Avg": 38.7,
+      "prior60Avg": 27.5,
+      "liftRatio": 1.4,
+      "liftPercent": 40.5,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "香川県",
+          "value": 100
+        },
+        {
+          "name": "鳥取県",
+          "value": 88
+        },
+        {
+          "name": "高知県",
+          "value": 81
+        },
+        {
+          "name": "福井県",
+          "value": 75
+        },
+        {
+          "name": "大分県",
+          "value": 72
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "相続放棄",
+      "label": "相続放棄",
+      "cluster": "money_law",
+      "kwId": "C9-048",
+      "monthlyVolume": 390,
+      "ymylSensitive": true,
+      "periodAverage": 64.3,
+      "recent30Avg": 62.9,
+      "prior60Avg": 65,
+      "liftRatio": 0.97,
+      "liftPercent": -3.2,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "青森県",
+          "value": 100
+        },
+        {
+          "name": "新潟県",
+          "value": 98
+        },
+        {
+          "name": "岩手県",
+          "value": 94
+        },
+        {
+          "name": "鳥取県",
+          "value": 93
+        },
+        {
+          "name": "山口県",
+          "value": 91
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "遺品整理",
+      "label": "遺品整理",
+      "cluster": "disposal",
+      "kwId": "C6-002",
+      "monthlyVolume": 27100,
+      "ymylSensitive": false,
+      "periodAverage": 54.6,
+      "recent30Avg": 56,
+      "prior60Avg": 53.9,
+      "liftRatio": 1.04,
+      "liftPercent": 3.9,
+      "topRelated": [
+        {
+          "query": "遺品 整理",
+          "value": 100
+        },
+        {
+          "query": "遺品",
+          "value": 100
+        },
+        {
+          "query": "遺品 整理 買取",
+          "value": 11
+        },
+        {
+          "query": "遺品 買取",
+          "value": 11
+        },
+        {
+          "query": "大阪 遺品 整理",
+          "value": 8
+        }
+      ],
+      "risingRelated": [
+        {
+          "query": "遺品 整理 買取",
+          "value": 1135100
+        },
+        {
+          "query": "遺品 整理 士",
+          "value": 722150
+        },
+        {
+          "query": "東京 遺品 整理",
+          "value": 719950
+        },
+        {
+          "query": "不 用品 回収",
+          "value": 706900
+        },
+        {
+          "query": "片付け",
+          "value": 498150
+        }
+      ],
+      "topRegions": [
+        {
+          "name": "奈良県",
+          "value": 100
+        },
+        {
+          "name": "埼玉県",
+          "value": 92
+        },
+        {
+          "name": "北海道",
+          "value": 76
+        },
+        {
+          "name": "岡山県",
+          "value": 73
+        },
+        {
+          "name": "大阪府",
+          "value": 67
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": true,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "不用品回収",
+      "label": "不用品回収",
+      "cluster": "disposal",
+      "kwId": "C8-021",
+      "monthlyVolume": 49500,
+      "ymylSensitive": false,
+      "periodAverage": 68.3,
+      "recent30Avg": 61.2,
+      "prior60Avg": 71.8,
+      "liftRatio": 0.85,
+      "liftPercent": -14.8,
+      "topRelated": [
+        {
+          "query": "不 用品 回収 相場",
+          "value": 100
+        },
+        {
+          "query": "不 用品 回収 川崎 市",
+          "value": 51
+        }
+      ],
+      "risingRelated": [
+        {
+          "query": "不 用品 回収 相場",
+          "value": 186750
+        },
+        {
+          "query": "不 用品 回収 川崎 市",
+          "value": 95300
+        }
+      ],
+      "topRegions": [
+        {
+          "name": "埼玉県",
+          "value": 100
+        },
+        {
+          "name": "東京都",
+          "value": 95
+        },
+        {
+          "name": "岡山県",
+          "value": 89
+        },
+        {
+          "name": "奈良県",
+          "value": 85
+        },
+        {
+          "name": "京都府",
+          "value": 77
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": true,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "ゴミ屋敷 片付け",
+      "label": "ゴミ屋敷 片付け",
+      "cluster": "disposal",
+      "kwId": "C8-014",
+      "monthlyVolume": 6600,
+      "ymylSensitive": false,
+      "periodAverage": 46.7,
+      "recent30Avg": 18.4,
+      "prior60Avg": 3.3,
+      "liftRatio": 5.62,
+      "liftPercent": 462.2,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "岡山県",
+          "value": 100
+        },
+        {
+          "name": "鹿児島県",
+          "value": 85
+        },
+        {
+          "name": "奈良県",
+          "value": 85
+        },
+        {
+          "name": "島根県",
+          "value": 67
+        },
+        {
+          "name": "埼玉県",
+          "value": 65
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "不用品回収 トラブル",
+      "label": "不用品回収 トラブル",
+      "cluster": "trouble",
+      "kwId": null,
+      "monthlyVolume": null,
+      "ymylSensitive": false,
+      "periodAverage": 100,
+      "recent30Avg": 3.3,
+      "prior60Avg": 0,
+      "liftRatio": 0,
+      "liftPercent": 0,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "静岡県",
+          "value": 100
+        },
+        {
+          "name": "岡山県",
+          "value": 25
+        },
+        {
+          "name": "京都府",
+          "value": 25
+        },
+        {
+          "name": "東京都",
+          "value": 25
+        },
+        {
+          "name": "群馬県",
+          "value": 25
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    },
+    {
+      "keyword": "訪問購入",
+      "label": "押し買い（訪問購入）",
+      "cluster": "trouble",
+      "kwId": null,
+      "monthlyVolume": null,
+      "ymylSensitive": false,
+      "periodAverage": 26.4,
+      "recent30Avg": 10.7,
+      "prior60Avg": 1.7,
+      "liftRatio": 6.44,
+      "liftPercent": 544,
+      "topRelated": [],
+      "risingRelated": [],
+      "topRegions": [
+        {
+          "name": "佐賀県",
+          "value": 100
+        },
+        {
+          "name": "徳島県",
+          "value": 75
+        },
+        {
+          "name": "島根県",
+          "value": 75
+        },
+        {
+          "name": "香川県",
+          "value": 75
+        },
+        {
+          "name": "和歌山県",
+          "value": 75
+        }
+      ],
+      "dataAvailability": {
+        "timeline": true,
+        "related": false,
+        "regions": true
+      }
+    }
+  ]
+}
