@@ -17,6 +17,7 @@ import { generateBreadcrumbSchema } from "../../../../lib/schema/breadcrumb";
 import { generateLocalBusinessSchema } from "../../../../lib/schema/local-business";
 import JsonLd from "../../../../components/JsonLd";
 import { CostBreakdownTable } from "../../../../components/CostBreakdownTable";
+import { getNationalContextForCity, formatYenAsMan } from "../../../../lib/data/municipality-stats";
 // S2: costページ 解体費用テーブル・FAQスキーマ追加（CTR改善・AI Overview対策）2026-03
 
 interface Props {
@@ -94,6 +95,46 @@ export default async function AreaCostPage({ params }: Props) {
       </div>
 
       <CostBreakdownTable cityName={cityName} />
+
+      {(() => {
+        const ctx = getNationalContextForCity(prefecture, city);
+        return (
+          <section aria-labelledby="cost-subsidy-context" className="rounded-2xl border border-border bg-primary/5 p-5">
+            <h2 id="cost-subsidy-context" className="mb-2 text-lg font-bold">
+              {cityName}の解体費用は補助金で抑えられる？
+            </h2>
+            {ctx.hasSubsidy ? (
+              <p className="text-sm leading-relaxed text-foreground/85">
+                {cityName}では、空き家・老朽家屋の解体補助金を<strong>確認できています</strong>
+                {ctx.cityAmountYen ? (
+                  <>
+                    （上限額の目安 <strong>{formatYenAsMan(ctx.cityAmountYen)}</strong>
+                    {ctx.nationalRank ? `／金額を確認できた全国${ctx.nationalRankPool.toLocaleString("ja-JP")}自治体中 ${ctx.nationalRank}位` : ""}）
+                  </>
+                ) : ""}
+                。解体費用から、この補助金を差し引ける可能性があります。
+              </p>
+            ) : (
+              <p className="text-sm leading-relaxed text-foreground/85">
+                {cityName}では現時点で、解体補助金を公式情報から確認できていません（制度の新設・更新で変わる場合があります）。費用を抑えるには、複数社の見積もり比較が有効です。
+              </p>
+            )}
+            <p className="mt-2 text-sm text-foreground/70">
+              全国では{ctx.nationalCoveragePercent}%（{ctx.nationalWithSubsidy.toLocaleString("ja-JP")}/{ctx.nationalTotal.toLocaleString("ja-JP")}自治体）で解体補助金を確認。上限額の全国中央値は約50万円です。
+            </p>
+            <p className="mt-2 text-sm">
+              →{" "}
+              <Link href={`/area/${prefecture}/${city}/subsidy`} className="font-medium text-primary hover:underline">
+                {cityName}の解体補助金（対象条件・申請の流れ）
+              </Link>
+              {" ／ "}
+              <Link href="/akiya/kaitai-hojokin" className="font-medium text-primary hover:underline">
+                解体補助金 完全ガイド
+              </Link>
+            </p>
+          </section>
+        );
+      })()}
 
       <section aria-labelledby="cost-simulator-heading">
         <h2 id="cost-simulator-heading" className="sr-only">
