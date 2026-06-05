@@ -928,3 +928,74 @@ export function getSubsidyConditionStats(): SubsidyConditionStats {
 
   return { sampleSize: n, patterns, meta: buildMeta() };
 }
+
+/* ============================================================
+ * 9. 都道府県別 上限額「中央値」ランキング（全47・引用される完全版）
+ *    既存の平均ベース(getPrefectureAmountRanking)とは別に、外れ値に強い
+ *    「中央値」で全都道府県を順位付けする。記者が引用しやすい完全ランキング。
+ * ============================================================ */
+
+export interface PrefMedianRow {
+  prefId: string;
+  prefName: string;
+  /** 金額抽出できた自治体数（= この県の母数） */
+  sampleSize: number;
+  /** 上限額の中央値（円） */
+  medianYen: number;
+  /** 上限額の最高額（円） */
+  maxYen: number;
+  /** 順位（中央値降順・minSample 以上のみ。未満は null） */
+  rank: number | null;
+}
+
+export interface PrefMedianRanking {
+  /** minSample 以上で順位付けした行（中央値降順） */
+  ranked: PrefMedianRow[];
+  /** サンプル数が minSample 未満で順位対象外の県（中央値降順・参考） */
+  lowSample: PrefMedianRow[];
+  /** 全国の上限額中央値（円） */
+  nationalMedianYen: number | null;
+  /** 順位対象に含める最小サンプル数 */
+  minSample: number;
+  meta: StatsMeta;
+}
+
+/**
+ * 都道府県ごとの「上限額の中央値」で全47都道府県を順位付けする。
+ * 統計の信頼性のため、金額抽出できた自治体が minSample 未満の県は順位対象外（lowSample）にし、
+ * ランキングの母数を明示する。捏造はしない（実データの中央値のみ）。
+ */
+export function getPrefectureMedianAmountRanking(minSample = 3): PrefMedianRanking {
+  const map = new Map<string, { prefId: string; prefName: string; amounts: number[] }>();
+  for (const e of amountEntries()) {
+    const key = e.prefId.toLowerCase();
+    let acc = map.get(key);
+    if (!acc) {
+      acc = { prefId: e.prefId, prefName: e.prefName, amounts: [] };
+      map.set(key, acc);
+    }
+    acc.amounts.push(e.amountYen);
+  }
+
+  const all = Array.from(map.values()).map((a) => ({
+    prefId: a.prefId,
+    prefName: a.prefName,
+    sampleSize: a.amounts.length,
+    medianYen: medianOf(a.amounts) ?? 0,
+    maxYen: Math.max(...a.amounts),
+  }));
+
+  const eligible = all
+    .filter((r) => r.sampleSize >= minSample)
+    .sort((x, y) => y.medianYen - x.medianYen || y.sampleSize - x.sampleSize);
+  const ranked: PrefMedianRow[] = eligible.map((r, i) => ({ ...r, rank: i + 1 }));
+
+  const lowSample: PrefMedianRow[] = all
+    .filter((r) => r.sampleSize < minSample)
+    .sort((x, y) => y.medianYen - x.medianYen)
+    .map((r) => ({ ...r, rank: null }));
+
+  const nationalMedianYen = medianOf(amountEntries().map((e) => e.amountYen));
+
+  return { ranked, lowSample, nationalMedianYen, minSample, meta: buildMeta() };
+}

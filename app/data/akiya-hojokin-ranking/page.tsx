@@ -5,6 +5,7 @@ import { SITE_NAME_LOGO } from "@/app/lib/site-brand";
 import JsonLd from "@/app/components/JsonLd";
 import {
   getRankingPageData,
+  getPrefectureMedianAmountRanking,
   getAllPrefectureSlugs,
   formatYenAsMan,
   STATS_AS_OF,
@@ -93,6 +94,7 @@ export default function Page() {
   const data = getRankingPageData();
   const { coverage, amountSummary, nationalRanking, prefCoverageRanking, distribution, prefAmountRanking } =
     data;
+  const medianRanking = getPrefectureMedianAmountRanking(3);
 
   const base = getCanonicalBase();
   const url = `${base}${PAGE_PATH}`;
@@ -420,6 +422,54 @@ export default function Page() {
         <p className="mt-3 text-xs text-foreground/50">
           ※ 都市部の不燃化特区など高額制度の有無に左右されます。n はその都道府県で金額を確認できた自治体数です。
         </p>
+      </section>
+
+      {/* 全47都道府県・中央値ランキング（引用される完全版） */}
+      <section className="mb-12">
+        <h2 className="mb-2 border-l-4 border-sky-500 pl-3 text-xl font-bold sm:text-2xl">
+          都道府県別 上限額「中央値」ランキング（全{medianRanking.ranked.length}都道府県）
+        </h2>
+        <p className="mb-4 text-sm text-foreground/60">
+          外れ値（都市部の高額制度）に左右されにくい<strong>中央値</strong>で、全都道府県を高い順に並べた完全版ランキングです。
+          金額を確認できた自治体が{medianRanking.minSample}件以上の都道府県を対象にしています（全国の上限額中央値は
+          {medianRanking.nationalMedianYen ? formatYenAsMan(medianRanking.nationalMedianYen) : "—"}）。
+        </p>
+        <div className="overflow-x-auto rounded-xl border border-border">
+          <table className="w-full text-sm">
+            <caption className="sr-only">都道府県別 補助金上限額の中央値ランキング</caption>
+            <thead className="bg-primary-light/30">
+              <tr className="text-left">
+                <th scope="col" className="px-3 py-2 font-bold">順位</th>
+                <th scope="col" className="px-3 py-2 font-bold">都道府県</th>
+                <th scope="col" className="px-3 py-2 text-right font-bold">上限額の中央値</th>
+                <th scope="col" className="px-3 py-2 text-right font-bold">最高額</th>
+                <th scope="col" className="px-3 py-2 text-right font-bold">対象数(n)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {medianRanking.ranked.map((r) => (
+                <tr key={r.prefId} className="border-t border-border">
+                  <td className="px-3 py-2 font-bold text-primary">{r.rank}</td>
+                  <td className="px-3 py-2">
+                    <a href={`/data/akiya-hojokin-ranking/${r.prefId}`} className="text-foreground hover:text-primary hover:underline">
+                      {r.prefName}
+                    </a>
+                  </td>
+                  <td className="px-3 py-2 text-right font-medium">{formatYenAsMan(r.medianYen)}</td>
+                  <td className="px-3 py-2 text-right text-foreground/60">{formatYenAsMan(r.maxYen)}</td>
+                  <td className="px-3 py-2 text-right text-foreground/50">{r.sampleSize}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {medianRanking.lowSample.length > 0 && (
+          <p className="mt-3 text-xs text-foreground/50">
+            ※ 金額を確認できた自治体が{medianRanking.minSample}件未満で順位対象外：
+            {medianRanking.lowSample.map((r) => `${r.prefName}（n=${r.sampleSize}）`).join("、")}。
+            中央値は外れ値の影響を受けにくい代表値です。各数値は出典（各自治体公式）にひも付き、CC BY 4.0で引用可能です。
+          </p>
+        )}
       </section>
 
       {/* 金額分布 */}
