@@ -84,6 +84,7 @@ export default async function sitemap(props: {
         { url: `${base}/data`, lastModified, changeFrequency: "weekly", priority: 0.8 },
         { url: `${base}/data/akiya-hojokin-ranking`, lastModified, changeFrequency: "weekly", priority: 0.85 },
         { url: `${base}/data/akiya-hojokin-joken`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+        { url: `${base}/data/akiya-subsidy-map-2026`, lastModified, changeFrequency: "monthly", priority: 0.85 },
         { url: `${base}/data/seizen-seiri-trends`, lastModified, changeFrequency: "monthly", priority: 0.6 },
         // ニュース・プレスリリース（一次ソース・被リンク資産）
         { url: `${base}/news`, lastModified, changeFrequency: "weekly", priority: 0.7 },

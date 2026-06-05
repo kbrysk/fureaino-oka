@@ -756,6 +756,11 @@ export default async function AreaSubsidyPage({ params }: Props) {
               【全国実態】解体補助金の申請条件（税の滞納・予算先着・着工前申請など）
             </Link>
           </li>
+          <li>
+            <Link href="/data/akiya-subsidy-map-2026" className="text-primary hover:underline">
+              全国 空き家・解体補助金マップ（都道府県別カバレッジ・金額ランキング）
+            </Link>
+          </li>
         </ul>
       </section>
 
