@@ -855,3 +855,76 @@ export function getRankingPageData(): RankingPageData {
     meta: buildMeta(),
   };
 }
+
+/* ============================================================
+ * 8. 申請条件の全国実態（テキスト分析）
+ *    各自治体が公式に公表している補助金の「申請条件」テキストを横断分析し、
+ *    どの条件がどれだけの割合で課されているかを可視化する独自統計。
+ *    ※キーワードの記載有無に基づく集計（1自治体が複数条件に該当＝重複あり）。
+ *      捏造ではなく「条件文に該当語の記載がある自治体の割合」を提示する。
+ * ============================================================ */
+
+export interface ConditionPattern {
+  key: string;
+  /** 条件の内容（表示ラベル） */
+  label: string;
+  /** 検出に使ったキーワード（透明性のため明示） */
+  matchNote: string;
+  /** 該当自治体数 */
+  count: number;
+  /** 割合（%・小数1桁） */
+  percent: number;
+}
+
+export interface SubsidyConditionStats {
+  /** 分析母数（hasSubsidy=true かつ conditions 記載ありの自治体数） */
+  sampleSize: number;
+  patterns: ConditionPattern[];
+  meta: StatsMeta;
+}
+
+/** 1自治体の条件・期間・備考・制度名を連結した分析対象テキストを返す。 */
+function conditionText(m: MunicipalityData): string {
+  const c = m.subsidy?.conditions;
+  const cs = Array.isArray(c) ? c.join(" ") : c ?? "";
+  return [cs, m.subsidy?.applicationPeriod ?? "", m.subsidy?.notes ?? "", m.subsidy?.name ?? ""].join(" ");
+}
+
+/**
+ * 補助金の「申請条件」の全国実態を、公式公表テキストの該当割合として集計する。
+ * 各パターンは独立した出現率（重複あり）。情報利得のある一次データとして提供する。
+ */
+export function getSubsidyConditionStats(): SubsidyConditionStats {
+  const subs = subsidizedMunicipalities().filter((m) => {
+    const c = m.subsidy?.conditions;
+    const cs = Array.isArray(c) ? c.join("") : c ?? "";
+    return cs.trim().length > 0;
+  });
+  const n = subs.length;
+  const texts = subs.map(conditionText);
+
+  const defs: { key: string; label: string; matchNote: string; re: RegExp }[] = [
+    { key: "tax", label: "市区町村税の滞納がないこと", matchNote: "条件文に「滞納」を含む", re: /滞納/ },
+    { key: "budget", label: "年度予算・先着順（予算枠に達し次第終了）", matchNote: "「予算」「先着」を含む", re: /予算|先着/ },
+    { key: "danger", label: "危険・老朽空き家であること（特定空家等を含む）", matchNote: "「危険」「倒壊」「老朽」「特定空家」等を含む", re: /危険|倒壊|老朽|特定空家|保安上|衛生上/ },
+    { key: "preStart", label: "交付決定前の着工は対象外（着工前の申請が必要）", matchNote: "「着工前」「工事前」「交付決定」を含む", re: /着工前|工事前|交付決定/ },
+    { key: "contractor", label: "市内・指定／登録業者での施工", matchNote: "「市内」「町内」「登録業者」「指定業者」を含む", re: /市内|町内|登録業者|指定業者/ },
+    { key: "quake", label: "旧耐震基準（昭和56年以前）・耐震性に関する要件", matchNote: "「昭和56」「旧耐震」「耐震」を含む", re: /昭和56|旧耐震|耐震/ },
+    { key: "owner", label: "建物の所有者・相続人であること", matchNote: "「所有者」「相続」を含む", re: /所有者|相続/ },
+  ];
+
+  const patterns: ConditionPattern[] = defs
+    .map((d) => {
+      const count = texts.filter((t) => d.re.test(t)).length;
+      return {
+        key: d.key,
+        label: d.label,
+        matchNote: d.matchNote,
+        count,
+        percent: n === 0 ? 0 : Math.round((count / n) * 1000) / 10,
+      };
+    })
+    .sort((a, b) => b.count - a.count);
+
+  return { sampleSize: n, patterns, meta: buildMeta() };
+}

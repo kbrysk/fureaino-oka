@@ -217,6 +217,11 @@ export default function Page() {
           <li>・市区町村税の滞納がないこと。</li>
           <li>・市内の登録業者・建設業許可業者に解体を依頼すること（指定がある場合）。</li>
         </ul>
+        <p className="mt-3 text-sm">
+          → 全国{c.total.toLocaleString("ja-JP")}自治体の申請条件を分析した
+          <Link href="/data/akiya-hojokin-joken" className="text-primary font-medium hover:underline">「申請条件」の全国実態調査</Link>
+          では、どの条件がどれだけの割合で課されているかを公開しています。
+        </p>
       </section>
 
       <section className="mb-10">

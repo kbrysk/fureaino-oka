@@ -48,6 +48,11 @@ export default function Page() {
       desc: `全国${c.total.toLocaleString("ja-JP")}自治体（全国の約${c.coveragePercent}%）を独自調査。解体補助金を確認できたのは${c.withSubsidy}自治体（${c.withSubsidyPercent}%）。金額ランキング・都道府県別・分布・オープンデータ。`,
     },
     {
+      href: "/data/akiya-hojokin-joken",
+      title: "空き家解体補助金「申請条件」の全国実態調査",
+      desc: `補助金を確認できた${c.withSubsidy}自治体の公式な申請条件を独自分析。税の滞納・予算先着・着工前申請・指定業者など、条件の出現率を一覧で公開。`,
+    },
+    {
       href: "/data/seizen-seiri-trends",
       title: "生前整理・終活 検索トレンド データ",
       desc: "生前整理・終活に関する検索関心の推移をまとめた独自トレンドデータ。",
