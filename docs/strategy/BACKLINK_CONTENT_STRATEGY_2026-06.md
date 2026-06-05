@@ -63,6 +63,16 @@
 - 本物の被リンクは「テーマ一致の専門メディアの記事化」「公的の資源リンク」から。**質×関連性**を量より優先。
 - M&A観点：`.lg.jp`/報道/専門家リンクの混在が、被リンクプロファイルを"防御可能"にしDD評価を守る。
 
+## 7. ベースライン計測（2026-06-05・第2波 送信前）
+被リンク監視は検索APIキー未設定のため、WebSearchで手動ベースラインを取得。
+- **当社データの外部引用：0件**（"ふれあいの丘"＋空き家補助金で外部ヒットなし）＝ここが成長KPIの起点。
+- **情報利得の裏付け**：「全国の48.9%／中央値50万／条件出現率」という**集計統計を公開している競合は存在しない**。
+  競合（iejimaikun.jp の47県一覧、genba-mado.com の47県一覧、hojyokin-concierge.com、各解体業者）は
+  **制度を"列挙"するのみ**で、全国を横断した研究値は出していない。→ 当社の一次統計が唯一の引用対象。
+- 含意：SERP「空き家 解体 補助金」は競合多数だが、**"引用される統計"の枠は空席**。データ室の統計群でその枠を取りに行く。
+- 次回計測：第2波送信の2〜4週後に同クエリ＋"中央値 香川 160万"等の固有数値で外部引用の発生を確認。
+  （恒久監視は `scripts/links/mention-watch.mjs`＝要 BING/Google Custom Search APIキー）
+
 ## 関連
 - 戦略：`docs/strategy/BACKLINK_ZERO_COST_AUTOMATION_2026-06.md`, `DATA_REPORT_CITABILITY_REVIEW_2026-06.md`
 - 資産：`/data`（データ室）, `/data/akiya-hojokin-ranking`, `/data/akiya-hojokin-joken`, `/akiya/kaitai-hojokin`, `/news/akiya-hojokin-survey-2026`
