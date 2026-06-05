@@ -751,6 +751,11 @@ export default async function AreaSubsidyPage({ params }: Props) {
               空き家の解体補助金 完全ガイド｜相場・対象条件・申請の流れ
             </Link>
           </li>
+          <li>
+            <Link href="/data/akiya-hojokin-joken" className="text-primary hover:underline">
+              【全国実態】解体補助金の申請条件（税の滞納・予算先着・着工前申請など）
+            </Link>
+          </li>
         </ul>
       </section>
 
