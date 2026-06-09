@@ -19,9 +19,9 @@ export async function GET() {
         entries.push(
           { url: `${base}/area/${p}/${cityId}`, lastModified, changeFrequency: "weekly", priority: 0.6 },
           { url: `${base}/area/${p}/${cityId}/subsidy`, lastModified, changeFrequency: "monthly", priority: 0.7 },
-          { url: `${base}/area/${p}/${cityId}/garbage`, lastModified, changeFrequency: "monthly", priority: 0.5 },
           { url: `${base}/area/${p}/${cityId}/cost`, lastModified, changeFrequency: "monthly", priority: 0.5 }
           // INSTRUCTION-010: cleanup excluded (noindex)
+          // HCS対策(2026-06): garbage(粗大ゴミ)も noindex 化したため除外。情報は base 都市ハブに集約。
         );
       }
     }

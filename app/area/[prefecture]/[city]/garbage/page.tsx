@@ -44,7 +44,10 @@ export async function generateMetadata({ params }: Props) {
   const area = getAreaById(prefecture, city);
   const fallbackNames = { prefName: area?.prefecture ?? prefecture, cityName: area?.city ?? city };
   const data = await getMunicipalityDataOrDefault(prefecture, city, fallbackNames);
-  if (!area) return { title: pageTitle("粗大ゴミ・遺品整理") };
+  // HCS対策(2026-06): garbage(粗大ゴミ[市])は低競合作業の薄ページ・0クリックのため noindex。
+  // 情報は base 都市ハブのセクションに集約し、ページ自体はサイトに残す(回遊・ユーザー価値は維持)。
+  const garbageRobotsNoindex = { index: false as const, follow: false as const, googleBot: { index: false as const, follow: false as const } };
+  if (!area) return { title: pageTitle("粗大ゴミ・遺品整理"), robots: garbageRobotsNoindex };
   const canonicalUrl = getCanonicalUrl(`/area/${prefecture}/${city}/garbage`);
   const year = new Date().getFullYear();
   const title = data._isDefault
@@ -57,6 +60,7 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: fullTitle,
     description,
+    robots: garbageRobotsNoindex,
     alternates: { canonical: canonicalUrl },
     openGraph: {
       title: fullTitle,
