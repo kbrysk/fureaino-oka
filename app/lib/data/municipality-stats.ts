@@ -999,3 +999,159 @@ export function getPrefectureMedianAmountRanking(minSample = 3): PrefMedianRanki
 
   return { ranked, lowSample, nationalMedianYen, minSample, meta: buildMeta() };
 }
+
+/* ============================================================
+ * 11. 申請の「締切・予算先着」実態（時間切れリスクのテキスト分析）
+ *    補助金は「いくら貰えるか」だけでなく「いつまでに動かないと貰えないか」が重要。
+ *    各自治体が公式に公表している applicationPeriod / notes / conditions のテキストから、
+ *    (1)予算先着・予算枠到達で終了 (2)年度内の工事完了が条件
+ *    (3)交付決定前の着工は不可（事前申請必須）(4)受付期間が区切られている
+ *    の出現率を集計し、「もらえるのに間に合わない」リスクを可視化する独自統計。
+ *    ※キーワードの記載有無に基づく集計（1自治体が複数シグナルに該当＝重複あり）。
+ *      捏造ではなく「該当語の記載がある自治体の割合」を提示する。
+ * ============================================================ */
+
+/** 時間切れリスクのシグナル1件分。 */
+export interface TimingSignal {
+  key: string;
+  /** シグナルの内容（表示ラベル） */
+  label: string;
+  /** 検出に使ったキーワード（透明性のため明示） */
+  matchNote: string;
+  /** 該当自治体数 */
+  count: number;
+  /** 割合（%・小数1桁） */
+  pct: number;
+}
+
+/** 都道府県別「予算先着」出現率の1行。 */
+export interface TimingPrefRow {
+  prefId: string;
+  prefName: string;
+  /** その県で分析対象になった自治体数（= 母数） */
+  analyzed: number;
+  /** うち予算先着シグナルに該当した数 */
+  count: number;
+  /** 割合（%・小数1桁） */
+  pct: number;
+}
+
+/** 申請タイミング（締切・先着）実態の集計結果。 */
+export interface SubsidyTimingStats {
+  /** 分析母数（hasSubsidy=true かつ 期間/備考/条件のいずれかに本文がある自治体数） */
+  analyzed: number;
+  /** 補助金を確認できた自治体総数（参考） */
+  total: number;
+  /** 各シグナルの出現率（出現数の多い順） */
+  signals: TimingSignal[];
+  /** 予算先着の出現率が高い都道府県（analyzed >= minPrefSample のみ・上位） */
+  prefectureTop: TimingPrefRow[];
+  meta: StatsMeta;
+}
+
+/** 1自治体の「申請期間・備考・条件・制度名」を連結したタイミング分析対象テキストを返す。 */
+function timingText(m: MunicipalityData): string {
+  const c = m.subsidy?.conditions;
+  const cs = Array.isArray(c) ? c.join(" ") : c ?? "";
+  return [cs, m.subsidy?.applicationPeriod ?? "", m.subsidy?.notes ?? "", m.subsidy?.name ?? ""].join(" ");
+}
+
+/** 予算先着シグナルの判定正規表現（都道府県集計とシグナル集計で共有）。 */
+const TIMING_BUDGET_FIRST_RE =
+  /先着|予算[^。]{0,12}(?:なくなり次第|達し次第|上限|終了|件数に達|に達し)/;
+
+/**
+ * 補助金の「締切・予算先着」実態（時間切れリスク）を、公式公表テキストの該当割合として集計する。
+ * 各シグナルは独立した出現率（重複あり）。情報利得のある一次データとして提供する。
+ *
+ * @param topN 予算先着の都道府県ランキング件数（既定8）
+ * @param minPrefSample 都道府県ランキングに含める最小サンプル数（既定5）
+ */
+export function getSubsidyTimingStats(topN = 8, minPrefSample = 5): SubsidyTimingStats {
+  // 母数: 補助金あり かつ 申請期間・備考・条件のいずれかに本文がある自治体。
+  const pool = subsidizedMunicipalities().filter((m) => {
+    const s = m.subsidy;
+    const c = s?.conditions;
+    const cs = Array.isArray(c) ? c.join("") : c ?? "";
+    return (
+      cs.trim().length > 0 ||
+      (s?.applicationPeriod ?? "").trim().length > 0 ||
+      (s?.notes ?? "").trim().length > 0
+    );
+  });
+  const texts = pool.map(timingText);
+  const n = texts.length;
+
+  const defs: { key: string; label: string; matchNote: string; re: RegExp }[] = [
+    {
+      key: "budgetFirst",
+      label: "予算先着・予算枠に達し次第終了（早い者勝ち）",
+      matchNote: "「先着」または「予算」＋「なくなり次第／達し次第／上限／終了」等を含む",
+      re: TIMING_BUDGET_FIRST_RE,
+    },
+    {
+      key: "preApprove",
+      label: "交付決定前の着工は対象外（事前申請が必須）",
+      matchNote: "「交付決定前／決定通知前／決定を受けてから」または「事前申請」「着工前の申請」等を含む",
+      re: /交付決定前|決定通知前|決定を受けてから|交付決定後|事前申請|要事前申請|申請前に.{0,10}着工|着工.{0,6}対象外|工事.{0,4}着手.{0,8}対象外/,
+    },
+    {
+      key: "window",
+      label: "受付期間・申請期限が区切られている（単年度・期間限定）",
+      matchNote: "「令和」「年度」＋「受付／申請期間／まで／期限」等を含む",
+      re: /(?:令和|年度)[^。]{0,20}(?:受付|申請期間|まで|期限|〜|～)/,
+    },
+    {
+      key: "fyComplete",
+      label: "年度内の工事完了が条件（年度末までに解体完了）",
+      matchNote: "「年度内／年度末」または「工事完了」「までに完了」「までに取り壊し」等を含む",
+      re: /年度内|年度末|工事.{0,2}完了|完了報告|完了するこ|完了させ|までに.{0,4}完了|期限までに完了|までに(?:取り壊し|除却|解体)|完了(?:期限|期日)/,
+    },
+  ];
+
+  const signals: TimingSignal[] = defs
+    .map((d) => {
+      const count = texts.filter((t) => d.re.test(t)).length;
+      return {
+        key: d.key,
+        label: d.label,
+        matchNote: d.matchNote,
+        count,
+        pct: n === 0 ? 0 : Math.round((count / n) * 1000) / 10,
+      };
+    })
+    .sort((a, b) => b.count - a.count);
+
+  // 都道府県別「予算先着」出現率（minPrefSample 以上の県のみ・出現率降順）。
+  const map = new Map<string, { prefId: string; prefName: string; analyzed: number; count: number }>();
+  for (let i = 0; i < pool.length; i++) {
+    const m = pool[i];
+    const key = m.prefId.toLowerCase();
+    let acc = map.get(key);
+    if (!acc) {
+      acc = { prefId: m.prefId, prefName: m.prefName, analyzed: 0, count: 0 };
+      map.set(key, acc);
+    }
+    acc.analyzed += 1;
+    if (TIMING_BUDGET_FIRST_RE.test(texts[i])) acc.count += 1;
+  }
+  const prefectureTop: TimingPrefRow[] = Array.from(map.values())
+    .filter((a) => a.analyzed >= minPrefSample)
+    .map((a) => ({
+      prefId: a.prefId,
+      prefName: a.prefName,
+      analyzed: a.analyzed,
+      count: a.count,
+      pct: a.analyzed === 0 ? 0 : Math.round((a.count / a.analyzed) * 1000) / 10,
+    }))
+    .sort((x, y) => y.pct - x.pct || y.analyzed - x.analyzed)
+    .slice(0, topN);
+
+  return {
+    analyzed: n,
+    total: subsidizedMunicipalities().length,
+    signals,
+    prefectureTop,
+    meta: buildMeta(),
+  };
+}

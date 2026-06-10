@@ -53,6 +53,11 @@ export default function Page() {
       desc: `補助金を確認できた${c.withSubsidy}自治体の公式な申請条件を独自分析。税の滞納・予算先着・着工前申請・指定業者など、条件の出現率を一覧で公開。`,
     },
     {
+      href: "/data/akiya-hojokin-shimekiri-2026",
+      title: "空き家解体補助金「締切・予算先着」実態調査2026",
+      desc: `「もらえるのに間に合わない」自治体を独自分析。予算先着・年度内完工・着工前申請・受付期間限定など“時間切れリスク”の出現率を一覧で公開。`,
+    },
+    {
       href: "/data/akiya-subsidy-map-2026",
       title: "全国 空き家・解体補助金マップ 2026",
       desc: `全国${c.total.toLocaleString("ja-JP")}市区町村（全国の約${c.coveragePercent}%）の補助金を独自集計。都道府県別カバレッジ・最大支給額ランキング・地域格差をグラフで可視化（CSV/JSON公開）。`,
