@@ -1,0 +1,131 @@
+{
+  "article_id": "C10-008",
+  "main_kw": "生前整理",
+  "researched_at": "2026-05-29",
+  "serp_sources": [
+    {
+      "rank": 1,
+      "title": "生前整理でやることとは？進め方と開始時期、業者の費用相場も解説",
+      "url": "https://www.hasegawa.jp/blogs/shukatsu/shukatsu-organize",
+      "domain": "hasegawa.jp",
+      "type": "葬儀社コンテンツ",
+      "table_stakes": ["定義", "やること4項目", "始める時期", "費用相場"],
+      "weakness": "「死への準備」フレームが強く、心の整理の概念がない"
+    },
+    {
+      "rank": 2,
+      "title": "今から始める生前整理 │メリットやデメリット・進め方・業者を解説",
+      "url": "https://chester-tax.com/encyclopedia/16162.html",
+      "domain": "chester-tax.com",
+      "type": "税理士法人サイト",
+      "table_stakes": ["定義", "メリデメ", "進め方", "業者費用"],
+      "weakness": "税務視点が強く、心の整理・物との向き合い方の視点が薄い"
+    },
+    {
+      "rank": 3,
+      "title": "今からできる！生前整理の意味とやり方・進め方｜小さなお葬式",
+      "url": "https://www.osohshiki.jp/column/article/318/",
+      "domain": "osohshiki.jp",
+      "type": "葬儀社コンテンツ",
+      "table_stakes": ["定義", "やり方", "進め方ステップ"],
+      "weakness": "葬儀文脈が前提で「生きることが前提」フレームがない"
+    },
+    {
+      "rank": 4,
+      "title": "生前整理の進め方｜メリットや行う際のポイントも徹底解説！",
+      "url": "https://ryomon.jp/column/predeatharrangements-proceed/",
+      "domain": "ryomon.jp",
+      "type": "葬儀・終活サポートサイト",
+      "table_stakes": ["進め方", "メリット", "ポイント"],
+      "weakness": "業者送客重視。3つの柱の概念がない"
+    },
+    {
+      "rank": 5,
+      "title": "生前整理の具体的なやり方は？コツや注意点もプロが解説！",
+      "url": "https://clean-care.jp/column/2857/",
+      "domain": "clean-care.jp",
+      "type": "生前整理業者サイト",
+      "table_stakes": ["やり方", "コツ", "注意点"],
+      "weakness": "業者視点（作業効率重視）。感情的側面・言葉遣いの配慮がない"
+    },
+    {
+      "rank": 6,
+      "title": "【生前整理の進め方】5つのステップやコツ、おすすめのタイミング",
+      "url": "https://m-ihinseiri.jp/article-1/seizenseiri/how/",
+      "domain": "m-ihinseiri.jp",
+      "type": "遺品整理業者マッチングサイト",
+      "table_stakes": ["5ステップ", "コツ", "タイミング"],
+      "weakness": "遺品整理から逆算した視点。心の整理の言及なし"
+    },
+    {
+      "rank": 7,
+      "title": "生前整理の考え方｜一般社団法人生前整理普及協会",
+      "url": "https://seizenseiri.net/request/think/index.html",
+      "domain": "seizenseiri.net",
+      "type": "協会公式サイト",
+      "table_stakes": ["3つの整理（物・心・情報）", "協会の考え方"],
+      "note": "3つの柱の概念を持つ唯一の上位サイト。ただし詳細なメソッド説明・8秒ルール・思い入れ箱の具体手法はない。ふれあいの丘はここより実用的に展開できる"
+    },
+    {
+      "rank": 8,
+      "title": "生前整理とは？7つのメリットや進め方、やるうえで大切なことを解説",
+      "url": "https://buysell-kaitori.com/column/organization-before-life/",
+      "domain": "buysell-kaitori.com",
+      "type": "買取業者サイト（バイセル）",
+      "table_stakes": ["定義", "7つのメリット", "進め方"],
+      "weakness": "買取業者視点。「物を手放す」ことに誘導。心の整理の視点なし"
+    },
+    {
+      "rank": 9,
+      "title": "生前整理とは？必要性や進め方について解説！",
+      "url": "https://ihinseiri-process.com/seizenseiri-ihinseiri/",
+      "domain": "ihinseiri-process.com",
+      "type": "遺品整理業者サイト",
+      "table_stakes": ["定義", "必要性", "進め方"],
+      "weakness": "遺品整理業者視点。仕事の発注を前提とした説明"
+    },
+    {
+      "rank": 10,
+      "title": "生前整理とは遺品・老前整理との違いや流れ・メリット・デメリットを解説",
+      "url": "https://creas-souzoku.com/columns/souzoku/inheritance-tax/organizing-before-death/",
+      "domain": "creas-souzoku.com",
+      "type": "相続サポートセンター",
+      "table_stakes": ["定義", "老前整理との違い", "遺品整理との違い", "メリデメ"],
+      "weakness": "相続・税務視点が強い。「生きることが前提」フレームなし"
+    }
+  ],
+  "public_sources": [
+    {
+      "title": "訪問購入（押し買い）のトラブルにご注意を！",
+      "publisher": "国民生活センター",
+      "url": "https://www.kokusen.go.jp/news/data/n-20240924_1.html",
+      "published_at": "2024-09-24",
+      "usage": "H2⑤「今日が一番若い」H3①「自分にしかできない」節で訪問購入リスクの注意喚起に使用",
+      "note": "消費者ホットライン188の案内とセットで記述"
+    },
+    {
+      "title": "今から考えておきたい「デジタル終活」",
+      "publisher": "国民生活センター",
+      "url": "https://www.kokusen.go.jp/news/data/n-20241120_1.html",
+      "published_at": "2024-11-20",
+      "usage": "H2③「情報の整理」節で参照候補。デジタル遺品・サブスク解約問題の補足として",
+      "note": "本記事では概念として触れる程度。詳細はC6-020（デジタル遺品）に委譲"
+    },
+    {
+      "title": "「あったかい生前整理」を学んで活かせる — 一般社団法人 生前整理普及協会",
+      "publisher": "一般社団法人 生前整理普及協会",
+      "url": "https://seizenseiri.net/",
+      "published_at": null,
+      "usage": "協会の考え方「生前整理は物と心と情報の整理」の参照元として。本文では協会名言及は記事ごとに判断（直接出力は慎重に）",
+      "note": "3つの柱の根拠となる公式サイト。大津田真美氏指導の2級講座受講内容がふれあいの丘の独自資産"
+    }
+  ],
+  "differentiation_gaps": [
+    "上位10記事中9記事が「死の準備」フレームで訴求——「生きることが前提」の明示的フレーミングが差別化の最大スロット",
+    "「3つの柱（モノ→心→情報）」と「順番の必然性」を論じた記事が協会公式サイトのみ——ふれあいの丘はより実用的・具体的に展開できる",
+    "4分類シート・8秒ルール・思い入れ箱等の協会固有メソッドを実用ノウハウとして解説した記事が上位に皆無——最大のInformation Gain差別化",
+    "「捨てる」「断捨離」への言葉哲学的対抗軸を持つ記事が上位に存在しない",
+    "「エンディングノートを9割が書き上げられない」という現場統計を使った「情報の整理から入ってはいけない理由」の論理説明が上位に皆無",
+    "C10クラスタハブとしての内部送客設計（他記事との役割分担）を持つサイトが上位に存在しない"
+  ]
+}

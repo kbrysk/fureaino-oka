@@ -1,0 +1,23 @@
+{
+  "kw_id": "C10-008",
+  "keyword": "生前整理",
+  "slug": "seizenseiri-hub",
+  "title": "生前整理とは何か｜3つの柱から始める「より良く生きる」ための整理",
+  "description": "生前整理は「捨てる作業」でも「死の準備」でもありません。モノ・心・情報の3つの柱で、これからより充実して生きるための整理です。何から始めるかわかる全体像を解説します。",
+  "category": "guide",
+  "cluster": "C10:生前整理 総論ハブ",
+  "supervisor": "general",
+  "cv_destination": "lead_pdf",
+  "tags": [
+    "guilt-cannot-throw",
+    "family-conflict",
+    "no-time",
+    "parent-stubborn"
+  ],
+  "target_word_count_min": 3400,
+  "target_word_count_max": 3700,
+  "ymyl": "limited",
+  "status": "human_review",
+  "created_at": "2026-05-29",
+  "pillar": true
+}

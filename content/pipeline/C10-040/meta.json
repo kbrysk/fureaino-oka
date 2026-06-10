@@ -1,0 +1,29 @@
+{
+  "kw_id": "C10-040",
+  "slug": "seizenseiri-susumekata",
+  "title": "生前整理の進め方｜やることリストと始める順番・続けるコツを解説",
+  "description": "生前整理でやることをステップで整理。物・書類・財産・デジタル・エンディングノートの優先順位と、途中で詰まったときの対処法も解説します。今日から小さく始められます。",
+  "category": "guide",
+  "pillar": true,
+  "cluster": "生前整理",
+  "tags": [
+    "no-time",
+    "guilt-cannot-throw",
+    "digital-worry",
+    "save-money"
+  ],
+  "supervisor": "general",
+  "journey_phase": "P1",
+  "phase": "F1",
+  "target_word_count_min": 3000,
+  "target_word_count_max": 3800,
+  "main_kw": "生前整理 進め方",
+  "main_kw_volume": 110,
+  "difficulty": 31,
+  "competition": 17,
+  "intent": "howto",
+  "cv_destination": "lead_pdf",
+  "ymyl": false,
+  "status": "brief_done",
+  "created_at": "2026-05-28"
+}

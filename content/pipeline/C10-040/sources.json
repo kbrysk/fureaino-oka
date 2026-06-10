@@ -1,0 +1,86 @@
+{
+  "kw_id": "C10-040",
+  "main_kw": "生前整理 進め方",
+  "retrieved_at": "2026-05-28",
+  "serp_competitors": [
+    {
+      "title": "【7/23更新】生前整理は何をする？やることリストの一覧や進め方のコツを解説 | 買取むすび",
+      "url": "https://re-musubi.jp/column/ihin/pre-departure",
+      "note": "ステップ形式・3分類・コツの定番構成。内部CV導線なし"
+    },
+    {
+      "title": "生前整理でやることリスト｜何から始めるべきか徹底解説 - おうち整理士",
+      "url": "https://ouchiseirishi.com/column/seizenseiri-list/",
+      "note": "「何から始めるべきか」を訴求。優先度の論理が弱い"
+    },
+    {
+      "title": "生前整理の「やることリスト」｜シニアタイムズ",
+      "url": "https://senior-job.co.jp/magazine/organizing-life",
+      "note": "年代別リストあり。進める順番の論理がない"
+    },
+    {
+      "title": "今から始める生前整理｜やるべきことと進め方を解説 | クラモア",
+      "url": "https://kuramore.jp/article/1025/",
+      "note": "table stakes網羅型。独自切り口なし"
+    },
+    {
+      "title": "生前整理のやることリスト7選！家族も助かる準備の手順を徹底解説 | 感謝のお葬式",
+      "url": "https://kansha-ososhiki.com/articles/3400/",
+      "note": "葬儀社運営。7選形式・家族目線"
+    },
+    {
+      "title": "生前整理の完全チェックリスト：安心して終活を進めるために | 終活相続ナビ",
+      "url": "https://www.syukatsu-souzoku.jp/columns/259",
+      "note": "チェックリスト形式。終活との紐付けが主"
+    },
+    {
+      "title": "生前整理でやることリスト完全版｜正しい手順と失敗しないコツを徹底解説！",
+      "url": "https://gomi-kaiju.com/blog/ihin-seiri/seizen-seiri-yarukoto-list-tejun-kotsu/",
+      "note": "量が多くすべて網羅型。優先度軸なし"
+    },
+    {
+      "title": "生前整理でやることとは？進め方と開始時期、業者の費用相場も解説",
+      "url": "https://www.hasegawa.jp/blogs/shukatsu/shukatsu-organize",
+      "note": "業者費用まで踏み込んだ実務型。ミニマリスト視点なし"
+    },
+    {
+      "title": "【生前整理の進め方】5つのステップやコツ、おすすめのタイミング | みんなの遺品整理",
+      "url": "https://m-ihinseiri.jp/article-1/seizenseiri/how/",
+      "note": "5ステップ形式・タイミング込みの汎用型。心理的詰まりへの処方箋なし"
+    },
+    {
+      "title": "生前整理でやることとは？リストを使った進め方のポイント | One's Ending",
+      "url": "https://ihinseiri-oneslife.com/ending/organize/0009/",
+      "note": "リスト活用を推奨。自社CVへの導線設計が弱い"
+    }
+  ],
+  "authoritative_sources": [
+    {
+      "title": "国民生活センター「今から考えておきたい『デジタル終活』」（2024年11月20日）",
+      "url": "https://www.kokusen.go.jp/news/data/n-20241120_1.html",
+      "usage": "H2「5つの領域」H3②デジタルの棚卸し節で引用。サブスク解約トラブルの一般的背景として"
+    },
+    {
+      "title": "国民生活センター「不用品回収サービスのトラブル」（令和4年11月）",
+      "url": "https://www.kokusen.go.jp/pdf/n-20221102_1.pdf",
+      "usage": "H2「5つの領域」H3⑤不用品処分節で引用。無料回収後高額請求トラブルへの注意喚起として"
+    },
+    {
+      "title": "国民生活センター「きっかけは訪問購入？犯罪まがいの深刻なトラブルにご注意を！」（2024年9月18日）",
+      "url": "https://www.kokusen.go.jp/news/data/n-20240918_1.html",
+      "usage": "任意：H2「5つの領域」H3⑤または法務チェック文脈での参照候補"
+    }
+  ],
+  "internal_links_confirmed": [
+    "/articles/seizenseiri-towa",
+    "/articles/seizenseiri-50dai",
+    "/articles/shukatsu-towa",
+    "/articles/ending-note-muryou",
+    "/articles/jikka-jimai-guide",
+    "/articles/oya-no-shukatsu",
+    "/articles/digital-ihin",
+    "/checklist",
+    "/guidebook",
+    "/tools/jikka-diagnosis"
+  ]
+}
