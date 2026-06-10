@@ -20,7 +20,7 @@
 import fs from "fs";
 
 const CATEGORIES = ["guide", "cleanup", "inheritance", "real-estate", "digital", "mental"];
-const TAGS = ["long-distance","save-money","no-time","parent-stubborn","family-conflict","gomi-yashiki","akiya-long","digital-worry","inheritance-deadline","guilt-cannot-throw"];
+const TAGS = ["long-distance","save-money","no-time","parent-stubborn","family-conflict","gomi-yashiki","akiya-long","digital-worry","inheritance-deadline","guilt-cannot-throw","kaigai-research","case-study"];
 const MURAKAMI_DOMAINS = ["guide", "mental", "cleanup"]; // 村上様監修可カテゴリ（生前整理・心/供養・片付け系。要運用調整）
 const SPECIALIST_DOMAINS = ["inheritance", "real-estate"]; // 税理士/司法書士/宅建/解体が必要
 
@@ -85,7 +85,7 @@ function run() {
   failIf(/(今すぐ売らないと|急がないと損|今だけ高く|すぐに手放さ)/.test(text), "L6", "押し買い/煽り勧誘", "緊急性を煽る勧誘");
 
   // ---- 出典・E-E-A-T (S1-S5) ----
-  requireIf(/(厚生労働省|総務省|国民生活センター|法務省|国税庁|\.lg\.jp)/.test(text), "S1", "公的出典の引用", "公的一次出典が見当たらない");
+  requireIf(/(厚生労働省|総務省|国民生活センター|法務省|国税庁|内閣府|消費者庁|日本年金機構|年金機構|金融庁|\.lg\.jp|\.go\.jp)/.test(text), "S1", "公的出典の引用", "公的一次出典が見当たらない");
   if (ymyl) requireIf(/(弁護士|司法書士|税理士|医師|専門家|ケアマネ)[^。]{0,15}(相談|ご相談)/.test(text), "S2", "専門家相談の明記(YMYL)", "YMYL記事だが専門家相談の案内がない");
   else add("S2", "専門家相談の明記(YMYL)", "SKIP", "非YMYL");
   const claimsCred = /(税理士|弁護士|司法書士)[^。]{0,6}監修/.test(text);
