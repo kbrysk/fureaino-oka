@@ -24,6 +24,7 @@ const STATIC_PAGES: { path: string; priority: number; changeFrequency: SitemapEn
   { path: "/data/akiya-hojokin-joken", priority: 0.8, changeFrequency: "monthly" },
   { path: "/data/akiya-hojokin-shimekiri-2026", priority: 0.8, changeFrequency: "monthly" },
   { path: "/data/akiya-subsidy-map-2026", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/data/shukatsu-kanshin-map-2026", priority: 0.8, changeFrequency: "monthly" },
   { path: "/data/seizen-seiri-trends", priority: 0.7, changeFrequency: "monthly" },
   { path: "/data/seizen-seiri-trends/2026-05", priority: 0.7, changeFrequency: "monthly" },
   { path: "/data/seizen-seiri-trends/cluster/core", priority: 0.6, changeFrequency: "monthly" },

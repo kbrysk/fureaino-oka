@@ -1,0 +1,25 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#fffdf8"/>
+  <rect x="0" y="0" width="1200" height="14" fill="#2f7d5b"/>
+  <text x="70" y="86" font-family="sans-serif" font-size="28" fill="#6b5f51">独自調査 2026年6月時点・ふれあいの丘調べ</text>
+  <text x="70" y="146" font-family="sans-serif" font-size="44" font-weight="bold" fill="#33312e">空き家解体補助金は「早い者勝ち」</text>
+  <text x="70" y="200" font-family="sans-serif" font-size="34" font-weight="bold" fill="#2f7d5b">確認できた 844自治体の締切リスク</text>
+  
+  <text x="70" y="248" font-family="sans-serif" font-size="30" fill="#33312e">予算先着・枠に達し次第終了（早い者勝ち）</text>
+  <text x="1130" y="248" text-anchor="end" font-family="sans-serif" font-size="34" font-weight="bold" fill="#2f7d5b">72.9%</text>
+  <rect x="70" y="260" width="1060" height="20" rx="10" fill="#eee7da"/>
+  <rect x="70" y="260" width="773" height="20" rx="10" fill="#2f7d5b"/>
+  <text x="70" y="332" font-family="sans-serif" font-size="30" fill="#33312e">交付決定前の着工は対象外（事前申請が必須）</text>
+  <text x="1130" y="332" text-anchor="end" font-family="sans-serif" font-size="34" font-weight="bold" fill="#2f7d5b">26.5%</text>
+  <rect x="70" y="344" width="1060" height="20" rx="10" fill="#eee7da"/>
+  <rect x="70" y="344" width="281" height="20" rx="10" fill="#2f7d5b"/>
+  <text x="70" y="416" font-family="sans-serif" font-size="30" fill="#33312e">受付期間・申請期限が区切られている</text>
+  <text x="1130" y="416" text-anchor="end" font-family="sans-serif" font-size="34" font-weight="bold" fill="#2f7d5b">20.7%</text>
+  <rect x="70" y="428" width="1060" height="20" rx="10" fill="#eee7da"/>
+  <rect x="70" y="428" width="219" height="20" rx="10" fill="#2f7d5b"/>
+  <text x="70" y="500" font-family="sans-serif" font-size="30" fill="#33312e">年度内の工事完了が条件</text>
+  <text x="1130" y="500" text-anchor="end" font-family="sans-serif" font-size="34" font-weight="bold" fill="#2f7d5b">5.6%</text>
+  <rect x="70" y="512" width="1060" height="20" rx="10" fill="#eee7da"/>
+  <rect x="70" y="512" width="59" height="20" rx="10" fill="#2f7d5b"/>
+  <text x="70" y="600" font-family="sans-serif" font-size="23" fill="#6b5f51">生前整理支援センター ふれあいの丘 ｜ fureaino-oka.com ｜ CC BY 4.0</text>
+</svg>

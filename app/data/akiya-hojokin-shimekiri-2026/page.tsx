@@ -47,7 +47,7 @@ export function generateMetadata(): Metadata {
       description,
       type: "article",
       url: getCanonicalUrl(PAGE_PATH),
-      images: [`${getCanonicalBase()}/opendata/akiya-hojokin-joken-infographic.png`],
+      images: [`${getCanonicalBase()}/opendata/akiya-hojokin-shimekiri-infographic.png`],
     },
   };
 }
@@ -68,7 +68,7 @@ export default function Page() {
     headline: `空き家解体補助金「締切・予算先着」の全国実態調査2026（${s.analyzed}自治体分析）`,
     datePublished: PUBLISHED,
     dateModified: MODIFIED,
-    image: [`${base}/opendata/akiya-hojokin-joken-infographic.png`],
+    image: [`${base}/opendata/akiya-hojokin-shimekiri-infographic.png`],
     author: { "@type": "Organization", name: SITE_NAME_LOGO, url: base },
     publisher: {
       "@type": "Organization",

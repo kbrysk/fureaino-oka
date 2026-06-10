@@ -63,6 +63,11 @@ export default function Page() {
       desc: `全国${c.total.toLocaleString("ja-JP")}市区町村（全国の約${c.coveragePercent}%）の補助金を独自集計。都道府県別カバレッジ・最大支給額ランキング・地域格差をグラフで可視化（CSV/JSON公開）。`,
     },
     {
+      href: "/data/shukatsu-kanshin-map-2026",
+      title: "終活への関心 地域×世代ギャップ調査2026",
+      desc: "終活・生前整理への関心が、住む地域と「親世代／子世代」でどう違うかを独自集計。47都道府県の関心度ランキングと、親子のすれ違いを映すワードを可視化（Google Trendsの相対指数・CC BY 4.0）。",
+    },
+    {
       href: "/data/seizen-seiri-trends",
       title: "生前整理・終活 検索トレンド データ",
       desc: "生前整理・終活に関する検索関心の推移をまとめた独自トレンドデータ。",
