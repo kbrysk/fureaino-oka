@@ -186,10 +186,26 @@ export async function generateMetadata({ params }: Props) {
   const descriptionFinal = description.length > 120 ? description.slice(0, 119) + "…" : description;
 
   const fullTitle = pageTitle(titleFinal);
+
+  // HCS対策(2026-06): 補助金の実データがあるページのみ index。
+  // hasSubsidy !== true（=「補助金なし」案内だけの薄ページ約880枚）と _isDefault は
+  // noindex,follow にして scaled-content 評価を回避しつつリンクは流す。
+  // 手で監修した areaContent(subsidyInfo) 持ちは無条件で index 維持。
+  const isIndexable = !!areaContent?.subsidyInfo || data.subsidy?.hasSubsidy === true;
+
   return {
     title: fullTitle,
     description: descriptionFinal,
     alternates: { canonical: canonicalSubsidy },
+    ...(isIndexable
+      ? {}
+      : {
+          robots: {
+            index: false,
+            follow: true,
+            googleBot: { index: false, follow: true },
+          },
+        }),
     openGraph: {
       title: fullTitle,
       description: descriptionFinal,

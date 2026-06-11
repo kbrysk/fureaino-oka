@@ -367,14 +367,10 @@ export default async function AreaPage({ params, searchParams }: Props) {
               <div key={i} className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
                 <h4 className="font-bold text-gray-900 text-lg mb-2">{facility.name}</h4>
                 <p className="text-base text-gray-800">{facility.address}</p>
-                {facility.phone && (
-                  <a
-                    href={`tel:${facility.phone}`}
-                    className="text-blue-600 font-bold underline text-lg block mt-2 py-2"
-                  >
-                    {facility.phone}
-                  </a>
-                )}
+                {/* tel: リンクは離脱要因のため非露出（遵守ルール）。受付時間・予約方法は自治体公式サイトで案内 */}
+                <p className="text-sm text-gray-500 mt-2">
+                  受付時間・予約方法は自治体公式サイトでご確認ください。
+                </p>
               </div>
             ))}
           </div>

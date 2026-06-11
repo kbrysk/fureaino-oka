@@ -1092,6 +1092,9 @@ export default async function AreaCleanupPage({ params }: Props) {
         <Link href={`/area/${ids.prefectureId}/${ids.cityId}`} className="inline-block text-primary font-medium hover:underline">
           ← {area.city}の粗大ゴミ・遺品整理ページへ
         </Link>
+        <Link href={`/area/${ids.prefectureId}/cleanup`} className="inline-block text-primary font-medium hover:underline">
+          {area.prefecture}全域の粗大ごみ・遺品整理ガイドへ →
+        </Link>
       </div>
 
       {showExtraSection ? (

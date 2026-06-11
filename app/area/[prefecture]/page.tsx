@@ -173,6 +173,12 @@ export default async function AreaPrefecturePage({ params }: Props) {
             {prefectureName}の補助金額ランキング・全国比較データを見る →
           </Link>
         </p>
+        {/* 県別cleanupハブ(2026-06新設)への導線: 粗大ごみ/遺品整理クエリの受け皿に内部リンクを供給 */}
+        <p className="mt-2 text-sm text-foreground/70">
+          <Link href={`/area/${prefId}/cleanup`} className="font-medium text-primary hover:underline">
+            {prefectureName}の粗大ごみの出し方・遺品整理ガイドを見る →
+          </Link>
+        </p>
       </section>
 
       <section aria-label={`${prefectureName}の市区町村別 空き家解体補助金一覧`} className="space-y-4">
