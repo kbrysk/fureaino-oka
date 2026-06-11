@@ -5,6 +5,8 @@
  */
 import { getCanonicalBase } from "../../app/lib/site-url";
 import { getPrefectureIds, getCityPathsByPrefecture } from "../../app/lib/utils/city-loader";
+import { getMunicipalitiesByPrefecture } from "../../app/lib/data/municipalities";
+import { getAreaContentsStaticParams } from "../../app/lib/utils/area-contents-paths";
 import { getBlogPostIds } from "../../app/lib/microcms";
 import { getLayoutSlugs } from "../../app/lib/cost-by-layout";
 import { getAllPrefectureSlugs } from "../../app/lib/data/municipality-stats";
@@ -79,11 +81,13 @@ export async function collectAllUrlsWithPriority(): Promise<UrlWithPriority[]> {
     // 「/articles/master-guide」「/articles」TOPは Normal にとどめ、個別記事 (/articles/{id}) のみ Top
     const isArticleDetail = /\/articles\/[^/]+$/.test(url) && !url.endsWith("/articles/master-guide");
     // 新設の収益ピラー・データ室（全/data配下）・リッチガイド・ニュースは最優先（インデックス浸透を急ぐ）
+    // 県別cleanupハブ(2026-06新設・47枚)も新規発見を急ぐため Top
     const isPriorityHub =
       url.endsWith("/akiya") ||
       url.includes("/akiya/kaitai-hojokin") ||
       url.includes(`${base}/data`) ||
-      url.includes(`${base}/news`);
+      url.includes(`${base}/news`) ||
+      /\/area\/[^/]+\/cleanup$/.test(url);
     const priority: UrlPriority =
       isArticleDetail || isPriorityHub
         ? "Top"
@@ -115,13 +119,28 @@ export async function collectAllUrlsWithPriority(): Promise<UrlWithPriority[]> {
   }
 
   // 4. 都道府県別 area（地域ノード + 補助金LP 等）
+  // HCS対策(2026-06): noindex化したURLは送信しない（クォータの浪費＋矛盾シグナル回避）
+  // - garbage: 全市区 noindex のため除外
+  // - subsidy: hasSubsidy===true または監修済み areaContent のみ（page.tsx の robots と同一基準）
+  const curated = new Set(
+    getAreaContentsStaticParams().map(({ prefecture, city }) => `${prefecture}/${city}`)
+  );
   const prefIds = getPrefectureIds();
   for (const prefId of prefIds) {
+    // 県別 cleanup ハブ（2026-06新設）
+    add(`${base}/area/${prefId}/cleanup`);
+
+    const subsidyOk = new Set(
+      getMunicipalitiesByPrefecture(prefId)
+        .filter((m) => m.subsidy?.hasSubsidy === true)
+        .map((m) => m.cityId)
+    );
     const cities = getCityPathsByPrefecture(prefId);
     for (const { prefId: p, cityId } of cities) {
       add(`${base}/area/${p}/${cityId}`);
-      add(`${base}/area/${p}/${cityId}/subsidy`);
-      add(`${base}/area/${p}/${cityId}/garbage`);
+      if (subsidyOk.has(cityId) || curated.has(`${p}/${cityId}`)) {
+        add(`${base}/area/${p}/${cityId}/subsidy`);
+      }
       add(`${base}/area/${p}/${cityId}/cost`);
     }
   }
