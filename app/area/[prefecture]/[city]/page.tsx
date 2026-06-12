@@ -339,6 +339,29 @@ export default async function AreaPage({ params, searchParams }: Props) {
         </section>
       )}
 
+      {/* 勝ちクラスタ集中(2026-06): tax-simulator(平均17位=最良資産)への強調内部リンク。
+          解体費用の直後=「解体後の固定資産税」が次の自然な疑問になる位置 */}
+      {!showFallback && area && (
+        <section
+          aria-label="固定資産税シミュレーター案内"
+          className="rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-primary-light/30 to-white p-6"
+        >
+          <h2 className="text-lg font-bold text-primary mb-2">
+            解体すると固定資産税はどう変わる？　1分で試算
+          </h2>
+          <p className="text-sm text-foreground/70 leading-relaxed mb-4">
+            建物を解体して更地にすると住宅用地特例が外れ、土地の固定資産税が上がる場合があります。
+            {area.city}の実家を「解体する／しない」で迷ったら、まず税額の変化を確認しましょう。
+          </p>
+          <Link
+            href={`/tax-simulator/${ids.prefectureId}/${ids.cityId}`}
+            className="inline-block bg-primary text-white font-bold px-6 py-3 rounded-xl hover:opacity-90 transition"
+          >
+            {area.city}の空き家固定資産税を試算する →
+          </Link>
+        </section>
+      )}
+
       {areaData && (
         <>
           <div className="my-8 rounded-2xl bg-blue-50/80 p-6 sm:p-8 border border-blue-100 shadow-sm">

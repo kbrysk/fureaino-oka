@@ -150,6 +150,26 @@ export default async function AreaCostPage({ params }: Props) {
         />
       </section>
 
+      {/* 勝ちクラスタ集中(2026-06): 費用文脈→「解体後の固定資産税」へ tax-simulator(平均17位)を橋渡し */}
+      <section
+        aria-label="固定資産税シミュレーター案内"
+        className="rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-primary-light/30 to-white p-6"
+      >
+        <h2 className="text-lg font-bold text-primary mb-2">
+          解体費用だけでなく「解体後の固定資産税」も確認を
+        </h2>
+        <p className="text-sm text-foreground/70 leading-relaxed mb-4">
+          更地にすると住宅用地特例が外れ、土地の固定資産税が上がる場合があります。
+          解体の総コストは「工事費 −補助金 ＋税額の変化」で判断するのが確実です。
+        </p>
+        <Link
+          href={`/tax-simulator/${ids.prefectureId}/${ids.cityId}`}
+          className="inline-block bg-primary text-white font-bold px-6 py-3 rounded-xl hover:opacity-90 transition"
+        >
+          {cityName}の固定資産税の変化を1分で試算 →
+        </Link>
+      </section>
+
       <SpokeInternalLinks
         prefId={ids.prefectureId}
         cityId={ids.cityId}

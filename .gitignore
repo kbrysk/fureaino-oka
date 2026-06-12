@@ -49,3 +49,4 @@ next-env.d.ts
 /content/pipeline/rakko/
 # 台帳のバックアップ
 /content/pipeline/keywords.seed.bak.csv
+b2b-exports/

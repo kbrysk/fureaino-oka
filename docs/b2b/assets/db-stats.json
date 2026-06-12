@@ -1,0 +1,246 @@
+{
+  "generatedAt": "2026-06-12",
+  "totalMunicipalities": 1726,
+  "prefectures": 47,
+  "subsidyAvailable": 844,
+  "subsidyWithOfficialUrl": 627,
+  "subsidyWithMaxAmount": 840,
+  "garbageWindowCovered": 1490,
+  "byPrefecture": {
+    "hokkaido": {
+      "prefName": "北海道",
+      "total": 177,
+      "hasSubsidy": 7
+    },
+    "tokyo": {
+      "prefName": "東京都",
+      "total": 62,
+      "hasSubsidy": 34
+    },
+    "kanagawa": {
+      "prefName": "神奈川県",
+      "total": 33,
+      "hasSubsidy": 15
+    },
+    "saitama": {
+      "prefName": "埼玉県",
+      "total": 63,
+      "hasSubsidy": 35
+    },
+    "chiba": {
+      "prefName": "千葉県",
+      "total": 54,
+      "hasSubsidy": 15
+    },
+    "ibaraki": {
+      "prefName": "茨城県",
+      "total": 44,
+      "hasSubsidy": 19
+    },
+    "tochigi": {
+      "prefName": "栃木県",
+      "total": 25,
+      "hasSubsidy": 14
+    },
+    "gunma": {
+      "prefName": "群馬県",
+      "total": 35,
+      "hasSubsidy": 22
+    },
+    "nagano": {
+      "prefName": "長野県",
+      "total": 77,
+      "hasSubsidy": 2
+    },
+    "osaka": {
+      "prefName": "大阪府",
+      "total": 43,
+      "hasSubsidy": 41
+    },
+    "aichi": {
+      "prefName": "愛知県",
+      "total": 54,
+      "hasSubsidy": 45
+    },
+    "fukuoka": {
+      "prefName": "福岡県",
+      "total": 60,
+      "hasSubsidy": 42
+    },
+    "kyoto": {
+      "prefName": "京都府",
+      "total": 26,
+      "hasSubsidy": 5
+    },
+    "hyogo": {
+      "prefName": "兵庫県",
+      "total": 41,
+      "hasSubsidy": 10
+    },
+    "miyagi": {
+      "prefName": "宮城県",
+      "total": 35,
+      "hasSubsidy": 5
+    },
+    "niigata": {
+      "prefName": "新潟県",
+      "total": 30,
+      "hasSubsidy": 16
+    },
+    "ishikawa": {
+      "prefName": "石川県",
+      "total": 19,
+      "hasSubsidy": 9
+    },
+    "shizuoka": {
+      "prefName": "静岡県",
+      "total": 34,
+      "hasSubsidy": 17
+    },
+    "hiroshima": {
+      "prefName": "広島県",
+      "total": 23,
+      "hasSubsidy": 19
+    },
+    "okayama": {
+      "prefName": "岡山県",
+      "total": 19,
+      "hasSubsidy": 17
+    },
+    "ehime": {
+      "prefName": "愛媛県",
+      "total": 20,
+      "hasSubsidy": 20
+    },
+    "kumamoto": {
+      "prefName": "熊本県",
+      "total": 44,
+      "hasSubsidy": 44
+    },
+    "kagoshima": {
+      "prefName": "鹿児島県",
+      "total": 43,
+      "hasSubsidy": 32
+    },
+    "aomori": {
+      "prefName": "青森県",
+      "total": 40,
+      "hasSubsidy": 9
+    },
+    "akita": {
+      "prefName": "秋田県",
+      "total": 24,
+      "hasSubsidy": 12
+    },
+    "iwate": {
+      "prefName": "岩手県",
+      "total": 32,
+      "hasSubsidy": 13
+    },
+    "yamagata": {
+      "prefName": "山形県",
+      "total": 35,
+      "hasSubsidy": 12
+    },
+    "fukushima": {
+      "prefName": "福島県",
+      "total": 59,
+      "hasSubsidy": 31
+    },
+    "yamanashi": {
+      "prefName": "山梨県",
+      "total": 27,
+      "hasSubsidy": 19
+    },
+    "toyama": {
+      "prefName": "富山県",
+      "total": 15,
+      "hasSubsidy": 13
+    },
+    "fukui": {
+      "prefName": "福井県",
+      "total": 17,
+      "hasSubsidy": 13
+    },
+    "gifu": {
+      "prefName": "岐阜県",
+      "total": 42,
+      "hasSubsidy": 2
+    },
+    "mie": {
+      "prefName": "三重県",
+      "total": 29,
+      "hasSubsidy": 22
+    },
+    "nara": {
+      "prefName": "奈良県",
+      "total": 39,
+      "hasSubsidy": 19
+    },
+    "wakayama": {
+      "prefName": "和歌山県",
+      "total": 30,
+      "hasSubsidy": 24
+    },
+    "tottori": {
+      "prefName": "鳥取県",
+      "total": 18,
+      "hasSubsidy": 10
+    },
+    "shimane": {
+      "prefName": "島根県",
+      "total": 19,
+      "hasSubsidy": 14
+    },
+    "tokushima": {
+      "prefName": "徳島県",
+      "total": 24,
+      "hasSubsidy": 24
+    },
+    "kagawa": {
+      "prefName": "香川県",
+      "total": 17,
+      "hasSubsidy": 16
+    },
+    "kochi": {
+      "prefName": "高知県",
+      "total": 34,
+      "hasSubsidy": 34
+    },
+    "saga": {
+      "prefName": "佐賀県",
+      "total": 20,
+      "hasSubsidy": 11
+    },
+    "nagasaki": {
+      "prefName": "長崎県",
+      "total": 21,
+      "hasSubsidy": 13
+    },
+    "oita": {
+      "prefName": "大分県",
+      "total": 18,
+      "hasSubsidy": 14
+    },
+    "miyazaki": {
+      "prefName": "宮崎県",
+      "total": 26,
+      "hasSubsidy": 6
+    },
+    "shiga": {
+      "prefName": "滋賀県",
+      "total": 19,
+      "hasSubsidy": 8
+    },
+    "yamaguchi": {
+      "prefName": "山口県",
+      "total": 19,
+      "hasSubsidy": 16
+    },
+    "okinawa": {
+      "prefName": "沖縄県",
+      "total": 41,
+      "hasSubsidy": 4
+    }
+  }
+}
