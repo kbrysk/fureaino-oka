@@ -12,6 +12,16 @@ function containsJapanese(str: string): boolean {
 const LEGACY_410_PREFIXES = ["/tenmon", "/shizen", "/search"] as const;
 const LEGACY_410_EXACT = "/parking.php";
 
+/**
+ * 記事カニバリ統合の 301 マップ（CONTENT_CONSOLIDATION_PLAN.md）。
+ * key=旧slug（非公開化する側） → value=残す canonical slug。
+ * 運用: 301をデプロイ→microCMSで旧記事を下書きに戻す、の順で404期間ゼロ。
+ * パイロット#5（遺品整理 自分で）: 本文は ihin-seiri-jibun-de に統合済み。
+ */
+const ARTICLE_CONSOLIDATION_301: Record<string, string> = {
+  "ihin-seiri-jibunde": "ihin-seiri-jibun-de", // 統合#5（slugハイフン1本違いの完全カニバリ）2026-06
+};
+
 type MunicipalityRow = {
   prefId: string;
   cityId: string;
@@ -52,6 +62,17 @@ export function middleware(request: NextRequest) {
     pathname === "/articles/akiya-kaitai-hojokin/"
   ) {
     return NextResponse.redirect(new URL("/akiya/kaitai-hojokin", request.url), 301);
+  }
+
+  // 0-c. 記事カニバリ統合 301マップ（CONTENT_CONSOLIDATION_PLAN.md）
+  //      重複記事を canonical 1本へ集約。旧slug → 残すslug。
+  //      ※301を先にデプロイ→旧記事の非公開化、の順で404期間ゼロ。
+  if (pathname.startsWith("/articles/")) {
+    const slug = pathname.replace(/^\/articles\//, "").replace(/\/$/, "");
+    const target = ARTICLE_CONSOLIDATION_301[slug];
+    if (target) {
+      return NextResponse.redirect(new URL(`/articles/${target}`, request.url), 301);
+    }
   }
 
   // 1. 中古ドメイン遺物 → 410 Gone（Search Console でインデックス削除を促す）
@@ -120,8 +141,9 @@ export const config = {
   matcher: [
     "/about",
     "/about/",
-    "/articles/akiya-kaitai-hojokin",
-    "/articles/akiya-kaitai-hojokin/",
+    // 記事カニバリ統合301（ARTICLE_CONSOLIDATION_301）を全記事で評価するため :path* に拡張。
+    // 旧 /articles/akiya-kaitai-hojokin 明示登録を包含。
+    "/articles/:path*",
     "/area/:path*",
     "/region/:path*",
     "/tax-simulator/:path*",
