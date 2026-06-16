@@ -1,22 +1,26 @@
 # 🎯 1,000万円EXIT マスター・アクションダッシュボード
 
-> 2026-06-12時点。このセッションで構築した全成果の索引＋あなたの実行待ちアクションを1枚に集約。
-> 迷ったらここを見る。各アクションに【所要】【効果】【参照ドキュメント】を明記。
+> 2026-06-17更新（4専門家パネルの結論を反映）。
+> **本セッション最大の発見：「武器庫は満杯だが引き金が一度も引かれていない」。律速は制作でなく"送信/配線"。**
+> → 最上位KPIを「GSCクリック」から **「今週、買い手/B2Bへ実際に送信した通数」** に変更。詳細: [EXIT_4EXPERT_SYNTHESIS_2026-06.md](EXIT_4EXPERT_SYNTHESIS_2026-06.md)
 
 ---
 
-## 🔴 今すぐ（今週・あなたにしかできない・合計約40分）
+## 🔴 今すぐ（今週・あなたにしかできない・"作る"でなく"送る/配線する"）
 
 | 優先 | アクション | 所要 | 効果 | 参照 |
 |---|---|---|---|---|
-| 1 | **バリュークリエーションへ第一信送信** | 5分 | E1戦略売却の号砲。M&Aクラウド経由でコピペ送信 | [FIRST_CONTACT_DRAFTS.md](../ma/FIRST_CONTACT_DRAFTS.md) ① |
-| 2 | **A8で「解体の窓口」「イエウール」提携申請** | 10分 | 解体ページ収益化＋ノムコム否認の保険。解体の窓口は買い手接触の布石も兼ねる | [A8_PROGRAM_EXPANSION_PLAN.md](../A8_PROGRAM_EXPANSION_PLAN.md) §7 |
-| 3 | **タウンライフ アフィリ審査申請** | 5分 | 査定単価が5,000円→最大30,558円（土地活用）に。申請文コピペ可 | [TOWNLIFE_APPLICATION_PREP.md](../affiliate/TOWNLIFE_APPLICATION_PREP.md) |
-| 4 | **GSC再認証**（最小スコープ版） | 2分 | KPI計測・データルーム#5の基盤。コマンド↓ | [DATAROOM_CHECKLIST.md](../ma/dataroom/DATAROOM_CHECKLIST.md) #5 |
-| 5 | **microCMS下書き13記事の公開判断** | 15分 | O1海外8本＋国内5本の本番化。8/21のX予約投稿前にO1記事公開が必要 | — |
-| 6 | **「パイロット統合GO」と私に一言** | 5秒 | 重複記事#5の統合を私が15分で完遂→TOP10展開の手順実証 | [CONSOLIDATION_PILOT_READY.md](CONSOLIDATION_PILOT_READY.md) |
+| **0** | **リード保存パイプライン復旧**（Supabase+Vercel env） | 30分 | 🚨 現状PDF DL/メール登録が**全件破棄**されている致命バグ。これを直すまで全リード施策が無効 | [LEAD_PIPELINE_SETUP.md](../ops/LEAD_PIPELINE_SETUP.md) |
+| 1 | **バリュークリエーションへ第一信送信** | 5分 | E1戦略売却の号砲。年内1000万の本体 | [FIRST_CONTACT_DRAFTS.md](../ma/FIRST_CONTACT_DRAFTS.md) ① |
+| 2 | **B2B優先度A 10社へ営業メール送信開始**（週5社） | 継続 | E2の主軸。9月末までに契約1件死守（月3万でも可） | [B2B_PROSPECT_LIST_50.md](../b2b/B2B_PROSPECT_LIST_50.md) |
+| 3 | **GA4ボット除外フィルタ設定** | 30分 | DD不意打ち（Direct43%・ボット19%）の解消＝破談リスク低減 | [OVERSEAS_TRAFFIC_INVESTIGATION_2026-06.md](../analytics/OVERSEAS_TRAFFIC_INVESTIGATION_2026-06.md) |
+| 4 | **A8「解体の窓口」「イエウール」提携申請** | 10分 | 解体の窓口は買い手接触の布石も兼ねる | [A8_PROGRAM_EXPANSION_PLAN.md](../A8_PROGRAM_EXPANSION_PLAN.md) §7 |
+| 5 | **タウンライフ アフィリ審査申請** | 5分 | 査定単価5,000→最大30,558円 | [TOWNLIFE_APPLICATION_PREP.md](../affiliate/TOWNLIFE_APPLICATION_PREP.md) |
+| — | X承認済み378投稿の塩漬け解除（着地=読まれている5記事＋PDF登録） | — | 非検索アセットの実数化（下振れ防止の脇役） | — |
 
-### #4のコマンド（PowerShellに貼る・1行）
+> **格下げ（"送信を1通も遅らせない範囲でのみ"）**: GSC再認証（2分のついで作業）／microCMS下書き13記事の公開（HCS逆行回避で小出し・送信完了後の二番手）。
+
+### 二番手タスクのコマンド（PowerShell・1行）
 ```
 gcloud auth application-default login --scopes="openid,https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/webmasters.readonly"
 ```
