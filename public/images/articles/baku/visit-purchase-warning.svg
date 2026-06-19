@@ -1,0 +1,9 @@
+<svg viewBox="0 0 680 150" width="680" height="150" role="img" aria-label="訪問購入トラブルへの注意" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Sans','Yu Gothic',sans-serif">
+  <title>訪問購入トラブルへの注意</title>
+  <rect x="6" y="10" width="668" height="130" rx="14" fill="#fdeee8" stroke="#d98b6a" stroke-width="1.5"/>
+  <path d="M64 42 L88 90 L40 90 Z" fill="#d9663a"/>
+  <text x="64" y="84" font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">!</text>
+  <text x="120" y="58" font-size="18" font-weight="700" fill="#b5481f">「無料査定します」の突然の訪問に注意</text>
+  <text x="120" y="88" font-size="14" fill="#7a4a38">急かされても、その場で売る必要はありません。クーリング・オフや</text>
+  <text x="120" y="110" font-size="14" fill="#7a4a38">引き渡しを断る権利があります（特定商取引法）。迷ったら「188」へ。</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg viewBox="0 0 680 180" width="680" height="180" role="img" aria-label="美術品買取の主な査定方法4種類" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Sans','Yu Gothic',sans-serif">
+  <title>美術品買取の主な査定方法</title>
+  <text x="340" y="32" font-size="16" font-weight="700" fill="#4a3f36" text-anchor="middle">状況に合わせて選べる4つの査定方法</text>
+  <circle cx="98" cy="92" r="34" fill="#f7f1e8" stroke="#c98a52" stroke-width="2"/>
+  <path d="M82 100 v-16 h32 v16 M78 100 h40 M90 84 v-8 h16 v8" fill="none" stroke="#c98a52" stroke-width="2.2" stroke-linejoin="round"/>
+  <text x="98" y="150" font-size="15" font-weight="700" fill="#4a3f36" text-anchor="middle">店頭</text>
+  <text x="98" y="170" font-size="11.5" fill="#8a7a6f" text-anchor="middle">直接持ち込む</text>
+  <circle cx="268" cy="92" r="34" fill="#f7f1e8" stroke="#a8825a" stroke-width="2"/>
+  <path d="M250 98 h26 l6 -10 h8 v10 h6 M254 98 v-12 h18 M258 104 a4 4 0 1 0 0.1 0 M276 104 a4 4 0 1 0 0.1 0" fill="none" stroke="#a8825a" stroke-width="2.2" stroke-linejoin="round"/>
+  <text x="268" y="150" font-size="15" font-weight="700" fill="#4a3f36" text-anchor="middle">出張</text>
+  <text x="268" y="170" font-size="11.5" fill="#8a7a6f" text-anchor="middle">自宅に来てもらう</text>
+  <circle cx="438" cy="92" r="34" fill="#f7f1e8" stroke="#8a9a86" stroke-width="2"/>
+  <path d="M422 102 v-16 l16 -8 l16 8 v16 l-16 8 z M422 86 l16 8 l16 -8 M438 94 v16" fill="none" stroke="#8a9a86" stroke-width="2.2" stroke-linejoin="round"/>
+  <text x="438" y="150" font-size="15" font-weight="700" fill="#4a3f36" text-anchor="middle">宅配</text>
+  <text x="438" y="170" font-size="11.5" fill="#8a7a6f" text-anchor="middle">送って査定</text>
+  <circle cx="608" cy="92" r="34" fill="#f7f1e8" stroke="#c98a52" stroke-width="2"/>
+  <path d="M592 102 v-14 h6 l3 -5 h10 l3 5 h6 v14 z M608 95 a6 6 0 1 0 0.1 0" fill="none" stroke="#c98a52" stroke-width="2.2" stroke-linejoin="round"/>
+  <text x="608" y="150" font-size="15" font-weight="700" fill="#4a3f36" text-anchor="middle">写真査定</text>
+  <text x="608" y="170" font-size="11.5" fill="#8a7a6f" text-anchor="middle">スマホで手軽に</text>
+</svg>

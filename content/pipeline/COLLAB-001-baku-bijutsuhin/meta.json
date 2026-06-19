@@ -1,0 +1,52 @@
+{
+  "kw_id": "COLLAB-001-baku-bijutsuhin",
+  "slug": "seizenseiri-bijutsuhin-kaiga",
+  "title": "生前整理で出てきた絵画・美術品はどうする？価値の見極め方と後悔しない手放し方",
+  "description": "実家や自宅の生前整理で、絵画・掛軸・茶道具・骨董品が出てきて困っていませんか。価値が分からないまま処分して後悔しないための見極め方、年代別の手放す理由データ、訪問購入トラブルの注意点、専門店への相談の流れを、美術品買取専門店への取材をもとに解説します。",
+  "category": "cleanup",
+  "tags": ["save-money", "family-conflict"],
+  "supervisor": "general",
+  "murakamiApproved": false,
+  "pillar": false,
+  "cluster": "COLLAB",
+  "main_kw": "生前整理 美術品",
+  "sub_kw": ["生前整理 絵画", "絵画 処分 価値", "骨董品 生前整理", "遺品 美術品 買取"],
+  "cv_target": "lead_guide",
+  "ymyl_note": "美術品の価格・相続税評価額は断定せず専門家(税理士)・専門店への相談を明記。訪問購入(押し買い)トラブルは特定商取引法・国民生活センターを出典に注意喚起。",
+  "collab": {
+    "partner": "株式会社獏（美術品・骨董品買取専門店）",
+    "contact": "info@baku-art.co.jp（三上様）",
+    "partner_url": "https://www.baku-art.co.jp/",
+    "agreement": "先方より掲載合意済み。希望=『美術品買取・絵画買取の文脈で紹介』。被リンクは交換条件にせず、記事内follow掲載→先方のメディア掲載告知で逆リンク誘発を狙う。",
+    "data_source": "https://prtimes.jp/main/html/rd/p/000000015.000069535.html"
+  },
+  "internal_links": [
+    "/articles/ihin-seiri",
+    "/articles/sodai-gomi"
+  ],
+  "internal_links_todo": "生前整理ハブ・実家じまいハブの実slugを確認して差し替える（プレースホルダコメント箇所）",
+  "public_sources": [
+    {
+      "title": "国民生活センター「訪問購入（各種相談の件数や傾向）」",
+      "url": "https://www.kokusen.go.jp/soudan_topics/data/doorstep_purchase.html"
+    },
+    {
+      "title": "株式会社獏 調査リリース（美術品売却のきっかけ・年代別／PR TIMES）",
+      "url": "https://prtimes.jp/main/html/rd/p/000000015.000069535.html"
+    }
+  ],
+  "images_status": {
+    "note": "重要知見: microCMSのcontentフィールドはリッチエディタ。(1)インラインSVGはPATCH 504で不可。(2)相対/外部URLの<img>は保存時に除去される。→ 解決: 図解をPNG化しmicroCMSメディアAPI(POST .microcms-management.io/api/v1/media)にアップロードし、返却された images.microcms-assets.io URL を<img src>に使用。これはリッチエディタが許可するドメインなので保持される。元SVGは public/images/articles/baku/ に保管(再生成用)。",
+    "uploaded_png": {
+      "chart-age-reasons": "https://images.microcms-assets.io/assets/5d412b769b2448e6ab290e722d04d457/d126cc1791254fb596a75ff0485ab007/baku-chart-age-reasons.png",
+      "three-walls": "https://images.microcms-assets.io/assets/5d412b769b2448e6ab290e722d04d457/b73fbbbeaa3b47dc91bf323106394108/baku-three-walls.png",
+      "visit-purchase-warning": "https://images.microcms-assets.io/assets/5d412b769b2448e6ab290e722d04d457/20aca566bd374959b2f39488e0b8808a/baku-visit-purchase-warning.png",
+      "appraisal-methods": "https://images.microcms-assets.io/assets/5d412b769b2448e6ab290e722d04d457/b7c0246071314676b08edc4a88d28621/baku-appraisal-methods.png"
+    },
+    "screenshots_done": [
+      "fig-baku-site: 獏トップページ（puppeteerで撮影→メディアアップ済）",
+      "fig-baku-jisseki: 獏 買取実績ページ（同上）"
+    ],
+    "eyecatch": "ChatGPT生成(1536x1024)→幅1200最適化→メディアアップ→記事eyecatchフィールドにPATCH設定済。https://images.microcms-assets.io/assets/5d412b769b2448e6ab290e722d04d457/b1da1839f76249e485648db428d6a36f/baku-eyecatch-seizenseiri-bijutsuhin.png"
+  }
+}
