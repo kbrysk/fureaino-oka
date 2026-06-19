@@ -240,6 +240,20 @@ body {
   margin-top: 0;
 }
 
+/* 本文リンクは「クリックできる」と一目で分かる青＋下線に（緑のprimaryだとリンクと認識されにくいため） */
+.article-prose.prose a,
+.article-prose.prose a:visited {
+  color: #1565c0 !important;
+  text-decoration: underline !important;
+  text-decoration-color: #1565c0 !important;
+  text-underline-offset: 2px;
+  font-weight: 500;
+}
+.article-prose.prose a:hover {
+  color: #0d3f87 !important;
+  text-decoration-color: #0d3f87 !important;
+}
+
 /* ========== ガイドブック（/guidebook） ========== */
 .guidebook-h2 {
   font-size: 1.5rem;
